@@ -1,0 +1,14 @@
+﻿Outpost
+Forward base
+Strike force
+Expedition post
+Task force
+Armed expedition force
+Fort
+Camp
+Contingent
+Detached unit
+Peacekeeping force
+Section
+Operation cell
+Tactical unit

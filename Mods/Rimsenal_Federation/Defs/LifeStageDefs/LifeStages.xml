@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LifeStageDef>
+    <defName>BionAdultStage</defName>
+    <label>adult stage</label>
+    <visible>false</visible>
+  </LifeStageDef>
+  
+</Defs>

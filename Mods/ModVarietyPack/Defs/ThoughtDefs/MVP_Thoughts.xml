@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ThoughtDefs>
+
+  <!-- Thoughts food -->
+
+  <ThoughtDef>
+    <defName>AteCandy</defName>
+    <durationDays>0.25</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>ate candy</label>
+        <description>I ate a really tasty candy. Now i'm sugar buzzed.</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>HadCoffee</defName>
+    <durationDays>0.25</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>Had cup of coffee</label>
+        <description>Whoa, that's some strong coffee!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>HadTea</defName>
+    <durationDays>0.25</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>Had cup of tea</label>
+        <description>I love tea!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>Smoking</defName>
+    <durationDays>0.25</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>Grabbed a smoke</label>
+        <description>I feel calm, cool, and collected.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+
+
+
+
+
+
+
+  <!-- Thoughts EPOE -->
+  <ThoughtDef>
+    <defName>DruggedRibThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>DruggedRib</hediff>
+    <nullifyingTraits>
+      <li>Prosthophobe</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>Drugged rib</label>
+        <description>I don't know why, but somehow I feel relaxed.</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>SilentJawThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>SilentJaw</hediff>
+    <stages>
+      <li>
+        <label>Silent jaw</label>
+        <description>I just want to talk, it's so horrible!</description>
+        <baseMoodEffect>-15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</ThoughtDefs>

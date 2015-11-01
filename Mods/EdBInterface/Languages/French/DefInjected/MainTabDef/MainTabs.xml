@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<EdB_Interface_Inventory.label>Inventaire</EdB_Interface_Inventory.label>
+	<EdB_Interface_Inventory.description>Prend en compte toutes vos ressources, armes, tenues et batiments.</EdB_Interface_Inventory.description>
+
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squads.label>Squads</EdB_Interface_Squads.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squads.description>Organize your colonists into squads.</EdB_Interface_Squads.description>
+
+</LanguageData>

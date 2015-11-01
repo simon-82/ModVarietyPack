@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FactionDefs>
+
+
+	<FactionDef>
+		<defName>Pirate</defName>
+		<label>pirate band</label>
+    <description>A gang of bandits.\n\nPirates don't sow, they don't build, and they rarely trade. They enrich themselves mostly by raiding and robbing the more productive groups in the area.\n\nTheir technology level depends mostly on who they've managed to steal from recently. Mostly they carry gunpowder weapons, though the luckier ones may have advanced energy weapons, and some may just like to stab people at close range.</description>
+    <pawnsPlural>pirates</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <raidCommonality>100</raidCommonality>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+		<appreciative>false</appreciative>
+    <leaderTitle>Boss</leaderTitle>
+    <startingGoodwill>
+      <min>-100</min>
+      <max>-90</max>
+    </startingGoodwill>
+    <mustStartOneEnemy>true</mustStartOneEnemy>
+		<factionNameMaker>NamerFactionPirate</factionNameMaker>
+		<techLevel>Spacer</techLevel>
+		<backstoryCategory>Raider</backstoryCategory>
+		<hairTags>
+			<li>Punk</li>
+		</hairTags>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>-80</max>
+    </naturalColonyGoodwill>
+    <pawnGroupMakers>
+      <li>
+        <commonality>100</commonality>
+        <options>
+          <li>
+            <selectionWeight>5</selectionWeight>
+            <kind>Drifter</kind>
+          </li>
+          <li>
+            <selectionWeight>70</selectionWeight>
+            <kind>Thrasher</kind>
+          </li>
+          <li>
+            <selectionWeight>100</selectionWeight>
+            <kind>GrenadierDestructive</kind>
+          </li>
+          <li>
+            <selectionWeight>50</selectionWeight>
+            <kind>GrenadierEMP</kind>
+          </li> 
+          <li>
+            <selectionWeight>100</selectionWeight>
+            <kind>Scavenger</kind>
+          </li>
+          <li>
+            <selectionWeight>150</selectionWeight>
+            <kind>Pirate</kind>
+          </li>
+          <li>
+            <selectionWeight>500</selectionWeight>
+            <kind>MercenaryGunner</kind>
+          </li>
+          <li>
+            <selectionWeight>150</selectionWeight>
+            <kind>MercenarySniper</kind>
+          </li>
+          <li>
+            <selectionWeight>90</selectionWeight>
+            <kind>MercenarySlasher</kind>
+          </li>
+          <li>
+            <selectionWeight>90</selectionWeight>
+            <kind>MercenaryElite</kind>
+          </li>
+          <li>
+            <selectionWeight>90</selectionWeight>
+            <kind>PirateBoss</kind>
+          </li>         
+          <li>
+            <selectionWeight>60</selectionWeight>
+            <kind>MercenaryHeavy</kind>
+          </li>
+          <li>
+            <selectionWeight>90</selectionWeight>
+            <kind>MercenaryMachineGunner</kind>
+          </li>
+        </options>
+      </li>
+      <li>
+        <commonality>50</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <li>
+            <selectionWeight>200</selectionWeight>
+            <kind>
+              <li>MercenarySlasher</li>
+            </kind>
+          </li>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/FactionHomes/DefaultHome</homeIconPath>
+    <homeIconColor>(255,50,50)</homeIconColor>
+  </FactionDef>
+  
+  
+  <!-- Special sub-humanlike factions -->
+
+  <FactionDef>
+    <defName>Mechanoid</defName>
+    <label>mechanoid hive</label>
+    <description>A hive of ancient self-replicating machines.</description>
+    <pawnsPlural>mechanoids</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <fixedName>a mechanoid hive</fixedName>
+    <raidCommonality>37</raidCommonality>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>true</hidden>
+    <canFlee>false</canFlee>
+    <techLevel>Ultra</techLevel>
+		<earliestRaidDays>90</earliestRaidDays>
+    <startingGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </startingGoodwill>
+    <mustStartOneEnemy>true</mustStartOneEnemy>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </naturalColonyGoodwill>
+    <pawnGroupMakers>
+      <li>
+        <options>
+          <li>
+            <selectionWeight>75</selectionWeight>
+            <kind>Centipede</kind>
+          </li>
+          <li>
+            <selectionWeight>125</selectionWeight>
+            <kind>Scyther</kind>
+          </li>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/FactionHomes/DefaultHome</homeIconPath>
+    <homeIconColor>(150,150,150)</homeIconColor>
+  </FactionDef>
+
+
+
+</FactionDefs>

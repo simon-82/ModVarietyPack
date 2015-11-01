@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	
+	<FPCFederator.label>M2A4 페더레이터</FPCFederator.label>
+	<FPCOrdinator.label>M3A1 오디네이터</FPCOrdinator.label>
+	<FPCArranger.label>M5A3 어레인저</FPCArranger.label>
+	<FPCPB.label>연방 피스브링어</FPCPB.label>
+	<FPCPK.label>연방 피스키퍼</FPCPK.label>
+	<FPCPMa.label>연방 피스메이커</FPCPMa.label>
+	<FPCPMo.label>연방 피스몽거</FPCPMo.label>
+	<FPCPeacebuilder.label>연방 피스빌더</FPCPeacebuilder.label>
+	<FPCTP.label>연방 노예병</FPCTP.label>
+	<FPCSB.label>연방 자폭병</FPCSB.label>
+	<FPCCM.label>연방 지휘관</FPCCM.label>
+	<FPCServant.label>M15 서번트</FPCServant.label>
+	<FPCPrecusor.label>M10 프리큐서</FPCPrecusor.label>
+	<FPCPrime.label>타이런트 프라임</FPCPrime.label>
+
+</LanguageData>

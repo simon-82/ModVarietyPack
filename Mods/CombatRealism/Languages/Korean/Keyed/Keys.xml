@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+    <CR_ReloadLabel>재장전</CR_ReloadLabel>
+    <CR_ReloadDesc>탄창을 갈아 끼웁니다.</CR_ReloadDesc>
+
+    <CR_ReloadingMote>재장전!</CR_ReloadingMote>
+    <CR_ReloadedMote>장전 완료!</CR_ReloadedMote>
+
+</LanguageData>

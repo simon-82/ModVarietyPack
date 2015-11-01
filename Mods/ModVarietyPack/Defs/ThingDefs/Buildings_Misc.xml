@@ -1,0 +1,1100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+
+
+  <ThingDef Name="BuildingBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>BuildingRubble</filthLeaving>
+  </ThingDef>
+
+  <ThingDef Name="FurnitureBase" ParentName="BuildingBase" Abstract="True">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <DesignationCategory>Furniture</DesignationCategory>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+  </ThingDef>
+
+
+
+
+<!-- === VanillaStart === -->
+
+
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>SunLamp</defName>
+    <label>sun lamp</label>
+    <thingClass>Building_SunLamp</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Buildings/LampSun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.4, 0.2)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.15</fillPercent>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <WorkToMake>330</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+    <description>Lights an area brightly enough to grow crops.</description>
+    <costList>
+      <SteelBar>25</SteelBar>
+    </costList>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <comps>
+      <li>
+        <compClass>CompGlower</compClass>
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>14</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+        <basePowerConsumption>800</basePowerConsumption>
+      </li>
+    </comps>
+    <!-- Determined by trial and error
+    This value isn't perfect because these radii use different algorithms
+    but it matches in this case-->
+    <specialDisplayRadius>5.8</specialDisplayRadius>
+    <designationCategory>Lighting</designationCategory>
+    <rotatable>false</rotatable>
+    <designationHotKey>U</designationHotKey>
+    <researchPrerequisite>PowerI</researchPrerequisite>
+  </ThingDef>
+
+
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>OrbitalTradeBeacon</defName>
+    <label>orbital trade beacon</label>
+    <thingClass>Building_OrbitalTradeBeacon</thingClass>
+    <graphicData>
+      <texPath>Buildings/DropBeacon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Waist</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>75</MaxHitPoints>
+      <WorkToMake>1300</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>Required for orbital trading. You can only sell goods that are near an orbital trade beacon. Can be placed indoors. Traded goods will ONLY arrive at a beacon placed OUTSIDE!</description>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <specialDisplayRadius>7.9</specialDisplayRadius>
+    <fillPercent>0.15</fillPercent>
+    <costList>
+      <Steel>30</Steel>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <pathCost>20</pathCost>
+    <designationCategory>ProductionGoods</designationCategory>
+    <rotatable>false</rotatable>
+    <!--<placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>-->
+    <designationHotKey>O</designationHotKey>
+    <researchPrerequisite>Communications</researchPrerequisite>
+
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CommsConsole</defName>
+    <label>comms console</label>
+    <thingClass>Building_CommsConsole</thingClass>
+    <graphicData>
+      <texPath>Buildings/CommsConsole</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <WorkToMake>2200</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>Communicate with nearby ships here for negotiation and trade.</description>
+    <size>(2,1)</size>
+    <costList>
+      <SteelBar>40</SteelBar>
+      <AluBar>10</AluBar>
+      <Glass>20</Glass>
+    </costList>
+    <interactionCellOffset>(1,0,-1)</interactionCellOffset>
+    <hasInteractionCell>true</hasInteractionCell>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>ProductionGoods</designationCategory>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+    </comps>
+    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <designationHotkey>M</designationHotkey>
+    <researchPrerequisite>AdvancedCommunications</researchPrerequisite>
+  </ThingDef>
+
+
+  <!-- Facilities -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>MultiAnalyzer</defName>
+    <label>multi-analyzer</label>
+    <description>Increases research speed. Needs to be placed near research bench. One research bench can be linked to only one multi-analyzer.</description>
+    <graphicData>
+      <texPath>Things/Building/Misc/MultiAnalyzer</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <size>(2,2)</size>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <designationHotkey>N</designationHotkey>
+    <designationCategory>Misc</designationCategory>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>5000</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <SteelBar>80</SteelBar>
+      <AluBar>20</AluBar>
+      <PlasteelBar>30</PlasteelBar>
+      <Electronics>25</Electronics>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>200</basePowerConsumption>
+      </li>
+      <li>
+        <compClass>CompFacility</compClass>
+        <statOffsets>
+          <ResearchSpeedFactor>0.1</ResearchSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+    </comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+    <researchPrerequisite>CraftingI</researchPrerequisite>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>VitalsMonitor</defName>
+    <label>vitals monitor</label>
+    <graphicData>
+      <texPath>Things/Building/Misc/VitalsMonitor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shadowData>
+        <offset>(0,0,-0.3)</offset>
+        <volume>(0.3, 0.3, 0.4)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1.0</fillPercent>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>4000</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>Increases patients treatment quality. Needs to be placed adjacent to a medical bed. One medical bed can be linked to only one vitals monitor.</description>
+    <size>(1,1)</size>
+    <costList>
+      <SteelBar>90</SteelBar>
+      <AluBar>30</AluBar>
+      <Electronics>10</Electronics>
+    </costList>
+    <designationCategory>Production</designationCategory>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>150</basePowerConsumption>
+      </li>
+      <li>
+        <compClass>CompFacility</compClass>
+        <statOffsets>
+          <MedicalTreatmentQualityFactor>0.041</MedicalTreatmentQualityFactor>
+          <ImmunityGainSpeedFactor>0.021</ImmunityGainSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+        <mustBePlacedAdjacent>true</mustBePlacedAdjacent>
+        <canLinkToMedBedsOnly>true</canLinkToMedBedsOnly>
+      </li>
+    </comps>
+    <designationHotkey>V</designationHotkey>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+    <researchPrerequisite>MedicineII</researchPrerequisite>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ToolCabinet</defName>
+    <label>tool cabinet</label>
+    <graphicData>
+      <texPath>Things/Building/Misc/ToolCabinet</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,1)</drawSize>
+      <color>(96,114,95)</color>
+    </graphicData>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1.0</fillPercent>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>1800</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>Increases work speed. Needs to be placed near workbench. One workbench can be simultaneously linked to only two tools cabinets.</description>
+    <size>(2,1)</size>
+    <costList>
+      <SteelBar>100</SteelBar>
+    </costList>
+    <designationCategory>ProductionResources</designationCategory>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <comps>
+      <li>
+        <compClass>CompFacility</compClass>
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.061</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>2</maxSimultaneous>
+      </li>
+    </comps>
+    <designationHotkey>T</designationHotkey>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+    <researchPrerequisite>CraftingI</researchPrerequisite>
+  </ThingDef>
+
+  <!-- -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Grave</defName>
+    <label>grave</label>
+    <thingClass>Building_Grave</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/GraveEmpty</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <constructEffect>ConstructDirt</constructEffect>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <description>Place the dead in graves to give them a decent final resting place.</description>
+    <size>(1,2)</size>
+    <statBases>
+      <WorkToMake>650</WorkToMake>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <building>
+      <isInert>true</isInert>
+      <fullGraveGraphicData>
+				<texPath>Things/Building/Misc/GraveFull</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+				<drawSize>(3,4)</drawSize>
+			</fullGraveGraphicData>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li>CorpsesHumanlike</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
+    <designationCategory>Misc</designationCategory>
+    <designationHotkey>G</designationHotkey>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <defName>Sarcophagus</defName>
+    <label>sarcophagus</label>
+    <thingClass>Building_Sarcophagus</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/Sarcophagus</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,4)</drawSize>
+    </graphicData>
+    <description>An ornamented burial receptacle for the honored dead.</description>
+    <size>(1,2)</size>
+    <pathCost>70</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <building>
+			<fullGraveGraphicData>
+				<texPath>Things/Building/Misc/SarcophagusFull</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(3,4)</drawSize>
+			</fullGraveGraphicData>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <filter>
+          <categories>
+            <li>CorpsesHumanlike</li>
+          </categories>
+          <specialFiltersToDisallow>
+            <li>AllowCorpsesStranger</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <statBases>
+      <WorkToMake>2500</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li>
+        <compClass>CompArt</compClass>
+        <nameMaker>NamerSarcophagusPlate</nameMaker>
+        <descriptionMaker>ArtSarcophagusPlate</descriptionMaker>
+        <mustBeFullGrave>true</mustBeFullGrave>
+      </li>
+    </comps>
+    <costStuffCount>60</costStuffCount>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>0.3</staticSunShadowHeight>
+    <designationCategory>Misc</designationCategory>
+    <designationHotkey>H</designationHotkey>
+    <researchPrerequisite>Stonecutting</researchPrerequisite>
+  </ThingDef>
+
+
+
+
+  <!-- Cryptosleep casket -->
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CryptosleepCasket</defName>
+    <label>cryptosleep casket</label>
+    <thingClass>Building_CryptosleepCasket</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Ship/ShipCryptosleepCasket</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2, 3)</drawSize>
+    </graphicData>
+    <researchPrerequisite>Cryptosleep</researchPrerequisite>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <WorkToMake>3200</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>A self-powered sarcophagus designed to keep a person in a state of suspended animation for many years.</description>
+    <size>(1,2)</size>
+    <designationCategory>Misc</designationCategory>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <costList>
+      <SteelBar>150</SteelBar>
+      <Uranium>5</Uranium>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompExplosive</compClass>
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+    </comps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>AncientCryptosleepCasket</defName>
+    <label>ancient cryptosleep casket</label>
+    <thingClass>Building_AncientCryptosleepCasket</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Ship/ShipCryptosleepCasket</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,3)</drawSize>
+    </graphicData>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>This cryptosleep casket looks like it has been here for a very long time. Who knows what it might contain?</description>
+    <size>(1,2)</size>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(1,0,0)</interactionCellOffset>
+    <costList>
+      <SteelBar>150</SteelBar>
+      <Uranium>5</Uranium>
+    </costList>
+    <killedLeavings>
+      <ChunkSlagSteel>1</ChunkSlagSteel>
+      <Steel>25</Steel>
+      <Uranium>3</Uranium>
+    </killedLeavings>
+    <comps>
+      <li>
+        <compClass>CompExplosive</compClass>
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+  </ThingDef>
+
+  
+  <!-- === VanillaEnd === -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+<!-- === training === -->
+  <ThingDef ParentName="BuildingBase">
+    <DefName>AutopsyTable</DefName>
+    <label>Autopsy table</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>Doctors hone their skills by testing their techniques on corpses.</Description>
+    <graphicData>
+      <texPath>Buildings/TableAutopsy</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(1,2)</drawSize>
+    </graphicData>
+    <AltitudeLayer>Waist</AltitudeLayer>
+    <CostList>
+      <Steel>75</Steel>
+      <WoodLog>30</WoodLog>
+    </CostList>
+    <constructEffect>ConstructWood</constructEffect>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <Size>(1,2)</Size>
+    <DesignationCategory>Training</DesignationCategory>
+    <Passability>Impassable</Passability>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(-1,0,0)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <researchPrerequisite>HospitalBed</researchPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Target</defName>
+    <label>Target</label>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Buildings/TargetPractice/Target</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>Waist</altitudeLayer>
+    <description>A target for your sharpshooters to hone their skills with.</description>
+    <size>(1,1)</size>
+    <useHitPoints>False</useHitPoints>
+    <costList>
+        <SteelBar>20</SteelBar>
+    </costList>
+    <statBases>
+      <WorkToMake>250</WorkToMake>
+      <Flammability>0</Flammability>
+    </statBases>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <pathCost>60</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <designationCategory>Training</designationCategory>
+    <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    <researchPrerequisite>SecurityI</researchPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <DefName>ShootingRangeLeft</DefName>
+    <label>shooting range left</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>The left side of the shooting range.</Description>
+    <uiIconPath>Buildings/TargetPractice/WallLeft_back</uiIconPath>
+    <graphicData>
+      <texPath>Buildings/TargetPractice/WallLeft</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,8)</drawSize>
+    </graphicData>
+    <CostList>
+      <SteelBar>20</SteelBar>
+      <WoodLog>30</WoodLog>
+    </CostList>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToMake>400</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <Size>(1,8)</Size>
+    <DesignationCategory>Training</DesignationCategory>
+    <Passability>PassThroughOnly</Passability>
+    <researchPrerequisite>SecurityI</researchPrerequisite>
+  </ThingDef>  
+  
+  <ThingDef ParentName="BuildingBase">
+    <DefName>ShootingRange</DefName>
+    <label>shooting range</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A shooting range for training shooting skill.</Description>
+    <uiIconPath>Buildings/TargetPractice/WallMiddle_back</uiIconPath>
+    <graphicData>
+      <texPath>Buildings/TargetPractice/WallMiddle</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,8)</drawSize>
+    </graphicData>
+    <CostList>
+      <SteelBar>10</SteelBar>
+      <WoodLog>30</WoodLog>
+    </CostList>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <Size>(1,8)</Size>
+    <DesignationCategory>Training</DesignationCategory>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-4)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <passability>PassThroughOnly</passability>
+    <researchPrerequisite>SecurityI</researchPrerequisite>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <DefName>ShootingRangeRight</DefName>
+    <label>shooting range right</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>The right side of the shooting range.</Description>
+    <uiIconPath>Buildings/TargetPractice/WallRight_back</uiIconPath>
+    <graphicData>
+      <texPath>Buildings/TargetPractice/WallRight</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1,8)</drawSize>
+    </graphicData>
+    <CostList>
+      <SteelBar>20</SteelBar>
+      <WoodLog>30</WoodLog>
+    </CostList>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToMake>400</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <Size>(1,8)</Size>
+    <DesignationCategory>Training</DesignationCategory>
+    <Passability>PassThroughOnly</Passability>
+    <researchPrerequisite>SecurityI</researchPrerequisite>
+  </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+    <DefName>MrDummy</DefName>
+    <label>training dummy</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A straw dummy for training melee skill.</Description>
+    <uiIconPath>Buildings/TargetPractice/MrDummy_back</uiIconPath>
+    <graphicData>
+      <texPath>Buildings/TargetPractice/MrDummy</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <CostList>
+      <SteelBar>15</SteelBar>
+      <WoodLog>10</WoodLog>
+    </CostList>
+    <constructEffect>ConstructWood</constructEffect>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToMake>200</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <Size>(1,1)</Size>
+    <DesignationCategory>Training</DesignationCategory>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <researchPrerequisite>SecurityI</researchPrerequisite>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === MMS === -->
+  <ThingDef ParentName="FurnitureBase">
+    <defName>MobileMineralSonar</defName>
+    <Label>Mobile mineral sonar</Label>
+    <Description>   The mobile mineral sonar is used to detect hidden metallic objects in the heart of big mountains. \n- It will scan the surrounding rocks autonomously with the embedded energy packs. \n- Supplying some additional power will fasten the scan rate. \n- It can be dismantled to move it to another place. You will have to provide some new energy packs to replace depleted ones.
+    </Description>
+    <graphicData>
+        <graphicClass>Graphic_Single</graphicClass>
+        <texPath>Buildings/MMS/MobileMineralSonar</texPath>
+        <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>Buildings/MMS/MobileMineralSonar_Icon</uiIconPath>
+    <ThingClass>MobileMineralSonar.Building_MobileMineralSonar</ThingClass>
+    <tickerType>Normal</tickerType>
+    <PlaceWorkers>
+      <li>MobileMineralSonar.PlaceWorker_MobileMineralSonar</li>
+    </PlaceWorkers>
+    <CostList>
+      <EnergyPack>5</EnergyPack>
+      <MineralSonarModule>1</MineralSonarModule>
+    </CostList>
+    <AltitudeLayer>Waist</AltitudeLayer>
+  <pathCost>30</pathCost>
+    <statBases>
+      <WorkToMake>200</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.1</Flammability>
+    </statBases>
+    <useHitPoints>True</useHitPoints>
+    <Size>(1,1)</Size>
+    <DesignationCategory>Misc</DesignationCategory>
+    <Passability>Standable</Passability>
+    <hasInteractionCell>False</hasInteractionCell>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>false</startElectricalFires>
+        <basePowerConsumption>1000</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+    </comps>
+    <researchPrerequisite>ResearchMineralSonarEnhancedScan</researchPrerequisite>
+  </ThingDef>
+
+  <!-- === Energy Pack === -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>ChargingEnergyPack</defName>
+    <label>Charging energy pack</label>
+    <description>Charging energy pack. It will be usable once fully charged.</description>
+    <thingClass>Common.Building_ChargingEnergyPack</thingClass>
+    <graphicData>
+      <texPath>Buildings/ChargingEnergyPack</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <rotatable>False</rotatable>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.3</fillPercent>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>0</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <SteelBar>20</SteelBar>
+      <AluBar>5</AluBar>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>100</basePowerConsumption>
+      </li>
+    </comps>
+    <killedLeavings>
+      <ChunkSlagSteel>1</ChunkSlagSteel>
+    </killedLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Power</designationCategory>
+    <staticSunShadowHeight>0.1</staticSunShadowHeight>
+    <constructEffect>ConstructMetal</constructEffect>
+    <researchPrerequisite>ResearchMineralSonarEnhancedScan</researchPrerequisite>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === Artefact === -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>ArtefactFound_Artefact</defName>
+    <label>Mysterious Artefact</label>
+    <description>This is an object of an ancient civilisation. What might happen, if you activate it?</description>
+    <thingClass>ArtefactFound.Building_Artefact</thingClass>
+    <category>Building</category>
+    <graphicData>
+          <texPath>Buildings/Artefact</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <pathCost>20</pathCost>
+    <passability>Standable</passability>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <WorkToMake>100</WorkToMake>
+      <Flammability>0.0</Flammability>
+      <Beauty>3</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>36</Steel>
+    </costList>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>    
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === Fertilizer Pump === -->
+  <ThingDef ParentName="FurnitureBase">
+    <defName>FertilizerPump</defName>
+    <label>terraforming pump</label>
+    <thingClass>Building_FertilizerPump</thingClass>
+    <graphicData>
+    <texPath>Buildings/FertilizerPump</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+    </shadowData>
+    </graphicData>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.2</fillPercent>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MaxHitPoints>240</MaxHitPoints>
+      <WorkToMake>3000</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>Slowly expands a field of growable soil around itself. Needs Power: 1000W</description>
+    <size>(1,1)</size>
+    <costList>
+      <SteelBar>120</SteelBar>
+      <AluBar>75</AluBar>
+      <Glass>20</Glass>
+      <Electronics>50</Electronics>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Misc</designationCategory>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>false</startElectricalFires>
+        <basePowerConsumption>1000</basePowerConsumption>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <rotatable>false</rotatable>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <researchPrerequisite>AgricultureIV</researchPrerequisite>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === Fissure, Generator, Extrator === -->
+  <ThingDef Name="BuildingNaturalBase" Abstract="True">
+    <category>Building</category>
+    <selectable>true</selectable>
+    <drawerType>MapMeshOnly</drawerType>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingNaturalBase">
+    <category>Ethereal</category>
+    <label>fissure</label>
+    <defName>MD2Fissure</defName>
+    <thingClass>MD2.Fissure</thingClass>
+    <graphicData>
+      <texPath>Terrain/Fissure</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <altitudeLayer>Floor</altitudeLayer>
+    <destroyable>false</destroyable>
+    <useHitPoints>false</useHitPoints>
+    <selectable>true</selectable>
+    <description>A fissure that cuts deep into the earth.</description>
+    <size>(1,1)</size>
+    <neverOverlapFloors>true</neverOverlapFloors>
+    <blockPlants>true</blockPlants>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>MD2FissureGenerator</defName>
+    <label>fissure generator</label>
+    <description>A powerful machine designed to crack open the earth and create a deep fissure which can be used to can access to the lower layers of the planet's crust. Needs Power: 2000W</description>
+    <thingClass>MD2.Building_FissureGenerator</thingClass>
+    <graphicData>
+      <texPath>Buildings/FissureGenerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <uiIconPath>Buildings/FissureGenerator</uiIconPath>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <WorkToMake>750</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>-6</Beauty>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <size>(3,3)</size>
+    <costList>
+      <SteelBar>250</SteelBar>
+      <Electronics>80</Electronics>
+    </costList>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2000</basePowerConsumption>
+      </li>
+    </comps>
+    <killedLeavings>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+    </killedLeavings>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Misc</designationCategory>
+    <staticSunShadowHeight>0</staticSunShadowHeight>
+    <researchPrerequisite>Fissure</researchPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>MD2Extractor</defName>
+    <label>ore extractor</label>
+    <description>This machine digs deep into the ground and extracts metals from the earth. Needs Power: 8000W</description>
+    <thingClass>MD2.Building_Extractor</thingClass>
+    <graphicData>
+      <texPath>Buildings/Extractor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <uiIconPath>Buildings/Extractor</uiIconPath>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.1</fillPercent>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <statBases>
+      <WorkToMake>3500</WorkToMake>
+      <MaxHitPoints>450</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>8000</basePowerConsumption>
+      </li>
+    </comps>
+    <size>(3,3)</size>
+    <costList>
+      <SteelBar>500</SteelBar>
+      <AluBar>500</AluBar>
+      <IntegratedCircuitsBoard>50</IntegratedCircuitsBoard>
+    </costList>
+    <placeWorkers>
+      <li>MD2.PlacementRestrictor_OnFissure</li>
+    </placeWorkers>
+    <killedLeavings>
+      <ChunkSlagSteel>3</ChunkSlagSteel>
+    </killedLeavings>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>ProductionResources</designationCategory>
+    <staticSunShadowHeight>0.6</staticSunShadowHeight>
+    <researchPrerequisite>Fissure</researchPrerequisite>
+  </ThingDef>
+
+
+
+
+
+
+
+</Buildings>

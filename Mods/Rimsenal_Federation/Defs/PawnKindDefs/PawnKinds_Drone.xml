@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PawnKindDefs>
+
+  <PawnKindDef Name="MechanoidBase" Abstract="True">
+    <bodyGraphicData>
+      <shaderType>Cutout</shaderType>
+    </bodyGraphicData>
+    <dessicatedBodyGraphicData>
+      <shaderType>Cutout</shaderType>
+    </dessicatedBodyGraphicData>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>FPCServant</defName>
+    <label>servant</label>
+    <race>Race_Drone</race>
+    <combatPower>180</combatPower>
+    <defaultFactionType>FPC</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Servant</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.8</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+            <offset>(0, 0, -0.4)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>1500</min>
+      <max>1500</max>
+    </weaponMoney>
+		<inventoryOptions>
+			<skipChance>0.5</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>50</min>
+						<max>100</max>
+					</countRange>
+				</li>
+				<li>
+					<thingDef>GlitterworldMedicine</thingDef>
+					<countRange>
+						<min>1</min>
+						<max>3</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+    <weaponTags>
+      <li>FedMechanoid</li>
+    </weaponTags>
+  </PawnKindDef>
+
+</PawnKindDefs>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+  <ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <selectable>True</selectable>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.9</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <SellPriceFactor>0.6</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>ADWeapons</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li>
+        <compClass>CompArt</compClass>
+        <nameMaker>NamerGun</nameMaker>
+        <descriptionMaker>ArtWeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>20</Steel>
+      <Plasteel>20</Plasteel>
+    </smeltProducts>
+  </ThingDef>
+
+
+
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+
+  </ThingDef>
+
+  <!-- ============================================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RS_Bullet_MechRocket</defName>
+		<label>plasma rocket</label>
+		<graphicData> <texPath>Things/Projectile/MRocket</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<DamageAmountBase>15</DamageAmountBase>
+			<flyOverhead>true</flyOverhead>
+			<Speed>50</Speed>
+			<explosionRadius>1.5</explosionRadius>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGun">
+		<defName>MechRocket</defName>
+		<label>rocket salvo</label>
+		<description>Powerful siege weapon, M77 "Howler" rocket salvo can effectively destroy a entire block in a matter of minutes.</description>
+		<graphicData> <texPath>Things/A9/MechPlasma</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+                                <destroyOnDrop>True</destroyOnDrop>
+		<menuHidden>True</menuHidden>
+		<tradeability>Never</tradeability>
+    <weaponTags>
+      <li>FedmechHeavy</li>
+    </weaponTags>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+				<AccuracyTouch>0.15</AccuracyTouch>
+				<AccuracyShort>0.10</AccuracyShort>
+				<AccuracyMedium>0.10</AccuracyMedium>
+				<AccuracyLong>0.10</AccuracyLong>
+				<RangedWeapon_Cooldown>9.0</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>RS_Bullet_MechRocket</projectileDef>
+				<burstShotCount>10</burstShotCount>
+                                                                <forcedMissRadius>5</forcedMissRadius>
+				<minRange>15</minRange>
+				<ticksBetweenBurstShots>25</ticksBetweenBurstShots>
+				<warmupTicks>450</warmupTicks>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<range>45</range>
+				<soundCast>MechRocket</soundCast>
+                                                                <soundCastTail>GunTail_Heavy</soundCastTail>
+  				<muzzleFlashScale>19</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+
+  <!-- ============================================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RS_Bullet_MechMissile</defName>
+		<label>plasma missile</label>
+		<graphicData> <texPath>Things/Projectile/MechMissile</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		
+		<projectile>
+			<damageDef>Plasma</damageDef>
+			<DamageAmountBase>30</DamageAmountBase>
+			<Speed>80</Speed>
+			<explosionRadius>1</explosionRadius>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGun">
+		<defName>MechMissile</defName>
+		<label>plasma missile launcher</label>
+		<description>weapon of pure destruction, M787 "Crier" fires high velocity plasma missiles. It is capable of destroying enemy defence from a far.</description>
+		<graphicData> <texPath>Things/A9/MechPlasma</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+                                <destroyOnDrop>True</destroyOnDrop>
+		<menuHidden>True</menuHidden>
+		<tradeability>Never</tradeability>
+    <weaponTags>
+      <li>FedmechHeavy</li>
+    </weaponTags>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+				<AccuracyTouch>0.50</AccuracyTouch>
+				<AccuracyShort>0.60</AccuracyShort>
+				<AccuracyMedium>0.70</AccuracyMedium>
+				<AccuracyLong>0.60</AccuracyLong>
+				<RangedWeapon_Cooldown>4.0</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>RS_Bullet_MechMissile</projectileDef>
+				<minRange>8</minRange>
+				<ticksBetweenBurstShots>25</ticksBetweenBurstShots>
+				<warmupTicks>250</warmupTicks>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<range>40</range>
+				<soundCast>MechRocket</soundCast>
+                                                                <soundCastTail>GunTail_Heavy</soundCastTail>
+  				<muzzleFlashScale>19</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+
+  <!-- ============================================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RS_Bullet_MechLaser</defName>
+		<label>laser</label>
+		<graphicData> <texPath>Things/Projectile/Mlaser</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		
+		<projectile>
+			<damageDef>Optic</damageDef>
+			<DamageAmountBase>15</DamageAmountBase>
+			<Speed>300</Speed>
+			<explosionRadius>0.9</explosionRadius>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGun">
+		<defName>MechLaser</defName>
+		<label>optic repeating cannon</label>
+		<description>Arms Dynamics M606 "Screamer" optic repeating cannon. This heavy optic can takes down most hostile element.</description>
+		<graphicData> <texPath>Things/A9/MechPlasma</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+                                <destroyOnDrop>True</destroyOnDrop>
+		<menuHidden>True</menuHidden>
+		<tradeability>Never</tradeability>
+    <weaponTags>
+      <li>FedmechGun</li>
+    </weaponTags>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+				<AccuracyTouch>0.75</AccuracyTouch>
+				<AccuracyShort>0.70</AccuracyShort>
+				<AccuracyMedium>0.70</AccuracyMedium>
+				<AccuracyLong>0.70</AccuracyLong>
+				<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>RS_Bullet_MechLaser</projectileDef>
+				<burstShotCount>5</burstShotCount>
+				<minRange>6</minRange>
+				<ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+				<warmupTicks>80</warmupTicks>
+				<range>30</range>
+				<soundCast>RS_ShotArbitrator</soundCast>
+                                                                <soundCastTail>GunTail_Heavy</soundCastTail>
+  				<muzzleFlashScale>14</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+
+  <!-- ============================================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RS_Bullet_MechPlasma</defName>
+		<label>plasma sphere</label>
+		<graphicData> <texPath>Things/Projectile/MFlux</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<thingClass>Projectile_Explosive</thingClass>
+		
+		<projectile>
+			<damageDef>Plasma</damageDef>
+			<DamageAmountBase>50</DamageAmountBase>
+			<Speed>5</Speed>
+			<explosionRadius>4</explosionRadius>
+		</projectile>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseGun">
+		<defName>MechPlasma</defName>
+		<label>plasma bombard</label>
+		<description>Designed to deliver spheres of superheated metal plsama to the target, M213 "Leveler" plasma bombard is a mordernized variant of the ancient assault gun.</description>
+		<graphicData> <texPath>Things/A9/MechPlasma</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+		<tradeability>Never</tradeability>
+		<destroyOnDrop>True</destroyOnDrop>
+		<menuHidden>True</menuHidden>
+    <weaponTags>
+      <li>FedmechGun</li>
+    </weaponTags>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+				<AccuracyTouch>0.73</AccuracyTouch>
+				<AccuracyShort>0.65</AccuracyShort>
+				<AccuracyMedium>0.60</AccuracyMedium>
+				<AccuracyLong>0.55</AccuracyLong>
+				<RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>RS_Bullet_MechPlasma</projectileDef>
+<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<warmupTicks>262</warmupTicks>
+				<minRange>6</minRange>
+				<range>20</range>
+				<soundCast>RS_ShotHarmonizer</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+  				<muzzleFlashScale>17</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+</ThingDefs>

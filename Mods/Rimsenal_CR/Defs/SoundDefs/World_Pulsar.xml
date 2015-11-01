@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefPackage-SoundDef>
+
+  <SoundDef>
+    <defName>Pulsar</defName>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <name>shot</name>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Pulsar</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>35</min>
+          <max>45</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Collapsar</defName>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <name>shot</name>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Collapsar</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>35</min>
+          <max>45</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Nova</defName>
+    <eventNames />
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <name>shot</name>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Things/Nova</clipPath>
+          </li>
+        </grains>
+        <volumeRange>
+          <min>35</min>
+          <max>45</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+</DefPackage-SoundDef>

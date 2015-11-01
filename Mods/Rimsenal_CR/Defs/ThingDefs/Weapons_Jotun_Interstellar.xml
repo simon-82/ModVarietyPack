@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+  <ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <selectable>True</selectable>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.9</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <SellPriceFactor>0.6</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>JIWeapons</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li>
+        <compClass>CompArt</compClass>
+        <nameMaker>NamerGun</nameMaker>
+        <descriptionMaker>ArtWeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>20</Steel>
+      <Plasteel>20</Plasteel>
+    </smeltProducts>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>JIGun</li>
+      <li>AdvancedGun</li>
+    </weaponTags>
+    <tradeTags>
+      <li>CerRE</li>
+    </tradeTags>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Combat_Realism.BulletCR</thingClass>
+    <label>bullet</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
+
+
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Trollbane</defName>
+    <label>Trollbane slug</label>
+    <graphicData> <texPath>Things/Projectile/Slug</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <speed>180</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.725</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>RS_Gun_Trollbane</defName>
+    <label>Heavy pistol</label>
+    <description>A JA-32A6E "Trollbane". It is the most Popular large caliber pistol made by Jotun Interstellar. Fires a 50 caliber plasteel alloy round, fire from a Trollbane can solve most of lonely colonies problems.</description>
+    <graphicData> <texPath>Things/A10/Trollbane</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>320</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Trollbane</projectileDef>
+        <warmupTicks>35</warmupTicks>
+        <range>15</range>
+        <soundCast>RS_ShotTrollbane</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.6</shooterVariation>
+        <recoilOffsetX>(0.0,0.1)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.2)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>5</roundPerMag>
+        <reloadTick>190</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.14</MoveSpeed>
+      <WorkSpeedGlobal>-0.04</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- ============================================================== -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Fafnir</defName>
+    <label>Fafnir bucks</label>
+    <graphicData> <texPath>Things/Projectile/Slug</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>11</damageAmountBase>
+      <speed>155</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.72</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>RS_Gun_Fafnir</defName>
+    <label>Siege shotgun</label>
+    <description>This oversized shotgun is the Jotun Interstellar JA-66A2 "Fafnir", Made by splinting multiple AA gun barrel's together. The Fafnir is a weapon used to fight against mechanoids in urban warfare. If a person was to accidently take a burst from this siege shotgun, they would be instantly turned into sticky red mist. Not recommended for hunting purposes.</description>
+    <graphicData> <texPath>Things/A10/Fafnir</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractShotgun</soundInteract>
+    <statBases>
+      <MarketValue>1025</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>1.86</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRShotgunReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Fafnir</projectileDef>
+        <warmupTicks>45</warmupTicks>
+        <range>18</range>
+        <soundCast>RS_ShotTrollbane</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.83</shotVariation>
+        <shooterVariation>1</shooterVariation>
+        <recoilOffsetX>(0.0,0.6)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.5)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>3</roundPerMag>
+        <reloadTick>320</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-1</MoveSpeed>
+      <WorkSpeedGlobal>-0.2</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RS_Bullet_Beowulf</defName>
+		<label>Beowulf slug</label>
+		<graphicData> <texPath>Things/Projectile/Slug</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>35</damageAmountBase>
+      <speed>398</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.85</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>RS_Gun_Beowulf</defName>
+		<label>Heavy rifle</label>
+<description>A JA-12A2 "Beowulf" heavy rifle, manufactured by Jotun Interstellar. The designer of the Beowulf was never concerned about ascetics. What he focused on was just pure fire power.</description>
+		<graphicData> <texPath>Things/A10/Beowulf</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+    <statBases>
+      <MarketValue>1550</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.51</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>RS_Bullet_Beowulf</projectileDef>
+        <warmupTicks>81</warmupTicks>
+        <range>78</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>RS_ShotBeowulf</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.5</shooterVariation>
+        <recoilOffsetX>(0.0,0.5)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.4)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>12</roundPerMag>
+        <reloadTick>330</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.6</MoveSpeed>
+      <WorkSpeedGlobal>-0.12</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RS_Bullet_Notung</defName>
+		<label>Notung round</label>
+		<graphicData> <texPath>Things/Projectile/Shell</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+      <speed>398</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.95</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>RS_Gun_Notung</defName>
+		<label>AM rifle</label>
+		<description>A JA-67A1 "Notung" Anti Mechanoid rifle. As heavy as a small truck and just as hard to wield, the recoil from a Notung is as strong as the kick from a mule. Recommended for use against heavy mechanoids only.</description>
+		<graphicData> <texPath>Things/A10/Notung</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+    <statBases>
+      <MarketValue>1850</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>RS_Bullet_Notung</projectileDef>
+        <warmupTicks>160</warmupTicks>
+        <range>139</range>
+        <soundCast>RS_ShotGrendel</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>18</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.03</shotVariation>
+        <shooterVariation>0.1</shooterVariation>
+        <recoilOffsetX>(0.0,0.6)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.5)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>3</roundPerMag>
+        <reloadTick>380</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-1</MoveSpeed>
+      <WorkSpeedGlobal>-0.20</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+  <ThingDef Class="Combat_Realism.ThingDef_ProjectileFrag" ParentName="BaseBullet">
+    <defName>Bullet_Grendel</defName>
+    <label>grendel shell</label>
+		<graphicData>
+			<texPath>Things/Projectile/Shell</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+    <thingClass>Combat_Realism.ProjectileCR_Frag</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>80</damageAmountBase>
+      <speed>20</speed>
+      <explosionRadius>2</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <soundHitThickRoof>ArtilleryHitThickRoof</soundHitThickRoof>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+      <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+      <soundAmbient>MortarRound_Ambient</soundAmbient>
+    </projectile>
+	<fragRange>5.0</fragRange>
+	<fragProjectileSmall>Fragment_MortarSmall</fragProjectileSmall>
+	<fragAmountSmall>40</fragAmountSmall>
+	<fragProjectileMedium>Fragment_MortarMedium</fragProjectileMedium>
+	<fragAmountMedium>20</fragAmountMedium>
+	<fragProjectileLarge>Fragment_MortarLarge</fragProjectileLarge>
+	<fragAmountLarge>10</fragAmountLarge>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.55</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>RS_Gun_Grendel</defName>
+		<label>Siege gun</label>
+<description>The Jotun Interstellar JA-55A4 "Grendel". The legacy of a grim mechanoid war, the Grendel siege gun is one of the most formidable man-portable siege weapons acrosss the galaxy. Perfect for home defense or scaring the neighbours away from your daughters.</description>
+		<graphicData> <texPath>Things/A10/Grendel</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+    <statBases>
+      <MarketValue>2330</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>4.2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Grendel</projectileDef>
+        <warmupTicks>320</warmupTicks>
+        <range>130</range>
+        <minRange>32</minRange>
+        <forcedMissRadius>5</forcedMissRadius>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>RS_ShotGrendel</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>19</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.17</shotVariation>
+        <shooterVariation>0.8</shooterVariation>
+        <recoilOffsetX>(0.0,0.8)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.6)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>4</roundPerMag>
+        <reloadTick>3250</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-1.5</MoveSpeed>
+      <WorkSpeedGlobal>-0.3</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+</ThingDefs>

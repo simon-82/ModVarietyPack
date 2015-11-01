@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <RWAutoSell.CreateRule>Créer une Règle pour vendre automatiquement</RWAutoSell.CreateRule>
+  <RWAutoSell.EditRule>Editer Règle</RWAutoSell.EditRule>
+  <RWAutoSell.AutoSellButton>Vente Auto</RWAutoSell.AutoSellButton>
+  <RWAutoSell.AutoSellTitle>Réglagle Vente Auto</RWAutoSell.AutoSellTitle>
+  <RWAutoSell.CreateRuleShort>Créer Règle</RWAutoSell.CreateRuleShort>
+  <RWAutoSell.Clear>Vider</RWAutoSell.Clear>
+  <RWAutoSell.RuleMaxReached>Trop de Règle en place./n 100 règles maximum (Pensez à éditer des règles existantes)</RWAutoSell.RuleMaxReached>
+  <RWAutoSell.Delete>Supprimer</RWAutoSell.Delete>
+  <RWAutoSell.Kept>Minimum conserver en Stock</RWAutoSell.Kept>
+  <RWAutoSell.VToggle>Couleur règle Vérification</RWAutoSell.VToggle>
+  <RWAutoSell.ASTradeBehaviour>Comportement de négociation</RWAutoSell.ASTradeBehaviour>
+  <RWAutoSell.SortByUnSorted>non trié</RWAutoSell.SortByUnSorted>
+  <RWAutoSell.SortByHealth>par la santé</RWAutoSell.SortByHealth>
+  <RWAutoSell.SortByValue>par valeur</RWAutoSell.SortByValue>
+  <RWAutoSell.Stacktoggle>amélioration du comportement de vente empilés</RWAutoSell.Stacktoggle>
+  <RWAutoSell.CloseToggle>Fermer la fenêtre d' échange sur vente auto</RWAutoSell.CloseToggle>
+  <RWAutoSell.Negotiator>Négociateur</RWAutoSell.Negotiator>
+  <RWAutoSell.AIToggle>AI vente</RWAutoSell.AIToggle>
+  <RWAutoSell.ImportRules>Règles d'importation</RWAutoSell.ImportRules>
+  <RWAutoSell.Import>Importation</RWAutoSell.Import>
+  <RWAutoSell.ExtraOptions>Options supplémentaires</RWAutoSell.ExtraOptions>
+  <!-- Category/Thing and Materials Labels --> 
+  <RWAutoSell.RuleLabelAny>toute {0}</RWAutoSell.RuleLabelAny>
+  <RWAutoSell.RuleLabelMatMulti>multiples {0} possibles </RWAutoSell.RuleLabelMatMulti>
+  <RWAutoSell.RuleLabelMat> constituées de {0}{1}</RWAutoSell.RuleLabelMat>
+  <RWAutoSell.Materials>matériels</RWAutoSell.Materials>
+  <!-- Health Rule Labels -->
+  <RWAutoSell.RuleHBelow> avec {0} dessous de {1}%</RWAutoSell.RuleHBelow>
+  <RWAutoSell.RuleHBetween> avec la {0} entre {1}% et {2}%</RWAutoSell.RuleHBetween>
+  <RWAutoSell.RuleHAbove> avec {0} dessus de {1}%</RWAutoSell.RuleHAbove>
+  <!-- Quality Rule Labels -->
+  <RWAutoSell.RuleQBelow> de {0} dessous de {1}</RWAutoSell.RuleQBelow>
+  <RWAutoSell.RuleQBetween> de la {0} entre {1} et {2}</RWAutoSell.RuleQBetween>
+  <RWAutoSell.RuleQAbove> de {0} dessus de {1}</RWAutoSell.RuleQAbove>
+  <RWAutoSell.RuleKeepMin> et de garder un minimum de {0}</RWAutoSell.RuleKeepMin>
+  <!--Rule Label Order 
+  
+  0=Thing or Category (e.g. Any Apparel)
+  1=Materials (e.g. Made From Any Materials)
+  2=Health  (e.g. With Health Above 50%)
+  3=Quality (e.g. of Quality Below poor)
+  4=Keep Count (e.g. and keep a minimum of 30)
+  -->
+  <RWAutoSell.RuleLabel>{0}{1}{2}{3}{4}</RWAutoSell.RuleLabel>
+</LanguageData>

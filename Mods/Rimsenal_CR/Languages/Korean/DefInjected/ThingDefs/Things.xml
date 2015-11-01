@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<Carbonsuit.label>카본 점프슈트</Carbonsuit.label>
+	<Carbonsuit.description>결정화 탄소 섬유로 제작한 점프슈트입니다. 얇고 가볍지만 놀랍도록 튼튼합니다.</Carbonsuit.description>
+  
+	<RS_Gun_Frost.label>파편 소총</RS_Gun_Frost.label>
+	<RS_Gun_Frost.description>연화 정밀사의 모델-489a '프로스트'입니다. 프로스트는 재래식 돌격 소총에 비해 화력과 장갑관통력이 떨어지는 대신 연사속도가 뛰어나고 탄창 용량이 큽니다.</RS_Gun_Frost.description>
+
+	<RS_Gun_Chill.label>파편 SMG</RS_Gun_Chill.label>
+	<RS_Gun_Chill.description>연화 정밀사의 모델-481c '칠' 파편 SMG입니다. 조준 보조용 유사 A.I가 달려있지만 장거리에서는 명중률이 급격히 떨어집니다. 그래도 근거리에서 경장갑 목표물을 처리할 때는 이상적인 무기입니다.</RS_Gun_Chill.description>
+
+	<RS_Gun_Glacier.label>스파이크 저격 소총</RS_Gun_Glacier.label>
+	<RS_Gun_Glacier.description>연화 정밀사의 최신형 저격 소총인 모델-492 '글래시어'입니다. 다른 일반적인 정밀 화기와 달리 글래시어는 탄소 결정체로 만들어진 스파이크를 음속의 세 배에 달하는 속도로 발사합니다. 극도로 빠른 총구 속도와 IV 급 조준용 유사 A.I덕에 글래시어의 사격을 피할 수 있는 적은 거의 없습니다.</RS_Gun_Glacier.description>
+
+	<RS_Gun_Snowburst.label>파편 쌍권총</RS_Gun_Snowburst.label>
+	<RS_Gun_Snowburst.description>연화 정밀제 모델-480g "스노우버스트" 권총 한쌍입니다. 사거리는 아주 짧지만 지근거리에서는 문자 그대로 적을 찢어발길 수 있습니다. 왜, 옛말에도 있잖습니까? "총이 두 배면 재미도 두 배!"라고.</RS_Gun_Snowburst.description>
+
+	<YP_Icemist.label>극진동 나이프</YP_Icemist.label>
+	<YP_Icemist.description>가벼우면서도 극도로 날카로운 "아이스미스트"는 연화 정밀사 사병 부대의 백병전 무기입니다. 암살에 이상적입니다.</YP_Icemist.description>
+
+	<RS_Snowflake.label>극초단파 수류탄</RS_Snowflake.label>
+	<RS_Snowflake.description>연화 정밀사의 모델-3c "스노우플레이크" 극초단파 수류탄. 짧은 시간동안 고통스러운 극초단파를 방출합니다. 아주 효과적인 군중 통제 무기입니다.</RS_Snowflake.description>
+
+	<YPBoreas.label>극초단파 총</YPBoreas.label>
+	<YPBoreas.description>연화 정밀사의 모델-11c "보레아스"는 피부 아래의 수분을 기화시키는 극초단파를 발사합니다. 산 채로 불타는 고통을 느끼도록 만듭니다. 끔찍하죠.</YPBoreas.description>
+
+	<Dropsuit.label>강하복</Dropsuit.label>
+	<Dropsuit.description>연화 정밀사의 모델-473t "페넘브라" 강하복은 기업계의 강하 부대가 사용하는 특수장비입니다. 완전히 밀봉된 장비로 우주의 진공상태처럼 극한 환경에서의 작전을 염두하고 설계되었습니다. 추진기가 달려 있어 착용자의 이동 속도가 빨라집니다.</Dropsuit.description>
+
+	<Reflexsuit.label>반응복</Reflexsuit.label>
+	<Reflexsuit.description>연화 정밀사의 모델-495a "움브라" 반응복입니다. "신속함이 최선의 방어다"라는 연화사의 오랜 속담대로 움브라는 인공 신경을 직접 착용자와 연결시켜 훨씬 더 빨리 움직일 수 있도록 합니다.</Reflexsuit.description>
+
+	<ReflexsuitHelmet.label>반응복 헬멧</ReflexsuitHelmet.label>
+	<ReflexsuitHelmet.description>반응복의 헬멧입니다. 착용자의 반응 속도를 강화합니다.</ReflexsuitHelmet.description>
+
+	<DropsuitHelmet.label>강하복 헬멧</DropsuitHelmet.label>
+	<DropsuitHelmet.description>우주 공간 작전과 궤도 강하에 최적화된 최첨단 헬멧입니다. 다양한 첨단 장비를 내장했지만 조준보조장치를 제외하면 지표상의 여러분에게는 별 의미 없는 물건입니다.</DropsuitHelmet.description>
+
+	<RS_Gun_Grendel.label>공성포</RS_Gun_Grendel.label>
+	<RS_Gun_Grendel.description>요튠 인터스텔라제 JA-55A4 "그렌델". 끔찍했던 메카노이드 전쟁의 유산으로 인간이 휴대할 수 있는 가장 가공할 공성병기 중 하나입니다.</RS_Gun_Grendel.description>
+
+	<RS_Gun_Beowulf.label>중소총</RS_Gun_Beowulf.label>
+	<RS_Gun_Beowulf.description>JA-12A2 "베오울프" 중소총. 요튠 인터스텔라 제품. 베오울프의 설계자는 부수적인 문제는 신경쓰지 않고서 오로지 순수한 화력에만 집중하여 이 무기를 설계했습니다.</RS_Gun_Beowulf.description>
+
+	<RS_Gun_Trollbane.label>중권총</RS_Gun_Trollbane.label>
+	<RS_Gun_Trollbane.description>요튠 인터스텔라의 인기 대구경 권총인 JA-32A6E "트롤베인"입니다. 트롤베인에서 날아드는 50. 구경 플라스틸 합금탄은 개척지에서 벌어지는 문제 대부분을 해결할 수 있습니다.</RS_Gun_Trollbane.description>
+
+	<RS_Gun_Fafnir.label>공성 산탄총</RS_Gun_Fafnir.label>
+	<RS_Gun_Fafnir.description>이 요튠 인터스텔라의 특대형 산탄총 JA-66A2 "파프닐"은 대공포 포신을 잘라 만든 무기입니다. 파프닐은 시가지에서 메카노이드와 싸우기 위해 만든 무기입니다. 사람이 맞으면 시뻘건 곤죽으로 변하겠지요.</RS_Gun_Fafnir.description>
+
+	<RS_Gun_Notung.label>대메카노이드 소총</RS_Gun_Notung.label>
+	<RS_Gun_Notung.description>사용하기 어렵고 무거운데다 반동은 당나귀 뒷발차기만큼이나 강하지만, JA-67A1 "노텅" 대 메카노이드 소총은 그야말로 괴물같은 화력을 자랑합니다.</RS_Gun_Notung.description>
+
+	<JI_Orm.label>공성 망치</JI_Orm.label>
+	<JI_Orm.description>"오름", '독사'는 요튠 인터스텔라가 제작한 육중한 전투망치입니다. 보다시피 한 번 크게 휘두르면 벽을 통째로 허물 수 있을만큼 강합니다.</JI_Orm.description>
+
+	<JITorden.label>가방 폭탄</JITorden.label>
+	<JITorden.description>요튠 인터스텔라의 가방 폭탄 토르덴. 전투 공병들의 최고의 친구입니다.</JITorden.description>
+
+	<Siegearmor.label>공성장갑복</Siegearmor.label>
+	<Siegearmor.description>JE-342A7 "드베르그(드워프)" 공성장갑복입니다. 이 요새계 행성에서 만든 제품들이 다 그러하듯 드베르그 공성장갑복 역시 주목적에만 외골수적으로 파고들어 만들어진 물건입니다. 드베르그의 경우 주목적이란 착용자의 생존을 말합니다.</Siegearmor.description>
+
+	<SiegearmorHelmet.label>공성장갑복 헬멧</SiegearmorHelmet.label>
+	<SiegearmorHelmet.description>드베르그 공성장갑복의 견고하고 믿음직스러운 헬멧입니다. </SiegearmorHelmet.description>
+
+	<CCArmor.label>백병전 장갑복</CCArmor.label>
+	<CCArmor.description>"드베르그" 공성장갑복의 개조판인 JE-257A1 "에인헤랴르" 장갑복은 무시무시한 시가전 장비입니다. 두꺼운 장갑은 상당부분 제거되었지만 강력한 어큐에이터와 고속 충전 방어막이 벌충합니다. </CCArmor.description>
+
+	<CCArmorHelmet.label>백병전 장갑복 헬멧</CCArmorHelmet.label>
+	<CCArmorHelmet.description>백병전 장갑복의 헬멧입니다. 백병전 보조용 유사 A.I가 내장되었습니다. </CCArmorHelmet.description>
+
+	<RS_Gun_Pacificator.label>광학 소총</RS_Gun_Pacificator.label>
+	<RS_Gun_Pacificator.description>암즈 다이내믹스 제 M202 "퍼시피케이터" 광학 소총은 악명높은 연방 피스키퍼 부대의 제식 소총입니다. 이 소총은 명중 지점을 기화시키는 집중광선을 발사합니다. 과열 문제로 인해 연사속도가 느린 편입니다.</RS_Gun_Pacificator.description>
+
+	<RS_Gun_Negotiator.label>광학 권총</RS_Gun_Negotiator.label>
+	<RS_Gun_Negotiator.description>M33 "네고시에이터"는 암즈 다이내믹스가 생산하는 광학 권총입니다. 네고시에이터는 "에너지 도가니"라 불리는 비재래식 사격 매커니즘을 사용합니다. 권총 치고 심각하게 느린 사격 속도가 약점이지만 높은 화력과 정확도가 이를 벌충합니다.</RS_Gun_Negotiator.description>
+
+	<RS_Gun_Arbitrator.label>광학 지원 화기</RS_Gun_Arbitrator.label>
+	<RS_Gun_Arbitrator.description>암즈 다이내믹스제 M154 "아비트레이터"입니다. 연방은 이 소이 레이저 병기 사용을 엄격히 통제하여 오로지 연방 피스몽거 특수부대만이 M154를 사용합니다. 안그래도 끔찍스러운 연방의 피스키퍼들 중에서 최악의 종자들만 추려낸 부대 말입니다.</RS_Gun_Arbitrator.description>
+
+	<RS_Gun_Intercessor.label>광학 정밀 소총</RS_Gun_Intercessor.label>
+	<RS_Gun_Intercessor.description>연방 피스브링어 암살전단이 즐겨쓰는 무기인 암즈 다이내믹스 M270 "인터세서"는 장거리 광학 저격 무기입니다. 인터세서의 화력은 재래식 저격 소총보다 조금 떨어지지만, 인터세서의 진정 무서운 점은 그 정확도와 사정거리입니다.</RS_Gun_Intercessor.description>
+
+	<RS_Gun_Harmonizer.label>플라즈마 캐스터</RS_Gun_Harmonizer.label>
+	<RS_Gun_Harmonizer.description>연방 최후의 수단, M656 "하모나이저"는 강력한 대장갑 무기입니다. 하모나이저가 쏘는 플라즈마 구체는 아주 느리고 피하기도 쉽지만, 그 한 방, 플라즈마 구체 단 한 방만으로 명중한 모든 걸 박살낼 수 있습니다.</RS_Gun_Harmonizer.description>
+
+	<AD_Lawkeeper.label>충격 진압봉</AD_Lawkeeper.label>
+	<AD_Lawkeeper.description>연방 피스키퍼의 제식 근접 무기인 "로우 키퍼"는 얼핏 보기에 그냥 비살상 진압 무기로 보입니다. 하지만 전혀 아닙니다.</AD_Lawkeeper.description>
+
+	<ADSystemizer.label>플라즈마 수류탄</ADSystemizer.label>
+	<ADSystemizer.description>M3 "시스테마이저" 플라즈마 수류탄. 재래식 수류탄보다 폭발 범위는 좁은 대신 화력은 더 강합니다.</ADSystemizer.description>
+
+	<Riotgear.label>폭동진압복</Riotgear.label>
+	<Riotgear.description>M8E "퍼시피스트(평화주의자)"는 암즈 다이내믹스가 소름끼치는 연방 피스키퍼들에게 제공하기 위해 제작한 폭동진압복입니다. 사람들의 따가운 시선만 견딜 수 있다면 아주 훌륭한 개인방호구입니다.</Riotgear.description>
+
+	<RiotgearHelmet.label>폭동진압복 헬멧</RiotgearHelmet.label>
+	<RiotgearHelmet.description>"퍼시피스트(평화주의자)"라는 잘못되도 한참은 잘못된 이름이 붙은 폭동진압복의 헬멧입니다. 이걸 쓰면 바로 개척지의 흉물취급 당할 겁니다.</RiotgearHelmet.description>
+
+	<MarksmanGearHelmet.label>저격복 헬멧</MarksmanGearHelmet.label>
+	<MarksmanGearHelmet.description>M91 저격복의 헬멧입니다. 조준 안정기가 내장되었습니다.</MarksmanGearHelmet.description>
+
+	<MarksmanGear.label>저격복</MarksmanGear.label>
+	<MarksmanGear.description>암즈 다이내믹스 M91 "인터랙터" 저격복입니다. 관절 안정 장치를 이용해 안정적인 조준을 돕습니다. 연방 피스브링어 암살전단의 기본장비입니다.</MarksmanGear.description>
+
+	<GDOcelot.label>경권총</GDOcelot.label>
+	<GDOcelot.description>그레이데일 디펜스 P04 "오셀롯" 권총입니다. 가볍고 사용하기 쉬워 비전투원의 무기로 이상적입니다.</GDOcelot.description>
+
+	<GDPuma.label>지정사수소총</GDPuma.label>
+	<GDPuma.description>그레이데일 디펜스가 제작한 가벼운 지정사수소총인 퓨마는 정밀한 화력지원이나 사냥에 적합합니다.</GDPuma.description>
+
+	<GDPanther.label>다목적 소총</GDPanther.label>
+	<GDPanther.description>그레이데일 디펜스 GPR8 "팬서"는 개척지 자경단의 베스트셀러 무기입니다. 높은 생산성과 내구성 덕에 개척지 방위용으로 이상적입니다.</GDPanther.description>
+
+	<GDJaguar.label>유탄발사기</GDJaguar.label>
+	<GDJaguar.description>그레이데일 디펜스가 설계한 GL5 "재규어"는 단순하지만 효과적인 간접화력 지원 무기입니다.</GDJaguar.description>
+
+	<GDLynx.label>경지원화기</GDLynx.label>
+	<GDLynx.description>그레이데일 디펜스가 제작한 SW11 "링스"는 단순하면서도 견고한 설계로 유명합니다. 이 무기만 있으면 끝없이 총알을 퍼부어 적을 압도할 수 있습니다.</GDLynx.description>
+
+	<GD_Fang.label>전투용 검</GD_Fang.label>
+	<GD_Fang.description>팽은 그레이데일 디펜스가 제작한 전투용 검으로, 나무나 적의 사지를 잘라내는데 적절한 도구입니다.</GD_Fang.description>
+
+	<GDBobcat.label>미니 수류탄</GDBobcat.label>
+	<GDBobcat.description>그레이데일 디펜스의 밥캣 수류탄은 크기가 작아 여러 발을 동시에 소지할 수 있습니다.</GDBobcat.description>
+
+	<Apparel_TecVast.label>전술 조끼</Apparel_TecVast.label>
+	<Apparel_TecVast.description>인체공학적으로 설계된 방탄복입니다. 착용자의 전투효율성을 높입니다.</Apparel_TecVast.description>
+
+	<Apparel_TacHelmet.label>전술 헬멧</Apparel_TacHelmet.label>
+	<Apparel_TacHelmet.description>교전자의 머리를 보호하기 위해 설계된 첨단 헬멧입니다.</Apparel_TacHelmet.description>
+
+	<Apparel_Redoubt.label>공병 방호복</Apparel_Redoubt.label>
+	<Apparel_Redoubt.description>그레이데일이 전투공병을 위해 제작한 "리다우트" 공병 방호복입니다. 내장형 도구세트가 있어 총격전 와중에 무언가를 지어야하는 상황에 이상적입니다.</Apparel_Redoubt.description>
+
+	<Apparel_RedoubtHelmet.label>공병 방호복 헬멧</Apparel_RedoubtHelmet.label>
+	<Apparel_RedoubtHelmet.description>리다우트 공병 방호복의 헬멧입니다. 간단한 목표 조준 시스템이 내장되었습니다.</Apparel_RedoubtHelmet.description>
+
+	<Apparel_RiotShield.label>진압 방패</Apparel_RiotShield.label>
+	<Apparel_RiotShield.description>연방 피스메이커 부대의 제식 진압 방패입니다. 무겁고 불편하지만 방호력이 높습니다.</Apparel_RiotShield.description>
+
+	<Apparel_Antumbra.label>왜곡복</Apparel_Antumbra.label>
+	<Apparel_Antumbra.description>연화 모델-17c "앤텀브라" 왜곡복입니다. 연화 요원들의 "파티복"인 이 첨단 전투복은 사용자를 조준하기 어렵게 만드는 광학 왜곡 장치가 달려있습니다.</Apparel_Antumbra.description>
+
+	<Apparel_AntumbraHelmet.label>왜곡복 헬멧</Apparel_AntumbraHelmet.label>
+	<Apparel_AntumbraHelmet.description>왜곡복의 헬멧입니다. 왜곡복과 같은 특성을 공유합니다.</Apparel_AntumbraHelmet.description>
+
+	<Apparel_ODD.label>광학 왜곡 장치</Apparel_ODD.label>
+	<Apparel_ODD.description>광학 왜곡 장치는 주변의 빛을 휘어버리는 특수장을 방출합니다. 적이 착용자를 조준하기 어렵도록 만듭니다.</Apparel_ODD.description>
+
+	<Gun_PLRifle.label>펄스레이저 소총</Gun_PLRifle.label>
+	<Gun_PLRifle.description>티시폰 엔터프라이즈의 주력상품, "펄서" 소총은 유효사거리 끄트머리에서 가장 강력한 위력을 발휘하는 펄스 레이저를 발사합니다.</Gun_PLRifle.description>
+
+	<Gun_PLPistol.label>펄스레이저 권총</Gun_PLPistol.label>
+	<Gun_PLPistol.description>"코로나" 펄스 레이저 권총은 용량이 줄어들어 화력과 사거리도 함께 줄어들었지만, 가볍고 다루기 쉽습니다.</Gun_PLPistol.description>
+
+	<Gun_PLSniper.label>펄스레이저 장총</Gun_PLSniper.label>
+	<Gun_PLSniper.description>"퀘이사" 펄스 레이저 장총은 아주 훌륭한 지정사수화기입니다. 하지만 가까운 거리에서는 명중률이 크게 줄어들어 자기 발을 맞출 공산이 더 큽니다.</Gun_PLSniper.description>
+
+	<Gun_PLCutter.label>펄스 프로젝터</Gun_PLCutter.label>
+	<Gun_PLCutter.description>본래 공업용 절단기로 만들어진 물건으로, 펄스 광선이 아주 가까운 거리까지만 방출되지만 일단 닿는 것은 뭐든 다 찢어발기는 물건입니다.</Gun_PLCutter.description>
+
+	<Gun_MML.label>마이크로 미사일 발사기</Gun_MML.label>
+	<Gun_MML.description>티시폰 엔터프라이즈의 "노바" 다연장 마이크로 미사일 발사기입니다. 미사일 하나하나의 화력은 약하지만 넓은 범위의 적들을 멀리서 제압할 수 있습니다.</Gun_MML.description>
+
+
+</LanguageData>

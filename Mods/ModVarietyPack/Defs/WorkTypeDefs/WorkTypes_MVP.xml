@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkTypeDefs>
+
+  <WorkTypeDef>
+    <defName>Fishing</defName>
+    <labelShort>Fish</labelShort>
+    <pawnLabel>Fisher</pawnLabel>
+    <gerundLabel>Fishing</gerundLabel>
+    <description>Fishers fish at fishing piers and operate the aquaculture basins.</description>
+    <verb>Fish</verb>
+    <naturalPriority>925</naturalPriority>
+    <relevantSkills>
+      <li>Fishing</li>
+    </relevantSkills>
+  </WorkTypeDef>
+
+  <WorkTypeDef>
+    <defName>Warden</defName>
+    <labelShort>Negotiate</labelShort>
+    <pawnLabel>Diplomat</pawnLabel>
+    <gerundLabel>Negotiating</gerundLabel>
+    <description>Diplomats deal with prisoners and visitors.</description>
+    <verb>Handle</verb>
+    <naturalPriority>1100</naturalPriority>
+    <requireCapableColonist>true</requireCapableColonist>
+    <relevantSkills>
+      <li>Social</li>
+    </relevantSkills>
+    <workTags>
+      <li>Social</li>
+    </workTags>
+  </WorkTypeDef>
+
+</WorkTypeDefs>

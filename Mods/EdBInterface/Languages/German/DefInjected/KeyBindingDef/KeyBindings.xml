@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<!-- NEEDS TRANSLATION --><EdB_Interface_NextSquad.label>Next Squad</EdB_Interface_NextSquad.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_PreviousSquad.label>Previous Squad</EdB_Interface_PreviousSquad.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squad1.label>Squad 1</EdB_Interface_Squad1.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squad2.label>Squad 2</EdB_Interface_Squad2.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squad3.label>Squad 3</EdB_Interface_Squad3.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squad4.label>Squad 4</EdB_Interface_Squad4.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squad5.label>Squad 5</EdB_Interface_Squad5.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squad6.label>Squad 6</EdB_Interface_Squad6.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squad7.label>Squad 7</EdB_Interface_Squad7.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squad8.label>Squad 8</EdB_Interface_Squad8.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squad9.label>Squad 9</EdB_Interface_Squad9.label>
+	<!-- NEEDS TRANSLATION --><EdB_Interface_Squad10.label>Squad 10</EdB_Interface_Squad10.label>
+
+</LanguageData>

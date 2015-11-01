@@ -1,0 +1,1466 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+ <!-- === VanillaStart === -->
+
+	<RecipeDef>
+    <workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+		<defName>MakeStoneBlocks</defName>
+		<label>make stone blocks</label>
+		<description>Cuts rock chunks into usable stone blocks.</description>
+		<jobString>Stonecutting.</jobString>
+		<workAmount>1600</workAmount>
+		<workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <workSkill>Crafting</workSkill>
+    <workSkillLearnFactor>0.25</workSkillLearnFactor>
+		<effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>StoneChunks</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+    <specialProducts>
+      <li>Butchery</li>
+    </specialProducts>
+		<fixedIngredientFilter>
+      <categories>
+        <li>StoneChunks</li>
+      </categories>
+		</fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>ExtractMetalFromSlag</defName>
+    <label>smelt metal from slag</label>
+    <description>Use heat and strong electromagnets to separate useful metal from slag chunks.</description>
+    <jobString>Smelting metal from slag.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkSlagSteel</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <!-- Switched to standard products so we can do "do until you have X"
+    <specialProducts>
+      <li>Smelted</li>
+    </specialProducts>-->
+    <products>
+      <Steel>10</Steel>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkSlagSteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>SmeltWeapon</defName>
+    <label>smelt metal from weapon</label>
+    <description>Use heat and strong electromagnets to separate useful metal from weapons.</description>
+    <jobString>Smelting metal from weapon.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Weapons</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <specialProducts>
+      <li>Smelted</li>
+    </specialProducts>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Weapons</li>
+      </categories>
+      <specialFiltersToDisallow>
+        <li>AllowNonSmeltableWeapons</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+
+  <RecipeDef>
+    <defName>MakeArtilleryShell</defName>
+    <label>make artillery shell</label>
+    <description>Craft an artillery shell.</description>
+    <jobString>Making artillery shell.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>800</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ArtilleryShell>1</ArtilleryShell>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+ <!-- === VanillaEnd === -->
+
+
+
+
+
+
+
+ <!-- === Stone, Wood, Kindling === -->
+  <RecipeDef>
+    <workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+    <defName>MakeStoneBlocks_Electric</defName>
+    <label>make stone blocks</label>
+    <description>Cuts rock chunks into usable stone blocks. Quite fast.</description>
+    <jobString>Stonecutting.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>StoneChunks</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <specialProducts>
+      <li>Butchery</li>
+    </specialProducts>
+    <fixedIngredientFilter>
+      <categories>
+        <li>StoneChunks</li>
+      </categories>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeWoodPlanks_Hand</defName>
+    <label>make wood planks</label>
+    <description>Cuts 10 logs into 15 wood planks by hand. Quite slow.</description>
+    <jobString>Making wood planks.</jobString>
+    <workAmount>1200</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>MakeWoodPlanks_Hand</effectWorking>
+    <soundWorking>Recipe_MakeWoodPlanks_Hand</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <WoodPlank>15</WoodPlank>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeWoodPlanks_Electric</defName>
+    <label>make wood planks</label>
+    <description>Cuts 20 logs into 40 wood planks. Quite fast.</description>
+    <jobString>Making wood planks.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>MakeWoodPlanks_Hand</effectWorking>
+    <soundWorking>Recipe_MakeWoodPlanks_Hand</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <WoodPlank>40</WoodPlank>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeKindling_Hand</defName>
+    <label>make wood kindling</label>
+    <description>Cuts 10 woodlogs/planks into 15 kindling by hand. Quite slow.</description>
+    <jobString>Making kindling.</jobString>
+    <workAmount>1200</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>MakeWoodPlanks_Hand</effectWorking>
+    <soundWorking>Recipe_MakeWoodPlanks_Hand</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+            <li>WoodPlank</li>
+            <li>Bamboo</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+        <li>WoodPlank</li>
+        <li>Bamboo</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Kindling>15</Kindling>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeKindling_Electric</defName>
+    <label>make kindling</label>
+    <description>Cuts 20 woodlogs/planks into 40 kindling. Quite fast.</description>
+    <jobString>Making kindling.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>MakeWoodPlanks_Hand</effectWorking>
+    <soundWorking>Recipe_MakeWoodPlanks_Hand</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodLog</li>
+            <li>WoodPlank</li>
+            <li>Bamboo</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodLog</li>
+        <li>WoodPlank</li>
+        <li>Bamboo</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Kindling>40</Kindling>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+<!-- === Steel, Plasteel, Aluminium === -->
+  <RecipeDef>
+    <defName>MakeSteelBars_Hand</defName>
+    <label>make steel bars</label>
+    <description>Smelt 10 steel ore into 15 steel bars by hand. Quite slow.</description>
+    <jobString>Making steel bars.</jobString>
+    <workAmount>1200</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SteelBar>15</SteelBar>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeSteelBars_Electric</defName>
+    <label>make steel bars</label>
+    <description>Smelt 20 steel ore into 40 steel bars. Quite fast.</description>
+    <jobString>Making steel bars.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SteelBar>40</SteelBar>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakePlasteelBars_Hand</defName>
+    <label>make plasteel bars</label>
+    <description>Smelt 10 plasteel ore into 15 plasteel bars by hand. Quite slow.</description>
+    <jobString>Making plasteel bars.</jobString>
+    <workAmount>1500</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <PlasteelBar>15</PlasteelBar>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakePlasteelBars_Electric</defName>
+    <label>make plasteel bars</label>
+    <description>Smelt 10 plasteel ore into 20 plasteel bars. Quite fast.</description>
+    <jobString>Making plasteel bars.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <PlasteelBar>40</PlasteelBar>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeAluBars_Hand</defName>
+    <label>make aluminum bars</label>
+    <description>Smelt 10 Bauxite into 12 aluminum bars. Needs lots of energy, so it takes a while.</description>
+    <jobString>Making aluminum bars.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Bauxite</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Bauxite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AluBar>12</AluBar>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeAluBars_Electric</defName>
+    <label>make aluminum bars</label>
+    <description>Smelt 20 Bauxite into 30 aluminum bars. Needs lots of energy, so it takes a while.</description>
+    <jobString>Making aluminum bars.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Bauxite</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Bauxite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <AluBar>30</AluBar>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+
+
+
+
+
+  <!-- === Sand, Glass === -->
+  <RecipeDef>
+    <defName>MakeSand_Hand</defName>
+    <label>make sand</label>
+    <description>Grinds 1 stone chunk into 20 sand by hand. Quite slow.</description>
+    <jobString>Making sand.</jobString>
+    <workAmount>1200</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>StoneChunks</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+        <categories>
+          <li>StoneChunks</li>
+        </categories>
+    </fixedIngredientFilter>
+    <products>
+      <Sand>20</Sand>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeSand_Electric</defName>
+    <label>make sand</label>
+    <description>Grinds 1 stone chunk into 30 sand. Quite fast.</description>
+    <jobString>Making sand.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>StoneChunks</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+        <categories>
+          <li>StoneChunks</li>
+        </categories>
+    </fixedIngredientFilter>
+    <products>
+      <Sand>30</Sand>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeGlass</defName>
+    <label>make Glass</label>
+    <description>Melt 10 sand into 5 glass.</description>
+    <jobString>Making glass.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Sand</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <products>
+      <Glass>5</Glass>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Sand</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeSafetyGlass</defName>
+    <label>make Safety Glass</label>
+    <description>By laying in a net of aluminum fibers you turn some glass into safety glass.</description>
+    <jobString>Making safety glass.</jobString>
+    <workAmount>750</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Glass</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AluBar</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <products>
+      <SafetyGlass>5</SafetyGlass>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Glass</li>
+        <li>AluBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeSilicon</defName>
+    <label>make silicon</label>
+    <description>Melts down sand to extract the silicon from it.</description>
+    <jobString>Making silicon.</jobString>
+    <workAmount>500</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_UseMetalRefinery</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Sand</li>
+          </thingDefs>
+        </filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <products>
+      <Silicon>20</Silicon>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Sand</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+  <!-- === textile === -->
+  <RecipeDef>
+    <defName>MakeCloth</defName>
+    <label>make cloth</label>
+    <description>Make cloth from raw cotton.</description>
+    <jobString>Making cloth.</jobString>
+    <workAmount>1200</workAmount>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawCotton</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawCotton</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Cloth>20</Cloth>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeDevilstrandCloth</defName>
+    <label>make devilstrand cloth</label>
+    <description>Make devilstrand cloth from raw devilstrand.</description>
+    <jobString>Making devilstrand cloth.</jobString>
+    <workAmount>1500</workAmount>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawDevilstrand</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawDevilstrand</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <DevilstrandCloth>10</DevilstrandCloth>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeSynthreadCloth</defName>
+    <label>make synthread cloth</label>
+    <description>Make synthread cloth from raw cotton and plasteel.</description>
+    <jobString>Making synthread cloth.</jobString>
+    <workAmount>2000</workAmount>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawCotton</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>PlasteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawCotton</li>
+        <li>PlasteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Synthread>10</Synthread>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeHyperweaveCloth</defName>
+    <label>make hyperweave cloth</label>
+    <description>Make hyperweave cloth from synthread and devilstrand cloth.</description>
+    <jobString>Making hyperweave cloth.</jobString>
+    <workAmount>2400</workAmount>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Synthread</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>DevilstrandCloth</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Synthread</li>
+        <li>DevilstrandCloth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Hyperweave>10</Hyperweave>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === electronic === -->
+  <RecipeDef>
+    <defName>MakeElectronics</defName>
+    <label>make electronic chips</label>
+    <description>Make electronic chips from silicon and aluminum bars.</description>
+    <jobString>Making electronic chips.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <workAmount>1600</workAmount>
+    <effectWorking>ButcherMechanoid</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>5</minLevel>
+      </li>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silicon</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AluBar</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Silicon</li>
+        <li>AluBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Electronics>5</Electronics>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeIntegratedCircuitsBoard</defName>
+    <label>Make integrated circuits board</label>
+    <description>Using some chips and Silicon, make some home-made integrated circuits boards. It can be used in any electronic device.
+Even if you pay the greatest attention making it, it is still fragile and unreliable.</description>
+    <jobString>Making integrated circuits board.</jobString>
+    <workAmount>800</workAmount>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>6</minLevel>
+      </li>
+    </skillRequirements>
+    <effectWorking>ButcherMechanoid</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Electronics</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silicon</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silver</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Electronics</li>
+        <li>Silicon</li>
+        <li>Silver</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <IntegratedCircuitsBoard>2</IntegratedCircuitsBoard>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- =====Organic ======= -->
+  <RecipeDef>
+    <defName>MakeEthanolFuel</defName>
+    <label>make ethanol fuel</label>
+    <description>Make ethanol fuel from raw corn.</description>
+    <jobString>Making ethanol fuel.</jobString>
+    <workSpeedStat>BrewingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>1600</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawCorn</li>
+            <li>Rawwheat</li>
+            <li>RawRice</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>RawCorn</li>
+        <li>Rawwheat</li>
+        <li>RawRice</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <EthanolFuel>5</EthanolFuel>
+    </products>
+    <workSkill>Cooking</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeSugar</defName>
+    <label>Ground sugar</label>
+    <description>Beat and grind those canes to get at that sugar!</description>
+    <jobString>Grounding sugar.</jobString>
+    <workAmount>1100</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <products>
+       <Sugar>3</Sugar>
+    </products>
+    <ingredients>
+       <li>
+          <filter>
+             <thingDefs>
+                <li>Rawsugarcane</li>
+             </thingDefs>
+          </filter>
+          <count>5</count>
+       </li>
+    </ingredients>
+    <fixedIngredientFilter>
+       <thingDefs>
+          <li>Rawsugarcane</li>
+       </thingDefs>
+    <specialFiltersToDisallow>
+      <li>AllowRotten</li>
+    </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <workSkill>Cooking</workSkill>
+   </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeFlour</defName>
+    <label>Ground Flour</label>
+    <description>Ground wheat into flour.</description>
+    <jobString>Grounding Flour.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+      <effectWorking>Cook</effectWorking>
+    <workAmount>900</workAmount>
+       <soundWorking>Recipe_CookMeal</soundWorking>
+       <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Rawwheat</li>
+            <li>PlantCorn</li>
+            <li>PlantRice</li>
+            <li>Rawoats</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Rawwheat</li>
+        <li>PlantCorn</li>
+        <li>PlantRice</li>
+        <li>Rawoats</li>
+      </thingDefs>
+        <specialFiltersToDisallow>
+          <li>AllowRotten</li>
+        </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <products>
+      <Flour>4</Flour>
+    </products>
+    <workSkill>Cooking</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeMulch</defName>
+    <label>make mulch</label>
+    <description>Make mulch from food.</description>
+    <jobString>Making mulch.</jobString>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <workAmount>1200</workAmount>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+            <li>PlantFoodRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <products>
+      <Mulch>15</Mulch>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>ExtractBiomatterCorpse</defName>
+    <label>extract biomatter from corpse</label>
+    <description>Extracts biomatter from a corpse.</description>
+    <jobString>Extracting.</jobString>
+    <workSpeedStat>BrewingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>5000</workAmount>
+    <skillRequirements>
+         <li>
+            <skill>Medicine</skill>
+            <minLevel>8</minLevel>
+         </li>
+    </skillRequirements>
+    <effectWorking>Cremate</effectWorking>
+    <soundWorking>Recipe_Cremate</soundWorking>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Corpses</li>
+      </categories>
+      <exceptedCategories>
+        <li>CorpsesMechanoid</li>
+        <li>CorpsesAnimal</li>
+      </exceptedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <thingDefs>
+        <li>Human_Corpse</li>
+      </thingDefs>
+      <specialFiltersToAllow>
+        <li>AllowCorpsesColonist</li>
+        <li>AllowCorpsesStranger</li>
+      </specialFiltersToAllow>
+    </defaultIngredientFilter>
+    <products>
+      <Biomatter>15</Biomatter>
+    </products>
+    <workSkill>Medicine</workSkill>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+  <!-- ===== OmniGel TableMK1Replicator ======= -->
+  <RecipeDef>
+    <defName>MakeChunkSlagSteelFromOmniGel</defName>
+    <label>Replicate Slag from Omni-Gel</label>
+    <description>Replicates slag debris from Omni-Gel.</description>
+    <jobString>Creating slag from Omni-Gel.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <workAmount>1200</workAmount>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>5</minLevel>
+      </li>
+    </skillRequirements>
+    <ingredients>
+      <li>
+      <filter>
+        <thingDefs>
+          <li>OmniGel</li>
+        </thingDefs>
+      </filter>
+      <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OmniGel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ChunkSlagSteel>1</ChunkSlagSteel>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeChunkSandstoneFromOmniGel</defName>
+    <label>Replicate Sandstone Chunk from Omni-Gel</label>
+    <description>Replicates Sandstone Chunk from Omni-Gel.</description>
+    <jobString>Creating Sandstone Chunk from Omni-Gel.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <workAmount>1200</workAmount>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>5</minLevel>
+      </li>
+    </skillRequirements>
+    <ingredients>
+      <li>
+      <filter>
+        <thingDefs>
+          <li>OmniGel</li>
+        </thingDefs>
+      </filter>
+      <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OmniGel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ChunkSandstone>1</ChunkSandstone>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeChunkGraniteFromOmniGel</defName>
+    <label>Replicate Granite Chunk from Omni-Gel</label>
+    <description>Replicates Granite Chunk from Omni-Gel.</description>
+    <jobString>Creating Granite Chunk from Omni-Gel.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <workAmount>1200</workAmount>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>5</minLevel>
+      </li>
+    </skillRequirements>
+    <ingredients>
+      <li>
+      <filter>
+        <thingDefs>
+          <li>OmniGel</li>
+        </thingDefs>
+      </filter>
+      <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OmniGel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ChunkGranite>1</ChunkGranite>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeChunkLimestoneFromOmniGel</defName>
+    <label>Replicate Limestone Chunk from Omni-Gel</label>
+    <description>Replicates Limestone Chunk from Omni-Gel.</description>
+    <jobString>Creating Limestone Chunk from Omni-Gel.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <workAmount>1200</workAmount>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>5</minLevel>
+      </li>
+    </skillRequirements>
+    <ingredients>
+      <li>
+      <filter>
+        <thingDefs>
+          <li>OmniGel</li>
+        </thingDefs>
+      </filter>
+      <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OmniGel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ChunkLimestone>1</ChunkLimestone>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeChunkSlateFromOmniGel</defName>
+    <label>Replicate Slate Chunk from Omni-Gel</label>
+    <description>Replicates Slate Chunk from Omni-Gel.</description>
+    <jobString>Creating Slate Chunk from Omni-Gel.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <workAmount>1200</workAmount>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>5</minLevel>
+      </li>
+    </skillRequirements>
+    <ingredients>
+      <li>
+      <filter>
+        <thingDefs>
+          <li>OmniGel</li>
+        </thingDefs>
+      </filter>
+      <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OmniGel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ChunkSlate>1</ChunkSlate>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeChunkMarbleFromOmniGel</defName>
+    <label>Replicate Marble Chunk from Omni-Gel</label>
+    <description>Replicates Marble Chunk from Omni-Gel.</description>
+    <jobString>Creating Marble Chunk from Omni-Gel.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <workAmount>1200</workAmount>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>5</minLevel>
+      </li>
+    </skillRequirements>
+    <ingredients>
+      <li>
+      <filter>
+        <thingDefs>
+          <li>OmniGel</li>
+        </thingDefs>
+      </filter>
+      <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>OmniGel</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ChunkMarble>1</ChunkMarble>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <RecipeDef>
+    <defName>MakeWeaponParts</defName>
+    <label>Make weapon parts</label>
+    <description>make weapon parts.</description>
+    <jobString>Making weapon parts.</jobString>
+    <workAmount>800</workAmount>
+    <workSpeedStat>SmeltingSpeed</workSpeedStat>
+    <effectWorking>Smelt</effectWorking>
+    <soundWorking>Recipe_Smelt</soundWorking>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>6</minLevel>
+      </li>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AluBar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <products>
+      <WeaponParts>10</WeaponParts>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>AluBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeCannonShell</defName>
+    <label>make cannon shell</label>
+    <description>Craft a cannon shell.</description>
+    <jobString>Make cannon shell.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>800</workAmount>
+    <targetCountAdjustment>5</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <CannonShell>1</CannonShell>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RecipeDefs>

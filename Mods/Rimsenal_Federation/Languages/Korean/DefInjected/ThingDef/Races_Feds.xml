@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+  
+	<Race_Bion.label>바이온</Race_Bion.label>
+	<Race_Bion.description>전두엽 절제와 세뇌시술 후에 유전 개조까지 받은 연방 바이온들은 전쟁용으로 대량생산된 제노휴먼입니다. 이쯤되면 더이상 인간이라 부르기도 어렵습니다.</Race_Bion.description>
+
+	<Race_BionDemo.label>바이온</Race_BionDemo.label>
+	<Race_BionDemo.description>전두엽 절제와 세뇌시술 후에 유전 개조까지 받은 연방 바이온들은 전쟁용으로 대량생산된 제노휴먼입니다. 이쯤되면 더이상 인간이라 부르기도 어렵습니다.</Race_BionDemo.description>
+
+	<Race_BionStalker.label>바이온 스토커</Race_BionStalker.label>
+	<Race_BionStalker.description>암살과 침투를 위해 설계된 바이온 스토커는 교활한 적수입니다.</Race_BionStalker.description>
+
+	<Race_BionHulk.label>바이온 헐크</Race_BionHulk.label>
+	<Race_BionHulk.description>안 그래도 위험한 연방 바이온이 더 크고 강하도록 개조되었습니다. 이들 바이온 헐크는 무시무시한 적입니다.</Race_BionHulk.description>
+  
+	<Race_Federator.label>페더레이터 메크슈트</Race_Federator.label>
+	<Race_Federator.description>M2A4 "페더레이터"는 암즈 다이내믹스가 제작한 주력 전투 메크슈트입니다. 중장 돌격 메크슈트로 설계된 페더레이터의 내구성은 주력전차에 비할만 합니다.</Race_Federator.description>
+
+	<Race_Ordinator.label>오디네이터 메크슈트</Race_Ordinator.label>
+	<Race_Ordinator.description>M3A1 "오디네이터" 메크슈트는 "페더레이터" 메크슈트를 백병전에 적합하도록 개조한 사양입니다. 페더레이터처럼 압도적인 화력은 부족하지만 육중한 장갑과 무시무시한 근접전투 능력 때문에 위협적인 상대입니다.</Race_Ordinator.description>
+
+	<Race_Arranger.label>어레인저 메크슈트</Race_Arranger.label>
+	<Race_Arranger.description>먼 거리에서 포탄을 퍼붓는 처형자, M5A3 "어레인저" 포격 메크슈트는 연방의 공성병기입니다.</Race_Arranger.description>
+
+	<Race_Bike.label>프리큐서 바이크</Race_Bike.label>
+	<Race_Bike.description>신속하고 치명적인 M10 프리큐서는 연방의 표준 정찰차량입니다.</Race_Bike.description>
+
+	<Race_Drone.label>연방 서번트</Race_Drone.label>
+	<Race_Drone.description>암즈 다이내믹스 M15 "서번트"는 군용 다목적 군수 메카노이드입니다. "다목적"이라는 말에는 여러 의미가 내포되어 있습니다. 가령 전투라던가요.</Race_Drone.description>
+
+	<Race_BionPrime.label>바이온 프라임</Race_BionPrime.label>
+	<Race_BionPrime.description>사악한 과학 기술의 산물인 바이온 프라임은 연방의 폭정이 물리적으로 현신한 존재이며, 살아있는 악몽과 다름없습니다.</Race_BionPrime.description>
+
+</LanguageData>

@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyPartDef>
+    <defName>BikeHull</defName>
+    <label>hull</label>
+    <hitPoints>80</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>BikeFrame</defName>
+    <label>frame</label>
+    <hitPoints>60</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Talking</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>BikeSeat</defName>
+    <label>seat</label>
+    <hitPoints>60</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftBikeShoulder</defName>
+    <label>left shoulder</label>
+    <hitPoints>50</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_way0</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftBikeArm</defName>
+    <label>left arm</label>
+    <hitPoints>60</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_way1</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftBikeHand</defName>
+    <label>left hand</label>
+    <hitPoints>40</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_way2</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftHandBikePinky</defName>
+    <label>left pinky</label>
+    <hitPoints>14</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftHandBikeMiddleFinger</defName>
+    <label>left middle finger</label>
+    <hitPoints>14</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftHandBikeIndexFinger</defName>
+    <label>left index finger</label>
+    <hitPoints>14</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftHandBikeThumb</defName>
+    <label>left thumb</label>
+    <hitPoints>14</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightBikeShoulder</defName>
+    <label>right shoulder</label>
+    <hitPoints>50</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_way0</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightBikeArm</defName>
+    <label>right arm</label>
+    <hitPoints>60</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_way1</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightBikeHand</defName>
+    <label>right hand</label>
+    <hitPoints>40</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_way2</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightHandBikePinky</defName>
+    <label>right pinky</label>
+    <hitPoints>14</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightHandBikeMiddleFinger</defName>
+    <label>right middle finger</label>
+    <hitPoints>14</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightHandBikeIndexFinger</defName>
+    <label>right index finger</label>
+    <hitPoints>14</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightHandBikeThumb</defName>
+    <label>right thumb</label>
+    <hitPoints>14</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftBikeEngine</defName>
+    <label>left engine</label>
+    <hitPoints>60</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Moving_leftWay1</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftBikeThruster</defName>
+    <label>left thruster</label>
+    <hitPoints>40</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Moving_way2</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightBikeEngine</defName>
+    <label>right engine</label>
+    <hitPoints>60</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Moving_rightWay1</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightBikeThruster</defName>
+    <label>right thruster</label>
+    <hitPoints>40</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <activities>
+      <li>Moving_way2</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>BikePilot</defName>
+    <label>Bike driver</label>
+    <hitPoints>70</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>false</isSolid>
+    <activities>
+      <li>Consciousness_brain</li>
+    </activities>
+  </BodyPartDef>
+
+</Defs>

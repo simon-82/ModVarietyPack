@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<EdB_Interface_Inventory.label>재산 목록</EdB_Interface_Inventory.label>
+	<EdB_Interface_Inventory.description>가지고 있는 자원, 무기, 옷과 건물들을 모두 보여줍니다.</EdB_Interface_Inventory.description>
+
+	<EdB_Interface_Squads.label>분대</EdB_Interface_Squads.label>
+	<EdB_Interface_Squads.description>정착민들을 분대 단위로 관리할 수 있습니다.</EdB_Interface_Squads.description>
+
+</LanguageData>

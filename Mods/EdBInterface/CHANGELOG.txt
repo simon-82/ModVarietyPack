@@ -1,0 +1,472 @@
+ _____________________________________________________________________________
+ 
+   Version 3.1.1 (2015-09-20) 
+ _____________________________________________________________________________
+
+  - Added support for Alpha 12.
+  - Added the Squads main menu tab.  Use it to organize your colonists into
+    squads.  Squads are displayed in the colonist bar.
+     - Assign keyboard shortcuts to each squad in the Keyboard Configuration.
+       Single-press to display the squad in the colonist bar.  Double-press
+       to select all of the colonists in the squad.
+     - Select a squad in the Work, Outfits and Restrictions windows to filter
+       the list to only include those colonists in the squad.
+  - Added an extra row to the top of the Work, Outfits and Restrictions
+    windows that allows you make an assignment to all of the colonists in the
+    list.
+  - Added an alternate time display so that the current game time is
+    displayed with hours and minutes instead of the vanilla "8h" display.
+    Optionally display the time with AM/PM.
+  - Rewrote much of the colonist tracking system that notifies the colonist
+    bar when a colonist's status changes.
+     - The colonist bar now shows when colonists are in cryptosleep.
+  - Added the ability to hide the main tab buttons along the bottom of the
+    screen.
+  - Added finer grain control over which alternate tabs you want to use.
+  - Reworked all of the alternate tabs.  Added an alternate for the Training
+    tab.
+  - Added an option to display a close button as an "X" in the upper-right
+    corner of all of the main tab windows.
+  - Removed the "Colonist" button that was in the lower-left corner of the
+    interface in previous versions.
+  - Removed the preference to auto-enable/disable alternate tabs based on
+    your screen size.  The default setting is selected based on your screen
+    size, but you need to manually enable/disable the various tabs.
+  - BUGFIX: Doing a better job of cropping long pawn names in the colonist
+    bar.
+
+ _____________________________________________________________________________
+ 
+   Version 2.8.6 (2015-07-04) 
+ _____________________________________________________________________________
+
+  - Added support for Alpha 11b.
+  - Added community-provided French translation.
+
+ _____________________________________________________________________________
+ 
+   Version 2.8.5 (2015-06-14) 
+ _____________________________________________________________________________
+
+  - Added back in the missing browse buttons from the gear tab.
+
+ _____________________________________________________________________________
+ 
+   Version 2.8.4 (2015-06-13) 
+ _____________________________________________________________________________
+
+  - Fixed colonist name buttons in the work tabs.
+
+ _____________________________________________________________________________
+ 
+   Version 2.8.3 (2015-06-12) 
+ _____________________________________________________________________________
+
+  - Minor spacing tweaks in the character tab and the inspect panel.
+
+ _____________________________________________________________________________
+ 
+   Version 2.8.2 (2015-06-12) 
+ _____________________________________________________________________________
+
+  - Fixed radio buttons in the prisoner and guest tabs.
+
+ _____________________________________________________________________________
+ 
+   Version 2.8.1 (2015-06-11) 
+ _____________________________________________________________________________
+
+  - Added support for Alpha 11.
+
+  _____________________________________________________________________________
+ 
+   Version 2.7.2 (2015-04-26) 
+ _____________________________________________________________________________
+
+  - Added Korean language translation.  Credit to Latta for providing this.
+  - Changed the way that minified buildings are categorized in the inventory
+    panel. They now behave as unfinished buildings.
+  - Added "Joy" and "Temperature" categories for buildings in the inventory
+    panel.
+  - BUGFIX: Clicking a colonist name in the Work panel now selects the 
+    colonist as it does in the vanilla game.
+  - BUGFIX: The rotation UI is now correctly displayed when installing
+    minified things.
+  - BUGFIX: Icons for minified buildings should display properly in the
+    Inventory panel now.
+
+ _____________________________________________________________________________
+ 
+   Version 2.7.1 (2015-04-23) 
+ _____________________________________________________________________________
+
+  - Added support for Alpha 10.
+    - Removed passion indicators in the Work tab in favor of the new vanilla
+      implementation and removed the related preferences.
+    - Removed context-sensitive designator buttons in favor of the new vanilla
+      "reverse designations" (but added Mining designator back in).
+  - BUGFIX: Better error-handling when a pawn has no hairDef.  Avoids a null
+    pointer error and a broken colonist bar.
+
+ _____________________________________________________________________________
+ 
+   Version 2.6.5 (2015-03-01) 
+ _____________________________________________________________________________
+   
+  - BUGFIX: Invalid operations are no longer displayed in the Health tab for
+    dead centipedes.
+  - BUGFIX: The "Pause a New or Loaded Game" option in the mod no longer
+    conflicts with the "Pause On Load" option in the game.  If both are
+    checked, the game will correctly pause on load.
+  - Added German language translation.  Credit to F0xGun for providing it.
+  - Updated Russian language translation.
+
+ _____________________________________________________________________________
+ 
+   Version 2.6.4 (2015-02-23) 
+ _____________________________________________________________________________
+   
+  - BUGFIX: Fixed an error that appears when one of your colonists has
+    rescued and is carrying another one of your colonists.
+
+ _____________________________________________________________________________
+ 
+   Version 2.6.3 (2015-02-22) 
+ _____________________________________________________________________________
+   
+  - BUGFIX: Fixed the info panel card so that it properly displays the costs
+    for buildings.
+  - BUGFIX: Fixed the Bills tab so that crafting works properly.
+
+ _____________________________________________________________________________
+ 
+   Version 2.6.2 (2015-02-22) 
+ _____________________________________________________________________________
+
+  - Swapped in a more complete Russian translation. Credit to Humort for
+    providing it.
+  - BUGFIX: Fixed problem with Conduit Wall designator disappearing.
+  - BUGFIX: Fixed problem with selecting crops in the Growing tab.
+  - BUGFIX: Fixed problem when drawing an animal's health in the Inspect Pane.
+
+ _____________________________________________________________________________
+ 
+   Version 2.6.1 (2015-02-21) 
+ _____________________________________________________________________________
+
+  - Added support for Alpha 9.
+
+ _____________________________________________________________________________
+ 
+   Version 2.5.2 (2015-01-29) 
+ _____________________________________________________________________________
+
+  - BUGFIX: Pawns in cryptosleep chambers are no longer included when you
+    cycle through enemies or neutrals on the map.
+  - BUGFIX: Unfinished floors no longer break the inventory dialog.
+
+ _____________________________________________________________________________
+ 
+   Version 2.5.1 (2014-12-18) 
+ _____________________________________________________________________________
+   
+  - BUGFIX: Added the browse buttons back to the Thoughts tab.
+  - Inventory Dialog changes:
+     - Items and buildings are now arranged by the material from which they
+       are made.
+     - The arrange-by-color option has been removed in favor of always 
+       displaying items by material.
+     - Assign weapons and apparel from the Inventory Dialog.  Right-click
+       the item and choose a colonist to issue an order to them to equip it.
+     - BUGFIX: Buildings in the Inventory Dialog are now drawn at the correct
+       size and with the correct material color.
+
+ _____________________________________________________________________________
+ 
+   Version 2.4.5 (2014-12-16)
+ _____________________________________________________________________________
+  
+  - Right-click on a choice in the Growing tab to bring up the Info Box for
+    that crop.
+  - BUGFIX: Colonists re-recruited after being arrested now reappear in the
+    colonist bar.
+  - BUGFIX: Thought values in the Thoughts panel are now color-coded
+    correctly.
+  - BUGFIX: Fixed an issue with the command grid designator buttons and the
+    TutorNote class.
+
+ _____________________________________________________________________________
+ 
+   Version 2.4.4 (2014-12-15) 
+ _____________________________________________________________________________
+  
+  - BUGFIX: Fixed the "Release" text label in the Prisoner tab.
+  - BUGFIX: Keyboard shortcuts are displayed properly again on the command
+    grid buttons.
+
+ _____________________________________________________________________________
+ 
+   Version 2.4.3 (2014-12-15) 
+ _____________________________________________________________________________
+  
+  - BUGFIX: Fixed the way that recipes are listed in the Bill tab.  It should
+    work properly now for the new crafting tables.
+  - BUGFIX: Fixed the main menu when you open it using the escape key.  Should
+    no longer spam null pointer exceptions.
+
+ _____________________________________________________________________________
+ 
+   Version 2.4.2 (2014-12-14) 
+ _____________________________________________________________________________
+  
+  - BUGFIX: Fixed broken floor designators.
+
+ _____________________________________________________________________________
+ 
+   Version 2.4.1 (2014-12-14) 
+ _____________________________________________________________________________
+  
+  - Added support for Alpha 8.
+  - The tooltip when hovering over a colonist's name in the Overview Work tab
+    now shows you what the colonist is currently doing.
+  - Added copy-and-paste buttons when a stockpile or a building with storage
+    is selected.  Use them to copy storage settings between stockpiles or
+    matching buildings.
+  - Right-click the colonist bar to hide it.  Use the toggle button that
+    appears in the upper-right corner of the screen to show the bar again.
+  - BUGFIX: Fixed the scrolling/zoom problem.
+
+ _____________________________________________________________________________
+ 
+   Version 2.3.1 (2014-10-18) 
+ _____________________________________________________________________________
+  
+  - Added a preference to display smaller icons in the Colonist Status Bar.
+    Change the setting in the Interface Options dialog.
+  - The Chop Wood action now has a keyboard shortcut (P) when you select a
+    tree or cactus on the map.
+  - The next and previous buttons used for browsing through colonists have
+    been expanded to allow you to browse through the following four distinct
+    groups: colonists (as it is now), prisoners (when a prisoner is selected),
+    enemies (when an enemy is selected), and visitors (when a visitor is
+    selected).
+  - Added a partial Russian translation (thanks to Kvarfax for getting this
+    started).
+  - BUGFIX: The tabs in the overview panel are no longer hard-coded.  Tab
+    classes that are added via a mod assembly will now automatically be
+    picked up like they are in vanilla.
+
+ _____________________________________________________________________________
+ 
+   Version 2.2.5 (2014-10-11) 
+ _____________________________________________________________________________
+   
+  - BUGFIX: The mental break threshold is now displayed properly in the 
+    Thoughts tab.
+
+ _____________________________________________________________________________
+ 
+   Version 2.2.4 (2014-10-11) 
+ _____________________________________________________________________________
+   
+  - BUGFIX: When using the Enhanced Defense Personal Shields mod, when a
+    colonist is upgraded to NanoShields, they no longer appear as missing in
+    the colonist bar.
+  - BUGFIX: Removed game-specific save information accidentally included in
+    the last few builds.  To fix your saves: using this new version, load your
+    game with the mod enabled and then re-save it.  You should now be able to
+    open your save with the mod disabled.
+  - BUGFIX: The grayed-out effect applied to dead colonists in the colonist
+    bar no longer affects the color of colonists on the map.
+     
+ _____________________________________________________________________________
+ 
+   Version 2.2.3 (2014-10-08) 
+ _____________________________________________________________________________
+   
+  - Your first stockpile now always uses the default stockpile settings, even
+    if you've chosen the preference to disable all resources in new
+    stockpiles.
+  - BUGFIX: Fixed the sub-tab texture from the Health Tab so that it always
+    loads properly after enabling/disabling the mod from the mod menu.
+  - BUGFIX: The building placement UI is now sized correctly when you choose
+    to hide the Colonist Button.
+
+ _____________________________________________________________________________
+ 
+   Version 2.2.2 (2014-10-04) 
+ _____________________________________________________________________________
+   
+  - BUGFIX: Categorized resource readout is now clickable as normal.
+
+ _____________________________________________________________________________
+ 
+   Version 2.2.1 (2014-10-04) 
+ _____________________________________________________________________________
+   
+  - Added support for Alpha 7.
+  - Added new "Right-click to select building materials" option to the
+    interface options.  This overrides the default left-click behavior when
+    choosing buildings and furniture.  Not enabled by default.
+
+ _____________________________________________________________________________
+ 
+   Version 2.1.2 (2014-09-02) 
+ _____________________________________________________________________________
+   
+  - Using alt-click or middle-click on the Colonist Status Bar to select all
+    colonists no longer selects broken or rampaging colonists.
+  - Better error handling when trying to replace the gameplay interface when
+    the game starts.  An error will be displayed in the on-screen log and the
+    mod will stop trying to replace the UI every frame--which resulted in an
+    ever-growing output log.
+
+ _____________________________________________________________________________
+ 
+   Version 2.1.1 (2014-08-31) 
+ _____________________________________________________________________________
+
+ - The Inventory Dialog now counts resources and weapons stored in Nano
+   Storage in the Miscellaneous w MAI mod.
+ - The Inventory Dialog now includes a "Include Compressed Storage" option
+   that works with Nano Storage in the Miscellaneous w MAI mod and crates in
+   the Resource Kompression mod.  Note that you'll only see the option if you
+   have a building or resource to which it applies.
+ - Re-ordered the building categories in the Inventory Dialog.
+ - Alt-click or middle-click the Colonist Status Bar to select all available
+   colonists (credit to Encode for suggesting this change).  Alt-clicking a
+   dead colonist will select all dead colonists in the bar.
+ - Added an option to immediately pause a new or loaded game.
+ - BUGFIX: Fixed a problem that was preventing the Inventory Dialog from
+   opening when the colony had a Nano Printer from the Miscellaneous w MAI
+   mod.
+ - BUGFIX: Ship parts now appear in the Inventory Dialog.
+ - BUGFIX: In-progress floor construction no longer appears under the "Other"
+   resources section in the Inventory Dialog.
+
+ _____________________________________________________________________________
+ 
+   Version 2.0.2 (2014-08-30) 
+ _____________________________________________________________________________
+
+ - BUGFIX: Fixed the escape button so that it properly brings up the gameplay
+   menu.
+
+ _____________________________________________________________________________
+ 
+   Version 2.0.1 (2014-08-30) 
+ _____________________________________________________________________________
+
+ - Added the Colonist Status Bar, which lists all of your colonists at the top
+   of the map.
+   - Click a colonist in the row to select that colonist.
+   - Shift-click to add a colonist to the current selection.
+   - Double-click a colonist to center the map on that colonist.
+   - Green status means that a colonist is healthy; yellow is wounded; red
+     is incapacitated.
+   - Dead colonists are automatically removed when they are buried or can be
+     removed manually by right-clicking on them and selecting the appropriate
+     option.
+   - Missing colonists (kidnapped or otherwise missing from the map) can be
+     removed by right-clicking and selecting the appropriate option.
+ - Added an Inventory screen, triggered by an Inventory button in the dialog
+   buttons section.  This screen shows categorized counts for all resources,
+   weapons, apparel and buildings. (Much of credit for this idea goes to 
+   Joretap0 and his Inventory Panel--the implementation is different, but the
+   idea is the same).
+ - Added an "Interface Settings" dialog accessible from the main menu during
+   gameplay.  Most of the features added by the mod can be turned on and off
+   here.
+ - Added passion indicators to the Work tab in the Overview menu.  An extra
+   border to the left and right of the checkboxes indicate the two passion
+   levels.  The colored numbers in the manual priorities dialog now indicate
+   passion level--gray for no passion, yellow for interested, green for
+   burning passion (credit to LuciferNZ for the idea).
+ - Added a replacement for the Growing tab pabel that uses radio buttons in
+   a scrollable list instead of a drop-down menu.
+ - Added an option (not enabled by default) to create all resource stockpiles
+   with all resources disabled so that you don't need to deselect all of the
+   defaults.
+ - The mod now auto-detects screen resolution changes during gameplay and
+   disables the alternate tabs if they do not fit.
+ - BUGFIX: You can now cancel mining designations when selecting a map square
+   designated for mining.
+ - BUGFIX: Fixed some word wrapping issues in the Health tab
+
+ _____________________________________________________________________________
+ 
+   Version 1.2.2 (2014-08-17) 
+ _____________________________________________________________________________
+
+ - Added support for windows smaller than 900 pixels high.  Uses the tab
+   panels from the vanilla game in these cases, with the next and previous
+   colonist arrow buttons added to them.  The mod decides which tab panels
+   to use when it switches into gameplay mode from the main menu.  If you
+   change your resolution in the middle of a game, the tab panels will not
+   change.  Save your game, go to the main menu and reload it to get the
+   panels to switch.
+
+ _____________________________________________________________________________
+ 
+   Version 1.2.1 (2014-08-17) 
+ _____________________________________________________________________________
+
+ - Supports Alpha 6
+ - Split the "Status" tab back out into "Health" and "Thoughts" tabs to match
+   the vanilla game, but moved the Food and Sleep meters from the Health tab
+   into the Thoughts tab.
+ - Renamed translation keys to avoid naming conflicts with vanilla or other
+   mods.
+ - BUGFIX: The initializer is now defined as a building instead of as a pawn,
+   which fixes a couple of issues.  The initializer definition no longer
+   appears in stockpiles under the animal corpses and meat sections.  Games
+   saved while the mod was enabled should now load when the mod is disabled
+   without the "Could not load reference to EdBInterface_Meat/Corpse" errors.
+   Saved games from previous versions will need to be saved again to remove
+   these errors.
+
+ _____________________________________________________________________________
+ 
+   Version 1.1.1 (2014-08-11) 
+ _____________________________________________________________________________
+
+ - BUGFIX: Next and previous buttons in the "Status" tab should no longer
+   appear as green or red buttons.
+ - BUGFIX: Selected zones no longer display invalid designation commands.
+ - Reworked the Bills tab.  The most notable change is the addition of the
+   repeat options to the tab interface.  You no longer need to open the config
+   dialog to get to these options.
+ - The Colonist button does a better job of trying to restore the tab that
+   was open the last time that you used it.
+ - Changed the mod initialization so that it no longer relies on definitions
+   in the Races_Humanoid.xml file.
+ - Changed the mod controller so that it no longer gets called every frame.
+ - Better compatibility with other mods
+ - Resized the Bills, Growing and Storage tabs to match the width of the 
+   colonist tabs (for consistency).
+ - Made the Designation info box a little taller to better fit building names
+   from translations and mods. 
+
+   _____________________________________________________________________________
+ 
+   Version 1.0.1 (2014-08-08) 
+ _____________________________________________________________________________
+
+ - Added a Colonist button next to the Architect button.  Clicking the button
+   selects a colonist.  Continue clicking to select each colonist in turn.
+   Left-clicking selects the next colonist.  Right-clicking selects the
+   previous colonist.	
+ - Clicking the name of a colonist in the Inspect Pane centers your view
+   on that colonist.
+ - Resized the Colonist tabs.
+ - Combined the "Thoughts" and "Needs" tabs into a single "Status" tab.	
+ - Added buttons to the Colonist tabs to allow you to quickly select the next
+   and previous Colonist.
+ - When an object is selected, buttons are available for commands that
+   normally only appear in the "Orders" menu.  For example, when a Muffalo
+   is selected, a "Hunt" button appears.
+ - Removed the dark gray background from behind the colonist tab buttons.
+ - Reordered the colonist tab buttons.
+ _____________________________________________________________________________
+
+ 

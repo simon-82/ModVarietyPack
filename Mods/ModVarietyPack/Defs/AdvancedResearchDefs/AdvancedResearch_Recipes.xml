@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Agriculture -->
+    <AdvancedResearchDef>         
+        <defName>AgricultureISeeds</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>AgricultureI</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CraftPotatoSeeds</li>
+            <li>CraftCornSeeds</li>
+            <li>CraftRiceSeeds</li>
+            <li>CraftStrawberrySeeds</li>
+            <li>CraftXerigiumSeeds</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef>    
+
+    <AdvancedResearchDef>         
+        <defName>AgricultureIISeeds</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>AgricultureII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CraftPumpkinSeeds</li>
+            <li>CraftSquashSeeds</li>
+            <li>CraftEggplantSeeds</li>
+            <li>CraftBlueberrySeeds</li>
+            <li>CraftPumpkinSeeds</li>
+            <li>CraftBambooSeeds</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>AgricultureIIButcherFish</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>AgricultureII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>ShellMashgon</li>
+            <li>PrepareSduiggles</li>
+            <li>PrepareSeasnake</li>
+            <li>PrepareBlueblade</li>
+            <li>ButcherTailteeth</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableButcher</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+     <AdvancedResearchDef>         
+        <defName>AgricultureIICook</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>AgricultureII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakePieBlueberry</li>
+            <li>MakePiePumpkin</li>            
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableOven</li>
+        </thingDefs>        
+    </AdvancedResearchDef>    
+
+    <AdvancedResearchDef>         
+        <defName>AgricultureIIISeeds</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Hydroponics</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CraftOnionSeeds</li>
+            <li>CraftMushroomSeeds</li>
+            <li>CraftBeanSeeds</li>
+            <li>CraftCloudberrySeeds</li>
+            <li>CraftPineappleSeeds</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>AgricultureIIICook</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Hydroponics</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeTofu</li>
+            <li>MakeTofu10x</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>CookStove</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>AgricultureIVSeeds</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>AgricultureIV</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CraftLettuceSeeds</li>
+            <li>CraftCarrotSeeds</li>
+            <li>CraftTomatoSeeds</li>
+            <li>CraftGooseberrySeeds</li>
+            <li>CraftWatermelonSeeds</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef>    
+
+    <AdvancedResearchDef>         
+        <defName>FruitTreesSeeds</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Cryptosleep</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CraftAppleSeeds</li>
+            <li>CraftBananaSeeds</li>
+            <li>CraftDateSeeds</li>
+            <li>CraftFigSeeds</li>
+            <li>CraftOrangeSeeds</li>
+            <li>CraftPeachSeeds</li>            
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>AgricultureIVBrew</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Cryptosleep</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeApplecider</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>Brewery</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+
+
+
+
+
+
+
+
+    <!-- Cooking -->
+    <AdvancedResearchDef>         
+        <defName>CookingISeeds</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Brewing</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CraftSugarcaneSeeds</li>
+            <li>CraftHopsSeeds</li>
+            <li>CraftWheatSeeds</li>
+            <li>CraftOatsSeeds</li>
+            <li>CraftGrapeSeeds</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>CookingIISeeds</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>CookingII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CraftCoffeeSeeds</li>
+            <li>CraftTeaSeeds</li>
+            <li>CraftTobaccoSeeds</li>
+            <li>CraftCocoaSeeds</li>
+            <li>CraftSpectagoSeeds</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>CookingII</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>CookingII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>BrewTea</li>
+            <li>BrewSpectagoTea</li>
+            <li>MakeChocolate</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>CookStove</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Medicine -->
+    <AdvancedResearchDef>         
+        <defName>MedicineI</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>HospitalBed</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeMedicine</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+     <AdvancedResearchDef>         
+        <defName>MedicineIinstall</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>HospitalBed</li>
+        </researchDefs>        
+        <recipeDefs>           
+            <li>InstallSteelArm</li>
+            <li>InstallEyePatch</li>
+            <li>InstallHookHand</li>
+            <li>InstallDenture</li>
+            <li>InstallWoodenFoot</li>
+            <li>InstallPegLeg</li>
+        </recipeDefs>
+        <thingDefs>
+            <li>Human</li>
+        </thingDefs>                              
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>MedicineIIcraft</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>MedicineII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CreateSimpleProstheticLeg</li>
+            <li>CreateSimpleProstheticArm</li>
+            <li>CreateSimpleProstheticHand</li>
+            <li>CreateSimpleProstheticFoot</li>
+            <li>CreateArtificialNose</li>
+            <li>CreateHydraulicJaw</li>
+            <li>CreateGlassEye</li>
+            <li>CreateCrystalEye</li>
+            <li>CreateArtificialPelvis</li>          
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableProsthetics</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>MedicineIIinstall</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>MedicineII</li>
+        </researchDefs>        
+        <recipeDefs>           
+            <li>InstallSimpleProstheticLeg</li>
+            <li>InstallSimpleProstheticArm</li>
+            <li>InstallSimpleProstheticHand</li>
+            <li>InstallSimpleProstheticFoot</li>
+            <li>InstallArtificialNose</li>
+            <li>InstallHydraulicJaw</li>
+            <li>InstallGlassEye</li>
+            <li>InstallCrystalEye</li>
+            <li>InstallArtificialPelvis</li>      
+        </recipeDefs>
+        <thingDefs>
+            <li>Human</li>
+        </thingDefs>   
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>MedicineIIIinstall</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Chemlab</li>
+        </researchDefs>        
+        <recipeDefs>           
+            <li>InstallNaturalHeart</li>
+            <li>InstallNaturalLiver</li>
+            <li>InstallNaturalKidney</li>
+            <li>InstallNaturalLung</li>
+            <li>InstallNaturalEye</li>
+            <li>InstallNaturalNose</li>
+            <li>InstallNaturalEar</li>
+            <li>InstallNaturalJaw</li>
+            <li>InstallNaturalArm</li>      
+        </recipeDefs>
+        <thingDefs>
+            <li>Human</li>
+        </thingDefs>   
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>MedicineIVinstall</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>MedicineIV</li>
+        </researchDefs>        
+        <recipeDefs>           
+            <li>InstallPowerArm</li>
+            <li>InstallBionicArm</li>
+            <li>InstallBionicLeg</li>
+            <li>InstallBionicHand</li>
+            <li>InstallBionicEye</li>
+            <li>InstallBionicFoot</li>
+            <li>InstallBionicEar</li>
+            <li>InstallBionicJaw</li>
+            <li>InstallSilentJaw</li>
+            <li>InstallBionicSpine</li>
+            <li>InstallMedicalRib</li>
+            <li>InstallDruggedRib</li>
+            <li>InstallAdrenalineRib</li> 
+        </recipeDefs>
+        <thingDefs>
+            <li>Human</li>
+        </thingDefs>   
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>MedicineVcraft</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>MedicineV</li>
+        </researchDefs>        
+        <recipeDefs>           
+            <li>CreateAdvancedBionicEye</li>
+            <li>CreateAdvancedPowerArm</li>
+            <li>CreateAdvancedBionicArm</li>
+            <li>CreateAdvancedBionicHand</li>
+            <li>CreateAdvancedBionicFoot</li>
+            <li>CreateAdvancedBionicLeg</li>
+            <li>CreateAdvancedBionicJaw</li>
+            <li>CreateAdvancedBionicEar</li>
+            <li>CreateAdvancedBionicSpine</li>
+            <li>CreatePowerClawScyther</li>
+            <li>CreateExoskeletonSuit</li>            
+        </recipeDefs>
+        <thingDefs>
+            <li>TableBionics</li>
+        </thingDefs>   
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>MedicineVinstall</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>MedicineV</li>
+        </researchDefs>        
+        <recipeDefs>           
+            <li>InstallAdvancedPowerArm</li>
+            <li>InstallAdvancedBionicArm</li>
+            <li>InstallAdvancedBionicLeg</li>
+            <li>InstallAdvancedBionicHand</li>
+            <li>InstallAdvancedBionicFoot</li>
+            <li>InstallAdvancedBionicEye</li>
+            <li>InstallAdvancedBionicEar</li>
+            <li>InstallAdvancedBionicJaw</li>
+            <li>InstallAdvancedBionicSpine</li>
+            <li>InstallExoskeletonSuit</li>
+        </recipeDefs>
+        <thingDefs>
+            <li>Human</li>
+        </thingDefs>   
+    </AdvancedResearchDef>
+
+
+
+
+
+
+
+
+
+    <!-- Construction -->
+    <AdvancedResearchDef>         
+        <defName>MMS</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>ResearchMineralSonarEnhancedScan</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeMineralSonarModule</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>ElectronicWorkbench</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+     <AdvancedResearchDef>         
+        <defName>FurnitureII</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>FurnitureII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakePaintingSupplies</li>
+            <li>MakePaintingSuppliesTempera</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>CookStove</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Crafting -->
+    <AdvancedResearchDef>         
+        <defName>TextileISeeds</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>TextileI</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CraftCottonSeeds</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef> 
+
+    <AdvancedResearchDef>         
+        <defName>TextileIISeeds</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>CarpetMaking</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CraftDevilstrandSeeds</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef> 
+
+    <AdvancedResearchDef>         
+        <defName>TextileIICloth</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>CarpetMaking</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeDevilstrandCloth</li>
+            <li>MakeSynthreadCloth</li>
+            <li>MakeHyperweaveCloth</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableLoom</li>
+        </thingDefs>        
+    </AdvancedResearchDef> 
+
+    <AdvancedResearchDef>         
+        <defName>CraftingIVSeeds</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>CraftingIV</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>CraftOmniGelSeeds</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableChemlab</li>
+        </thingDefs>        
+    </AdvancedResearchDef> 
+
+
+
+
+
+
+
+
+
+
+    <!-- Security -->
+    <AdvancedResearchDef>         
+        <defName>SecurityITurret</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>SecurityI</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeImprovisedTurret</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableMachining</li>
+        </thingDefs>        
+    </AdvancedResearchDef> 
+
+    <AdvancedResearchDef>         
+        <defName>TurretsI</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>TurretsI</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeTurretM2Browning</li>
+            <li>MakeSpotlightTower</li>
+            <li>MakeTurretStun</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableSmithing</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>TurretsII</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>TurretsII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeTurretAM</li>
+            <li>MakeTurretM134Minigun</li>
+            <li>MakeCannonShell</li>
+            <li>MakeTurretLaser</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableSmithing</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>WeaponCraftingII</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>WeaponCraftingII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <!-- Pistols -->
+            <li>MakeGun_DesertEagleMarkI</li>
+            <li>MakeGun_ColtPolicePositive</li>
+            <li>MakeGun_WaltherPPK</li>
+            <li>MakeGun_Glock18_P</li>
+
+            <!-- AR -->
+            <li>MakeGun_AK47_AR</li>
+            <li>MakeGun_M4A1_AR</li>
+            <li>MakeGun_FAMASG2_PA</li>
+            <li>MakeGun_L85A1_PA</li>
+
+            <!-- R -->
+            <li>MakeGun_M14_PA</li>
+            <li>MakeGun_BarrettM107_PA</li>
+
+            <!-- SR -->
+            <li>MakeGun_AccuracyInternationalAWM_PA</li>
+            <li>MakeGun_SVD_PA</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableWeaponCrafting</li>
+        </thingDefs>        
+    </AdvancedResearchDef> 
+
+    <AdvancedResearchDef>         
+        <defName>SecurityIIShells</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Mortars</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeArtilleryShell</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableSmithing</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+
+
+
+</Defs>

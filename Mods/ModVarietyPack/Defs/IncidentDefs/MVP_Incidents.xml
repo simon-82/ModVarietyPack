@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<IncidentDefs>
+
+  <IncidentDef>
+    <defName>TraderPawnArrival</defName>
+    <workerClass>Trader.IncidentWorker_TraderArrival</workerClass>
+    <chance>8</chance>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>MicroFungus</defName>
+    <WorkerClass>FishIndustry.IncidentWorker_MicroFungus</WorkerClass>
+    <chance>1</chance>
+    <minRefireDays>60</minRefireDays>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>ArtefactFound</defName>
+    <workerClass>ArtefactFound.IncidentWorker_ArtefactFound</workerClass>
+    <chance>3</chance>
+    <minRefireDays>20</minRefireDays>
+    <category>ThreatSmall</category>
+    <pointsScaleable>true</pointsScaleable>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>RumorOf</defName>
+    <workerClass>Incidents.IncidentWorker_RumorOf</workerClass>
+    <chance>1</chance>
+    <minRefireDays>35</minRefireDays>
+    <pointsScaleable>true</pointsScaleable>
+  </IncidentDef>
+
+</IncidentDefs>

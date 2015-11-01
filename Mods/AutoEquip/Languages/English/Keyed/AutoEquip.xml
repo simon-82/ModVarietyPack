@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <ToWear>To Wear</ToWear>
+  <ToDrop>To Drop</ToDrop>
+  <AverageStat>Averave Values</AverageStat>
+  <AutoEquipHitPoints>Hit Points Modifier</AutoEquipHitPoints>
+  <AutoEquipTemperature>Outdoor Temperature Modifier</AutoEquipTemperature>
+  <AutoEquipTotal>Apparel Total Stat</AutoEquipTotal>
+  <AutoEquipGlobalSelection>Global Selection</AutoEquipGlobalSelection>
+  <AutoEquipAppendIndividualPawnStatus>Append Pawn Individual Status</AutoEquipAppendIndividualPawnStatus>
+  <AutoEquipStatus>Status...</AutoEquipStatus>
+</LanguageData>

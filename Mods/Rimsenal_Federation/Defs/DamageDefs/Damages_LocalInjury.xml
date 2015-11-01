@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <DamageDef Name="LocalInjuryBase" Abstract="True">
+    <workerClass>DamageWorker_AddInjury</workerClass>
+  </DamageDef>
+
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>Ion</defName>
+    <label>Ion</label>
+    <externalViolence>true</externalViolence>
+    <battleWound>true</battleWound>
+    <deathMessage>{0} has been ionized to death.</deathMessage>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Blunt</impactSoundType>
+    <armorCategory>IgnoreArmor</armorCategory>
+    <spreadOut>true</spreadOut>
+    <explosionDamage>20</explosionDamage>
+    <explosionBuildingDamageFactor>20</explosionBuildingDamageFactor>
+    <explosionHeatEnergyPerCell>10</explosionHeatEnergyPerCell>
+    <explosionCellMote>Mote_Ionblast</explosionCellMote>
+    <soundExplosion>Explosion_IonicBlast</soundExplosion>
+  </DamageDef>
+
+</Defs>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PawnKindDefs>
+
+  <PawnKindDef Name="MechanoidBase" Abstract="True">
+    <bodyGraphicData>
+      <shaderType>Cutout</shaderType>
+    </bodyGraphicData>
+    <dessicatedBodyGraphicData>
+      <shaderType>Cutout</shaderType>
+    </dessicatedBodyGraphicData>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>FPCPrecusor</defName>
+    <label>precusor</label>
+    <race>Race_Bike</race>
+    <combatPower>220</combatPower>
+    <defaultFactionType>FPC</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Precursor</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.8, 0.4)</volume>
+            <offset>(0, 0, -0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>1500</min>
+      <max>1500</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>FedBikeGun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+</PawnKindDefs>

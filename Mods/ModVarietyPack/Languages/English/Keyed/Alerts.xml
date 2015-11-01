@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <NeedGeneratorHopper>Need steam generator hopper</NeedGeneratorHopper>
+  <NeedGeneratorHopperDesc>You have a steam generator with no hopper next to it.\n\nTo work, steam generators must draw from an adjacent hopper filled with either wood logs, or ethanol fuel.\n\nBuild a hopper adjacent to the steam generator.</NeedGeneratorHopperDesc>
+
+</LanguageData>

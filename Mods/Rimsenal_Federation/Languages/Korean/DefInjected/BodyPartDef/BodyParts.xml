@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+
+    <BikeHull.label>동체</BikeHull.label>
+    <BikeFrame.label>프레임</BikeFrame.label>
+    <BikeSeat.label>시트</BikeSeat.label>
+    <LeftBikeShoulder.label>왼쪽 어깨</LeftBikeShoulder.label>
+    <RightBikeShoulder.label>왼쪽 어깨</RightBikeShoulder.label>
+    <BikePilot.label>운전수</BikePilot.label>
+    <MechPilot.label>메크 파일럿</MechPilot.label>
+
+</LanguageData>

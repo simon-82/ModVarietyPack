@@ -1,0 +1,1639 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Abstract="True" Name="ResourceBase" >
+    <thingClass>ThingWithComps</thingClass>
+    <label>unspecified resource</label>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>5</DeteriorationRate>
+    </statBases>
+    <tickerType>Rare</tickerType>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="PlantFoodRawBase" ParentName="OrganicProductBase">
+    <ingestible>
+      <preferability>Raw</preferability>
+      <nutrition>0.05</nutrition>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>RawVegetable_Eat</soundEat>
+    </ingestible>
+    <thingCategories>
+      <li>PlantFoodRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase" >
+    <ingestible>
+      <preferability>Awful</preferability>
+      <nutrition>0.25</nutrition>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>RawVegetable_Eat</soundEat>
+    </ingestible>
+    <thingCategories>
+      <li>FruitFoodRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+
+
+<!-- === VanillaStart === -->
+
+
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Hay</defName>
+    <label>hay</label>
+    <description>Nutrient-rich grasses and shoots, harvested and compacted for storage. Hay is good animal feed, but inedible for humans.</description>
+    <stackLimit>200</stackLimit>
+    <ingestible>
+      <preferability>Plant</preferability>
+    </ingestible>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/Hay</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.6</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>90</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+  
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>RawHops</defName>
+    <label>hops</label>
+    <description>Raw hops. A flavoring and preserving agent that is necessary for making beer.</description>
+    <graphicData>
+      <texPath>Items/Hops</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawPotatoes</defName>
+    <label>potatoes</label>
+    <description>Raw potatoes.</description>
+    <graphicData>
+      <texPath>Items/Potato</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawCorn</defName>
+    <label>corn</label>
+    <description>Raw corn. Nice to eat, even when raw.</description>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <graphicData>
+      <texPath>Items/Corn</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>60</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawRice</defName>
+    <label>rice</label>
+    <description>Raw rice.</description>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <graphicData>
+      <texPath>Items/Rice</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>40</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>RawBerries</defName>
+    <label>berries</label>
+    <description>Assorted berries. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/Berry</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+      </li>
+    </comps>
+    <ingestible>
+      <joy>0.004</joy>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>RawAgave</defName>
+    <label>agave fruit</label>
+    <description>Raw agave fruit. Not so nice when eaten raw.</description>
+    <graphicData>
+      <texPath>Items/AgaveFruit</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--=============== Milk ====================-->
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Milk</defName>
+    <label>milk</label>
+    <description>Milk from an animal.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Milk</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+      </li>
+    </comps>
+    <ingestible>
+      <joy>0.004</joy>
+    </ingestible>
+  </ThingDef>
+
+  <!--=============== Eggs ====================-->
+
+
+  <ThingDef Abstract="True" Name="EggBase" ParentName="OrganicProductBase" >
+    <ingestible>
+      <nutrition>0.25</nutrition>
+      <eatEffect>EatMeat</eatEffect>
+      <soundEat>RawMeat_Eat</soundEat>
+      <isMeat>true</isMeat>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="EggUnfertBase" ParentName="EggBase" >
+    <ingestible>
+      <preferability>Raw</preferability>
+    </ingestible>
+    <thingCategories>
+      <li>EggsUnfertilized</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Abstract="True" Name="EggFertBase" ParentName="EggBase" >
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+    </ingestible>
+    <thingCategories>
+      <li>EggsFertilized</li>
+    </thingCategories>
+  </ThingDef>
+  
+
+  <ThingDef ParentName="EggUnfertBase">
+    <defName>EggChickenUnfertilized</defName>
+    <label>chicken egg (unfert.)</label>
+    <description>Unfertilized chicken egg. It can be eaten raw, but it's much, much better cooked.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(228,185,135)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+  </ThingDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggChickenFertilized</defName>
+    <label>chicken egg (fert.)</label>
+    <description>Fertilized chicken egg. If all goes well, it should hatch into a chick. It can be eaten raw, but it's much better cooked.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompHatcher</compClass>
+        <hatcherDaysToHatch>7</hatcherDaysToHatch>
+        <hatcherPawn>Chicken</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggCobraFertilized</defName>
+    <label>cobra egg (fert.)</label>
+    <description>Fertilized cobra egg. If all goes well, it should hatch into a baby cobra. It can be eaten raw, but it's much better cooked.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggOval</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>40.0</MarketValue>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompHatcher</compClass>
+        <hatcherDaysToHatch>9</hatcherDaysToHatch>
+        <hatcherPawn>Cobra</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggIguanaFertilized</defName>
+    <label>iguana egg (fert.)</label>
+    <description>Fertilized iguana egg. If all goes well, it should hatch into a baby iguana. It can be eaten raw, but it's much better cooked.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>25.0</MarketValue>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompHatcher</compClass>
+        <hatcherDaysToHatch>7</hatcherDaysToHatch>
+        <hatcherPawn>Iguana</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggTortoiseFertilized</defName>
+    <label>tortoise egg (fert.)</label>
+    <description>Fertilized tortoise egg. If all goes well, it should hatch into a baby tortoise. It can be eaten raw, but it's much better cooked.</description>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Resource/AnimalProductRaw/EggBirdSmall</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>23.0</MarketValue>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompHatcher</compClass>
+        <hatcherDaysToHatch>7</hatcherDaysToHatch>
+        <hatcherPawn>Tortoise</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+  
+<!-- === VanillaEnd === -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === new organic  === -->
+  <!-- === organic raw food  === -->  
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Raweggplant</defName>
+    <label>eggplant</label>
+    <description>Purple variety of the eggplant. Not so nice when eaten raw. </description>
+    <graphicData>
+      <texPath>Items/eggplant</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.3</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>8</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Rawpumpkin</defName>
+    <label>pumpkin</label>
+    <description>Large orange version of the squash plant. Often carved to ward off ghosts. Not so nice when eaten raw.</description>
+    <graphicData>
+      <texPath>Items/pumpkin</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>4</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>12</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Rawsquash</defName>
+    <label>squash</label>
+    <description>Yellow variety of the squash family. Not so nice when eaten raw.</description>
+    <graphicData>
+      <texPath>Items/squash</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>8</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Rawbean</defName>
+    <label>bean</label>
+    <description>Common bean cooked up in many ways. Not so nice when eaten raw.</description>
+    <graphicData>
+      <texPath>Items/bean</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawTomatoes</defName>
+    <label>tomatoes</label>
+    <description>A sharp-tasting fruit that has many uses. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/Tomato</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.9</MarketValue>
+    </statBases>
+    <ingestible>
+      <joy>0.004</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>21</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Rawonion</defName>
+    <label>onion</label>
+    <description>Warning can make you cry! Not so nice when eaten raw.</description>
+    <graphicData>
+    <texPath>Items/onion</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawLettuce</defName>
+    <label>lettuce</label>
+    <description>Their leaves are an essential part of many salads. Nice to eat, even when raw.</description>
+    <graphicData>
+    <texPath>Items/Lettuce</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+    </statBases>
+    <ingestible>
+      <joy>0.004</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+      </li>
+    </comps>
+    <stackLimit>25</stackLimit>
+  </ThingDef>
+  
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>RawCarrots</defName>
+    <label>carrots</label>
+    <description>Crunchy vegetable with a refreshing taste. May help you see in the dark. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/Carrot</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <joy>0.004</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>  
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>Rawmushroom</defName>
+    <label>mushroom</label>
+    <description>Raw protein-rich mushrooms. Not so nice when eaten raw.</description>
+    <graphicData>
+      <texPath>Items/mushroom</texPath>
+    </graphicData>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>  
+
+  
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawapple</defName>
+    <label>apples</label>
+    <description>A red fruit grow on trees. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/apple</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+    </statBases>
+    <ingestible>
+  <nutrition>.25</nutrition>
+      <joy>0.006</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawbanana</defName>
+    <label>banana</label>
+    <description>A yellow fruit that grows on trees. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/banana</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>8</MarketValue>
+    </statBases>
+    <ingestible>
+   <nutrition>.25</nutrition>
+      <joy>0.006</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawgrape</defName>
+    <label>grapes</label>
+    <description>A sweet fruit that grows on vines. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/grape</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+    </statBases>
+    <ingestible>
+   <nutrition>.25</nutrition>
+      <joy>0.006</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Raworange</defName>
+    <label>orange</label>
+    <description>A sweet fruit that grows on trees. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/orange</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>7</MarketValue>
+    </statBases>
+    <ingestible>
+   <nutrition>.25</nutrition>
+      <joy>0.006</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawpeach</defName>
+    <label>peach</label>
+    <description>A sweet fruit that grows on trees. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/peach</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>7</MarketValue>
+    </statBases>
+    <ingestible>
+   <nutrition>.25</nutrition>
+      <joy>0.006</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawpineapple</defName>
+    <label>pineapple</label>
+    <description>A sweet fruit with a tough skin that grows on a bush. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/pineapple</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>8</MarketValue>
+    </statBases>
+    <ingestible>
+   <nutrition>.25</nutrition>
+      <joy>0.006</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawblueberry</defName>
+    <label>blueberry</label>
+    <description>Blue colored berry that grows in bushes. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/blueberry</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.4</MarketValue>
+    </statBases>
+    <ingestible>
+      <joy>0.004</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawwatermelon</defName>
+    <label>watermelon</label>
+    <description>This fruit is rich in vitamins A and C. Nice to eat, even when raw..</description>
+    <graphicData>
+      <texPath>Items/watermelon</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>3</MarketValue>
+    </statBases>
+    <ingestible>
+      <joy>0.008</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>  
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawdate</defName>
+    <label>date</label>
+    <description>A sweet fruit that grows on trees. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/date</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>8</MarketValue>
+    </statBases>
+    <ingestible>
+   <nutrition>.25</nutrition>
+      <joy>0.006</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>
+    </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawfig</defName>
+    <label>fig</label>
+    <description>A sweet fruit that grows on trees. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/fig</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>7</MarketValue>
+    </statBases>
+    <ingestible>
+   <nutrition>.25</nutrition>
+      <joy>0.006</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawgooseberry</defName>
+    <label>gooseberry</label>
+    <description>A sweet fruit that grows on vines. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/gooseberries</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+    </statBases>
+    <ingestible>
+   <nutrition>.25</nutrition>
+      <joy>0.006</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+  <ThingDef ParentName="FruitFoodRawBase">
+    <defName>Rawcloudberry</defName>
+    <label>cloudberry</label>
+    <description>A sweet fruit that grows on vines. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/cloudberries</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+    </statBases>
+    <ingestible>
+   <nutrition>.25</nutrition>
+      <joy>0.006</joy>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+      </li>
+    </comps>    
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === raw fishes === -->
+  <ThingDef Name="FishBase" Abstract="True" ParentName="ResourceBase">
+    <label>Base fish properties</label>
+    <soundInteract>Food_Drop</soundInteract>
+    <soundDrop>Food_Drop</soundDrop>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-10</Beauty>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>2</daysToRotStart>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>FoodFreshFish</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef Class="FishIndustry.ThingDef_FishSpeciesProperties" ParentName="FishBase">
+    <defName>Fish_Sduiggles</defName>
+    <label>sduiggles</label>
+    <description>Found in the swamps and shallow waters. Behind the appearances, this kind of squid is very affectuous and intelligent. Who would like to fish it? You monster!</description>
+    <graphicData>
+      <texPath>Items/Fish_Sduiggles</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>15</MarketValue>
+    </statBases>
+    <aquaticEnvironment>SeaAndMarch</aquaticEnvironment>
+    <livingTime>DayAndNight</livingTime>
+    <stackLimit>30</stackLimit>
+    <commonality>0.20</commonality>
+    <catchQuantity>1</catchQuantity>
+  </ThingDef>
+
+  <ThingDef Class="FishIndustry.ThingDef_FishSpeciesProperties" ParentName="FishBase">
+    <defName>Fish_Seasnake</defName>
+    <label>seasnake</label>
+    <description>Often mistaken for its wild tailteeth cousin, this peaceful fish is often caught during moonless nights.</description>
+    <graphicData>
+      <texPath>Items/Fish_Seasnake</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2</MarketValue>
+    </statBases>
+    <aquaticEnvironment>Sea</aquaticEnvironment>
+    <livingTime>Night</livingTime>
+    <commonality>0.75</commonality>
+    <catchQuantity>1</catchQuantity>
+  </ThingDef>
+
+  <ThingDef Class="FishIndustry.ThingDef_FishSpeciesProperties" ParentName="FishBase">
+    <defName>Fish_Mashgon</defName>
+    <label>mashgon</label>
+    <description>A little shellfish often found in the swamps and marshes. Its name comes from the local tribespeople calling it "marsh dragon". Easy to catch and fast to breed, this is a good basic protein source.</description>
+    <graphicData>
+      <texPath>Items/Fish_Mashgon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>200</stackLimit>
+    <statBases>
+      <MarketValue>1</MarketValue>
+    </statBases>
+    <aquaticEnvironment>Marsh</aquaticEnvironment>
+    <livingTime>DayAndNight</livingTime>
+    <commonality>0.80</commonality>
+    <catchQuantity>10</catchQuantity>
+    <breedQuantity>20</breedQuantity>
+    <breedingDurationInDays>2</breedingDurationInDays>
+  </ThingDef>
+
+  <ThingDef Class="FishIndustry.ThingDef_FishSpeciesProperties" ParentName="FishBase">
+    <defName>Fish_Blueblade</defName>
+    <label>blueblade</label>
+    <description>A very common fish found in shallow water. Its name comes from its resilience: it is able to live both in hot blue lagoons or in icy blue waters.</description>
+    <graphicData>
+      <texPath>Items/Fish_Blueblade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>3</MarketValue>
+    </statBases>
+    <aquaticEnvironment>Sea</aquaticEnvironment>
+    <livingTime>Day</livingTime>
+    <commonality>0.75</commonality>
+    <catchQuantity>1</catchQuantity>
+    <breedQuantity>3</breedQuantity>
+    <breedingDurationInDays>4</breedingDurationInDays>
+  </ThingDef>
+
+  <ThingDef Class="FishIndustry.ThingDef_FishSpeciesProperties" ParentName="FishBase">
+    <defName>Fish_Tailteeth</defName>
+    <label>tailteeth</label>
+    <description>This ferocious predator owns its name to its vicious tactics. Slowly approaching its unaware drinking preys, it uses its massive tail to attract them into deep water. The teeth is generaly the last vision you can get from this terrible creature.</description>
+    <graphicData>
+      <texPath>Items/Fish_Tailteeth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <statBases>
+      <MarketValue>300</MarketValue>
+    </statBases>
+    <aquaticEnvironment>Sea</aquaticEnvironment>
+    <livingTime>DayAndNight</livingTime>
+    <commonality>0.05</commonality>
+    <catchQuantity>1</catchQuantity>
+    <breedQuantity>1</breedQuantity>
+    <breedingDurationInDays>12</breedingDurationInDays>
+  </ThingDef>
+
+
+
+
+  <!-- butchered fish -->
+  <ThingDef Name="SeaProductBase" Abstract="True" ParentName="ResourceBase">
+    <soundInteract>Food_Drop</soundInteract>
+    <soundDrop>Food_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+      <Beauty>-20</Beauty>
+    </statBases>
+    <tickerType>Rare</tickerType>
+  </ThingDef>
+
+  <ThingDef Name="RawSeaFoodBase" Abstract="True" ParentName="SeaProductBase">
+    <label>Base sea food properties</label>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>True</rotDestroys>
+      </li>
+    </comps>
+    <ingestible>
+      <preferability>Raw</preferability>
+      <nutrition>0.05</nutrition>
+      <eatEffect>EatMeat</eatEffect>
+      <soundEat>RawMeat_Eat</soundEat>
+    </ingestible>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="RawSeaFoodBase">
+    <defName>RawSeaFood_SduigglesTentacle</defName>
+    <label>sduiggles tentacle</label>
+    <description>Gelatinous and soft tentacles of a sduiggles. Not really appetizing... Not at all!</description>
+    <graphicData>
+      <texPath>Items/FishRaw_SduigglesTentacle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="RawSeaFoodBase">
+    <defName>RawSeaFood_SeasnakeFilet</defName>
+    <label>seasnake filets</label>
+    <description>Seasnake fresh filets. There are so many fish bones in this fish that it is tedious to eat!</description>
+    <graphicData>
+      <texPath>Items/FishRaw_SeasnakeFilet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.5</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.07</nutrition>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="RawSeaFoodBase">
+    <defName>RawSeaFood_Mashgon</defName>
+    <label>Shelled mashgon</label>
+    <description>Frail and juicy corpse of a mashgon. Can be eaten raw or grilled for a better flavour. It is not really nourishing but tasty!</description>
+    <graphicData>
+      <texPath>Items/FishRaw_Mashgon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.5</MarketValue>
+    </statBases>
+    <ingestible>
+      <nutrition>0.03</nutrition>
+      <joy>0.001</joy>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="RawSeaFoodBase">
+    <defName>RawSeaFood_BluebladeFilet</defName>
+    <label>blueblade filets</label>
+    <description>Blueblade fresh filets. Not particularly tasty but quite nutritious.</description>
+    <graphicData>
+      <texPath>Items/FishRaw_BluebladeFilet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.5</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.07</nutrition>
+    </ingestible>
+  </ThingDef>
+
+  <ThingDef ParentName="RawSeaFoodBase">
+    <defName>RawSeaFood_TailteethSteak</defName>
+    <label>tailteeth steak</label>
+    <description>A tasty and flavorsome meat once grilled, highly nutritious and enjoyable. It is however difficult to catch this kind of specimen alive.</description>
+    <graphicData>
+      <texPath>Items/FishRaw_TailteethSteak</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>6</MarketValue>
+    </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.15</nutrition>
+      <joy>0.008</joy>
+    </ingestible>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === organic resources  === -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawCotton</defName>
+    <label>raw cotton</label>
+    <description>Raw cotton. It can be spun into cloth or sold to a trader.</description>
+    <graphicData>
+      <texPath>Items/Cotton</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Food_Drop</soundInteract>
+    <soundDrop>Food_Drop</soundDrop>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawDevilstrand</defName>
+    <label>Raw devilstrand</label>
+    <description>Raw devilstrand. It can be spun into cloth or sold to a trader.</description>
+    <graphicData>
+      <texPath>Items/Devilstrand</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Food_Drop</soundInteract>
+    <soundDrop>Food_Drop</soundDrop>
+    <statBases>
+      <MarketValue>6.4</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawXerigium</defName>
+    <label>raw xerigium</label>
+    <description>For refining into medicine.</description>
+     <graphicData>
+      <texPath>Items/Xerigium</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>5</DeteriorationRate>
+      <MarketValue>1.5</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stackLimit>100</stackLimit>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>OmniGel</defName>
+    <label>Omni Gel</label>
+    <description>For refining into lots of different things.</description>
+    <graphicData>
+      <texPath>Items/OmniGel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>5</DeteriorationRate>
+      <MarketValue>1.5</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stackLimit>100</stackLimit>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Rawwheat</defName>
+    <label>wheat</label>
+    <description>Wheat is a cereal grain, for milling into Flour.</description>
+    <graphicData>
+      <texPath>Items/wheat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+    </statBases>    
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Rawoats</defName>
+    <label>oats</label>
+    <description>Cereal grain used for livestock feed or cooked for food.</description>
+    <graphicData>
+      <texPath>Items/oats</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.5</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>60</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!--<ThingDef ParentName="ResourceBase">
+    <defName>Weed</defName>
+    <label>Weed</label>
+    <description>It turns out that Frank may of been on to something when he burnt the weeds, it is quite soothing.</description>
+    <graphicData>
+      <texPath>Items/Weed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>  
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>100</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>-->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Rawcocoa</defName>
+    <label>cocoa</label>
+    <description>Cocoa beans are refined into choclate.</description>
+    <graphicData>
+      <texPath>Items/cocoa</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Rawsugarcane</defName>
+    <label>sugarcane</label>
+    <description>Harvested canes from the sugarcane plant.</description>
+    <graphicData>
+      <texPath>Items/sugarcane</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawTobacco</defName>
+    <label>tobacco</label>
+    <description>Raw tobacco. Not recommended for eating, but makes for a nice smoke</description>
+  <graphicData>
+    <texPath>Items/Tobacco</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+    <statBases>
+      <MarketValue>5.0</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>    
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <stackLimit>100</stackLimit>    
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawCoffee</defName>
+    <label>coffee</label>
+    <description>Raw Coffee. Best prepared as a beverage</description>
+  <graphicData>
+    <texPath>Items/coffee</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+  </graphicData>
+    <statBases>
+      <MarketValue>4</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <stackLimit>100</stackLimit>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RawTea</defName>
+    <label>tea leaves</label>
+    <description>Tea leaves for brewing.</description>
+    <graphicData>
+      <texPath>Items/tea</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <stackLimit>100</stackLimit>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>RainbowPetals</defName>
+    <label>rainbow petals</label>
+    <description>A small bundle of multi-colored flower petals.</description>
+    <graphicData>
+      <texPath>Items/RainbowPetals</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>First</resourceReadoutPriority>
+    <useHitPoints>false</useHitPoints>
+    <statBases>
+      <MarketValue>5</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>5</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <stackLimit>100</stackLimit>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <techLevel>Spacer</techLevel>
+    <canBeSpawningInventory>true</canBeSpawningInventory> 
+  </ThingDef>
+
+  <!--<ThingDef ParentName="ResourceBase">
+    <defName>aloe</defName>
+    <label>aloe</label>
+    <description>A bundle of aloe leaves.</description>
+    <thingClass>Medicine</thingClass>
+    <graphicData>
+      <texPath>Items/aloe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>5</MarketValue>
+      <Flammability>1.0</Flammability>
+      <MedicalPotency>0.45</MedicalPotency>
+      <DeteriorationRate>5</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Medicine</li>
+    </thingCategories>
+    <tickerType>Rare</tickerType>    
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>10</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <stackLimit>100</stackLimit>
+  </ThingDef> -->
+
+
+
+  <!-- === special case bamboo  === -->
+
+  <ThingDef Name="ResourceVerbBase" ParentName="ResourceBase" Abstract="True">
+    <equipmentType>Primary</equipmentType>
+    <techLevel>Neolithic</techLevel>
+    <comps>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceVerbBase">
+    <defName>Bamboo</defName>
+    <label>bamboo</label>
+    <description>Fast growing grass used for construction.</description>
+    <graphicData>
+      <texPath>Items/bamboo</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>75</stackLimit>
+    <equippedAngleOffset>-20</equippedAngleOffset>
+    <soundInteract>Wood_Drop</soundInteract>
+    <soundDrop>Wood_Drop</soundDrop>
+    <statBases>
+      <MarketValue>1.4</MarketValue>
+      <MaxHitPoints>150</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <MeleeWeapon_DamageAmount>8</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>2.2</MeleeWeapon_Cooldown>
+      <SharpDamageMultiplier>0.3</SharpDamageMultiplier>
+      <BluntDamageMultiplier>0.8</BluntDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <stuffAdjective>bamboo</stuffAdjective>
+      <categories>
+        <li>Woody</li>
+      </categories>
+      <color>(204,170,128)</color>
+      <constructEffect>ConstructWood</constructEffect>
+      <appearance>Planks</appearance>
+      <soundImpactStuff>BulletImpactWood</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+      <statOffsets>
+        <Beauty>2</Beauty>
+      </statOffsets>
+      <statFactors>
+        <MaxHitPoints>0.5</MaxHitPoints>
+        <Beauty>1.25</Beauty>
+        <Flammability>1</Flammability>
+        <WorkToMake>0.7</WorkToMake>
+        <DoorOpenSpeed>1.2</DoorOpenSpeed>
+        <MeleeWeapon_Cooldown>0.9</MeleeWeapon_Cooldown>
+      </statFactors>
+  </stuffProps>
+    <isBodyPartOrImplant>true</isBodyPartOrImplant>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === Organic Manufatured  === -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Sugar</defName>
+    <label>sugar</label>
+    <description>Ground up from the cane plant. Used in baking.</description>
+   <graphicData>
+      <texPath>Items/sugar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>3</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps>   
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Flour</defName>
+    <label>flour</label>
+    <description>Simple four, used in baking.</description>
+    <graphicData>
+      <texPath>Items/flour</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>3</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <stuffProps>
+      <categories>
+        <li>Stuff</li>
+      </categories>
+    </stuffProps> 
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>25</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  
+
+  
+  
+</Defs>

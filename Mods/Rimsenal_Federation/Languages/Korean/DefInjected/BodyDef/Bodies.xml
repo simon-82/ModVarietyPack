@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+
+	<Bion.label>바이온</Bion.label>
+	<BikeBody.label>바이크</BikeBody.label>
+	<MechBody.label>메크</MechBody.label>
+	<DroneBody.label>메카노이드</DroneBody.label>
+
+</LanguageData>

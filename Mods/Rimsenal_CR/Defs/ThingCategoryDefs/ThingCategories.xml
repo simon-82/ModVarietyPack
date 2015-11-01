@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingCategoryDefs>
+  
+
+<ThingCategoryDef>
+ <defName>RSWeapons</defName>
+ <label>Interstellar corporation weapons</label>
+ <parent>Weapons</parent>
+</ThingCategoryDef>
+
+	  <ThingCategoryDef>
+	    <defName>ADWeapons</defName>
+	    <label>Federation weapons</label>
+	    <parent>RSWeapons</parent>
+	  </ThingCategoryDef>
+
+	  <ThingCategoryDef>
+	    <defName>JIWeapons</defName>
+	    <label>Fortworld weapons</label>
+	    <parent>RSWeapons</parent>
+	  </ThingCategoryDef>
+
+	  <ThingCategoryDef>
+	    <defName>YPWeapons</defName>
+	    <label>Corpworld weapons</label>
+	    <parent>RSWeapons</parent>
+	  </ThingCategoryDef>
+
+	  <ThingCategoryDef>
+	    <defName>GDWeapons</defName>
+	    <label>Militia weapons</label>
+	    <parent>RSWeapons</parent>
+	  </ThingCategoryDef>
+ 
+
+	  <ThingCategoryDef>
+	    <defName>TEWeapons</defName>
+	    <label>Seeker weapons</label>
+	    <parent>RSWeapons</parent>
+	  </ThingCategoryDef>
+ 
+<ThingCategoryDef>
+ <defName>RSApparel</defName>
+ <label>Interstellar corporation Apparel</label>
+ <parent>Apparel</parent>
+</ThingCategoryDef>
+
+	  <ThingCategoryDef>
+	    <defName>ADApparel</defName>
+	    <label>Federation Apparel</label>
+	    <parent>RSApparel</parent>
+	  </ThingCategoryDef>
+
+	  <ThingCategoryDef>
+	    <defName>JIApparel</defName>
+	    <label>Fortworld Apparel</label>
+	    <parent>RSApparel</parent>
+	  </ThingCategoryDef>
+
+	  <ThingCategoryDef>
+	    <defName>YPApparel</defName>
+	    <label>Corpworld Apparel</label>
+	    <parent>RSApparel</parent>
+	  </ThingCategoryDef>
+ 
+	  <ThingCategoryDef>
+	    <defName>GDApparel</defName>
+	    <label>Militia Apparel</label>
+	    <parent>RSApparel</parent>
+	  </ThingCategoryDef>
+
+
+	  
+  </ThingCategoryDefs>

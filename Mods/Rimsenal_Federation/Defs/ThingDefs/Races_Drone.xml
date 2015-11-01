@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BasePawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="BasePawn" Name="BaseMech" Abstract="True">
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <statBases>
+      <Flammability>1</Flammability>
+      <ComfyTemperatureMin>-250</ComfyTemperatureMin>
+      <ComfyTemperatureMax>100</ComfyTemperatureMax>
+    </statBases>
+    <race>
+      <mechanoid>true</mechanoid>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <isFlesh>false</isFlesh>
+      <diet>NeverEats</diet>
+    </race>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMech">
+    <defName>Race_Drone</defName>
+    <label>M15</label>
+    <description>Arms Dynamics M15 "Servant" is a multipurpose military logistic mechanoid. The word "multipurpose" involves lots of things, including combat.</description>
+    <statBases>
+      <MoveSpeed>4.5</MoveSpeed>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+      <MeatAmount>30</MeatAmount>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>160</defaultCooldownTicks>
+        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>120</defaultCooldownTicks>
+        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <mechanoid>true</mechanoid>
+      <thinkTree>Mechanoid</thinkTree>
+      <body>DroneBody</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>0.6</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+                <soundWounded>Pawn_Mech_Wounded</soundWounded>
+                <soundDeath>Pawn_Mech_Death</soundDeath>
+                <soundCall>Pawn_Mech_Call</soundCall>
+                <soundAngry>Pawn_Mech_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+      <soundMeleeHitPawn>Pawn_MechHitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_MechHitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_MechMiss</soundMeleeMiss>
+    </race>
+    <butcherProducts>
+      <Steel>35</Steel>
+      <Plasteel>35</Plasteel>
+    </butcherProducts>
+    <recipes>
+      <li>ShutDownMechanoid</li>
+    </recipes>
+  </ThingDef>
+</ThingDefs>

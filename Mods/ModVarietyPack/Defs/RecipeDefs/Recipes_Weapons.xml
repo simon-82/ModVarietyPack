@@ -1,0 +1,708 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+
+	<!-- === Vanilla Guns === -->
+	<RecipeDef>
+		<defName>MakeGun_Pistol</defName>
+		<label>(P) Make pistol</label>
+		<description>Make a basic pistol.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_Pistol>1</Gun_Pistol>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_PumpShotgun</defName>
+		<label>(S) Make pump shotgun</label>
+		<description>Make a basic shotgun.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>90</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_PumpShotgun>1</Gun_PumpShotgun>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_SurvivalRifle</defName>
+		<label>(R) Make survival rifle</label>
+		<description>Make a basic survival rifle.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>90</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_SurvivalRifle>1</Gun_SurvivalRifle>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_AssaultRifle</defName>
+		<label>(AR) Make assault rifle</label>
+		<description>Make a basic assault rifle.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_AssaultRifle>1</Gun_AssaultRifle>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_SniperRifle</defName>
+		<label>(SR) Make sniper rifle</label>
+		<description>Make a basic sniper rifle.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>150</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_SniperRifle>1</Gun_SniperRifle>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_PDW</defName>
+		<label>(SMG) Make PDW</label>
+		<description>Make a basic submachine gun.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>90</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_PDW>1</Gun_PDW>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_HeavySMG</defName>
+		<label>(SMG) Make heavy SMG</label>
+		<description>Make a basic heavy submachine gun.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>120</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_PDW>1</Gun_PDW>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- === New Guns === -->
+	<RecipeDef>
+		<defName>MakeGun_DesertEagleMarkI</defName>
+		<label>(P) Make Desert Eagle MkI</label>
+		<description>Make a Desert Eagle MkI.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>60</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_DesertEagleMarkI>1</Gun_DesertEagleMarkI>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_ColtPolicePositive</defName>
+		<label>(P) Make Colt Police Positive</label>
+		<description>Make a Colt Police Positive.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>55</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_ColtPolicePositive>1</Gun_ColtPolicePositive>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_WaltherPPK</defName>
+		<label>(P) Make Walther PPK</label>
+		<description>Make a Walther PPK.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>55</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_WaltherPPK>1</Gun_WaltherPPK>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+	
+	<RecipeDef>
+		<defName>MakeGun_Glock18_P</defName>
+		<label>(P) Make Glock 18</label>
+		<description>Make a Glock 18.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>55</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_Glock18_P>1</Gun_Glock18_P>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>	
+
+	<RecipeDef>
+		<defName>MakeGun_AK47_AR</defName>
+		<label>(AR) Make AK-47</label>
+		<description>Make an AK-47.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>110</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_AK47_AR>1</Gun_AK47_AR>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_M4A1_AR</defName>
+		<label>(AR) Make M4A1</label>
+		<description>Make an M4A1.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>115</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_AK47_AR>1</Gun_AK47_AR>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_FAMASG2_PA</defName>
+		<label>(AR) Make FAMAS-G2</label>
+		<description>Make a FAMAS-G2.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>105</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_FAMASG2_PA>1</Gun_FAMASG2_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_L85A1_PA</defName>
+		<label>(AR) Make L85A1</label>
+		<description>Make an L85A1.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>115</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_L85A1_PA>1</Gun_L85A1_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_M14_PA</defName>
+		<label>(R) Make M14</label>
+		<description>Make an M14 rifle.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>95</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_M14_PA>1</Gun_M14_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_BarrettM107_PA</defName>
+		<label>(R) Make Barrett M107</label>
+		<description>Make a Barrett M107.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>98</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_M14_PA>1</Gun_M14_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_AccuracyInternationalAWM_PA</defName>
+		<label>(SR) Make Accuracy International (AWM)</label>
+		<description>Make an Accuracy International (AWM).</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>160</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_AccuracyInternationalAWM_PA>1</Gun_AccuracyInternationalAWM_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_SVD_PA</defName>
+		<label>(SR) Make SVD</label>
+		<description>Make an SVD.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>170</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_SVD_PA>1</Gun_SVD_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+
+
+
+
+
+
+</RecipeDefs>

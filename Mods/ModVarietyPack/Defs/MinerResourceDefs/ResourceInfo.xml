@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<MinerResourceDefs>
+
+      <MinerResourceDef>
+        <defName>MD2SteelResourceInfo</defName>
+        <label>Steel</label>
+        <spawnRangeMin>15</spawnRangeMin>
+        <spawnRangeMax>40</spawnRangeMax>
+        <ticksToProduce>4800</ticksToProduce>
+        <resourceDefName>Steel</resourceDefName>
+        <fissureSizeRequired>Small</fissureSizeRequired>
+      </MinerResourceDef>
+  
+      <MinerResourceDef>
+        <defName>MD2SilverResourceInfo</defName>
+        <label>Silver</label>
+        <spawnRangeMin>10</spawnRangeMin>
+        <spawnRangeMax>30</spawnRangeMax>
+        <ticksToProduce>4800</ticksToProduce>
+        <resourceDefName>Silver</resourceDefName>
+        <fissureSizeRequired>Medium</fissureSizeRequired>
+      </MinerResourceDef>
+  
+      <MinerResourceDef>
+        <defName>MD2GoldResourceInfo</defName>
+        <label>Gold</label>
+        <spawnRangeMin>10</spawnRangeMin>
+        <spawnRangeMax>25</spawnRangeMax>
+        <ticksToProduce>4800</ticksToProduce>
+        <resourceDefName>Gold</resourceDefName>
+        <fissureSizeRequired>Medium</fissureSizeRequired>
+      </MinerResourceDef>
+  
+      <MinerResourceDef>
+        <defName>MD2PlasteelResourceInfo</defName>
+        <label>Plasteel</label>
+        <spawnRangeMin>5</spawnRangeMin>
+        <spawnRangeMax>10</spawnRangeMax>
+        <ticksToProduce>4800</ticksToProduce>
+        <resourceDefName>Plasteel</resourceDefName>
+        <fissureSizeRequired>Large</fissureSizeRequired>
+      </MinerResourceDef>
+  
+      <MinerResourceDef>
+        <defName>MD2UraniumResourceInfo</defName>
+        <label>Uranium</label>
+        <spawnRangeMin>5</spawnRangeMin>
+        <spawnRangeMax>11</spawnRangeMax>
+        <ticksToProduce>4800</ticksToProduce>
+        <resourceDefName>Uranium</resourceDefName>
+        <fissureSizeRequired>Large</fissureSizeRequired>
+      </MinerResourceDef>
+  
+      <MinerResourceDef>
+        <defName>MD2BauxiteResourceInfo</defName>
+        <label>Bauxite</label>
+        <spawnRangeMin>15</spawnRangeMin>
+        <spawnRangeMax>40</spawnRangeMax>
+        <ticksToProduce>4800</ticksToProduce>
+        <resourceDefName>Bauxite</resourceDefName>
+        <fissureSizeRequired>Small</fissureSizeRequired>
+      </MinerResourceDef>
+    
+</MinerResourceDefs>

@@ -1,0 +1,1954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+
+
+  <ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <selectable>True</selectable>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li>
+        <compClass>CompArt</compClass>
+        <nameMaker>NamerGun</nameMaker>
+        <descriptionMaker>ArtWeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltProducts>
+      <SteelBar>20</SteelBar>
+    </smeltProducts>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+
+
+
+  <!-- === CR Bullet === -->
+
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Combat_Realism.BulletCR</thingClass>
+    <label>bullet</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === Pistols === -->
+
+
+  <!-- === Vanilla Pistol === -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Pistol</defName>
+    <label>pistol bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.425</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_Pistol</defName>
+    <label>pistol</label>
+    <description>Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Pistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>200</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Pistol</projectileDef>
+        <warmupTicks>20</warmupTicks>
+        <range>10</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.6</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.05)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>7</roundPerMag>
+        <reloadTick>180</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.10</MoveSpeed>
+      <WorkSpeedGlobal>-0.02</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+  <!-- === DesertEagleMarkI === -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_357Magnum_P_PA</defName>
+    <label>.357 Magnum</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>22</DamageAmountBase>
+      <Speed>110</Speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.6</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_DesertEagleMarkI</defName>
+    <label>Desert Eagle Mark I</label>
+    <description>The Desert Eagle is a large-framed gas-operated semi-automatic pistol designed by Magnum Research in the United States together with IMI in Israel.</description>
+    <graphicData>
+      <texPath>Weapons/Gun_P_DesertEagleMarkI</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>302</MarketValue>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.74</AccuracyShort>
+      <AccuracyMedium>0.49</AccuracyMedium>
+      <AccuracyLong>0.36</AccuracyLong>
+      <RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
+    </statBases>    
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_357Magnum_P_PA</projectileDef>
+        <warmupTicks>20</warmupTicks>
+        <range>15</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+     <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.6</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.05)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>8</roundPerMag>
+        <reloadTick>180</reloadTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+
+  <!-- === ColtPolicePositive === -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_32ColtNewPolice_R_PA</defName>
+    <label>.32 Colt New Police</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>19</DamageAmountBase>
+      <Speed>110</Speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.425</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_ColtPolicePositive</defName>
+    <label>Colt Police Positive</label>
+    <description> The Colt Police Positive is a small-frame double-action revolver featuring a six-round cylinder, chambered for either .32 or .38 caliber cartridges. Designed primarily for sale to federal, state, or local law enforcement agencies, the Police Positive was introduced into the firearms market by the Colt's Manufacturing Company in 1907.\nCaliber: .32 S&amp;W Long</description>
+    <graphicData>
+      <texPath>Weapons/Gun_P_ColtPolicePositive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>120</MarketValue>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.48</AccuracyMedium>
+      <AccuracyLong>0.34</AccuracyLong>
+      <RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_32ColtNewPolice_R_PA</projectileDef>
+        <warmupTicks>20</warmupTicks>
+        <range>15</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+     <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.6</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.05)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>8</roundPerMag>
+        <reloadTick>180</reloadTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+  <!-- === WaltherPPK === --> 
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_WaltherPPK</defName>
+    <label>Walther PPK</label>
+    <description>The Walther Polizeipistole Kriminalmodell, or Police Pistol Detective Model, is a blowback operated semi-automatic double action pistol.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_P_WaltherPPK</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>139</MarketValue>
+      <AccuracyTouch>0.92</AccuracyTouch>
+      <AccuracyShort>0.72</AccuracyShort>
+      <AccuracyMedium>0.52</AccuracyMedium>
+      <AccuracyLong>0.38</AccuracyLong>
+      <RangedWeapon_Cooldown>0.64</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Pistol</projectileDef>
+        <warmupTicks>20</warmupTicks>
+        <range>15</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+     <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.6</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.05)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>7</roundPerMag>
+        <reloadTick>180</reloadTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- === Glock18 === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_Glock18_P</defName>
+    <label>Glock 18</label>
+    <description> Ancient pattern automatic pistol. Weak and short range, but quick.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_P_Glock18</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>185</MarketValue>
+      <AccuracyTouch>0.81</AccuracyTouch>
+      <AccuracyShort>0.61</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.12</AccuracyLong>
+      <RangedWeapon_Cooldown>0.40</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Pistol</projectileDef>
+        <warmupTicks>10</warmupTicks>
+        <range>12</range>
+        <soundCast>ShotPistol</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+     <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.6</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.05)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>6</roundPerMag>
+        <reloadTick>90</reloadTick>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === Assault Rifles === -->
+
+  <!-- ======== Vanilla AR ========= -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_AssaultRifle</defName>
+    <label>assault rifle bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>18</damageAmountBase>
+      <speed>376</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.65</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_AssaultRifle</defName>
+    <label>assault rifle</label>
+    <description>A general-purpose military weapon for field or urban combat. It fires a three-round burst. Good range, low power, high rate of fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>650</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_AssaultRifle</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>73</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.5</shooterVariation>
+        <recoilOffsetX>(0.0,0.3)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.2)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>30</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.39</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+  <!-- === AK47 === --> 
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_762x39mm_AR_PA</defName>
+    <label>7.62x39mm</label>
+    <graphicData>
+    <texPath>Things/Projectile/Bullet_Small</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <speed>376</speed>
+    </projectile>
+     <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.65</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_AK47_AR</defName>
+    <label>AK-47</label>
+    <description>The AK-47 is a selective-fire, gas-operated assault rifle, first developed in the Soviet Union by Mikhail Kalashnikov.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_AR_AK47</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>700</MarketValue>
+      <AccuracyTouch>0.86</AccuracyTouch>
+      <AccuracyShort>0.92</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.72</AccuracyLong>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x39mm_AR_PA</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>75</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.5</shooterVariation>
+        <recoilOffsetX>(0.0,0.3)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.2)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>30</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.39</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+  <!-- === M4A1 === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_M14A_AR</defName>
+    <label>M4A1</label>
+    <description>The M4A1 carbine is a fully automatic variant of the basic M4 carbine intended for special operations use.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_AR_M4A1</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>750</MarketValue>
+      <AccuracyTouch>0.99</AccuracyTouch>
+      <AccuracyShort>0.96</AccuracyShort>
+      <AccuracyMedium>0.92</AccuracyMedium>
+      <AccuracyLong>0.88</AccuracyLong>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x39mm_AR_PA</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>77</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.5</shooterVariation>
+        <recoilOffsetX>(0.0,0.3)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.2)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>35</roundPerMag>
+        <reloadTick>250</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.39</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>    
+  </ThingDef>
+
+
+
+  <!-- === FAMAS-G2 === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_FAMASG2_PA</defName>
+    <label>FAMAS-G2</label>
+    <description>The FAMAS is a bullpup-styled assault rifle designed and manufactured in France by MAS located in Saint-Étienne, which is now a member of the French government-owned Nexter group. It is the service rifle of the French military.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_AR_FAMASG2</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>800</MarketValue>
+      <AccuracyTouch>0.98</AccuracyTouch>
+      <AccuracyShort>0.82</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.76</AccuracyLong>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x39mm_AR_PA</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>75</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.5</shooterVariation>
+        <recoilOffsetX>(0.0,0.3)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.2)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>32</roundPerMag>
+        <reloadTick>250</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.39</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+  <!-- === L85A1 === -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_556x45mmNATO_AR_PA</defName>
+    <label>5.56x45mm NATO</label>
+    <graphicData>
+    <texPath>Things/Projectile/Bullet_Big</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>30</damageAmountBase>
+      <speed>370</speed>
+    </projectile>
+     <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.65</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_L85A1_PA</defName>
+    <label>L85A1</label>
+    <description>The L85 rifle variant of the SA80 family has been the standard issue service rifle of the British Armed Forces since 1987, replacing the L1A1 variant of the FN FAL.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_AR_L85A1</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>700</MarketValue>
+      <AccuracyTouch>0.98</AccuracyTouch>
+      <AccuracyShort>0.92</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.76</AccuracyLong>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x39mm_AR_PA</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>75</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.5</shooterVariation>
+        <recoilOffsetX>(0.0,0.3)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.2)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>45</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.39</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === Rifles === -->
+
+  <!-- ======== Vanilla Rifle ========= -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SurvivalRifle</defName>
+    <label>survival rifle bullet</label>    
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <speed>300</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.55</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_SurvivalRifle</defName>
+    <label>survival rifle</label>
+    <description>Ancient bolt-action rifle. Good range, Good power, low rate of fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/SurvivalRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>400</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_SurvivalRifle</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>67</range>
+        <soundCast>ShotSurvivalRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.4</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>10</roundPerMag>
+        <reloadTick>180</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.41</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+  <!-- === M14 === -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_762x51mmNATO_R_PA</defName>
+    <label>7.62x51mm NATO</label>
+    <graphicData>
+    <texPath>Things/Projectile/Bullet_Big</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>28</DamageAmountBase>
+      <Speed>300</Speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.55</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_M14_PA</defName>
+    <label>M14</label>
+    <description>M14 rifle, officially the United States Rifle, 7.62 mm, M14,[5] is an American selective fire automatic rifle that fires 7.62x51mm NATOammunition. It gradually replaced the M1 Garand in U.S. Army service by 1961 and in U.S. Marine Corps service by 1965.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_R_M14</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>423</MarketValue>
+      <AccuracyTouch>0.81</AccuracyTouch>
+      <AccuracyShort>0.86</AccuracyShort>
+      <AccuracyMedium>0.94</AccuracyMedium>
+      <AccuracyLong>0.83</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x51mmNATO_R_PA</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>67</range>
+        <soundCast>ShotSurvivalRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.4</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>10</roundPerMag>
+        <reloadTick>180</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.41</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+  <!-- === BarrettM107 === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_BarrettM107_PA</defName>
+    <label>Barrett M107</label>
+    <description>Initially used to designate Barrett M95 bolt-action rifle. Designation changed to apply to a product improved M82A1M variant. Includes lengthened accessory rail, rear grip, and monopod socket.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_R_BarrettM107</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>845</MarketValue>
+      <AccuracyTouch>0.62</AccuracyTouch>
+      <AccuracyShort>0.82</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.86</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x51mmNATO_R_PA</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>70</range>
+        <soundCast>ShotSurvivalRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.4</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>12</roundPerMag>
+        <reloadTick>180</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.41</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === Sniper Rifles === -->
+
+  <!-- ======== Vanilla SR ========= -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_SniperRifle</defName>
+    <label>sniper rifle bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <speed>333</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.7</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_SniperRifle</defName>
+    <label>sniper rifle</label>
+    <description>Ancient pattern military sniper rifle. Bolt action. Long range, great accuracy and power.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/SniperRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>850</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_SniperRifle</projectileDef>
+        <warmupTicks>120</warmupTicks>
+        <range>107</range>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.03</shotVariation>
+        <shooterVariation>0.1</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>5</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.73</MoveSpeed>
+      <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+  <!-- === AccuracyInternationalAWM === -->
+  <ThingDef ParentName="BaseBullet" Name="XML_338LapuaMagnum_SR_PA">
+    <defName>Bullet_338LapuaMagnum_SR_PA</defName>
+    <label>.338 Lapua Magnum</label>
+    <graphicData>
+    <texPath>Things/Projectile/Bullet_Small</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>30</DamageAmountBase>
+      <Speed>333</Speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.7</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_AccuracyInternationalAWM_PA</defName>
+    <label>Accuracy International (AWM)</label>
+    <description>The Accuracy International AWM (Arctic Warfare Magnum) is a bolt-action sniper rifle manufactured by Accuracy International designed for magnum rifle cartridge chamberings.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_SR_AccuracyInternationalAWM</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>882</MarketValue>
+      <AccuracyTouch>0.48</AccuracyTouch>
+      <AccuracyShort>0.88</AccuracyShort>
+      <AccuracyMedium>0.88</AccuracyMedium>
+      <AccuracyLong>0.89</AccuracyLong>
+      <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_338LapuaMagnum_SR_PA</projectileDef>
+        <warmupTicks>120</warmupTicks>
+        <range>107</range>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.03</shotVariation>
+        <shooterVariation>0.1</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>5</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.73</MoveSpeed>
+      <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+  
+
+  <!-- === SVD === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_SVD_PA</defName>
+    <label>SVD</label>
+    <description>The Dragunov sniper rifle is a semi-automatic sniper/designated marksman rifle chambered in 7.62x54mmR and developed in the Soviet Union.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_SR_SVD</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>897</MarketValue>
+      <AccuracyTouch>0.56</AccuracyTouch>
+      <AccuracyShort>0.89</AccuracyShort>
+      <AccuracyMedium>0.97</AccuracyMedium>
+      <AccuracyLong>0.94</AccuracyLong>
+      <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_338LapuaMagnum_SR_PA</projectileDef>
+        <warmupTicks>120</warmupTicks>
+        <range>107</range>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.03</shotVariation>
+        <shooterVariation>0.1</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>5</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.73</MoveSpeed>
+      <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === Vanilla Guns CR modified === -->
+
+  
+
+  <!-- ============================================================== -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_PumpShotgun</defName>
+    <label>shotgun blast</label>
+    <graphicData>
+      <texPath>Things/Projectile/Shotgun_Pellet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>140</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.425</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_PumpShotgun</defName>
+    <label>pump shotgun</label>
+    <description>Ancient design. Deadly, but short range.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractShotgun</soundInteract>
+    <statBases>
+      <MarketValue>400</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRShotgunReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_PumpShotgun</projectileDef>
+        <warmupTicks>35</warmupTicks>
+        <range>15</range>
+        <soundCast>ShotShotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.83</shotVariation>
+        <shooterVariation>1</shooterVariation>
+        <recoilOffsetX>(0.0,0.4)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.3)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>5</roundPerMag>
+        <reloadTick>240</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.30</MoveSpeed>
+      <WorkSpeedGlobal>-0.06</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_PDW</defName>
+    <label>PDW bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <speed>156</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.425</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_PDW</defName>
+    <label>PDW</label>
+    <description>A personal defense weapon is a micro-submachine gun. Short range, low power, high rate of fire. Very quick to aim and fire.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/PDW</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractSMG</soundInteract>
+    <statBases>
+      <MarketValue>550</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.33</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_PDW</projectileDef>
+        <warmupTicks>45</warmupTicks>
+        <range>20</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>ShotPDW</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.6</shooterVariation>
+        <recoilOffsetX>(0.0,0.15)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.1)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>32</roundPerMag>
+        <reloadTick>240</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.38</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_HeavySMG</defName>
+    <label>heavy SMG bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>16</damageAmountBase>
+      <speed>110</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.425</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_HeavySMG</defName>
+    <label>heavy SMG</label>
+    <description>A compact, wide-caliber slug-thrower. Very short range, but it packs a punch and handles quite well.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/HeavySMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractSMG</soundInteract>
+    <statBases>
+      <MarketValue>600</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.33</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_HeavySMG</projectileDef>
+        <warmupTicks>45</warmupTicks>
+        <range>14</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ShotHeavySMG</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.6</shooterVariation>
+        <recoilOffsetX>(0.0,0.15)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.1)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>20</roundPerMag>
+        <reloadTick>240</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.16</MoveSpeed>
+      <WorkSpeedGlobal>-0.03</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- ==================== T-9 incendiary launcher ========================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_IncendiaryLauncher</defName>
+    <label>incendiary bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/InfernoCannonShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Combat_Realism.ProjectileCR_Explosive</thingClass>
+    <projectile>
+      <speed>120</speed>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <explosionRadius>1.1</explosionRadius>
+      <postExplosionSpawnThingDef>Puddle_Fuel</postExplosionSpawnThingDef>
+      <explosionSpawnChance>0.7</explosionSpawnChance>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_IncendiaryLauncher</defName>
+    <label>incendiary launcher</label>
+    <description>Incendiary bolt launcher. Starts fires.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/IncendiaryLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>630</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_IncendiaryLauncher</projectileDef>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <warmupTicks>75</warmupTicks>
+        <range>53</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ShotIncendiaryLauncher</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.17</shotVariation>
+        <shooterVariation>0.8</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>5</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.42</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+  <!-- ===================== L-15 LMG ========================= -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_LMG</defName>
+    <label>LMG bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>28</damageAmountBase>
+      <speed>280</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.7</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_LMG</defName>
+    <label>LMG</label>
+    <description>A light machine gun.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/LMG</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>1600</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>MachineGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_LMG</projectileDef>
+        <warmupTicks>95</warmupTicks>
+        <range>113</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>20</burstShotCount>
+        <soundCast>ShotMinigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>1.2</shooterVariation>
+        <recoilOffsetX>(-0.3,1.0)</recoilOffsetX>
+        <recoilOffsetY>(-0.1,0.3)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>100</roundPerMag>
+        <reloadTick>600</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.90</MoveSpeed>
+      <WorkSpeedGlobal>-0.18</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+  <!-- ===================== Charge rifle ========================= -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ChargeRifle</defName>
+    <label>charge shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>28</damageAmountBase>
+      <speed>340</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.775</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_ChargeRifle</defName>
+    <label>charge rifle</label>
+    <description>Charged-shot energy/projectile rifle.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractChargeRifle</soundInteract>
+    <statBases>
+      <MarketValue>1800</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>AdvancedGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_ChargeRifle</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>73</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>ShotChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.05</shotVariation>
+        <shooterVariation>0.5</shooterVariation>
+        <recoilOffsetX>(0.0,0.3)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.2)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>60</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.35</MoveSpeed>
+      <WorkSpeedGlobal>-0.07</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+
+
+  <!-- ================ Improvised turret gun ============== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_TurretImprovised</defName>
+    <label>improvised turret bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <speed>340</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.65</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_TurretImprovised</defName>
+    <label>improvised turret gun</label>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <menuHidden>true</menuHidden>
+    <description>Jury-rigged gun attached to a turret.</description>
+    <soundInteract>InteractRifle</soundInteract>
+    <canBeSpawningInventory>false</canBeSpawningInventory>
+    <tradeability>Never</tradeability>
+    <statBases>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>TurretGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_TurretImprovised</projectileDef>
+        <warmupTicks>90</warmupTicks>
+        <range>30</range>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>GunShotA</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.15</shotVariation>
+        <shooterVariation>0.0</shooterVariation>
+        <recoilOffsetX>(-0.015,0.015)</recoilOffsetX>
+        <recoilOffsetY>(-0.015,0.015)</recoilOffsetY>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <!-- ======================= Heavy weapons ======================= -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Minigun</defName>
+    <label>minigun bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <speed>333</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.7</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_Minigun</defName>
+    <label>minigun</label>
+    <description>A multi-barrel machine gun with an extremely high rate of fire. Mechanoid-built.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Minigun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>2200</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <tradeability>Never</tradeability>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <weaponTags>
+      <li>MechanoidGunHeavy</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>0.00</MoveSpeed>
+      <WorkSpeedGlobal>0.00</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Minigun</projectileDef>
+        <forcedMissRadius>2.4</forcedMissRadius>
+        <warmupTicks>180</warmupTicks>
+        <minRange>3</minRange>
+        <range>107</range>
+        <burstShotCount>300</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>ShotMinigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.05</shooterVariation>
+        <recoilOffsetX>(-0.3,0.3)</recoilOffsetX>
+        <recoilOffsetY>(-0.3,0.3)</recoilOffsetY>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_DoomsdayRocket</defName>
+    <label>doomsday rocket</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Combat_Realism.ProjectileCR_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>80</damageAmountBase>
+      <explosionRadius>7.8</explosionRadius>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_DoomsdayRocket</defName>
+    <label>doomsday rocket launcher</label>
+    <description>A single-use rocket launcher for quick retribution.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/DoomsdayLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2000</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>false</destroyOnDrop>
+    <weaponTags>
+      <li>Gun</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_DoomsdayRocket</projectileDef>
+        <forcedMissRadius>0.0</forcedMissRadius>
+        <warmupTicks>270</warmupTicks>
+        <range>80</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.02</shotVariation>
+        <shooterVariation>0.1</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-1.20</MoveSpeed>
+      <WorkSpeedGlobal>-0.24</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Rocket</defName>
+    <label>rocket</label>
+    <graphicData>
+      <texPath>Things/Projectile/Rocket_Big</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Combat_Realism.ProjectileCR_Explosive</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>80</damageAmountBase>
+      <explosionRadius>3</explosionRadius>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_TripleRocket</defName>
+    <label>triple rocket launcher</label>
+    <description>A single-use rocket launcher that fires 3 projectiles in quick succession.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/RocketLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>1000</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>false</destroyOnDrop>
+    <weaponTags>
+      <li>Gun</li>
+      <li>GunHeavy</li>
+    </weaponTags>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Rocket</projectileDef>
+        <forcedMissRadius>2.0</forcedMissRadius>
+        <warmupTicks>300</warmupTicks>
+        <range>80</range>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <onlyManualCast>true</onlyManualCast>
+        <stopBurstWithoutLos>false</stopBurstWithoutLos>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.02</shotVariation>
+        <shooterVariation>0.1</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-1.40</MoveSpeed>
+      <WorkSpeedGlobal>-0.28</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+  
+
+</ThingDefs>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModsConfigData>
+  <buildNumber>914</buildNumber>
+  <activeMods>
+    <li>Core</li>
+    <li>EdBModOrder</li>
+    <li>Community Core Library</li>
+    <li>CombatRealism</li>
+    <li>VeinMiner</li>
+    <li>ModVarietyPack</li>
+    <li>Rimsenal_CR</li>
+    <li>Rimsenal_Federation</li>
+    <li>BackstoriesCore</li>
+    <li>EdBInterface</li>
+    <li>EdBPrepareCarefully</li>
+    <li>Pawn State Icons</li>
+    <li>RW_EnhancedTabs</li>
+    <li>RW_ResearchInfo</li>
+    <li>Hospitality</li>
+    <li>RT Storage</li>
+    <li>LT_Infusion</li>
+    <li>AutoEquip</li>
+    <li>AutoEquipInfusion</li>
+    <li>MAI</li>
+    <li>RWAutoSell</li>
+  </activeMods>
+</ModsConfigData>

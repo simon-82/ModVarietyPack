@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NameMakerDefs>
+
+  <RulePackDef>
+    <defName>NamerFPCBase</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[Fedbase] [Fedcode]</li>
+        <li>name->[Fedbase] [Fedcolor] [Fednoun]</li>
+        <li>name->[Fedbase] [Fednoun]</li>
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>Fedbase</keyword>
+          <path>NameBanks/Fedbase</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Fedcode</keyword>
+          <path>NameBanks/Fedcode</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Fednoun</keyword>
+          <path>NameBanks/Fednoun</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>Fedcolor</keyword>
+          <path>NameBanks/Fedcolor</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+</NameMakerDefs>
+
+
+
+
+
+
+

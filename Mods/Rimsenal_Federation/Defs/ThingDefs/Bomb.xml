@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+  <!-- ==================== Bases ========================== -->
+
+  <ThingDef Name="BaseEquipment" Abstract="True">
+    <equipmentType>Secondary</equipmentType>
+    <label>equipment lacks label</label>
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <description>Equipment lacks desc.</description>
+    <weaponTags>
+      <li>Grenade</li>
+    </weaponTags>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <smeltProducts>
+      <Steel>20</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseGrenade" Abstract="True">
+    <category>Projectile</category>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Projectile_Explosive</thingClass>
+    <label>projectile</label>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <projectile>
+      <speed>12</speed>
+      <flyOverhead>false</flyOverhead>
+    </projectile>
+  </ThingDef>
+
+  <!-- ====================Plasma grenade ========================== -->
+
+  <ThingDef ParentName="BaseGrenade">
+    <defName>Proj_Detpack</defName>
+    <label>Plasma bomb</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+     <texPath>Things/A9/MechPlasma</texPath>
+     <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius >4</explosionRadius >
+      <damageDef>Plasma</damageDef>
+      <damageAmountBase>150</damageAmountBase>
+      <explosionDelay>20</explosionDelay>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseEquipment">
+    <defName>FPCSucideBomb</defName>
+    <equipmentType>Primary</equipmentType>
+    <label>plasma bomb</label>
+    <description>A portable plasma reactor converted to suicide bombing.</description>
+    <graphicData> <texPath>Things/A9/detpack</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractGrenade</soundInteract>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <MarketValue>400</MarketValue>
+      <RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>FedBomb</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <verbs>
+      <li>
+        <label>detonate sucide bomb</label>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>3</range>
+        <forcedMissRadius>0.5</forcedMissRadius>
+        <warmupTicks>450</warmupTicks>
+        <noiseRadius>8</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>SBBeep</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <projectileDef>Proj_Detpack</projectileDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+</ThingDefs>

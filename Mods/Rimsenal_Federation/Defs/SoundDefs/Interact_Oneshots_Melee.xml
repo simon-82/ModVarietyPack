@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?><DefPackage-SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_BionHitPawn</defName>  
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/BionHitPawn</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>30.51151</min>        
+          <max>42.93479</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>1</min>        
+          <max>1.14837</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_BionHitBuilding</defName>  
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/BionHitPawn</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>19.56522</min>        
+          <max>31.52174</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.8516304</min>        
+          <max>1.190761</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_BionMiss</defName>  
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/BionMiss</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>25.80563</min>        
+          <max>31.16368</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>1.446356</min>        
+          <max>2</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+  <SoundDef>
+    <defName>Pawn_MechHitPawn</defName>  
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/MechHitPawn</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>30.51151</min>        
+          <max>42.93479</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>1</min>        
+          <max>1.14837</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_MechHitBuilding</defName>  
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/MechHitPawn</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>19.56522</min>        
+          <max>31.52174</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>0.8516304</min>        
+          <max>1.190761</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+  <SoundDef>
+    <defName>Pawn_MechMiss</defName>  
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Things/MechMiss</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>25.80563</min>        
+          <max>31.16368</max>
+        </volumeRange>      
+        <pitchRange>
+          <min>1.446356</min>        
+          <max>2</max>
+        </pitchRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+
+</DefPackage-SoundDef>

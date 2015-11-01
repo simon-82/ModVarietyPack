@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+
+    <Warrior.label>전사의</Warrior.label>
+    <Scout.label>정찰병의</Scout.label>
+    <Ranger.label>궁수의</Ranger.label>
+    <Worker.label>노동자의</Worker.label>
+    <Guard.label>경비병의</Guard.label>
+
+    <Mind.label>정신의</Mind.label>
+    <Knowledge.label>지식의</Knowledge.label>
+    <Discovery.label>탐색의</Discovery.label>
+    <Labour.label>노동의</Labour.label>
+    <Haste.label>속도의</Haste.label>
+    <Summer.label>여름의</Summer.label>
+    <Winter.label>겨울의</Winter.label>
+    <Defense.label>방어의</Defense.label>
+
+    <Success.label>성공의</Success.label>
+    <Passion.label>열정의</Passion.label>
+    <Blessing.label>축복의</Blessing.label>
+    <Diligence.label>근면의</Diligence.label>
+    <Research.label>탐구의</Research.label>
+    <Fastwalk.label>걸음의</Fastwalk.label>
+    <Friendship.label>우정의</Friendship.label>
+    <Desert.label>사막의</Desert.label>
+    <Tundra.label>툰드라의</Tundra.label>
+    <Protection.label>보호의</Protection.label>
+
+    <Memories.label>기억의</Memories.label>
+    <Experiments.label>실험의</Experiments.label>
+    <Everwork.label>업보의</Everwork.label>
+    <Persuation.label>설득의</Persuation.label>
+    <Encounter.label>마주침의</Encounter.label>
+    <Momentum.label>관성의</Momentum.label>
+    <Victory.label>승리의</Victory.label>
+    <Sight.label>시야의</Sight.label>
+    <Flame.label>화염의</Flame.label>
+    <Ice.label>얼음의</Ice.label>
+    <Stronghold.label>성채의</Stronghold.label>
+
+    <Omnipresence.label>전지의</Omnipresence.label>
+    <Omnipotence.label>전능의</Omnipotence.label>
+    <FatalBlow.label>치명타의</FatalBlow.label>
+    <Hypervision.label>초감각의</Hypervision.label>
+    <Master.label>주인의</Master.label>
+    <Alliance.label>동맹의</Alliance.label>
+    <Sunlight.label>햇빛의</Sunlight.label>
+    <Moonlight.label>달빛의</Moonlight.label>
+    <Titanguard.label>대지방어의</Titanguard.label>
+
+    <Infinity.label>무한의</Infinity.label>
+    <Possibility.label>가능성의</Possibility.label>
+    <Cycle.label>순환의</Cycle.label>
+    <Invulnerability.label>무적의</Invulnerability.label>
+
+</LanguageData>

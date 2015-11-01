@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+	<!--=== Comm ===-->
+	<ResearchProjectDef>
+		<defName>Communications</defName>
+		<label>communications I</label>
+		<description>"These guys that keep coming by." \n"Yes, I saw them. They have stuff in their tents we could buy. But they won't sell us anything because we don't have this thing they call 'Trade Beacon'." \n"Maybe build one then. Make sure it's outside though." \nUnlocks: Trade Beacon</description>
+		<totalCost>500</totalCost>
+	</ResearchProjectDef>
+	
+		<ResearchProjectDef>
+			<defName>AdvancedCommunications</defName>
+			<label>communications II</label>
+			<description>"I was stargazing last night, it was wonderful! I saw one star was moving faster than all the others. So cool!" \n"Wait, maybe that wasn't a star. Maybe it was a space ship passing by. We need to build a Communications Console so we can contact them when they fly by next time!" \n"A telephone you mean?" \n"Uhm, yes, basically ... Only bigger." \nUnlocks: Comms Console</description>
+			<totalCost>1000</totalCost>
+			<prerequisites>
+				<li>Communications</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--=== Agriculture ===-->
+    <ResearchProjectDef>
+		<defName>AgricultureI</defName>
+		<label>Agriculture I</label>
+		<description>"What do you mean? These potato salads are hard work!" \n"No, no I know. I'm just saying we could build a ChemLab and use it to make some different seeds for a change. Maybe we could even plant some Xerigium and make herbal medicine." \nUnlocks: ChemLab, Fences \nPlants unlocked: Corn, Rice, Strawberry, Xerigium</description>
+		<totalCost>500</totalCost>
+	</ResearchProjectDef>		
+
+		<ResearchProjectDef>
+			<defName>HospitalBed</defName>
+			<label>Medicine I</label>
+			<description>"Outch!" \n... \n"I'm afraid that doesn't look too good. I think we need to amputate. There is nothing else we can do." \n"Oh my. We should have made some real medicine much earlier I guess." \nUnlocks: Medicine, Hospital bed, Autopsy Table, Basic prostetics</description>
+			<totalCost>1000</totalCost>
+			<prerequisites>
+				<li>AgricultureI</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>MedicineII</defName>
+			<label>Medicine II</label>
+			<description>"This Vitals Monitor will help us to take care of our sick friends. I also think we can make much better prostetics by using steel and aluminum." \nUnlocks: Vitals Monitor, Simple Prostetics</description>
+			<totalCost>1000</totalCost>
+			<prerequisites>
+				<li>HospitalBed</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>Chemlab</defName>
+			<label>Medicine III</label>
+			<description>"It might be possible to grow replacement organs. But we need Biomatter for that." \n"Biomatter?" \n"Yes, we just extract it from human corpses. Let's build an OrganVat." \n"Eww, you sure about that?" \nUnlocks: OrganVat</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>MedicineII</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>MedicineIV</defName>
+			<label>Medicine IV</label>
+			<description>"Bionics! I already feel like a robot! That is, if robots could feel anything. Oh well, forget about it and give me a bionic leg already!" \nUnlocks: Bionics</description>
+			<totalCost>2000</totalCost>
+			<prerequisites>
+				<li>Chemlab</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>MedicineV</defName>
+			<label>Medicine V</label>
+			<description>"You know what's better than a bionic arm?" \n"Hm?" \n"An advanced bionic arm!" \nUnlocks: Advanced Bionics</description>
+			<totalCost>2000</totalCost>
+			<prerequisites>
+				<li>MedicineIV</li>
+			</prerequisites>
+		</ResearchProjectDef>
+	
+    <ResearchProjectDef>
+		<defName>AgricultureII</defName>
+		<label>Agriculture II</label>
+		<description>"These new plants grow faster and yield more than the ones we have been growing so far. They would grow even faster if we fertilize the soil they grow on." \n"Well, you do that. I'm off catching some fish!" \nUnlocks: Composter, Fishing Pier \nPlants unlocked: Pumpkin, Squash, Eggplant, Blueberry, Bamboo \nAlso unlocks: Fishing Rod (made at the Basic Weapon Crafting Workbench)</description>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>AgricultureI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>Brewing</defName>
+			<label>Cooking I</label>
+			<description>"Yummy!" \nUnlocks: Brewery, Oven, Cookstove \nPlants unlocked: Sugarcane, Hops, Wheat, Oats, Grape Vine</description>
+			<totalCost>1000</totalCost>
+			<prerequisites>
+				<li>AgricultureII</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>CookingII</defName>
+			<label>Cooking II</label>
+			<description>"I'm so tired. I'm hauling food all day. And for what? It just ends up rotting and we need to throw it away!" \n"Oh, stop complaining. Have a coffee and start canning the food then!" \nUnlocks: Coffee Machine, Canning Table, Tobbacoist Table \nPlants unlocked: Coffee, Tea, Spectago Tea, Tobacco, Cocoa</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>Brewing</li>
+			</prerequisites>
+		</ResearchProjectDef>		
+	
+	<ResearchProjectDef>
+		<defName>Hydroponics</defName>
+		<label>Agriculture III</label>
+		<description>"Ok, so these Muffalo ate all the crops and there are no more fish left in the pond. We should think about doing some indoor gardening. Or even start an aquaculture." \n"Good idea, maybe we should also plant some beans and make tofu." \nUnlocks: Hydroponic Table, Aquaculture \nPlants unlocked: Onion, Mushroom, Bean, Cloudberry, Pineapple</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>AgricultureII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>AgricultureIV</defName>
+		<label>Agriculture IV</label>
+		<description>"We should seriously think about planting some of these new plants. They not only grow faster and yield more, they even taste good when eaten raw!" \n"That all sounds great, but we have no more place to grow them." \n"Hm, time to build a couple terraforming pumps then." \nUnlocks: Terraforming Pump \nPlants unlocked: lettuce, carrot, tomato, gooseberry, watermelon</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>Hydroponics</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+		<defName>Cryptosleep</defName>
+		<label>Fruit Trees</label>
+		<description>"Even more plants you say?" \n"These fruit trees are the best! And we can harvest them without the need to replant them every time." \nPlants unlocked: Apple Tree, Banana Tree, Date Tree, Fig Tree, Orange Tree, Peach Tree</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>AgricultureIV</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--=== Construction ===-->
+	<ResearchProjectDef>
+		<defName>Stonecutting</defName>
+		<label>Construction I</label>
+		<description>"Look at our food! It's rotting before we can eat it. And my bedroom is too cold!" \n"Ok, then. We should build some heaters and coolers." \nUnlocks: Heaters, Coolers, Vents, Modular Table, Modular Stool</description>
+		<totalCost>500</totalCost>
+	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>GlassworksResearch</defName>
+			<label>glassworks research</label>
+			<description>"By smelting sand we can produce glass." \nUnlocks: Glassworks Table, Safety Glassworks Table</description>
+			<totalCost>600</totalCost>
+			<prerequisites>
+				<li>Stonecutting</li>
+			</prerequisites>
+		</ResearchProjectDef>		
+
+		<ResearchProjectDef>
+			<defName>PneumaticPicks</defName>
+			<label>mining</label>
+			<description>"Phew! Mining all this rock sure is a lot of work." \n"Why don't you use this pickaxe we have lying around? You would be 20% faster." \nUnlocks: Mining Speed +20%</description>
+			<totalCost>600</totalCost>
+			<prerequisites>
+				<li>Stonecutting</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>ResearchMineralSonarEnhancedScan</defName>
+			<label>Mobile Mining Sonar</label>
+			<description>"Go mine some steel ore, we need it!" \n"Well, I don't see any steel ore. Where should I mine?" \n"Hm, maybe we need to scan the mountains for ore before we begin digging."  \nUnlocks: Mobile Mining Sonar (made at the Electronics Table), Energy Pack</description>
+			<totalCost>1000</totalCost>
+			<prerequisites>
+				<li>PneumaticPicks</li>
+			</prerequisites>
+		</ResearchProjectDef>		
+
+		<ResearchProjectDef>
+			<defName>FurnitureI</defName>
+			<label>furniture I</label>
+			<description>"Argh, my back hurts! We really need some comfy furniture." \nUnlocks: Cloth Bed, Royal Bed, Couch, Comfy Chairs \nAlso unlocks: More Joy Items</description>
+			<totalCost>800</totalCost>
+			<prerequisites>
+				<li>Stonecutting</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>FurnitureII</defName>
+			<label>furniture II</label>
+			<description>
+				Comfy Bed, PodBed, End Table, Bookcase, Reading Table, Painting Easel, 
+				Also Unlocks: Paint Set, Tempera Paint set (made at the cooking Stove DONE
+			</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>FurnitureI</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>ConstructionII</defName>
+		<description>"These small coolers and heaters are not enough. We need to think bigger." \n"Or we could build a duct network, that would be more efficient." \n"Efficient you say? We don't even have automatic doors yet..." \nUnlocks: Industrial heating and cooling solutions, Duct Network, Autodoors, Conduit Walls</description>
+		<label>Construction II</label>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>Stonecutting</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>Cremation</defName>
+			<label>cremation</label>
+			<description>"All this stuff! And all the corpses! I am not digging graves for all these tribals!" \n"Ok fine, let's build a crematorium." \nUnlocks: Crematorium</description>
+			<totalCost>600</totalCost>
+			<prerequisites>
+				<li>ConstructionII</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>StorageI</defName>
+			<label>Storage I</label>
+			<description>"So where did I put this pistol? What a mess!" \nUnlocks: Equipment Rack, Locker, Pallet, Skip, Basket, Cooled Serving Table</description>
+			<totalCost>600</totalCost>
+			<prerequisites>
+				<li>ConstructionII</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>StorageII</defName>
+			<label>Storage II</label>
+			<description>"Beam me up... Um, no seriously, how does this work?" \n"This is an advanced storage solution. When placed under a stockpile zone it will attempt to pile up adjacent items on top of itself, well over normal storage limits. Also does some teleporting." \nUnlocks: Quantum Storage</description>
+			<totalCost>2000</totalCost>
+			<prerequisites>
+				<li>StorageI</li>
+			</prerequisites>
+		</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ConstructionIII</defName>
+		<label>Construction III</label>
+		<description>"Oh my?" \n"I said M - A - I. That's a Mobile Artificial Intelligence. These robots can support us greatly." \nUnlocks: MAI (Basics) \nAlso unlocks: Lighted Walls</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>ConstructionII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>AIPawnAdvResearchConstruction</defName>
+			<label>AI: Construction</label>
+			<description>Researches how an artificial intelligence can construct buildings. \nThe next mobile AIs you build have the ability to support you where construction is needed.</description>
+			<totalCost>150</totalCost>
+			<prerequisites><li>ConstructionIII</li></prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>AIPawnAdvResearchMining</defName>
+			<label>AI: Mining</label>
+			<description>Researches how an artificial intelligence can mine. \nThe next mobile AIs you build have the ability to support you where mining is needed.</description>
+			<totalCost>150</totalCost>
+			<prerequisites><li>ConstructionIII</li></prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>AIPawnAdvResearchCombat</defName>
+			<label>AI: Combat Tactics</label>
+			<description>Researches how an artificial intelligence can use combat tactics. \nThe next mobile AIs you build have the ability to support you in combat situations.</description>
+			<totalCost>350</totalCost>
+			<prerequisites><li>ConstructionIII</li></prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>AIPawnAdvResearchCooking</defName>
+			<label>AI: Cooking</label>
+			<description>Researches how an artificial intelligence can cook. \nThe next mobile AIs you build have the ability to support you where cooking is needed.</description>
+			<totalCost>150</totalCost>
+			<prerequisites><li>ConstructionIII</li></prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>AIPawnAdvResearchCaring</defName>
+			<label>AI: Caring</label>
+			<description>Researches how an artificial intelligence can care for colonists. \nThe next mobile AIs you build have the ability to support you where caring is needed.</description>
+			<totalCost>350</totalCost>
+			<prerequisites><li>ConstructionIII</li></prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>AIPawnAdvResearchCrafting</defName>
+			<label>AI: Crafting</label>
+			<description>Researches how an artificial intelligence can craft. \nThe next mobile AIs you build have the ability to support you where crafting is needed.</description>
+			<totalCost>450</totalCost>
+			<prerequisites><li>ConstructionIII</li></prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>AIPawnAdvResearchIntellectual</defName>
+			<label>AI: Intellectual</label>
+			<description>Researches how an artificial intelligence can research. \nThe next mobile AIs you build have the ability to support you where research is needed.</description>
+			<totalCost>500</totalCost>
+			<prerequisites><li>ConstructionIII</li></prerequisites>
+		</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>ConstructionIV</defName>
+		<label>Construction IV</label>
+		<description>"Ok I'm done. Let's get outta here!" \n"Not so fast. We need to build the whole ship first." \n*grumble* \n*grumble* \nUnlocks: Ship Part: Structural Beam</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>ConstructionIII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>Fissure</defName>
+			<label>Ore Extractor</label>
+			<description>"This machine digs deep into the ground and extracts metals from the earth. But we need to create a deep fissure first, which can be used to access the lower layers of the planet's crust." \n"So no more mining? Yay!" \n"Not only that. We can also create a steam geyser where ever we want!" \nUnlocks: Fissure Generator, Ore Extractor</description>
+			<totalCost>2500</totalCost>
+			<prerequisites>
+				<li>ConstructionIV</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--=== Crafting ===-->	
+    <ResearchProjectDef>
+		<defName>CraftingI</defName>
+		<label>Crafting I</label>
+		<description>"Building this wall out of round stone chunks didn't work. We have to cut them into some kind of block shape." \n"We also need to find a way to get the metal out of these rocks. Maybe if we smelt the ore in some kind of furnace?" \n"A wall? Who needs a wall when I could make a beautiful sculpture with these blocks!" \nUnlocks: Stonecutter's Table, Furnace, Sculpting Table</description>
+		<totalCost>500</totalCost>
+	</ResearchProjectDef>		
+
+		<ResearchProjectDef>
+			<defName>TextileI</defName>
+			<label>textile I</label>
+			<description>"Our clothes won't last forever. It's time to think about growing some cotton so we can weave cloth and start tailoring." \n"I want a Baseball Cap!" \nUnlocks: Tailor's Loom, Tailor's Workbench \nPlants unlocked: Cotton</description>
+			<totalCost>1000</totalCost>
+			<prerequisites>
+				<li>CraftingI</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>CarpetMaking</defName>
+			<label>textile II</label>
+			<description>"Hyperweave: High-tech nano-fibers woven into sheets. It is somewhat heavy, but is incredibly difficult to break. Devilstrand: Fabric spun from microfibers extracted from silk-producing Devilstrand mushrooms. Very tough, but insulates no better than cloth." \n"Ok Sherlock, everybody knows that..." \nUnlocks: Synthread, Hyperweave, Devilstrand \nAlso unlocks: Carpet Floors, Door Mat \nPlants unlocked: Devilstrand</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>TextileI</li>
+			</prerequisites>
+		</ResearchProjectDef>
+	
+    <ResearchProjectDef>
+		<defName>ElectricSmelting</defName>
+		<label>Crafting II</label>
+		<description>"It's taking forever to cut all the chunks by hand! We need better equipment!" \n"Powered crafting tables would be a good idea. The better tools would even allow us to make armor vests to protect ourselves." \nUnlocks: Powered Crafting Table, Electric Smelter, Smithing Table, Tool Cabinet, Multi Analyser</description>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>CraftingI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>FoodSynthesizer</defName>
+			<label>food synthesizer</label>
+			<description>"This machine can make food for all of us. And we don't have to cook anymore." \n"But it tastes horrible!" \nUnlocks: Nutrient Paste Dispenser</description>
+			<totalCost>1000</totalCost>	
+			<prerequisites>
+				<li>ElectricSmelting</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>NutrientResynthesis</defName>
+			<label>nutrient resynthesis</label>
+			<description>"I found a way to improve the Nutrient Paste Dispenser! It now needs 10% less food per meal produced." \n"Great, even more of this stuff... Don't you get it? It tastes h-o-r-r-i-b-l-e..." \nUnlocks: Nutrient Paste Dispenser: 10% less food per meal produced</description>
+			<totalCost>800</totalCost>	
+			<prerequisites>
+				<li>FoodSynthesizer</li>
+			</prerequisites>
+		</ResearchProjectDef>		
+	
+    <ResearchProjectDef>
+		<defName>Machining</defName>
+		<label>Crafting III</label>
+		<description>"Electronic Chips, Integrated Circuitboards. It's gonna be great!" \n"That is pretty advanced. Are you sure this will work?" \n*bzzzt* \nUnlocks: Electronics Workbench</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>ElectricSmelting</li>
+		</prerequisites>
+	</ResearchProjectDef>
+	
+    <ResearchProjectDef>
+		<defName>CraftingIV</defName>
+		<label>Crafting IV</label>
+		<description>"This plant is magical! With the right tools, we can replicate any chunks we want from it." \nUnlocks: Mk1 Replicator Table \nPlants unlocked: OmniGel</description>
+		<totalCost>2500</totalCost>
+		<prerequisites>
+			<li>Machining</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!--=== Power ===-->	
+	<ResearchProjectDef>
+		<defName>PowerI</defName>
+		<label>Power I</label>
+		<description>"It's pretty unsafe having a campfire inside your room, you know?" \n"But it was so cold and dark inside." \n"We really need to start generating power so we can have some lights." \nUnlocks: Steam Generator, Wind Turbine \nAlso unlocks: Standing Lamp, Floor Lights, Sun Lamp</description>
+		<totalCost>500</totalCost>
+	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>OutdoorLighting</defName>
+			<label>Outdoor Lighting</label>
+			<description>"I can't work outside when it's so dark everywhere. We need some lamps outside, too." \nUnlocks: Outdoor Lamps</description>
+			<totalCost>800</totalCost>
+			<prerequisites>
+				<li>PowerI</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>ColoredLights</defName>
+			<label>colored lights</label>
+			<description>"Look! Look! Isn't this green light beautiful?" \n"Stop wasting all of our glass! You think this is a disco or what?" \n"Aww, common..." \nUnlocks: Colored Lights</description>
+			<totalCost>800</totalCost>
+			<prerequisites>
+				<li>PowerI</li>
+			</prerequisites>
+		</ResearchProjectDef>	
+	
+    <ResearchProjectDef>
+		<defName>PowerII</defName>
+		<label>Power II</label>
+		<description>"Solar Power allows us to harness the power of the sun!" \nUnlocks: Solar Panel \nAlso unlocks: Fuses, Solar Flare Shielding, Battery efficiency +15%</description>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+    <ResearchProjectDef>
+		<defName>GeothermalPower</defName>
+		<label>Power III</label>
+		<description>"Did you see this hole in the ground over there?" \n"It looks like there is steam coming out of it." \n"I wonder if we could make use that somehow..." \nUnlocks: Geothermal Generator \nAlso unlocks: Battery efficiency +15%</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>PowerII</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>PlasmaPower</defName>
+			<label>Plasma Power</label>
+			<description>Unlocks: Small Plasma Generator, Plasma Geothermal Generator</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>GeothermalPower</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>NuclearPower</defName>
+			<label>NuclearPower</label>
+			<description>Unlocks: Radioisotope Thermoelectric Generator, Advanced Stirling Radioisotope Generator</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>GeothermalPower</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>NaturalPower</defName>
+			<label>Natural Power</label>
+			<description>Unlocks: Gause Wind Turbine, Laser Solar Plant</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>GeothermalPower</li>
+			</prerequisites>
+		</ResearchProjectDef>
+	
+    <ResearchProjectDef>
+		<defName>PowerIV</defName>
+		<label>Power IV</label>
+		<description>"We still don't have enough power." \n"What about building a really big generator? It's gonna be a lot of work though." \nUnlocks: Nuclear Reactor, Tesla Lightning Power, Big Plasma Generator \nAlso unlocks: Battery efficiency +15%</description>
+		<totalCost>2500</totalCost>
+		<prerequisites>
+			<li>GeothermalPower</li>
+			<li>PlasmaPower</li>
+			<li>NuclearPower</li>
+			<li>NaturalPower</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+
+
+
+
+
+
+
+
+	<!--=== Security ===-->
+    <ResearchProjectDef>
+		<defName>SecurityI</defName>
+		<label>Security I</label>
+		<description>"I would give you this bow so you can help defending the colony. But not before you get some practice at the shooting range first." \n"Really? Just because I shot myself in the foot last time the tribals came?" \nUnlocks: Basic Weapon Crafting Workbench, Combat Training Facilities \nAlso unlocks: Impovised Turret (made at the Powered Crafting Table)</description>
+		<totalCost>500</totalCost>
+	</ResearchProjectDef>	
+
+		<ResearchProjectDef>
+			<defName>TurretsI</defName>
+			<label>Turrets I</label>
+			<description>Unlocks: M2 Browning Machine Gun Turret, Spotlight Tower, Stun Turret (made at the Smithing Table)</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>SecurityI</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>TurretsII</defName>
+			<label>Turrets II</label>
+			<description>Unlocks: Anti Materiel Turret, M134 Mini Gun Turret, Laser Turret (made at the Smithing Table) \nAlso unlocks: Cannon Turret, Cannon Shells</description>
+			<totalCost>2000</totalCost>
+			<prerequisites>
+				<li>TurretsI</li>
+			</prerequisites>
+		</ResearchProjectDef>		
+
+	  	<ResearchProjectDef>
+			<defName>WeaponCraftingI</defName>
+			<label>Weapon Crafting I</label>
+			<description>"These Pilas are pretty good but I feel we need some real weapons rather sooner than later." \nUnlocks: Powered Weapon Crafting Table</description>
+			<totalCost>1000</totalCost>
+			<prerequisites>
+				<li>SecurityI</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>WeaponCraftingII</defName>
+			<label>Weapon Crafting II</label>
+			<description>Unlocks: Modern Weapons (made at the Powered Weapon Crafting Table)</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>WeaponCraftingI</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>WeaponCraftingIII</defName>
+			<label>Weapon Crafting II</label>
+			<description>Unlocks: Futuristic Weapon Crafting Table</description>
+			<totalCost>2500</totalCost>
+			<prerequisites>
+				<li>WeaponCraftingII</li>
+			</prerequisites>
+		</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>Mortars</defName>
+		<label>Security II</label>
+		<description>Unlocks: Mortars \nAlso unlocks: Artillery Shells</description>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>SecurityI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+		    <defName>IEDBomb</defName>
+		    <label>Explosive IEDs</label>
+		    <description>Unlocks: Improvised explosive device-based traps made from artillery shells.</description>
+		    <totalCost>1000</totalCost>
+		    <prerequisites>
+				<li>Mortars</li>
+			</prerequisites>
+	  	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>IEDIncendiary</defName>
+			<label>Incendiary IEDs</label>
+			<description>Unlocks: Incendiary explosive traps made from artillery shells.</description>
+			<totalCost>1000</totalCost>
+			<prerequisites>
+				<li>Mortars</li>
+			</prerequisites>
+	  	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>GunTurretCooling</defName>
+		<label>Security III</label>
+		<description>Unlocks: Laser Fence, Embrasures</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>Mortars</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+</ResearchProjectDefs>

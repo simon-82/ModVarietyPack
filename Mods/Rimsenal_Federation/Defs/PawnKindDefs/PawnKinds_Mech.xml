@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PawnKindDefs>
+
+  <PawnKindDef Name="MechanoidBase" Abstract="True">
+    <bodyGraphicData>
+      <shaderType>Cutout</shaderType>
+    </bodyGraphicData>
+    <dessicatedBodyGraphicData>
+      <shaderType>Cutout</shaderType>
+    </dessicatedBodyGraphicData>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>FPCFederator</defName>
+    <label>federator</label>
+    <race>Race_Federator</race>
+    <combatPower>700</combatPower>
+    <defaultFactionType>FPC</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Federator</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.5</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.4, 1)</volume>
+            <offset>(0,0,-1.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>2000</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>FedmechGun</li>
+    </weaponTags>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>FPCOrdinator</defName>
+    <label>ordinator</label>
+    <race>Race_Ordinator</race>
+    <combatPower>680</combatPower>
+    <defaultFactionType>FPC</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Ordinator</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.5</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.4, 1)</volume>
+            <offset>(0,0,-1.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <PawnKindDef>
+    <defName>FPCArranger</defName>
+    <label>arranger</label>
+    <race>Race_Arranger</race>
+    <combatPower>900</combatPower>
+    <defaultFactionType>FPC</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Arranger</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>3.5</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.4, 1)</volume>
+            <offset>(0,0,-1.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>2000</min>
+      <max>2000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>FedmechHeavy</li>
+    </weaponTags>
+  </PawnKindDef>
+
+
+
+</PawnKindDefs>

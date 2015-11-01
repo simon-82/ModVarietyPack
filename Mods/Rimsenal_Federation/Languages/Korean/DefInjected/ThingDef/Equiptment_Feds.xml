@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+
+	<FPCSucideBomb.label>플라즈마 폭탄</FPCSucideBomb.label>
+	<FPCSucideBomb.description>자살폭탄 용도로 개조된 휴대용 플라즈마 반응로입니다.</FPCSucideBomb.description>
+
+	<BikeMineLauncher.label>지뢰 사출기</BikeMineLauncher.label>
+	<BikeMineLauncher.description>플라즈마 지뢰 사출장치입니다.</BikeMineLauncher.description>
+	<BikeEMPMine.label>EMP 지뢰 사출기</BikeEMPMine.label>
+	<BikeEMPMine.description>EMP 지뢰를 사출하는 장치입니다.</BikeEMPMine.description>
+	<BikeLaser.label>광학포</BikeLaser.label>
+	<BikeLaser.description>암즈 다이내믹스 M554 "웨일러" 광학포입니다. 연방 경차량의 표준 탑재 무기입니다.</BikeLaser.description>
+
+	<FPCscatterlaser.label>확산 광학 화기</FPCscatterlaser.label>
+	<FPCscatterlaser.description>M101 "쉬라이커" 광학 확산 화기입니다. 연방 메카노이드의 제식화기입니다.</FPCscatterlaser.description>
+
+	<MechRocket.label>로켓 포대</MechRocket.label>
+	<MechRocket.description>강력한 공성무기인 M77 "하울러" 로켓 포대는 마을 하나를 순식간에 쑥대밭으로 만들 수 있습니다.</MechRocket.description>
+	<MechMissile.label>플라즈마 미사일 발사기</MechMissile.label>
+	<MechMissile.description>완전한 파괴병기인 M787 "크라이어"는 고속 플라즈마 미사일을 발사합니다. 장거리에서 신속히 적을 제거할 수 있습니다.</MechMissile.description>
+
+	<MechLaser.label>광학 속사포</MechLaser.label>
+	<MechLaser.description>암즈 다이내믹스 M606 "스크리머" 광학 속사포입니다. 이 중 광학화기는 대부분의 적을 거꾸러뜨릴 수 있습니다.</MechLaser.description>
+	<MechPlasma.label>플라즈마 구포</MechPlasma.label>
+	<MechPlasma.description>초고열 금속 플라즈마 구체를 발사하도록 설계된 M213 "레벨러" 플라즈마 구포는 고대 돌격포의 현대화된 모습입니다.</MechPlasma.description>
+
+	<FPCFacilitator.label>플라즈마 소총</FPCFacilitator.label>
+	<FPCFacilitator.description>연방 기준으로도 희귀하고 소름끼치는 무기인 XM32 "파실리테이터"는 개인 휴대용 플라즈마 화기입니다. 이 무기는 금속 플라즈마를 담고 있는 자기 구체를 속사합니다.</FPCFacilitator.description>
+
+	<PrimeTerminus.label>터미누스 소총</PrimeTerminus.label>
+	<PrimeTerminus.description>적을 분자단위로 찢어발기는 이 기이한 무기의 기원은 연방의 최전성기까지 거슬러 올라갑니다.</PrimeTerminus.description>
+
+</LanguageData>

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+
+
+  <ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <selectable>True</selectable>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li>
+        <compClass>CompArt</compClass>
+        <nameMaker>NamerGun</nameMaker>
+        <descriptionMaker>ArtWeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>20</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>Gun</li>
+    </weaponTags>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Combat_Realism.BulletCR</thingClass>
+    <label>bullet</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
+
+
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Ocelot</defName>
+    <label>pistol bullet</label>
+    <graphicData> <texPath>Things/Projectile/Gbullet</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>130</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.495</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>GDOcelot</defName>
+    <label>light pistol</label>
+    <description>A Greydale Defense P04 "Ocelot". Light and easy to use, ideal personal defense weapon of noncombatants.</description>
+    <graphicData> <texPath>Things/A10/Ocelot</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <MarketValue>275</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.32</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Ocelot</projectileDef>
+        <warmupTicks>25</warmupTicks>
+        <range>12</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <soundCast>ShotGdpistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.6</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.05)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>16</roundPerMag>
+        <reloadTick>200</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.11</MoveSpeed>
+      <WorkSpeedGlobal>-0.02</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Panther</defName>
+    <label>general purpose rifle bullet</label>
+    <graphicData> <texPath>Things/Projectile/Gbullet</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <speed>400</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.70</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>GDPanther</defName>
+    <label>general purpose rifle</label>
+    <description>A Greydale Defense GPR08 "Panther". A number one assault rifle for any colonial militia. High accuracy and durability makes the Panther a great colonial defense weapon.</description>
+    <graphicData> <texPath>Things/A10/Panther</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>712</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Panther</projectileDef>
+        <warmupTicks>79</warmupTicks>
+        <range>78</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>ShotGdgun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>0.5</shooterVariation>
+        <recoilOffsetX>(0.0,0.4)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.3)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>20</roundPerMag>
+        <reloadTick>280</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.38</MoveSpeed>
+      <WorkSpeedGlobal>-0.06</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Puma</defName>
+    <label>DMR bullet</label>
+    <graphicData> <texPath>Things/Projectile/Gbullet</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <speed>383</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.65</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>GDPuma</defName>
+    <label>DMR</label>
+    <description>A Light marksman rifle that is manufactured by Greydale Defense, the PR02 "Puma" is a great rifle for precision fire support.</description>
+    <graphicData> <texPath>Things/A10/Puma</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>800</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>0.48</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Puma</projectileDef>
+        <warmupTicks>105</warmupTicks>
+        <range>92</range>
+        <soundCast>ShotGdsniper</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.03</shotVariation>
+        <shooterVariation>0.1</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>5</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.60</MoveSpeed>
+      <WorkSpeedGlobal>-0.12</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Lynx</defName>
+    <label>LSW bullet</label>
+    <graphicData> <texPath>Things/Projectile/Gbullet</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <speed>320</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.65</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>GDLynx</defName>
+    <label>light support weapon</label>
+    <description>A SW11 "Lynx". A light support weapon that is manufactured by Greydale Defense. is a well known weapon because of its simple but durable design. With this weapon, you can halt any overwhelming enemy with unceasing bursts of bullet.</description>
+    <graphicData> <texPath>Things/A10/Lynx</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>1710</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>0.92</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>MachineGun</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Lynx</projectileDef>
+        <warmupTicks>85</warmupTicks>
+        <range>118</range>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <burstShotCount>15</burstShotCount>
+        <soundCast>ShotGdgun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.08</shotVariation>
+        <shooterVariation>1.2</shooterVariation>
+        <recoilOffsetX>(-0.3,1.0)</recoilOffsetX>
+        <recoilOffsetY>(-0.1,0.3)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>150</roundPerMag>
+        <reloadTick>500</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.80</MoveSpeed>
+      <WorkSpeedGlobal>-0.16</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+  <ThingDef Class="Combat_Realism.ThingDef_ProjectileFrag" ParentName="BaseBullet">
+		<defName>Bullet_Jaguar</defName>
+		<label>grenade</label>
+		<graphicData>
+			<texPath>Things/Projectile/GShell</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+    <thingClass>Combat_Realism.ProjectileCR_Frag</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <speed>25</speed>
+      <explosionRadius>1</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+    </projectile>
+	<fragRange>4.0</fragRange>
+	<fragProjectileSmall>Fragment_MortarSmall</fragProjectileSmall>
+	<fragAmountSmall>20</fragAmountSmall>
+	<fragProjectileMedium>Fragment_MortarMedium</fragProjectileMedium>
+	<fragAmountMedium>10</fragAmountMedium>
+	<fragProjectileLarge>Fragment_MortarLarge</fragProjectileLarge>
+	<fragAmountLarge>5</fragAmountLarge>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.55</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>GDJaguar</defName>
+    <label>grenade launcher</label>
+    <description>Designed by Greydale Defense Contractor, the GL05 "Jaguar" is a simple but effective indirect fire support weapon.</description>
+    <graphicData> <texPath>Things/A10/Jaguar</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>1530</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.40</AccuracyMedium>
+      <AccuracyLong>0.40</AccuracyLong>
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Jaguar</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>50</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ShotGdgrenade</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.17</shotVariation>
+        <shooterVariation>0.8</shooterVariation>
+        <recoilOffsetX>(0.0,0.8)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.6)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>6</roundPerMag>
+        <reloadTick>850</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.8</MoveSpeed>
+      <WorkSpeedGlobal>-0.16</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+</ThingDefs>

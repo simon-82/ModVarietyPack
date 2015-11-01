@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<BackstoryDefs>
+  <!--Body types:
+  Undefined
+  Thin
+  Hulk
+  Fat
+  Male
+  Female-->
+  
+  <!--Character references:
+  NAME = character name
+  HE = will place he/she depending on characters gender
+  HIS = will place his/her depending on characters gender
+  HECAP = will place capitalised he/she depending on characters gender
+  HISCAP = will place capitalised his/her depending on characters gender
+  -->
+  
+  <!--Spawn Categories:
+  Civil
+  Raider
+  Slave-->
+  
+  <!--
+WorkDisables:
+		None
+		Intellectual
+		ManualDumb
+		ManualSkilled
+		Violent
+		Caring
+		Social
+		Scary
+		Artistic
+		Crafting
+		Cooking
+		Firefighting
+		Cleaning
+		Hauling
+		PlantWork
+		Mining
+  -->
+  
+  <!--
+  Slot:
+Adulthood
+Childhood
+  -->
+  
+  <!--
+Skillgains:
+The amount is the number to be added or subtracted from that skill. The range for this number is -20 to 20, do not go outside this range.
+defNames:
+Construction
+Growing
+Research
+Mining
+Shooting
+Melee
+Social
+Cooking
+Medicine
+Artistic
+Crafting
+  -->
+
+  <BackstoryDef>
+    <defName>BackstoryZealot</defName>
+    <title>Zealot</title>
+    <titleShort>Zealot</titleShort>
+    <baseDescription>NAME is a religious nutter. HECAP will doing anything for HIS religion. Anything. At. All.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>-2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>BackstoryMudWrestler</defName>
+    <title>Mud wrestler</title>
+    <titleShort>Mud wrestler</titleShort>
+    <baseDescription>NAME enjoys getting down and dirty in the mud. HECAP will take any opportunity to strip down and roll around in the dirt.</baseDescription>
+    <bodytypeMale>Hulk</bodytypeMale>
+    <bodyTypeFemale>Fat</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Intellectual</li>
+      <li>Artistic</li>
+      <li>Crafting</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Melee</defName>
+        <amount>9</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>BackstoryOrphan</defName>
+    <title>Orphan</title>
+    <titleShort>Orphan</titleShort>
+    <baseDescription>NAME grew up in a scummy little orphange without ever knowing HIS parents. The orphanage master forced NAME and the other orphans to do slave labour in exchange for his 'protection'.</baseDescription>
+    <bodytypeMale>Thin</bodytypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <workDisables>
+      <li>Caring</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Cooking</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Growing</defName>
+        <amount>3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+      <li>Slave</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>BackstoryVatGrownSlave</defName>
+    <title>Vat grown slave</title>
+    <titleShort>Vat slave</titleShort>
+    <baseDescription>NAME was bred in a vat to be the perfect slave. HECAP can do many things much better than anyone else, but HE was 'born' without compassion or feelings for others.</baseDescription>
+    <bodytypeMale>Hulk</bodytypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <workDisables>
+      <li>Caring</li>
+      <li>Intellectual</li>
+      <li>Social</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Crafting</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Cooking</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Growing</defName>
+        <amount>-2</amount>
+      </li>
+      <li>
+        <defName>Construction</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Mining</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Slave</li>
+    </spawnCategories>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>BackstoryJuniorOfficer</defName>
+    <title>Junior officer</title>
+    <titleShort>Lieutenant</titleShort>
+    <baseDescription>NAME is a Junior Officer in HIS Colonies Colonial Marines. HECAP is a Lieutenant and has served in various conflicts and political events, earning medals for service. HECAP knows how to lead and turn the tide of conflicts.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>BackstorySeniorOfficer</defName>
+    <title>Senior officer</title>
+    <titleShort>Major</titleShort>
+    <baseDescription>NAME is a Senior Officer in HIS Colonies Colonial Marines. HECAP is a Major and has served for many years, earning countless medals and commendations. HECAP may have been out of combat for a while but HE can still defend HIS Colony and lead with style.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>BackstoryVeteranSGT</defName>
+    <title>Veteran marine</title>
+    <titleShort>Sergeant major</titleShort>
+    <baseDescription>NAME is a Veteran Soldier in HIS Colony's Colonial Marines. HECAP is a Sergeant Major and has served for many years, earning countless medals for bravery and distingushed service. HECAP has fought in numerous campaigns and thus knows how to fight and lead in extreme situations.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>6</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>6</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>BackstoryPolitician</defName>
+    <title>Politician</title>
+    <titleShort>Politician</titleShort>
+    <baseDescription>NAME has served HIS Colonies Government for a full term of Office. HECAP sure knows how to talk and can inspire people to see things HIS way. </baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Firefighting</li>
+	<li>Crafting</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Research</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>-2</amount>
+      </li>
+	 <li>
+        <defName>Melee</defName>
+        <amount>-2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>6</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>BackstoryPolice</defName>
+    <title>Police officer</title>
+    <titleShort>Officer</titleShort>
+    <baseDescription>NAME is a Police Officer for the Urban Police Service of Colonial Affairs. Having served for 2 years HE has just been promoted. HECAP will carry out HIS duties without hesitation.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+	 <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Artistic</defName>
+        <amount>-3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>BackstoryPoliceS</defName>
+    <title>Police sergeant</title>
+    <titleShort>Sergeant</titleShort>
+    <baseDescription>NAME is a Police Sergeant for the Urban Police Service of Colonial Affairs, having served for several years. Locking up Criminals could never be better.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	 <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Artistic</defName>
+        <amount>-3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>BackstoryMilitaryMedic</defName>
+    <title>Medical soldier</title>
+    <titleShort>Medic</titleShort>
+    <baseDescription>NAME acts as Medical Support for the Colonial Marines of HIS Colony. Having Medical experience HE is critical to the success of the squads.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+	 <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>BackstoryMilitaryRecon</defName>
+    <title>Military scout</title>
+    <titleShort>Scout</titleShort>
+    <baseDescription>NAME acts as Scout for the Colonial Marines of HIS Colony. A good shot with a rifle and deadly sights, NAME can take out any threats before the main forces arrive. HECAP is also good at hunting.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Cooking</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>BackstoryOfficerCadet</defName>
+    <title>Officer cadet</title>
+    <titleShort>Cadet</titleShort>
+    <baseDescription>NAME was a Cadet in the Colonial Officer Training College from the age of 16. Having completed sucessfully he picked up a few key skills and learned how to lead and combat threats from a strategical and tactical point of view.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <workDisables>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+	 <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Artistic</defName>
+        <amount>-3</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>BackstoryCadet</defName>
+    <title>Military cadet</title>
+    <titleShort>Cadet</titleShort>
+    <baseDescription>NAME was a Cadet in the Colonial College of Military Warfare from the age of 16. Following in HIS families tradition, HE studied and sucessfully completed his training, picking up a few key skills on the way.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <workDisables>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>3</amount>
+      </li>
+	 <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Artistic</defName>
+        <amount>-3</amount>
+      </li>
+      <li>
+        <defName>Construction</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+	<BackstoryDef>
+    <defName>BackstoryMercLieutenant</defName>
+    <title>Mercenary lieutenant</title>
+    <titleShort>Lieutenant</titleShort>
+    <baseDescription>NAME is a Lieutenant of HIS own private force. A good shot with any weapon HE can handle himself, NAME can take out any threats and usually works for some quick cash. Well known HECAP is someone who you will want to watch out for.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>4</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+    </spawnCategories>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>IggyProfessionalBuilder</defName>
+    <title>Professional builder</title>
+    <titleShort>Pro builder</titleShort>
+    <baseDescription>NAME is a professional construction worker. HECAP has made HIS living by erecting buildings of all shapes and sizes. HECAP has limited skills in other aspects, but few can match HIS proficiency in construction.</baseDescription>
+    <bodytypeMale>Hulk</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Caring</li>
+	  <li>Cooking</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Construction</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+	  <li>Slave</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>IggySandboxArchitect</defName>
+    <title>Sandbox architect</title>
+    <titleShort>Sandbox architect</titleShort>
+    <baseDescription>NAME spent all of HIS time as a child playing in the sandbox. While other children would pile up a mound of sand in the center of the box and call it a castle and then immediately destroy it, NAME designed and built beautiful castles with courtyards and walls with crenellations punctuated by towers. HECAP often got into fist fights with the other children when they tried to destroy HIS work.</baseDescription>
+    <bodytypeMale>Thin</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <workDisables>
+	  <li>None</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Construction</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+	  <li>Slave</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>IggyProfessionalFarmer</defName>
+    <title>Professional farmer</title>
+    <titleShort>Pro farmer</titleShort>
+    <baseDescription>NAME is a professional farmer. HECAP has made HIS living by growing the food and commercial products which make the world run. HISCAP experience at living on the farm has taught HIM how to handle just about every task vital to survival.</baseDescription>
+    <bodytypeMale>Fat</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Intellectual</li>
+	  <li>Mining</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Growing</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Cooking</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+	  <li>Slave</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>IggyFarmKid</defName>
+    <title>Farm kid</title>
+    <titleShort>Farm kid</titleShort>
+    <baseDescription>NAME grew up on a farm. HECAP played with sticks and had many pets. Life on the farm wasn't always fun and games for HIM however, HE had to learn how to carry HIS own weight and perform a wide variety of necessary tasks.</baseDescription>
+    <bodytypeMale>Thin</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <workDisables>
+	  <li>None</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Growing</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Shooting</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+	  <li>Slave</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>IggyProfessionalMiner</defName>
+    <title>Professional miner</title>
+    <titleShort>Pro miner</titleShort>
+    <baseDescription>NAME is a professional miner. HECAP has made HIS living by busting up rocks and minerals found used in construction and industrial applications throughout the galaxy. Often times, HE has had to repair HIS own tools while deep in the mine and frequently has to build supports for the mines. So HE has acquired a few skills which pertain to that.</baseDescription>
+    <bodytypeMale>Hulk</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>None</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Mining</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Construction</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+	  <li>Slave</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>IggyMinerKid</defName>
+    <title>Miner kid</title>
+    <titleShort>Miner kid</titleShort>
+    <baseDescription>NAME grew up with two miners for parents. HECAP listened to them speak to their friends about all the wonderous things they saw deep in the bowels of the planet. HECAP spent HIS entire life learning and dreaming about becoming a miner and exploring all kinds of caverns.</baseDescription>
+    <bodytypeMale>Thin</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <workDisables>
+	  <li>None</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Mining</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Raider</li>
+	  <li>Slave</li>
+    </spawnCategories>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>MokonaBackstoryStarshipGuard</defName>
+    <title>Starship guard</title>
+    <titleShort>Starship guard</titleShort>
+    <baseDescription>NAME enrolled to join the galatic military but after an accident with a fellow soldier HE was sent to a base called the "deathstar" to improve HIS aim and to keep HIM under surveillance. HECAP swears HIS gun simply malfunctioned.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>-5</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Construction</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Mining</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Raider</li>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+  
+<BackstoryDef>
+    <defName>MokonaBackstorySuperHero</defName>
+    <title>Super hero</title>
+    <titleShort>Super hero</titleShort>
+    <baseDescription>NAME was your typical super hero who went around saving cats in distress and helping old ladies cross the street. HECAP always lost HIS lunch money to the villain though.</baseDescription>
+    <bodytypeMale>Thin</bodytypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Social</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Construction</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Growing</defName>
+        <amount>2</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Slave</li>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>MokonaBackstoryMusician</defName>
+    <title>Musician</title>
+    <titleShort>Musician</titleShort>
+    <baseDescription>NAME was a talented musician who created famous works such as "what does the fox say" and "elevator music". Well, sometimes bad things, such as being stranded on a rimworld, happen to good people.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Intellectual</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Artistic</defName>
+        <amount>10</amount>
+      </li>
+      </skillGains>
+    <spawnCategories>
+      <li>Slave</li>
+      <li>Civil</li>
+      </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>MokonaBackstorySuperSoldier</defName>
+    <title>Super soldier</title>
+    <titleShort>117</titleShort>
+    <baseDescription>NAME is a super soldier created to battle unknown threats in the universe.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Shooting</defName>
+        <amount>6</amount>
+      </li>
+      <li>
+        <defName>Melee</defName>
+        <amount>6</amount>
+      </li>
+      </skillGains>
+    <spawnCategories>
+      <li>Slave</li>
+      <li>Civil</li>
+      <li>Raider</li>
+      </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>MokonaBackstoryMedievalWitch</defName>
+    <title>Medieval witch</title>
+    <titleShort>Witch</titleShort>
+    <baseDescription>NAME became interested in alchemy when HE was 5 years old. By the time HE was 9 HE had already created a cure for cancer. However, the church deemed HIS work witch craft, sentencing HIM to be frozen in ice so that HIS spirit may never see redemption.</baseDescription>
+    <bodytypeMale>Male</bodytypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <workDisables>
+      <li>Social</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Growing</defName>
+        <amount>2</amount>
+      </li>
+      <li>
+        <defName>Research</defName>
+        <amount>5</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>4</amount>
+      </li>
+      <li>
+        <defName>Cooking</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Mining</defName>
+        <amount>1</amount>
+      </li>
+      </skillGains>
+    <spawnCategories>
+      <li>Civil</li>
+      <li>Slave</li>
+      <li>Raider</li>
+      </spawnCategories>
+  </BackstoryDef>
+
+<BackstoryDef>
+    <defName>MokonaTerminatorTrade</defName>
+    <title>Jack of all trades</title>
+    <titleShort>The terminator</titleShort>
+    <baseDescription>NAME detested violence when HE grew up, prefering a more civil approach to conflict. HECAP learned many ways to communicate with people because of this, earning HIM the nickname "the terminator" both as a joke to HIS unwillingness to fight and respect for being able to solve any problem.</baseDescription>
+    <bodytypeMale>Fat</bodytypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <workDisables>
+      <li>Violent</li>
+    </workDisables>
+    <skillGains>
+      <li>
+        <defName>Social</defName>
+        <amount>3</amount>
+      </li>
+      <li>
+        <defName>Construction</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Growing</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Research</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Mining</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Cooking</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Medicine</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Artistic</defName>
+        <amount>1</amount>
+      </li>
+      <li>
+        <defName>Crafting</defName>
+        <amount>1</amount>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Slave</li>
+      <li>Civil</li>
+    </spawnCategories>
+  </BackstoryDef>
+  
+</BackstoryDefs>

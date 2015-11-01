@@ -1,0 +1,1166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+
+	<RecipeDef>
+		<defName>CraftPotatoSeeds</defName>
+		<label>Make potato seeds</label>
+		<description>Genetically engineer other seeds to create potato seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+		<PotatoSeeds>5</PotatoSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftCornSeeds</defName>
+		<label>Make corn seeds</label>
+		<description>Genetically engineer other seeds to create corn seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+		<CornSeeds>5</CornSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftRiceSeeds</defName>
+		<label>Make rice seeds</label>
+		<description>Genetically engineer other seeds to create rice seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+		<RiceSeeds>5</RiceSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftStrawberrySeeds</defName>
+		<label>Make strawberry seeds</label>
+		<description>Genetically engineer other seeds to create strawberry seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+		<StrawberrySeeds>5</StrawberrySeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftXerigiumSeeds</defName>
+		<label>Make xerigium seeds</label>
+		<description>Genetically engineer other seeds to create xerigium seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+		<XerigiumSeeds>5</XerigiumSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftOmniGelSeeds</defName>
+		<label>Make omnigel seeds</label>
+		<description>Genetically engineer other seeds to create omnigel seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>50</count>
+			</li>
+		</ingredients>
+		<products>
+		<OmniGelSeeds>5</OmniGelSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftPumpkinSeeds</defName>
+		<label>Make pumpkin seeds</label>
+		<description>Genetically engineer other seeds to create pumpkin seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<PumpkinSeeds>5</PumpkinSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftSquashSeeds</defName>
+		<label>Make squash seeds</label>
+		<description>Genetically engineer other seeds to create squash seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<SquashSeeds>5</SquashSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftEggplantSeeds</defName>
+		<label>Make eggplant seeds</label>
+		<description>Genetically engineer other seeds to create eggplant seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<EggplantSeeds>5</EggplantSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftOnionSeeds</defName>
+		<label>Make onion seeds</label>
+		<description>Genetically engineer other seeds to create onion seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>25</count>
+			</li>
+		</ingredients>
+		<products>
+		<OnionSeeds>5</OnionSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftMushroomSeeds</defName>
+		<label>Make mushroom spores</label>
+		<description>Genetically engineer other seeds to create mushroom spores.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>25</count>
+			</li>
+		</ingredients>
+		<products>
+		<MushroomSeeds>5</MushroomSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftBeanSeeds</defName>
+		<label>Make bean seeds</label>
+		<description>Genetically engineer other seeds to create bean seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>25</count>
+			</li>
+		</ingredients>
+		<products>
+		<BeanSeeds>5</BeanSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftLettuceSeeds</defName>
+		<label>Make lettuce seeds</label>
+		<description>Genetically engineer other seeds to create lettuce seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>40</count>
+			</li>
+		</ingredients>
+		<products>
+		<LettuceSeeds>5</LettuceSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftCarrotSeeds</defName>
+		<label>Make carrot seeds</label>
+		<description>Genetically engineer other seeds to create carrot seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>40</count>
+			</li>
+		</ingredients>
+		<products>
+		<CarrotSeeds>5</CarrotSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftTomatoSeeds</defName>
+		<label>Make tomato seeds</label>
+		<description>Genetically engineer other seeds to create tomato seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>40</count>
+			</li>
+		</ingredients>
+		<products>
+		<TomatoSeeds>5</TomatoSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftSugarcaneSeeds</defName>
+		<label>Make sugarcane seeds</label>
+		<description>Genetically engineer other seeds to create sugarcane seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<SugarcaneSeeds>5</SugarcaneSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftHopsSeeds</defName>
+		<label>Make hops seeds</label>
+		<description>Genetically engineer other seeds to create hops seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<HopsSeeds>5</HopsSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftWheatSeeds</defName>
+		<label>Make wheat seeds</label>
+		<description>Genetically engineer other seeds to create wheat seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<WheatSeeds>5</WheatSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftOatsSeeds</defName>
+		<label>Make oats seeds</label>
+		<description>Genetically engineer other seeds to create oats seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<OatsSeeds>5</OatsSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftGrapeSeeds</defName>
+		<label>Make grape seeds</label>
+		<description>Genetically engineer other seeds to create grape seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<GrapeSeeds>5</GrapeSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftCoffeeSeeds</defName>
+		<label>Make coffee seeds</label>
+		<description>Genetically engineer other seeds to create coffee seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<CoffeeSeeds>5</CoffeeSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftTeaSeeds</defName>
+		<label>Make tea seeds</label>
+		<description>Genetically engineer other seeds to create tea seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<TeaSeeds>5</TeaSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftTobaccoSeeds</defName>
+		<label>Make tobacco seeds</label>
+		<description>Genetically engineer other seeds to create tobacco seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<TobaccoSeeds>5</TobaccoSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftAppleSeeds</defName>
+		<label>Make apple seeds</label>
+		<description>Genetically engineer other seeds to create apple seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<AppleSeeds>5</AppleSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftBananaSeeds</defName>
+		<label>Make banana seeds</label>
+		<description>Genetically engineer other seeds to create banana seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<BananaSeeds>5</BananaSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftDateSeeds</defName>
+		<label>Make date seeds</label>
+		<description>Genetically engineer other seeds to create date seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<DateSeeds>5</DateSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftFigSeeds</defName>
+		<label>Make fig seeds</label>
+		<description>Genetically engineer other seeds to create fig seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<FigSeeds>5</FigSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftOrangeSeeds</defName>
+		<label>Make orange seeds</label>
+		<description>Genetically engineer other seeds to create orange seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<OrangeSeeds>5</OrangeSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftPeachSeeds</defName>
+		<label>Make peach seeds</label>
+		<description>Genetically engineer other seeds to create peach seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<PeachSeeds>5</PeachSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftBlueberrySeeds</defName>
+		<label>Make blueberry seeds</label>
+		<description>Genetically engineer other seeds to create blueberry seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<BlueberrySeeds>5</BlueberrySeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftPumpkinSeeds</defName>
+		<label>Make pumpkin seeds</label>
+		<description>Genetically engineer other seeds to create pumpkin seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<PumpkinSeeds>5</PumpkinSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftCocoaSeeds</defName>
+		<label>Make cocoa seeds</label>
+		<description>Genetically engineer other seeds to create cocoa seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<CocoaSeeds>5</CocoaSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftCloudberrySeeds</defName>
+		<label>Make cloudberry seeds</label>
+		<description>Genetically engineer other seeds to create cloudbarry seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>25</count>
+			</li>
+		</ingredients>
+		<products>
+		<CloudberrySeeds>5</CloudberrySeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftPineappleSeeds</defName>
+		<label>Make pineapple seeds</label>
+		<description>Genetically engineer other seeds to create pineapple seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>25</count>
+			</li>
+		</ingredients>
+		<products>
+		<PineappleSeeds>5</PineappleSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftGooseberrySeeds</defName>
+		<label>Make goosebarry seeds</label>
+		<description>Genetically engineer other seeds to create gooseberry seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>40</count>
+			</li>
+		</ingredients>
+		<products>
+		<GooseberrySeeds>5</GooseberrySeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftWatermelonSeeds</defName>
+		<label>Make watermelon seeds</label>
+		<description>Genetically engineer other seeds to create watermelon seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>40</count>
+			</li>
+		</ingredients>
+		<products>
+		<WatermelonSeeds>5</WatermelonSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftCottonSeeds</defName>
+		<label>Make cotton seeds</label>
+		<description>Genetically engineer other seeds to create cotton seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>5</count>
+			</li>
+		</ingredients>
+		<products>
+		<CottonSeeds>5</CottonSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftDevilstrandSeeds</defName>
+		<label>Make devilstrand seeds</label>
+		<description>Genetically engineer other seeds to create devilstrand seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>25</count>
+			</li>
+		</ingredients>
+		<products>
+		<DevilstrandSeeds>5</DevilstrandSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftBambooSeeds</defName>
+		<label>Make bamboo seeds</label>
+		<description>Genetically engineer other seeds to create bamboo seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<BambooSeeds>5</BambooSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>CraftSpectagoSeeds</defName>
+		<label>Make spectago seeds</label>
+		<description>Genetically engineer other seeds to create spectago seeds.</description>
+		<jobString>Making seeds.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<ingredients>
+			<li>
+			<filter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+			</filter>
+			<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+		<SpectagoSeeds>5</SpectagoSeeds>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>SeedsCategory</li>
+			</categories>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+		<workAmount>600</workAmount>
+	</RecipeDef>
+
+	
+
+</RecipeDefs>
