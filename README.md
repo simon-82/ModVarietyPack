@@ -1,8 +1,9 @@
 ![ModVarietyPack](http://i.imgur.com/AoDloic.png)    
 A modpack for Rimworld by Ludeon Studios
 
-The current version of this modpack is compatible with Version Alpha12d of Rimworld    
-and can be downloaded [here](https://github.com/simon-82/ModVarietyPack/releases)
+The current version of this modpack is compatible with Alpha12d of Rimworld    
+and can be downloaded [here](https://github.com/simon-82/ModVarietyPack/releases)    
+This modpack needs to be run in English. 
 
 ____       
 **Installation:**  
