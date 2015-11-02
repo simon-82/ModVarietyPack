@@ -176,35 +176,6 @@
 	</RecipeDef>
 
 	<RecipeDef>
-		<defName>CraftPumpkinSeeds</defName>
-		<label>Make pumpkin seeds</label>
-		<description>Genetically engineer other seeds to create pumpkin seeds.</description>
-		<jobString>Making seeds.</jobString>
-		<workSpeedStat>SmithingSpeed</workSpeedStat>
-		<effectWorking>Cook</effectWorking>
-		<ingredients>
-			<li>
-			<filter>
-			<categories>
-				<li>SeedsCategory</li>
-			</categories>
-			</filter>
-			<count>15</count>
-			</li>
-		</ingredients>
-		<products>
-		<PumpkinSeeds>5</PumpkinSeeds>
-		</products>
-		<fixedIngredientFilter>
-			<categories>
-				<li>SeedsCategory</li>
-			</categories>
-		</fixedIngredientFilter>
-		<workSkill>Crafting</workSkill>
-		<workAmount>600</workAmount>
-	</RecipeDef>
-
-	<RecipeDef>
 		<defName>CraftSquashSeeds</defName>
 		<label>Make squash seeds</label>
 		<description>Genetically engineer other seeds to create squash seeds.</description>

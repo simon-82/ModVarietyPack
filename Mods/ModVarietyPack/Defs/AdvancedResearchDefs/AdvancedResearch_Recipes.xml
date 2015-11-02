@@ -31,7 +31,6 @@
             <li>CraftSquashSeeds</li>
             <li>CraftEggplantSeeds</li>
             <li>CraftBlueberrySeeds</li>
-            <li>CraftPumpkinSeeds</li>
             <li>CraftBambooSeeds</li>
         </recipeDefs>        
         <thingDefs>
