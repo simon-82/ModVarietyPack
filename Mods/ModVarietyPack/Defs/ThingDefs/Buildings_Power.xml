@@ -371,29 +371,27 @@
           </exceptedCategories>
           <exceptedThingDefs>
             <li>AluBar</li>
-            
-            
+            <li>WoodPlank</li>
+            <li>SteelBar</li>
+            <li>PlasteelBar</li>
             <li>Gold</li>
             <li>Uranium</li>
             <li>Steel</li>
             <li>Glass</li>
             <li>SafetyGlass</li>
-            
-            
-            
-            
-           
+            <li>ArtilleryShell</li>
+            <li>WeaponParts</li>
+            <li>CannonShell</li>
+            <li>PileOfBooks</li>
+            <li>PaintingSupplies</li>
+            <li>Sugar</li>
+            <li>Flour</li> 
             <li>Plasteel</li>
             <li>RawCotton</li>
             <li>RawDevilstrand</li>
             <li>RawHops</li>
-            <li>WoodPlank</li>
-            <li>SteelBar</li>
-            <li>PlasteelBar</li>
-            
             <li>Mulch</li>
-            <li>Sand</li>
-            
+            <li>Sand</li>            
             <li>Electronics</li>
             <li>Biomatter</li>
             </exceptedThingDefs>
