@@ -400,12 +400,15 @@
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<recipes>
+			<li>MakeStoneBlocksSandstone_Electric</li>
+			<li>MakeStoneBlocksGranite_Electric</li>
+			<li>MakeStoneBlocksLimestone_Electric</li>
+			<li>MakeStoneBlocksSlate_Electric</li>
+			<li>MakeStoneBlocksMarble_Electric</li>
 			<li>MakeWoodPlanks_Electric</li>
-			<li>MakeKindling_Electric</li>
-			<li>MakeStoneBlocks_Electric</li>
+			<li>MakeKindling_Electric</li>			
 			<li>MakeSand_Electric</li>
 			<li>ButcherCorpseMechanoid</li>
-			<li>MakeArtilleryShell</li>
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -553,7 +556,11 @@
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<recipes>
-			<li>MakeStoneBlocks</li>
+			<li>MakeStoneBlocks</li> <!-- vanilla override = sandstone -->
+			<li>MakeStoneBlocksGranite</li>
+			<li>MakeStoneBlocksLimestone</li>
+			<li>MakeStoneBlocksSlate</li>
+			<li>MakeStoneBlocksMarble</li>
 			<li>MakeSand_Hand</li>
 		</recipes>
 		<inspectorTabs>
@@ -1770,7 +1777,7 @@
 		<recipes>
 		<li>MakeFishingRod</li>
 		</recipes>
-			<!--ALL vanilla melee+ranged neolithic CR modified + fishing rod, harpoon-->
+			<!--ALL vanilla melee+ranged neolithic CR modified + fishing rod-->
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
@@ -1833,7 +1840,6 @@
 			<li>MakeGun_SniperRifle</li>
 			<li>MakeGun_PDW</li>
 			<li>MakeGun_HeavySMG</li>
-
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -1905,8 +1911,7 @@
 			<li>MakeRS_Gun_Negotiator</li>
 			<li>MakeRS_Gun_Arbitrator</li>
 			<li>MakeRS_Gun_Intercessor</li>
-			<li>MakeRS_Gun_Harmonizer</li>
-			
+			<li>MakeRS_Gun_Harmonizer</li>			
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>

@@ -144,11 +144,174 @@
 
 
  <!-- === Stone, Wood, Kindling === -->
+ <!-- === StoneCutting individual blocks first one overrides vanilla recipe === -->
+ <RecipeDef>
+    <defName>MakeStoneBlocks</defName>
+    <label>make sandstone blocks</label>
+    <description>Cuts sandstone chunks into usable stone blocks. Rather slow.</description>
+    <jobString>Stonecutting.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <workSkillLearnFactor>0.25</workSkillLearnFactor>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkSandstone</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <BlocksSandstone>20</BlocksSandstone>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkSandstone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
   <RecipeDef>
-    <workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
-    <defName>MakeStoneBlocks_Electric</defName>
-    <label>make stone blocks</label>
-    <description>Cuts rock chunks into usable stone blocks. Quite fast.</description>
+    <defName>MakeStoneBlocksGranite</defName>
+    <label>make granite blocks</label>
+    <description>Cuts granite chunks into usable stone blocks. Rather slow.</description>
+    <jobString>Stonecutting.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <workSkillLearnFactor>0.25</workSkillLearnFactor>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkGranite</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <BlocksGranite>20</BlocksGranite>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkGranite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeStoneBlocksLimestone</defName>
+    <label>make limestone blocks</label>
+    <description>Cuts limestone chunks into usable stone blocks. Rather slow.</description>
+    <jobString>Stonecutting.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <workSkillLearnFactor>0.25</workSkillLearnFactor>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkLimestone</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <BlocksLimestone>20</BlocksLimestone>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkLimestone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeStoneBlocksSlate</defName>
+    <label>make slate blocks</label>
+    <description>Cuts slate chunks into usable stone blocks. Rather slow.</description>
+    <jobString>Stonecutting.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <workSkillLearnFactor>0.25</workSkillLearnFactor>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkSlate</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <BlocksSlate>20</BlocksSlate>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkSlate</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+  
+  <RecipeDef>
+    <defName>MakeStoneBlocksMarble</defName>
+    <label>make marble blocks</label>
+    <description>Cuts marble chunks into usable stone blocks. Rather slow.</description>
+    <jobString>Stonecutting.</jobString>
+    <workAmount>1600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <workSkillLearnFactor>0.25</workSkillLearnFactor>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkMarble</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <BlocksMarble>20</BlocksMarble>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkMarble</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+
+  <!-- === StoneCutting individual blocks powered crafting table === -->
+  <RecipeDef>
+    <defName>MakeStoneBlocksSandstone_Electric</defName>
+    <label>make sandstone blocks</label>
+    <description>Cuts sandstone chunks into usable stone blocks. Quite fast.</description>
     <jobString>Stonecutting.</jobString>
     <workAmount>600</workAmount>
     <workSpeedStat>StonecuttingSpeed</workSpeedStat>
@@ -158,23 +321,150 @@
     <ingredients>
       <li>
         <filter>
-          <categories>
-            <li>StoneChunks</li>
-          </categories>
+          <thingDefs>
+            <li>ChunkSandstone</li>
+          </thingDefs>
         </filter>
         <count>1</count>
       </li>
     </ingredients>
-    <specialProducts>
-      <li>Butchery</li>
-    </specialProducts>
+    <products>
+      <BlocksSandstone>20</BlocksSandstone>
+    </products>
     <fixedIngredientFilter>
-      <categories>
-        <li>StoneChunks</li>
-      </categories>
+      <thingDefs>
+        <li>ChunkSandstone</li>
+      </thingDefs>
     </fixedIngredientFilter>
     <workSkill>Crafting</workSkill>
   </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeStoneBlocksGranite_Electric</defName>
+    <label>make granite blocks</label>
+    <description>Cuts granite chunks into usable stone blocks. Quite fast.</description>
+    <jobString>Stonecutting.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkGranite</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <BlocksGranite>20</BlocksGranite>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkGranite</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeStoneBlocksLimestone_Electric</defName>
+    <label>make limestone blocks</label>
+    <description>Cuts limestone chunks into usable stone blocks. Quite fast.</description>
+    <jobString>Stonecutting.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkLimestone</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <BlocksLimestone>20</BlocksLimestone>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkLimestone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeStoneBlocksSlate_Electric</defName>
+    <label>make slate blocks</label>
+    <description>Cuts slate chunks into usable stone blocks. Quite fast.</description>
+    <jobString>Stonecutting.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkSlate</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <BlocksSlate>20</BlocksSlate>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkSlate</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeStoneBlocksMarble_Electric</defName>
+    <label>make marble blocks</label>
+    <description>Cuts marble chunks into usable stone blocks. Quite fast.</description>
+    <jobString>Stonecutting.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>50</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>ChunkMarble</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <products>
+      <BlocksMarble>20</BlocksMarble>
+    </products>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>ChunkMarble</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+
 
   <RecipeDef>
     <defName>MakeWoodPlanks_Hand</defName>
