@@ -601,7 +601,7 @@
 
 		<ResearchProjectDef>
 			<defName>WeaponCraftingIII</defName>
-			<label>Weapon Crafting II</label>
+			<label>Weapon Crafting III</label>
 			<description>Unlocks: Futuristic Weapon Crafting Table</description>
 			<totalCost>2500</totalCost>
 			<prerequisites>

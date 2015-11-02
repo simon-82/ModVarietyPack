@@ -244,7 +244,7 @@
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
-		<researchPrerequisite>PowerI</researchPrerequisite>
+		<researchPrerequisite>TextileI</researchPrerequisite>
 	</ThingDef>
 
 

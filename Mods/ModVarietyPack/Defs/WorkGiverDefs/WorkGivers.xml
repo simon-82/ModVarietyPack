@@ -984,6 +984,32 @@
     </requiredCapacities>
   </WorkGiverDef>
 
+  <WorkGiverDef>
+    <defName>DoBillsMakeGlass</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <singleBillGiverDef>TableGlassworks</singleBillGiverDef>
+    <verb>produce glass from</verb>
+    <gerund>producing glass at</gerund>
+  <requiredCapacities>
+    <li>Manipulation</li>
+  </requiredCapacities>
+  </WorkGiverDef>
+  
+  <WorkGiverDef>
+    <defName>DoBillsMakeSafetyGlass</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <singleBillGiverDef>TableGlassworksSafety</singleBillGiverDef>
+    <verb>produce safety glass</verb>
+    <gerund>producing safety glass</gerund>
+  <requiredCapacities>
+    <li>Manipulation</li>
+  </requiredCapacities>
+  </WorkGiverDef>
+
 
 
 
