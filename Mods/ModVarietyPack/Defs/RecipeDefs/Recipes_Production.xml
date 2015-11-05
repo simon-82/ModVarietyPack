@@ -125,7 +125,7 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>Steel</li>
+        <li>SteelBar</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -1351,7 +1351,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
       <li>
         <filter>
           <categories>
-            <li>PlantFoodRaw</li>
+            <li>FoodRaw</li>
           </categories>
         </filter>
         <count>40</count>
@@ -1359,7 +1359,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     </ingredients>
     <fixedIngredientFilter>
       <categories>
-            <li>PlantFoodRaw</li>
+            <li>FoodRaw</li>
       </categories>
     </fixedIngredientFilter>
     <products>
@@ -1367,6 +1367,39 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     </products>
     <workSkill>Crafting</workSkill>
   </RecipeDef>
+
+  <RecipeDef>
+    <defName>MakeBucketWater</defName>
+    <label>get water from well</label>
+    <description>Fill water from the well into a bucket to carry it around.</description>
+    <jobString>getting water.</jobString>
+    <workSpeedStat>StonecuttingSpeed</workSpeedStat>
+    <effectWorking>MakeWoodPlanks_Hand</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>    
+    <workAmount>1600</workAmount>    
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WoodPlank</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>WoodPlank</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <BucketWater>1</BucketWater>
+    </products>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+
+
+
 
   <RecipeDef>
     <defName>ExtractBiomatterCorpse</defName>
@@ -1422,6 +1455,9 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     </products>
     <workSkill>Medicine</workSkill>
   </RecipeDef>
+
+
+
 
 
 

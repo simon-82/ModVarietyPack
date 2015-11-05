@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+
+  <!-- Arms Dynamics nerfed -->
+
+
+  <ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <selectable>True</selectable>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.9</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <SellPriceFactor>0.6</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>ADWeapons</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li>
+        <compClass>CompArt</compClass>
+        <nameMaker>NamerGun</nameMaker>
+        <descriptionMaker>ArtWeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltProducts>
+      <Steel>20</Steel>
+      <Plasteel>20</Plasteel>
+    </smeltProducts>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>ADGun</li>
+      <li>AdvancedGun</li>
+    </weaponTags>
+    <tradeTags>
+      <li>CerRE</li>
+    </tradeTags>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RS_Bullet_Pacificator</defName>
+    <label>Pacificator Laser</label>
+    <graphicData> <texPath>Things/Projectile/Laser</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    
+    <projectile>
+      <damageDef>Optic</damageDef>
+      <DamageAmountBase>25</DamageAmountBase>
+      <Speed>300</Speed>
+      <explosionRadius>0.9</explosionRadius>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>RS_Gun_Pacificator</defName>
+    <label>Optic rifle</label>
+    <weaponTags>
+          <li>FedRifle</li>
+    </weaponTags>
+    <description>The Arms Dynamics M202 "Pacificator" Optic rifle, the standard issue rifle of the notorious Federation Peacekeepers. This rifle fires focused beams that vaporise everything in their path. It has does however have a relatively slow fire late due to possible overheating.</description>
+    <graphicData> <texPath>Things/A10/Pacificator</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractChargeRifle</soundInteract>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+      <WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <statBases>
+      <MarketValue>1470</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+        <AccuracyTouch>0.50</AccuracyTouch>
+        <AccuracyShort>0.50</AccuracyShort>
+        <AccuracyMedium>0.40</AccuracyMedium>
+        <AccuracyLong>0.40</AccuracyLong>
+        <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>RS_Bullet_Pacificator</projectileDef>
+        <burstShotCount>3</burstShotCount>
+        <minRange>3</minRange>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <warmupTicks>114</warmupTicks>
+        <range>73</range>
+        <soundCast>RS_ShotPacificator</soundCast>
+          <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RS_Bullet_Negotiator</defName>
+    <label>Negotiator laser</label>
+    <graphicData> <texPath>Things/Projectile/Laser</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    
+    <projectile>
+      <damageDef>Optic</damageDef>
+      <DamageAmountBase>20</DamageAmountBase>
+      <Speed>300</Speed>
+      <explosionRadius>0.5</explosionRadius>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>RS_Gun_Negotiator</defName>
+    <label>Optic pistol</label>
+    <description>The M33 "Negotiator" is an optic pistol produced by Arms Dynamics. The Negotiator is a lightweight pistol with an unconventional fire mechanism called "the energy crucible". The M33's vulnerable point is its painfully slow rate of fire for a pistol. However, its fire power and high accuracy offset this flaw.</description>
+    <graphicData> <texPath>Things/A10/Negotiator</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractChargeRifle</soundInteract>
+    <weaponTags>
+          <li>FedPistol</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+      <WorkSpeedGlobal>-0.02</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <statBases>
+      <MarketValue>690</MarketValue>
+      <MaxHitPoints>150</MaxHitPoints>
+        <AccuracyTouch>0.50</AccuracyTouch>
+        <AccuracyShort>0.50</AccuracyShort>
+        <AccuracyMedium>0.40</AccuracyMedium>
+        <AccuracyLong>0.40</AccuracyLong>
+        <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>RS_Bullet_Negotiator</projectileDef>
+        <burstShotCount>2</burstShotCount>
+        <minRange>1</minRange>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <warmupTicks>67</warmupTicks>
+        <range>15</range>
+        <soundCast>RS_ShotNegotiator</soundCast>
+          <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RS_Bullet_Arbitrator</defName>
+    <label>Arbitrator pulse laser</label>
+    <graphicData> <texPath>Things/Projectile/Pulse</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <DamageAmountBase>7</DamageAmountBase>
+      <Speed>300</Speed>
+      <explosionRadius>0.5</explosionRadius>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>RS_Gun_Arbitrator</defName>
+    <label>Optic support weapon</label>
+    <description>The Arms Dynamics M154 "Arbitrator". In the Federation, use of the M154 was rigorously controlled; As such, This incendiary laser weapon is reserved for Federation Peacemongers, the most capable of the already able Peacekeepers of the Federaion.</description>
+    <graphicData> <texPath>Things/A10/Arbitrator</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.8</MoveSpeed>
+      <WorkSpeedGlobal>-0.16</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <weaponTags>
+          <li>FedHeavy</li>
+    </weaponTags>
+    <soundInteract>InteractChargeRifle</soundInteract>
+    <statBases>
+      <MarketValue>1850</MarketValue>
+      <MaxHitPoints>210</MaxHitPoints>
+        <AccuracyTouch>0.50</AccuracyTouch>
+        <AccuracyShort>0.50</AccuracyShort>
+        <AccuracyMedium>0.40</AccuracyMedium>
+        <AccuracyLong>0.30</AccuracyLong>
+        <RangedWeapon_Cooldown>2.8</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>RS_Bullet_Arbitrator</projectileDef>
+        <burstShotCount>10</burstShotCount>
+        <minRange>5</minRange>
+        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+        <warmupTicks>150</warmupTicks>
+        <range>73</range>
+        <soundCast>RS_ShotArbitrator</soundCast>
+          <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- ============================================================== -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RS_Bullet_Intercessor</defName>
+    <label>Intercessor laser</label>
+    <graphicData> <texPath>Things/Projectile/Pulse</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    
+    <projectile>
+      <damageDef>Optic</damageDef>
+      <DamageAmountBase>42</DamageAmountBase>
+      <Speed>300</Speed>
+      <explosionRadius>0.5</explosionRadius>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>RS_Gun_Intercessor</defName>
+    <label>Optic precision rifle</label>
+    <description>The favored weapon of the Federation Peacebringer assassin corps, Arms Dynamics M270 "Intercessor" is a long range optic sniper weapon. Although Intercessor's firepower is slightly lower than a conventional sniper rifle, it's high accuracy and longer range makes the Intercessor a most fearsome weapon.</description>
+    <graphicData> <texPath>Things/A10/Intercessor</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <weaponTags>
+          <li>FedSniper</li>
+    </weaponTags>
+    <soundInteract>InteractChargeRifle</soundInteract>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.5</MoveSpeed>
+      <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <statBases>
+      <MarketValue>1590</MarketValue>
+      <MaxHitPoints>200</MaxHitPoints>
+        <AccuracyTouch>0.50</AccuracyTouch>
+        <AccuracyShort>0.50</AccuracyShort>
+        <AccuracyMedium>0.85</AccuracyMedium>
+        <AccuracyLong>0.85</AccuracyLong>
+        <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>RS_Bullet_Intercessor</projectileDef>
+        <warmupTicks>145</warmupTicks>
+        <minRange>10</minRange>
+        <range>110</range>
+        <soundCast>RS_ShotIntercessor</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+          <muzzleFlashScale>17</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- ============================================================== -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>RS_Bullet_Harmonizer</defName>
+    <label>Plasma Sphere</label>
+    <graphicData> <texPath>Things/Projectile/Flux</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    
+    <projectile>
+      <damageDef>Plasma</damageDef>
+      <DamageAmountBase>45</DamageAmountBase>
+      <Speed>5</Speed>
+      <explosionRadius>2.5</explosionRadius>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>RS_Gun_Harmonizer</defName>
+    <label>Plasma caster</label>
+    <weaponTags>
+          <li>FedDemo</li>
+    </weaponTags>
+    <description>The last argument of the Federation, the M656 "Harmonizer" is the most powerful anti personnel weapon available to the corp. A plasma sphere from the Harmonizer is a very slow and easy to avoid projectil. However, just one shot from a Harmonizer can ruin an entire platoon of oppositional troops day.</description>
+    <graphicData> <texPath>Things/A10/Harmonizer</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractChargeRifle</soundInteract>
+  <equippedStatOffsets>
+       <MoveSpeed>-0.7</MoveSpeed>
+  </equippedStatOffsets>
+    <statBases>
+      <MarketValue>2100</MarketValue>
+      <MaxHitPoints>190</MaxHitPoints>
+        <AccuracyTouch>0.63</AccuracyTouch>
+        <AccuracyShort>0.71</AccuracyShort>
+        <AccuracyMedium>0.83</AccuracyMedium>
+        <AccuracyLong>0.67</AccuracyLong>
+        <RangedWeapon_Cooldown>3.52</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>RS_Bullet_Harmonizer</projectileDef>
+        <warmupTicks>225</warmupTicks>
+        <minRange>5</minRange>
+        <range>39</range>
+         <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <soundCast>RS_ShotHarmonizer</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+          <muzzleFlashScale>18</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+
+  
+
+</ThingDefs>

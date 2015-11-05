@@ -2,41 +2,9 @@
 <Defs>
 
     <!-- Agriculture -->
-    <AdvancedResearchDef>         
-        <defName>AgricultureISeeds</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>AgricultureI</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>CraftPotatoSeeds</li>
-            <li>CraftCornSeeds</li>
-            <li>CraftRiceSeeds</li>
-            <li>CraftStrawberrySeeds</li>
-            <li>CraftXerigiumSeeds</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableChemlab</li>
-        </thingDefs>        
-    </AdvancedResearchDef>    
+       
 
-    <AdvancedResearchDef>         
-        <defName>AgricultureIISeeds</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>AgricultureII</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>CraftPumpkinSeeds</li>
-            <li>CraftSquashSeeds</li>
-            <li>CraftEggplantSeeds</li>
-            <li>CraftBlueberrySeeds</li>
-            <li>CraftBambooSeeds</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableChemlab</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
+    
 
     <AdvancedResearchDef>         
         <defName>AgricultureIIButcherFish</defName>
@@ -71,23 +39,7 @@
         </thingDefs>        
     </AdvancedResearchDef>    
 
-    <AdvancedResearchDef>         
-        <defName>AgricultureIIISeeds</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>Hydroponics</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>CraftOnionSeeds</li>
-            <li>CraftMushroomSeeds</li>
-            <li>CraftBeanSeeds</li>
-            <li>CraftCloudberrySeeds</li>
-            <li>CraftPineappleSeeds</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableChemlab</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
+    
 
     <AdvancedResearchDef>         
         <defName>AgricultureIIICook</defName>
@@ -104,42 +56,9 @@
         </thingDefs>        
     </AdvancedResearchDef>
 
-    <AdvancedResearchDef>         
-        <defName>AgricultureIVSeeds</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>AgricultureIV</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>CraftLettuceSeeds</li>
-            <li>CraftCarrotSeeds</li>
-            <li>CraftTomatoSeeds</li>
-            <li>CraftGooseberrySeeds</li>
-            <li>CraftWatermelonSeeds</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableChemlab</li>
-        </thingDefs>        
-    </AdvancedResearchDef>    
+        
 
-    <AdvancedResearchDef>         
-        <defName>FruitTreesSeeds</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>Cryptosleep</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>CraftAppleSeeds</li>
-            <li>CraftBananaSeeds</li>
-            <li>CraftDateSeeds</li>
-            <li>CraftFigSeeds</li>
-            <li>CraftOrangeSeeds</li>
-            <li>CraftPeachSeeds</li>            
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableChemlab</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
+    
 
     <AdvancedResearchDef>         
         <defName>AgricultureIVBrew</defName>
@@ -164,41 +83,7 @@
 
 
     <!-- Cooking -->
-    <AdvancedResearchDef>         
-        <defName>CookingISeeds</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>Brewing</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>CraftSugarcaneSeeds</li>
-            <li>CraftHopsSeeds</li>
-            <li>CraftWheatSeeds</li>
-            <li>CraftOatsSeeds</li>
-            <li>CraftGrapeSeeds</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableChemlab</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
-
-    <AdvancedResearchDef>         
-        <defName>CookingIISeeds</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>CookingII</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>CraftCoffeeSeeds</li>
-            <li>CraftTeaSeeds</li>
-            <li>CraftTobaccoSeeds</li>
-            <li>CraftCocoaSeeds</li>
-            <li>CraftSpectagoSeeds</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableChemlab</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
+    
 
     <AdvancedResearchDef>         
         <defName>CookingII</defName>
@@ -451,33 +336,9 @@
 
 
     <!-- Crafting -->
-    <AdvancedResearchDef>         
-        <defName>TextileISeeds</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>TextileI</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>CraftCottonSeeds</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableChemlab</li>
-        </thingDefs>        
-    </AdvancedResearchDef> 
+     
 
-    <AdvancedResearchDef>         
-        <defName>TextileIISeeds</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>CarpetMaking</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>CraftDevilstrandSeeds</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableChemlab</li>
-        </thingDefs>        
-    </AdvancedResearchDef> 
+     
 
     <AdvancedResearchDef>         
         <defName>TextileIICloth</defName>
@@ -495,19 +356,7 @@
         </thingDefs>        
     </AdvancedResearchDef> 
 
-    <AdvancedResearchDef>         
-        <defName>CraftingIVSeeds</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>CraftingIV</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>CraftOmniGelSeeds</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableChemlab</li>
-        </thingDefs>        
-    </AdvancedResearchDef> 
+     
 
 
 

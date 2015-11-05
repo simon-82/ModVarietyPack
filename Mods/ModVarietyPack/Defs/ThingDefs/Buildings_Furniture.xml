@@ -924,6 +924,7 @@
       </li>
     </comps>
     <designationCategory>Furniture</designationCategory>
+    <researchPrerequisite>FurnitureII</researchPrerequisite>
     <placeWorkers>
         <li>CommunityCoreLibrary.PlaceWorker_OnlyUnderRoof</li>
     </placeWorkers>

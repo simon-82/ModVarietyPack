@@ -471,51 +471,7 @@
     <ResearchPrerequisite>ConstructionII</ResearchPrerequisite>
     <constructEffect>ConstructMetal</constructEffect>
   </TerrainDef>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!-- === Rich Soil === -->
-
-  <TerrainDef>
-    <defName>SoilRich</defName>
-    <label>rich soil</label>
-    <texturePath>Terrain/Surfaces/SoilRich</texturePath>
-    <EdgeType>FadeRough</EdgeType>
-    <RenderPrecedence>50</RenderPrecedence>
-    <PathCost>2</PathCost>
-    <statBases>
-      <WorkToMake>150</WorkToMake>
-      <Beauty>0</Beauty>
-    </statBases>
-    <affordances>
-      <li>Light</li>
-      <li>Heavy</li>
-      <li>GrowSoil</li>
-      <li>Diggable</li>
-    </affordances>
-    <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>2.0</Fertility>
-    <TakeFootprints>True</TakeFootprints>
-    <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
-    <constructEffect>ConstructDirt</constructEffect>
-    <designationCategory>MoreFloors</designationCategory>
-    <CostList>
-        <Mulch>15</Mulch>
-    </CostList>
-    <researchPrerequisite>AgricultureII</researchPrerequisite>
-  </TerrainDef>
+ 
 
 
 

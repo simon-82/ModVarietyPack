@@ -1157,6 +1157,32 @@
 	</ThingDef>
 
 	<ThingDef ParentName="ResourceBase">
+		<defName>BucketWater</defName>
+		<label>bucket of water</label>
+		<description>A bucket full of water.</description>
+		<graphicData>
+			<texPath>Items/BucketWater</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Wood_Drop</soundInteract>
+		<soundDrop>Wood_Drop</soundDrop>
+		<statBases>
+			<MarketValue>1.1</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Stuff</li>
+			</categories>
+		</stuffProps>
+		<stackLimit>20</stackLimit>
+	</ThingDef>
+
+
+
+	<ThingDef ParentName="ResourceBase">
 		<defName>EnergyPack</defName>
 		<label>Energy pack</label>
 		<description>Energy pack adapted from a battery. It is able to power mobile equipement.</description>

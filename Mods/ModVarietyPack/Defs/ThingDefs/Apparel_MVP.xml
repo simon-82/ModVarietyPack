@@ -665,6 +665,8 @@
     </thingCategories>
   </ThingDef>
 
+
+
   <!-- === New Pants === -->
   <ThingDef ParentName="ApparelBase">
     <defName>Apparello_Armorpants</defName>
@@ -1008,6 +1010,7 @@
     </thingCategories>
   </ThingDef>
 
+  
 
 
 

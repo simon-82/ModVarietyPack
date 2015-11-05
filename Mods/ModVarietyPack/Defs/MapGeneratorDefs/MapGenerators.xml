@@ -157,15 +157,7 @@
 
       <!-- Some final essentials -->
       <li Class="Genstep_Colonists" />	  
-      <li Class="Genstep_Animals" />
-
-
-
-
-
-      <!-- Seeds Please Droppod -->
-      <li Class="SeedsPlease.Genstep_SeedDropPod" />
-      
+      <li Class="Genstep_Animals" />      
     </genSteps>
     </MapGeneratorDef>
 

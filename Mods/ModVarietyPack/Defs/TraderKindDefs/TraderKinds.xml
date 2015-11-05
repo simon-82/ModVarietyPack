@@ -66,34 +66,7 @@
 					<max>30</max>
 				</countRange>
 			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>PotatoSeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>RiceSeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>CornSeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>StrawberrySeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
+			
 
 			<li Class="StockGenerator_Category">
 				<categoryDef>FoodRaw</categoryDef>
@@ -230,34 +203,7 @@
 					<max>30</max>
 				</countRange>
 			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>PotatoSeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>RiceSeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>CornSeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>StrawberrySeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
+			
 
 			<li Class="StockGenerator_Category">
 				<categoryDef>StoneBlocks</categoryDef>
@@ -386,34 +332,7 @@
 					<max>1500</max>
 				</countRange>
 			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>PotatoSeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>RiceSeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>CornSeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>StrawberrySeeds</thingDef>
-				<countRange>
-					<min>20</min>
-					<max>90</max>
-				</countRange>
-			</li>
+			
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Electronics</thingDef>
 				<price>Cheap</price>

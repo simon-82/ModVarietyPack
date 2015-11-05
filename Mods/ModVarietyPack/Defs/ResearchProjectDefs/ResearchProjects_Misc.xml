@@ -91,7 +91,7 @@
     <ResearchProjectDef>
 		<defName>AgricultureII</defName>
 		<label>Agriculture II</label>
-		<description>"These new plants grow faster and yield more than the ones we have been growing so far. They would grow even faster if we fertilize the soil they grow on." \n"Well, you do that. I'm off catching some fish!" \nUnlocks: Composter, Fishing Pier \nPlants unlocked: Pumpkin, Squash, Eggplant, Blueberry, Bamboo \nAlso unlocks: Fishing Rod (made at the Basic Weapon Crafting Workbench)</description>
+		<description>"These new plants grow faster and yield more than the ones we have been growing so far. But we need to fertilize the soil for them to grow." \n"Well, you do that. I'm off catching some fish!" \nUnlocks: Composter, Fishing Pier, Fertilized Soil \nPlants unlocked: Pumpkin, Squash, Eggplant, Blueberry, Bamboo \nAlso unlocks: Fishing Rod, Harpoon (made at the Basic Weapon Crafting Workbench)</description>
 		<totalCost>1000</totalCost>
 		<prerequisites>
 			<li>AgricultureI</li>
@@ -121,7 +121,7 @@
 	<ResearchProjectDef>
 		<defName>Hydroponics</defName>
 		<label>Agriculture III</label>
-		<description>"Ok, so these Muffalo ate all the crops and there are no more fish left in the pond. We should think about doing some indoor gardening. Or even start an aquaculture." \n"Good idea, maybe we should also plant some beans and make tofu." \nUnlocks: Hydroponic Table, Aquaculture \nPlants unlocked: Onion, Mushroom, Bean, Cloudberry, Pineapple</description>
+		<description>"Ok, so these Muffalo ate all the crops and there are no more fish left in the pond. We should think about doing some indoor gardening. Or even start an aquaculture." \n"Good idea, maybe we should also plant some beans and make tofu." \n"But beans won't grow on that dry soil. We have to add some water to it. I might start digging a hole to build a well."  \nUnlocks: Hydroponic Table, Aquaculture, Well, Watered Soil \nPlants unlocked: Onion, Mushroom, Bean, Cloudberry, Pineapple</description>
 		<totalCost>1500</totalCost>
 		<prerequisites>
 			<li>AgricultureII</li>
@@ -131,7 +131,7 @@
 	<ResearchProjectDef>
 		<defName>AgricultureIV</defName>
 		<label>Agriculture IV</label>
-		<description>"We should seriously think about planting some of these new plants. They not only grow faster and yield more, they even taste good when eaten raw!" \n"That all sounds great, but we have no more place to grow them." \n"Hm, time to build a couple terraforming pumps then." \nUnlocks: Terraforming Pump \nPlants unlocked: lettuce, carrot, tomato, gooseberry, watermelon</description>
+		<description>"We should seriously think about planting some of these new plants. They not only grow faster and yield more, they even taste good when eaten raw!" \n"That all sounds great, but we have no more place to grow them." \n"Hm, time to build a couple terraforming pumps then. Oh, and these plants won't grow on the fields we have, it seems." \n"I'll just throw some more water and fertilizer on them. I'm sure that will work." \nUnlocks: Terraforming Pump, Enriched Soil \nPlants unlocked: lettuce, carrot, tomato, gooseberry, watermelon</description>
 		<totalCost>2000</totalCost>
 		<prerequisites>
 			<li>Hydroponics</li>
@@ -211,9 +211,7 @@
 		<ResearchProjectDef>
 			<defName>FurnitureII</defName>
 			<label>furniture II</label>
-			<description>
-				Comfy Bed, PodBed, End Table, Bookcase, Reading Table, Painting Easel, 
-				Also Unlocks: Paint Set, Tempera Paint set (made at the cooking Stove DONE
+			<description>"This room looks pretty comfy with the couch and stuff. But the walls are empty. Is somebody good at painting?"\nUnlocks: Comfy Bed, PodBed, End Table, Bookcase, Reading Table, Painting Easel \nAlso unlocks: Paint Set, Tempera Paint set (made at the cooking Stove)
 			</description>
 			<totalCost>1500</totalCost>
 			<prerequisites>
@@ -512,7 +510,7 @@
 
 		<ResearchProjectDef>
 			<defName>NuclearPower</defName>
-			<label>NuclearPower</label>
+			<label>Nuclear Power</label>
 			<description>Unlocks: Radioisotope Thermoelectric Generator, Advanced Stirling Radioisotope Generator</description>
 			<totalCost>1500</totalCost>
 			<prerequisites>

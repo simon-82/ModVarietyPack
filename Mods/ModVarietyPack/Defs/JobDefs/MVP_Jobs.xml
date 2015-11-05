@@ -31,24 +31,7 @@
 
 
 
-  <!-- === seeds === -->
-  <JobDef>
-      <defName>SowWithSeeds</defName>
-      <driverClass>SeedsPlease.JobDriver_PlantSowWithSeeds</driverClass>
-  </JobDef>
-
-  <JobDef>
-      <defName>Harvest</defName>
-      <driverClass>SeedsPlease.JobDriver_PlantHarvestWithSeeds</driverClass>
-      <reportString>Harvesting TargetA.</reportString>
-  </JobDef>
   
-  <JobDef>
-      <defName>HaulToCell</defName>
-      <driverClass>Verse.AI.JobDriver_HaulToCell</driverClass>
-      <reportString>Hauling TargetA.</reportString>
-  </JobDef>
-
 
 
 

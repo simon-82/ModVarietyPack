@@ -394,6 +394,7 @@
             <li>Sand</li>            
             <li>Electronics</li>
             <li>Biomatter</li>
+            <li>BucketWater</li>
             </exceptedThingDefs>
         </filter>
       </fixedStorageSettings>

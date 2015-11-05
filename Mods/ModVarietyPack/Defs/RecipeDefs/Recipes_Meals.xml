@@ -423,6 +423,7 @@
 				<filter>
 					<categories>
 						<li>MeatRaw</li>
+						<li>FoodFreshFish</li>
 					</categories>
 				</filter>
 				<count>10</count>
@@ -434,11 +435,13 @@
 		<fixedIngredientFilter>
 			<categories>
 				<li>MeatRaw</li>
+				<li>FoodFreshFish</li>
 			</categories>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<categories>
 				<li>MeatRaw</li>
+				<li>FoodFreshFish</li>
 			</categories>
 			<exceptedThingDefs>
 				<li>Human_Meat</li>
@@ -660,7 +663,7 @@
 						<li>RawHops</li>
 					</thingDefs>
 				</filter>
-				<count>20</count>
+				<count>12</count>
 			</li>
 			<li>
 				<filter>
@@ -670,11 +673,20 @@
 				</filter>
 				<count>5</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>RawHops</li>
 				<li>Sugar</li>
+				<li>BucketWater</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -682,6 +694,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeRum</defName>
 		<label>Distill Rum</label>
@@ -700,12 +713,21 @@
 						<li>Sugar</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Sugar</li>
+				<li>BucketWater</li>
 			</thingDefs>
 			<specialFiltersToDisallow>
 				<li>AllowRotten</li>
@@ -716,6 +738,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeWine</defName>
 		<label>Press wine</label>
@@ -734,12 +757,21 @@
 						<li>Rawgrape</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Rawgrape</li>
+				<li>BucketWater</li>
 			</thingDefs>
 			<specialFiltersToDisallow>
 				<li>AllowRotten</li>
@@ -750,6 +782,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeApplecider</defName>
 		<label>Distill Apple Cider</label>
@@ -768,12 +801,21 @@
 						<li>Rawapple</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Rawapple</li>
+				<li>BucketWater</li>
 			</thingDefs>
 			<specialFiltersToDisallow>
 				<li>AllowRotten</li>
@@ -784,6 +826,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeSake</defName>
 		<label>Distill Sake</label>
@@ -810,13 +853,22 @@
 						<li>Sugar</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>RawRice</li>
 				<li>Sugar</li>
+				<li>BucketWater</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -824,6 +876,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeStrawberryWine</defName>
 		<label>Distill Strawberry Wine</label>
@@ -844,10 +897,19 @@
 				</filter>
 				<count>25</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>RawBerries</li>
+				<li>BucketWater</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -855,6 +917,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeTequila</defName>
 		<label>Distill Tequila</label>
@@ -873,7 +936,7 @@
 						<li>RawAgave</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -883,11 +946,20 @@
 				</filter>
 				<count>10</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>RawAgave</li>
 				<li>Sugar</li>
+				<li>BucketWater</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -895,6 +967,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeVodka</defName>
 		<label>Distill Vodka</label>
@@ -913,7 +986,7 @@
 						<li>RawPotatoes</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -923,11 +996,20 @@
 				</filter>
 				<count>10</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>RawPotatoes</li>
 				<li>Sugar</li>
+				<li>BucketWater</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -935,6 +1017,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeWhiskey</defName>
 		<label>Distill Whiskey</label>
@@ -955,7 +1038,7 @@
 						<li>Rawoats</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -965,6 +1048,14 @@
 				</filter>
 				<count>10</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -972,6 +1063,7 @@
 				<li>PlantCorn</li>
 				<li>Rawoats</li>
 				<li>Sugar</li>
+				<li>BucketWater</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -979,6 +1071,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>BrewTea</defName>
 		<label>Brew tea</label>
@@ -999,10 +1092,19 @@
 				</filter>
 				<count>12</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>RawTea</li>
+				<li>BucketWater</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -1010,6 +1112,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>BrewSpectagoTea</defName>
 		<label>brew spectago tea</label>
@@ -1037,11 +1140,20 @@
 				</filter>
 				<count>20</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>RainbowPetals</li>
 				<li>Sugar</li>
+				<li>BucketWater</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -1055,6 +1167,7 @@
 		</skillRequirements>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>BrewCoffee</defName>
 		<label>Brew Coffee</label>
@@ -1075,10 +1188,19 @@
 				</filter>
 				<count>12</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>RawCoffee</li>
+				<li>BucketWater</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -1086,6 +1208,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>BrewEspresso</defName>
 		<label>Brew Espresso</label>
@@ -1106,10 +1229,19 @@
 				</filter>
 				<count>12</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>BucketWater</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>RawCoffee</li>
+				<li>BucketWater</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
@@ -1117,6 +1249,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeCigarillos</defName>
 		<label>Roll Cigarillos</label>
@@ -1148,6 +1281,7 @@
 		</products>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeCigars</defName>
 		<label>Roll Cigars</label>
@@ -1179,6 +1313,7 @@
 		</products>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakePieBlueberry</defName>
 		<label>Bake blueberry pie</label>
@@ -1230,6 +1365,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakePiePumpkin</defName>
 		<label>Bake Pumpkin Pie</label>
@@ -1281,6 +1417,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeChocolate</defName>
 		<label>make chocolate</label>
@@ -1298,7 +1435,7 @@
 						<li>Rawcocoa</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>15</count>
 			</li>
 			<li>
 				<filter>
@@ -1306,7 +1443,7 @@
 						<li>Sugar</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>10</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -1323,6 +1460,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeCaramel</defName>
 		<label>Make Caramel</label>
@@ -1356,6 +1494,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeHardcandy</defName>
 		<label>Make Hardcandy</label>
@@ -1389,6 +1528,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeTaffy</defName>
 		<label>Make Taffy</label>
@@ -1422,6 +1562,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+	
 	<RecipeDef>
 		<defName>MakeCookies</defName>
 		<label>bake cookie</label>

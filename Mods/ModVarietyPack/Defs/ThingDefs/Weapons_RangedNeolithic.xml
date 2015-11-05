@@ -302,6 +302,146 @@
 
 
 
+  <!-- ==== fishing harpoon modified ===== -->
+  <ThingDef Name="BaseWeaponFishIndustry" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <selectable>True</selectable>
+    <graphicData>
+      <OnGroundRandomRotateAngle>35</OnGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Neolithic</techLevel>
+    <weaponTags>
+      <li>Neolithic</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li>
+        <compClass>CompArt</compClass>
+        <nameMaker>NamerMeleeWeapon</nameMaker>
+        <descriptionMaker>ArtWeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smelt</effectWorking>
+    </recipeMaker>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+
+  <ThingDef Name="BaseProjectileFishIndustry" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>arrow</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseProjectileFishIndustry">
+    <defName>Harpoon_Thrown</defName>
+    <label>harpoon (thrown)</label>
+    <graphicData>
+      <texPath>Weapons/Harpoon_Projectile</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Stab</damageDef>
+      <DamageAmountBase>16</DamageAmountBase>
+      <Speed>52</Speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponFishIndustry">
+    <defName>Harpoon</defName>
+    <label>harpoon</label>
+    <description>A harpoon. Designed to hunt big fishes, it can serve other purposes.</description>
+    <graphicData>
+      <texPath>Weapons/Harpoon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+    <costList>
+      <WoodPlank>60</WoodPlank>
+      <SteelBar>10</SteelBar>
+    </costList>
+    <statBases>
+      <WorkToMake>1400</WorkToMake>
+      <MarketValue>90</MarketValue>
+      <AccuracyTouch>0.92</AccuracyTouch>
+      <AccuracyShort>0.83</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>NeolithicRanged</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Harpoon_Thrown</projectileDef>
+        <warmupTicks>80</warmupTicks>
+        <range>8</range>
+        <soundCast>Interact_BeatFire</soundCast>
+      </li>
+    </verbs>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>TableWeapon</li>
+      </recipeUsers>
+      <effectWorking>Smelt</effectWorking>
+    </recipeMaker>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Plants>
-
-
   <!-- 
     Veg Scaling: 
 
@@ -31,98 +29,86 @@
 
 
     Weed disabled for now!
+
+
+    Growing:
+
+    Base        cultivated soil    (Plants: fertilityMin 1.0, fertilityFactorGrowthRate 0.05)
+    Tier I      fertilized soil    (Plants: fertilityMin 1.5, fertilityFactorGrowthRate 0.03)
+    Tier II     watered soil       (Plants: fertilityMin 2.0, fertilityFactorGrowthRate 0.02)
+    Tier III    enriched soil      (Plants: fertilityMin 2.5, fertilityFactorGrowthRate 0.01)
+    Tier IV     =Tier III
+    All Ressource Plants = Tier I
+
   -->
-
-
-  <ThingDef Name="PlantWithSeedsBase" Abstract="True">
-        <category>Plant</category>
-        <thingClass>SeedsPlease.PlantWithSeeds</thingClass>
-        <altitudeLayer>LowPlant</altitudeLayer>
-        <useHitPoints>True</useHitPoints>
-        <statBases>
-            <Flammability>0.8</Flammability>
-        </statBases>
-		<tickerType>Long</tickerType>
-		<selectable>False</selectable>
-		<neverMultiSelect>True</neverMultiSelect>
-		<drawerType>MapMeshOnly</drawerType>
-		<graphicData>
-		<shaderType>CutoutPlant</shaderType>
-		</graphicData>
-        <plant>
-		  <harvestDestroys>true</harvestDestroys>
-		  <soundHarvesting>Harvest_Standard</soundHarvesting>
-		  <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
-		  <sowWork>150</sowWork>
-		  <fertilityMin>0.5</fertilityMin>
-		  <fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate>
-		  <topWindExposure>0.1</topWindExposure>
-		  <visualSizeRange>
-			<min>0.3</min>
-			<max>1.00</max>
-		  </visualSizeRange>
-        </plant>
-		<genome>
-			<baseSeedChance>
-				<min>1.0</min>
-				<max>1.0</max>
-			</baseSeedChance>
-			<addSeedChance>
-				<min>0.25</min>
-				<max>0.25</max>
-			</addSeedChance>
-		</genome>
+  <ThingDef Name="PlantBase" Abstract="True">
+    <category>Plant</category>
+    <thingClass>Plant</thingClass>
+    <altitudeLayer>LowPlant</altitudeLayer>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <Flammability>0.8</Flammability>
+    </statBases>
+    <tickerType>Long</tickerType>
+    <selectable>False</selectable>
+    <neverMultiSelect>True</neverMultiSelect>
+    <drawerType>MapMeshOnly</drawerType>
+    <graphicData>
+      <shaderType>CutoutPlant</shaderType>
+    </graphicData>
+    <plant>
+      <harvestDestroys>true</harvestDestroys>
+      <soundHarvesting>Harvest_Standard</soundHarvesting>
+      <soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
+      <sowWork>150</sowWork>
+      <!--<fertilityMin>0.5</fertilityMin>
+      <fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate>-->
+      <topWindExposure>0.1</topWindExposure>
+      <visualSizeRange>
+        <min>0.3</min>
+        <max>1.00</max>
+      </visualSizeRange>
+    </plant>
   </ThingDef>
-
-
-
-
-
   
-
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
-    <defName>PlantAppletree</defName>
-    <label>apple tree</label>
-    <description>A fruit bearing tree that grows apples and is not destroyed when picked.</description>
+  <ThingDef ParentName="PlantBase" Name="TreeBase" Abstract="True">
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+    </statBases>
+    <description>A tree.</description>
     <altitudeLayer>BuildingTall</altitudeLayer>
-  <graphicData>
-      <texPath>Plant/appleTree</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    <shadowData>
+    <selectable>true</selectable>
+    <fillPercent>0.35</fillPercent>
+    <graphicData>
+      <shadowData>
         <volume>(0.3, 0.3, 0.3)</volume>
       </shadowData>
     </graphicData>
-  <passability>PassThroughOnly</passability>
+    <passability>PassThroughOnly</passability>
     <pathCost>130</pathCost>
-  <ingestible>
+    <ingestible>
       <preferability>Plant</preferability>
-      <nutrition>0.50</nutrition>
+      <nutrition>1.50</nutrition>
     </ingestible>
-  <selectable>true</selectable>
-  <fillPercent>0.35</fillPercent>
-    <statBases>
-      <Beauty>5</Beauty>
-    <MaxHitPoints>300</MaxHitPoints>
-    </statBases>
     <plant>
       <soundHarvesting>Harvest_Tree</soundHarvesting>
       <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
-      <growDays>18</growDays>
       <sowWork>1500</sowWork>
       <harvestWork>800</harvestWork>
-      <harvestDestroys>false</harvestDestroys>
-      <harvestedThingDef>Rawapple</harvestedThingDef>
+      <harvestDestroys>true</harvestDestroys>
       <harvestYield>50</harvestYield>
+      <harvestTag>Standard</harvestTag>
+      <harvestMinGrowth>0.40</harvestMinGrowth>
+      <harvestFailable>false</harvestFailable>
+      <blockAdjacentSow>true</blockAdjacentSow>
       <sowTags>
         <li>Ground</li>
       </sowTags>
-      <harvestMinGrowth>0.40</harvestMinGrowth>
-      <blockAdjacentSow>true</blockAdjacentSow>
       <visualSizeRange>
-        <min>.75</min>
-        <max>1.5</max>
+        <min>1.3</min>
+        <max>2.0</max>
       </visualSizeRange>
-    <fertilityMin>0.3</fertilityMin>
+      <fertilityMin>0.3</fertilityMin>
       <topWindExposure>0.25</topWindExposure>
       <fertilityFactorGrowthRate>0.5</fertilityFactorGrowthRate>
       <wildClusterSizeRange>
@@ -131,11 +117,45 @@
       </wildClusterSizeRange>
       <wildClusterRadius>8</wildClusterRadius>
     </plant>
-  <SeedDef>AppleSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
-    <defName>Plantbamboo</defName>
+
+
+
+
+
+
+  <ThingDef ParentName="TreeBase">
+    <defName>PlantAppletree</defName>
+    <label>apple tree</label>
+    <description>A fruit bearing tree that grows apples and is not destroyed when picked.</description>
+    <graphicData>
+      <texPath>Plant/appleTree</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Beauty>5</Beauty>
+    </statBases>
+    <plant>      
+      <growDays>18</growDays>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
+      <harvestWork>800</harvestWork>
+      <harvestDestroys>false</harvestDestroys>
+      <harvestedThingDef>Rawapple</harvestedThingDef>
+      <harvestYield>50</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <visualSizeRange>
+        <min>1</min>
+        <max>1.5</max>
+      </visualSizeRange>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+  <defName>Plantbamboo</defName>
     <label>bamboo</label>
     <description>A fast growing grass and wood alternative.</description>
     <statBases>
@@ -150,7 +170,7 @@
     <pathCost>10</pathCost>
     <ingestible>
       <preferability>Plant</preferability>
-      <nutrition>0.01</nutrition>
+      <nutrition>0.40</nutrition>
     </ingestible>
     <plant>
       <dieIfLeafless>true</dieIfLeafless>
@@ -158,50 +178,37 @@
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>Bamboo</harvestedThingDef>
       <harvestDestroys>true</harvestDestroys>
+      <growDays>8</growDays>
       <harvestYield>10</harvestYield>
       <sowTags>
         <li>Ground</li>
         <li>Hydroponic</li>
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
-      <growDays>10</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>BambooSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="TreeBase">
     <defName>PlantBananaTree</defName>
     <label>banana tree</label>
-  <altitudeLayer>BuildingTall</altitudeLayer>
     <description>A fruit bearing tree that grows banana and is not destroyed when picked.</description>
     <graphicData>
       <texPath>Plant/bananaTree</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    <shadowData>
-        <volume>(0.3, 0.3, 0.3)</volume>
-      </shadowData>
     </graphicData>
-  <passability>PassThroughOnly</passability>
-    <pathCost>130</pathCost>
-  <ingestible>
-      <preferability>Plant</preferability>
-      <nutrition>0.50</nutrition>
-    </ingestible>
-  <selectable>true</selectable>
-  <fillPercent>0.35</fillPercent>
     <statBases>
-    <MaxHitPoints>300</MaxHitPoints>
       <Beauty>5</Beauty>
     </statBases>
-    <plant>
-      <soundHarvesting>Harvest_Tree</soundHarvesting>
-      <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
+    <plant>      
       <growDays>17</growDays>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
       <harvestWork>800</harvestWork>
       <harvestDestroys>false</harvestDestroys>
       <harvestedThingDef>Rawbanana</harvestedThingDef>
@@ -209,25 +216,14 @@
       <sowTags>
         <li>Ground</li>
       </sowTags>
-      <harvestMinGrowth>0.40</harvestMinGrowth>
-      <blockAdjacentSow>true</blockAdjacentSow>
       <visualSizeRange>
-        <min>.75</min>
+        <min>1</min>
         <max>1.5</max>
       </visualSizeRange>
-      <fertilityMin>0.3</fertilityMin>
-      <topWindExposure>0.25</topWindExposure>
-      <fertilityFactorGrowthRate>0.5</fertilityFactorGrowthRate>
-      <wildClusterSizeRange>
-        <min>8</min>
-        <max>30</max>
-      </wildClusterSizeRange>
-      <wildClusterRadius>8</wildClusterRadius>
     </plant>
-  <SeedDef>BananaSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantbean</defName>
     <label>beans</label>
     <description>Common bean cooked up in many ways.</description>
@@ -243,7 +239,7 @@
     <pathCost>10</pathCost>
     <ingestible>
       <preferability>Plant</preferability>
-      <nutrition>0.20</nutrition>
+      <nutrition>0.40</nutrition>
     </ingestible>
     <plant>
       <dieIfLeafless>true</dieIfLeafless>
@@ -258,16 +254,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>12.7</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.02</fertilityFactorGrowthRate>
+      <fertilityMin>2.0</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>BeanSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantblueberry</defName>
     <label>blueberry bush</label>
     <description>Blue colored berry that grows in bushes.</description>
@@ -275,19 +271,17 @@
       <MaxHitPoints>85</MaxHitPoints>
       <Beauty>1</Beauty>
     </statBases>
-  <graphicData>
-    <texPath>Plant/blueberryPlant</texPath>
-    <graphicClass>Graphic_Single</graphicClass>
-  </graphicData>
-    <selectable>true</selectable>
-    <pathCost>10</pathCost>
+    <graphicData>
+      <texPath>Plant/blueberryPlant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>    
     <ingestible>
       <preferability>Plant</preferability>
-      <nutrition>0.20</nutrition>
+      <nutrition>0.40</nutrition>
     </ingestible>
     <plant>
       <dieIfLeafless>true</dieIfLeafless>
-      <shootsSeeds>false</shootsSeeds>
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>Rawblueberry</harvestedThingDef>
       <harvestDestroys>true</harvestDestroys>
@@ -298,16 +292,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>5.1</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.03</fertilityFactorGrowthRate>
+      <fertilityMin>1.5</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>BlueberrySeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantCarrot</defName>
     <label>carrots</label>
     <description>A long orange vegetable that can be tricky to grow.</description>
@@ -315,15 +309,15 @@
       <MaxHitPoints>85</MaxHitPoints>
       <Beauty>1</Beauty>
     </statBases>
-  <graphicData>
-    <texPath>Plant/CarrotPlant</texPath>
-    <graphicClass>Graphic_Single</graphicClass>
-  </graphicData>
+    <graphicData>
+      <texPath>Plant/CarrotPlant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <selectable>true</selectable>
     <pathCost>10</pathCost>
     <ingestible>
       <preferability>Plant</preferability>
-      <nutrition>0.20</nutrition>
+      <nutrition>0.40</nutrition>
     </ingestible>
     <plant>
       <dieIfLeafless>true</dieIfLeafless>
@@ -338,16 +332,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>4.7</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>CarrotSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantcloudberry</defName>
     <label>cloudberry bush</label>
     <description>A berry bush that grows well in cold climates.</description>
@@ -377,16 +371,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>4.9</growDays>
-      <fertilityFactorGrowthRate>0.6</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.02</fertilityFactorGrowthRate>
+      <fertilityMin>2.0</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>CloudberrySeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantcocoa</defName>
     <label>cocoa plant</label>
     <description>Cocoa beans are refined into chocolate.</description>
@@ -394,15 +388,15 @@
       <MaxHitPoints>85</MaxHitPoints>
       <Beauty>1</Beauty>
     </statBases>
-  <graphicData>
-    <texPath>Plant/cocoaPlant</texPath>
-    <graphicClass>Graphic_Single</graphicClass>
-  </graphicData>
+    <graphicData>
+      <texPath>Plant/cocoaPlant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <selectable>true</selectable>
     <pathCost>10</pathCost>
     <ingestible>
       <preferability>Plant</preferability>
-      <nutrition>0.20</nutrition>
+      <nutrition>0.40</nutrition>
     </ingestible>
     <plant>
       <dieIfLeafless>true</dieIfLeafless>
@@ -410,23 +404,23 @@
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>Rawcocoa</harvestedThingDef>
       <harvestDestroys>true</harvestDestroys>
-      <harvestYield>2</harvestYield>
+      <harvestYield>10</harvestYield>
       <sowTags>
         <li>Ground</li>
         <li>Hydroponic</li>
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
-      <growDays>5.41</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <growDays>10</growDays>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>CocoaSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantCoffee</defName>
     <label>coffee plant</label>
     <description>A green, leafy planet yielding red cherries. These cherries contain seeds which, when ground, can be brewed into a tasty beverage.</description>
@@ -434,14 +428,14 @@
       <MaxHitPoints>85</MaxHitPoints>
       <Beauty>2</Beauty>
     </statBases>
-  <graphicData>
+    <graphicData>
     <texPath>Plant/CoffeePlant</texPath>
-  <graphicClass>Graphic_Single</graphicClass>
-  </graphicData>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
     <selectable>true</selectable>
     <pathCost>12</pathCost>
     <ingestible>
-      <nutrition>0.20</nutrition>
+      <nutrition>.2</nutrition>
       <preferability>Plant</preferability>
     </ingestible>
     <plant>
@@ -457,16 +451,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>12</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>CoffeeSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantCorn</defName>
     <label>corn</label>
     <description>A large grain plant which produces ears of delicious yellow seeds. Takes a relatively long time to grow, but yields lots of food, takes a long time to spoil, and can be happily eaten raw. Needs fertile soil to grow well.</description>
@@ -497,16 +491,16 @@
       </sowTags>
       <topWindExposure>0.35</topWindExposure>
       <growDays>13.7</growDays>
-      <fertilityFactorGrowthRate>0.6</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.4</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>CornSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantCotton</defName>
     <label>cotton bush</label>
     <description>Yields cotton, a fine plant fiber used to make cloth.</description>
@@ -537,16 +531,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>5.41</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>CottonSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="TreeBase">
     <defName>DateTree</defName>
     <label>date palm tree</label>
     <description>A fruit bearing tree that grows dates and is not destroyed when picked.</description>
@@ -559,6 +553,8 @@
     </statBases>
     <plant>
       <growDays>17</growDays>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
       <harvestWork>800</harvestWork>
       <harvestDestroys>false</harvestDestroys>
       <shootsSeeds>false</shootsSeeds>
@@ -572,10 +568,9 @@
         <max>1.5</max>
       </visualSizeRange>
     </plant>
-    <SeedDef>DateSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantDevilstrand</defName>
     <label>devilstrand mushroom</label>
     <description>This fragile mushroom was genetically engineered to produce a silk net of the highest grade. Long rumored to have mystical properties, it owes its name to the greed it inspires in people.</description>
@@ -606,16 +601,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>25</growDays>
-      <fertilityFactorGrowthRate>0.6</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.0</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>DevilstrandSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Planteggplant</defName>
     <label>eggplant</label>
     <description>Purple variety of the eggplant. Bitter when eaten raw. </description>
@@ -646,16 +641,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>5.7</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.03</fertilityFactorGrowthRate>
+      <fertilityMin>1.5</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>EggplantSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantgooseberry</defName>
     <label>gooseberry bush</label>
     <description>A berry bush that grows well in cold climates.</description>
@@ -685,16 +680,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>4.7</growDays>
-      <fertilityFactorGrowthRate>0.6</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>GooseberrySeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="TreeBase">
     <defName>FigTree</defName>
     <label>fig tree</label>
     <description>A fruit bearing tree that grows figs and is not destroyed when picked.</description>
@@ -707,6 +702,8 @@
     </statBases>
     <plant>
       <growDays>18</growDays>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
       <harvestWork>800</harvestWork>
       <harvestDestroys>false</harvestDestroys>
       <harvestedThingDef>Rawfig</harvestedThingDef>
@@ -719,10 +716,9 @@
         <max>1.5</max>
     </visualSizeRange>
     </plant>
-    <SeedDef>FigSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantgrape</defName>
     <label>grape vine</label>
     <description>A sweet small fruit that grows in small viney bushes.</description>
@@ -760,22 +756,21 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>15</growDays>
-      <fertilityFactorGrowthRate>0.6</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
-      <fertilityMin>0.3</fertilityMin>
       <wildClusterSizeRange>
         <min>8</min>
         <max>30</max>
       </wildClusterSizeRange>
       <wildClusterRadius>8</wildClusterRadius>
     </plant>
-  <SeedDef>GrapeSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantHaygrass</defName>
     <label>haygrass</label>
     <description>A mixture of nutrient-rich grasses which yield large amounts of hay. Hay is edible for animals, but not humans.</description>
@@ -807,16 +802,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>10.0</growDays>
-      <fertilityFactorGrowthRate>0.6</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>0.8</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>HaySeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantHops</defName>
     <label>hops</label>
     <description>A flowering plant that yields hops, and essential ingredient in beer.</description>
@@ -847,16 +842,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>5.41</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>HopsSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantLettuce</defName>
     <label>lettuce</label>
     <description>A large, easily grown vegetable that's excellent for salads.</description>
@@ -887,16 +882,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>3.4</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>LettuceSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantmushroom</defName>
     <label>mushrooms</label>
     <description>This robust mushroom has been genetically engineered and cultivated to produce a filling meat substitute. </description>
@@ -927,16 +922,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>5.2</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.02</fertilityFactorGrowthRate>
+      <fertilityMin>2.0</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>MushroomSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantoats</defName>
     <label>oats</label>
     <description>A cereal grain.</description>
@@ -967,16 +962,16 @@
       </sowTags>
       <topWindExposure>0.35</topWindExposure>
       <growDays>10</growDays>
-      <fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>OatsSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantOmniGel</defName>
     <label>OmniGel Plant</label>
     <description>An OmniGel plant.</description>
@@ -1007,16 +1002,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>8</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-    <SeedDef>OmniGelSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantonion</defName>
     <label>onions</label>
     <description>Warning can make you cry!</description>
@@ -1047,16 +1042,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>3.9</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.02</fertilityFactorGrowthRate>
+      <fertilityMin>2.0</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>OnionSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="TreeBase">
     <defName>PlantorangeTree</defName>
     <label>orange tree</label>
     <description>A fruit bearing tree that grows oranges and is not destroyed when picked.</description>
@@ -1083,6 +1078,8 @@
       <soundHarvesting>Harvest_Tree</soundHarvesting>
       <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
       <growDays>16</growDays>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
       <harvestWork>800</harvestWork>
       <harvestDestroys>false</harvestDestroys>
       <harvestedThingDef>Raworange</harvestedThingDef>
@@ -1096,19 +1093,16 @@
         <min>.75</min>
         <max>1.5</max>
       </visualSizeRange>
-      <fertilityMin>0.3</fertilityMin>
       <topWindExposure>0.25</topWindExposure>
-      <fertilityFactorGrowthRate>0.5</fertilityFactorGrowthRate>
       <wildClusterSizeRange>
         <min>8</min>
         <max>30</max>
       </wildClusterSizeRange>
       <wildClusterRadius>8</wildClusterRadius>
     </plant>
-  <SeedDef>OrangeSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="TreeBase">
     <defName>PlantPeachTree</defName>
     <label>peach tree</label>
     <description>A fruit bearing tree that grows peaches and is not destroyed when picked.</description>
@@ -1147,19 +1141,18 @@
         <min>.75</min>
         <max>1.5</max>
       </visualSizeRange>
-    <fertilityMin>0.3</fertilityMin>
       <topWindExposure>0.25</topWindExposure>
-      <fertilityFactorGrowthRate>0.5</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
       <wildClusterSizeRange>
         <min>8</min>
         <max>30</max>
       </wildClusterSizeRange>
       <wildClusterRadius>8</wildClusterRadius>
     </plant>
-  <SeedDef>PeachSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantpineapple</defName>
     <label>pineapple plant</label>
     <description>Think skin fruit that grows a top a bush.</description>
@@ -1200,7 +1193,8 @@
       <topWindExposure>0.1</topWindExposure>
       <growDays>4.9</growDays>
       <harvestWork>800</harvestWork>
-      <fertilityFactorGrowthRate>0.5</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.02</fertilityFactorGrowthRate>
+      <fertilityMin>2.0</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
@@ -1212,10 +1206,9 @@
       </wildClusterSizeRange>
       <wildClusterRadius>8</wildClusterRadius>
     </plant>
-  <SeedDef>PineappleSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantPotato</defName>
     <label>potato plant</label>
     <description>A simple, highly nutritious tuber. Grows well even in somewhat poor soil. Harvests quickly. A strong, versatile crop.</description>
@@ -1246,16 +1239,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>6.2</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>PotatoSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantpumpkin</defName>
     <label>pumpkins</label>
     <description>Large orange version of the squash plant. Often carved to ward off ghosts.</description>
@@ -1286,16 +1279,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>13.2</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.03</fertilityFactorGrowthRate>
+      <fertilityMin>1.5</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>PumpkinSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantRice</defName>
     <label>rice</label>
     <description>A low grain plant that thrives in rich soil and yields food fast, but is not nice to eat uncooked.</description>
@@ -1327,16 +1320,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>4.9</growDays>
-      <fertilityFactorGrowthRate>0.6</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>0.8</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>RiceSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantSpectago</defName>
     <label>spectago flowers</label>
     <description>One of the few known breeds of photochromic flowers, each petal of the Spectago changes color throughout the month depending on how much light they are exposed to. Used to brew spectago tea.</description>
@@ -1373,16 +1366,16 @@
       <growMinGlow>0.3</growMinGlow>
       <topWindExposure>0.1</topWindExposure>
       <growDays>10</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-    <SeedDef>SpectagoSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantsquash</defName>
     <label>squash</label>
     <description>Yellow variety of the squash family.</description>
@@ -1413,16 +1406,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>4.4</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.03</fertilityFactorGrowthRate>
+      <fertilityMin>1.5</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>SquashSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantStrawberry</defName>
     <label>strawberries</label>
     <description>A fragile but tasty fruit. Delicious even when raw.</description>
@@ -1453,16 +1446,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>5.30</growDays>
-      <fertilityFactorGrowthRate>0.6</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>StrawberrySeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantsugarcane</defName>
     <label>sugarcane</label>
     <description>Cane plant refines into sugar.</description>
@@ -1499,10 +1492,9 @@
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-    <SeedDef>SugarcaneSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantTea</defName>
     <label>tea plant</label>
     <description>A green leafy plant, who's leaves can be brewed into a tasty beverage.</description>
@@ -1533,16 +1525,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>10</growDays>
-      <fertilityFactorGrowthRate>1</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-    <SeedDef>TeaSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantTobacco</defName>
     <label>tobacco</label>
     <description>A green, leafy member of the nighshade family. Harvests quickly. Demanding to grow, but an enjoyable crop.</description>
@@ -1573,16 +1565,16 @@
       </sowTags>
       <topWindExposure>0.15</topWindExposure>
       <growDays>15</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>TobaccoSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantTomato</defName>
     <label>tomato vine</label>
     <description>Distinctive red fruit that grows best in rich soil.</description>
@@ -1613,16 +1605,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>12.2</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.05</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>TomatoSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantwatermelon</defName>
     <label>watermelons</label>
     <description>This fruit is rich in vitamins A and C and can be eaten raw or cooked in a variety of ways.</description>
@@ -1653,13 +1645,13 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>4.7</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
+      <fertilityMin>2.5</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>WatermelonSeeds</SeedDef>
   </ThingDef>
 
   <!--<ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
@@ -1705,7 +1697,7 @@
     <SeedDef>HempSeeds</SeedDef>
   </ThingDef>-->
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>Plantwheat</defName>
     <label>wheat</label>
     <description>Wheat is a cereal grain, harvested into raw wheat.</description>
@@ -1736,16 +1728,16 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>5.41</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.25</min>
         <max>1.00</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>WheatSeeds</SeedDef>
   </ThingDef>
 
-  <ThingDef Class="SeedsPlease.ThingDef_PlantWithSeeds" ParentName="PlantWithSeedsBase">
+  <ThingDef ParentName="PlantBase">
     <defName>PlantXerigium</defName>
     <label>xerigium</label>
     <description>This plant was selectively bred for centuries by settlers. It is sometimes also called &quot;healer's hand&quot; by tribespeople - a nickname it owes to its five major medicinal virtues.</description>
@@ -1776,14 +1768,12 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <growDays>13</growDays>
-      <fertilityFactorGrowthRate>0.4</fertilityFactorGrowthRate>
+      <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
+      <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>
         <min>0.3</min>
         <max>1.0</max>
       </visualSizeRange>
     </plant>
-  <SeedDef>XerigiumSeeds</SeedDef>
   </ThingDef>
-
-   
 </Plants>

@@ -890,6 +890,267 @@
 
 
 
+	<!-- === hydoponics === -->
+	<!-- === first one overrides vanilla with 1x1 pot, adds glower, so no sunlamp needed === -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>HydroponicsBasin</defName>
+    <label>hydroponics basin 1x1</label>
+    <thingClass>Building_PlantGrower</thingClass>
+    <graphicData>
+      <texPath>Buildings/Hydroponics/PlantPot1x1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <constructEffect>ConstructMetal</constructEffect>
+    <fillPercent>0.30</fillPercent>
+    <statBases>
+      <WorkToMake>2800</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <description>For growing food. Hydroponics basins grow plants quickly. The basin requires constant power to work, does not need a sun lamp, but plants will die if power is cut.</description>
+    <size>(1,1)</size>
+    <costList>
+      <AluBar>25</AluBar>
+      <Mulch>20</Mulch>
+      <Glass>10</Glass>
+    </costList>
+    <inspectorTabs>
+      <li>ITab_Growing</li>
+    </inspectorTabs>
+    <fertility>3.5</fertility>
+    <building>
+      <defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
+      <plantsDestroyWithMe>true</plantsDestroyWithMe>
+      <sowTag>Hydroponic</sowTag>
+    </building>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <transmitsPower>true</transmitsPower>
+        <startElectricalFires>true</startElectricalFires>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+        <basePowerConsumption>75</basePowerConsumption>
+      </li>
+      <li>
+        <compClass>CompGlower</compClass>
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>2</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>
+    <researchPrerequisite>Hydroponics</researchPrerequisite>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>ProductionFood</designationCategory>
+    <staticSunShadowHeight>0.03</staticSunShadowHeight>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Hydroponics2x1Basin</defName>
+    <label>hydroponics basin 2x1</label>
+    <thingClass>Building_PlantGrower</thingClass>
+    <graphicData>
+      <texPath>Buildings/Hydroponics/PlantPot2x1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <constructEffect>ConstructMetal</constructEffect>
+    <fillPercent>0.30</fillPercent>
+    <statBases>
+      <WorkToMake>2800</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <description>For growing food. Hydroponics basins grow plants quickly. The basin requires constant power to work, does not need a sun lamp, but plants will die if power is cut.</description>
+    <size>(2,1)</size>
+    <costList>
+      <AluBar>50</AluBar>
+      <Mulch>40</Mulch>
+      <Glass>20</Glass>
+    </costList>
+    <inspectorTabs>
+      <li>ITab_Growing</li>
+    </inspectorTabs>
+    <fertility>3.5</fertility>
+    <building>
+      <defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
+      <plantsDestroyWithMe>true</plantsDestroyWithMe>
+      <sowTag>Hydroponic</sowTag>
+    </building>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <transmitsPower>true</transmitsPower>
+        <startElectricalFires>true</startElectricalFires>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+        <basePowerConsumption>150</basePowerConsumption>
+      </li>
+      <li>
+        <compClass>CompGlower</compClass>
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>2</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>
+    <researchPrerequisite>Hydroponics</researchPrerequisite>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>ProductionFood</designationCategory>
+    <staticSunShadowHeight>0.03</staticSunShadowHeight>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Hydroponics3x1Basin</defName>
+    <label>hydroponics basin 3x1</label>
+    <thingClass>Building_PlantGrower</thingClass>
+    <graphicData>
+      <texPath>Buildings/Hydroponics/PlantPot3x1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <constructEffect>ConstructMetal</constructEffect>
+    <fillPercent>0.30</fillPercent>
+    <statBases>
+      <WorkToMake>2800</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <description>For growing food. Hydroponics basins grow plants quickly. The basin requires constant power to work, does not need a sun lamp, but plants will die if power is cut.</description>
+    <size>(3,1)</size>
+    <costList>
+      <AluBar>75</AluBar>
+      <Mulch>60</Mulch>
+      <Glass>30</Glass>
+    </costList>
+    <inspectorTabs>
+      <li>ITab_Growing</li>
+    </inspectorTabs>
+    <fertility>3.5</fertility>
+    <building>
+      <defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
+      <plantsDestroyWithMe>true</plantsDestroyWithMe>
+      <sowTag>Hydroponic</sowTag>
+    </building>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <transmitsPower>true</transmitsPower>
+        <startElectricalFires>true</startElectricalFires>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+        <basePowerConsumption>225</basePowerConsumption>
+      </li>
+      <li>
+        <compClass>CompGlower</compClass>
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>2</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>
+    <researchPrerequisite>Hydroponics</researchPrerequisite>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>ProductionFood</designationCategory>
+    <staticSunShadowHeight>0.03</staticSunShadowHeight>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Hydroponics2x2Basin</defName>
+    <label>hydroponics basin 2x2</label>
+    <thingClass>Building_PlantGrower</thingClass>
+    <graphicData>
+      <texPath>Buildings/Hydroponics/PlantPot2x2</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>60</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>
+    <constructEffect>ConstructMetal</constructEffect>
+    <fillPercent>0.30</fillPercent>
+    <statBases>
+      <WorkToMake>2800</WorkToMake>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <description>For growing food. Hydroponics basins grow plants quickly. The basin requires constant power to work, does not need a sun lamp, but plants will die if power is cut.</description>
+    <size>(2,2)</size>
+    <costList>
+      <AluBar>100</AluBar>
+      <Mulch>80</Mulch>
+      <Glass>40</Glass>
+    </costList>
+    <inspectorTabs>
+      <li>ITab_Growing</li>
+    </inspectorTabs>
+    <fertility>3.5</fertility>
+    <building>
+      <defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
+      <plantsDestroyWithMe>true</plantsDestroyWithMe>
+      <sowTag>Hydroponic</sowTag>
+    </building>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <transmitsPower>true</transmitsPower>
+        <startElectricalFires>true</startElectricalFires>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+        <basePowerConsumption>300</basePowerConsumption>
+      </li>
+      <li>
+        <compClass>CompGlower</compClass>
+        <overlightRadius>7.0</overlightRadius>
+        <glowRadius>4</glowRadius>
+        <glowColor>(370,370,370,0)</glowColor>
+      </li>
+    </comps>
+    <researchPrerequisite>Hydroponics</researchPrerequisite>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>ProductionFood</designationCategory>
+    <staticSunShadowHeight>0.03</staticSunShadowHeight>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+ 
+
+
 
 
 	<ThingDef ParentName="BuildingBase">
@@ -1777,7 +2038,7 @@
 		<recipes>
 		<li>MakeFishingRod</li>
 		</recipes>
-			<!--ALL vanilla melee+ranged neolithic CR modified + fishing rod-->
+			<!--ALL vanilla melee+ranged neolithic CR modified + fishing rod, harpoon-->
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
@@ -1988,7 +2249,7 @@
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<Size>(3,6)</Size>
-		<DesignationCategory>ProductionResources</DesignationCategory>
+		<DesignationCategory>ProductionFood</DesignationCategory>
 		<Passability>Standable</Passability>
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(0,0,0)</interactionCellOffset>
@@ -2010,8 +2271,7 @@
 		<terrainAffordanceNeeded>Any</terrainAffordanceNeeded>
 		<altitudeLayer>FloorEmplacement</altitudeLayer>
 		<CostList>
-			<WoodLog>150</WoodLog>
-			<Steel>50</Steel>
+			<WoodPlank>150</WoodPlank>
 		</CostList>
 		<UseHitPoints>True</UseHitPoints>
 		<statBases>
@@ -2029,15 +2289,6 @@
 				<compClass>CompForbiddable</compClass>
 			</li>
 		</comps>
-		<!--<recipes>
-	  <li>MakeFishingRod</li>
-	</recipes>-->
-		<inspectorTabs>
-			<li>ITab_Bills</li>
-		</inspectorTabs>
-		<building>
-			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-		</building>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -2081,7 +2332,7 @@
 			<Flammability>0.4</Flammability>
 		</statBases>
 		<size>(3,3)</size>
-		<DesignationCategory>ProductionResources</DesignationCategory>
+		<DesignationCategory>ProductionFood</DesignationCategory>
 		<passability>Impassable</passability>
 		<hasInteractionCell>True</hasInteractionCell>
 		<interactionCellOffset>(-1,0,-2)</interactionCellOffset>
@@ -2188,295 +2439,12 @@
 			<Electronics>5</Electronics>
 		</costList>
 		<neverMultiSelect>true</neverMultiSelect>
-		<designationCategory>ProductionResources</designationCategory>
+		<designationCategory>ProductionFood</designationCategory>
 		<staticSunShadowHeight>0.3</staticSunShadowHeight>
 		<surfaceType>Item</surfaceType>
 		<constructEffect>ConstructMetal</constructEffect>
 		<researchPrerequisite>Hydroponics</researchPrerequisite>
 	</ThingDef>
-
-
-
-
-
-
-
-
-
-
-
-	<!-- === hydoponics === -->
-	<!-- === first one overrides vanilla with 1x1 pot, adds glower, so no sunlamp needed === -->
-	<ThingDef ParentName="BuildingBase">
-		<defName>HydroponicsBasin</defName>
-		<label>hydroponics basin 1x1</label>
-		<thingClass>Building_PlantGrower</thingClass>
-		<graphicData>
-			<texPath>Buildings/Hydroponics/PlantPot1x1</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(1,1)</drawSize>
-		</graphicData>
-		<altitudeLayer>FloorEmplacement</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<pathCost>60</pathCost>
-		<castEdgeShadows>true</castEdgeShadows>
-		<constructEffect>ConstructMetal</constructEffect>
-		<fillPercent>0.30</fillPercent>
-		<statBases>
-			<WorkToMake>2800</WorkToMake>
-			<MaxHitPoints>180</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-			<Cleanliness>-3</Cleanliness>
-		</statBases>
-		<description>For growing food. Hydroponics basins grow plants quickly. The basin requires constant power to work, does not need a sun lamp, but plants will die if power is cut.</description>
-		<size>(1,1)</size>
-		<costList>
-			<AluBar>25</AluBar>
-			<Mulch>20</Mulch>
-			<Glass>10</Glass>
-		</costList>
-		<inspectorTabs>
-			<li>ITab_Growing</li>
-		</inspectorTabs>
-		<fertility>3.5</fertility>
-		<building>
-			<defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
-			<plantsDestroyWithMe>true</plantsDestroyWithMe>
-			<sowTag>Hydroponic</sowTag>
-		</building>
-		<comps>
-			<li>
-				<compClass>CompForbiddable</compClass>
-			</li>
-			<li>
-				<compClass>CompPowerTrader</compClass>
-				<transmitsPower>true</transmitsPower>
-				<startElectricalFires>true</startElectricalFires>
-				<soundPowerOn>PowerOnSmall</soundPowerOn>
-				<soundPowerOff>PowerOffSmall</soundPowerOff>
-				<basePowerConsumption>75</basePowerConsumption>
-			</li>
-			<li>
-				<compClass>CompGlower</compClass>
-				<overlightRadius>7.0</overlightRadius>
-				<glowRadius>2</glowRadius>
-				<glowColor>(370,370,370,0)</glowColor>
-			</li>
-		</comps>
-		<researchPrerequisite>Hydroponics</researchPrerequisite>
-		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<designationCategory>ProductionFood</designationCategory>
-		<staticSunShadowHeight>0.03</staticSunShadowHeight>
-	</ThingDef>
-
-	<ThingDef ParentName="BuildingBase">
-		<defName>Hydroponics2x1Basin</defName>
-		<label>hydroponics basin 2x1</label>
-		<thingClass>Building_PlantGrower</thingClass>
-		<graphicData>
-			<texPath>Buildings/Hydroponics/PlantPot2x1</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(2,1)</drawSize>
-		</graphicData>
-		<altitudeLayer>FloorEmplacement</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<pathCost>60</pathCost>
-		<castEdgeShadows>true</castEdgeShadows>
-		<constructEffect>ConstructMetal</constructEffect>
-		<fillPercent>0.30</fillPercent>
-		<statBases>
-			<WorkToMake>2800</WorkToMake>
-			<MaxHitPoints>180</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-			<Cleanliness>-3</Cleanliness>
-		</statBases>
-		<description>For growing food. Hydroponics basins grow plants quickly. The basin requires constant power to work, does not need a sun lamp, but plants will die if power is cut.</description>
-		<size>(2,1)</size>
-		<costList>
-			<AluBar>50</AluBar>
-			<Mulch>40</Mulch>
-			<Glass>20</Glass>
-		</costList>
-		<inspectorTabs>
-			<li>ITab_Growing</li>
-		</inspectorTabs>
-		<fertility>3.5</fertility>
-		<building>
-			<defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
-			<plantsDestroyWithMe>true</plantsDestroyWithMe>
-			<sowTag>Hydroponic</sowTag>
-		</building>
-		<comps>
-			<li>
-				<compClass>CompForbiddable</compClass>
-			</li>
-			<li>
-				<compClass>CompPowerTrader</compClass>
-				<transmitsPower>true</transmitsPower>
-				<startElectricalFires>true</startElectricalFires>
-				<soundPowerOn>PowerOnSmall</soundPowerOn>
-				<soundPowerOff>PowerOffSmall</soundPowerOff>
-				<basePowerConsumption>150</basePowerConsumption>
-			</li>
-			<li>
-				<compClass>CompGlower</compClass>
-				<overlightRadius>7.0</overlightRadius>
-				<glowRadius>2</glowRadius>
-				<glowColor>(370,370,370,0)</glowColor>
-			</li>
-		</comps>
-		<researchPrerequisite>Hydroponics</researchPrerequisite>
-		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<designationCategory>ProductionFood</designationCategory>
-		<staticSunShadowHeight>0.03</staticSunShadowHeight>
-	</ThingDef>
-
-	<ThingDef ParentName="BuildingBase">
-		<defName>Hydroponics3x1Basin</defName>
-		<label>hydroponics basin 3x1</label>
-		<thingClass>Building_PlantGrower</thingClass>
-		<graphicData>
-			<texPath>Buildings/Hydroponics/PlantPot3x1</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(3,1)</drawSize>
-		</graphicData>
-		<altitudeLayer>FloorEmplacement</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<pathCost>60</pathCost>
-		<castEdgeShadows>true</castEdgeShadows>
-		<constructEffect>ConstructMetal</constructEffect>
-		<fillPercent>0.30</fillPercent>
-		<statBases>
-			<WorkToMake>2800</WorkToMake>
-			<MaxHitPoints>180</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-			<Cleanliness>-3</Cleanliness>
-		</statBases>
-		<description>For growing food. Hydroponics basins grow plants quickly. The basin requires constant power to work, does not need a sun lamp, but plants will die if power is cut.</description>
-		<size>(3,1)</size>
-		<costList>
-			<AluBar>75</AluBar>
-			<Mulch>60</Mulch>
-			<Glass>30</Glass>
-		</costList>
-		<inspectorTabs>
-			<li>ITab_Growing</li>
-		</inspectorTabs>
-		<fertility>3.5</fertility>
-		<building>
-			<defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
-			<plantsDestroyWithMe>true</plantsDestroyWithMe>
-			<sowTag>Hydroponic</sowTag>
-		</building>
-		<comps>
-			<li>
-				<compClass>CompForbiddable</compClass>
-			</li>
-			<li>
-				<compClass>CompPowerTrader</compClass>
-				<transmitsPower>true</transmitsPower>
-				<startElectricalFires>true</startElectricalFires>
-				<soundPowerOn>PowerOnSmall</soundPowerOn>
-				<soundPowerOff>PowerOffSmall</soundPowerOff>
-				<basePowerConsumption>225</basePowerConsumption>
-			</li>
-			<li>
-				<compClass>CompGlower</compClass>
-				<overlightRadius>7.0</overlightRadius>
-				<glowRadius>2</glowRadius>
-				<glowColor>(370,370,370,0)</glowColor>
-			</li>
-		</comps>
-		<researchPrerequisite>Hydroponics</researchPrerequisite>
-		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<designationCategory>ProductionFood</designationCategory>
-		<staticSunShadowHeight>0.03</staticSunShadowHeight>
-	</ThingDef>
-
-	<ThingDef ParentName="BuildingBase">
-		<defName>Hydroponics2x2Basin</defName>
-		<label>hydroponics basin 2x2</label>
-		<thingClass>Building_PlantGrower</thingClass>
-		<graphicData>
-			<texPath>Buildings/Hydroponics/PlantPot2x2</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<drawSize>(2,2)</drawSize>
-		</graphicData>
-		<altitudeLayer>FloorEmplacement</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<pathCost>60</pathCost>
-		<castEdgeShadows>true</castEdgeShadows>
-		<constructEffect>ConstructMetal</constructEffect>
-		<fillPercent>0.30</fillPercent>
-		<statBases>
-			<WorkToMake>2800</WorkToMake>
-			<MaxHitPoints>180</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-			<Cleanliness>-3</Cleanliness>
-		</statBases>
-		<description>For growing food. Hydroponics basins grow plants quickly. The basin requires constant power to work, does not need a sun lamp, but plants will die if power is cut.</description>
-		<size>(2,2)</size>
-		<costList>
-			<AluBar>100</AluBar>
-			<Mulch>80</Mulch>
-			<Glass>40</Glass>
-		</costList>
-		<inspectorTabs>
-			<li>ITab_Growing</li>
-		</inspectorTabs>
-		<fertility>3.5</fertility>
-		<building>
-			<defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
-			<plantsDestroyWithMe>true</plantsDestroyWithMe>
-			<sowTag>Hydroponic</sowTag>
-		</building>
-		<comps>
-			<li>
-				<compClass>CompForbiddable</compClass>
-			</li>
-			<li>
-				<compClass>CompPowerTrader</compClass>
-				<transmitsPower>true</transmitsPower>
-				<startElectricalFires>true</startElectricalFires>
-				<soundPowerOn>PowerOnSmall</soundPowerOn>
-				<soundPowerOff>PowerOffSmall</soundPowerOff>
-				<basePowerConsumption>300</basePowerConsumption>
-			</li>
-			<li>
-				<compClass>CompGlower</compClass>
-				<overlightRadius>7.0</overlightRadius>
-				<glowRadius>4</glowRadius>
-				<glowColor>(370,370,370,0)</glowColor>
-			</li>
-		</comps>
-		<researchPrerequisite>Hydroponics</researchPrerequisite>
-		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-		<designationCategory>ProductionFood</designationCategory>
-		<staticSunShadowHeight>0.03</staticSunShadowHeight>
-	</ThingDef>
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2719,6 +2687,48 @@
 	  <li>PlaceWorker_ShowFacilitiesConnections</li>
 	</placeWorkers>
 	<researchPrerequisite>Chemlab</researchPrerequisite>    
+  </ThingDef>
+
+
+
+
+  <ThingDef ParentName="BuildingBase">
+    <DefName>Well</DefName>
+    <label>well</label>
+    <ThingClass>Building_WorkTable</ThingClass>
+    <Description>A well. Fill water from it into buckets to carry it around.</Description>
+    <graphicData>
+      <texPath>Buildings/Well</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <stuffCategories>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.6</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <Size>(2,2)</Size>
+    <DesignationCategory>ProductionResources</DesignationCategory>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+	  <li>MakeBucketWater</li>
+	</recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <researchPrerequisite>Hydroponics</researchPrerequisite>
   </ThingDef>
 
 
