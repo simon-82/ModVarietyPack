@@ -233,6 +233,12 @@
 		</ThingCategoryDef>
 
 		<ThingCategoryDef>
+			<defName>Pants</defName>
+			<label>pants</label>
+			<parent>Apparel</parent>
+		</ThingCategoryDef>
+
+		<ThingCategoryDef>
 			<defName>Headgear</defName>
 			<label>headgear</label>
 			<parent>Apparel</parent>
