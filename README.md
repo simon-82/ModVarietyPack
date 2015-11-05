@@ -1,18 +1,29 @@
-![ModVarietyPack](http://i.imgur.com/AoDloic.png)
+![ModVarietyPack](http://i.imgur.com/AoDloic.png)    
 A modpack for Rimworld by Ludeon Studios
 
-The current version of this modpack is compatible with Version Alpha12d of Rimworld    
-and can be downloaded [here](https://github.com/simon-82/ModVarietyPack/releases)
+This modpack is compatible with version Alpha12d of Rimworld.        
+The latest release can be downloaded **[here](https://github.com/simon-82/ModVarietyPack/releases)**    
+The modpack needs to be run in English.    
+Using additional mods (not included in this modpack) is not recommended.    
 
 ____       
 **Installation:**  
 * Delete all files in your [gamefolder]/Mods folder except /Core   
 * Create a shortcut and add *-savedatafolder SaveData* to the end of the command line used to launch the game.    
 So on Windows it'll look something like this:    
-*C:/RimWorld/RimWorld914Win.exe -savedatafolder SaveData*    
+*C:/RimWorld/RimWorld914Win.exe -savedatafolder SaveData*   
+Having problems with this? Here it is how to do it step by step:     
+  * Right click the rimworld.exe file.    
+  * Select "create shortcut".    
+  * Now right click the new shortcut you created and select "properties".    
+  * In this window, the first line you can edit reads something like "C:/RimWorld/RimWorld914Win.exe"    
+It may be different, depending on where you installed the game.     
+  5. Change this line to be like this "C:/RimWorld/RimWorld914Win.exe -savedatafolder SaveData"   
+Again: The part before " -savedatafolder SaveData" can be different for you.   
 * If you used this shortcut before, delete all files inside [gamefolder]/SaveData
 * Start the game once with the newly created shortcut. This will create a fresh set of config files.
 * Open up the ModPack .zip file and extract both folders *Mods* and *SaveData* directly into your [gamefolder] folder.
+* Start the game with the newly created shortcut.
 
 ____     
 **BIG thanks to:** 
