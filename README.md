@@ -12,14 +12,15 @@ ____
 * Create a shortcut and add *-savedatafolder SaveData* to the end of the command line used to launch the game.    
 So on Windows it'll look something like this:    
 *C:/RimWorld/RimWorld914Win.exe -savedatafolder SaveData*   
-Having problems with this? Here it is how to do it step by step:     
+Having problems with this? Here it is how to do it step by step (for Windows):     
   * Right click the rimworld.exe file.    
-  * Select "create shortcut".    
-  * Now right click the new shortcut you created and select "properties".    
-  * In this window, the first line you can edit reads something like "C:/RimWorld/RimWorld914Win.exe"    
+  * Select *create shortcut*.    
+  * Now right click the new shortcut you created and select *properties*.    
+In this window, the first line you can edit reads something like *C:/RimWorld/RimWorld914Win.exe*    
 It may be different, depending on where you installed the game.     
-  5. Change this line to be like this "C:/RimWorld/RimWorld914Win.exe -savedatafolder SaveData"   
-Again: The part before " -savedatafolder SaveData" can be different for you.   
+  5. Change this line to be like this    
+*C:/RimWorld/RimWorld914Win.exe -savedatafolder SaveData*   
+Again, the part before *-savedatafolder SaveData* can be different for you.   
 * If you used this shortcut before, delete all files inside [gamefolder]/SaveData
 * Start the game once with the newly created shortcut. This will create a fresh set of config files.
 * Open up the ModPack .zip file and extract both folders *Mods* and *SaveData* directly into your [gamefolder] folder.
