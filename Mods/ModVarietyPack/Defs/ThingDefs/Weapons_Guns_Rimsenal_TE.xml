@@ -365,7 +365,7 @@
         <projectileDef>Bullet_Nova</projectileDef>
         <warmupTicks>152</warmupTicks>
         <range>80</range>
-        <burstShotCount>12</burstShotCount>
+        <burstShotCount>5</burstShotCount>
         <minRange>5</minRange>
         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
         <soundCast>Nova</soundCast>
@@ -386,7 +386,7 @@
       </li>
       <li Class="Combat_Realism.CompProperties_Reloader">
         <compClass>Combat_Realism.CompReloader</compClass>
-        <roundPerMag>36</roundPerMag>
+        <roundPerMag>20</roundPerMag>
         <reloadTick>750</reloadTick>
       </li>
     </comps>

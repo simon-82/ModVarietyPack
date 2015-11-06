@@ -14,21 +14,4 @@
     </relevantSkills>
   </WorkTypeDef>
 
-  <WorkTypeDef>
-    <defName>Warden</defName>
-    <labelShort>Negotiate</labelShort>
-    <pawnLabel>Diplomat</pawnLabel>
-    <gerundLabel>Negotiating</gerundLabel>
-    <description>Diplomats deal with prisoners and visitors.</description>
-    <verb>Handle</verb>
-    <naturalPriority>1100</naturalPriority>
-    <requireCapableColonist>true</requireCapableColonist>
-    <relevantSkills>
-      <li>Social</li>
-    </relevantSkills>
-    <workTags>
-      <li>Social</li>
-    </workTags>
-  </WorkTypeDef>
-
 </WorkTypeDefs>

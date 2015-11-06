@@ -2,6 +2,8 @@
 <FactionDefs>
 
 
+  <!-- Vanilla Factions -->
+
 
   <!-- Normal humanlike factions -->
   <FactionDef>
@@ -9,7 +11,7 @@
 		<label>outlander town</label>
     <description>A small community of survivors.\n\nThese people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They usually work with simple mechanical tools and defend themselves with advanced gunpowder weapons.\n\nThey are concerned with the practical matters of trade, trust, and survival.</description>
     <pawnsPlural>outlanders</pawnsPlural>
-    <requiredCountAtGameStart>4</requiredCountAtGameStart>
+    <requiredCountAtGameStart>3</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
     <raidCommonality>100</raidCommonality>
     <canSiege>true</canSiege>
@@ -69,7 +71,7 @@
 		<label>pirate band</label>
     <description>A gang of bandits.\n\nPirates don't sow, they don't build, and they rarely trade. They enrich themselves mostly by raiding and robbing the more productive groups in the area.\n\nTheir technology level depends mostly on who they've managed to steal from recently. Mostly they carry gunpowder weapons, though the luckier ones may have advanced energy weapons, and some may just like to stab people at close range.</description>
     <pawnsPlural>pirates</pawnsPlural>
-    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <requiredCountAtGameStart>2</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
     <raidCommonality>100</raidCommonality>
     <canSiege>true</canSiege>
@@ -170,7 +172,7 @@
 		<label>tribe</label>
     <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nSome tribes are more aggressive than others; many are open to trade and alliances, even with strange peoples like yourselves. Close cooperation or recruitment will be very difficult because of the vast sociotechnological and linguistic gap between the tribals and yourselves.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.</description>
     <pawnsPlural>tribespeople</pawnsPlural>
-    <requiredCountAtGameStart>6</requiredCountAtGameStart>
+    <requiredCountAtGameStart>3</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
     <raidCommonality>100</raidCommonality>
     <canStageAttacks>true</canStageAttacks>
@@ -211,6 +213,216 @@
     </pawnGroupMakers>
     <homeIconPath>World/FactionHomes/DefaultHome</homeIconPath>
     <homeIconColor>(50,200,50)</homeIconColor>
+  </FactionDef>
+
+
+
+
+
+
+
+
+  <!-- New Factions -->
+  <FactionDef>
+    <defName>FPC</defName>
+    <label>Federation Peacekeeper Corps</label>
+    <description>Once upon a time, in the core sector of the galaxy, there was a fair and great interstellar empire, now only referred to as "the Federation". The Federation Peacekeeper Corps were it's honorable guardian. However, during the long and grim Mechanoid war, things have changed. Freedom and fairness were trampled under the name of safety. Oppression and tyranny were in the name of order.
+
+And the long war against the Federation itself began.
+
+A rare occurrence of interstellar war, this civil war tore the Federation apart. Now the Federation and it's infamous peacekeeper corps are nothing but an another historical footnote.
+
+However, on the isolated rimworlds, the name of the Federation and it's merciless hounds means a totally different thing...</description>
+    <pawnsPlural>Federation soldiers</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <factionNameMaker>NamerFPCBase</factionNameMaker>
+    <backstoryCategory>Civil</backstoryCategory>
+    <raidCommonality>70</raidCommonality>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>false</hidden>
+    <canFlee>false</canFlee>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Mediator</leaderTitle>
+    <hairTags>
+     <li>Urban</li>
+    </hairTags>
+    <techLevel>Ultra</techLevel>
+    <earliestRaidDays>30</earliestRaidDays>
+    <startingGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </startingGoodwill>
+    <mustStartOneEnemy>true</mustStartOneEnemy>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </naturalColonyGoodwill>
+    <pawnGroupMakers>
+      <li>
+        <options>
+          <li>
+            <selectionWeight>100</selectionWeight>
+            <kind>FPCTP</kind>
+          </li>
+          <li>
+            <selectionWeight>100</selectionWeight>
+            <kind>FPCSB</kind>
+          </li>
+          <li>
+            <selectionWeight>20</selectionWeight>
+            <kind>FPCPrecusor</kind>
+          </li>
+          <li>
+            <selectionWeight>50</selectionWeight>
+            <kind>FPCPK</kind>
+          </li>
+          <li>
+            <selectionWeight>30</selectionWeight>
+            <kind>FPCPMa</kind>
+          </li>
+          <li>
+            <selectionWeight>10</selectionWeight>
+            <kind>FPCPeacebuilder</kind>
+          </li>
+          <li>
+            <selectionWeight>10</selectionWeight>
+            <kind>FPCPB</kind>
+          </li>
+          <li>
+            <selectionWeight>10</selectionWeight>
+            <kind>FPCPMo</kind>
+          </li>
+          <li>
+            <selectionWeight>20</selectionWeight>
+            <kind>FPCServant</kind>
+          </li>
+          <li>
+            <selectionWeight>5</selectionWeight>
+            <kind>FPCCM</kind>
+          </li>
+          <li>
+            <selectionWeight>5</selectionWeight>
+            <kind>FPCFederator</kind>
+          </li>
+          <li>
+            <selectionWeight>5</selectionWeight>
+            <kind>FPCOrdinator</kind>
+          </li>
+          <li>
+            <selectionWeight>5</selectionWeight>
+            <kind>FPCArranger</kind>
+          </li>
+          <li>
+            <selectionWeight>1</selectionWeight>
+            <kind>FPCPrime</kind>
+          </li>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>Things/FedIcon</homeIconPath>
+    <homeIconColor>(255,255,255)</homeIconColor>
+  </FactionDef>
+
+
+
+
+
+
+
+  <FactionDef>
+    <defName>NorbalTribe</defName>
+    <label>norbal</label>
+    <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the norbals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nSome clans are more aggressive than others; many are open to trade and alliances, even with strange peoples like yourselves. Close cooperation or recruitment will be very difficult because of the vast sociotechnological and linguistic gap between the norbals and yourselves.\n\nDespite their apparent technological weakness, the norbals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.</description>
+    <pawnsPlural>norbals</pawnsPlural>
+    <requiredCountAtGameStart>3</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <raidCommonality>100</raidCommonality>
+    <canStageAttacks>true</canStageAttacks>
+    <canFlee>false</canFlee>
+    <startingGoodwill>
+      <min>-90</min>
+      <max>30</max>
+    </startingGoodwill>
+    <factionNameMaker>NamerFactionNorbal</factionNameMaker>
+    <pawnNameMaker>NamerPersonNorbal</pawnNameMaker>
+    <techLevel>Medieval</techLevel>
+    <backstoryCategory>Tribal</backstoryCategory>
+    <leaderTitle>Jarl</leaderTitle>
+    <hairTags>
+      <li>Norbal</li>
+    </hairTags>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>10</max>
+    </naturalColonyGoodwill>
+    <pawnGroupMakers>
+    <li>
+        <options>
+      <li>
+        <selectionWeight>100</selectionWeight>
+        <kind>
+          <li>NorbalWarrior</li>
+        </kind>
+      </li>
+      <li>
+        <selectionWeight>100</selectionWeight>
+        <kind>
+          <li>NorbalArcher</li>
+        </kind>
+      </li>
+      <li>
+        <selectionWeight>80</selectionWeight>
+        <kind>
+          <li>NorbalRager</li>
+        </kind>
+      </li>
+      <li>
+        <selectionWeight>90</selectionWeight>
+        <kind>
+          <li>NorbalSnorb</li>
+        </kind>
+      </li>
+      <li>
+        <selectionWeight>90</selectionWeight>
+        <kind>
+          <li>NorbalKarl</li>
+        </kind>
+      </li>
+      <li>
+        <selectionWeight>50</selectionWeight>
+        <kind>
+          <li>NorbalSage</li>
+        </kind>
+      </li>
+      <li>
+        <selectionWeight>50</selectionWeight>
+        <kind>
+          <li>NorbalGrandSage</li>
+        </kind>
+      </li>
+      <li>
+        <selectionWeight>50</selectionWeight>
+        <kind>
+          <li>NorbalHero</li>
+        </kind>
+      </li>
+      <li>
+        <selectionWeight>50</selectionWeight>
+        <kind>
+          <li>NorbalThane</li>
+        </kind>
+      </li>
+      <li>
+        <selectionWeight>80</selectionWeight>
+        <kind>
+          <li>NorbalDestroyer</li>
+        </kind>
+      </li>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/FactionHomes/DefaultHome</homeIconPath>
+    <homeIconColor>(10,100,100)</homeIconColor>
   </FactionDef>
   
 

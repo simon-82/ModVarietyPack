@@ -47,11 +47,16 @@
 		</defaultIngredientFilter>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
+	<!-- MVP Campfire recipes get redefined  
+	
 	<RecipeDef ParentName="CookMealSimple">
 		<defName>CookMealSimpleCampfire</defName>
 		<workAmount>1000</workAmount>
-		<!-- other meals use WorkToMake stat -->
-	</RecipeDef>
+		
+	</RecipeDef>-->
+
+
 	<RecipeDef>
 		<defName>CookMealFine</defName>
 		<label>cook fine meal</label>

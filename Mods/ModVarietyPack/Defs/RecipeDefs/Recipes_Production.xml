@@ -1137,7 +1137,7 @@
             <li>Silicon</li>
           </thingDefs>
         </filter>
-        <count>5</count>
+        <count>10</count>
       </li>
       <li>
         <filter>
@@ -1199,7 +1199,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
             <li>Silver</li>
           </thingDefs>
         </filter>
-        <count>10</count>
+        <count>2</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>

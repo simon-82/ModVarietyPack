@@ -2171,7 +2171,12 @@
 			<li>MakeRS_Gun_Negotiator</li>
 			<li>MakeRS_Gun_Arbitrator</li>
 			<li>MakeRS_Gun_Intercessor</li>
-			<li>MakeRS_Gun_Harmonizer</li>			
+			<li>MakeRS_Gun_Harmonizer</li>	
+			<li>MakeGun_PLRifle</li>
+			<li>MakeGun_PLPistol</li>
+			<li>MakeGun_PLSniper</li>
+			<li>MakeGun_PLCutter</li>
+			<li>MakeGun_MML</li>
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>

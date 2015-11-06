@@ -683,7 +683,7 @@
 						<li>Glass</li>
 					</thingDefs>
 				</filter>
-				<count>40</count>
+				<count>30</count>
 			</li>
 			<li>
 				<filter>
@@ -691,7 +691,7 @@
 						<li>IntegratedCircuitsBoard</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>10</count>
 			</li>
 		</ingredients>
 		<products>
@@ -706,6 +706,281 @@
 		</fixedIngredientFilter>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- === Tisiphone Enterprise Guns === -->
+	<RecipeDef>
+		<defName>MakeGun_PLRifle</defName>
+		<label>(AR) Pulse laser rifle</label>
+		<description>Make a Pulse laser rifle.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>12000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>12</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>120</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Glass</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IntegratedCircuitsBoard</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_PLRifle>1</Gun_PLRifle>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+				<li>Glass</li>
+				<li>IntegratedCircuitsBoard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_PLPistol</defName>
+		<label>(P) Pulse laser pistol</label>
+		<description>Make a Pulse laser pistol.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>10000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>12</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Glass</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IntegratedCircuitsBoard</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_PLPistol>1</Gun_PLPistol>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+				<li>Glass</li>
+				<li>IntegratedCircuitsBoard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_PLSniper</defName>
+		<label>(SR) Pulse laser long rifle</label>
+		<description>Make a Pulse laser long rifle.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>12000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>12</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>150</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Glass</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IntegratedCircuitsBoard</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_PLSniper>1</Gun_PLSniper>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+				<li>Glass</li>
+				<li>IntegratedCircuitsBoard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_PLCutter</defName>
+		<label>(SMG) Pulse projector</label>
+		<description>Make a Pulse projector.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>10000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>12</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>90</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Glass</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IntegratedCircuitsBoard</li>
+					</thingDefs>
+				</filter>
+				<count>12</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_PLCutter>1</Gun_PLCutter>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+				<li>Glass</li>
+				<li>IntegratedCircuitsBoard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_MML</defName>
+		<label>(L) Micro Missile Launcher</label>
+		<description>Make a Micro Missile Launcher.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>16000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>15</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>220</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IntegratedCircuitsBoard</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_MML>1</Gun_MML>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+				<li>IntegratedCircuitsBoard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+
+
 
 
 

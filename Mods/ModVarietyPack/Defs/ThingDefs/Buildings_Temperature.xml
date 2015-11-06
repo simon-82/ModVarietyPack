@@ -73,7 +73,10 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <recipes>
-      <li>CookMealSimpleCampfire</li>
+
+    <!-- MVP redefined recipes campfire -->
+      <li>CookMealSimple</li>
+      <li>CookMealJerky</li>
     </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
