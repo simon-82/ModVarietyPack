@@ -34,7 +34,7 @@
     <ResearchProjectDef>
 		<defName>AgricultureI</defName>
 		<label>Agriculture I</label>
-		<description>"What do you mean? These potato salads are hard work!" \n"No, no I know. I'm just saying we could build a ChemLab and use it to make some different seeds for a change. Maybe we could even plant some Xerigium and make herbal medicine." \nUnlocks: ChemLab, Fences \nPlants unlocked: Corn, Rice, Strawberry, Xerigium</description>
+		<description>"What do you mean? These potato salads are hard work!" \n"No, no I know. I'm just saying we could plant something different for a change. Maybe we could even build a ChemLab, plant some Xerigium and make herbal medicine." \nUnlocks: ChemLab, Fences \nPlants unlocked: Corn, Rice, Strawberry, Xerigium</description>
 		<totalCost>500</totalCost>
 	</ResearchProjectDef>		
 
@@ -491,7 +491,7 @@
     <ResearchProjectDef>
 		<defName>GeothermalPower</defName>
 		<label>Power III</label>
-		<description>"Did you see this hole in the ground over there?" \n"It looks like there is steam coming out of it." \n"I wonder if we could make use that somehow..." \nUnlocks: Geothermal Generator \nAlso unlocks: Battery efficiency +15%</description>
+		<description>"Did you see this hole in the ground over there?" \n"It looks like there is steam coming out of it." \n"I wonder if we could make use of that somehow..." \nUnlocks: Geothermal Generator \nAlso unlocks: Battery efficiency +15%</description>
 		<totalCost>1500</totalCost>
 		<prerequisites>
 			<li>PowerII</li>
@@ -501,7 +501,7 @@
 		<ResearchProjectDef>
 			<defName>PlasmaPower</defName>
 			<label>Plasma Power</label>
-			<description>Unlocks: Small Plasma Generator, Plasma Geothermal Generator</description>
+			<description>"It's plasma, you doesn't like plasma?" \n"This thing gets pretty hot and it needs to be charged before it produces power. I don't know about that." \nUnlocks: Small Plasma Generator, Plasma Geothermal Generator</description>
 			<totalCost>1500</totalCost>
 			<prerequisites>
 				<li>GeothermalPower</li>
@@ -511,7 +511,7 @@
 		<ResearchProjectDef>
 			<defName>NuclearPower</defName>
 			<label>Nuclear Power</label>
-			<description>Unlocks: Radioisotope Thermoelectric Generator, Advanced Stirling Radioisotope Generator</description>
+			<description>"I saw you brought back some kind of green stone last time you went out for mining steel ore." \n"Ah, yes it's Uranium. I'll build a nuclear reactor with it. It's totally save." \n"Ok sure, why not. I'm sure nothing terrible happens." \nUnlocks: Radioisotope Thermoelectric Generator, Advanced Stirling Radioisotope Generator</description>
 			<totalCost>1500</totalCost>
 			<prerequisites>
 				<li>GeothermalPower</li>
@@ -521,7 +521,7 @@
 		<ResearchProjectDef>
 			<defName>NaturalPower</defName>
 			<label>Natural Power</label>
-			<description>Unlocks: Gause Wind Turbine, Laser Solar Plant</description>
+			<description>"Now that we got the basics down with wind and solar energy, why not upgrade the turbines and panels we have?" \n"Nah, I'm not in the mood for working today - I'll just play some horseshoes." Unlocks: Gause Wind Turbine, Laser Solar Plant</description>
 			<totalCost>1500</totalCost>
 			<prerequisites>
 				<li>GeothermalPower</li>

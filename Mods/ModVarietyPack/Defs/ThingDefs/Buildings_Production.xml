@@ -1550,7 +1550,6 @@
 		<surfaceType>Item</surfaceType>
 		<recipes>
 			<li>MakeHerbalmedicine</li>
-			<!--+ all seeds-->
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>

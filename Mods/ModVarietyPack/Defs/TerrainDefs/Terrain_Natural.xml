@@ -220,7 +220,7 @@
   <TerrainDef>
     <defName>SoilCultivated</defName>
     <label>cultivated soil</label>
-    <texturePath>Floors/SoilCultivated</texturePath>
+    <texturePath>Terrain/SoilCultivated</texturePath>
     <Description>Cultivated soil for growing plants.</Description>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>50</RenderPrecedence>
@@ -246,7 +246,7 @@
   <TerrainDef Class="CommunityCoreLibrary.TerrainWithComps">
     <defName>SoilFertilized</defName>
     <label>fertilized soil</label>
-    <texturePath>Floors/SoilFertilized</texturePath>
+    <texturePath>Terrain/SoilFertilized</texturePath>
     <Description>Fertilized soil. For plants that need more nutrition to grow. Soil must be cultivated first.</Description>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>50</RenderPrecedence>
@@ -287,7 +287,7 @@
   <TerrainDef Class="CommunityCoreLibrary.TerrainWithComps">
     <defName>SoilWatered</defName>
     <label>watered soil</label>
-    <texturePath>Floors/SoilWatered</texturePath>
+    <texturePath>Terrain/SoilWatered</texturePath>
     <Description>Watered soil. Provides even better conditions for plants. Soil must be fertilized first.</Description>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>50</RenderPrecedence>
@@ -328,7 +328,7 @@
   <TerrainDef Class="CommunityCoreLibrary.TerrainWithComps">
     <defName>SoilEnriched</defName>
     <label>enriched soil</label>
-    <texturePath>Floors/SoilEnriched</texturePath>
+    <texturePath>Terrain/SoilEnriched</texturePath>
     <Description>Enriched soil. Added fertilizer and water make this the best soil for growing plants. Soil must at least be cultivated first.</Description>
     <EdgeType>FadeRough</EdgeType>
     <RenderPrecedence>50</RenderPrecedence>

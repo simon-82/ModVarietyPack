@@ -16,19 +16,6 @@
 		<parent>Root</parent>
 	</ThingCategoryDef>
 
-		<!-- ADDED -->
-
-		<ThingCategoryDef>
-				<defName>SeedsCategory</defName>
-				<label>Seeds</label>
-				<parent>Resources</parent>
-				<iconPath>Ui/Icons/ThingCategories/PlantFoodRaw</iconPath>
-		</ThingCategoryDef>
-
-		<!--  -->
-
-
-
 		<ThingCategoryDef>
 			<defName>Foods</defName>
 			<label>foods</label>
