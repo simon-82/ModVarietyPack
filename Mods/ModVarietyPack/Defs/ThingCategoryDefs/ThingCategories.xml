@@ -247,25 +247,8 @@
 						<parent>BodyPartsAndImplants</parent>
 					</ThingCategoryDef>
 					
-					<ThingCategoryDef>
-						<defName>SurrogateOrgans</defName>
-						<label>surrogate organs</label>
-						<parent>BodyPartsAndImplants</parent>
-					</ThingCategoryDef>
-
-					<ThingCategoryDef>
-						<defName>SyntheticOrgans</defName>
-						<label>synthetic organs</label>
-						<parent>BodyPartsAndImplants</parent>
-					</ThingCategoryDef>
-
-
-
-					 <!--  -->
-					
-
-
-
+			<!--  -->
+			
 					
 	<ThingCategoryDef>
 		<defName>Chunks</defName>
