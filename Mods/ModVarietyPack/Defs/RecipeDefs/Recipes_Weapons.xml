@@ -255,6 +255,78 @@
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
 
+	<RecipeDef>
+		<defName>MakeGun_IncendiaryLauncher</defName>
+		<label>(L) Make Incendiary Launcher</label>
+		<description>Make an Incendiary Launcher.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>10000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>12</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>170</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_IncendiaryLauncher>1</Gun_IncendiaryLauncher>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_RPG7_PA</defName>
+		<label>(L) Make RPG-7</label>
+		<description>Make an RPG-7.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>9000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>11</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>160</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_RPG7_PA>1</Gun_RPG7_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
 
 
 
@@ -698,6 +770,122 @@
 		</fixedIngredientFilter>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_Mosbearg500_PA</defName>
+		<label>(S) Make Mosbearg 500</label>
+		<description>Make a Mosbearg 500.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>6000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>6</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>95</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_Mosbearg500_PA>1</Gun_Mosbearg500_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_Saiga12K030_PA</defName>
+		<label>(S) Make Saiga 12K030</label>
+		<description>Make a Saiga 12K030.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>6000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>110</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_Saiga12K030_PA>1</Gun_Saiga12K030_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_USAS12_PA</defName>
+		<label>(S) Make USAS 12</label>
+		<description>Make an USAS 12.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>8000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>110</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_USAS12_PA>1</Gun_USAS12_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+
+
+
+
+
+
+
 
 
 

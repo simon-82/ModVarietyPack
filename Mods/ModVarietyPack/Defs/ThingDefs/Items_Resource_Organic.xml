@@ -561,9 +561,6 @@
     <graphicData>
       <texPath>Items/mushroom</texPath>
     </graphicData>
-    <thingCategories>
-      <li>MeatRaw</li>
-    </thingCategories>
     <statBases>
       <MarketValue>5</MarketValue>
     </statBases>

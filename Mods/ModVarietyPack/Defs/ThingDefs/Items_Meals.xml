@@ -454,9 +454,6 @@
       <soundEat>Meal_Eat</soundEat>
       <isMeat>true</isMeat>
     </ingestible>
-    <thingCategories>
-      <li>MeatRaw</li>
-    </thingCategories>
   </ThingDef>
 
 

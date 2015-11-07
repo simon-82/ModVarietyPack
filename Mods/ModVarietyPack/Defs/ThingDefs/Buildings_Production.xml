@@ -1990,6 +1990,7 @@
 		<surfaceType>Item</surfaceType>
 		<recipes>
 			<li>MakeCloth</li>
+			<li>RecycleApparel</li>
 			<!-- <li>MakeDevilstrandCloth</li>
 			<li>MakeSynthreadCloth</li>
 			<li>MakeHyperweaveCloth</li> via reseach textileII -->
@@ -2122,7 +2123,7 @@
 				<operationalMode>InUse</operationalMode>
 			</li>
 		</comps>
-		<researchPrerequisite>WeaponCraftingII</researchPrerequisite>
+		<researchPrerequisite>WeaponCraftingI</researchPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
