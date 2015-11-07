@@ -428,7 +428,6 @@
 				<filter>
 					<categories>
 						<li>MeatRaw</li>
-						<li>FoodFreshFish</li>
 					</categories>
 				</filter>
 				<count>10</count>
@@ -440,13 +439,11 @@
 		<fixedIngredientFilter>
 			<categories>
 				<li>MeatRaw</li>
-				<li>FoodFreshFish</li>
 			</categories>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<categories>
 				<li>MeatRaw</li>
-				<li>FoodFreshFish</li>
 			</categories>
 			<exceptedThingDefs>
 				<li>Human_Meat</li>
@@ -454,6 +451,7 @@
 		</defaultIngredientFilter>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeBread</defName>
 		<label>Bake Bread</label>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TerrainDefs>
 
-  <!-- Vanilla modified all to be Fertility 0.5 -->
+  <!-- Vanilla modified all to be Fertility <1 -->
 
   <TerrainDef>
     <defName>Sand</defName>
@@ -44,7 +44,7 @@
       <li>Diggable</li>
     </affordances>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0.5</Fertility>
+    <Fertility>0.8</Fertility>
     <TakeFootprints>True</TakeFootprints>
   </TerrainDef>
 
@@ -67,7 +67,7 @@
       <li>Diggable</li>
     </affordances>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0.5</Fertility>
+    <Fertility>0.7</Fertility>
     <TakeFootprints>True</TakeFootprints>
   </TerrainDef>
 
@@ -89,7 +89,7 @@
       <li>Diggable</li>
     </affordances>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0.5</Fertility>
+    <Fertility>0.9</Fertility>
     <TakeFootprints>True</TakeFootprints>
   </TerrainDef>
 
@@ -148,7 +148,7 @@
       <li>Diggable</li>
     </affordances>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0.5</Fertility>
+    <Fertility>0.7</Fertility>
     <TakeFootprints>True</TakeFootprints>
   </TerrainDef>
 
@@ -170,7 +170,7 @@
       <li>GrowSoil</li>
       <li>Diggable</li>
     </affordances>
-    <Fertility>0.5</Fertility>
+    <Fertility>0.9</Fertility>
     <TakeFootprints>True</TakeFootprints>
     <acceptFilth>true</acceptFilth>
     <avoidWander>false</avoidWander>
@@ -194,7 +194,7 @@
       <li>Diggable</li>
     </affordances>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>0.00</Fertility>
+    <Fertility>0</Fertility>
     <TakeFootprints>True</TakeFootprints>
   </TerrainDef>
 

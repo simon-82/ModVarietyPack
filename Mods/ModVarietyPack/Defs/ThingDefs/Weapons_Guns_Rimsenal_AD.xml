@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ThingDefs>
 
-  <!-- Arms Dynamics nerfed -->
+  <!-- Arms Dynamics nerfed !minRange max 1 !!! Otherwise cant get close when hunting -->
 
 
   <ThingDef Name="BaseGun" Abstract="True">
@@ -49,8 +49,8 @@
       </li>
     </comps>
     <smeltProducts>
-      <Steel>20</Steel>
-      <Plasteel>20</Plasteel>
+      <SteelBar>20</SteelBar>
+      <AluBar>20</AluBar>
     </smeltProducts>
   </ThingDef>
 
@@ -133,7 +133,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>RS_Bullet_Pacificator</projectileDef>
         <burstShotCount>3</burstShotCount>
-        <minRange>3</minRange>
+        <minRange>1</minRange>
         <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
         <warmupTicks>114</warmupTicks>
         <range>73</range>
@@ -245,7 +245,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>RS_Bullet_Arbitrator</projectileDef>
         <burstShotCount>10</burstShotCount>
-        <minRange>5</minRange>
+        <minRange>1</minRange>
         <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
         <warmupTicks>150</warmupTicks>
         <range>73</range>
@@ -302,7 +302,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>RS_Bullet_Intercessor</projectileDef>
         <warmupTicks>145</warmupTicks>
-        <minRange>10</minRange>
+        <minRange>1</minRange>
         <range>110</range>
         <soundCast>RS_ShotIntercessor</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
@@ -357,7 +357,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>RS_Bullet_Harmonizer</projectileDef>
         <warmupTicks>225</warmupTicks>
-        <minRange>5</minRange>
+        <minRange>1</minRange>
         <range>39</range>
          <targetParams>
           <canTargetLocations>true</canTargetLocations>

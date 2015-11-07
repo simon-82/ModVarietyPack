@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <Area_Cleaning>청소</Area_Cleaning>
+
+    <DesignatorAreaCleaningExpand>청소구역 확장</DesignatorAreaCleaningExpand>
+    <DesignatorAreaCleaningExpandDesc>정착민들은 청소구역 내의 오물을 치웁니다.</DesignatorAreaCleaningExpandDesc>
+    <DesignatorAreaCleaningClear>청소구역 제거</DesignatorAreaCleaningClear>
+    <DesignatorAreaCleaningClearDesc>청소구역을 제거합니다.</DesignatorAreaCleaningClearDesc>
+
+</LanguageData>
