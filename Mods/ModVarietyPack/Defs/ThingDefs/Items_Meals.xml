@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
 
   <ThingDef Name="MealBase" Abstract="True">
@@ -212,7 +212,7 @@
 
 
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Beer</defName>
     <label>beer</label>
     <description>The first beverage besides water ever consumed by mankind. Beer can taste good, but its main effect is intoxication. Excessive consumption can lead to alcohol addiction.</description>
@@ -222,13 +222,16 @@
     </graphicData>
     <equippedAngleOffset>-150</equippedAngleOffset>
     <rotatable>false</rotatable>
-    <stackLimit>25</stackLimit>
+    <stackLimit>24</stackLimit>
     <statBases>
       <DeteriorationRate>0</DeteriorationRate>
       <MarketValue>9</MarketValue>
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
       <preferability>NeverForNutrition</preferability>
       <nutrition>0.08</nutrition>
@@ -277,7 +280,7 @@
       <Flammability>1.0</Flammability>
     </statBases>
     <thingCategories>
-      <li>FoodMeals</li>
+      <li>Sweets</li>
     </thingCategories>
     <ingestible>
       <preferability>DesperateOnly</preferability>
@@ -514,7 +517,7 @@
 
   <!-- === joy/NeverForNutrition === -->
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Rum</defName>
     <label>bottle of rum</label>
     <description>Where's all the rum gone?</description>
@@ -531,6 +534,9 @@
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
       <nutrition>0.04</nutrition>
       <joy>0.2</joy>
@@ -548,7 +554,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Wine</defName>
     <label>bottle of wine</label>
     <description>A sweet alcohol from grapes.</description>
@@ -565,6 +571,9 @@
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
       <nutrition>0.06</nutrition>
       <joy>0.15</joy>
@@ -582,7 +591,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Applecider</defName>
     <label>bottle of apple cider</label>
     <description>A sweet alcohol from apples.</description>
@@ -599,6 +608,9 @@
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
       <nutrition>0.06</nutrition>
       <joy>0.15</joy>
@@ -616,7 +628,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Sake</defName>
     <label>bottle of sake</label>
     <description>A crisp, refreshing alcohol from rice.</description>
@@ -633,6 +645,9 @@
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
       <nutrition>0.06</nutrition>
       <joy>0.19</joy>
@@ -650,7 +665,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Strawberrywine</defName>
     <label>bottle of strawberry wine</label>
     <description>A sweet, pinkish alcohol from strawberries.</description>
@@ -667,6 +682,9 @@
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
       <nutrition>0.06</nutrition>
       <joy>0.19</joy>
@@ -684,7 +702,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Tequila</defName>
     <label>bottle of tequila</label>
     <description>A golden, agave based alcohol of storied reputation.</description>
@@ -701,6 +719,9 @@
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
       <nutrition>0.04</nutrition>
       <joy>0.25</joy>
@@ -718,7 +739,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Vodka</defName>
     <label>bottle of vodka</label>
     <description>A clear, potato based alcohol.</description>
@@ -735,6 +756,9 @@
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
       <nutrition>0.04</nutrition>
       <joy>0.2</joy>
@@ -752,7 +776,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Whiskey</defName>
     <label>bottle of whiskey</label>
     <description>A golden, corn based alcohol.</description>
@@ -769,6 +793,9 @@
       <MeleeWeapon_DamageAmount>7</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
       <nutrition>0.04</nutrition>
       <joy>0.2</joy>
@@ -786,7 +813,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealRottable">
+  <ThingDef ParentName="ResourceBase">
       <defName>Caramel</defName>
       <label>Caramel</label>
       <description>A sweet candy made from sugar</description>
@@ -799,6 +826,10 @@
          <MarketValue>25</MarketValue>
          <WorkToMake>450</WorkToMake>
       </statBases>
+    <thingCategories>
+      <li>Sweets</li>
+    </thingCategories>
+
       <ingestible>
         <preferability>NeverForNutrition</preferability>
         <isPleasureDrug>true</isPleasureDrug>
@@ -810,7 +841,7 @@
       </ingestible>
    </ThingDef>
 
-   <ThingDef ParentName="MealRottable">
+   <ThingDef ParentName="ResourceBase">
       <defName>Hardcandy</defName>
       <label>Hardcandy</label>
       <description>A hard candy made from sugar</description>
@@ -823,6 +854,9 @@
          <MarketValue>25</MarketValue>
          <WorkToMake>450</WorkToMake>
       </statBases>
+    <thingCategories>
+      <li>Sweets</li>
+    </thingCategories>
       <ingestible>
          <preferability>NeverForNutrition</preferability>
       <isPleasureDrug>true</isPleasureDrug>
@@ -834,7 +868,7 @@
       </ingestible>
    </ThingDef>
 
-   <ThingDef ParentName="MealRottable">
+   <ThingDef ParentName="ResourceBase">
       <defName>Taffy</defName>
       <label>Taffy</label>
       <description>A chewy sweet candy</description>
@@ -847,6 +881,9 @@
          <MarketValue>25</MarketValue>
          <WorkToMake>450</WorkToMake>
       </statBases>
+    <thingCategories>
+      <li>Sweets</li>
+    </thingCategories>
       <ingestible>
          <preferability>NeverForNutrition</preferability>
       <isPleasureDrug>true</isPleasureDrug>
@@ -858,7 +895,7 @@
       </ingestible>
    </ThingDef>
 
-   <ThingDef ParentName="MealRottable">
+   <ThingDef ParentName="ResourceBase">
     <defName>cookie</defName>
     <label>cookie</label>
     <description>Fresh baked cookies!</description>
@@ -867,11 +904,26 @@
       <graphicClass>Graphic_Single</graphicClass>
       </graphicData>
     <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
       <DeteriorationRate>10</DeteriorationRate>
       <MarketValue>32</MarketValue>
       <WorkToMake>600</WorkToMake>
     </statBases>
+    <tickerType>Rare</tickerType>
+    <socialPropernessMatters>true</socialPropernessMatters>
+   <comps>
+      <li Class="CompProperties_Rottable">
+        <compClass>CompRottable</compClass>
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>Sweets</li>
+    </thingCategories>
     <ingestible>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
       <preferability>NeverForNutrition</preferability>
       <nutrition>0.1</nutrition>
       <joy>0.3</joy>
@@ -881,7 +933,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealRottable">
+  <ThingDef ParentName="ResourceBase">
       <defName>PieBlueberry</defName>
       <label>blueberry pie slice</label>
       <description>A slice of fruit pie.</description>
@@ -890,10 +942,24 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
       <statBases>
-         <DeteriorationRate>10</DeteriorationRate>
          <MarketValue>25</MarketValue>
          <WorkToMake>1500</WorkToMake>
-      </statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>10</DeteriorationRate>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <socialPropernessMatters>true</socialPropernessMatters>
+   <comps>
+      <li Class="CompProperties_Rottable">
+        <compClass>CompRottable</compClass>
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>Sweets</li>
+    </thingCategories>
       <ingestible>
          <preferability>NeverForNutrition</preferability>
       <isPleasureDrug>true</isPleasureDrug>
@@ -906,7 +972,7 @@
       </ingestible>
    </ThingDef>
 
-<ThingDef ParentName="MealRottable">
+<ThingDef ParentName="ResourceBase">
       <defName>PiePumpkin</defName>
       <label>Pumpkin pie slice</label>
       <description>A slice of pumpkin pie.</description>
@@ -915,10 +981,24 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
       <statBases>
+      	<MaxHitPoints>50</MaxHitPoints>
+      	<Flammability>1.0</Flammability>
          <DeteriorationRate>10</DeteriorationRate>
          <MarketValue>25</MarketValue>
          <WorkToMake>1500</WorkToMake>
       </statBases>
+    <tickerType>Rare</tickerType>
+    <socialPropernessMatters>true</socialPropernessMatters>
+   <comps>
+      <li Class="CompProperties_Rottable">
+        <compClass>CompRottable</compClass>
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>Sweets</li>
+    </thingCategories>
       <ingestible>
          <preferability>NeverForNutrition</preferability>
       <isPleasureDrug>true</isPleasureDrug>
@@ -931,7 +1011,7 @@
       </ingestible>
    </ThingDef>
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
       <defName>CupTea</defName>
       <label>Cup of Tea</label>
       <description>A drink made from brew tea leaves.</description>
@@ -943,6 +1023,9 @@
     <statBases>
       <MarketValue>8</MarketValue>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
              <preferability>NeverForNutrition</preferability>
              <nutrition>0.06</nutrition>
@@ -976,7 +1059,7 @@
       <MarketValue>10</MarketValue>
     </statBases>
     <thingCategories>
-      <li>FoodMeals</li>
+      <li>Beverages</li>
     </thingCategories>
     <ingestible>
       <preferability>NeverForNutrition</preferability>
@@ -996,7 +1079,7 @@
   </ThingDef>
       
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>CupCoffee</defName>
     <label>cup of coffee</label>
     <description>A cup of coffee</description>
@@ -1008,6 +1091,9 @@
     <statBases>
       <MarketValue>8</MarketValue>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
              <preferability>NeverForNutrition</preferability>
              <nutrition>0.06</nutrition>
@@ -1026,7 +1112,7 @@
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>CupEspresso</defName>
     <label>espresso</label>
     <description>A cup of espresso</description>
@@ -1038,6 +1124,9 @@
     <statBases>
       <MarketValue>12</MarketValue>
     </statBases>
+    <thingCategories>
+      <li>Beverages</li>
+    </thingCategories>
     <ingestible>
              <preferability>NeverForNutrition</preferability>
              <nutrition>0.04</nutrition>
