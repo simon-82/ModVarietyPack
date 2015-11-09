@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ThingCategoryDefs>
 
 
@@ -75,7 +75,29 @@
 					</ThingCategoryDef>
 
 					<!--  -->
+		<ThingCategoryDef>
+        		<defName>CookingSupplies</defName>
+        		<label>cooking ingredents</label>
+        		<parent>Foods</parent>
+        		<resourceReadoutRoot>true</resourceReadoutRoot>
+        		<iconPath>ThingCategories/Cookingstuff</iconPath>
+	     </ThingCategoryDef>
 
+		<ThingCategoryDef>
+        		<defName>Sweets</defName>
+        		<label>Candies, Sweet Deserts</label>
+        		<parent>Foods</parent>
+        		<resourceReadoutRoot>true</resourceReadoutRoot>
+        		<iconPath>ThingCategories/Sweets</iconPath>
+	     </ThingCategoryDef>
+
+		<ThingCategoryDef>
+        		<defName>Beverages</defName>
+        		<label>Beverages</label>
+        		<parent>Foods</parent>
+        		<resourceReadoutRoot>true</resourceReadoutRoot>
+        		<iconPath>Items/beer/beer_a</iconPath>
+	     </ThingCategoryDef>
 
 			<!-- todo rename AnimalProductRaw -->
 				<ThingCategoryDef>
