@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Buildings>
 
 
@@ -875,13 +875,17 @@
     <defName>EndTable</defName>
     <label>End Table with lamp.</label>
     <description>A small table with a lamp and a drawer, great beside a bed. Uses 20 watts of power to light a small area.</description>
+    
     <graphicData>
-      <texPath>Buildings/EndTable</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-        <shadowData>
-          <volume>(0.3, 0.6, 0.3)</volume>
-        </shadowData>
+      <texPath>Buildings/EndTable/StandingLampOnTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+		<drawSize>(1.5,1.5)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
     </graphicData>
+
     <altitudeLayer>Waist</altitudeLayer>
     <rotatable>True</rotatable>
     <socialPropernessMatters>true</socialPropernessMatters>
