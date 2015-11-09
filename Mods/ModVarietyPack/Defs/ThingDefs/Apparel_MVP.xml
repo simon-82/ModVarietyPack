@@ -2952,10 +2952,10 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
 
-  <!--ArchNem© Ski™ goggles-->
+  <!--ArchNemÂ© Skiâ„¢ goggles-->
   <ThingDef ParentName="ApparelBase">
     <defName>Apparello_Brimsk</defName>
-    <label>ArchNem© Ski™ goggles</label>
+    <label>ArchNemÂ© Skiâ„¢ goggles</label>
     <description>Military grade skiing goggles, slightly stylized design. Known for it's heavy impact resistance</description>
     <graphicData>
       <texPath>Apparel/Hats/Brimsk</texPath>
@@ -2997,6 +2997,9 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
         </li>
       </options>
     </colorGenerator>
+    <thingCategories>
+      <li>Headgear</li>
+    </thingCategories>
   </ThingDef>
 
 
