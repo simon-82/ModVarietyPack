@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
   <ThingDef Abstract="True" Name="ResourceBase" >
@@ -1164,7 +1164,7 @@
       <MarketValue>1.5</MarketValue>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>Medicine</li>
     </thingCategories>
     <stackLimit>100</stackLimit>
     <stuffProps>
@@ -1213,7 +1213,7 @@
       <MarketValue>2.0</MarketValue>
     </statBases>    
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>CookingSupplies</li>
     </thingCategories>
     <stuffProps>
       <categories>
@@ -1240,7 +1240,7 @@
       <MarketValue>1.5</MarketValue>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>CookingSupplies</li>
     </thingCategories>
     <stuffProps>
       <categories>
@@ -1293,7 +1293,7 @@
       <MarketValue>2.0</MarketValue>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>CookingSupplies</li>
     </thingCategories>
     <stuffProps>
       <categories>
@@ -1320,7 +1320,7 @@
       <MarketValue>2.0</MarketValue>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>CookingSupplies</li>
     </thingCategories>
     <stuffProps>
       <categories>
@@ -1375,7 +1375,7 @@
       <MarketValue>4</MarketValue>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>CookingSupplies</li>
     </thingCategories>
     <stuffProps>
       <categories>
@@ -1403,7 +1403,7 @@
       <MarketValue>2.0</MarketValue>
     </statBases>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>CookingSupplies</li>
     </thingCategories>
     <stuffProps>
       <categories>
@@ -1440,7 +1440,7 @@
     </comps>
     <stackLimit>100</stackLimit>
     <thingCategories>
-      <li>ResourcesRaw</li>
+      <li>CookingSupplies</li>
     </thingCategories>
     <tradeTags>
       <li>Exotic</li>
@@ -1585,7 +1585,7 @@
       <MarketValue>3</MarketValue>
     </statBases>
     <thingCategories>
-      <li>Manufactured</li>
+      <li>CookingSupplies</li>
     </thingCategories>
     <stuffProps>
       <categories>
@@ -1594,7 +1594,7 @@
     </stuffProps>   
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>25</daysToRotStart>
+        <daysToRotStart>75</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
@@ -1613,7 +1613,7 @@
       <MarketValue>3</MarketValue>
     </statBases>
     <thingCategories>
-      <li>Manufactured</li>
+      <li>CookingSupplies</li>
     </thingCategories>
     <stuffProps>
       <categories>
@@ -1622,7 +1622,7 @@
     </stuffProps> 
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>25</daysToRotStart>
+        <daysToRotStart>75</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
