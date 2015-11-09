@@ -605,7 +605,6 @@
   <!-- ======================== Lighting ======================= -->
 
 
-
   <ThingDef Abstract="True" Name="StandingLampBase" ParentName="BuildingBase">
     <thingClass>Building</thingClass>
     <category>Building</category>
@@ -661,14 +660,78 @@
         <glowRadius>12</glowRadius>
         <glowColor>(217,217,208,0)</glowColor>
       </li>
-      <li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
-        <compClass>CommunityCoreLibrary.CompColoredLight</compClass>
-      </li>
     </comps>
     <researchPrerequisite>PowerI</researchPrerequisite>
   </ThingDef>
 
+  <ThingDef ParentName="StandingLampBase">
+    <defName>StandingLamp_Red</defName>
+    <label>standing lamp (red)</label>
+    <designationHotKey>O</designationHotKey>
+    <description>Standing lamp that lights an area in red.</description>
+    <graphicData>
+      <texPath>Buildings/Lights/LampStandingRed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <comps>
+      <li>
+        <compClass>CompGlower</compClass>
+        <glowRadius>12</glowRadius>
+        <glowColor>(217,0,0,0)</glowColor>
+      </li>
+    </comps>
+    <researchPrerequisite>ColoredLights</researchPrerequisite>
+  </ThingDef>
 
+  <ThingDef ParentName="StandingLampBase">
+    <defName>StandingLamp_Green</defName>
+    <label>standing lamp (green)</label>
+    <description>Standing lamp that lights an area in green.</description>
+    <designationHotKey>K</designationHotKey>
+    <graphicData>
+      <texPath>Buildings/Lights/LampStandingGreen</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <comps>   
+      <li>
+        <compClass>CompGlower</compClass>
+        <glowRadius>12</glowRadius>
+        <glowColor>(0,217,0,0)</glowColor>
+      </li>
+    </comps>
+    <researchPrerequisite>ColoredLights</researchPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="StandingLampBase">
+    <defName>StandingLamp_Blue</defName>
+    <label>standing lamp (blue)</label>
+    <description>Standing lamp that lights an area in blue.</description>
+    <designationHotKey>M</designationHotKey>
+    <graphicData>
+      <texPath>Buildings/Lights/LampStandingBlue</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+    </graphicData>
+    <comps>
+      <li>
+        <compClass>CompGlower</compClass>
+        <glowRadius>12</glowRadius>
+        <glowColor>(0,0,217,0)</glowColor>
+      </li>
+    </comps>
+    <researchPrerequisite>ColoredLights</researchPrerequisite>
+  </ThingDef>
 
 
   <!--============================== Storage ==============================-->
