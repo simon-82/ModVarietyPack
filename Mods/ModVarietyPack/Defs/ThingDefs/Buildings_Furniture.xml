@@ -1643,7 +1643,8 @@
         <WorkToMake>200</WorkToMake>
         <Flammability>1.0</Flammability>
         <Beauty>5</Beauty>
-      </statBases>      
+      </statBases>
+      <researchPrerequisite>FurnitureI</researchPrerequisite> 
     </ThingDef>
 
     <ThingDef ParentName="FurnitureBase">
