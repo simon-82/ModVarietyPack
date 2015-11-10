@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
 
   <!-- === fishing === -->
@@ -624,7 +624,7 @@
   <!-- === Vanilla Pants modified === -->
   <ThingDef ParentName="ApparelBase">
     <defName>Apparel_Pants</defName>
-    <label>pants</label>
+    <label>Basic pants</label>
     <description>A simple set of pants.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/Various/Pants_OnMap</texPath>
@@ -2997,6 +2997,9 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
         </li>
       </options>
     </colorGenerator>
+    <thingCategories>
+      <li>Headgear</li>
+    </thingCategories>
   </ThingDef>
 
 

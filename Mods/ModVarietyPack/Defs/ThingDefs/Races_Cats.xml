@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+  <ThingDef Name="BasePawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+  
+  <ThingDef ParentName="BasePawn" Name="BaseAnimal" Abstract="True">
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>20</LeatherAmount>
+    </statBases>
+    <race>
+      <thinkTree>Animal</thinkTree>
+      <minFoodPreferability>Plant</minFoodPreferability>
+      <isFlesh>true</isFlesh>
+      <hasGenders>true</hasGenders>
+      <nameGenerator>NamerAnimalGeneric</nameGenerator>
+      <manhunterOnDamageChance>0.0125</manhunterOnDamageChance>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+    </race>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseAnimal" Name="Fluffy_Wild_Cat" Abstract="True">
+    <statBases>
+      <Flammability>1.0</Flammability>
+      <LeatherAmount>35</LeatherAmount>
+    </statBases>
+    <race>
+      <thinkTree>Animal</thinkTree>
+      <minFoodPreferability>Plant</minFoodPreferability>
+      <isFlesh>true</isFlesh>
+      <hasGenders>true</hasGenders>
+      <nameGenerator>NamerAnimalGeneric</nameGenerator>
+      <manhunterOnDamageChance>0.5</manhunterOnDamageChance>
+      <nameOnNuzzleChance>0.5</nameOnNuzzleChance>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+    </race>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseAnimal">
+    <defName>Fluffy_DomesticCat</defName>
+    <label>Domestic Cat</label>
+    <description>Fluffy balls of DEATH.</description>
+    <statBases>
+      <MoveSpeed>3.5</MoveSpeed>
+      <ComfyTemperatureMin>-12</ComfyTemperatureMin>
+      <MarketValue>250</MarketValue>
+      <LeatherAmount>15</LeatherAmount>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <meleeDamageBaseAmount>4</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <meleeDamageBaseAmount>4</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>3</meleeDamageBaseAmount>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <thinkTree>DomesticCat</thinkTree>
+      <petness>0.8</petness>
+      <baseBodySize>0.3</baseBodySize>
+      <baseHungerRate>0.15</baseHungerRate>
+      <baseHealthScale>0.4</baseHealthScale>
+      <diet>Carnivorous</diet>
+      <leatherLabel>catskin</leatherLabel>
+      <gestationPeriodDays>60</gestationPeriodDays>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <wildness>0.3</wildness>
+      <nuzzleChancePerHour>0.7</nuzzleChancePerHour>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 1.7)</li>
+          <li>(4, 0.7)</li>
+          <li>(4.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>15</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.1</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.3</minAge>
+          <soundWounded>Fluffy_Pawn_Cat_Wounded</soundWounded>
+          <soundDeath>Fluffy_Pawn_Cat_Injured</soundDeath>
+          <soundCall>Fluffy_Pawn_Cat_Call</soundCall>
+          <soundAngry>Fluffy_Pawn_Cat_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+  <!-- Wild cats -->
+  <ThingDef ParentName="Fluffy_Wild_Cat">
+    <defName>Fluffy_Lion</defName>
+    <label>Lion</label>
+    <description>Proud, strong and dangerous, these beasts have earned their reputation as King of the Jungle.</description>
+    <statBases>
+      <MoveSpeed>5.00</MoveSpeed>
+      <ComfyTemperatureMin>-5</ComfyTemperatureMin>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>120</defaultCooldownTicks>
+        <meleeDamageBaseAmount>14</meleeDamageBaseAmount>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <petness>0.4</petness>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHungerRate>0.8</baseHungerRate>
+      <baseHealthScale>1.5</baseHealthScale>
+      <diet>Carnivorous</diet>
+      <leatherColor>(255,153,51)</leatherColor>
+      <leatherLabel>lion fur</leatherLabel>
+      <leatherInsulation>2.0</leatherInsulation>
+      <gestationPeriodDays>70</gestationPeriodDays>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <wildness>0.80</wildness>      
+      <manhunterOnTameFailChance>0.005</manhunterOnTameFailChance>
+      <nuzzleChancePerHour>0.10</nuzzleChancePerHour>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>15</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.25</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.8</minAge>
+          <soundWounded>Fluffy_Pawn_Lion_Wounded</soundWounded>
+          <soundDeath>Fluffy_Pawn_Lion_Death</soundDeath>
+          <soundCall>Fluffy_Pawn_Lion_Call</soundCall>
+          <soundAngry>Fluffy_Pawn_Lion_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+  <ThingDef ParentName="Fluffy_Wild_Cat">
+    <defName>Fluffy_Tiger</defName>
+    <label>Tiger</label>
+    <description>The tiger is a tightly wound bundle of muscle, teeth and claws, always ready to leap. It's distinctive orange and yellow striping nevertheless allows him to blend in with his habitat.</description>
+    <statBases>
+      <MoveSpeed>5.00</MoveSpeed>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
+      <MarketValue>1000</MarketValue>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>50</defaultCooldownTicks>
+        <meleeDamageBaseAmount>7</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>120</defaultCooldownTicks>
+        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <petness>0.4</petness>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHungerRate>0.8</baseHungerRate>
+      <baseHealthScale>1.4</baseHealthScale>
+      <diet>Carnivorous</diet>
+      <leatherColor>(255,132,24)</leatherColor>
+      <leatherLabel>tiger fur</leatherLabel>
+      <leatherInsulation>2.0</leatherInsulation>
+      <gestationPeriodDays>65</gestationPeriodDays>
+      <nameOnTameChance>1</nameOnTameChance>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <wildness>0.80</wildness>      
+      <manhunterOnTameFailChance>0.005</manhunterOnTameFailChance>
+      <nuzzleChancePerHour>0.10</nuzzleChancePerHour>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>15</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.25</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.8</minAge>
+          <soundWounded>Fluffy_Pawn_Lion_Wounded</soundWounded>
+          <soundDeath>Fluffy_Pawn_Lion_Death</soundDeath>
+          <soundCall>Fluffy_Pawn_Lion_Call</soundCall>
+          <soundAngry>Fluffy_Pawn_Lion_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+  
+
+</Defs>
