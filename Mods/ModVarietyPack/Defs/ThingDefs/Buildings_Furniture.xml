@@ -1613,6 +1613,108 @@
 
 
 
+
+
+    <!-- === Animal Stuff === -->
+    <ThingDef ParentName="FurnitureBase">
+      <defName>Fluffy_ScratchingPole</defName>
+      <label>scratching pole</label>
+      <description>Provide your cats with a place to sharpen their claws.</description>
+      <thingClass>Building</thingClass>
+      <graphicData>
+        <texPath>Buildings/ScratchingPost/ScratchingPost</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>.75</drawSize>
+        <shadowData>
+          <volume>(0.2, 0.5, 0.2)</volume>
+        </shadowData>
+      </graphicData>
+      <rotatable>true</rotatable>
+      <altitudeLayer>Waist</altitudeLayer>
+      <passability>PassThroughOnly</passability>
+      <fillPercent>0.4</fillPercent>
+      <stuffCategories>
+        <li>Metallic</li>
+        <li>Woody</li>
+      </stuffCategories>
+      <costStuffCount>10</costStuffCount>
+      <statBases>
+        <MaxHitPoints>50</MaxHitPoints>
+        <WorkToMake>200</WorkToMake>
+        <Flammability>1.0</Flammability>
+        <Beauty>5</Beauty>
+      </statBases>
+      <researchPrerequisite>FurnitureI</researchPrerequisite> 
+    </ThingDef>
+
+    <ThingDef ParentName="FurnitureBase">
+    <defName>Fluffy_FeedingBowl</defName>
+    <label>feeding bowl</label>
+    <thingClass>Building_Storage</thingClass>
+    <graphicData>
+      <texPath>Buildings/FeedingBowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>.5</drawSize>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.2)</volume>
+      </shadowData>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.4</fillPercent>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>10</costStuffCount>
+    <statBases>
+      <MaxHitPoints>25</MaxHitPoints>
+      <WorkToMake>100</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>5</Beauty>
+    </statBases>
+    <description>Provide your pets with conveniently located feeding bowls.</description>
+    <building>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>PlantFoodRaw</li>
+          </categories>
+          <disallowedSpecialFilters>
+            <li>AllowRotten</li>
+          </disallowedSpecialFilters>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <surfaceType>Item</surfaceType>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- === Ceiling Lamp === -->
     <ThingDef ParentName="BuildingBase">
     <defName>CeilingLamp</defName>
@@ -2469,6 +2571,8 @@
     <staticSunShadowHeight>0.5</staticSunShadowHeight>
     <researchPrerequisite>StorageI</researchPrerequisite>
   </ThingDef>
+
+  
 
 
 
