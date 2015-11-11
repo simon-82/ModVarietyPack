@@ -50,7 +50,7 @@
 				<ThingCategoryDef>
 					<defName>FoodFreshFish</defName>
 					<label>fresh fish</label>
-					<parent>FoodRaw</parent>
+					<parent>MeatRaw</parent>
 					<resourceReadoutRoot>false</resourceReadoutRoot>
 					<iconPath>ThingCategories/FreshFish</iconPath>
 				</ThingCategoryDef>
