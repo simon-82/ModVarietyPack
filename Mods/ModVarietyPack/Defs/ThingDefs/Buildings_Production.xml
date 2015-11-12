@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
 
 
@@ -2410,6 +2410,9 @@
 			<li>
 				<compClass>CompPowerTrader</compClass>
 				<basePowerConsumption>10</basePowerConsumption>
+			</li>
+			<li>
+               		<compClass>CommunityCoreLibrary.CompRefrigerated</compClass>
 			</li>
 		</comps>
 		<building>
