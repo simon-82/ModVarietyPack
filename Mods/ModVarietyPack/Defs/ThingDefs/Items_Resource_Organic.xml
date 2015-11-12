@@ -861,7 +861,7 @@
       </li>
     </comps>
     <thingCategories>
-      <li>FoodFreshFish</li>
+      <li>CorpsesFish</li>
     </thingCategories>
   </ThingDef>
 
@@ -991,14 +991,14 @@
       <soundEat>RawMeat_Eat</soundEat>
     </ingestible>
     <thingCategories>
-      <li>MeatRaw</li>
+      <li>FoodFreshFish</li>
     </thingCategories>
   </ThingDef>
 
   <ThingDef ParentName="RawSeaFoodBase">
     <defName>RawSeaFood_SduigglesTentacle</defName>
-    <label>sduiggles tentacle</label>
-    <description>Gelatinous and soft tentacles of a sduiggles. Not really appetizing... Not at all!</description>
+    <label>squiggles tentacle</label>
+    <description>Gelatinous and soft tentacles of a squiggles. Not really appetizing... Not at all!</description>
     <graphicData>
       <texPath>Items/FishRaw_SduigglesTentacle</texPath>
       <graphicClass>Graphic_Single</graphicClass>

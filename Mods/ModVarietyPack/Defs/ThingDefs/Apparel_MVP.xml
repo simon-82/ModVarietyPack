@@ -22,7 +22,7 @@
     <alwaysHaulable>True</alwaysHaulable>
     <tickerType>Never</tickerType>
     <thingCategories>
-      <li>Items</li>
+      <li>Apparel</li>
     </thingCategories>
     <comps>
       <li>
