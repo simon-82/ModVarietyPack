@@ -415,7 +415,7 @@
   </ThingDef>
 
 	<ThingDef ParentName="MealRottable">
-    <defName>bread</defName>
+    <defName>Bread</defName>
     <label>bread</label>
     <description>Fresh baked loaf of bread.</description>
     <graphicData>
@@ -428,8 +428,8 @@
       <WorkToMake>600</WorkToMake>
     </statBases>
     <ingestible>
-      <preferability>Fine</preferability>
-      <nutrition>0.7</nutrition>
+      <preferability>Simple</preferability>
+      <nutrition>0.35</nutrition>
       <joy>0.005</joy>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>Meal_Eat</soundEat>
@@ -1204,23 +1204,393 @@
     </ingestible>
   </ThingDef>
 
+	<!-- Gourmet Garden Additions -->
+
+<ThingDef ParentName="MealRottable">
+      <defName>cheese</defName>
+      <label>cheese</label>
+      <description>A block of cheese.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/cheese</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>15</MarketValue>        
+      </statBases>
+      <ingestible>
+         <preferability>Awful</preferability>
+         <nutrition>0.3</nutrition>
+         <joy>0.2</joy>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+   </ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+      <defName>Chocomilk</defName>
+      <label>chocolate milk</label>
+      <description>Chocolate added to milk.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/chocomilk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>15</MarketValue>        
+      </statBases>
+      <thingCategories>
+        <li>Beverages</li>
+      </thingCategories>
+      <socialPropernessMatters>true</socialPropernessMatters>
+      <ingestible>
+         <preferability>Simple</preferability>
+         <nutrition>0.4</nutrition>
+         <joy>0.3</joy>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible> 
+	  <comps>
+      <li Class="CompProperties_Rottable">
+        <compClass>CompRottable</compClass>
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+   </ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+      <defName>soymilk</defName>
+      <label>soy milk</label>
+      <description>Soy milk.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/soymilk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>10</MarketValue>
+      </statBases>
+      <thingCategories>
+        <li>Beverages</li>
+      </thingCategories>
+      <socialPropernessMatters>true</socialPropernessMatters>
+      <ingestible>
+         <preferability>Simple</preferability>
+         <nutrition>0.4</nutrition>
+         <joy>0.2</joy>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <compClass>CompRottable</compClass>
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+   </ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+      <defName>sweetbun</defName>
+      <label>sweet bun</label>
+      <description>A sweet roll covered in sugary icying.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/sweetbun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>25</MarketValue>
+         <WorkToMake>750</WorkToMake>
+      </statBases>
+      <thingCategories>
+        <li>Sweets</li>
+      </thingCategories>
+      <socialPropernessMatters>true</socialPropernessMatters>
+      <ingestible>
+         <preferability>Simple</preferability>
+         <nutrition>0.4</nutrition>
+         <joy>0.3</joy>
+      <ingestedDirectThought>AteFineMeal</ingestedDirectThought>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+	<comps>
+      <li Class="CompProperties_Rottable">
+        <compClass>CompRottable</compClass>
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>  
+   </ThingDef>
 
 
+<ThingDef ParentName="MealRottable">
+      <defName>bowlstew</defName>
+      <label>bowl of stew</label>
+      <description>A bowl of slow cooking stew.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/Meal/bowlstew</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>25</MarketValue>
+         <WorkToMake>1500</WorkToMake>
+      </statBases>
+      <ingestible>
+       <preferability>Lavish</preferability>
+      <nutrition>1.00</nutrition>
+        <joy>0.065</joy>
+      <ingestedDirectThought>AteLavishMeal</ingestedDirectThought>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+   </ThingDef>
 
 
+<ThingDef ParentName="MealRottable">
+      <defName>grilledcheese</defName>
+      <label>grilled cheese sandwich</label>
+      <description>Two slices of bread grilled with cheese melt in the middle.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/Meal/grilledcheese</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>20</MarketValue>         
+      </statBases>
+      <ingestible>
+         <preferability>Simple</preferability>
+      <nutrition>0.7</nutrition>
+         <joy>0.1</joy>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+   </ThingDef>
+
+<ThingDef ParentName="MealRottable">
+      <defName>grilledmeat</defName>
+      <label>grilled meat sandwich</label>
+      <description>Two slices of bread with grilled meat and cheese melt.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/Meal/grilledmeat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>25</MarketValue>         
+      </statBases>
+      <ingestible>
+        <preferability>Fine</preferability>
+  	    <nutrition>0.8</nutrition>
+         <joy>0.35</joy>
+      <ingestedDirectThought>AteFineMeal</ingestedDirectThought>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+   </ThingDef>
 
 
-
-
-
-
-  
-
-
-
+ <ThingDef ParentName="MealRottable">
+      <defName>pizza</defName>
+      <label>pizza</label>
+      <description>Pizza in 30 minutes or less!</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/Meal/pizza</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>25</MarketValue>
+         <WorkToMake>500</WorkToMake>
+      </statBases>
+      <ingestible>
+       <preferability>Fine</preferability>
+      <nutrition>0.9</nutrition>
+         <joy>0.1</joy>
+      <ingestedDirectThought>AteFineMeal</ingestedDirectThought>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+   </ThingDef>
  
+<ThingDef ParentName="MealRottable">
+      <defName>stirfry</defName>
+      <label>stirfry</label>
+      <description>Cooking technique in which ingredients are fried in a small amount of very hot oil!</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/Meal/stirfry</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>25</MarketValue>
+         <WorkToMake>500</WorkToMake>
+      </statBases>
+      <ingestible>
+      <preferability>Lavish</preferability>
+      <nutrition>0.90</nutrition>
+         <joy>0.35</joy>
+      <ingestedDirectThought>AteLavishMeal</ingestedDirectThought>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+   </ThingDef>
 
+  <ThingDef ParentName="MealRottable">
+    <defName>Porridge</defName>
+    <label>Porridge</label>
+    <description>A simple porridge cooked from grains.</description>
+    <graphicData>
+      <texPath>Items/GourmetGarden/Item/Meal/Porridge</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <DeteriorationRate>10</DeteriorationRate>
+      <MarketValue>16</MarketValue>
+      <WorkToMake>500</WorkToMake>
+    </statBases>
+    <ingestible>
+      <preferability>Simple</preferability>
+      <nutrition>0.75</nutrition>
+      <joy>0.02</joy>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>Meal_Eat</soundEat>
+    </ingestible>
+  </ThingDef>
 
+<ThingDef ParentName="ResourceBase">
+      <defName>yogurt</defName>
+      <label>yogurt</label>
+      <description>A sweet treat made from milk.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/Meal/Yogurt</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>25</MarketValue>
+         <WorkToMake>750</WorkToMake>
+      </statBases>
+      <thingCategories>
+        <li>Sweets</li>
+      </thingCategories>
+      <socialPropernessMatters>true</socialPropernessMatters>
+      <ingestible>
+         <preferability>Simple</preferability>
+         <nutrition>0.4</nutrition>
+         <joy>0.45</joy>
+      <ingestedDirectThought>AteFineMeal</ingestedDirectThought>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+	  <comps>
+      <li Class="CompProperties_Rottable">
+        <compClass>CompRottable</compClass>
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>  
+   </ThingDef>
+ 
+<ThingDef ParentName="ResourceBase">
+      <defName>icecream</defName>
+      <label>ice cream</label>
+      <description>A sweet frozen treat made from milk.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/Meal/Icecream</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>25</MarketValue>
+         <WorkToMake>750</WorkToMake>
+      </statBases>     
+	 <thingCategories>
+        <li>Sweets</li>
+      </thingCategories>
+      <socialPropernessMatters>true</socialPropernessMatters>
+      <ingestible>
+         <preferability>Fine</preferability>
+         <nutrition>0.6</nutrition>
+         <joy>0.45</joy>
+         <ingestedDirectThought>AteIceCream</ingestedDirectThought>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+	  <hediffGivers>
+		<li>
+		<chance>1</chance>
+		<hediffDef>BrainFreeze</hediffDef>
+		</li>
+	  </hediffGivers>
+      </ingestible>
+	  <comps>
+      <li Class="CompProperties_Rottable">
+        <compClass>CompRottable</compClass>
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      </comps>  
+   </ThingDef>
+
+<ThingDef ParentName="ResourceBase">
+      <defName>smoothie</defName>
+      <label>smoothie</label>
+      <description>A sweet drink made from fruit and milk.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/Meal/Smoothie</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>25</MarketValue>
+         <WorkToMake>750</WorkToMake>
+      </statBases>
+	 <thingCategories>
+        <li>Sweets</li>
+      </thingCategories>
+    <socialPropernessMatters>true</socialPropernessMatters>
+      <ingestible>
+         <preferability>Simple</preferability>
+         <nutrition>0.4</nutrition>
+         <joy>0.45</joy>
+      <ingestedDirectThought>AteFineMeal</ingestedDirectThought>
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+	  <comps>
+      <li Class="CompProperties_Rottable">
+        <compClass>CompRottable</compClass>
+        <daysToRotStart>4</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      </comps>  
+   </ThingDef>
+
+<ThingDef ParentName="MealRottable">
+      <defName>Tacos</defName>
+      <label>Tacos</label>
+      <description>Meat, Cheese and Vegetables in a Corn shell.</description>
+      <graphicData>
+      <texPath>Items/GourmetGarden/Item/Meal/Tacos</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+      <statBases>
+         <DeteriorationRate>10</DeteriorationRate>
+         <MarketValue>15</MarketValue>
+      </statBases>
+      <ingestible>
+         <preferability>Lavish</preferability>
+         <nutrition>0.80</nutrition>
+         <joy>0.2</joy>
+		 <ingestedDirectThought>AteLavishMeal</ingestedDirectThought>		 
+         <eatEffect>EatVegetarian</eatEffect>
+         <soundEat>Meal_Eat</soundEat>
+      </ingestible>
+   </ThingDef>
 
 
 

@@ -5,6 +5,7 @@
 
 	<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
+		<thingClass>Building</thingClass>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -493,7 +494,6 @@
 			<li>CookMealLavish_4x</li>
 			<li>MakeSugar</li>
 			<li>MakeFlour</li>
-			<li>MakeCaramel</li>
 			<li>MakeEthanolFuel</li>
 			<!-- + tea, chocolate at cooking II -->
 		</recipes>
@@ -514,12 +514,21 @@
 				<idlePowerFactor>0.1</idlePowerFactor>
 				<operationalMode>InUse</operationalMode>
 			</li>
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>CookingTools</li>
+				</linkableFacilities>
+			</li>		
 		</comps>
 		<building>
 			<isMealSource>true</isMealSource>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 			<heatPerTickWhileWorking>0.25</heatPerTickWhileWorking>
-		</building>
+		</building>		
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<designationHotKey>O</designationHotKey>
 		<researchPrerequisite>Brewing</researchPrerequisite>
 	</ThingDef>
@@ -625,12 +634,23 @@
 			<li>MakeVodka</li>
 			<li>MakeWhiskey</li>
 		</recipes>
+		<comps>
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>CookingTools</li>
+				</linkableFacilities>
+			</li>
+		</comps>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>		
 		<researchPrerequisite>Brewing</researchPrerequisite>
 	</ThingDef>
 
@@ -1244,6 +1264,7 @@
 		<surfaceType>Item</surfaceType>
 		<recipes>
 			<li>CookMealJerky</li>
+			<li>GrillFishCampfire</li>
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -1686,10 +1707,7 @@
 		<interactionCellOffset>(1,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<recipes>
-			<li>MakeCaramel</li>
 			<li>MakeDriedfruit</li>
-			<li>MakeHardcandy</li>
-			<li>MakeTaffy</li>
 			<li>MakeCookies</li>
 			<li>MakeBread</li>
 		</recipes>
@@ -1710,11 +1728,20 @@
 				<idlePowerFactor>0.1</idlePowerFactor>
 				<operationalMode>InUse</operationalMode>
 			</li>
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>CookingTools</li>
+				</linkableFacilities>
+			</li>
 		</comps>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 			<heatPerTickWhileWorking>0.25</heatPerTickWhileWorking>
 		</building>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>		
 		<researchPrerequisite>Brewing</researchPrerequisite>
 	</ThingDef>
 
@@ -1722,7 +1749,7 @@
 		<DefName>TableCanningstove</DefName>
 		<label>canning station</label>
 		<ThingClass>Building_WorkTable_HeatPush</ThingClass>
-		<Description>A stove for canning foods. Needs Power: 20/200W</Description>
+		<Description>A stove for canning foods, making candy and processing beans. Needs Power: 20/200W</Description>
 		<graphicData>
 		  <texPath>Buildings/TableCanningstove</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
@@ -1754,6 +1781,9 @@
 		<surfaceType>Item</surfaceType>
 		<recipes>
 			<li>MakeMealCannedFood</li>
+			<li>MakeCaramel</li>
+			<li>MakeHardcandy</li>
+			<li>MakeTaffy</li>
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -1775,7 +1805,16 @@
 				<idlePowerFactor>0.1</idlePowerFactor>
 				<operationalMode>InUse</operationalMode>
 			</li>
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>CookingTools</li>
+				</linkableFacilities>
+			</li>
 		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>	
 		<researchPrerequisite>CookingII</researchPrerequisite>
 	</ThingDef>
 
@@ -2740,6 +2779,176 @@
   </ThingDef>
 
 
+	<!-- gourmet Garden Additions -->
+	
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>CookingTools</defName>
+    <label>Cooking tools</label>
+    <graphicData>
+      <texPath>Items/GourmetGarden/Item/CookingTools</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1.0</fillPercent>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>1800</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>Increases work speed 15%. Needs to be placed near cooking tops. Will boost the cook speed of all tables near by.</description>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>250</Steel>
+    </costList>
+    <designationCategory>ProductionFood</designationCategory>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <comps>
+      <li>
+        <compClass>CompFacility</compClass>
+        <statOffsets>
+          <WorkTableWorkSpeedFactor>0.15</WorkTableWorkSpeedFactor>
+        </statOffsets>
+        <maxSimultaneous>1</maxSimultaneous>
+      </li>
+    </comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+	<researchPrerequisite>Brewing</researchPrerequisite>
+  </ThingDef>
+	
+
+<ThingDef ParentName="BuildingBase">
+	<DefName>Drinkmachine</DefName>
+	<label>Dispener</label>
+	<ThingClass>Building_WorkTable_HeatPush</ThingClass>
+	<Description>A dispensing machine.</Description>
+	<graphicData>
+      <texPath>Buildings/Drinkmachine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    	</graphicData>
+	  <CostList>
+            <Steel>60</Steel>
+          </CostList>
+	<AltitudeLayer>Waist</AltitudeLayer>
+	<fillPercent>0.5</fillPercent>
+	<useHitPoints>True</useHitPoints>
+	<statBases>
+	  <WorkToMake>2000</WorkToMake>
+	  <MaxHitPoints>180</MaxHitPoints>
+	  <Flammability>1.0</Flammability>
+	</statBases>
+	<Size>(1,1)</Size>
+	<DesignationCategory>ProductionFood</DesignationCategory>
+	<Passability>PassThroughOnly</Passability>
+	<pathCost>70</pathCost>
+	<hasInteractionCell>True</hasInteractionCell>
+	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+   <staticSunShadowHeight>0.3</staticSunShadowHeight>
+	<surfaceType>Item</surfaceType>
+	<!-- unlocks at cooking II 
+	<recipes>
+			<li>MakeIcecream</li>
+			<li>MakeYogurt</li>
+			<li>MakeSmoothie</li>	
+	</recipes>
+	-->
+	<inspectorTabs>
+		<li>ITab_Bills</li>
+	</inspectorTabs>
+	<building>
+	  <isMealSource>true</isMealSource>
+	  <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	</building>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>true</startElectricalFires>
+				<basePowerConsumption>70</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+			</li>
+ 			<li Class="CommunityCoreLibrary.CompProperties_LowIdleDraw">
+				<compClass>CommunityCoreLibrary.CompPowerLowIdleDraw</compClass>
+				<idlePowerFactor>0.1</idlePowerFactor>
+				<operationalMode>InUse</operationalMode>
+			</li>  
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>CookingTools</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>		
+		<researchPrerequisite>Brewing</researchPrerequisite>
+  </ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>GrindStone</defName>
+		<label>Milling Stone</label>
+		<ThingClass>Building_WorkTable</ThingClass>
+		<Description>A small muscle-powered grinding stone for quickly grinding raw plants.</Description>
+		<graphicData>
+		<texPath>Buildings/GrindingStone</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<constructEffect>ConstructWood</constructEffect>
+			<CostList>
+				<WoodLog>30</WoodLog>
+				<Steel>10</Steel>
+			</CostList>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToMake>500</WorkToMake>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<Size>(1,1)</Size>
+		<Passability>PassThroughOnly</Passability>
+		<pathCost>60</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<recipes>
+			<li>MakeFlour</li>
+			<li>MakeSugar</li>
+			<li>CraftCornmeal</li>
+			<li>CraftBulkFlour</li>
+			<li>CraftBulkSugar</li>
+			<li>CraftBulkCornMeal</li>
+		</recipes>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<designationCategory>ProductionFood</designationCategory>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<comps>
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>CookingTools</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>		
+		<researchPrerequisite>Brewing</researchPrerequisite>
+	</ThingDef>
 
 
 

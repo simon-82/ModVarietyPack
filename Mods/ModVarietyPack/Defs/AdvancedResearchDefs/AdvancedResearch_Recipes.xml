@@ -28,7 +28,8 @@
         </researchDefs>        
         <recipeDefs>
             <li>MakePieBlueberry</li>
-            <li>MakePiePumpkin</li>            
+            <li>MakePiePumpkin</li>
+			<li>Bakesweetroll</li>
         </recipeDefs>        
         <thingDefs>
             <li>TableOven</li>
@@ -44,9 +45,11 @@
         <recipeDefs>
             <li>MakeTofu</li>
             <li>MakeTofu10x</li>
+			<li>Makesoymilk</li>
+			<li>MakeChocolatemilk</li>
         </recipeDefs>        
         <thingDefs>
-            <li>CookStove</li>
+            <li>TableCanningstove</li>
         </thingDefs>        
     </AdvancedResearchDef>    
 
@@ -64,12 +67,68 @@
         </thingDefs>        
     </AdvancedResearchDef>
 
+    <AdvancedResearchDef>         
+        <defName>AgricultureIVcook</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Cryptosleep</li>
+        </researchDefs>        
+        <recipeDefs>
+			<li>CookTacos</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>CookStove</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
 
-
-
+    <AdvancedResearchDef>         
+        <defName>AgricultureIVoven</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Cryptosleep</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>Bakepizza</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableOven</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
 
 
     <!-- Cooking -->
+	
+    <AdvancedResearchDef>         
+        <defName>CookingIcanningstove</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Brewing</li>
+        </researchDefs>        
+        <recipeDefs>
+			<li>Makesoycheese</li>
+            <li>MakeChocolate</li>			
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableCanningstove</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>CookingIStove</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Brewing</li>
+        </researchDefs>        
+        <recipeDefs>
+			<li>CookPorridge</li>
+			<li>CookGrillcheese</li>
+			<li>Cookgrilledsandwich</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>CookStove</li>
+        </thingDefs>        
+    </AdvancedResearchDef>	
+	
     <AdvancedResearchDef>         
         <defName>CookingII</defName>
         <Priority>0</Priority>        
@@ -79,7 +138,8 @@
         <recipeDefs>
             <li>BrewTea</li>
             <li>BrewSpectagoTea</li>
-            <li>MakeChocolate</li>
+			<li>Stirfrymeal</li>
+			<li>Cookstewpot</li>
         </recipeDefs>        
         <thingDefs>
             <li>CookStove</li>
@@ -87,7 +147,21 @@
     </AdvancedResearchDef>
 
 
-
+    <AdvancedResearchDef>         
+        <defName>CookingIIDispenser</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>CookingII</li>
+        </researchDefs>        
+        <recipeDefs>
+			<li>MakeIcecream</li>
+			<li>MakeYogurt</li>
+			<li>MakeSmoothie</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>Drinkmachine</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
 
 
 

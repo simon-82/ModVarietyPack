@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <WorkGivers>
 
 
@@ -929,7 +929,7 @@
   <WorkGiverDef>
     <defName>DoBillsTableLoom</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Tailoring</workType>
+    <workType>Crafting</workType>
     <priorityInType>65</priorityInType>
     <singleBillGiverDef>TableLoom</singleBillGiverDef>
     <verb>make textile</verb>
@@ -1135,6 +1135,32 @@
   </WorkGiverDef>
 
   
+  <!-- Gourmet Garden -->
+<WorkGiverDef>
+	<defName>DoBillsDispenser</defName>
+	<giverClass>WorkGiver_DoBill</giverClass>
+	<workType>Cooking</workType>
+	<priorityInType>85</priorityInType>
+	<singleBillGiverDef>Drinkmachine</singleBillGiverDef>
+	<verb>dispense</verb>
+	<gerund>dispensing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+</WorkGiverDef>
+
+<WorkGiverDef>
+	<defName>DoBillsGrindStone</defName>
+	<giverClass>WorkGiver_DoBill</giverClass>
+	<workType>Cooking</workType>
+	<priorityInType>80</priorityInType>
+	<singleBillGiverDef>GrindStone</singleBillGiverDef>
+	<verb>mill</verb>
+	<gerund>milling</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+</WorkGiverDef>
 
 
 

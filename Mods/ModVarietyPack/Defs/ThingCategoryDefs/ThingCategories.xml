@@ -96,7 +96,7 @@
         		<label>Beverages</label>
         		<parent>Foods</parent>
         		<resourceReadoutRoot>true</resourceReadoutRoot>
-        		<iconPath>Items/beer/beer_a</iconPath>
+        		<iconPath>Items/beer/beer_b</iconPath>
 	     </ThingCategoryDef>
 
 			<!-- todo rename AnimalProductRaw -->

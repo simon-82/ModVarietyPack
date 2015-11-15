@@ -94,4 +94,34 @@
     </stages>
   </ThoughtDef>
 
+
+<!-- Thoughts Gourmet Garden -->
+  <ThoughtDef>
+    <defName>AteBread</defName>
+  <durationDays>1</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>ate bread</label>
+        <description>Mhh, fresh and crusty bread!</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>AteIceCream</defName>
+  <durationDays>1</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>ate icecream</label>
+        <description>Ahhh! Brain Freeze!</description>
+        <baseMoodEffect>4</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+
+
 </ThoughtDefs>

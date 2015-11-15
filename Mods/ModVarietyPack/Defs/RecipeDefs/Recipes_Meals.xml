@@ -12,7 +12,9 @@
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
+	     <allowMixingIngredients>true</allowMixingIngredients>
+   	     <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    
 		<ingredients>
 			<li>
 				<filter>
@@ -20,7 +22,7 @@
 						<li>FoodRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>0.5</count>
 			</li>
 		</ingredients>
 		<products>
@@ -40,6 +42,7 @@
 			</categories>
 			<exceptedCategories>
 				<li>EggsFertilized</li>
+				<li>CookingSupplies</li>
 			</exceptedCategories>
 			<exceptedThingDefs>
 				<li>Human_Meat</li>
@@ -66,15 +69,16 @@
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
-		<ingredients>
+  		 <allowMixingIngredients>true</allowMixingIngredients>
+   		 <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    		<ingredients>
 			<li>
 				<filter>
 					<categories>
 						<li>MeatRaw</li>
 					</categories>
 				</filter>
-				<count>5</count>
+				<count>0.25</count>
 			</li>
 			<li>
 				<filter>
@@ -82,7 +86,7 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>5</count>
+				<count>0.25</count>
 			</li>
 		</ingredients>
 		<products>
@@ -124,7 +128,9 @@
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
+	    <allowMixingIngredients>true</allowMixingIngredients>
+  	    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    
 		<ingredients>
 			<li>
 				<filter>
@@ -132,7 +138,7 @@
 						<li>MeatRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>0.4</count>
 			</li>
 			<li>
 				<filter>
@@ -140,7 +146,7 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>0.4</count>
 			</li>
 		</ingredients>
 		<products>
@@ -201,7 +207,9 @@
 		<workAmount>1000</workAmount>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
+	      <allowMixingIngredients>true</allowMixingIngredients>
+   		 <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    
 		<ingredients>
 			<li>
 				<filter>
@@ -209,7 +217,7 @@
 						<li>FoodRaw</li>
 					</categories>
 				</filter>
-				<count>40</count>
+				<count>2</count>
 			</li>
 		</ingredients>
 		<products>
@@ -252,7 +260,9 @@
 		<workAmount>1100</workAmount>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
+	      <allowMixingIngredients>true</allowMixingIngredients>
+   		 <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    
 		<ingredients>
 			<li>
 				<filter>
@@ -261,7 +271,7 @@
 						<li>OtherFoodRaw</li>
 					</categories>
 				</filter>
-				<count>20</count>
+				<count>1</count>
 			</li>
 			<li>
 				<filter>
@@ -269,7 +279,7 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>20</count>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<products>
@@ -312,7 +322,9 @@
 		<workAmount>1200</workAmount>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
+	     <allowMixingIngredients>true</allowMixingIngredients>
+ 	     <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    
 		<ingredients>
 			<li>
 				<filter>
@@ -321,7 +333,7 @@
 						<li>OtherFoodRaw</li>
 					</categories>
 				</filter>
-				<count>40</count>
+				<count>1.6</count>
 			</li>
 			<li>
 				<filter>
@@ -329,7 +341,7 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>40</count>
+				<count>1.6</count>
 			</li>
 		</ingredients>
 		<products>
@@ -388,15 +400,16 @@
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
-		<ingredients>
+	     <allowMixingIngredients>true</allowMixingIngredients>
+   		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    		<ingredients>
 			<li>
 				<filter>
 					<categories>
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>0.5</count>
 			</li>
 		</ingredients>
 		<products>
@@ -420,6 +433,7 @@
 		</defaultIngredientFilter>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>CookMealJerky</defName>
 		<label>cook jerky</label>
@@ -428,15 +442,16 @@
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
-		<ingredients>
+	      <allowMixingIngredients>true</allowMixingIngredients>
+  		 <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    		<ingredients>
 			<li>
 				<filter>
 					<categories>
 						<li>MeatRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>0.4</count>
 			</li>
 		</ingredients>
 		<products>
@@ -467,7 +482,8 @@
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
+	     <allowMixingIngredients>true</allowMixingIngredients>
+  		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>    
 		<ingredients>
 			<li>
 				<filter>
@@ -475,7 +491,7 @@
 						<li>Flour</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>.1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -484,10 +500,11 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<bread>2</bread>
+			<Bread>2</Bread>
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeDriedfruit</defName>
 		<label>Dry Fruit</label>
@@ -496,7 +513,8 @@
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
+	      <allowMixingIngredients>true</allowMixingIngredients>
+  		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>    
 		<ingredients>
 			<li>
 				<filter>
@@ -504,7 +522,7 @@
 						<li>FruitFoodRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>.6</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -516,7 +534,7 @@
 			</specialFiltersToDisallow>
 		</fixedIngredientFilter>
 		<products>
-			<driedfruit>10</driedfruit>
+			<driedfruit>8</driedfruit>
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
@@ -529,15 +547,16 @@
 		<workAmount>800</workAmount>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
-		<ingredients>
+ 		<allowMixingIngredients>true</allowMixingIngredients>
+  		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    		<ingredients>
 			<li>
 				<filter>
 					<categories>
 						<li>FoodRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>.5</count>
 			</li>
 			<li>
 				<filter>
@@ -567,10 +586,11 @@
 		<description>Turns beans into tofu. Tofu is use in place of meat in meals or eatten raw.</description>
 		<jobString>Pressing tofu.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
-		<workAmount>575</workAmount>
+		<!-- removed, uses work to make stat from meal <workAmount>575</workAmount> -->
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
+	     <allowMixingIngredients>true</allowMixingIngredients>
+  	     <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>    
 		<ingredients>
 			<li>
 				<filter>
@@ -578,7 +598,7 @@
 						<li>Rawbean</li>
 					</thingDefs>
 				</filter>
-				<count>14</count>
+				<count>.7</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -600,10 +620,11 @@
 		<description>Your increased cooking skill allows you to mass produce tofu more efficiently!</description>
 		<jobString>Pressing tofu.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
-		<workAmount>900</workAmount>
+		<workAmount>1200</workAmount>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
-		<allowMixingIngredients>true</allowMixingIngredients>
+ 	     <allowMixingIngredients>true</allowMixingIngredients>
+ 	     <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>    
 		<ingredients>
 			<li>
 				<filter>
@@ -611,7 +632,7 @@
 						<li>Rawbean</li>
 					</thingDefs>
 				</filter>
-				<count>60</count>
+				<count>3</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -658,22 +679,31 @@
 	<RecipeDef>
 		<defName>MakeBeer</defName>
 		<label>brew beer</label>
-		<description>Brew a batch of beer from hops.</description>
+		<description>Brew a batch of beer from grain, sugar and hops.</description>
 		<jobString>Brewing beer.</jobString>
 		<workSpeedStat>BrewingSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
-		<workAmount>1000</workAmount>
-		<targetCountAdjustment>1</targetCountAdjustment>
+		<workAmount>1200</workAmount>
 		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Rawwheat</li>
+						<li>RawCorn</li>
+						<li>Rawoats</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
 			<li>
 				<filter>
 					<thingDefs>
 						<li>RawHops</li>
 					</thingDefs>
 				</filter>
-				<count>12</count>
+				<count>6</count>
 			</li>
 			<li>
 				<filter>
@@ -697,10 +727,16 @@
 				<li>RawHops</li>
 				<li>Sugar</li>
 				<li>BucketWater</li>
+				<li>Rawwheat</li>
+				<li>RawCorn</li>
+				<li>Rawoats</li>
 			</thingDefs>
+			<specialFiltersToDisallow>
+				<li>AllowRotten</li>
+			</specialFiltersToDisallow>			
 		</fixedIngredientFilter>
 		<products>
-			<Beer>5</Beer>
+			<Beer>6</Beer>
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
@@ -715,7 +751,6 @@
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
 		<workAmount>800</workAmount>
-		<targetCountAdjustment>1</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
@@ -759,7 +794,6 @@
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
 		<workAmount>800</workAmount>
-		<targetCountAdjustment>1</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
@@ -803,7 +837,6 @@
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
 		<workAmount>800</workAmount>
-		<targetCountAdjustment>1</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
@@ -846,8 +879,7 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
-		<workAmount>1500</workAmount>
-		<targetCountAdjustment>1</targetCountAdjustment>
+		<workAmount>800</workAmount>
 		<ingredients>
 			<li>
 				<filter>
@@ -896,8 +928,7 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
-		<workAmount>1500</workAmount>
-		<targetCountAdjustment>1</targetCountAdjustment>
+		<workAmount>800</workAmount>
 		<ingredients>
 			<li>
 				<filter>
@@ -938,7 +969,6 @@
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
 		<workAmount>1000</workAmount>
-		<targetCountAdjustment>1</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
@@ -988,7 +1018,6 @@
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
 		<workAmount>1000</workAmount>
-		<targetCountAdjustment>1</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
@@ -1031,21 +1060,20 @@
 	<RecipeDef>
 		<defName>MakeWhiskey</defName>
 		<label>Distill Whiskey</label>
-		<description>Distills a bottle of Whiskey from corn.</description>
+		<description>Distills a bottle of Whiskey from grains.</description>
 		<jobString>Distilling Whiskey.</jobString>
 		<workSpeedStat>BrewingSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
 		<workAmount>1000</workAmount>
-		<targetCountAdjustment>1</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
-					<thingDefs>
+					<thingDefs>				
 						<li>Rawwheat</li>
-						<li>PlantCorn</li>
-						<li>Rawoats</li>
+						<li>RawCorn</li>
+						<li>Rawoats</li>				
 					</thingDefs>
 				</filter>
 				<count>20</count>
@@ -1070,7 +1098,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Rawwheat</li>
-				<li>PlantCorn</li>
+				<li>RawCorn</li>
 				<li>Rawoats</li>
 				<li>Sugar</li>
 				<li>BucketWater</li>
@@ -1092,7 +1120,6 @@
 		<soundWorking>Recipe_Brewing</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
 		<workAmount>800</workAmount>
-		<targetCountAdjustment>1</targetCountAdjustment>
 		<ingredients>
 			<li>
 				<filter>
@@ -1129,7 +1156,7 @@
 		<description>Brew spectago tea by gently steeping the leaves in hot water.</description>
 		<jobString>Brewing spectago tea</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
-		<workAmount>600</workAmount>
+		<workAmount>800</workAmount>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
@@ -1326,7 +1353,7 @@
 
 	<RecipeDef>
 		<defName>MakePieBlueberry</defName>
-		<label>Bake blueberry pie</label>
+		<label>Bake A Fruit pie</label>
 		<description>Bake a tasty fruit filled pie.</description>
 		<jobString>Bake Pie.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
@@ -1345,9 +1372,9 @@
 			</li>
 			<li>
 				<filter>
-					<thingDefs>
-						<li>Rawblueberry</li>
-					</thingDefs>
+					<categories>
+						<li>FruitFoodRaw</li>
+					</categories>
 				</filter>
 				<count>10</count>
 			</li>
@@ -1363,15 +1390,17 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Sugar</li>
-				<li>Rawblueberry</li>
 				<li>Flour</li>
 			</thingDefs>
+			<categories>
+				<li>FruitFoodRaw</li>
+			</categories>
 			<specialFiltersToDisallow>
 				<li>AllowRotten</li>
 			</specialFiltersToDisallow>
 		</fixedIngredientFilter>
 		<products>
-			<PieBlueberry>5</PieBlueberry>
+			<PieBlueberry>6</PieBlueberry>
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
@@ -1401,7 +1430,7 @@
 						<li>Sugar</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>6</count>
 			</li>
 			<li>
 				<filter>
@@ -1624,4 +1653,831 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
+
+	<!-- Added recipes from Gormet Garden -->
+
+
+      <RecipeDef>
+      <defName>Bakesweetroll</defName>
+      <label>bake sweet rolls</label>
+      <description>Bakes sweet rolls.</description>
+      <jobString>Baking rolls.</jobString>
+      <workSpeedStat>CookSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <effectWorking>Cook</effectWorking>
+   	 <soundWorking>Recipe_CookMeal</soundWorking>
+  	 <workAmount>1500</workAmount>
+      <allowMixingIngredients>true</allowMixingIngredients>
+      <ingredients>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>Flour</li>
+               </thingDefs>
+            </filter>
+            <count>10</count>
+         </li>
+		<li>
+            <filter>
+               <thingDefs>
+                  <li>Sugar</li>
+               </thingDefs>
+            </filter>
+            <count>5</count>
+         </li>
+      </ingredients>
+      <products>
+         <sweetbun>4</sweetbun>
+      </products>
+      <fixedIngredientFilter>
+         <thingDefs>
+            <li>Flour</li>
+		<li>Sugar</li>
+         </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+      </fixedIngredientFilter>
+      </RecipeDef>
+
+
+
+      <RecipeDef>
+      <defName>Bakepizza</defName>
+      <label>bake pizza</label>
+      <description>Bakes pizza.</description>
+      <jobString>Baking pizza.</jobString> 
+       <workSpeedStat>CookSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <effectWorking>Cook</effectWorking>
+   	 <soundWorking>Recipe_CookMeal</soundWorking>
+  	 <workAmount>1500</workAmount>
+      <allowMixingIngredients>true</allowMixingIngredients>
+      <ingredients>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>Flour</li>
+               </thingDefs>
+            </filter>
+            <count>5</count>
+         </li>
+		<li>
+            <filter>
+               <thingDefs>
+                  <li>cheese</li>
+               </thingDefs>
+            </filter>
+            <count>1</count>
+         </li>
+		<li>
+            <filter>
+               <thingDefs>
+                  <li>RawTomatoes</li>
+               </thingDefs>
+            </filter>
+            <count>4</count>
+         </li>
+	     <li>
+		<filter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+		</filter>
+		<count>5</count>
+		</li>
+      </ingredients>
+      <products>
+         <pizza>4</pizza>
+      </products>
+      <fixedIngredientFilter>
+         <thingDefs>
+            <li>Flour</li>
+		 <li>cheese</li>
+            <li>RawTomatoes</li>
+         </thingDefs>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+      </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+         <thingDefs>
+            <li>Flour</li>
+		 <li>cheese</li>
+            <li>RawTomatoes</li>
+         </thingDefs>
+      <exceptedCategories>
+        <li>EggsFertilized</li>
+      </exceptedCategories>
+      <exceptedThingDefs>
+        <li>Human_Meat</li>
+	   <li>Norbal_Meat</li>
+      </exceptedThingDefs>
+    </defaultIngredientFilter>
+   </RecipeDef>
+
+
+      <RecipeDef>
+		<defName>Stirfrymeal</defName>
+		<label>cook four stir-fried meals</label>
+		<description>Cooks a stir-fried meal from a combination of raw meat and raw plant ingredients. Makes enough for 4 meals.</description>
+		<jobString>Cooking four stir-fried meals.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>1500</workAmount>
+   	     <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+			  <filter>
+				<categories>
+					<li>MeatRaw</li>
+				</categories>
+			  </filter>
+				<count>1</count>
+			</li>
+			<li>
+			  <filter>
+				<categories>
+					<li>PlantFoodRaw</li>
+				</categories>
+			  </filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<stirfry>4</stirfry>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>FoodRaw</li>
+			</categories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>FoodRaw</li>
+			</categories>
+			<exceptedThingDefs>
+				<li>Human_Meat</li>
+				<li>Norbal_Meat</li>
+			</exceptedThingDefs>
+     		 <exceptedCategories>
+        		<li>EggsFertilized</li>
+      	 </exceptedCategories>
+		</defaultIngredientFilter>
+		<skillRequirements>
+			<li>
+				<skill>Cooking</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+<RecipeDef>
+		<defName>Cookstewpot</defName>
+		<label>slow cook pot of stew</label>
+		<description>Slow cooks a pot of stew from a combination of raw meat and raw plant ingredients. Makes enough for 8 meals.</description>
+		<jobString>Slow cooking stew.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>2500</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+   	     <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>	
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>PlantFoodRaw</li>
+					</categories>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<products>
+			<bowlstew>8</bowlstew>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>FoodRaw</li>
+			</categories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+		</fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+      <exceptedCategories>
+        <li>EggsFertilized</li>
+      </exceptedCategories>
+      <exceptedThingDefs>
+        <li>Human_Meat</li>
+	   <li>Norbal_Meat</li>
+      </exceptedThingDefs>
+    </defaultIngredientFilter>
+		<skillRequirements>
+			<li>
+				<skill>Cooking</skill>
+				<minLevel>10</minLevel>
+			</li>
+		</skillRequirements>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+
+<RecipeDef>
+      <defName>CookGrillcheese</defName>
+      <label>Cook Grilled Cheese</label>
+      <description>Grilled Cheese Sandwich.</description>
+      <jobString>Toasting Sandwich.</jobString>  
+      <allowMixingIngredients>true</allowMixingIngredients>
+      <ingredients>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>Bread</li>
+               </thingDefs>
+            </filter>
+            <count>4</count>
+         </li>
+		<li>
+            <filter>
+               <thingDefs>
+                  <li>cheese</li>
+               </thingDefs>
+            </filter>
+            <count>2</count>
+         </li>
+      </ingredients>
+      <products>
+         <grilledcheese>8</grilledcheese>
+      </products>
+      <fixedIngredientFilter>
+         <thingDefs>
+            <li>Bread</li>
+		<li>cheese</li>
+         </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+      </fixedIngredientFilter>
+      <workAmount>1000</workAmount>
+      <workSpeedStat>CookSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <effectWorking>Cook</effectWorking>
+   	 <soundWorking>Recipe_CookMeal</soundWorking>
+      </RecipeDef>
+
+
+
+
+      <RecipeDef>
+      <defName>Cookgrilledsandwich</defName>
+      <label>Cook Grilled Meat sandwich</label>
+      <description>Grills Sandwich.</description>
+      <jobString>Grill sandwich.</jobString>  
+      <allowMixingIngredients>true</allowMixingIngredients>
+      <ingredients>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>Bread</li>
+               </thingDefs>
+            </filter>
+            <count>4</count>
+         </li>
+		<li>
+            <filter>
+               <thingDefs>
+                  <li>cheese</li>
+               </thingDefs>
+            </filter>
+            <count>1</count>
+         </li>
+	     <li>
+		<filter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+		</filter>
+		<count>4</count>
+		</li>
+      </ingredients>
+      <products>
+         <grilledmeat>4</grilledmeat>
+      </products>
+      <fixedIngredientFilter>
+         <thingDefs>
+            <li>Bread</li>
+		 <li>cheese</li>
+          </thingDefs>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+      </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+         <thingDefs>
+            <li>Bread</li>
+		 <li>cheese</li>
+         </thingDefs>
+      <exceptedCategories>
+        <li>EggsFertilized</li>
+      </exceptedCategories>
+      <exceptedThingDefs>
+        <li>Human_Meat</li>
+	   <li>Norbal_Meat</li>
+      </exceptedThingDefs>
+    </defaultIngredientFilter>
+      <workAmount>1000</workAmount>
+      <workSpeedStat>CookSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <effectWorking>Cook</effectWorking>
+   	 <soundWorking>Recipe_CookMeal</soundWorking>
+   </RecipeDef>
+
+
+
+      <RecipeDef>
+      <defName>CookTacos</defName>
+      <label>Cook Tacos</label>
+      <description>Prepare Tacos.</description>
+      <jobString>Preparing Tacos.</jobString>  
+      <allowMixingIngredients>true</allowMixingIngredients>
+      <ingredients>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>Cornmeal</li>
+               </thingDefs>
+            </filter>
+            <count>4</count>
+         </li>
+		 <li>
+            <filter>
+               <thingDefs>
+                  <li>RawLettuce</li>
+               </thingDefs>
+            </filter>
+            <count>1</count>
+         </li>
+	     <li>
+		<filter>
+			<thingDefs>
+				<li>RawTomatoes</li>
+            </thingDefs>
+		</filter>
+		<count>2</count>
+		</li>
+		<li>
+            <filter>
+               <thingDefs>
+                  <li>cheese</li>
+               </thingDefs>
+            </filter>
+            <count>1</count>
+         </li>
+	     <li>
+		<filter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+		</filter>
+		<count>2</count>
+		</li>
+      </ingredients>
+      <products>
+         <Tacos>6</Tacos>
+      </products>
+      <fixedIngredientFilter>
+         <thingDefs>
+           <li>Cornmeal</li>
+		   <li>cheese</li>
+		   <li>RawTomatoes</li>
+		   <li>RawLettuce</li>
+         </thingDefs>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+      </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>FoodRaw</li>
+      </categories>
+         <thingDefs>
+          <li>Cornmeal</li>
+		  <li>cheese</li>
+		  <li>RawTomatoes</li>
+		  <li>RawLettuce</li>		  
+         </thingDefs>
+      <exceptedCategories>
+        <li>EggsFertilized</li>
+      </exceptedCategories>
+      <exceptedThingDefs>
+        <li>Human_Meat</li>
+	   <li>Norbal_Meat</li>
+      </exceptedThingDefs>
+    </defaultIngredientFilter>
+      <workAmount>1000</workAmount>
+      <workSpeedStat>CookSpeed</workSpeedStat>
+      <workSkill>Cooking</workSkill>
+      <effectWorking>Cook</effectWorking>
+   	 <soundWorking>Recipe_CookMeal</soundWorking>
+   </RecipeDef>
+
+<RecipeDef>
+	<defName>CookPorridge</defName>
+	<label>Cook Porridge</label>
+	<description>Cook a Porridge from a grain.</description>
+	<jobString>Cook Porridge.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<effectWorking>Cook</effectWorking>
+	<workAmount>900</workAmount>
+     <soundWorking>Recipe_CookMeal</soundWorking>
+     	<allowMixingIngredients>true</allowMixingIngredients>
+     <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+	<ingredients>
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>Rawwheat</li>
+	        <li>RawCorn</li>
+	        <li>RawRice</li>
+	        <li>Rawoats</li>
+	      </thingDefs>
+	    </filter>
+	    <count>0.5</count>
+	  </li>
+	</ingredients>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	    <li>Rawwheat</li>
+	    <li>RawCorn</li>
+	    <li>RawRice</li>
+	    <li>Rawoats</li>
+	  </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+
+	</fixedIngredientFilter>
+	<products>
+	  <Porridge>2</Porridge>
+	</products>
+	<workSkill>Cooking</workSkill>
+  </RecipeDef>
+
+<RecipeDef>
+	<defName>Makesoycheese</defName>
+	<label>Make Cheese</label>
+	<description>Turns soy milk or milk into cheese.</description>
+	<jobString>Pressing Cheese.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<workAmount>700</workAmount>
+	<effectWorking>Cook</effectWorking>
+     <soundWorking>Recipe_CookMeal</soundWorking>          
+	<allowMixingIngredients>true</allowMixingIngredients>
+	<ingredients>
+	<li>
+	    <filter>
+	      <thingDefs>
+	        <li>soymilk</li>
+		   <li>Milk</li>
+	      </thingDefs>
+	    </filter>
+	    <count>10</count>
+	</li>
+	</ingredients>
+	<fixedIngredientFilter>
+	   <thingDefs>
+	        <li>soymilk</li>
+		   <li>Milk</li>
+	      </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+	</fixedIngredientFilter>
+	<products>
+	  <cheese>4</cheese>
+	</products>
+	<workSkill>Cooking</workSkill>
+    </RecipeDef>
+
+
+<RecipeDef>
+	<defName>Makesoymilk</defName>
+	<label>Make Soy Milk</label>
+	<description>Turns beans into Soy Milk.</description>
+	<jobString>Pressing beans.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<workAmount>700</workAmount>
+	<effectWorking>Cook</effectWorking>
+     <soundWorking>Recipe_CookMeal</soundWorking>         
+	<allowMixingIngredients>true</allowMixingIngredients>
+	<ingredients>
+	<li>
+	    <filter>
+	      <thingDefs>
+	        <li>Rawbean</li>
+	      </thingDefs>
+	    </filter>
+	    <count>10</count>
+	  </li>
+	</ingredients>
+	<fixedIngredientFilter>
+	   <thingDefs>
+	        <li>Rawbean</li>
+	      </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+	</fixedIngredientFilter>
+	<products>
+	  <soymilk>4</soymilk>
+	</products>
+	<workSkill>Cooking</workSkill>
+    </RecipeDef>
+
+<RecipeDef>
+	<defName>MakeChocolatemilk</defName>
+	<label>Make Chocomilk</label>
+	<description>Blending chocolate and milk.</description>
+	<jobString>Mixing Milk.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<effectWorking>Cook</effectWorking>
+	<workAmount>800</workAmount>
+    	<soundWorking>Recipe_CookMeal</soundWorking>          
+	<allowMixingIngredients>true</allowMixingIngredients>
+	<ingredients>
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>Chocolate</li>
+	      </thingDefs>
+	    </filter>
+	    <count>5</count>
+	  </li>
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>soymilk</li>
+		   <li>Milk</li>
+	      </thingDefs>
+	    </filter>
+	    <count>5</count>
+	  </li>
+	</ingredients>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	    <li>Chocolate</li>
+	    <li>soymilk</li> 
+	    <li>Milk</li>
+	  </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+	</fixedIngredientFilter>
+	<products>
+	  <Chocomilk>5</Chocomilk>
+	</products>
+	<workSkill>Cooking</workSkill>
+    </RecipeDef>
+
+
+
+	<!-- Gourmet Garden Dispenser  -->
+
+
+
+   <RecipeDef>
+	<defName>MakeIcecream</defName>
+	<label>Make Ice Cream</label>
+	<description>Turns sugar and milk into a sweet ice cream.</description>
+	<jobString>Making Ice Cream.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<effectWorking>Cook</effectWorking>
+	<workAmount>900</workAmount>
+     <soundWorking>Recipe_CookMeal</soundWorking> 
+     <allowMixingIngredients>true</allowMixingIngredients>
+	<ingredients>
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>Sugar</li>
+	      </thingDefs>
+	    </filter>
+	    <count>5</count>
+	  </li>
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>Chocolate</li>
+	      </thingDefs>
+	    </filter>
+	    <count>1</count>
+	  </li>
+
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>soymilk</li>
+		   <li>Milk</li>
+	      </thingDefs>
+	    </filter>
+	    <count>10</count>
+	  </li>
+	</ingredients>
+	<fixedIngredientFilter>
+	  <thingDefs>
+		   <li>Sugar</li>
+		   <li>soymilk</li>
+	        <li>Chocolate</li>
+   	   	   <li>Milk</li>
+	  </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+	</fixedIngredientFilter>
+	<products>
+	  <icecream>4</icecream>
+	</products>
+	<workSkill>Cooking</workSkill>
+</RecipeDef>
+  
+   <RecipeDef>
+	<defName>MakeYogurt</defName>
+	<label>Make Yogurt</label>
+	<description>A sweet treat made from milk.</description>
+	<jobString>Making yogurt.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<effectWorking>Cook</effectWorking>
+	<workAmount>900</workAmount>
+     <soundWorking>Recipe_CookMeal</soundWorking> 
+     <allowMixingIngredients>true</allowMixingIngredients>
+	<ingredients>
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>soymilk</li>
+		   <li>Milk</li>
+	      </thingDefs>
+	    </filter>
+	    <count>10</count>
+	  </li>
+	  <li>
+	    <filter>
+		<categories>
+			<li>FruitFoodRaw</li>
+		</categories>
+		</filter>
+		<count>1</count>
+	   	</li>
+	</ingredients>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	        <li>soymilk</li>
+		   <li>Milk</li>
+	  </thingDefs>
+		<categories>
+			<li>FruitFoodRaw</li>
+		</categories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+	</fixedIngredientFilter>
+	<products>
+	  <yogurt>4</yogurt>
+	</products>
+	<workSkill>Cooking</workSkill>
+  </RecipeDef>
+
+
+
+   <RecipeDef>
+	<defName>MakeSmoothie</defName>
+	<label>Make Smoothie</label>
+	<description>A sweet drink made from fruit and milk.</description>
+	<jobString>Making Smoothie.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<effectWorking>Cook</effectWorking>
+	<workAmount>900</workAmount>
+     <soundWorking>Recipe_CookMeal</soundWorking>
+     <allowMixingIngredients>true</allowMixingIngredients>
+	<ingredients>
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>soymilk</li>
+		   <li>Milk</li>
+	      </thingDefs>
+	    </filter>
+	    <count>10</count>
+	  </li>
+		<li>
+ 		  <filter>
+			<categories>
+				<li>FruitFoodRaw</li>
+			</categories>
+	  	  </filter>
+		  <count>10</count>
+	   	</li>
+	</ingredients>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	        <li>soymilk</li>
+		   <li>Milk</li>
+	  </thingDefs>
+			<categories>
+				<li>FruitFoodRaw</li>
+			</categories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+	</fixedIngredientFilter>
+	<products>
+	  <smoothie>6</smoothie>
+	</products>
+	<workSkill>Cooking</workSkill>
+  </RecipeDef>
+
+   <RecipeDef>
+    <defName>GrillFishCampfire</defName>
+    <label>grill fish</label>
+    <description>Grills a fish so it can be eaten. Tasty and crunchy!</description>
+    <jobString>Grilling fish.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workAmount>1000</workAmount>
+    <allowMixingIngredients>true</allowMixingIngredients>	
+    <ingredients>
+      <li>
+        <filter>
+			<thingDefs>
+				<li>Fish_Sduiggles</li>
+				<li>Fish_Seasnake</li>
+				<li>Fish_Mashgon</li>
+				<li>Fish_Blueblade</li>
+				<li>Fish_Tailteeth</li>
+			</thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <products>
+      <MealSimple>1</MealSimple>
+    </products>
+    <fixedIngredientFilter>
+			<thingDefs>
+				<li>Fish_Sduiggles</li>
+				<li>Fish_Seasnake</li>
+				<li>Fish_Mashgon</li>
+				<li>Fish_Blueblade</li>
+				<li>Fish_Tailteeth</li>
+			</thingDefs>
+	  <specialFiltersToDisallow>
+			<li>AllowRotten</li>
+		</specialFiltersToDisallow>
+    </fixedIngredientFilter>
+	<!--
+    <recipeUsers>
+      <li>TableGrill</li>
+	  <li>Campfire</li>
+    </recipeUsers>
+	-->
+    <workSkill>Cooking</workSkill>
+  </RecipeDef>
+ 
+  
+
 </RecipeDefs>

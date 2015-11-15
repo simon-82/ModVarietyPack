@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <RecipeDefs>
 	<!-- === training === -->
 	<RecipeDef>
@@ -914,7 +914,7 @@
 						<li>HerbalMedicine</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>4</count>
 			</li>
 			<li>
 				<filter>
@@ -922,7 +922,7 @@
 						<li>Cloth</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>4</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -932,7 +932,7 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Medicine>1</Medicine>
+			<Medicine>3</Medicine>
 		</products>
 		<workSkill>Medicine</workSkill>
 	</RecipeDef>
