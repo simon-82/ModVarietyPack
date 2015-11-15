@@ -4,6 +4,9 @@
 
 
 	<!-- === VanillaStart === -->
+
+
+	<!-- === MVP ingredients for meals were foodraw, need base count 10 for simple  === -->
 	<RecipeDef Name="CookMealSimple">
 		<defName>CookMealSimple</defName>
 		<label>cook simple meal</label>
@@ -116,6 +119,7 @@
 		</skillRequirements>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>CookMealLavish</defName>
 		<label>cook lavish meal</label>

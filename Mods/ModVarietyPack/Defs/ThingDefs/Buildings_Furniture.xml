@@ -2414,6 +2414,7 @@
           <filter>
             <categories>
               <li>FoodRaw</li>
+              <li>CookingSupplies</li>
             </categories>
           </filter>
         </fixedStorageSettings>

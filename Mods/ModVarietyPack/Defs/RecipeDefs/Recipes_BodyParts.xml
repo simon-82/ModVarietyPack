@@ -2413,7 +2413,7 @@
             <li>PlasteelBar</li>
           </thingDefs>
         </filter>
-        <count>20</count>
+        <count>30</count>
       </li>
       <li>
         <filter>
@@ -2447,7 +2447,7 @@
             <li>PlasteelBar</li>
           </thingDefs>
         </filter>
-        <count>20</count>
+        <count>30</count>
       </li>
       <li>
         <filter>
@@ -2455,7 +2455,7 @@
             <li>Beer</li>
           </thingDefs>
         </filter>
-        <count>20</count>
+        <count>10</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
@@ -2478,10 +2478,10 @@
       <li>
         <filter>
           <thingDefs>
-            <li>Plasteel</li>
+            <li>PlasteelBar</li>
           </thingDefs>
         </filter>
-        <count>20</count>
+        <count>30</count>
       </li>
       <li>
         <filter>
@@ -2489,7 +2489,7 @@
             <li>Medicine</li>
           </thingDefs>
         </filter>
-        <count>5</count>
+        <count>10</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>

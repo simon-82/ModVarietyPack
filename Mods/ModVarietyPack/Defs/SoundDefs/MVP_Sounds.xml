@@ -120,6 +120,10 @@
             <clipPath>DomesticCat/death2</clipPath>
           </li>
         </grains>
+        <volumeRange>
+          <min>10</min>        
+          <max>25</max>
+        </volumeRange>
       </li>
     </subSounds>
   </SoundDef>
@@ -142,6 +146,10 @@
             <clipPath>DomesticCat/hurt3</clipPath>
           </li>
         </grains>
+        <volumeRange>
+          <min>10</min>        
+          <max>25</max>
+        </volumeRange>
       </li>
     </subSounds>
   </SoundDef>
@@ -163,8 +171,8 @@
           </li>
         </grains>      
         <volumeRange>
-          <min>35</min>        
-          <max>40</max>
+          <min>10</min>        
+          <max>25</max>
         </volumeRange>
       </li>
     </subSounds>
@@ -185,6 +193,10 @@
             <clipPath>WildCat/lion_call2</clipPath>
           </li>
         </grains>
+        <volumeRange>
+          <min>10</min>        
+          <max>25</max>
+        </volumeRange>
       </li>
     </subSounds>
   </SoundDef>
@@ -201,7 +213,11 @@
             <clipPath>WildCat/lion_death1</clipPath>
           </li>
         </grains>
-      </li>
+        <volumeRange>
+          <min>10</min>        
+          <max>25</max>
+        </volumeRange>
+      </li>      
     </subSounds>
   </SoundDef>
 
@@ -220,6 +236,10 @@
             <clipPath>WildCat/lion_hurt2</clipPath>
           </li>
         </grains>
+        <volumeRange>
+          <min>10</min>        
+          <max>25</max>
+        </volumeRange>
       </li>
     </subSounds>
   </SoundDef>
@@ -318,8 +338,8 @@
           </li>
         </grains>
         <volumeRange>
-          <min>100</min>
-          <max>150</max>
+          <min>80</min>
+          <max>90</max>
         </volumeRange>
         <pitchRange>
           <min>0.865690</min>

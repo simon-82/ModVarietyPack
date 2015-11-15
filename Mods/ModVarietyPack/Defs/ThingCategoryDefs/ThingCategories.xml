@@ -74,11 +74,11 @@
 						<iconPath>ThingCategories/FruitFoodRaw</iconPath>
 					</ThingCategoryDef>
 
-					<!--  -->
+					
 		<ThingCategoryDef>
         		<defName>CookingSupplies</defName>
         		<label>cooking ingredents</label>
-        		<parent>FoodRaw</parent>
+        		<parent>Foods</parent>
         		<resourceReadoutRoot>false</resourceReadoutRoot>
         		<iconPath>ThingCategories/Cookingstuff</iconPath>
 	     </ThingCategoryDef>
@@ -98,6 +98,11 @@
         		<resourceReadoutRoot>true</resourceReadoutRoot>
         		<iconPath>Items/beer/beer_a</iconPath>
 	     </ThingCategoryDef>
+
+
+
+	     <!--  -->
+	     
 
 			<!-- todo rename AnimalProductRaw -->
 				<ThingCategoryDef>
