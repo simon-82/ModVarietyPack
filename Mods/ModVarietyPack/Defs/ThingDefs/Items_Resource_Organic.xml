@@ -49,7 +49,7 @@
   <ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase" >
     <ingestible>
       <preferability>Awful</preferability>
-      <nutrition>0.25</nutrition>
+      <nutrition>0.06</nutrition>
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>RawVegetable_Eat</soundEat>
     </ingestible>
@@ -236,7 +236,7 @@
 
   <ThingDef Abstract="True" Name="EggBase" ParentName="OrganicProductBase" >
     <ingestible>
-      <nutrition>0.25</nutrition>
+      <nutrition>0.15</nutrition>
       <eatEffect>EatMeat</eatEffect>
       <soundEat>RawMeat_Eat</soundEat>
       <isMeat>true</isMeat>
@@ -587,7 +587,6 @@
       <MarketValue>6</MarketValue>
     </statBases>
     <ingestible>
-  <nutrition>.25</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -608,7 +607,6 @@
       <MarketValue>8</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -629,7 +627,6 @@
       <MarketValue>6</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -650,7 +647,6 @@
       <MarketValue>7</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -671,7 +667,6 @@
       <MarketValue>7</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -692,7 +687,6 @@
       <MarketValue>8</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -753,7 +747,6 @@
       <MarketValue>8</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -774,7 +767,6 @@
       <MarketValue>7</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -795,7 +787,6 @@
       <MarketValue>6</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -816,7 +807,6 @@
       <MarketValue>6</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -986,7 +976,7 @@
     </comps>
     <ingestible>
       <preferability>Raw</preferability>
-      <nutrition>0.05</nutrition>
+      <nutrition>0.075</nutrition>
       <eatEffect>EatMeat</eatEffect>
       <soundEat>RawMeat_Eat</soundEat>
     </ingestible>
@@ -1024,7 +1014,6 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
-      <nutrition>0.07</nutrition>
     </ingestible>
   </ThingDef>
 
@@ -1058,7 +1047,6 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
-      <nutrition>0.07</nutrition>
     </ingestible>
   </ThingDef>
 
@@ -1208,7 +1196,15 @@
     <graphicData>
       <texPath>Items/wheat</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
+    </graphicData>   
+	<socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <preferability>Raw</preferability>
+      <nutrition>0.05</nutrition>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>RawVegetable_Eat</soundEat>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
     <statBases>
       <MarketValue>2.0</MarketValue>
     </statBases>    
@@ -1222,7 +1218,7 @@
     </stuffProps>
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>25</daysToRotStart>
+        <daysToRotStart>60</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
@@ -1237,17 +1233,20 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
-      <MarketValue>1.5</MarketValue>
-    </statBases>
+      <MarketValue>2</MarketValue>
+    </statBases>    
+	<socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <preferability>Raw</preferability>
+      <nutrition>0.05</nutrition>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>RawVegetable_Eat</soundEat>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+    </ingestible>
     <thingCategories>
       <li>CookingSupplies</li>
     </thingCategories>
-    <stuffProps>
-      <categories>
-        <li>Stuff</li>
-      </categories>
-    </stuffProps>
-    <comps>
+     <comps>
       <li Class="CompProperties_Rottable">
         <daysToRotStart>60</daysToRotStart>
       </li>
@@ -1584,17 +1583,19 @@
     <statBases>
       <MarketValue>3</MarketValue>
     </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <nutrition>0.01</nutrition>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>RawVegetable_Eat</soundEat>
+    </ingestible>
     <thingCategories>
       <li>CookingSupplies</li>
     </thingCategories>
-    <stuffProps>
-      <categories>
-        <li>Stuff</li>
-      </categories>
-    </stuffProps>   
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>75</daysToRotStart>
+        <daysToRotStart>240</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
@@ -1604,7 +1605,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>Flour</defName>
     <label>flour</label>
-    <description>Simple four, used in baking.</description>
+    <description>Simple flour, used in baking.</description>
     <graphicData>
       <texPath>Items/flour</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -1612,24 +1613,55 @@
     <statBases>
       <MarketValue>3</MarketValue>
     </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <nutrition>0.01</nutrition>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>RawVegetable_Eat</soundEat>
+    </ingestible>
     <thingCategories>
       <li>CookingSupplies</li>
     </thingCategories>
-    <stuffProps>
-      <categories>
-        <li>Stuff</li>
-      </categories>
-    </stuffProps> 
+	<!-- flour is very slow to rot -->
     <comps>
       <li Class="CompProperties_Rottable">
-        <daysToRotStart>75</daysToRotStart>
+        <daysToRotStart>240</daysToRotStart>
         <rotDestroys>true</rotDestroys>
       </li>
     </comps>
   </ThingDef>
 
 
-  
+ <ThingDef ParentName="ResourceBase">
+    <defName>Cornmeal</defName>
+    <label>Cornmeal</label>
+    <description>Simple cornmeal, used in baking.</description>
+    <graphicData>
+      <texPath>Items/GourmetGarden/Item/Cornmeal</texPath>    
+	  <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>3</MarketValue>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <ingestible>
+      <preferability>DesperateOnly</preferability>
+      <nutrition>0.01</nutrition>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>RawVegetable_Eat</soundEat>
+    </ingestible> 
+    <thingCategories>
+      <li>CookingSupplies</li>
+    </thingCategories> 
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>240</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+ 
 
   
   

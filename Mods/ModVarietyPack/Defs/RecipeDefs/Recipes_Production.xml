@@ -2,6 +2,49 @@
 <RecipeDefs>
 
  <!-- === VanillaStart === -->
+ 
+ 	<RecipeDef>
+		<defName>ButcherCorpseFlesh</defName>
+		<label>butcher creature</label>
+		<description>Butchers a creature to obtain its meat in usable form.</description>
+		<jobString>Butchering.</jobString>
+		<workAmount>450</workAmount>
+		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+    <ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Corpses</li>
+			</categories>
+			<exceptedCategories>
+				<li>CorpsesMechanoid</li>
+				<li>CorpsesFish</li>
+			</exceptedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>CorpsesAnimal</li>
+			</categories>
+		</defaultIngredientFilter>
+	</RecipeDef>
 
 	<RecipeDef>
     <workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
@@ -1233,7 +1276,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
   <RecipeDef>
     <defName>MakeEthanolFuel</defName>
     <label>make ethanol fuel</label>
-    <description>Make ethanol fuel from raw corn.</description>
+    <description>Make ethanol fuel from raw grains.</description>
     <jobString>Making ethanol fuel.</jobString>
     <workSpeedStat>BrewingSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
@@ -1337,6 +1380,149 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     </products>
     <workSkill>Cooking</workSkill>
   </RecipeDef>
+  
+  
+<RecipeDef>
+	<defName>CraftBulkFlour</defName>
+	<label>Ground Bulk Flour</label>
+	<description>Grind grains into flour.</description>
+	<jobString>Grouding Flour.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<effectWorking>Cook</effectWorking>
+	<workAmount>700</workAmount>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+   	<allowMixingIngredients>true</allowMixingIngredients>
+	<ingredients>
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>Rawwheat</li>
+	        <li>RawCorn</li>
+	        <li>RawRice</li>
+	        <li>Rawoats</li>
+	      </thingDefs>
+	    </filter>
+	    <count>50</count>
+	  </li>
+	</ingredients>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	    <li>Rawwheat</li>
+	    <li>RawCorn</li>
+	    <li>RawRice</li>
+	    <li>Rawoats</li>
+	  </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+	</fixedIngredientFilter>
+	<products>
+	  <Flour>25</Flour>
+	</products>
+	<workSkill>Cooking</workSkill>
+</RecipeDef>
+
+<RecipeDef>
+	<defName>CraftBulkCornMeal</defName>
+	<label>Ground Bulk Cornmeal</label>
+	<description>Ground corn into cornmeal.</description>
+	<jobString>Grouding Corn.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+	<workAmount>700</workAmount>
+     <soundWorking>Recipe_CookMeal</soundWorking>
+     	<allowMixingIngredients>true</allowMixingIngredients>
+	<ingredients>
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>RawCorn</li>
+	      </thingDefs>
+	    </filter>
+	    <count>50</count>
+	  </li>
+	</ingredients>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	    <li>RawCorn</li>
+	  </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+	</fixedIngredientFilter>
+	<products>
+	  <Cornmeal>25</Cornmeal>
+	</products>
+	<workSkill>Cooking</workSkill>
+</RecipeDef>
+
+<RecipeDef>
+	<defName>CraftCornmeal</defName>
+	<label>Ground Cornmeal</label>
+	<description>Ground corn into cornmeal.</description>
+	<jobString>Grouding Corn.</jobString>
+	<workSpeedStat>CookSpeed</workSpeedStat>
+	<effectWorking>Cook</effectWorking>
+	<workAmount>700</workAmount>
+    <soundWorking>Recipe_CookMeal</soundWorking>  
+   	<allowMixingIngredients>true</allowMixingIngredients>
+	<ingredients>
+	  <li>
+	    <filter>
+	      <thingDefs>
+	        <li>RawCorn</li>
+	      </thingDefs>
+	    </filter>
+	    <count>10</count>
+	  </li>
+	</ingredients>
+	<fixedIngredientFilter>
+	  <thingDefs>
+	    <li>RawCorn</li>
+	  </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+	</fixedIngredientFilter>
+	<products>
+	  <Cornmeal>4</Cornmeal>
+	</products>
+	<workSkill>Cooking</workSkill>
+</RecipeDef>
+
+   <RecipeDef>
+      <defName>CraftBulkSugar</defName>
+	<label>Grind Bulk Sugar</label>
+      <description>Beat and grind those canes to get at that sugar!</description>
+      <jobString>Making sugar.</jobString>
+      <workAmount>700</workAmount>
+      <workSpeedStat>CookSpeed</workSpeedStat>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_CookMeal</soundWorking>
+      <products>
+         <Sugar>25</Sugar>
+      </products>
+      <ingredients>
+         <li>
+            <filter>
+               <thingDefs>
+                  <li>Rawsugarcane</li>
+               </thingDefs>
+            </filter>
+            <count>50</count>
+         </li>
+      </ingredients>
+      <fixedIngredientFilter>
+         <thingDefs>
+            <li>Rawsugarcane</li>
+         </thingDefs>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+      </fixedIngredientFilter>
+      <workSkill>Cooking</workSkill>
+   </RecipeDef>
+
 
   <RecipeDef>
     <defName>MakeMulch</defName>

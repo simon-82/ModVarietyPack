@@ -1847,7 +1847,7 @@
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>RawXerigium</harvestedThingDef>
       <harvestDestroys>true</harvestDestroys>
-      <harvestYield>1</harvestYield>
+      <harvestYield>5</harvestYield>
       <sowTags>
         <li>Ground</li>
         <li>Hydroponic</li>
