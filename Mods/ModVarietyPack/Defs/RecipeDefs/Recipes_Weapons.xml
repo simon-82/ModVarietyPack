@@ -1,6 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RecipeDefs>
 
+	<!-- === Syringe === -->
+	<RecipeDef>
+		<defName>MakeSyringe</defName>
+		<label>Make anesthetic Syringe</label>
+		<description>Make an anesthetic Syringe (one use) to quickly put someone to sleep.</description>
+		<jobString>Making syringe.</jobString>
+		<workAmount>400</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>5</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Medicine</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Glass</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_Pistol>1</Gun_Pistol>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Medicine</li>
+				<li>Glass</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+
+
+
+
+
+
+
+
 
 	<!-- === Vanilla Guns === -->
 	<RecipeDef>

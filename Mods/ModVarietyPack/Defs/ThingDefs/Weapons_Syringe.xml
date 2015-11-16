@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+  <ThingDef Name="BaseMeleeWeapon" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <selectable>True</selectable>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <weaponTags>
+      <li>Melee</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsMelee</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li>
+        <compClass>CompArt</compClass>
+        <nameMaker>NamerMeleeWeapon</nameMaker>
+        <descriptionMaker>ArtWeaponMelee</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+
+  
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseMeleeWeapon">
+    <defName>Z0MBIE2_Syringe</defName>
+    <label>syringe</label>
+    <description>A tube with a nozzle and piston equipped with a thin, hollow needle for quickly injecting anesthetic. An injection with the needle will empty it's contents and ruin the tip, making this a single use item.</description>
+    <graphicData>
+      <texPath>Weapons/Syringe</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <WorkToMake>300</WorkToMake>
+      <MarketValue>400</MarketValue>
+      <MeleeWeapon_DamageAmount>1</MeleeWeapon_DamageAmount>
+      <DeteriorationRate>0.40</DeteriorationRate>
+      <MeleeWeapon_Cooldown>0.65</MeleeWeapon_Cooldown>
+    </statBases>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttackOne</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>SleepPuncture</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</ThingDefs>

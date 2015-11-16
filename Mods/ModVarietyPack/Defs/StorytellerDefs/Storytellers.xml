@@ -42,11 +42,11 @@ And then? She will destroy you, ruthlessly. Move fast, gird yourself for the tri
 
 	<StorytellerDef>
 		<defName>Hildegarde</defName>
-    <label>Hildegarde Epic</label>
+        <label>Hildegarde Epic</label>
 		<description>A Veteran of the grim Mechanoid war and a skald of Jotunheim assault infantry corps, Hildegarde's songs are full of flame and war. Just like Jotunheim Prime's people themselves. She will send more "big threats" while causing less incidents.</description>
 		<quotation>There is only one way to prove someone's real value. That is the tempering in trials, on the anvil of war.</quotation>
 		<incidentMakerClass>IncidentMaker_Random</incidentMakerClass>
-    <listOrder>68</listOrder>
+        <listOrder>68</listOrder>
 		<portraitLarge>Storytellers/Hildegarde</portraitLarge>
 		<portraitTiny>Storytellers/HildegardeTiny</portraitTiny>
 		<desiredPopulationMin>4</desiredPopulationMin>
@@ -57,6 +57,28 @@ And then? She will destroy you, ruthlessly. Move fast, gird yourself for the tri
     <random_ThreatSmallWeight>0.05</random_ThreatSmallWeight>
     <random_LargeThreatWeight>0.01</random_LargeThreatWeight>
     <random_MaxThreatBigIntervalDays>2</random_MaxThreatBigIntervalDays>
+  </StorytellerDef>
+
+
+
+  <!--No Raid Storyteller -->
+  <StorytellerDef>
+   <defName>Farming</defName>
+    <label>Fiona Farming</label>
+    <description>Fiona loves to farm and will do her best to never send any raiding parties to attack you. Although even she cannot hold them off forever. Set her on the Freeplay difficulty to lower the chance even more.</description>
+    <quotation>Let's get farming.</quotation>
+    <incidentMakerClass>IncidentMaker_Classic</incidentMakerClass>
+    <listOrder>31</listOrder>
+    <portraitLarge>Storytellers/FionaFarmer</portraitLarge>
+    <portraitTiny>UI/HeroArt/Storytellers/PhoebeFriendlyTiny</portraitTiny>
+    <desiredPopulationMin>5</desiredPopulationMin>
+    <desiredPopulationMax>20</desiredPopulationMax>
+    <desiredPopulationCritical>30</desiredPopulationCritical>
+    <threatCycleLength>9999</threatCycleLength>
+    <minDaysBetweenThreatBigs>9999</minDaysBetweenThreatBigs>
+    <classic_RandomEventMTBDays>1.3</classic_RandomEventMTBDays>
+    <classic_ThreatBigMTBDays>0</classic_ThreatBigMTBDays>
+    <classic_ThreatSmallMTBDays>0</classic_ThreatSmallMTBDays>
   </StorytellerDef>
 
 </StorytellerDefs>

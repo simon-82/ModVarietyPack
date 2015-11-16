@@ -102,6 +102,7 @@
         </researchDefs>        
         <recipeDefs>
             <li>MakeMedicine</li>
+            <li>MakeSyringe</li>
         </recipeDefs>        
         <thingDefs>
             <li>TableChemlab</li>

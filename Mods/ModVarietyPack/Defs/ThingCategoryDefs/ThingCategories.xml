@@ -50,8 +50,8 @@
 				<ThingCategoryDef>
 					<defName>FoodFreshFish</defName>
 					<label>fresh fish</label>
-					<parent>FoodRaw</parent>
-					<resourceReadoutRoot>true</resourceReadoutRoot>
+					<parent>MeatRaw</parent>
+					<resourceReadoutRoot>false</resourceReadoutRoot>
 					<iconPath>ThingCategories/FreshFish</iconPath>
 				</ThingCategoryDef>
 
@@ -74,12 +74,12 @@
 						<iconPath>ThingCategories/FruitFoodRaw</iconPath>
 					</ThingCategoryDef>
 
-					<!--  -->
+					
 		<ThingCategoryDef>
         		<defName>CookingSupplies</defName>
         		<label>cooking ingredents</label>
         		<parent>Foods</parent>
-        		<resourceReadoutRoot>true</resourceReadoutRoot>
+        		<resourceReadoutRoot>false</resourceReadoutRoot>
         		<iconPath>ThingCategories/Cookingstuff</iconPath>
 	     </ThingCategoryDef>
 
@@ -98,6 +98,11 @@
         		<resourceReadoutRoot>true</resourceReadoutRoot>
         		<iconPath>Items/beer/beer_a</iconPath>
 	     </ThingCategoryDef>
+
+
+
+	     <!--  -->
+	     
 
 			<!-- todo rename AnimalProductRaw -->
 				<ThingCategoryDef>
@@ -303,6 +308,13 @@
 			<label>animal corpses</label>
 			<parent>Corpses</parent>
 		</ThingCategoryDef>
+
+		<ThingCategoryDef>
+			<defName>CorpsesFish</defName>
+			<label>Fish corpses</label>
+			<parent>Corpses</parent>
+		</ThingCategoryDef>
+
 	
 		<ThingCategoryDef>
 			<defName>CorpsesMechanoid</defName>

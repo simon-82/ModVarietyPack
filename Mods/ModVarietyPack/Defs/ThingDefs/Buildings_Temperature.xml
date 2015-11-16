@@ -681,7 +681,8 @@
             <Beauty>-30</Beauty>
         </statBases>
         <costList>
-            <Steel>300</Steel>
+            <SteelBar>100</SteelBar>
+            <AluBar>100</AluBar>
         </costList>
         <building>
             <canPlaceOverWall>true</canPlaceOverWall>
@@ -738,7 +739,8 @@
         </statBases>
         <size>(1,1)</size>
         <costList>
-            <SteelBar>40</SteelBar>
+            <SteelBar>60</SteelBar>
+            <AluBar>20</AluBar>
         </costList>
         <building>
             <canPlaceOverWall>true</canPlaceOverWall>

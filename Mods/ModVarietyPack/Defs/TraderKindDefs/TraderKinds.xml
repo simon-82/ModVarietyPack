@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <DefPackage-TraderKindDef>
 
 	<!-- Vanilla Trader -->
@@ -79,7 +79,25 @@
 					<min>500</min>
 					<max>2000</max>
 				</totalPriceRange>
-			</li>			
+			</li>	
+
+	<!-- added for fish industry to get full fish for eggs -->
+
+			<li Class="StockGenerator_Category">
+				<categoryDef>CorpsesFish</categoryDef>
+				<thingDefCountRange>
+					<min>1</min>
+					<max>3</max>
+				</thingDefCountRange>
+				<price>Cheap</price>
+				<totalPriceRange>
+					<min>1</min>
+					<max>100</max>
+				</totalPriceRange>
+			</li>	
+
+		
+			
 			<li Class="StockGenerator_Category">
 				<categoryDef>ResourcesRaw</categoryDef>
 				<thingDefCountRange>
