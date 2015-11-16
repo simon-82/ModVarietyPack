@@ -17,6 +17,29 @@
     <hediff>Burn</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
   </DamageDef>
+
+  <!--Syringe-->
+  <DamageDef Name="Puncture" ParentName="LocalInjuryBase">
+    <defName>Puncture</defName>
+    <label>puncture</label>
+    <externalViolence>true</externalViolence>
+    <battleWound>false</battleWound>
+    <deathMessage>{0} has been poked to death.</deathMessage>
+    <hediff>Puncture</hediff>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+
+  <DamageDef ParentName="Puncture">
+    <defName>SleepPuncture</defName>
+    <label>sleep puncture</label>
+    <additionalHediffs>
+      <li>
+        <hediff>Anesthetic</hediff>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
   
 
 </Defs>
