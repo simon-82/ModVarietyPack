@@ -623,6 +623,57 @@
 
 
 	<!-- === butcher fish === -->
+
+
+	<!-- need to change core recipe because of added thing category fish corpses!!! -->
+	<RecipeDef>
+		<defName>ButcherCorpseFlesh</defName>
+		<label>butcher creature</label>
+		<description>Butchers a creature to obtain its meat in usable form.</description>
+		<jobString>Butchering.</jobString>
+		<workAmount>450</workAmount>
+		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
+    <effectWorking>ButcherFlesh</effectWorking>
+    <soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+    <ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Corpses</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<specialProducts>
+			<li>Butchery</li>
+		</specialProducts>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Corpses</li>
+			</categories>
+			<exceptedCategories>
+				<li>CorpsesMechanoid</li>
+				<li>CorpsesFish</li>
+			</exceptedCategories>
+      <specialFiltersToDisallow>
+        <li>AllowRotten</li>
+      </specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>CorpsesAnimal</li>
+			</categories>
+		</defaultIngredientFilter>
+	</RecipeDef>
+
+
+
+
+
+
 	<RecipeDef>
 		<defName>ShellMashgon</defName>
 		<label>shell mashgons</label>

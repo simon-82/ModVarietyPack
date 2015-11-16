@@ -1437,7 +1437,15 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
       <exceptedCategories>
         <li>CorpsesMechanoid</li>
         <li>CorpsesAnimal</li>
+        <li>CorpsesFish</li>
+        <li>Robots</li>
       </exceptedCategories>
+      <exceptedThingDefs>
+        <li>AIPawn_Corpse</li>
+        <li>AIPawnE_Corpse</li>
+        <li>AIRobot_Cleaner_Corpse</li>
+        <li>AIRobot_Hauler_Corpse</li>
+      </exceptedThingDefs>
       <specialFiltersToDisallow>
         <li>AllowRotten</li>
       </specialFiltersToDisallow>

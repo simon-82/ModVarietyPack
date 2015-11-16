@@ -309,11 +309,15 @@
 			<parent>Corpses</parent>
 		</ThingCategoryDef>
 
+		<!-- ADDED --> 
+
 		<ThingCategoryDef>
 			<defName>CorpsesFish</defName>
 			<label>Fish corpses</label>
 			<parent>Corpses</parent>
 		</ThingCategoryDef>
+		
+		<!--  -->
 
 	
 		<ThingCategoryDef>
