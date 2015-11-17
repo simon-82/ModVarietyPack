@@ -1847,13 +1847,13 @@
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>RawXerigium</harvestedThingDef>
       <harvestDestroys>true</harvestDestroys>
-      <harvestYield>1</harvestYield>
+      <harvestYield>3</harvestYield>
       <sowTags>
         <li>Ground</li>
         <li>Hydroponic</li>
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
-      <growDays>13</growDays>
+      <growDays>10</growDays>
       <fertilityFactorGrowthRate>0.05</fertilityFactorGrowthRate>
       <fertilityMin>1.0</fertilityMin>
       <visualSizeRange>

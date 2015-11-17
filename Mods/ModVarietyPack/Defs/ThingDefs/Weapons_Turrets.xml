@@ -242,13 +242,13 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>24</damageAmountBase>
+      <damageAmountBase>20</damageAmountBase>
       <speed>333</speed>
     </projectile>
     <comps>
       <li Class="Combat_Realism.CompProperties_AP">
         <compClass>Combat_Realism.CompAP</compClass>
-        <armorPenetration>0.7</armorPenetration>
+        <armorPenetration>0.6</armorPenetration>
       </li>
     </comps>
   </ThingDef>
@@ -283,7 +283,7 @@
         <warmupTicks>180</warmupTicks>
         <range>45</range>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
-        <burstShotCount>200</burstShotCount>
+        <burstShotCount>100</burstShotCount>
         <soundCast>Gun_M134Minigun_Sound</soundCast>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
