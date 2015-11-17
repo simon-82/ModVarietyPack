@@ -1411,7 +1411,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
     <allowMixingIngredients>true</allowMixingIngredients>
-    <workAmount>5000</workAmount>
+    <workAmount>750</workAmount>
     <skillRequirements>
          <li>
             <skill>Medicine</skill>

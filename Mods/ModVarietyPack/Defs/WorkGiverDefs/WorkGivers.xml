@@ -940,6 +940,21 @@
     </requiredCapacities>
   </WorkGiverDef>
 
+  <WorkGiverDef>
+    <defName>DoBillsTableOven</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>80</priorityInType>
+    <singleBillGiverDef>TableOven</singleBillGiverDef>
+    <verb>cook</verb>
+    <gerund>cooking</gerund>
+    <requiredCapacities>
+        <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+
+
 
 
 
