@@ -1305,7 +1305,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     <jobString>Grounding Flour.</jobString>
     <workSpeedStat>CookSpeed</workSpeedStat>
       <effectWorking>Cook</effectWorking>
-    <workAmount>900</workAmount>
+      <workAmount>900</workAmount>
        <soundWorking>Recipe_CookMeal</soundWorking>
        <allowMixingIngredients>true</allowMixingIngredients>
     <ingredients>
@@ -1333,7 +1333,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
         </specialFiltersToDisallow>
     </fixedIngredientFilter>
     <products>
-      <Flour>4</Flour>
+      <Flour>8</Flour>
     </products>
     <workSkill>Cooking</workSkill>
   </RecipeDef>

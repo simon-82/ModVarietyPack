@@ -539,6 +539,7 @@
     <holdsRoof>true</holdsRoof>
     <designationCategory>Structure</designationCategory>
     <blockLight>false</blockLight>
+    <specialDisplayRadius>5.9</specialDisplayRadius>
     <damageMultipliers>
       <li>
         <damageDef>Bomb</damageDef>

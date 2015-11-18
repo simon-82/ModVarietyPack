@@ -466,7 +466,7 @@
 	<RecipeDef>
 		<defName>MakeBread</defName>
 		<label>Bake Bread</label>
-		<description>Bakes a loaf of bread.</description>
+		<description>Bakes 2 loafs of bread.</description>
 		<jobString>Baking Bread.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
