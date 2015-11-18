@@ -497,6 +497,39 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
+		<ResearchProjectDef>
+			<defName>ResearchAutoPowerSwitch</defName>
+			<label>Automatic Power Switch</label>
+			<description>Research a motion detector for the power switch. This will allow automatic power switching.</description>
+			<descriptionDiscovered>Now your power switch can be configured to automatically switch on when someone is in the room. Additionally further enhancement is now possible.\nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
+			<totalCost>150</totalCost>
+			<prerequisites>
+				<li>PowerII</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>ResearchTimerSwitch</defName>
+			<label>Timer Switch</label>
+			<description>Research an timer for the power switch. This will allow automatic power switching at specific times.</description>
+			<descriptionDiscovered>Now your power switch can be configured to automatically switch at specified times. \nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
+			<totalCost>150</totalCost>
+			<prerequisites>
+				<li>ResearchAutoPowerSwitch</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>ResearchAutoEnemySwitch</defName>
+			<label>Automatic Enemy Switch</label>
+			<description>Research an enemy detector for the power switch. This will allow automatic power switching when an enemy is found.</description>
+			<descriptionDiscovered>Now your power switch can be configured to automatically switch when an enemy is detected.\nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
+			<totalCost>500</totalCost>
+			<prerequisites>
+				<li>ResearchAutoPowerSwitch</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
     <ResearchProjectDef>
 		<defName>GeothermalPower</defName>
 		<label>Power III</label>
