@@ -4,9 +4,6 @@
 
 
 	<!-- === VanillaStart === -->
-
-
-	<!-- === MVP ingredients for meals were foodraw, need base count 10 for simple  === -->
 	<RecipeDef Name="CookMealSimple">
 		<defName>CookMealSimple</defName>
 		<label>cook simple meal</label>
@@ -16,16 +13,17 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>FoodRaw</li>
-					</categories>
-				</filter>
-				<count>10</count>
-			</li>
-		</ingredients>
+	      <li>
+	        <filter>
+	          <categories>
+	            <li>FoodRaw</li>
+	          </categories>
+	        </filter>
+	        <count>0.5</count>
+	      </li>
+	    </ingredients>
 		<products>
 			<MealSimple>1</MealSimple>
 		</products>
@@ -70,14 +68,16 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
-		<ingredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    	<ingredients>
 			<li>
 				<filter>
 					<categories>
 						<li>MeatRaw</li>
-					</categories>
+            			<li>OtherFoodRaw</li>
+          			</categories>
 				</filter>
-				<count>5</count>
+				<count>0.25</count>
 			</li>
 			<li>
 				<filter>
@@ -85,7 +85,7 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>5</count>
+				<count>0.25</count>
 			</li>
 		</ingredients>
 		<products>
@@ -129,14 +129,16 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
 			<li>
 				<filter>
 					<categories>
 						<li>MeatRaw</li>
-					</categories>
+            			<li>OtherFoodRaw</li>
+         			</categories>
 				</filter>
-				<count>10</count>
+				<count>0.5</count>
 			</li>
 			<li>
 				<filter>
@@ -144,7 +146,7 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>0.5</count>
 			</li>
 		</ingredients>
 		<products>
@@ -206,16 +208,17 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>FoodRaw</li>
-					</categories>
-				</filter>
-				<count>40</count>
-			</li>
-		</ingredients>
+	      <li>
+	        <filter>
+	          <categories>
+	            <li>FoodRaw</li>
+	          </categories>
+	        </filter>
+	        <count>2.0</count>
+	      </li>
+	    </ingredients>
 		<products>
 			<MealSimple>4</MealSimple>
 		</products>
@@ -247,6 +250,7 @@
 		</skillRequirements>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>CookMealFine_4x</defName>
 		<label>cook four fine meals</label>
@@ -257,15 +261,16 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
-		<ingredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    	<ingredients>
 			<li>
 				<filter>
 					<categories>
 						<li>MeatRaw</li>
-						<li>OtherFoodRaw</li>
-					</categories>
+            			<li>OtherFoodRaw</li>
+          			</categories>
 				</filter>
-				<count>20</count>
+				<count>1.0</count>
 			</li>
 			<li>
 				<filter>
@@ -273,7 +278,7 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>20</count>
+				<count>1.0</count>
 			</li>
 		</ingredients>
 		<products>
@@ -307,6 +312,7 @@
 		</skillRequirements>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>CookMealLavish_4x</defName>
 		<label>cook four lavish meals</label>
@@ -317,15 +323,16 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
 			<li>
 				<filter>
 					<categories>
 						<li>MeatRaw</li>
-						<li>OtherFoodRaw</li>
-					</categories>
+            			<li>OtherFoodRaw</li>
+         			</categories>
 				</filter>
-				<count>40</count>
+				<count>2.0</count>
 			</li>
 			<li>
 				<filter>
@@ -333,7 +340,7 @@
 						<li>PlantFoodRaw</li>
 					</categories>
 				</filter>
-				<count>40</count>
+				<count>2.0</count>
 			</li>
 		</ingredients>
 		<products>
@@ -393,16 +400,17 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>PlantFoodRaw</li>
-					</categories>
-				</filter>
-				<count>10</count>
-			</li>
-		</ingredients>
+	      <li>
+	        <filter>
+	          <categories>
+	            <li>PlantFoodRaw</li>
+	          </categories>
+	        </filter>
+	        <count>0.5</count>
+	      </li>
+	    </ingredients>
 		<products>
 			<MealSalad>1</MealSalad>
 		</products>
@@ -424,6 +432,7 @@
 		</defaultIngredientFilter>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>CookMealJerky</defName>
 		<label>cook jerky</label>
@@ -492,6 +501,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeDriedfruit</defName>
 		<label>Dry Fruit</label>
@@ -501,16 +511,17 @@
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
 		<ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>FruitFoodRaw</li>
-					</categories>
-				</filter>
-				<count>10</count>
-			</li>
-		</ingredients>
+	      <li>
+	        <filter>
+	          <categories>
+	            <li>FruitFoodRaw</li>
+	          </categories>
+	        </filter>
+	        <count>0.5</count>
+	      </li>
+	    </ingredients>
 		<fixedIngredientFilter>
 			<categories>
 				<li>FruitFoodRaw</li>
@@ -524,6 +535,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeMealCannedFood</defName>
 		<label>can food</label>
@@ -565,6 +577,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
 	<RecipeDef>
 		<defName>MakeTofu</defName>
 		<label>Make tofu</label>
@@ -598,6 +611,7 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+	
 	<RecipeDef>
 		<defName>MakeTofu10x</defName>
 		<label>make lots of tofu</label>

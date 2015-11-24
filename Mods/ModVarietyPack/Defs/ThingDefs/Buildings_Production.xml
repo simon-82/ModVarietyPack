@@ -923,7 +923,7 @@
     <inspectorTabs>
       <li>ITab_Growing</li>
     </inspectorTabs>
-    <fertility>3.5</fertility>
+    <fertility>1.4</fertility>
     <building>
       <defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
       <plantsDestroyWithMe>true</plantsDestroyWithMe>
@@ -985,7 +985,7 @@
     <inspectorTabs>
       <li>ITab_Growing</li>
     </inspectorTabs>
-    <fertility>3.5</fertility>
+    <fertility>1.4</fertility>
     <building>
       <defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
       <plantsDestroyWithMe>true</plantsDestroyWithMe>
@@ -1047,7 +1047,7 @@
     <inspectorTabs>
       <li>ITab_Growing</li>
     </inspectorTabs>
-    <fertility>3.5</fertility>
+    <fertility>1.4</fertility>
     <building>
       <defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
       <plantsDestroyWithMe>true</plantsDestroyWithMe>
@@ -1109,7 +1109,7 @@
     <inspectorTabs>
       <li>ITab_Growing</li>
     </inspectorTabs>
-    <fertility>3.5</fertility>
+    <fertility>1.4</fertility>
     <building>
       <defaultPlantToGrow>PlantPotato</defaultPlantToGrow>
       <plantsDestroyWithMe>true</plantsDestroyWithMe>

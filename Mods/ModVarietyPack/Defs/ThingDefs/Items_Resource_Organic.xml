@@ -37,7 +37,9 @@
   <ThingDef Abstract="True" Name="PlantFoodRawBase" ParentName="OrganicProductBase">
     <ingestible>
       <preferability>Raw</preferability>
-      <nutrition>0.05</nutrition>
+
+      <!-- MVP modded to scale with plants <nutrition>0.05</nutrition> -->
+      
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>RawVegetable_Eat</soundEat>
     </ingestible>
@@ -49,7 +51,9 @@
   <ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase" >
     <ingestible>
       <preferability>Awful</preferability>
-      <nutrition>0.25</nutrition>
+
+      <!-- MVP modded to scale with plants <nutrition>0.25</nutrition> -->
+      
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>RawVegetable_Eat</soundEat>
     </ingestible>
@@ -71,6 +75,7 @@
     <stackLimit>200</stackLimit>
     <ingestible>
       <preferability>Plant</preferability>
+      <nutrition>0.05</nutrition>
     </ingestible>
     <graphicData>
       <texPath>Things/Item/Resource/PlantFoodRaw/Hay</texPath>
@@ -120,6 +125,7 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.05</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -131,7 +137,7 @@
   <ThingDef ParentName="PlantFoodRawBase">
     <defName>RawCorn</defName>
     <label>corn</label>
-    <description>Raw corn. Nice to eat, even when raw.</description>
+    <description>Raw corn.</description>
     <soundInteract>Grain_Drop</soundInteract>
     <soundDrop>Grain_Drop</soundDrop>
     <graphicData>
@@ -140,6 +146,10 @@
     <statBases>
       <MarketValue>2.1</MarketValue>
     </statBases>
+    <ingestible>
+      <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.05</nutrition>
+    </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
         <daysToRotStart>60</daysToRotStart>
@@ -161,6 +171,7 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.05</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -186,6 +197,7 @@
     </comps>
     <ingestible>
       <joy>0.004</joy>
+      <nutrition>0.05</nutrition>
     </ingestible>
   </ThingDef>
 
@@ -201,6 +213,7 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.05</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -227,6 +240,7 @@
       </li>
     </comps>
     <ingestible>
+      <nutrition>0.05</nutrition>
       <joy>0.004</joy>
     </ingestible>
   </ThingDef>
@@ -405,6 +419,7 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.06</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -425,6 +440,7 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.06</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -445,6 +461,7 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.06</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -465,6 +482,7 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.07</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -485,6 +503,7 @@
     </statBases>
     <ingestible>
       <joy>0.004</joy>
+      <nutrition>0.08</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -505,6 +524,7 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.07</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -525,6 +545,7 @@
     </statBases>
     <ingestible>
       <joy>0.004</joy>
+      <nutrition>0.08</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -546,6 +567,7 @@
     </statBases>
     <ingestible>
       <joy>0.004</joy>
+      <nutrition>0.08</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -566,6 +588,7 @@
     </statBases>
     <ingestible>
       <ingestedDirectThought>AteRawFood</ingestedDirectThought>
+      <nutrition>0.07</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -587,7 +610,7 @@
       <MarketValue>6</MarketValue>
     </statBases>
     <ingestible>
-  <nutrition>.25</nutrition>
+      <nutrition>0.08</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -608,7 +631,7 @@
       <MarketValue>8</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
+      <nutrition>0.08</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -629,7 +652,7 @@
       <MarketValue>6</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
+      <nutrition>0.05</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -650,7 +673,7 @@
       <MarketValue>7</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
+      <nutrition>0.08</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -671,7 +694,7 @@
       <MarketValue>7</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
+      <nutrition>0.08</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -692,7 +715,7 @@
       <MarketValue>8</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
+      <nutrition>0.07</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -714,6 +737,7 @@
     </statBases>
     <ingestible>
       <joy>0.004</joy>
+      <nutrition>0.06</nutrition>
     </ingestible>
     <comps>
       <li Class="CompProperties_Rottable">
@@ -733,6 +757,7 @@
       <MarketValue>3</MarketValue>
     </statBases>
     <ingestible>
+      <nutrition>0.08</nutrition>
       <joy>0.008</joy>
     </ingestible>
     <comps>
@@ -753,7 +778,7 @@
       <MarketValue>8</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
+      <nutrition>0.08</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -774,7 +799,7 @@
       <MarketValue>7</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
+      <nutrition>0.08</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -795,7 +820,7 @@
       <MarketValue>6</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
+      <nutrition>0.08</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -816,7 +841,7 @@
       <MarketValue>6</MarketValue>
     </statBases>
     <ingestible>
-   <nutrition>.25</nutrition>
+      <nutrition>0.07</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>

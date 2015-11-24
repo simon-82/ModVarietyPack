@@ -1347,7 +1347,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     <workAmount>1200</workAmount>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
-	<allowMixingIngredients>true</allowMixingIngredients>
+    <allowMixingIngredients>true</allowMixingIngredients>
     <ingredients>
       <li>
         <filter>
@@ -1355,7 +1355,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
             <li>FoodRaw</li>
           </categories>
         </filter>
-        <count>40</count>
+        <count>30</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
