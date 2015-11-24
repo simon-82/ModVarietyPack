@@ -599,7 +599,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<Gun_AK47_AR>1</Gun_AK47_AR>
+			<Gun_M14A_AR>1</Gun_M14A_AR>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -743,7 +743,7 @@
 			</li>
 		</ingredients>
 		<products>
-			<Gun_M14_PA>1</Gun_M14_PA>
+			<Gun_BarrettM107_PA>1</Gun_BarrettM107_PA>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>

@@ -12,7 +12,7 @@ ____
 * Create a shortcut and add *-savedatafolder SaveData* to the end of the command line used to launch the game.    
 So on Windows it'll look something like this:    
 *C:/RimWorld/RimWorld914Win.exe -savedatafolder SaveData*   
-Having issues with this step? Here is how to do it step by step (for Windows):     
+Having issues with this? Here is how to do it step by step (for Windows):     
   * Right click the rimworld.exe file.    
   * Select *create shortcut*.    
   * Now right click the new shortcut you created and select *properties*.    

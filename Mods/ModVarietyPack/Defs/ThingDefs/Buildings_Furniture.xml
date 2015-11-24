@@ -63,7 +63,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>SleepingSpot</defName>
     <label>sleeping spot</label>
-    <Description>Designates a spot on the ground where people should sleep. Not comfortable.</Description>
+    <Description>Designates a spot on the ground where people should sleep. Not comfortable. Rest effectiveness: 50%</Description>
     <ThingClass>Building_Bed</ThingClass>
     <graphicData>
       <texPath>Things/Building/Furniture/Bed/SleepSpot</texPath>
@@ -74,6 +74,8 @@
     <statBases>
       <WorkToMake>0</WorkToMake>
       <Comfort>0.4</Comfort>
+      <!-- MVP nerf sleepingspot rest -->
+      <BedRestEffectiveness>0.50</BedRestEffectiveness>
     </statBases>
     <useHitPoints>False</useHitPoints>
     <Size>(1,2)</Size>
@@ -1140,7 +1142,7 @@
       <WorkToMake>1000</WorkToMake>
       <Comfort>0.6</Comfort>
       <BedRestEffectiveness>0.75</BedRestEffectiveness>
-      <ImmunityGainSpeedFactor>0.8</ImmunityGainSpeedFactor>
+      <ImmunityGainSpeedFactor>1.0</ImmunityGainSpeedFactor>
     </statBases>
     <Size>(1,2)</Size>
     <stuffCategories>
@@ -1192,7 +1194,7 @@
       <WorkToMake>1500</WorkToMake>
       <Comfort>0.95</Comfort>
       <BedRestEffectiveness>1.25</BedRestEffectiveness>
-      <ImmunityGainSpeedFactor>1.25</ImmunityGainSpeedFactor>
+      <ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
     </statBases>
     <Size>(2,2)</Size>
     <costList>
@@ -1304,7 +1306,7 @@
       <WorkToMake>1000</WorkToMake>
       <Comfort>0.75</Comfort>
       <BedRestEffectiveness>1</BedRestEffectiveness>
-      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
+      <ImmunityGainSpeedFactor>1.05</ImmunityGainSpeedFactor>
     </statBases>
     <Size>(1,2)</Size>
     <costList>
@@ -1355,7 +1357,7 @@
       <WorkToMake>1500</WorkToMake>
       <Comfort>0.95</Comfort>
       <BedRestEffectiveness>1.25</BedRestEffectiveness>
-      <ImmunityGainSpeedFactor>1.25</ImmunityGainSpeedFactor>
+      <ImmunityGainSpeedFactor>1.075</ImmunityGainSpeedFactor>
     </statBases>
     <Size>(1,2)</Size>
     <stuffCategories>
@@ -1410,7 +1412,7 @@
       <WorkToMake>2500</WorkToMake>
       <Comfort>1.0</Comfort>
       <BedRestEffectiveness>1.5</BedRestEffectiveness>
-      <ImmunityGainSpeedFactor>1.135</ImmunityGainSpeedFactor>
+      <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
     </statBases>
     <Size>(1,2)</Size>
     <costList>
@@ -2528,66 +2530,101 @@
     <researchPrerequisite>StorageI</researchPrerequisite>
   </ThingDef>
 
-  
 
 
 
 
 
+  <!-- MD2 Deep Storage -->
+  <ThingDef Name="MD2BuildingBase" Abstract="True">
+    <category>Building</category>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <thingClass>MD2.Building_DeepStorage</thingClass>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <constructEffect>ConstructMetal</constructEffect>
+    <repairEffect>Repair</repairEffect>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Impassable</passability>
+    <castEdgeShadows>false</castEdgeShadows>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <graphicData>
+      <texPath>Buildings/DeepStorage</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    <drawSize>(2,1)</drawSize>
+    </graphicData>
+    <building>
+      <fixedStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>Root</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <designationCategory>Storage</designationCategory>
+    <staticSunShadowHeight>0.2</staticSunShadowHeight>
+    <surfaceType>Item</surfaceType>
+    <size>(2,1)</size>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
 
 
+  <ThingDef ParentName="MD2BuildingBase" Class="MD2.DSUDef">
+    <defName>MD2DeepStorageI</defName>
+    <label>Deep Storage Unit Mk.I</label>
+    <description>A contained unit for storing up to 1000 of a single item.</description>
+    <statBases>
+      <MaxHitPoints>300</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>1200</WorkToMake>
+    </statBases>
+    <maxStorage>1000</maxStorage>
+    <costList>
+      <SteelBar>100</SteelBar>
+      <WoodPlank>20</WoodPlank>
+    </costList>
+    <researchPrerequisite>StorageI</researchPrerequisite>
+  </ThingDef>
 
+  <ThingDef ParentName="MD2BuildingBase" Class="MD2.DSUDef">
+    <defName>MD2DeepStorageII</defName>
+    <label>Deep Storage Unit Mk.II</label>
+    <description>A contained unit for storing up to 1500 of a single item.</description>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>2400</WorkToMake>
+    </statBases>
+    <maxStorage>1500</maxStorage>
+    <costList>
+      <SteelBar>120</SteelBar>
+      <WoodPlank>30</WoodPlank>
+    </costList>
+    <researchPrerequisite>StorageII</researchPrerequisite>
+  </ThingDef>
 
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <ThingDef ParentName="MD2BuildingBase" Class="MD2.DSUDef">
+    <defName>MD2DeepStorageIII</defName>
+    <label>Deep Storage Unit Mk.III</label>
+    <description>A contained unit for storing up to 2250 of a single item.</description>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <WorkToMake>3400</WorkToMake>
+    </statBases>
+    <maxStorage>2250</maxStorage>
+    <costList>
+      <SteelBar>150</SteelBar>
+      <WoodPlank>40</WoodPlank>
+    </costList>
+    <researchPrerequisite>StorageII</researchPrerequisite>
+  </ThingDef>
 
 
 

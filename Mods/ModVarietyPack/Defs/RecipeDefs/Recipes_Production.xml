@@ -1347,13 +1347,18 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     <workAmount>1200</workAmount>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
-	<allowMixingIngredients>true</allowMixingIngredients>
+    <allowMixingIngredients>true</allowMixingIngredients>
     <ingredients>
       <li>
         <filter>
           <categories>
             <li>FoodRaw</li>
+            <li>CookingSupplies</li>
           </categories>
+          <thingDefs>
+            <li>Bamboo</li>
+            <li>WoodLog</li>
+          </thingDefs>
         </filter>
         <count>40</count>
       </li>
@@ -1361,7 +1366,12 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     <fixedIngredientFilter>
       <categories>
             <li>FoodRaw</li>
+            <li>CookingSupplies</li>
       </categories>
+      <thingDefs>
+        <li>Bamboo</li>
+        <li>WoodLog</li>
+      </thingDefs>
     </fixedIngredientFilter>
     <products>
       <Mulch>15</Mulch>

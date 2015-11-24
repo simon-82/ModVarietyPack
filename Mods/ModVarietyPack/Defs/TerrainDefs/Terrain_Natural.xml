@@ -210,11 +210,13 @@
 
 
   <!-- 
+    Plants:
     Base        cultivated soil    (Fertility 1.0) 
-    Tier I      fertilized soil    (Fertility 1.5)
-    Tier II     watered soil       (Fertility 2.0)
-    Tier III    enriched soil      (Fertility 2.5)
-    Tier IV     =Tier III
+    Tier I      fertilized soil    (Fertility 1.1)
+    Tier II     watered soil       (Fertility 1.2)
+    Tier III    enriched soil      (Fertility 1.4)
+    Tier IV     = Tier III
+    Note: Hydroponics = Tier III
   -->
 
   <TerrainDef>
@@ -262,10 +264,10 @@
       <li>Diggable</li>
     </affordances>
     <CostList>
-      <Mulch>5</Mulch>
+      <Mulch>3</Mulch>
     </CostList>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>1.5</Fertility>
+    <Fertility>1.1</Fertility>
     <TakeFootprints>True</TakeFootprints>
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
@@ -306,7 +308,7 @@
       <BucketWater>1</BucketWater>
     </CostList>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>2.0</Fertility>
+    <Fertility>1.2</Fertility>
     <TakeFootprints>True</TakeFootprints>
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
@@ -344,11 +346,11 @@
       <li>Diggable</li>
     </affordances>
     <CostList>
-      <Mulch>10</Mulch>
+      <Mulch>6</Mulch>
       <BucketWater>2</BucketWater>
     </CostList>
     <TerrainFilthDef>FilthDirt</TerrainFilthDef>
-    <Fertility>2.5</Fertility>
+    <Fertility>1.4</Fertility>
     <TakeFootprints>True</TakeFootprints>
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
