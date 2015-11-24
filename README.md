@@ -24,8 +24,8 @@ It may be different, depending on where you installed the game.
 Again, the part before *-savedatafolder SaveData* can be different for you.   
 * If you used this shortcut before, delete all files inside [gamefolder]/SaveData
 * Start the game once with the newly created shortcut. This will create a fresh set of config files.
-* Open up the ModPack .zip file and extract both folders *Mods* and *SaveData* directly into your [gamefolder] folder.
-* Start the game with the newly created shortcut.
+* Open up the ModPack .zip file and extract both folders *Mods* and *SaveData* directly into your [gamefolder].
+* Start the game with the shortcut you created.
 
 ____     
 **BIG thanks to:** 
