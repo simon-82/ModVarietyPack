@@ -5,6 +5,7 @@ This modpack is compatible with version Alpha12d of Rimworld.
 The latest release can be downloaded **[here](https://github.com/simon-82/ModVarietyPack/releases)**    
 The modpack needs to be run in English.    
 Using additional mods (not included in this modpack) is not recommended.    
+For more information you can visit the **[ModVarietyPack wiki](https://github.com/simon-82/ModVarietyPack/wiki)**     
 
 ____       
 **Installation:**  
@@ -18,7 +19,7 @@ Having issues with this? Here is how to do it step by step (for Windows):
   * Now right click the new shortcut you created and select *properties*.    
 In this window, the first line you can edit reads something like *C:/RimWorld/RimWorld914Win.exe*    
 It may be different, depending on where you installed the game.     
-  5. Change this line to be like this    
+  * Change this line to be like this:        
 *C:/RimWorld/RimWorld914Win.exe -savedatafolder SaveData*   
 Again, the part before *-savedatafolder SaveData* can be different for you.   
 * If you used this shortcut before, delete all files inside [gamefolder]/SaveData
