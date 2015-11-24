@@ -1353,15 +1353,25 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
         <filter>
           <categories>
             <li>FoodRaw</li>
+            <li>CookingSupplies</li>
           </categories>
+          <thingDefs>
+            <li>Bamboo</li>
+            <li>WoodLog</li>
+          </thingDefs>
         </filter>
-        <count>30</count>
+        <count>40</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <categories>
             <li>FoodRaw</li>
+            <li>CookingSupplies</li>
       </categories>
+      <thingDefs>
+        <li>Bamboo</li>
+        <li>WoodLog</li>
+      </thingDefs>
     </fixedIngredientFilter>
     <products>
       <Mulch>15</Mulch>
