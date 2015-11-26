@@ -502,7 +502,7 @@
 			<label>Automatic Power Switch</label>
 			<description>Research a motion detector for the power switch. This will allow automatic power switching.</description>
 			<descriptionDiscovered>Now your power switch can be configured to automatically switch on when someone is in the room. Additionally further enhancement is now possible.\nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
-			<totalCost>150</totalCost>
+			<totalCost>250</totalCost>
 			<prerequisites>
 				<li>PowerII</li>
 			</prerequisites>
@@ -513,7 +513,7 @@
 			<label>Timer Switch</label>
 			<description>Research an timer for the power switch. This will allow automatic power switching at specific times.</description>
 			<descriptionDiscovered>Now your power switch can be configured to automatically switch at specified times. \nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
-			<totalCost>150</totalCost>
+			<totalCost>250</totalCost>
 			<prerequisites>
 				<li>ResearchAutoPowerSwitch</li>
 			</prerequisites>
@@ -539,6 +539,16 @@
 			<li>PowerII</li>
 		</prerequisites>
 	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>WirelessPower_Research</defName>
+			<label>Wireless Power</label>
+			<description>"Why are there cables lying everywhere? Ever heard about a wireless power grid? \n"Ok, I get on it boss. Jeez..."</description>
+			<totalCost>1250</totalCost>
+			<prerequisites>
+				<li>GeothermalPower</li>
+			</prerequisites>
+		</ResearchProjectDef>
 
 		<ResearchProjectDef>
 			<defName>PlasmaPower</defName>
@@ -688,5 +698,49 @@
 			<li>Mortars</li>
 		</prerequisites>
 	</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>Building_ShieldStandard_research</defName>
+			<label>Standard Shield Generator</label>
+			<description>Magnetic shield field slows and heats any projectiles to the point of evaporating.\nThe basics of the principle is the eddy current brake, however the complex system allows the barier to ignore projectiles that leave the shield. 
+			</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>GunTurretCooling</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>Building_ShieldFortress_research</defName>
+			<label>Fortress Shield</label>
+			<description>By refocusing the primary coil system into a vertical configuration the shields range can be extended, while lacking the flexability of the Fire Supression mode it does cover a large area and gain the ability to disrupt the avionic systems of DropPods, caulsing failure of their decent rockets and therefore a terminal velocity impact.
+			</description>
+			<totalCost>2000</totalCost>
+			<prerequisites>
+				<li>Building_ShieldStandard_research</li>
+			</prerequisites>
+		</ResearchProjectDef>
+
+		<ResearchProjectDef>
+			<defName>Building_ShieldSmall_research</defName>
+			<label>Shields Small</label>
+			<description>Parts of the generator have been replaced by smaller components allowing it to be recessed into the floor allowing people to stand on the generator but reducing the size of the field generated. 
+			</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>Building_ShieldStandard_research</li>
+			</prerequisites>
+		</ResearchProjectDef>
+		
+		<ResearchProjectDef>
+			<defName>Building_ShieldSIF_research</defName>
+			<label>Shields SIF Generator</label>
+			<description>Rather than creating a large circular shield this generator will create an small individual shield over each wall/door object.
+			</description>
+			<totalCost>2000</totalCost>
+			<prerequisites>
+				<li>Building_ShieldStandard_research</li>
+			</prerequisites>
+		</ResearchProjectDef>
 
 </ResearchProjectDefs>

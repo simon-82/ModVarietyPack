@@ -1062,7 +1062,7 @@
 				<filter>
 					<thingDefs>
 						<li>Rawwheat</li>
-						<li>PlantCorn</li>
+						<li>RawCorn</li>
 						<li>Rawoats</li>
 					</thingDefs>
 				</filter>
@@ -1088,7 +1088,7 @@
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Rawwheat</li>
-				<li>PlantCorn</li>
+				<li>RawCorn</li>
 				<li>Rawoats</li>
 				<li>Sugar</li>
 				<li>BucketWater</li>

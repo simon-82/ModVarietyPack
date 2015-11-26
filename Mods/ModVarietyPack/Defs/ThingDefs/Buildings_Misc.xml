@@ -535,6 +535,83 @@
   
   <!-- === VanillaEnd === -->
 
+  <!-- === Vanilla Buildings_Art Snowman override === -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Snowman</defName>
+    <label>snowman</label>
+    <description>A set of large snowballs piled and shaped to resemble a person.</description>
+    <thingClass>Building</thingClass>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>25</pathCost>
+    <useHitPoints>true</useHitPoints>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Buildings/Snowman</texPath>
+    </graphicData>
+    <fillPercent>0.35</fillPercent>
+    <rotatable>false</rotatable>
+    <tickerType>Rare</tickerType>
+    <drawDamagedOverlay>false</drawDamagedOverlay>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Beauty>4</Beauty>
+      <WorkToMake>1000</WorkToMake>
+    </statBases>
+    <comps>
+      <li>
+        <compClass>CompMelter</compClass>
+      </li>
+    </comps>
+    <forceDebugSpawnable>true</forceDebugSpawnable>
+    <building>
+      <expandHomeArea>false</expandHomeArea>
+      <repairable>false</repairable>
+      <isInert>true</isInert>
+    </building>
+  </ThingDef>
+
+  <!-- === Vanilla Things_Special Doppod override === -->
+  <ThingDef>
+    <defName>DropPodIncoming</defName>
+    <label>drop pod (incoming)</label>
+    <thingClass>DropPodIncoming</thingClass>
+    <category>Skyfaller</category>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Buildings/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.9</drawSize>
+    </graphicData>
+    <altitudeLayer>MetaOverlays</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <drawOffscreen>true</drawOffscreen>
+  </ThingDef>
+  
+  <ThingDef>
+    <defName>DropPod</defName>
+    <label>drop pod</label>
+    <category>Item</category>
+    <thingClass>DropPod</thingClass>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Buildings/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.9</drawSize>
+      <shadowData>
+        <volume>(0.8, 0.6, 0.8)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+  </ThingDef>
+
 
 
 
