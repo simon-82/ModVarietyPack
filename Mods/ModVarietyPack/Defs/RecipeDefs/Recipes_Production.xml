@@ -1233,7 +1233,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
   <RecipeDef>
     <defName>MakeEthanolFuel</defName>
     <label>make ethanol fuel</label>
-    <description>Make ethanol fuel from raw corn.</description>
+    <description>Make ethanol fuel from raw grains.</description>
     <jobString>Making ethanol fuel.</jobString>
     <workSpeedStat>BrewingSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>

@@ -895,6 +895,19 @@
     </requiredCapacities>
   </WorkGiverDef>
 
+  <WorkGiverDef>
+    <defName>DoBillsTaxidermy</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Art</workType>
+    <priorityInType>100</priorityInType>
+    <singleBillGiverDef>TableTaxidermy</singleBillGiverDef>
+    <verb>stuff</verb>
+    <gerund>stuffing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
 
 
 

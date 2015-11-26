@@ -31,6 +31,7 @@
     <Description>Wood plank flooring. For that warm, homey feeling.</Description>
     <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
     <statBases>
+      <Beauty>2</Beauty>
       <WorkToMake>85</WorkToMake>
     </statBases>
     <CostList>
@@ -47,6 +48,7 @@
     <Description>Wood plank flooring. For that warm, homey feeling.</Description>
     <texturePath>Floors/WoodFloor1</texturePath>
     <statBases>
+      <Beauty>2</Beauty>
       <WorkToMake>85</WorkToMake>
     </statBases>
     <CostList>
@@ -63,6 +65,7 @@
     <Description>Wood plank flooring. For that warm, homey feeling.</Description>
     <texturePath>Floors/WoodFloor2</texturePath>
     <statBases>
+      <Beauty>2</Beauty>
       <WorkToMake>85</WorkToMake>
     </statBases>
     <CostList>
@@ -79,6 +82,7 @@
     <Description>Wood plank flooring. For that warm, homey feeling.</Description>
     <texturePath>Floors/WoodFloor3</texturePath>
     <statBases>
+      <Beauty>2</Beauty>
       <WorkToMake>85</WorkToMake>
     </statBases>
     <CostList>
@@ -91,10 +95,11 @@
   <TerrainDef  ParentName="FloorBase">
     <DefName>WoodPlankFloor4</DefName>
     <label>wood floor</label>
-    <RenderPrecedence>103</RenderPrecedence>
+    <RenderPrecedence>104</RenderPrecedence>
     <Description>Wood plank flooring. For that warm, homey feeling.</Description>
     <texturePath>Floors/WoodFloor4</texturePath>
     <statBases>
+      <Beauty>2</Beauty>
       <WorkToMake>85</WorkToMake>
     </statBases>
     <CostList>
@@ -107,14 +112,32 @@
   <TerrainDef  ParentName="FloorBase">
     <DefName>WoodPlankFloor5</DefName>
     <label>wood floor</label>
-    <RenderPrecedence>103</RenderPrecedence>
+    <RenderPrecedence>105</RenderPrecedence>
     <Description>Wood plank flooring. For that warm, homey feeling.</Description>
     <texturePath>Floors/WoodFloor5</texturePath>
     <statBases>
+      <Beauty>2</Beauty>
       <WorkToMake>85</WorkToMake>
     </statBases>
     <CostList>
       <WoodPlank>3</WoodPlank>
+    </CostList>
+    <constructEffect>ConstructWood</constructEffect>
+    <researchPrerequisite>Stonecutting</researchPrerequisite>
+  </TerrainDef>
+
+  <TerrainDef  ParentName="FloorBase">
+    <DefName>WoodPlankFloor6</DefName>
+    <label>bamboo floor</label>
+    <RenderPrecedence>106</RenderPrecedence>
+    <Description>Bamboo flooring. For that warm, homey feeling.</Description>
+    <texturePath>Floors/BambooFloor</texturePath>
+    <statBases>
+      <Beauty>2</Beauty>
+      <WorkToMake>85</WorkToMake>
+    </statBases>
+    <CostList>
+      <Bamboo>3</Bamboo>
     </CostList>
     <constructEffect>ConstructWood</constructEffect>
     <researchPrerequisite>Stonecutting</researchPrerequisite>
@@ -265,7 +288,7 @@
       <WorkToMake>70</WorkToMake>
     </statBases>
     <CostList>
-      <Steel>1</Steel>
+      <SteelBar>1</SteelBar>
     </CostList>
     <ResearchPrerequisite>ConstructionII</ResearchPrerequisite>
   </TerrainDef>

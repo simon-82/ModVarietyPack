@@ -602,6 +602,18 @@
 					<max>50</max>
 				</countRange>
 			</li>
+			<li Class="StockGenerator_Tag">
+	        <tradeTag>Robots</tradeTag>
+	        <thingDefCountRange>
+	          <min>1</min>
+	          <max>3</max>
+	        </thingDefCountRange>
+	        <price>Expensive</price>
+	        <totalPriceRange>
+	          <min>500</min>
+	          <max>5000</max>
+	        </totalPriceRange>
+	      </li>
 			
 			<li Class="StockGenerator_Art">
 				<countRange>
@@ -744,14 +756,14 @@
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Silver</thingDef>
 				<countRange>
-					<min>10000</min>
-					<max>15000</max>
+					<min>5000</min>
+					<max>10000</max>
 				</countRange>
 			</li>
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>Biomatter</thingDef>
 				<countRange>
-					<min>150</min>
+					<min>50</min>
 					<max>300</max>
 				</countRange>
 			</li>
@@ -794,6 +806,120 @@
 			</li>			
 		</stockGenerators>
 	</TraderKindDef>
+
+
+
+
+
+
+
+
+
+	<TraderKindDef>
+	    <defName>AIRobotsTrader</defName>
+	    <label>robots trader</label>
+	    <stockGenerators>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>Silver</thingDef>
+	        <countRange>
+	          <min>700</min>
+	          <max>4000</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>Gold</thingDef>
+	        <price>Cheap</price>
+	        <countRange>
+	          <min>50</min>
+	          <max>500</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>Steel</thingDef>
+	        <price>Cheap</price>
+	        <countRange>
+	          <min>100</min>
+	          <max>500</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>SteelBar</thingDef>
+	        <price>Cheap</price>
+	        <countRange>
+	          <min>50</min>
+	          <max>500</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>Plasteel</thingDef>
+	        <price>Normal</price>
+	        <countRange>
+	          <min>-1</min>
+	          <max>30</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>PlasteelBar</thingDef>
+	        <price>Normal</price>
+	        <countRange>
+	          <min>-1</min>
+	          <max>30</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>Electronics</thingDef>
+	        <price>Cheap</price>
+	        <countRange>
+	          <min>10</min>
+	          <max>60</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>IntegratedCircuitsBoard</thingDef>
+	        <price>Cheap</price>
+	        <countRange>
+	          <min>10</min>
+	          <max>60</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>EnergyPack</thingDef>
+	        <price>Cheap</price>
+	        <countRange>
+	          <min>1</min>
+	          <max>10</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>AIRobot_RechargeStation_Hauler</thingDef>
+	        <price>Normal</price>
+	        <countRange>
+	          <min>1</min>
+	          <max>2</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_SingleDef">
+	        <thingDef>AIRobot_RechargeStation_Cleaner</thingDef>
+	        <price>Normal</price>
+	        <countRange>
+	          <min>1</min>
+	          <max>2</max>
+	        </countRange>
+	      </li>
+	      <li Class="StockGenerator_Tag">
+	        <tradeTag>Robots</tradeTag>
+	        <thingDefCountRange>
+	          <min>2</min>
+	          <max>3</max>
+	        </thingDefCountRange>
+	        <price>Normal</price>
+	        <totalPriceRange>
+	          <min>500</min>
+	          <max>5000</max>
+	        </totalPriceRange>
+	      </li>
+	   </stockGenerators>
+  	</TraderKindDef>
 
 
 

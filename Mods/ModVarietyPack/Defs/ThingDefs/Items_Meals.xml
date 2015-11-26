@@ -504,6 +504,49 @@
 
 
 
+  <!-- === medical/NeverForNutrition === -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>MedicalDrink</defName>
+    <label>medical drink</label>
+    <description>A concentrated extract out of xerigium. Tastes awful but boosts the immune system.</description>
+    <graphicData>
+      <texPath>Items/MedicalDrink</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <statBases>
+      <DeteriorationRate>5</DeteriorationRate>
+      <MarketValue>10</MarketValue>
+    </statBases>
+    <thingCategories>
+      <li>Medicine</li>
+    </thingCategories>
+    <ingestible>
+      <preferability>NeverForNutrition</preferability>
+      <nutrition>0.08</nutrition>
+      <joy>0.17</joy>
+      <joyKind>Chemical</joyKind>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <soundEat>Ingest_Beer</soundEat>
+      <isPleasureDrug>false</isPleasureDrug>
+      <ingestedDirectThought>HadMedicalDrink</ingestedDirectThought>
+      <hediffGivers>
+        <li>
+          <chance>1</chance>
+          <hediffDef>MedicalDrink</hediffDef>
+        </li>
+      </hediffGivers>
+    </ingestible>
+  </ThingDef>
+
+
+
+
+
+
+
+
 
 
 
@@ -826,10 +869,9 @@
          <MarketValue>25</MarketValue>
          <WorkToMake>450</WorkToMake>
       </statBases>
-    <thingCategories>
-      <li>Sweets</li>
-    </thingCategories>
-
+      <thingCategories>
+        <li>Sweets</li>
+      </thingCategories>
       <ingestible>
         <preferability>NeverForNutrition</preferability>
         <isPleasureDrug>true</isPleasureDrug>
@@ -854,9 +896,9 @@
          <MarketValue>25</MarketValue>
          <WorkToMake>450</WorkToMake>
       </statBases>
-    <thingCategories>
-      <li>Sweets</li>
-    </thingCategories>
+      <thingCategories>
+        <li>Sweets</li>
+      </thingCategories>
       <ingestible>
          <preferability>NeverForNutrition</preferability>
       <isPleasureDrug>true</isPleasureDrug>
@@ -972,14 +1014,14 @@
       </ingestible>
    </ThingDef>
 
-<ThingDef ParentName="ResourceBase">
+  <ThingDef ParentName="ResourceBase">
       <defName>PiePumpkin</defName>
       <label>Pumpkin pie slice</label>
       <description>A slice of pumpkin pie.</description>
-   <graphicData>
+      <graphicData>
       <texPath>Items/PiePumpkin</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
+      </graphicData>
       <statBases>
       	<MaxHitPoints>50</MaxHitPoints>
       	<Flammability>1.0</Flammability>
@@ -1027,14 +1069,14 @@
       <li>Beverages</li>
     </thingCategories>
     <ingestible>
-             <preferability>NeverForNutrition</preferability>
-             <nutrition>0.06</nutrition>
-             <joy>0.2</joy>
-             <ingestedDirectThought>HadTea</ingestedDirectThought>
-             <joyKind>Social</joyKind>
-             <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-             <soundEat>Ingest_Beer</soundEat>
-             <isPleasureDrug>true</isPleasureDrug>
+     <preferability>NeverForNutrition</preferability>
+     <nutrition>0.06</nutrition>
+     <joy>0.2</joy>
+     <ingestedDirectThought>HadTea</ingestedDirectThought>
+     <joyKind>Social</joyKind>
+     <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+     <soundEat>Ingest_Beer</soundEat>
+     <isPleasureDrug>true</isPleasureDrug>
      <hediffGivers>
       <li>
       <chance>1</chance>
@@ -1095,14 +1137,14 @@
       <li>Beverages</li>
     </thingCategories>
     <ingestible>
-             <preferability>NeverForNutrition</preferability>
-             <nutrition>0.06</nutrition>
-             <joy>0.2</joy>
-             <ingestedDirectThought>HadCoffee</ingestedDirectThought>
-             <joyKind>Social</joyKind>
-             <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-             <soundEat>Ingest_Beer</soundEat>
-             <isPleasureDrug>true</isPleasureDrug>
+       <preferability>NeverForNutrition</preferability>
+       <nutrition>0.06</nutrition>
+       <joy>0.2</joy>
+       <ingestedDirectThought>HadCoffee</ingestedDirectThought>
+       <joyKind>Social</joyKind>
+       <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+       <soundEat>Ingest_Beer</soundEat>
+       <isPleasureDrug>true</isPleasureDrug>
      <hediffGivers>
       <li>
       <chance>1</chance>
@@ -1128,14 +1170,14 @@
       <li>Beverages</li>
     </thingCategories>
     <ingestible>
-             <preferability>NeverForNutrition</preferability>
-             <nutrition>0.04</nutrition>
-             <joy>0.3</joy>
-             <ingestedDirectThought>HadCoffee</ingestedDirectThought>
-             <joyKind>Social</joyKind>
-             <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-             <soundEat>Ingest_Beer</soundEat>
-             <isPleasureDrug>true</isPleasureDrug>
+       <preferability>NeverForNutrition</preferability>
+       <nutrition>0.04</nutrition>
+       <joy>0.3</joy>
+       <ingestedDirectThought>HadCoffee</ingestedDirectThought>
+       <joyKind>Social</joyKind>
+       <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+       <soundEat>Ingest_Beer</soundEat>
+       <isPleasureDrug>true</isPleasureDrug>
      <hediffGivers>
       <li>
       <chance>1</chance>
@@ -1203,6 +1245,11 @@
       </hediffGivers>
     </ingestible>
   </ThingDef>
+
+
+
+
+
 
 
 

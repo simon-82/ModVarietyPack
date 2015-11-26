@@ -139,7 +139,7 @@
 		<staticSunShadowHeight>0.20</staticSunShadowHeight>
 	</ThingDef>
 
-
+	<!-- MVP modified-->
 	<ThingDef ParentName="BenchBase">
 		<DefName>TableButcher</DefName>
 		<label>food prep table</label>
@@ -176,6 +176,17 @@
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
+		<comps>
+			<li>
+           		<compClass>CompAffectedByFacilities</compClass>
+		        <linkableFacilities>
+		          <li>CookingTools</li>
+		        </linkableFacilities>
+		    </li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>    
@@ -514,7 +525,16 @@
 				<idlePowerFactor>0.1</idlePowerFactor>
 				<operationalMode>InUse</operationalMode>
 			</li>
+			<li>
+           		<compClass>CompAffectedByFacilities</compClass>
+		        <linkableFacilities>
+		          <li>CookingTools</li>
+		        </linkableFacilities>
+		    </li>
 		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<building>
 			<isMealSource>true</isMealSource>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
@@ -628,6 +648,17 @@
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>
+		<comps>
+			<li>
+           		<compClass>CompAffectedByFacilities</compClass>
+		        <linkableFacilities>
+		          <li>CookingTools</li>
+		        </linkableFacilities>
+		    </li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
@@ -698,7 +729,16 @@
 				<heatPerSecond>12</heatPerSecond>
 				<heatPushMaxTemperature>9999</heatPushMaxTemperature>
 			</li>
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
 		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 			<heatPerTickWhileWorking>0.5</heatPerTickWhileWorking>
@@ -890,7 +930,7 @@
 
 
 
-	<!-- === hydoponics === -->
+	<!-- === hydoponics MOD === -->
 	<!-- === first one overrides vanilla with 1x1 pot, adds glower, so no sunlamp needed === -->
   <ThingDef ParentName="BuildingBase">
     <defName>HydroponicsBasin</defName>
@@ -1138,7 +1178,75 @@
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
     <designationCategory>ProductionFood</designationCategory>
     <staticSunShadowHeight>0.03</staticSunShadowHeight>
-  </ThingDef>
+  	</ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  	<!-- === Connector Tables === -->
+  	<ThingDef ParentName="BuildingBase">
+	    <defName>CookingTools</defName>
+	    <label>Cooking tools</label>
+	    <thingClass>Building</thingClass>
+	    <graphicData>
+	      <texPath>Buildings/TableCookingTools</texPath>
+	      <graphicClass>Graphic_Single</graphicClass>
+	      <drawSize>(1,1)</drawSize>
+	    </graphicData>
+	    <altitudeLayer>Waist</altitudeLayer>
+	    <passability>Impassable</passability>
+	    <castEdgeShadows>true</castEdgeShadows>
+	    <fillPercent>1.0</fillPercent>
+	    <statBases>
+	      <MaxHitPoints>100</MaxHitPoints>
+	      <WorkToMake>1800</WorkToMake>
+	      <Flammability>1.0</Flammability>
+	    </statBases>
+	    <description>Increases work speed 15%. Needs to be placed near cooking tops. Will boost the cook speed of all tables near by.</description>
+	    <size>(1,1)</size>
+	    <costList>
+	      <SteelBar>50</SteelBar>
+	      <WoodPlank>80</WoodPlank>
+	    </costList>
+	    <designationCategory>ProductionFood</designationCategory>
+	    <minifiedDef>MinifiedFurniture</minifiedDef>
+	    <comps>
+	      <li>
+	        <compClass>CompFacility</compClass>
+	        <statOffsets>
+	          <WorkTableWorkSpeedFactor>0.15</WorkTableWorkSpeedFactor>
+	        </statOffsets>
+	        <maxSimultaneous>1</maxSimultaneous>
+	      </li>
+	    </comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+  	</ThingDef>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1152,7 +1260,7 @@
 
 
 
-
+  <!-- === Work Tables === -->
 	<ThingDef ParentName="BuildingBase">
 		<defName>TableSawmillHand</defName>
 		<label>hand sawmill</label>
@@ -1257,7 +1365,16 @@
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
+			<li>
+           		<compClass>CompAffectedByFacilities</compClass>
+		        <linkableFacilities>
+		          <li>CookingTools</li>
+		        </linkableFacilities>
+		    </li>
 		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
@@ -1383,7 +1500,16 @@
 				<glowRadius>2</glowRadius>
 				<glowColor>(217,112,33,0)</glowColor>
 			</li>
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
 		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
@@ -1437,7 +1563,16 @@
 				<idlePowerFactor>0.1</idlePowerFactor>
 				<operationalMode>InUse</operationalMode>
 			</li>
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
 		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
@@ -1550,6 +1685,7 @@
 		<surfaceType>Item</surfaceType>
 		<recipes>
 			<li>MakeHerbalmedicine</li>
+			<li>MakeMedicalDrink</li>
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -1639,11 +1775,11 @@
 				<glowColor>(217,112,33,0)</glowColor>
 			</li>
 			<li>
-		<compClass>CompAffectedByFacilities</compClass>
-		<linkableFacilities>
-		  <li>ToolCabinet</li>
-		</linkableFacilities>
-	  </li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+		  			<li>ToolCabinet</li>
+				</linkableFacilities>
+	  		</li>
 		</comps>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
@@ -1710,7 +1846,16 @@
 				<idlePowerFactor>0.1</idlePowerFactor>
 				<operationalMode>InUse</operationalMode>
 			</li>
+			<li>
+           		<compClass>CompAffectedByFacilities</compClass>
+		        <linkableFacilities>
+		          <li>CookingTools</li>
+		        </linkableFacilities>
+		    </li>
 		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 			<heatPerTickWhileWorking>0.25</heatPerTickWhileWorking>
@@ -1775,7 +1920,16 @@
 				<idlePowerFactor>0.1</idlePowerFactor>
 				<operationalMode>InUse</operationalMode>
 			</li>
+			<li>
+           		<compClass>CompAffectedByFacilities</compClass>
+		        <linkableFacilities>
+		          <li>CookingTools</li>
+		        </linkableFacilities>
+		    </li>
 		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<researchPrerequisite>CookingII</researchPrerequisite>
 	</ThingDef>
 
@@ -1895,7 +2049,16 @@
 				<idlePowerFactor>0.1</idlePowerFactor>
 				<operationalMode>InUse</operationalMode>
 			</li>
+			<li>
+           		<compClass>CompAffectedByFacilities</compClass>
+		        <linkableFacilities>
+		          <li>CookingTools</li>
+		        </linkableFacilities>
+		    </li>
 		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
@@ -2001,6 +2164,67 @@
 		<building>
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
+		<comps>
+	      <li>
+	        <compClass>CompAffectedByFacilities</compClass>
+	        <linkableFacilities>
+	          <li>ToolCabinet</li>
+	        </linkableFacilities>
+	      </li>
+    	</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisite>TextileI</researchPrerequisite>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+	    <DefName>TableTaxidermy</DefName>
+	    <label>taxidermy table</label>
+	    <ThingClass>Building_WorkTable</ThingClass>
+	    <Description>A workbench for artists equipped for stuffing animals and making beautiful rugs.</Description>
+	    <graphicData>
+	      <texPath>Buildings/TableTaxidermy</texPath>
+	      <graphicClass>Graphic_Single</graphicClass>
+	      <drawSize>(3,1)</drawSize>
+	    </graphicData>
+	    <CostList>
+			<WoodPlank>50</WoodPlank>
+			<SteelBar>60</SteelBar>
+		</CostList>
+	    <AltitudeLayer>Waist</AltitudeLayer>
+	    <fillPercent>0.5</fillPercent>
+	    <useHitPoints>True</useHitPoints>
+	    <statBases>
+	      <WorkToMake>2500</WorkToMake>
+	      <MaxHitPoints>180</MaxHitPoints>
+	      <Flammability>1.0</Flammability>
+	      <Cleanliness>-5</Cleanliness>
+	    </statBases>
+	    <Size>(3,1)</Size>
+	    <DesignationCategory>ProductionGoods</DesignationCategory>
+	    <Passability>PassThroughOnly</Passability>
+	    <pathCost>70</pathCost>
+	    <hasInteractionCell>True</hasInteractionCell>
+	    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+	    <surfaceType>Item</surfaceType>
+	    <inspectorTabs>
+	      <li>ITab_Bills</li>
+	    </inspectorTabs>
+	    <building>
+	      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+	    </building>
+	    <comps>
+	      <li>
+	        <compClass>CompAffectedByFacilities</compClass>
+	        <linkableFacilities>
+	          <li>ToolCabinet</li>
+	        </linkableFacilities>
+	      </li>
+	    </comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<researchPrerequisite>TextileI</researchPrerequisite>
 	</ThingDef>
 
@@ -2122,7 +2346,16 @@
 				<idlePowerFactor>0.1</idlePowerFactor>
 				<operationalMode>InUse</operationalMode>
 			</li>
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
 		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<researchPrerequisite>WeaponCraftingI</researchPrerequisite>
 	</ThingDef>
 
@@ -2412,7 +2645,7 @@
 				<basePowerConsumption>10</basePowerConsumption>
 			</li>
 			<li>
-               		<compClass>CommunityCoreLibrary.CompRefrigerated</compClass>
+               	<compClass>CommunityCoreLibrary.CompRefrigerated</compClass>
 			</li>
 		</comps>
 		<building>
@@ -2512,28 +2745,28 @@
 		</building>
 		<tickerType>Normal</tickerType>
 		<comps>
-	  <li>
-		<compClass>CompPowerTrader</compClass>
-		<startElectricalFires>true</startElectricalFires>
-		<basePowerConsumption>500</basePowerConsumption>
-		<soundPowerOn>PowerOnSmall</soundPowerOn>
-		<soundPowerOff>PowerOffSmall</soundPowerOff>
-	  </li>
-	  <li Class="CommunityCoreLibrary.CompProperties_LowIdleDraw">
-		<compClass>CommunityCoreLibrary.CompPowerLowIdleDraw</compClass>
-		<idlePowerFactor>0.1</idlePowerFactor>
-		<operationalMode>InUse</operationalMode>
-	  </li>
-	  <li>
-		<compClass>CompAffectedByFacilities</compClass>
-		<linkableFacilities>
-		  <li>ToolCabinet</li>
-		</linkableFacilities>
-	  </li>
-	</comps>
-	<placeWorkers>
-	  <li>PlaceWorker_ShowFacilitiesConnections</li>
-	</placeWorkers>
+		  <li>
+			<compClass>CompPowerTrader</compClass>
+			<startElectricalFires>true</startElectricalFires>
+			<basePowerConsumption>500</basePowerConsumption>
+			<soundPowerOn>PowerOnSmall</soundPowerOn>
+			<soundPowerOff>PowerOffSmall</soundPowerOff>
+		  </li>
+		  <li Class="CommunityCoreLibrary.CompProperties_LowIdleDraw">
+			<compClass>CommunityCoreLibrary.CompPowerLowIdleDraw</compClass>
+			<idlePowerFactor>0.1</idlePowerFactor>
+			<operationalMode>InUse</operationalMode>
+		  </li>
+		  <li>
+			<compClass>CompAffectedByFacilities</compClass>
+			<linkableFacilities>
+			  <li>ToolCabinet</li>
+			</linkableFacilities>
+		  </li>
+		</comps>
+		<placeWorkers>
+		  <li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
 		<researchPrerequisite>HospitalBed</researchPrerequisite>
 	</ThingDef>
 
@@ -2553,7 +2786,7 @@
 			<Electronics>25</Electronics>
 			<IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
 		</CostList>
-	<constructEffect>ConstructMetal</constructEffect>
+		<constructEffect>ConstructMetal</constructEffect>
 		<AltitudeLayer>Waist</AltitudeLayer>
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
@@ -2571,21 +2804,21 @@
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<recipes>
-			<li>CreatePowerArm</li>
-	  <li>CreateBionicArm</li>
-	  <li>CreateBionicLeg</li>
-	  <li>CreateBionicHand</li>
-	  <li>CreatePowerClaw</li>
-	  <li>CreateBionicEye</li>
-	  <li>CreateBionicFoot</li>
-	  <li>CreateBionicEar</li>
-	  <li>CreateBionicJaw</li>
-	  <li>CreateSilentJaw</li>
-	  <li>CreateBionicSpine</li>
-	  <li>CreateMedicalRib</li>
-	  <li>CreateDruggedRib</li>
-	  <li>CreateAdrenalineRib</li>
-	  <!-- + adv bionics via advanced research medicine V-->
+		  <li>CreatePowerArm</li>
+		  <li>CreateBionicArm</li>
+		  <li>CreateBionicLeg</li>
+		  <li>CreateBionicHand</li>
+		  <li>CreatePowerClaw</li>
+		  <li>CreateBionicEye</li>
+		  <li>CreateBionicFoot</li>
+		  <li>CreateBionicEar</li>
+		  <li>CreateBionicJaw</li>
+		  <li>CreateSilentJaw</li>
+		  <li>CreateBionicSpine</li>
+		  <li>CreateMedicalRib</li>
+		  <li>CreateDruggedRib</li>
+		  <li>CreateAdrenalineRib</li>
+		  <!-- + adv bionics via advanced research medicine V-->
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -2620,124 +2853,124 @@
 		<researchPrerequisite>MedicineIV</researchPrerequisite>    
 	</ThingDef>
 
-  <ThingDef ParentName="BenchBase">
-	<DefName>TableOrganVat</DefName>
-	<label>organ vat</label>
-	<ThingClass>Building_WorkTable</ThingClass>
-	<Description>Used to turn human corpses into biomatter and grow replacement organs. Needs Power: 80/800W</Description>
-	<graphicData>
-	  <texPath>Buildings/TableOrganVat</texPath>
-	  <graphicClass>Graphic_Single</graphicClass>
-	  <drawSize>(3,1)</drawSize>
-	</graphicData>
-	<CostList>
-	  <SteelBar>80</SteelBar>
-	  <AluBar>100</AluBar>
-	  <Electronics>25</Electronics>
-	  <IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
-	</CostList>
-	<AltitudeLayer>Waist</AltitudeLayer>
-	<fillPercent>0.5</fillPercent>
-	<useHitPoints>True</useHitPoints>
-	<statBases>
-	  <WorkToMake>1500</WorkToMake>
-	  <MaxHitPoints>200</MaxHitPoints>
-	  <Flammability>1.0</Flammability>
-	  <Cleanliness>-2</Cleanliness>
-	</statBases>
-	<Size>(3,1)</Size>
-	<DesignationCategory>Production</DesignationCategory>
-	<Passability>PassThroughOnly</Passability>
-	<pathCost>70</pathCost>
-	<hasInteractionCell>True</hasInteractionCell>
-	<interactionCellOffset>(0,0,-1)</interactionCellOffset>
-	<surfaceType>Item</surfaceType>
-	<recipes>
-	  <li>ExtractBiomatterCorpse</li>
-	  <li>MakeNaturalEye</li>
-	  <li>MakeNaturalEar</li>
-	  <li>MakeNaturalNose</li>
-	  <li>MakeNaturalHeart</li>
-	  <li>MakeNaturalLung</li>
-	  <li>MakeNaturalLiver</li>
-	  <li>MakeNaturalKidney</li>
-	  <li>MakeNaturalStomach</li>
-	</recipes>
-	<inspectorTabs>
-	  <li>ITab_Bills</li>
-	</inspectorTabs>
-	<building>
-	  <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-	</building>
-	<tickerType>Normal</tickerType>
-	<comps>
-	  <li>
-		<compClass>CompPowerTrader</compClass>
-		<startElectricalFires>true</startElectricalFires>
-		<basePowerConsumption>800</basePowerConsumption>
-		<soundPowerOn>PowerOnSmall</soundPowerOn>
-		<soundPowerOff>PowerOffSmall</soundPowerOff>
-	  </li>
-	  <li Class="CommunityCoreLibrary.CompProperties_LowIdleDraw">
-		<compClass>CommunityCoreLibrary.CompPowerLowIdleDraw</compClass>
-		<idlePowerFactor>0.1</idlePowerFactor>
-		<operationalMode>InUse</operationalMode>
-	  </li>
-	  <li>
-		<compClass>CompAffectedByFacilities</compClass>
-		<linkableFacilities>
-		  <li>ToolCabinet</li>
-		</linkableFacilities>
-	  </li>
-	</comps>
-	<constructEffect>ConstructMetal</constructEffect>
-	<placeWorkers>
-	  <li>PlaceWorker_ShowFacilitiesConnections</li>
-	</placeWorkers>
-	<researchPrerequisite>Chemlab</researchPrerequisite>    
-  </ThingDef>
+	<ThingDef ParentName="BenchBase">
+		<DefName>TableOrganVat</DefName>
+		<label>organ vat</label>
+		<ThingClass>Building_WorkTable</ThingClass>
+		<Description>Used to turn human corpses into biomatter and grow replacement organs. Needs Power: 80/800W</Description>
+		<graphicData>
+		  <texPath>Buildings/TableOrganVat</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>(3,1)</drawSize>
+		</graphicData>
+		<CostList>
+		  <SteelBar>80</SteelBar>
+		  <AluBar>100</AluBar>
+		  <Electronics>25</Electronics>
+		  <IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
+		</CostList>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+		  <WorkToMake>1500</WorkToMake>
+		  <MaxHitPoints>200</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <Cleanliness>-2</Cleanliness>
+		</statBases>
+		<Size>(3,1)</Size>
+		<DesignationCategory>Production</DesignationCategory>
+		<Passability>PassThroughOnly</Passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<recipes>
+		  <li>ExtractBiomatterCorpse</li>
+		  <li>MakeNaturalEye</li>
+		  <li>MakeNaturalEar</li>
+		  <li>MakeNaturalNose</li>
+		  <li>MakeNaturalHeart</li>
+		  <li>MakeNaturalLung</li>
+		  <li>MakeNaturalLiver</li>
+		  <li>MakeNaturalKidney</li>
+		  <li>MakeNaturalStomach</li>
+		</recipes>
+		<inspectorTabs>
+		  <li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+		  <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<tickerType>Normal</tickerType>
+		<comps>
+		  <li>
+			<compClass>CompPowerTrader</compClass>
+			<startElectricalFires>true</startElectricalFires>
+			<basePowerConsumption>800</basePowerConsumption>
+			<soundPowerOn>PowerOnSmall</soundPowerOn>
+			<soundPowerOff>PowerOffSmall</soundPowerOff>
+		  </li>
+		  <li Class="CommunityCoreLibrary.CompProperties_LowIdleDraw">
+			<compClass>CommunityCoreLibrary.CompPowerLowIdleDraw</compClass>
+			<idlePowerFactor>0.1</idlePowerFactor>
+			<operationalMode>InUse</operationalMode>
+		  </li>
+		  <li>
+			<compClass>CompAffectedByFacilities</compClass>
+			<linkableFacilities>
+			  <li>ToolCabinet</li>
+			</linkableFacilities>
+		  </li>
+		</comps>
+		<constructEffect>ConstructMetal</constructEffect>
+		<placeWorkers>
+		  <li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisite>Chemlab</researchPrerequisite>    
+	  </ThingDef>
 
 
 
 
-  <ThingDef ParentName="BuildingBase">
-    <DefName>Well</DefName>
-    <label>well</label>
-    <ThingClass>Building_WorkTable</ThingClass>
-    <Description>A well. Fill water from it into buckets to carry it around.</Description>
-    <graphicData>
-      <texPath>Buildings/Well</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(2,2)</drawSize>
-    </graphicData>
-    <rotatable>false</rotatable>
-    <stuffCategories>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>150</costStuffCount>
-    <altitudeLayer>BuildingTall</altitudeLayer>
-    <passability>Impassable</passability>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.6</fillPercent>
-    <useHitPoints>True</useHitPoints>
-    <statBases>
-      <WorkToMake>2000</WorkToMake>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Flammability>0.2</Flammability>
-    </statBases>
-    <Size>(2,2)</Size>
-    <DesignationCategory>ProductionResources</DesignationCategory>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <surfaceType>Item</surfaceType>
-    <recipes>
-	  <li>MakeBucketWater</li>
-	</recipes>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
-    <researchPrerequisite>Hydroponics</researchPrerequisite>
-  </ThingDef>
+	  <ThingDef ParentName="BuildingBase">
+	    <DefName>Well</DefName>
+	    <label>well</label>
+	    <ThingClass>Building_WorkTable</ThingClass>
+	    <Description>A well. Fill water from it into buckets to carry it around.</Description>
+	    <graphicData>
+	      <texPath>Buildings/Well</texPath>
+	      <graphicClass>Graphic_Single</graphicClass>
+	      <drawSize>(2,2)</drawSize>
+	    </graphicData>
+	    <rotatable>false</rotatable>
+	    <stuffCategories>
+	      <li>Stony</li>
+	    </stuffCategories>
+	    <costStuffCount>150</costStuffCount>
+	    <altitudeLayer>BuildingTall</altitudeLayer>
+	    <passability>Impassable</passability>
+	    <castEdgeShadows>true</castEdgeShadows>
+	    <fillPercent>0.6</fillPercent>
+	    <useHitPoints>True</useHitPoints>
+	    <statBases>
+	      <WorkToMake>2000</WorkToMake>
+	      <MaxHitPoints>350</MaxHitPoints>
+	      <Flammability>0.2</Flammability>
+	    </statBases>
+	    <Size>(2,2)</Size>
+	    <DesignationCategory>ProductionResources</DesignationCategory>
+	    <hasInteractionCell>True</hasInteractionCell>
+	    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+	    <surfaceType>Item</surfaceType>
+	    <recipes>
+		  <li>MakeBucketWater</li>
+		</recipes>
+	    <inspectorTabs>
+	      <li>ITab_Bills</li>
+	    </inspectorTabs>
+	    <researchPrerequisite>Hydroponics</researchPrerequisite>
+	  </ThingDef>
 
 
 

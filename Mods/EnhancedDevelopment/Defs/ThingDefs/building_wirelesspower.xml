@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+	<!-- MVP modified -->
+
+
+	<ThingDef Name="BuildingBase" Abstract="True">
+		<category>Building</category>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>BuildingRubble</filthLeaving>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>WirelessPowerNode</defName>
+		<label>Wireless Power Node</label>
+		<thingClass>Enhanced_Development.Power.WirelessPower.WirelessPowerNode</thingClass>
+		<researchPrerequisite>WirelessPower_Research</researchPrerequisite>
+		<graphicData>
+			<texPath>Things/Buildings/NuclearLamp</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+            <volume>(0.3, 0.6, 0.3)</volume>
+          </shadowData>
+		</graphicData>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>Impassable</passability>
+		<fillPercent>1</fillPercent>
+		<tickerType>Normal</tickerType>
+		<statBases>
+			<WorkToMake>1800</WorkToMake>
+			<MaxHitPoints>350</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<description>WirelessPowerNode.</description>
+		<building>
+			<wantsHopperAdjacent>false</wantsHopperAdjacent>
+		</building>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>false</startElectricalFires>
+				<basePowerConsumption>0</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+        		<powerToggleable>true</powerToggleable>
+			</li>
+		</comps>
+		<size>(1,1)</size>
+		<costList>
+			<SteelBar>100</SteelBar>
+			<Electronics>25</Electronics>
+		</costList>
+		<hasInteractionCell>False</hasInteractionCell>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+	</ThingDef>
+
+
+</ThingDefs>
