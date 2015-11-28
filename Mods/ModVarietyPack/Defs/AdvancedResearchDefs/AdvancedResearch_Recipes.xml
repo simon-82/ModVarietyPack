@@ -36,17 +36,18 @@
     </AdvancedResearchDef>    
 
     <AdvancedResearchDef>         
-        <defName>AgricultureIIICook</defName>
+        <defName>AgricultureIIIFoodPrep</defName>
         <Priority>0</Priority>        
         <researchDefs>
             <li>Hydroponics</li>
         </researchDefs>        
         <recipeDefs>
             <li>MakeTofu</li>
-            <li>MakeTofu10x</li>
+            <li>MakeTofubulk</li>
+            <li>Makesoymilk</li>
         </recipeDefs>        
         <thingDefs>
-            <li>CookStove</li>
+            <li>TableButcher</li>
         </thingDefs>        
     </AdvancedResearchDef>    
 
@@ -71,7 +72,25 @@
 
     <!-- Cooking -->
     <AdvancedResearchDef>         
-        <defName>CookingII</defName>
+        <defName>CookingIFoodPrep</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Brewing</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeSugar</li>
+            <li>MakeFlour</li>
+            <li>Makecheese</li>
+            <li>MakeFruitDrink</li>
+            <li>MakeEthanolFuel</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableButcher</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>CookingIIStove</defName>
         <Priority>0</Priority>        
         <researchDefs>
             <li>CookingII</li>
@@ -80,9 +99,43 @@
             <li>BrewTea</li>
             <li>BrewSpectagoTea</li>
             <li>MakeChocolate</li>
+            <li>MakeChocoMilk</li>         
+            <li>MakeFruitYogurt</li>
         </recipeDefs>        
         <thingDefs>
             <li>CookStove</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>CookingIIGrill</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>CookingII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeBurger</li>
+            <li>MakeBurgerCheese</li>
+            <li>MakeBurgerDeluxe</li>
+            <li>MakeCheeseGrilled</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableGrill</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>CookingIIOven</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>CookingII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeSweetBun</li>
+            <li>MakePizza</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableOven</li>
         </thingDefs>        
     </AdvancedResearchDef>
 

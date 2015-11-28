@@ -260,6 +260,8 @@
                 <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
                 <thingDefs>
                     <li>Wall</li>
+                    <li>WallLighted</li>
+                    <li>WallConduit</li>
                 </thingDefs>
             </li>
         </comps>
@@ -434,6 +436,8 @@
                 <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
                 <thingDefs>
                     <li>Wall</li>
+                    <li>WallLighted</li>
+                    <li>WallConduit</li>
                 </thingDefs>
             </li>
             <li>
@@ -638,6 +642,8 @@
                 <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
                 <thingDefs>
                     <li>Wall</li>
+                    <li>WallLighted</li>
+                    <li>WallConduit</li>
                 </thingDefs>
             </li>
             <li>
@@ -866,6 +872,8 @@
                 <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
                 <thingDefs>
                     <li>Wall</li>
+                    <li>WallLighted</li>
+                    <li>WallConduit</li>
                 </thingDefs>
             </li>
         </comps>
@@ -1030,17 +1038,6 @@
         <designationCategory>Temperature</designationCategory>
         <researchPrerequisite>ConstructionII</researchPrerequisite>
     </ThingDef>
-
-
-
-
-
-
-
-
-
-
-
   
   
 </Defs>

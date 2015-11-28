@@ -25,7 +25,8 @@
     
     Base        (GrowTime 5.1, Yield 7, NutritionRaw .05)    Strawberry
     Tier I      (GrowTime 4.9, Yield 8, NutritionRaw .06)    Blueberry
-    Tier II     (GrowTime 4.5, Yield 8, NutritionRaw .07)    Cloudberry, Pineapple
+    Tier II     (GrowTime 4.5, Yield 8, NutritionRaw .07)    Cloudberry
+                (GrowTime 4.5, Yield 8, NutritionRaw .125)   Pineapple
     Tier III    (GrowTime 4.4, Yield 10, NutritionRaw .08)   Gooseberry, Watermelon
     
     Tier IV     FruitTrees (Not destroyed when harvested)
@@ -1438,7 +1439,7 @@
   <ThingDef ParentName="PlantBase">
     <defName>Plantpineapple</defName>
     <label>pineapple plant</label>
-    <description>Think skin fruit that grows a top a bush. Needs at least watered soil to grow.</description>
+    <description>Think skin fruit that grows on top of a bush. Needs at least watered soil to grow.</description>
     <graphicData>
       <texPath>Plant/pineapplePlant</texPath>
       <graphicClass>Graphic_Single</graphicClass>

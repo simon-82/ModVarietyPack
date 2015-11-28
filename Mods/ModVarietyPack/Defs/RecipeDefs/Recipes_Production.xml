@@ -1339,6 +1339,40 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
   </RecipeDef>
 
   <RecipeDef>
+    <defName>Makesoymilk</defName>
+    <label>Make Soy Milk</label>
+    <description>Turns beans into Soy Milk.</description>
+    <jobString>Pressing beans.</jobString>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <workAmount>700</workAmount>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_CookMeal</soundWorking>         
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <ingredients>
+    <li>
+        <filter>
+          <thingDefs>
+            <li>Rawbean</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+       <thingDefs>
+            <li>Rawbean</li>
+          </thingDefs>
+        <specialFiltersToDisallow>
+          <li>AllowRotten</li>
+        </specialFiltersToDisallow>
+    </fixedIngredientFilter>
+    <products>
+      <SoyMilk>4</SoyMilk>
+    </products>
+    <workSkill>Cooking</workSkill>
+  </RecipeDef>
+
+  <RecipeDef>
     <defName>MakeMulch</defName>
     <label>make mulch</label>
     <description>Make mulch from food.</description>
@@ -1387,20 +1421,22 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     <workSpeedStat>StonecuttingSpeed</workSpeedStat>
     <effectWorking>MakeWoodPlanks_Hand</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>    
-    <workAmount>1600</workAmount>    
+    <workAmount>1900</workAmount>    
     <ingredients>
       <li>
         <filter>
           <thingDefs>
-            <li>WoodPlank</li>
+            <li>Bamboo</li>
+            <li>WoodLog</li>
           </thingDefs>
         </filter>
-        <count>10</count>
+        <count>3</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>WoodPlank</li>
+        <li>Bamboo</li>
+        <li>WoodLog</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>

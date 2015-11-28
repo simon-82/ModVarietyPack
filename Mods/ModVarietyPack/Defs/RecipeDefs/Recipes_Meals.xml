@@ -503,6 +503,42 @@
 	</RecipeDef>
 
 	<RecipeDef>
+		<defName>Makecheese</defName>
+		<label>Make Cheese</label>
+		<description>Turns soy milk or milk into cheese.</description>
+		<jobString>Pressing Cheese.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>700</workAmount>
+		<effectWorking>Cook</effectWorking>
+	    <soundWorking>Recipe_CookMeal</soundWorking>          
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+		<li>
+		    <filter>
+		      <thingDefs>
+		       <li>SoyMilk</li>
+			   <li>Milk</li>
+		      </thingDefs>
+		    </filter>
+		    <count>10</count>
+		  </li>
+		</ingredients>
+		<fixedIngredientFilter>
+		   <thingDefs>
+		       <li>SoyMilk</li>
+			   <li>Milk</li>
+		      </thingDefs>
+	      <specialFiltersToDisallow>
+	        <li>AllowRotten</li>
+	      </specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<products>
+		  <Cheese>4</Cheese>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
 		<defName>MakeDriedfruit</defName>
 		<label>Dry Fruit</label>
 		<description>Dries out fruit to increase its lifespan.</description>
@@ -581,7 +617,7 @@
 	<RecipeDef>
 		<defName>MakeTofu</defName>
 		<label>Make tofu</label>
-		<description>Turns beans into tofu. Tofu is use in place of meat in meals or eatten raw.</description>
+		<description>Turns beans into tofu. Tofu is used in place of meat in meals or eaten raw.</description>
 		<jobString>Pressing tofu.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<workAmount>575</workAmount>
@@ -595,7 +631,7 @@
 						<li>Rawbean</li>
 					</thingDefs>
 				</filter>
-				<count>14</count>
+				<count>24</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -607,13 +643,13 @@
 			</specialFiltersToDisallow>
 		</fixedIngredientFilter>
 		<products>
-			<Tofu>2</Tofu>
+			<Tofu>1</Tofu>
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
 	
 	<RecipeDef>
-		<defName>MakeTofu10x</defName>
+		<defName>MakeTofubulk</defName>
 		<label>make lots of tofu</label>
 		<description>Your increased cooking skill allows you to mass produce tofu more efficiently!</description>
 		<jobString>Pressing tofu.</jobString>
@@ -629,7 +665,7 @@
 						<li>Rawbean</li>
 					</thingDefs>
 				</filter>
-				<count>60</count>
+				<count>100</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -643,15 +679,345 @@
 		<skillRequirements>
 			<li>
 				<skill>Cooking</skill>
-				<minLevel>7</minLevel>
+				<minLevel>8</minLevel>
 			</li>
 		</skillRequirements>
 		<products>
-			<Tofu>10</Tofu>
+			<Tofu>5</Tofu>
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
 	
+	<RecipeDef>
+		<defName>MakeBurger</defName>
+		<label>Make Burger</label>
+		<description>Make a basic burger. Very delicious.</description>
+		<jobString>Making burger.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>bread</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li>bread</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Burger>1</Burger>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeBurgerCheese</defName>
+		<label>Make Cheese Burger</label>
+		<description>Make a cheese burger. Very delicious.</description>
+		<jobString>Making burger.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>bread</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cheese</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li>bread</li>
+				<li>Cheese</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<CheeseBurger>1</CheeseBurger>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeBurgerDeluxe</defName>
+		<label>Make Deluxe Burger</label>
+		<description>Make a deluxe burger. Very delicious.</description>
+		<jobString>Making burger.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>bread</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cheese</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawTomatoes</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawLettuce</li>
+					</thingDefs>
+				</filter>
+				<count>3</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li>bread</li>
+				<li>Cheese</li>
+				<li>RawTomatoes</li>
+				<li>RawLettuce</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<DeluxeBurger>1</DeluxeBurger>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeCheeseGrilled</defName>
+		<label>Make Grilled Cheese</label>
+		<description>Make grilled cheese.</description>
+		<jobString>Making grilled cheese.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cheese</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>bread</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Cheese</li>
+				<li>bread</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<GrilledCheese>1</GrilledCheese>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakePizza</defName>
+		<label>bake Pizza</label>
+		<description>Bake a pizza. Very delicious.</description>
+		<jobString>Baking pizza.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Flour</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Cheese</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawTomatoes</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Flour</li>
+				<li>Cheese</li>
+				<li>RawTomatoes</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Pizza>1</Pizza>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeFruitYogurt</defName>
+		<label>make Fruit Yogurt</label>
+		<description>Make Yogurt from milk and add some fruits to it.</description>
+		<jobString>Making yogurt.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+	        <li>
+	        <filter>
+	          <categories>
+	            <li>FruitFoodRaw</li>
+	          </categories>
+	        </filter>
+	        <count>0.25</count>
+	        </li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SoyMilk</li>
+			   			<li>Milk</li>
+					</thingDefs>
+				</filter>
+				<count>0.25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+	            <li>FruitFoodRaw</li>
+	        </categories>
+			<thingDefs>
+				<li>SoyMilk</li>
+			   	<li>Milk</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<FruitYogurt>1</FruitYogurt>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeChocoMilk</defName>
+		<label>make Chocolate Milk</label>
+		<description>Mix milk with chocolate.</description>
+		<jobString>Making chocolate milk.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+	       <li>
+				<filter>
+					<thingDefs>
+						<li>Chocolate</li>			   			
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SoyMilk</li>
+			   			<li>Milk</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Chocolate</li>
+				<li>SoyMilk</li>
+			   	<li>Milk</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Chocomilk>1</Chocomilk>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
 
 
 
@@ -1279,6 +1645,38 @@
 	</RecipeDef>
 
 	<RecipeDef>
+		<defName>MakeFruitDrink</defName>
+		<label>Make Fruit Drink</label>
+		<description>Press fruit to make a tasty fruit drink.</description>
+		<jobString>Pressing fruit.</jobString>
+		<workSpeedStat>BrewingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>950</workAmount>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<ingredients>
+	      <li>
+	        <filter>
+	          <categories>
+	            <li>FruitFoodRaw</li>
+	          </categories>
+	        </filter>
+	        <count>0.3</count>
+	      </li>
+	    </ingredients>
+		<fixedIngredientFilter>
+			<categories>
+	            <li>FruitFoodRaw</li>
+	          </categories>
+		</fixedIngredientFilter>
+		<products>
+			<FruitDrink>1</FruitDrink>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
 		<defName>MakeCigarillos</defName>
 		<label>Roll Cigarillos</label>
 		<description>Rolls a pack of Cigarillos.</description>
@@ -1593,7 +1991,7 @@
 	
 	<RecipeDef>
 		<defName>MakeCookies</defName>
-		<label>bake cookie</label>
+		<label>bake Cookie</label>
 		<description>bake cookies.</description>
 		<jobString>Baking cookies.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
@@ -1624,7 +2022,7 @@
 						<li>Flour</li>
 					</thingDefs>
 				</filter>
-				<count>5</count>
+				<count>15</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>
@@ -1638,8 +2036,61 @@
 			</specialFiltersToDisallow>
 		</fixedIngredientFilter>
 		<products>
-			<cookie>10</cookie>
+			<cookie>5</cookie>
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeSweetBun</defName>
+		<label>bake Sweet Bun</label>
+		<description>bake a sweet roll covered in sugary icying.</description>
+		<jobString>Baking cookies.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<workAmount>800</workAmount>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Sugar</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Flour</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Sugar</li>
+				<li>Flour</li>
+			</thingDefs>
+			<specialFiltersToDisallow>
+				<li>AllowRotten</li>
+			</specialFiltersToDisallow>
+		</fixedIngredientFilter>
+		<products>
+			<SweetBun>5</SweetBun>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+
+
+
+
+
+
+
+
+
 </RecipeDefs>

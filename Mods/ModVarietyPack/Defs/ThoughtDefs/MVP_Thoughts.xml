@@ -42,6 +42,19 @@
   </ThoughtDef>
 
   <ThoughtDef>
+    <defName>HadFruitDrink</defName>
+    <durationDays>0.25</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>Had a fruit drink</label>
+        <description>That fruit drink was so healthy! I'm feeling good now.</description>
+        <baseMoodEffect>7</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
     <defName>Smoking</defName>
     <durationDays>0.25</durationDays>
     <stackLimit>5</stackLimit>
