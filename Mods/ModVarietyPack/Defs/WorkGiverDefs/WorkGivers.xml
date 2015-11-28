@@ -551,14 +551,19 @@
     </requiredCapacities>
   </WorkGiverDef>
 
+
+
+
+
+  <!-- MVP modified -->
   <WorkGiverDef>
     <defName>DoBillsButcherFlesh</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Cooking</workType>
     <priorityInType>90</priorityInType>
     <singleBillGiverDef>TableButcher</singleBillGiverDef>
-    <verb>butcher</verb>
-    <gerund>butchering at</gerund>
+    <verb>work</verb>
+    <gerund>working at</gerund>
     <requiredCapacities>
       <li>Manipulation</li>
     </requiredCapacities>

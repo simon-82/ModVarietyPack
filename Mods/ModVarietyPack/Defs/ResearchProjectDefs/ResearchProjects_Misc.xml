@@ -111,7 +111,7 @@
 		<ResearchProjectDef>
 			<defName>CookingII</defName>
 			<label>Cooking II</label>
-			<description>"I'm so tired. I'm hauling food all day. And for what? It just ends up rotting and we need to throw it away!" \n"Oh, stop complaining. Have a coffee and start canning the food then!"</description>
+			<description>"How about some nice hot drinks with the good food we have now?" \n"Sure, coffee or tea?" \n"Spectago tea for me! I always feel so funny after drinking that." /n "No, no we first need some better cooking tools, this all takes way too long. And to make some money, let's make some cigars and cigarillos and sell them to the traders."</description>
 			<totalCost>1500</totalCost>
 			<prerequisites>
 				<li>Brewing</li>
@@ -399,7 +399,7 @@
     <ResearchProjectDef>
 		<defName>ElectricSmelting</defName>
 		<label>Crafting II</label>
-		<description>"It's taking forever to cut all the chunks by hand! We need better equipment!" \n"Powered crafting tables would be a good idea. The better tools would even allow us to make armor vests to protect ourselves." \nAlso Unlocks: Tool Cabinet, Multi Analyser</description>
+		<description>"It's taking forever to cut all the chunks by hand! We need better equipment!" \n"Powered crafting tables would be a good idea. The better tools would even allow us to make armor vests to protect ourselves."</description>
 		<totalCost>1000</totalCost>
 		<prerequisites>
 			<li>CraftingI</li>
@@ -491,6 +491,11 @@
 		<defName>PowerII</defName>
 		<label>Power II</label>
 		<description>"Solar Power allows us to harness the power of the sun!" \n"We could also use some fuses. Last time the power went out for the whole night. Remember? It was during that solar flare." \n"If we could only shield the colony from these solar flares, all would be good." \nUnlocks: Battery efficiency +15%</description>
+		<researchMods>
+			<li>
+				<specialAction>SuperiorCrafting.SCUpgrades.PowerII</specialAction>
+			</li>
+		</researchMods>
 		<totalCost>1000</totalCost>
 		<prerequisites>
 			<li>PowerI</li>
@@ -534,6 +539,11 @@
 		<defName>GeothermalPower</defName>
 		<label>Power III</label>
 		<description>"Did you see this hole in the ground over there?" \n"It looks like there is steam coming out of it." \n"I wonder if we could make use of that somehow..." \nUnlocks: Battery efficiency +15%</description>
+		<researchMods>
+			<li>
+				<specialAction>SuperiorCrafting.SCUpgrades.PowerIII</specialAction>
+			</li>
+		</researchMods>
 		<totalCost>1500</totalCost>
 		<prerequisites>
 			<li>PowerII</li>
@@ -584,6 +594,11 @@
 		<defName>PowerIV</defName>
 		<label>Power IV</label>
 		<description>"We still don't have enough power." \n"What about building a really big generator? It's gonna be a lot of work though." \nUnlocks: Battery efficiency +15%</description>
+		<researchMods>
+			<li>
+				<specialAction>SuperiorCrafting.SCUpgrades.PowerIV</specialAction>
+			</li>
+		</researchMods>
 		<totalCost>2500</totalCost>
 		<prerequisites>
 			<li>GeothermalPower</li>

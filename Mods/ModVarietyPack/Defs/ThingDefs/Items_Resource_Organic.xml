@@ -223,7 +223,7 @@
   </ThingDef>
 
   <!--=============== Milk ====================-->
-
+  <!-- MVP changed to cooking supplies 
   <ThingDef ParentName="PlantFoodRawBase">
     <defName>Milk</defName>
     <label>milk</label>
@@ -244,6 +244,7 @@
       <joy>0.004</joy>
     </ingestible>
   </ThingDef>
+  -->
 
   <!--=============== Eggs ====================-->
 
@@ -515,7 +516,7 @@
   <ThingDef ParentName="PlantFoodRawBase">
     <defName>Rawonion</defName>
     <label>onion</label>
-    <description>Warning can make you cry! Not so nice when eaten raw.</description>
+    <description>Warning! Can make you cry! Not so nice when eaten raw.</description>
     <graphicData>
     <texPath>Items/onion</texPath>
     </graphicData>
@@ -715,7 +716,7 @@
       <MarketValue>8</MarketValue>
     </statBases>
     <ingestible>
-      <nutrition>0.07</nutrition>
+      <nutrition>0.125</nutrition>
       <joy>0.006</joy>
     </ingestible>
     <comps>
@@ -1743,6 +1744,119 @@
       </li>
     </comps>
   </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Tofu</defName>
+    <label>tofu</label>
+    <description>Raw protein-rich Tofu. Made from Beans. Nice to eat, even when raw.</description>
+    <graphicData>
+      <texPath>Items/Meal_Tofu</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Food_Drop</soundInteract>
+    <soundDrop>Food_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>14</MarketValue>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <ingestible>
+      <preferability>Simple</preferability>
+      <nutrition>0.125</nutrition>
+      <joy>0.04</joy>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>RawVegetable_Eat</soundEat>
+      <isMeat>true</isMeat>
+    </ingestible>
+    <thingCategories>
+      <li>MeatRaw</li>
+    </thingCategories>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+
+  
+
+
+  <!-- Soy Milk and redefined vanilla Milk as cooking supplies --> 
+  <ThingDef ParentName="ResourceBase">
+    <defName>SoyMilk</defName>
+    <label>Soy Milk</label>
+    <description>Milk made from beans.</description>
+    <graphicData>
+      <texPath>Items/SoyMilk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Food_Drop</soundInteract>
+    <soundDrop>Food_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <ingestible>
+      <preferability>Raw</preferability>
+      <nutrition>0.05</nutrition>
+      <joy>0.004</joy>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>RawVegetable_Eat</soundEat>
+    </ingestible>
+    <thingCategories>
+      <li>CookingSupplies</li>
+    </thingCategories>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Milk</defName>
+    <label>milk</label>
+    <description>Milk from an animal.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Milk</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Food_Drop</soundInteract>
+    <soundDrop>Food_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>2.1</MarketValue>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <ingestible>
+      <preferability>Raw</preferability>
+      <nutrition>0.05</nutrition>
+      <joy>0.004</joy>
+      <eatEffect>EatVegetarian</eatEffect>
+      <soundEat>RawVegetable_Eat</soundEat>
+    </ingestible>
+    <thingCategories>
+      <li>CookingSupplies</li>
+    </thingCategories>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
+
+
+  
 
 
   

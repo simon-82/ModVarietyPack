@@ -172,6 +172,7 @@
 		<recipes>
 			<li>CookMealSalad</li>
 			<li>ButcherCorpseFlesh</li>
+			<!-- advanced research basic food prep recipes -->
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -501,11 +502,8 @@
 			<li>CookMealLavish</li>
 			<li>CookMealSimple_4x</li>
 			<li>CookMealFine_4x</li>
-			<li>CookMealLavish_4x</li>
-			<li>MakeSugar</li>
-			<li>MakeFlour</li>
-			<li>MakeCaramel</li>
-			<li>MakeEthanolFuel</li>
+			<li>CookMealLavish_4x</li>			
+			<li>MakeCaramel</li>			
 			<!-- + tea, chocolate at cooking II -->
 		</recipes>
 		<inspectorTabs>
@@ -1930,7 +1928,7 @@
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
-		<researchPrerequisite>CookingII</researchPrerequisite>
+		<researchPrerequisite>AgricultureII</researchPrerequisite>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
