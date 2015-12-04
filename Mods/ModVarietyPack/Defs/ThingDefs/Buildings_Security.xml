@@ -162,7 +162,7 @@
 
 
 
-  <!-- === CR Vanilla Sandbags. Mortars === -->
+  <!-- === CR Vanilla Sandbags, Mortars === -->
   <ThingDef ParentName="BuildingBase">
     <defName>Sandbags</defName>
     <label>sandbags</label>
@@ -260,7 +260,7 @@
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
-    <costStuffCount>150</costStuffCount>
+    <costStuffCount>200</costStuffCount>
     <combatTargetBuilding>false</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
@@ -319,7 +319,7 @@
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
-    <costStuffCount>150</costStuffCount>
+    <costStuffCount>200</costStuffCount>
     <combatTargetBuilding>false</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
@@ -378,7 +378,7 @@
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
-    <costStuffCount>150</costStuffCount>
+    <costStuffCount>200</costStuffCount>
     <combatTargetBuilding>false</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <designationCategory>Security</designationCategory>
@@ -620,7 +620,7 @@
       </li>
       <li>
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>350</basePowerConsumption>
+        <basePowerConsumption>500</basePowerConsumption>
       </li>
       <li>
         <compClass>Combat_Realism.CompTurretInit</compClass>
@@ -633,7 +633,7 @@
     <fillPercent>0.75</fillPercent>
     <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <specialDisplayRadius>51</specialDisplayRadius>
+    <specialDisplayRadius>45</specialDisplayRadius>
     <building>
       <ai_combatDangerous>true</ai_combatDangerous>      
       <turretGunDef>Gun_M2Browning</turretGunDef>
@@ -684,7 +684,7 @@
       </li>
       <li>
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>350</basePowerConsumption>
+        <basePowerConsumption>600</basePowerConsumption>
       </li>
       <li>
         <compClass>Combat_Realism.CompTurretInit</compClass>
@@ -747,7 +747,7 @@
       </li>
       <li>
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>550</basePowerConsumption>
+        <basePowerConsumption>600</basePowerConsumption>
       </li>
       <li>
         <compClass>Combat_Realism.CompTurretInit</compClass>
@@ -807,7 +807,7 @@
       <li><compClass>CompForbiddable</compClass></li>
       <li>
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>600</basePowerConsumption>
+        <basePowerConsumption>700</basePowerConsumption>
       </li>
       <li>
         <compClass>Combat_Realism.CompTurretInit</compClass>
@@ -872,7 +872,7 @@
       <li><compClass>CompForbiddable</compClass></li>
       <li>
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>2000</basePowerConsumption>
+        <basePowerConsumption>1500</basePowerConsumption>
       </li>
       <li>
         <compClass>Combat_Realism.CompTurretInit</compClass>
@@ -927,7 +927,7 @@
       </li>
       <li>
         <compClass>CompPowerTrader</compClass>
-        <basePowerConsumption>600</basePowerConsumption>
+        <basePowerConsumption>400</basePowerConsumption>
       </li>
       <li>
         <compClass>Combat_Realism.CompTurretInit</compClass>
@@ -1047,7 +1047,7 @@
       <turretburstCooldownTicks>240</turretburstCooldownTicks>
       <turretTopgraphicPath>Buildings/Turrets/Cannon_Gun</turretTopgraphicPath>
     </building>
-    <researchPrerequisite>TurretsII</researchPrerequisite>
+    <researchPrerequisite>TurretCannon</researchPrerequisite>
   </ThingDef>
 
 

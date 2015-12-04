@@ -2312,6 +2312,163 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ================= Mechanoid weapons CR ================= -->
+  <!-- MVP Heavy Mech Weapons for Centipede -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_ChargeBlasterHeavy</defName>
+    <label>charge blaster shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>380</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.8</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_ChargeBlasterHeavy</defName>
+    <label>heavy charge blaster</label>
+    <description>Charged-shot blaster for area suppressive fire. Mechanoid-built.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/ChargeBlasterHeavy</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2400</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.70</AccuracyMedium>
+      <AccuracyLong>0.70</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <tradeability>Never</tradeability>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <weaponTags>
+      <li>MechanoidGunHeavy</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_ChargeBlasterHeavy</projectileDef>
+        <forcedMissRadius>2.9</forcedMissRadius>
+        <warmupTicks>120</warmupTicks>
+        <minRange>3</minRange>
+        <range>70</range>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>25</burstShotCount>
+        <soundCast>ShotChargeBlaster</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.15</shotVariation>
+        <shooterVariation>0.05</shooterVariation>
+        <recoilOffsetX>(-0.3,0.3)</recoilOffsetX>
+        <recoilOffsetY>(-0.3,0.3)</recoilOffsetY>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_InfernoCannon</defName>
+    <label>inferno cannon shell</label>
+    <graphicData>
+      <texPath>Things/Projectile/InfernoCannonShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <thingClass>Combat_Realism.ProjectileCR_Explosive</thingClass>
+    <projectile>
+      <damageDef>Flame</damageDef>
+      <damageAmountBase>60</damageAmountBase>
+      <speed>180</speed>
+      <explosionRadius>2.4</explosionRadius>
+      <postExplosionSpawnThingDef>Puddle_Fuel</postExplosionSpawnThingDef>
+      <explosionSpawnChance>0.3</explosionSpawnChance>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGun">
+    <defName>Gun_InfernoCannon</defName>
+    <label>inferno cannon</label>
+    <description>Incendiary-shot mini-artillery device. Mechanoid-built.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/InfernoCannon</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>2400</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>6</RangedWeapon_Cooldown>
+    </statBases>
+    <tradeability>Never</tradeability>
+    <techLevel>Spacer</techLevel>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <weaponTags>
+      <li>MechanoidGunHeavy</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_InfernoCannon</projectileDef>
+        <forcedMissRadius>3.5</forcedMissRadius>
+        <ai_IsIncendiary>true</ai_IsIncendiary>
+        <warmupTicks>100</warmupTicks>
+        <minRange>3</minRange>
+        <range>80</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>InfernoCannon_Fire</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.02</shotVariation>
+        <shooterVariation>0.05</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+
   
 
 </ThingDefs>

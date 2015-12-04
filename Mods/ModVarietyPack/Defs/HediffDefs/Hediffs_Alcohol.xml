@@ -7,7 +7,7 @@
     <defName>MidAlcohol</defName>
     <hediffClass>Hediff_Alcohol</hediffClass>
     <label>alcohol</label>
-    <initialSeverity>0.32</initialSeverity>
+    <initialSeverity>0.2</initialSeverity>
     <severityPerDay>-0.5</severityPerDay>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <comps>
@@ -91,7 +91,7 @@
     <defName>StrongAlcohol</defName>
     <hediffClass>Hediff_Alcohol</hediffClass>
     <label>alcohol</label>
-    <initialSeverity>0.55</initialSeverity>
+    <initialSeverity>0.3</initialSeverity>
     <severityPerDay>-0.5</severityPerDay>
     <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
     <stages>

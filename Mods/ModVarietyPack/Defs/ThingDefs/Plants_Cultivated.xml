@@ -1439,7 +1439,7 @@
   <ThingDef ParentName="PlantBase">
     <defName>Plantpineapple</defName>
     <label>pineapple plant</label>
-    <description>Think skin fruit that grows on top of a bush. Needs at least watered soil to grow.</description>
+    <description>Think skin fruit that grows on top of a bush. The fruits are very nutritious but the plant needs more space to grow. Needs at least watered soil to grow.</description>
     <graphicData>
       <texPath>Plant/pineapplePlant</texPath>
       <graphicClass>Graphic_Single</graphicClass>

@@ -47,6 +47,8 @@
 		<tickerType>Normal</tickerType>
 	</ThingDef>
 
+
+
 	<ThingDef Class="Enhanced_Development.Shields.ShieldBuildingThingDef" ParentName="ShieldBase">
 		<defName>Building_ShieldStandard</defName>
 		<label>Standard Shield</label>
@@ -133,7 +135,7 @@
 		<colourGreen>0.3764705882352941</colourGreen>
 		<colourBlue>0.7294117647058823</colourBlue>
 	</ThingDef>
-
+ 
 	<ThingDef Class="Enhanced_Development.Shields.ShieldBuildingThingDef" ParentName="ShieldBase">
 		<defName>Building_Shield_Fortress</defName>
 		<label>Fortress shield</label>
@@ -181,7 +183,7 @@
 		<colourGreen>1.0</colourGreen>
 		<colourBlue>0.5</colourBlue>
 	</ThingDef>
-
+	
 	<ThingDef Class="Enhanced_Development.Shields.ShieldBuildingThingDef" ParentName="ShieldBase">
 		<defName>Building_ShieldSIF</defName>
 		<label>SIF shield</label>

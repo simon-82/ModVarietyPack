@@ -237,7 +237,7 @@ However, on the isolated rimworlds, the name of the Federation and it's merciles
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <factionNameMaker>NamerFPCBase</factionNameMaker>
     <backstoryCategory>Civil</backstoryCategory>
-    <raidCommonality>70</raidCommonality>
+    <raidCommonality>37</raidCommonality> <!-- MVP same as Mechanoid -->
     <humanlikeFaction>false</humanlikeFaction>
     <hidden>false</hidden>
     <canFlee>false</canFlee>
@@ -247,7 +247,7 @@ However, on the isolated rimworlds, the name of the Federation and it's merciles
      <li>Urban</li>
     </hairTags>
     <techLevel>Ultra</techLevel>
-    <earliestRaidDays>30</earliestRaidDays>
+    <earliestRaidDays>90</earliestRaidDays> <!-- MVP same as Mechanoid -->
     <startingGoodwill>
       <min>-100</min>
       <max>-100</max>
@@ -336,7 +336,7 @@ However, on the isolated rimworlds, the name of the Federation and it's merciles
     <pawnsPlural>norbals</pawnsPlural>
     <requiredCountAtGameStart>3</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
-    <raidCommonality>100</raidCommonality>
+    <raidCommonality>90</raidCommonality>
     <canStageAttacks>true</canStageAttacks>
     <canFlee>false</canFlee>
     <startingGoodwill>
