@@ -622,27 +622,7 @@
 		<label>Security I</label>
 		<description>"I would give you this bow so you can help defending the colony. But not before you get some practice at the shooting range first." \n"Really? Just because I shot myself in the foot last time the tribals came?"</description>
 		<totalCost>500</totalCost>
-	</ResearchProjectDef>	
-
-		<ResearchProjectDef>
-			<defName>TurretsI</defName>
-			<label>Turrets I</label>
-			<description>"This turret we can build right now is rather improvised. Let's make some better ones."</description>
-			<totalCost>1500</totalCost>
-			<prerequisites>
-				<li>SecurityI</li>
-			</prerequisites>
-		</ResearchProjectDef>
-
-		<ResearchProjectDef>
-			<defName>TurretsII</defName>
-			<label>Turrets II</label>
-			<description>"Where do they come from? From the east you say? Ok I carry the turrets over there." \n"Wait! I can make a Cannon Turret. It has a much better range, but I need you to make me some cannon shells for it."</description>
-			<totalCost>2000</totalCost>
-			<prerequisites>
-				<li>TurretsI</li>
-			</prerequisites>
-		</ResearchProjectDef>		
+	</ResearchProjectDef>				
 
 	  	<ResearchProjectDef>
 			<defName>WeaponCraftingI</defName>
@@ -654,6 +634,26 @@
 			</prerequisites>
 		</ResearchProjectDef>
 
+			<ResearchProjectDef>
+				<defName>TurretM2Browning</defName>
+				<label>Turret: M2 Browning</label>
+				<description>"This turret we can build right now is rather improvised. With the weapon parts we have now, we can make a much better one."</description>
+				<totalCost>1000</totalCost>
+				<prerequisites>
+					<li>WeaponCraftingI</li>
+				</prerequisites>
+			</ResearchProjectDef>
+
+			<ResearchProjectDef>
+				<defName>TurretsUtility</defName>
+				<label>Turrets: Utility</label>
+				<description>"The Raiders will attack at night? That is bad news. Build a Spotlight Tower so we can see where they are coming from!"</description>
+				<totalCost>1000</totalCost>
+				<prerequisites>
+					<li>WeaponCraftingI</li>
+				</prerequisites>
+			</ResearchProjectDef>		
+
 		<ResearchProjectDef>
 			<defName>WeaponCraftingII</defName>
 			<label>Weapon Crafting II</label>
@@ -664,15 +664,45 @@
 			</prerequisites>
 		</ResearchProjectDef>
 
+			<ResearchProjectDef>
+				<defName>TurretMiniGun</defName>
+				<label>Turret: Mini Gun</label>
+				<description>"This thing fires so many bullets, I can't even count them..."</description>
+				<totalCost>1500</totalCost>
+				<prerequisites>
+					<li>WeaponCraftingII</li>
+				</prerequisites>
+			</ResearchProjectDef>
+
+			<ResearchProjectDef>
+				<defName>TurretCannon</defName>
+				<label>Turret: Cannon</label>
+				<description>"Where do they come from? From the east you say? Ok I carry the turrets over there." \n"Wait! I can make a Cannon Turret. It has a much better range, but I need you to make me some cannon shells for it."</description>
+				<totalCost>1500</totalCost>
+				<prerequisites>
+					<li>WeaponCraftingII</li>
+				</prerequisites>
+			</ResearchProjectDef>			
+
 		<ResearchProjectDef>
 			<defName>WeaponCraftingIII</defName>
 			<label>Weapon Crafting III</label>
 			<description>"Have you made the electronic chips yet? I bet I could make some really nice guns with these."</description>
-			<totalCost>2500</totalCost>
+			<totalCost>2000</totalCost>
 			<prerequisites>
 				<li>WeaponCraftingII</li>
 			</prerequisites>
 		</ResearchProjectDef>
+
+			<ResearchProjectDef>
+				<defName>TurretsAdvanced</defName>
+				<label>Turrets: Advanced</label>
+				<description>"Lasers!" \n"Lasers are pretty neat indeed. But against mechs an anti-materiel turret would be better maybe."</description>
+				<totalCost>2000</totalCost>
+				<prerequisites>
+					<li>WeaponCraftingIII</li>
+				</prerequisites>
+			</ResearchProjectDef>
 	
 	<ResearchProjectDef>
 		<defName>Mortars</defName>
@@ -714,6 +744,7 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
+		<!-- temp removed
 		<ResearchProjectDef>
 			<defName>Building_ShieldStandard_research</defName>
 			<label>Standard Shield Generator</label>
@@ -724,7 +755,7 @@
 				<li>GunTurretCooling</li>
 			</prerequisites>
 		</ResearchProjectDef>
-
+		
 		<ResearchProjectDef>
 			<defName>Building_ShieldFortress_research</defName>
 			<label>Fortress Shield</label>
@@ -735,6 +766,7 @@
 				<li>Building_ShieldStandard_research</li>
 			</prerequisites>
 		</ResearchProjectDef>
+		
 
 		<ResearchProjectDef>
 			<defName>Building_ShieldSmall_research</defName>
@@ -757,5 +789,6 @@
 				<li>Building_ShieldStandard_research</li>
 			</prerequisites>
 		</ResearchProjectDef>
+		-->
 
 </ResearchProjectDefs>

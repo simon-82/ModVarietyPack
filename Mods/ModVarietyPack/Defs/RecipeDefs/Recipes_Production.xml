@@ -1267,16 +1267,13 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
 
   <RecipeDef>
     <defName>MakeSugar</defName>
-    <label>Ground sugar</label>
+    <label>Ground Sugar</label>
     <description>Beat and grind those canes to get at that sugar!</description>
     <jobString>Grounding sugar.</jobString>
     <workAmount>1100</workAmount>
     <workSpeedStat>CookSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
-    <products>
-       <Sugar>3</Sugar>
-    </products>
     <ingredients>
        <li>
           <filter>
@@ -1295,6 +1292,9 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
       <li>AllowRotten</li>
     </specialFiltersToDisallow>
     </fixedIngredientFilter>
+    <products>
+       <Sugar>3</Sugar>
+    </products>
     <workSkill>Cooking</workSkill>
    </RecipeDef>
 
@@ -1308,24 +1308,25 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
       <workAmount>900</workAmount>
        <soundWorking>Recipe_CookMeal</soundWorking>
        <allowMixingIngredients>true</allowMixingIngredients>
+       <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
     <ingredients>
       <li>
         <filter>
           <thingDefs>
             <li>Rawwheat</li>
-            <li>PlantCorn</li>
-            <li>PlantRice</li>
+            <li>RawCorn</li>
+            <li>RawRice</li>
             <li>Rawoats</li>
           </thingDefs>
         </filter>
-        <count>10</count>
+        <count>0.5</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>Rawwheat</li>
-        <li>PlantCorn</li>
-        <li>PlantRice</li>
+        <li>RawCorn</li>
+        <li>RawRice</li>
         <li>Rawoats</li>
       </thingDefs>
         <specialFiltersToDisallow>

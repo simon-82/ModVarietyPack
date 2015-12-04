@@ -33,9 +33,6 @@
         <compClass>CompEquippable</compClass>
       </li>
     </comps>
-    <smeltProducts>
-      <Steel>10</Steel>
-    </smeltProducts>
   </ThingDef>
 
   <ThingDef Name="BaseBullet" Abstract="True">
@@ -64,6 +61,8 @@
       <flyOverhead>true</flyOverhead>
     </projectile>
   </ThingDef>
+
+  <!-- MVP added weapon tags so raiders can't equip this -->
   <ThingDef ParentName="BaseGun">
     <defName>Artillery_SkywrathController</defName>
     <label>Skywrath controller fake turret</label>
@@ -72,6 +71,10 @@
     <destroyOnDrop>True</destroyOnDrop>
     <menuHidden>True</menuHidden>
     <tradeability>Never</tradeability>
+    <weaponTags>
+      <li>Artillery</li>
+      <li>Artillery_BaseDestroyer</li>
+    </weaponTags>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>

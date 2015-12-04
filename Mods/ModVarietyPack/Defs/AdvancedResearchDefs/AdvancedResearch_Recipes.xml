@@ -437,18 +437,31 @@
             <li>MakeImprovisedTurret</li>
         </recipeDefs>        
         <thingDefs>
-            <li>TableMachining</li>
+            <li>TableWeapon</li>
         </thingDefs>        
     </AdvancedResearchDef> 
 
     <AdvancedResearchDef>         
-        <defName>TurretsI</defName>
+        <defName>TurretM2</defName>
         <Priority>0</Priority>        
         <researchDefs>
-            <li>TurretsI</li>
+            <li>TurretM2Browning</li>
         </researchDefs>        
         <recipeDefs>
             <li>MakeTurretM2Browning</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableSmithing</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>TurretUtility</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>TurretsUtility</li>
+        </researchDefs>        
+        <recipeDefs>
             <li>MakeSpotlightTower</li>
             <li>MakeTurretStun</li>
         </recipeDefs>        
@@ -458,15 +471,41 @@
     </AdvancedResearchDef>
 
     <AdvancedResearchDef>         
-        <defName>TurretsII</defName>
+        <defName>TurretMiniGun</defName>
         <Priority>0</Priority>        
         <researchDefs>
-            <li>TurretsII</li>
+            <li>TurretMiniGun</li>
+        </researchDefs>        
+        <recipeDefs>            
+            <li>MakeTurretM134Minigun</li>            
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableSmithing</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>TurretCannon</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>TurretCannon</li>
+        </researchDefs>        
+        <recipeDefs>            
+            <li>MakeCannonShell</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableSmithing</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>TurretsAdvanced</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>TurretsAdvanced</li>
         </researchDefs>        
         <recipeDefs>
             <li>MakeTurretAM</li>
-            <li>MakeTurretM134Minigun</li>
-            <li>MakeCannonShell</li>
             <li>MakeTurretLaser</li>
         </recipeDefs>        
         <thingDefs>

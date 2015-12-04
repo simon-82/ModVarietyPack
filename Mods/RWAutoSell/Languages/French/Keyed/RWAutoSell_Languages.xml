@@ -35,6 +35,28 @@
   <RWAutoSell.RuleQBetween> de la {0} entre {1} et {2}</RWAutoSell.RuleQBetween>
   <RWAutoSell.RuleQAbove> de {0} dessus de {1}</RWAutoSell.RuleQAbove>
   <RWAutoSell.RuleKeepMin> et de garder un minimum de {0}</RWAutoSell.RuleKeepMin>
+    <!-- Pawn Rule Labels -->
+  <RWAutoSell.ExceptsMaxReached>Trop nombreuses exceptions définies./n S'il vous plaît garder votre nombre d'exceptions à moins de 10 ou modifier les exceptions existantes</RWAutoSell.ExceptsMaxReached>
+  <RWAutoSell.RuleLabelAll>Tous {0}</RWAutoSell.RuleLabelAll>
+  <RWAutoSell.RuleLabelAdd>Ajouter</RWAutoSell.RuleLabelAdd>
+  <RWAutoSell.RuleLabelEdit>modifier</RWAutoSell.RuleLabelEdit>
+  <RWAutoSell.PawnTypeLabelHuman>Humain</RWAutoSell.PawnTypeLabelHuman>
+  <RWAutoSell.RuleExceptionMode>Mode Exceptions</RWAutoSell.RuleExceptionMode>
+  <RWAutoSell.RuleExceptionLabel>Ignorer règle si: {0}</RWAutoSell.RuleExceptionLabel>
+  <RWAutoSell.RuleMainThingTab>Règles chose</RWAutoSell.RuleMainThingTab>
+  <RWAutoSell.RuleMainPawnTab>Règles de bétail</RWAutoSell.RuleMainPawnTab>
+  <!-- Pawn Rule Class Labels -->
+  <RWAutoSell.PawnRules.ASRuleAnyLabel>toute condition</RWAutoSell.PawnRules.ASRuleAnyLabel>
+  <RWAutoSell.PawnRules.ASRuleNamedName>utilise un nom</RWAutoSell.PawnRules.ASRuleNamedName>
+  <RWAutoSell.PawnRules.ASRuleNamedLabelNone>Sans nom</RWAutoSell.PawnRules.ASRuleNamedLabelNone>
+  <RWAutoSell.PawnRules.ASRuleNamedLabelSingular>utilise le nom de {0}</RWAutoSell.PawnRules.ASRuleNamedLabelSingular>
+  <RWAutoSell.PawnRules.ASRuleNamedLabelPlural>en utilisant un de ces noms</RWAutoSell.PawnRules.ASRuleNamedLabelPlural>
+  <RWAutoSell.PawnRules.ASRuleTraitsName>trait de personnalité</RWAutoSell.PawnRules.ASRuleTraitsName>
+  <RWAutoSell.PawnRules.ASRuleTraitsLabelNone>aucun trait de personnalité</RWAutoSell.PawnRules.ASRuleTraitsLabelNone>
+  <RWAutoSell.PawnRules.ASRuleTraitsLabelSingular>{0} trait de personnalité</RWAutoSell.PawnRules.ASRuleTraitsLabelSingular>
+  <RWAutoSell.PawnRules.ASRuleTraitsLabelPluralAny>a un de ces traits de personnalité</RWAutoSell.PawnRules.ASRuleTraitsLabelPluralAny>
+  <RWAutoSell.PawnRules.ASRuleTraitsLabelPluralAll>a tous ces traits de personnalité</RWAutoSell.PawnRules.ASRuleTraitsLabelPluralAll>
+  <RWAutoSell.MC>y</RWAutoSell.MC>
   <!--Rule Label Order 
   
   0=Thing or Category (e.g. Any Apparel)

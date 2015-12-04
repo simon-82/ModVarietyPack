@@ -169,7 +169,7 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>16</damageAmountBase>
+      <damageAmountBase>14</damageAmountBase>
       <speed>340</speed>
     </projectile>
     <comps>
@@ -193,10 +193,10 @@
     <canBeSpawningInventory>false</canBeSpawningInventory>
     <statBases>
       <MarketValue>2500</MarketValue>
-      <AccuracyTouch>1.00</AccuracyTouch>
-      <AccuracyShort>0.72</AccuracyShort>
-      <AccuracyMedium>0.36</AccuracyMedium>
-      <AccuracyLong>0.12</AccuracyLong>
+      <AccuracyTouch>0.5</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.65</AccuracyLong>
       <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
     </statBases>
       <weaponTags>
@@ -208,9 +208,9 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>Bullet_M2Browning</projectileDef>
         <warmupTicks>90</warmupTicks>
-        <range>51</range>
-        <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
-        <burstShotCount>4</burstShotCount>
+        <range>45</range>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
         <soundCast>Gun_M2Browning_Sound</soundCast>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -242,7 +242,7 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>20</damageAmountBase>
+      <damageAmountBase>16</damageAmountBase>
       <speed>333</speed>
     </projectile>
     <comps>
@@ -268,8 +268,8 @@
       <MarketValue>2500</MarketValue>
       <AccuracyTouch>0.50</AccuracyTouch>
       <AccuracyShort>0.50</AccuracyShort>
-      <AccuracyMedium>0.85</AccuracyMedium>
-      <AccuracyLong>0.85</AccuracyLong>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.50</AccuracyLong>
       <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
     </statBases>
       <weaponTags>
@@ -282,8 +282,8 @@
         <projectileDef>Bullet_M134Minigun</projectileDef>
         <warmupTicks>180</warmupTicks>
         <range>45</range>
-        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
-        <burstShotCount>100</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <burstShotCount>30</burstShotCount>
         <soundCast>Gun_M134Minigun_Sound</soundCast>
         <muzzleFlashScale>9</muzzleFlashScale>
       </li>
@@ -291,7 +291,7 @@
     <comps>
       <li Class="Combat_Realism.CompPropertiesCustom">
         <compClass>Combat_Realism.CompAim</compClass>
-        <shotVariation>0.19</shotVariation>
+        <shotVariation>0.25</shotVariation>
         <shooterVariation>0.00</shooterVariation>
         <recoilOffsetX>(-0.05,0.05)</recoilOffsetX>
         <recoilOffsetY>(-0.05,0.05)</recoilOffsetY>
@@ -410,7 +410,7 @@
       <AccuracyShort>1.00</AccuracyShort>
       <AccuracyMedium>1.00</AccuracyMedium>
       <AccuracyLong>1.00</AccuracyLong>
-      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>0.80</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>Artillery</li>

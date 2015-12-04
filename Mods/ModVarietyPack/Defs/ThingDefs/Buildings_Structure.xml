@@ -425,7 +425,6 @@
       <li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
         <compClass>CommunityCoreLibrary.CompColoredLight</compClass>
       </li>
-
     </Comps>
     <researchPrerequisite>ConstructionIII</researchPrerequisite>
   </ThingDef>
@@ -881,32 +880,6 @@ Warning! Always wear safety glasses before any maintenance operation. Local wild
     <size>(1,1)</size>
     <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
   </ThingDef>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </Buildings>

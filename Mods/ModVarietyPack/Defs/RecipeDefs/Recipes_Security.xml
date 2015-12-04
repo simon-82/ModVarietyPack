@@ -19,14 +19,16 @@
         <filter>
           <thingDefs>
             <li>SteelBar</li>
+            <li>AluBar</li>
           </thingDefs>
         </filter>
-        <count>120</count>
+        <count>150</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>SteelBar</li>
+        <li>AluBar</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -45,8 +47,8 @@
   <!-- === TC modified === -->
   <RecipeDef>
     <defName>MakeTurretM2Browning</defName>
-    <label>make M2Browning machine gun turret</label>
-    <description>Craft an M2Browning turret.</description>
+    <label>make M2 Browning machine gun turret</label>
+    <description>Craft an M2 Browning turret.</description>
     <jobString>Making turret.</jobString>
     <workSpeedStat>SmithingSpeed</workSpeedStat>
     <effectWorking>Cook</effectWorking>
@@ -59,14 +61,25 @@
         <filter>
           <thingDefs>
             <li>SteelBar</li>
+            <li>AluBar</li>
           </thingDefs>
         </filter>
         <count>150</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WeaponParts</li>
+          </thingDefs>
+        </filter>
+        <count>75</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>SteelBar</li>
+        <li>AluBar</li>
+        <li>WeaponParts</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -90,14 +103,25 @@
         <filter>
           <thingDefs>
             <li>SteelBar</li>
+            <li>AluBar</li>
           </thingDefs>
         </filter>
-        <count>180</count>
+        <count>150</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WeaponParts</li>
+          </thingDefs>
+        </filter>
+        <count>150</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>SteelBar</li>
+        <li>AluBar</li>
+        <li>WeaponParts</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -121,9 +145,10 @@
         <filter>
           <thingDefs>
             <li>SteelBar</li>
+            <li>AluBar</li>
           </thingDefs>
         </filter>
-        <count>100</count>
+        <count>120</count>
       </li>
       <li>
         <filter>
@@ -137,6 +162,7 @@
     <fixedIngredientFilter>
       <thingDefs>
         <li>SteelBar</li>
+        <li>AluBar</li>
         <li>Electronics</li>
       </thingDefs>
     </fixedIngredientFilter>
@@ -161,6 +187,7 @@
         <filter>
           <thingDefs>
             <li>SteelBar</li>
+            <li>AluBar</li>
           </thingDefs>
         </filter>
         <count>150</count>
@@ -171,13 +198,23 @@
             <li>Electronics</li>
           </thingDefs>
         </filter>
-        <count>30</count>
+        <count>50</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>WeaponParts</li>
+          </thingDefs>
+        </filter>
+        <count>150</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>SteelBar</li>
+        <li>AluBar</li>
         <li>Electronics</li>
+        <li>WeaponParts</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -201,9 +238,10 @@
         <filter>
           <thingDefs>
             <li>SteelBar</li>
+            <li>AluBar</li>
           </thingDefs>
         </filter>
-        <count>180</count>
+        <count>200</count>
       </li>
       <li>
         <filter>
@@ -217,6 +255,7 @@
     <fixedIngredientFilter>
       <thingDefs>
         <li>SteelBar</li>
+        <li>AluBar</li>
         <li>Electronics</li>
       </thingDefs>
     </fixedIngredientFilter>
@@ -241,6 +280,7 @@
         <filter>
           <thingDefs>
             <li>SteelBar</li>
+            <li>AluBar</li>
           </thingDefs>
         </filter>
         <count>80</count>
@@ -251,12 +291,13 @@
             <li>Glass</li>
           </thingDefs>
         </filter>
-        <count>20</count>
+        <count>15</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>SteelBar</li>
+        <li>AluBar</li>
         <li>Glass</li>
       </thingDefs>
     </fixedIngredientFilter>

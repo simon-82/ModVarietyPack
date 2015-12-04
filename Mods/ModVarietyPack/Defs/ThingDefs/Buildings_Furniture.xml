@@ -825,11 +825,10 @@
   <researchPrerequisite>GlassworksResearch</researchPrerequisite>
   </ThingDef>
 
-  <ThingDef ParentName="HighQualityFurnitureBase">
+  <ThingDef ParentName="FurnitureBase">
     <defName>EndTable</defName>
     <label>End Table with lamp.</label>
-    <description>A small table with a lamp and a drawer, great beside a bed. Uses 20 watts of power to light a small area.</description>
-    
+    <description>A small table with a lamp and a drawer, great beside a bed. Uses 20 watts of power to light a small area.</description>    
     <graphicData>
       <texPath>Buildings/EndTable/StandingLampOnTable</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -839,7 +838,6 @@
         <volume>(0.3, 0.6, 0.3)</volume>
       </shadowData>
     </graphicData>
-
     <altitudeLayer>Waist</altitudeLayer>
     <rotatable>True</rotatable>
     <socialPropernessMatters>true</socialPropernessMatters>
@@ -880,7 +878,16 @@
       <li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
         <compClass>CommunityCoreLibrary.CompColoredLight</compClass>
       </li>
+      <li>
+        <compClass>CompArt</compClass>
+        <nameMaker>NamerFurniture</nameMaker>
+        <descriptionMaker>ArtFurniture</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
     </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
     <designationCategory>Furniture</designationCategory>
     <researchPrerequisite>FurnitureII</researchPrerequisite>
     <placeWorkers>
@@ -2755,47 +2762,44 @@
 
 
   <!-- === Storage === -->
-  <ThingDef ParentName="HighQualityFurnitureBase">
-       <defName>ServingTableCool</defName>
-        <label>Serving Table cooled</label>
-        <thingClass>Building_Storage</thingClass>
+  <ThingDef ParentName="FurnitureBase">
+      <defName>ServingTableCool</defName>
+      <label>Serving Table cooled</label>
+      <thingClass>Building_Storage</thingClass>
       <graphicData>
-      <shaderType>Transparent</shaderType>
-         <texPath>Buildings/ServingTable</texPath>
+        <shaderType>Transparent</shaderType>
+        <texPath>Buildings/ServingTable</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       </graphicData>
       <tickerType>Normal</tickerType>
       <placingDraggableDimensions>1</placingDraggableDimensions>
-        <AltitudeLayer>Projectile</AltitudeLayer>
-        <passability>PassThroughOnly</passability>
-        <pathCost>40</pathCost>
-        <statBases>
-          <MaxHitPoints>300</MaxHitPoints>
-          <WorkToMake>1200</WorkToMake>
-          <Flammability>1.0</Flammability>
+      <AltitudeLayer>Projectile</AltitudeLayer>
+      <passability>PassThroughOnly</passability>
+      <pathCost>40</pathCost>
+      <statBases>
+        <MaxHitPoints>300</MaxHitPoints>
+        <WorkToMake>1200</WorkToMake>
+        <Flammability>1.0</Flammability>
         <Beauty>15</Beauty>
-        </statBases>
-       <Description>Decorative serving table. Keeps food fresh.</Description>
-        <Size>(1,1)</Size>
-        <building>
-          <fixedStorageSettings>
-            <priority>Important</priority>
-            <filter>
-              <categories>
-                <li>FoodMeals</li>
-              </categories>
-            </filter>
-          </fixedStorageSettings>
-        </building>
-        <inspectorTabs>
-          <li>ITab_Storage</li>
-        </inspectorTabs>
+      </statBases>
+      <Description>Decorative serving table. Keeps food fresh.</Description>
+      <Size>(1,1)</Size>
+      <building>
+        <fixedStorageSettings>
+          <priority>Important</priority>
+          <filter>
+            <categories>
+              <li>FoodMeals</li>
+            </categories>
+          </filter>
+        </fixedStorageSettings>
+      </building>
       <surfaceType>Item</surfaceType>
       <costList>
         <SteelBar>30</SteelBar>
         <Electronics>5</Electronics>
       </costList>
-       <comps>
+      <comps>
         <li>
             <compClass>CommunityCoreLibrary.CompRefrigerated</compClass>
         </li>
@@ -2813,7 +2817,17 @@
             <cycleLowTicks>3000</cycleLowTicks>
             <cycleHighTicks>6000</cycleHighTicks>
         </li>
+        <li>
+          <compClass>CompArt</compClass>
+          <nameMaker>NamerFurniture</nameMaker>
+          <descriptionMaker>ArtFurniture</descriptionMaker>
+          <minQualityForArtistic>Excellent</minQualityForArtistic>
+        </li>
       </comps>
+      <inspectorTabs>
+        <li>ITab_Art</li>
+        <li>ITab_Storage</li>
+      </inspectorTabs>
       <researchPrerequisite>StorageI</researchPrerequisite>
         <DesignationCategory>Storage</DesignationCategory>
     </ThingDef>

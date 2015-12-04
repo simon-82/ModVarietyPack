@@ -51,7 +51,6 @@
 					<defName>FoodFreshFish</defName>
 					<label>fresh fish</label>
 					<parent>MeatRaw</parent>
-					<resourceReadoutRoot>false</resourceReadoutRoot>
 					<iconPath>ThingCategories/FreshFish</iconPath>
 				</ThingCategoryDef>
 
@@ -79,7 +78,7 @@
         		<defName>CookingSupplies</defName>
         		<label>cooking ingredents</label>
         		<parent>Foods</parent>
-        		<resourceReadoutRoot>false</resourceReadoutRoot>
+        		<resourceReadoutRoot>true</resourceReadoutRoot>
         		<iconPath>ThingCategories/Cookingstuff</iconPath>
 	     </ThingCategoryDef>
 

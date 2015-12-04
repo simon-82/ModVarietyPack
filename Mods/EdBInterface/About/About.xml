@@ -3,7 +3,7 @@
 	<name>EdB Interface</name>
 	<author>EdB</author>
 	<url></url>
-	<targetVersion></targetVersion>
+	<targetVersion>Alpha 12</targetVersion>
 	<description>This mod makes a handful of changes to the game's user interface.  Some features are only recommended for larger window sizes, but if you're running in a smaller window, you can shut off the features that do not work as well.
 	
 Adds the Colonist Bar along the top of the gameplay window, giving you another way to select colonists and to quickly see their status.
@@ -16,6 +16,6 @@ Changes the layout of several tabs, windows and panels.
 
 Look at Interface Options dialog, which you can get to by clicking on the gameplay Menu.  From here you can disable any of the mod's features that you don't like.
 
-[Version 3.1.1]
+[Version 3.1.2]
 	</description>
 </ModMetaData>
