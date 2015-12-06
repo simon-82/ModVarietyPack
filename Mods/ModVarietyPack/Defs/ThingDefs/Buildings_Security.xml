@@ -630,6 +630,7 @@
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <castEdgeShadows>true</castEdgeShadows>
+    <!--fillpercent higher than .73 to fire through embrasures -->
     <fillPercent>0.75</fillPercent>
     <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -694,6 +695,7 @@
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <castEdgeShadows>true</castEdgeShadows>
+    <!--fillpercent higher than .73 to fire through embrasures -->
     <fillPercent>0.75</fillPercent>
     <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -757,6 +759,7 @@
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <castEdgeShadows>true</castEdgeShadows>
+    <!--fillpercent higher than .73 to fire through embrasures -->
     <fillPercent>0.75</fillPercent>
     <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -817,6 +820,7 @@
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <castEdgeShadows>true</castEdgeShadows>
+    <!--fillpercent higher than .73 to fire through embrasures -->
     <fillPercent>0.75</fillPercent>
     <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -882,6 +886,7 @@
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <castEdgeShadows>true</castEdgeShadows>
+    <!--fillpercent higher than .73 to fire through embrasures -->
     <fillPercent>0.75</fillPercent>
     <combatTargetBuilding>true</combatTargetBuilding>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -937,7 +942,8 @@
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.4</fillPercent>
+    <!--fillpercent higher than .73 to fire through embrasures -->
+    <fillPercent>0.75</fillPercent>
     <combatTargetBuilding>true</combatTargetBuilding>
     <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
@@ -1031,7 +1037,8 @@
     <passability>PassThroughOnly</passability>
     <pathCost>50</pathCost>
     <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>0.4</fillPercent>
+    <!--fillpercent higher than .73 to fire through embrasures -->
+    <fillPercent>0.75</fillPercent>
     <stuffCategories>
       <li>Metallic</li>
     </stuffCategories>
