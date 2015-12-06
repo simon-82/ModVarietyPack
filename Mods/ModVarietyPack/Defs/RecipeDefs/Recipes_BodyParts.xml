@@ -1203,7 +1203,7 @@
     <soundWorking>EPOEAssembling</soundWorking>
     <unfinishedThingDef>UnfinishedProsthesis</unfinishedThingDef>
     <workSkill>Crafting</workSkill>
-    <workAmount>5000</workAmount>
+    <workAmount>3600</workAmount>
     <skillRequirements>
       <li>
         <skill>Crafting</skill>
@@ -1431,11 +1431,22 @@
     </fixedIngredientFilter>
   </RecipeDef>
 
-  <RecipeDef ParentName="RecipeSimpleProsthesis">
+  <!-- crystal eye not made from stuff, no unfinished, less work -->
+  <RecipeDef>
     <defName>CreateCrystalEye</defName>
     <label>craft crystal eye</label>
     <description>Carefully placing one glass eye inside antoher inside another creates a subtle reflective ring pattern. It's a very beautiful effect.</description>
     <jobString>Crafting prosthesis.</jobString>
+    <workSpeedStat>TailoringSpeed</workSpeedStat>
+    <soundWorking>EPOEAssembling</soundWorking>
+     <workSkill>Crafting</workSkill>
+    <workAmount>1500</workAmount>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>5</minLevel>
+      </li>
+    </skillRequirements>
     <products>
       <CrystalEye>1</CrystalEye>
     </products>
@@ -2348,8 +2359,8 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>Plasteel</li>
-        <li>Steel</li>
+        <li>PlasteelBar</li>
+        <li>AluBar</li>
         <li>Electronics</li>
       </thingDefs>
     </fixedIngredientFilter>

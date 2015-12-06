@@ -843,57 +843,6 @@
 
 
 
-
-
-
-
-
-
-  <!-- === MMS === -->
-  <ThingDef ParentName="FurnitureBase">
-    <defName>MobileMineralSonar</defName>
-    <Label>Mobile mineral sonar</Label>
-    <Description>   The mobile mineral sonar is used to detect hidden metallic objects in the heart of big mountains. \n- It will scan the surrounding rocks autonomously with the embedded energy packs. \n- Supplying some additional power will fasten the scan rate. \n- It can be dismantled to move it to another place. You will have to provide some new energy packs to replace depleted ones.
-    </Description>
-    <graphicData>
-        <graphicClass>Graphic_Single</graphicClass>
-        <texPath>Buildings/MMS/MobileMineralSonar</texPath>
-        <drawSize>(1,1)</drawSize>
-    </graphicData>
-    <uiIconPath>Buildings/MMS/MobileMineralSonar_Icon</uiIconPath>
-    <ThingClass>MobileMineralSonar.Building_MobileMineralSonar</ThingClass>
-    <tickerType>Normal</tickerType>
-    <PlaceWorkers>
-      <li>MobileMineralSonar.PlaceWorker_MobileMineralSonar</li>
-    </PlaceWorkers>
-    <CostList>
-      <EnergyPack>5</EnergyPack>
-      <MineralSonarModule>1</MineralSonarModule>
-    </CostList>
-    <AltitudeLayer>Waist</AltitudeLayer>
-  <pathCost>30</pathCost>
-    <statBases>
-      <WorkToMake>200</WorkToMake>
-      <MaxHitPoints>200</MaxHitPoints>
-      <Flammability>0.1</Flammability>
-    </statBases>
-    <useHitPoints>True</useHitPoints>
-    <Size>(1,1)</Size>
-    <DesignationCategory>Misc</DesignationCategory>
-    <Passability>Standable</Passability>
-    <hasInteractionCell>False</hasInteractionCell>
-    <comps>
-      <li>
-        <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>false</startElectricalFires>
-        <basePowerConsumption>1000</basePowerConsumption>
-        <soundPowerOn>PowerOnSmall</soundPowerOn>
-        <soundPowerOff>PowerOffSmall</soundPowerOff>
-      </li>
-    </comps>
-    <researchPrerequisite>ResearchMineralSonarEnhancedScan</researchPrerequisite>
-  </ThingDef>
-
   <!-- === Energy Pack === -->
   <ThingDef ParentName="BuildingBase">
     <defName>ChargingEnergyPack</defName>
@@ -944,58 +893,108 @@
 
 
 
-
-
-
-
-
-  <!-- === Artefact === -->
-  <ThingDef ParentName="BuildingBase">
-    <defName>ArtefactFound_Artefact</defName>
-    <label>Mysterious Artefact</label>
-    <description>This is an object of an ancient civilisation. What might happen, if you activate it?</description>
-    <thingClass>ArtefactFound.Building_Artefact</thingClass>
-    <category>Building</category>
-    <graphicData>
-          <texPath>Buildings/Artefact</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <altitudeLayer>FloorEmplacement</altitudeLayer>
-    <pathCost>20</pathCost>
-    <passability>Standable</passability>
-    <statBases>
-      <MaxHitPoints>30</MaxHitPoints>
-      <WorkToMake>100</WorkToMake>
-      <Flammability>0.0</Flammability>
-      <Beauty>3</Beauty>
-    </statBases>
-    <size>(1,1)</size>
-    <costList>
-      <Steel>36</Steel>
-    </costList>
-    <rotatable>false</rotatable>
+  <!-- === MMS === -->
+  <ThingDef Name="MinifiedBase" Abstract="True">
+    <thingClass>MinifiedThing</thingClass>
+    <category>Item</category>
+    <useHitPoints>true</useHitPoints>
     <selectable>true</selectable>
-    <neverMultiSelect>true</neverMultiSelect>
-    <building>
-      <ignoreNeedsPower>true</ignoreNeedsPower>
-    </building>    
+    <altitudeLayer>Item</altitudeLayer>
+    <!-- for CompForbiddable -->
+    <drawerType>RealtimeOnly</drawerType>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+
+  <ThingDef ParentName="MinifiedBase" Name="KitBase" Abstract="True">
+    <label>unspecified resource</label>
+    <thingCategories>
+      <li>Furniture</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="KitBase">
+    <defName>MobileMineralSonar_Kit</defName>
+    <label>Mobile mineral sonar</label>
   </ThingDef>
 
 
+  <ThingDef ParentName="BuildingBase">
+    <defName>MobileMineralSonar</defName>
+    <Label>Mobile mineral sonar</Label>
+    <Description>   The mobile mineral sonar is used to detect hidden metallic objects in the heart of big mountains.
+
+- It will scan the surrounding rocks autonomously with the embedded energy packs.
+- Supplying some additional power will fasten the scan rate.
+    </Description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Buildings/MMS/MobileMineralSonar</texPath>
+      <drawSize>(3,3)</drawSize>
+    </graphicData>
+    <uiIconPath>Buildings/MMS/MenuIcon_MobileMineralSonar</uiIconPath>
+    <ThingClass>MobileMineralSonar.Building_MobileMineralSonar</ThingClass>
+    <tickerType>Normal</tickerType>
+    <PlaceWorkers>
+      <li>MobileMineralSonar.PlaceWorker_MobileMineralSonar</li>
+    </PlaceWorkers>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <CostList>
+      <EnergyPack>5</EnergyPack>
+      <MineralSonarModule>1</MineralSonarModule>
+    </CostList>
+    <AltitudeLayer>BuildingTall</AltitudeLayer>
+    <statBases>
+      <WorkToMake>200</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.1</Flammability>
+    </statBases>
+    <useHitPoints>True</useHitPoints>
+    <Size>(1,1)</Size>
+    <DesignationCategory>Misc</DesignationCategory>
+    <Passability>Impassable</Passability>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>false</startElectricalFires>
+        <basePowerConsumption>1000</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+    </comps>
+    <researchPrerequisite>ResearchMineralSonarEnhancedScan</researchPrerequisite>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+  </ThingDef>
 
 
+  
 
+  
 
+  
 
 
 
 
 
   <!-- === Fertilizer Pump === -->
-  <ThingDef ParentName="FurnitureBase">
+  <ThingDef ParentName="KitBase">
+    <defName>FertilizerPump_Kit</defName>
+    <label>terraforming pump</label>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingBase">
     <defName>FertilizerPump</defName>
     <label>terraforming pump</label>
     <thingClass>Building_FertilizerPump</thingClass>
+    <minifiedDef>FertilizerPump_Kit</minifiedDef>
     <graphicData>
     <texPath>Buildings/FertilizerPump</texPath>
     <graphicClass>Graphic_Single</graphicClass>
@@ -1042,7 +1041,145 @@
 
 
 
+  <!--<ThingDef ParentName="FurnitureBase">
+    <defName>MobileMineralSonar</defName>
+    <Label>Mobile mineral sonar</Label>
+    <Description>   The mobile mineral sonar is used to detect hidden metallic objects in the heart of big mountains. \n- It will scan the surrounding rocks autonomously with the embedded energy packs. \n- Supplying some additional power will fasten the scan rate. \n- It can be dismantled to move it to another place. You will have to provide some new energy packs to replace depleted ones.
+    </Description>
+    <graphicData>
+        <graphicClass>Graphic_Single</graphicClass>
+        <texPath>Buildings/MMS/MobileMineralSonar</texPath>
+        <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>Buildings/MMS/MobileMineralSonar_Icon</uiIconPath>
+    <ThingClass>MobileMineralSonar.Building_MobileMineralSonar</ThingClass>
+    <tickerType>Normal</tickerType>
+    <PlaceWorkers>
+      <li>MobileMineralSonar.PlaceWorker_MobileMineralSonar</li>
+    </PlaceWorkers>
+    <CostList>
+      <EnergyPack>5</EnergyPack>
+      <MineralSonarModule>1</MineralSonarModule>
+    </CostList>
+    <AltitudeLayer>Waist</AltitudeLayer>
+  <pathCost>30</pathCost>
+    <statBases>
+      <WorkToMake>200</WorkToMake>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.1</Flammability>
+    </statBases>
+    <useHitPoints>True</useHitPoints>
+    <Size>(1,1)</Size>
+    <DesignationCategory>Misc</DesignationCategory>
+    <Passability>Standable</Passability>
+    <hasInteractionCell>False</hasInteractionCell>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>false</startElectricalFires>
+        <basePowerConsumption>1000</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+    </comps>
+    <researchPrerequisite>ResearchMineralSonarEnhancedScan</researchPrerequisite>
+  </ThingDef>
+  -->
 
+
+
+
+
+
+
+  <!--<ThingDef ParentName="FurnitureBase">
+    <defName>FertilizerPump</defName>
+    <label>terraforming pump</label>
+    <thingClass>Building_FertilizerPump</thingClass>
+    <graphicData>
+    <texPath>Buildings/FertilizerPump</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+    </shadowData>
+    </graphicData>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Standable</passability>
+    <fillPercent>0.2</fillPercent>
+    <tickerType>Rare</tickerType>
+    <statBases>
+      <MaxHitPoints>240</MaxHitPoints>
+      <WorkToMake>3000</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <description>Slowly expands a field of growable soil around itself. Needs Power: 1000W</description>
+    <size>(1,1)</size>
+    <costList>
+      <SteelBar>120</SteelBar>
+      <AluBar>75</AluBar>
+      <Glass>20</Glass>
+      <Electronics>50</Electronics>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>Misc</designationCategory>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>false</startElectricalFires>
+        <basePowerConsumption>1000</basePowerConsumption>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <rotatable>false</rotatable>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <researchPrerequisite>AgricultureIV</researchPrerequisite>
+  </ThingDef>-->
+
+
+
+
+
+
+
+
+
+
+
+  <!-- === Artefact === -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>ArtefactFound_Artefact</defName>
+    <label>Mysterious Artefact</label>
+    <description>This is an object of an ancient civilisation. What might happen, if you activate it?</description>
+    <thingClass>ArtefactFound.Building_Artefact</thingClass>
+    <category>Building</category>
+    <graphicData>
+          <texPath>Buildings/Artefact</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <pathCost>20</pathCost>
+    <passability>Standable</passability>
+    <statBases>
+      <MaxHitPoints>30</MaxHitPoints>
+      <WorkToMake>100</WorkToMake>
+      <Flammability>0.0</Flammability>
+      <Beauty>3</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <costList>
+      <Steel>36</Steel>
+    </costList>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <building>
+      <ignoreNeedsPower>true</ignoreNeedsPower>
+    </building>    
+  </ThingDef>
 
 
 

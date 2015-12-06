@@ -842,6 +842,9 @@
 			<li>SpecialWeapon</li>
 		</techHediffsTags>
 		<tradeability>Sellable</tradeability>
+		<thingCategories>
+			<li>BodyPartsAndImplants</li>
+		</thingCategories>
 	</ThingDef>
 
 	<ThingDef ParentName="BodyPartBase">
