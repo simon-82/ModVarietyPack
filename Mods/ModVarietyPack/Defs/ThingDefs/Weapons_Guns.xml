@@ -479,9 +479,6 @@
     </equippedStatOffsets>
   </ThingDef>
 
-
-
-
   <!-- === AK47 === --> 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_762x39mm_AR_PA</defName>
@@ -518,7 +515,7 @@
       <AccuracyShort>0.55</AccuracyShort>
       <AccuracyMedium>0.50</AccuracyMedium>
       <AccuracyLong>0.40</AccuracyLong>
-      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li>
@@ -571,7 +568,7 @@
       <AccuracyShort>0.55</AccuracyShort>
       <AccuracyMedium>0.45</AccuracyMedium>
       <AccuracyLong>0.45</AccuracyLong>
-      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li>
@@ -620,12 +617,12 @@
     </graphicData>
     <soundInteract>InteractRifle</soundInteract>
     <statBases>
-      <MarketValue>800</MarketValue>
+      <MarketValue>1000</MarketValue>
       <AccuracyTouch>0.50</AccuracyTouch>
       <AccuracyShort>0.50</AccuracyShort>
       <AccuracyMedium>0.50</AccuracyMedium>
       <AccuracyLong>0.50</AccuracyLong>
-      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li>
@@ -673,7 +670,7 @@
     </graphicData>
     <projectile>
       <damageDef>Bullet</damageDef>
-      <damageAmountBase>30</damageAmountBase>
+      <damageAmountBase>26</damageAmountBase>
       <speed>370</speed>
     </projectile>
      <comps>
@@ -694,18 +691,18 @@
     </graphicData>
     <soundInteract>InteractRifle</soundInteract>
     <statBases>
-      <MarketValue>700</MarketValue>
+      <MarketValue>1500</MarketValue>
       <AccuracyTouch>0.50</AccuracyTouch>
       <AccuracyShort>0.50</AccuracyShort>
       <AccuracyMedium>0.60</AccuracyMedium>
       <AccuracyLong>0.50</AccuracyLong>
-      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li>
         <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_762x39mm_AR_PA</projectileDef>
+        <projectileDef>Bullet_556x45mmNATO_AR_PA</projectileDef>
         <warmupTicks>75</warmupTicks>
         <range>75</range>
         <burstShotCount>2</burstShotCount>
@@ -736,6 +733,226 @@
   </ThingDef>
 
 
+  <!-- === High Accuracy Assault Rifles === -->
+
+  <!-- === Steyr AUG A1 === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_SteyrAUGA1_PA</defName>
+    <label>Steyr AUG A1</label>
+    <description>The Steyr AUG is an Austrian bullpup rifle, designed in the 1960s. The AUG was adopted by the Austrian Army as the StG 77 in 1978. Improved version introduced in 1982. Available with a choice of olive or black furniture.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_AR_SteyrAUGA1</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <AccuracyTouch>0.80</AccuracyTouch>
+      <AccuracyShort>0.81</AccuracyShort>
+      <AccuracyMedium>0.81</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x39mm_AR_PA</projectileDef>
+        <warmupTicks>150</warmupTicks>
+        <range>75</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.01</shotVariation>
+        <shooterVariation>0.01</shooterVariation>
+        <recoilOffsetX>(0.0,0.1)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.1)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>30</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.39</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- === SA vz.58 Tactical === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_AR_SAvz58Tactical_PA</defName>
+    <label>SA vz.58 Tactical</label>
+    <description>The SA vz. 58 (model 58) is a 7.62mm assault rifle designed and manufactured in Czechoslovakia. With tactical convert.</description>
+    <graphicData>
+      <texPath>Weapons/Gun_AR_vz58Tactical</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <AccuracyTouch>0.82</AccuracyTouch>
+      <AccuracyShort>0.82</AccuracyShort>
+      <AccuracyMedium>0.85</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_762x39mm_AR_PA</projectileDef>
+        <warmupTicks>150</warmupTicks>
+        <range>71</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.01</shotVariation>
+        <shooterVariation>0.01</shooterVariation>
+        <recoilOffsetX>(0.0,0.1)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.1)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>34</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.39</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- === SG 552 Commando === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_SG552Commando_PA</defName>
+    <label>SG 552 Commando</label>
+    <description>The compact SG 552 Commando carbine was released in July 1998. It has a shorter 226 mm barrel and gas tube, ventilated handguards and a redesigned bolt carrier group that was integrated with the piston rod to form a single moving assembly.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_AR_SG552Commando</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <AccuracyTouch>0.85</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.80</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_556x45mmNATO_AR_PA</projectileDef>
+        <warmupTicks>150</warmupTicks>
+        <range>74</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.01</shotVariation>
+        <shooterVariation>0.01</shooterVariation>
+        <recoilOffsetX>(0.0,0.1)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.1)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>32</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.39</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+  <!-- === AK-12 === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_AK12_PA</defName>
+    <label>AK-12</label>
+    <description>The Kalashnikov AK-12 (formerly АK-200) is the newest derivative of the Soviet/Russian AK-47 series of assault rifles and was proposed for possible general issue to the Russian Army.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_AR_AK12</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <AccuracyTouch>0.86</AccuracyTouch>
+      <AccuracyShort>0.92</AccuracyShort>
+      <AccuracyMedium>0.88</AccuracyMedium>
+      <AccuracyLong>0.82</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_556x45mmNATO_AR_PA</projectileDef>
+        <warmupTicks>150</warmupTicks>
+        <range>76</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+        <soundCast>ShotAssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.01</shotVariation>
+        <shooterVariation>0.01</shooterVariation>
+        <recoilOffsetX>(0.0,0.1)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.1)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>30</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.39</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+
+
+
+
+    
 
 
 
@@ -821,9 +1038,6 @@
     </equippedStatOffsets>
   </ThingDef>
 
-
-
-
   <!-- === Mosbearg500 === -->
   <ThingDef ParentName="BaseHumanGun">
     <defName>Gun_Mosbearg500_PA</defName>
@@ -873,9 +1087,6 @@
       <WorkSpeedGlobal>-0.06</WorkSpeedGlobal>
     </equippedStatOffsets>    
   </ThingDef>
-
-
-
 
   <!-- === Saiga-12K-030 === -->
   <ThingDef ParentName="BaseBullet">
@@ -946,8 +1157,6 @@
       <WorkSpeedGlobal>-0.06</WorkSpeedGlobal>
     </equippedStatOffsets>    
   </ThingDef>
-
-
 
   <!-- === USAS12 === -->
   <ThingDef ParentName="BaseHumanGun">
@@ -1090,9 +1299,6 @@
     </equippedStatOffsets>
   </ThingDef>
 
-
-
-
   <!-- === M14 === -->
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_762x51mmNATO_R_PA</defName>
@@ -1109,7 +1315,7 @@
     <comps>
       <li Class="Combat_Realism.CompProperties_AP">
         <compClass>Combat_Realism.CompAP</compClass>
-        <armorPenetration>0.55</armorPenetration>
+        <armorPenetration>0.65</armorPenetration>
       </li>
     </comps>
   </ThingDef>
@@ -1188,7 +1394,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>Bullet_762x51mmNATO_R_PA</projectileDef>
         <warmupTicks>75</warmupTicks>
-        <range>70</range>
+        <range>75</range>
         <soundCast>ShotSurvivalRifle</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>9</muzzleFlashScale>
@@ -1213,6 +1419,86 @@
       <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
     </equippedStatOffsets>
   </ThingDef>
+
+
+  <!-- === High Accuracy Rifles === -->
+
+  <!-- === 6P62 === -->
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_127x108mm_R_PA</defName>
+    <label>12.7x108mm</label>
+    <graphicData>
+    <texPath>Things/Projectile/Bullet_Big</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>42</DamageAmountBase>
+      <Speed>300</Speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.85</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_6P62_PA</defName>
+    <label>6P62</label>
+    <description>6P62 is the GRAU designation of a Russian hand-held fully automatic anti-materiel rifle chambered for the 12.7 x 108 mm round. At 100 meters it can penetrate up to 20 mm of RHA steel.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_R_6P62</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_127x108mm_R_PA</projectileDef>
+        <warmupTicks>75</warmupTicks>
+        <range>76</range>
+        <soundCast>ShotSurvivalRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.01</shotVariation>
+        <shooterVariation>0.01</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>12</roundPerMag>
+        <reloadTick>180</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.41</MoveSpeed>
+      <WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+
+
 
 
 
@@ -1301,11 +1587,11 @@
 
 
   <!-- === AccuracyInternationalAWM === -->
-  <ThingDef ParentName="BaseBullet" Name="XML_338LapuaMagnum_SR_PA">
+  <ThingDef ParentName="BaseBullet">
     <defName>Bullet_338LapuaMagnum_SR_PA</defName>
     <label>.338 Lapua Magnum</label>
     <graphicData>
-    <texPath>Things/Projectile/Bullet_Small</texPath>
+    <texPath>Things/Projectile/Bullet_Big</texPath>
     <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
@@ -1321,6 +1607,7 @@
     </comps>
   </ThingDef>
 
+
   <ThingDef ParentName="BaseHumanGun">
     <defName>Gun_AccuracyInternationalAWM_PA</defName>
     <label>Accuracy International (AWM)</label>
@@ -1334,9 +1621,9 @@
       <MarketValue>882</MarketValue>
       <AccuracyTouch>0.50</AccuracyTouch>
       <AccuracyShort>0.50</AccuracyShort>
-      <AccuracyMedium>0.90</AccuracyMedium>
-      <AccuracyLong>0.90</AccuracyLong>
-      <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
+      <AccuracyMedium>0.86</AccuracyMedium>
+      <AccuracyLong>0.87</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li>
@@ -1388,9 +1675,9 @@
       <MarketValue>897</MarketValue>
       <AccuracyTouch>0.50</AccuracyTouch>
       <AccuracyShort>0.40</AccuracyShort>
-      <AccuracyMedium>0.90</AccuracyMedium>
-      <AccuracyLong>0.92</AccuracyLong>
-      <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
+      <AccuracyMedium>0.88</AccuracyMedium>
+      <AccuracyLong>0.88</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
     </statBases>
     <verbs>
       <li>
@@ -1426,6 +1713,192 @@
       <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
     </equippedStatOffsets>
   </ThingDef>
+
+
+  <!-- === High Accuracy Sniper Rifles === -->
+
+
+  <!-- === Barrett M82A1 === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_BarrettM82A1_PA</defName>
+    <label>Barrett M82A1</label>
+    <description>The M82, standardized by the US Military as the M107, is a recoil-operated, semi-automatic anti-materiel rifle developed by the American Barrett Firearms Manufacturing company.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_SR_BarrettM82A1</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_127x108mm_R_PA</projectileDef>
+        <warmupTicks>240</warmupTicks>
+        <range>107</range>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.01</shotVariation>
+        <shooterVariation>0.01</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>5</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.73</MoveSpeed>
+      <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- === M25 === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_M25_PA</defName>
+    <label>M25</label>
+    <description>The M25 Sniper Weapon System is a gas operated semi-automatic sniper rifle based on the M14 rifle. It is favoured for it's accuracy, reliability and it's ability for a quick second shot.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_SR_M25</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <AccuracyTouch>0.76</AccuracyTouch>
+      <AccuracyShort>0.88</AccuracyShort>
+      <AccuracyMedium>0.96</AccuracyMedium>
+      <AccuracyLong>0.98</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_127x108mm_R_PA</projectileDef>
+        <warmupTicks>240</warmupTicks>
+        <range>110</range>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.01</shotVariation>
+        <shooterVariation>0.01</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>8</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.73</MoveSpeed>
+      <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+  <!-- === MC Millan Tac-50 === -->
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_MCMillanTac50_PA</defName>
+    <label>MC Millan Tac-50</label>
+    <description>The McMillan Tac-50 sniper rifle is produced in Phoenix, Arizona in the United States by McMillan Firearms Manufacturing. This long-range anti-materiel/anti-personnel weapon is based on previous designs from the same company, which first appeared during the late 1980s. McMillan makes several versions of .50 caliber rifles, based on the same proprietary action, for military, law enforcement and civilian use.</description>
+    <graphicData>
+    <texPath>Weapons/Gun_SR_MCMillanTac50</texPath>
+    <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>3200</MarketValue>
+      <AccuracyTouch>0.60</AccuracyTouch>
+      <AccuracyShort>0.80</AccuracyShort>
+      <AccuracyMedium>0.99</AccuracyMedium>
+      <AccuracyLong>0.99</AccuracyLong>
+      <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCRReload</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_127x108mm_R_PA</projectileDef>
+        <warmupTicks>240</warmupTicks>
+        <range>107</range>
+        <soundCast>ShotSniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <weaponTags>
+      <li>SniperRifle</li>
+    </weaponTags>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.01</shotVariation>
+        <shooterVariation>0.01</shooterVariation>
+        <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
+        <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+      <li Class="Combat_Realism.CompProperties_Reloader">
+        <compClass>Combat_Realism.CompReloader</compClass>
+        <roundPerMag>8</roundPerMag>
+        <reloadTick>300</reloadTick>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.73</MoveSpeed>
+      <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+    </equippedStatOffsets>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
 
 
 
@@ -1770,12 +2243,6 @@
 
 
   <!-- === Vanilla Guns CR modified === -->
-
-  
-
-  
-
-
 
   <!-- ============================================== -->
 
@@ -2324,7 +2791,7 @@
 
 
   <!-- ================= Mechanoid weapons CR ================= -->
-  <!-- MVP Heavy Mech Weapons for Centipede -->
+  <!-- MVP nerfed Heavy Mech Weapons for Centipede -->
 
   <ThingDef ParentName="BaseBullet">
     <defName>Bullet_ChargeBlasterHeavy</defName>

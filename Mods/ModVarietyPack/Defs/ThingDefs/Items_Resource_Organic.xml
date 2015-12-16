@@ -52,7 +52,7 @@
     <ingestible>
       <preferability>Awful</preferability>
 
-      <!-- MVP modded to scale with plants <nutrition>0.25</nutrition> -->
+      <!-- MVP modded to scale with plants, was <nutrition>0.25</nutrition> -->
       
       <eatEffect>EatVegetarian</eatEffect>
       <soundEat>RawVegetable_Eat</soundEat>

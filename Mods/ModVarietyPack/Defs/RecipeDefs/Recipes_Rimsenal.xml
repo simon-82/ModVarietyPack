@@ -9,7 +9,7 @@
 		<label>(P) Make Heavy pistol</label>
 		<description>Make a Heavy pistol.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>7000</workAmount>
+		<workAmount>6000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -116,7 +116,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>120</count>
+				<count>100</count>
 			</li>			
 			<li>
 				<filter>
@@ -161,7 +161,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>200</count>
+				<count>120</count>
 			</li>			
 			<li>
 				<filter>
@@ -189,7 +189,7 @@
 		<label>(L) Make Siege gun</label>
 		<description>Make a siege weapon.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>20000</workAmount>
+		<workAmount>9000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -206,7 +206,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>200</count>
+				<count>100</count>
 			</li>			
 			<li>
 				<filter>
@@ -259,7 +259,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>70</count>
+				<count>45</count>
 			</li>
 		</ingredients>
 		<products>
@@ -278,7 +278,7 @@
 		<label>(AR) Make general purpose rifle</label>
 		<description>Make a light pistol.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>6000</workAmount>
+		<workAmount>8000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -295,7 +295,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>120</count>
+				<count>95</count>
 			</li>
 		</ingredients>
 		<products>
@@ -331,7 +331,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>130</count>
+				<count>110</count>
 			</li>
 		</ingredients>
 		<products>
@@ -367,7 +367,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>120</count>
+				<count>98</count>
 			</li>
 		</ingredients>
 		<products>
@@ -386,7 +386,7 @@
 		<label>(L) Make grenade launcher</label>
 		<description>Make a grenade launcher.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>18000</workAmount>
+		<workAmount>9000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -403,7 +403,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>250</count>
+				<count>150</count>
 			</li>
 		</ingredients>
 		<products>
@@ -513,7 +513,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>50</count>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -529,7 +529,7 @@
 						<li>Electronics</li>
 					</thingDefs>
 				</filter>
-				<count>25</count>
+				<count>20</count>
 			</li>
 		</ingredients>
 		<products>
@@ -567,7 +567,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>110</count>
+				<count>80</count>
 			</li>
 			<li>
 				<filter>
@@ -583,7 +583,7 @@
 						<li>Electronics</li>
 					</thingDefs>
 				</filter>
-				<count>30</count>
+				<count>25</count>
 			</li>
 		</ingredients>
 		<products>
@@ -621,7 +621,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>180</count>
+				<count>100</count>
 			</li>
 			<li>
 				<filter>
@@ -675,7 +675,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>120</count>
+				<count>50</count>
 			</li>
 			<li>
 				<filter>
@@ -691,7 +691,7 @@
 						<li>IntegratedCircuitsBoard</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>15</count>
 			</li>
 		</ingredients>
 		<products>
@@ -723,7 +723,7 @@
 		<label>(AR) Pulse laser rifle</label>
 		<description>Make a Pulse laser rifle.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>12000</workAmount>
+		<workAmount>9000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -740,7 +740,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>120</count>
+				<count>90</count>
 			</li>
 			<li>
 				<filter>
@@ -777,7 +777,7 @@
 		<label>(P) Pulse laser pistol</label>
 		<description>Make a Pulse laser pistol.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>10000</workAmount>
+		<workAmount>8000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -794,7 +794,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>80</count>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -831,61 +831,7 @@
 		<label>(SR) Pulse laser long rifle</label>
 		<description>Make a Pulse laser long rifle.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>12000</workAmount>
-		<workSpeedStat>SmeltingSpeed</workSpeedStat>
-		<effectWorking>Smelt</effectWorking>
-		<soundWorking>Recipe_Smelt</soundWorking>
-		<skillRequirements>
-			<li>
-				<skill>Crafting</skill>
-				<minLevel>12</minLevel>
-			</li>
-		</skillRequirements>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>WeaponParts</li>
-					</thingDefs>
-				</filter>
-				<count>150</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>Glass</li>
-					</thingDefs>
-				</filter>
-				<count>30</count>
-			</li>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>IntegratedCircuitsBoard</li>
-					</thingDefs>
-				</filter>
-				<count>12</count>
-			</li>
-		</ingredients>
-		<products>
-			<Gun_PLSniper>1</Gun_PLSniper>
-		</products>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>WeaponParts</li>
-				<li>Glass</li>
-				<li>IntegratedCircuitsBoard</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-		<workSkill>Crafting</workSkill>
-	</RecipeDef>
-
-	<RecipeDef>
-		<defName>MakeGun_PLCutter</defName>
-		<label>(SMG) Pulse projector</label>
-		<description>Make a Pulse projector.</description>
-		<jobString>Making gun.</jobString>
-		<workAmount>10000</workAmount>
+		<workAmount>9000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -922,6 +868,60 @@
 			</li>
 		</ingredients>
 		<products>
+			<Gun_PLSniper>1</Gun_PLSniper>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+				<li>Glass</li>
+				<li>IntegratedCircuitsBoard</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_PLCutter</defName>
+		<label>(SMG) Pulse projector</label>
+		<description>Make a Pulse projector.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>9000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>12</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Glass</li>
+					</thingDefs>
+				</filter>
+				<count>30</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IntegratedCircuitsBoard</li>
+					</thingDefs>
+				</filter>
+				<count>18</count>
+			</li>
+		</ingredients>
+		<products>
 			<Gun_PLCutter>1</Gun_PLCutter>
 		</products>
 		<fixedIngredientFilter>
@@ -939,7 +939,7 @@
 		<label>(L) Micro Missile Launcher</label>
 		<description>Make a Micro Missile Launcher.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>16000</workAmount>
+		<workAmount>9000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -956,7 +956,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>220</count>
+				<count>160</count>
 			</li>
 			<li>
 				<filter>

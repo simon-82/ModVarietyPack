@@ -1306,9 +1306,8 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
     <workSpeedStat>CookSpeed</workSpeedStat>
       <effectWorking>Cook</effectWorking>
       <workAmount>900</workAmount>
-       <soundWorking>Recipe_CookMeal</soundWorking>
-       <allowMixingIngredients>true</allowMixingIngredients>
-       <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+      <soundWorking>Recipe_CookMeal</soundWorking>
+      <allowMixingIngredients>true</allowMixingIngredients>
     <ingredients>
       <li>
         <filter>
@@ -1319,7 +1318,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
             <li>Rawoats</li>
           </thingDefs>
         </filter>
-        <count>0.5</count>
+        <count>12</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>

@@ -1,22 +1,27 @@
 @ECHO OFF
+SETLOCAL ENABLEEXTENSIONS
 TITLE ModVarietyPack Setup
 
 IF EXIST %cd%\SaveData\Config\ModsConfig.xml (
 	ECHO ModsConfig found in the right place.
-) ELSE (
-	ECHO No proper ModsConfig found!
-	ECHO Make sure you copied everything from the zip file correctly
-	PAUSE
-	EXIT
+	goto :modconfigok
 )
+ECHO No proper ModsConfig found!
+ECHO Make sure you copied everything from the zip file correctly
+PAUSE
+EXIT
+
+:modconfigok
 IF EXIST %cd%\Mods\ModVarietyPack (
 	ECHO ModVarietyPack folder found in the right place.
-) ELSE (
-	ECHO No ModVarietyPack folder found!
-	ECHO Make sure you copied everything from the zip file correctly
-	PAUSE
-	EXIT
+	goto :allok
 )
+ECHO No ModVarietyPack folder found!
+ECHO Make sure you copied everything from the zip file correctly
+PAUSE
+EXIT
+
+:allok
 ECHO.
 ECHO Everything seems ok :)
 ECHO Creating shortcut...

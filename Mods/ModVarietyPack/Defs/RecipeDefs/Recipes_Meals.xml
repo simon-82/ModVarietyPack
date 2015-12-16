@@ -936,7 +936,7 @@
 
 	<RecipeDef>
 		<defName>MakeFruitYogurt</defName>
-		<label>make Fruit Yogurt</label>
+		<label>make fruit yogurt</label>
 		<description>Make Yogurt from milk and add some fruits to it.</description>
 		<jobString>Making yogurt.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
@@ -980,7 +980,7 @@
 
 	<RecipeDef>
 		<defName>MakeChocoMilk</defName>
-		<label>make Chocolate Milk</label>
+		<label>make chocolate milk</label>
 		<description>Mix milk with chocolate.</description>
 		<jobString>Making chocolate milk.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
@@ -1041,7 +1041,7 @@
 	<!-- === Joy === -->
 	<RecipeDef>
 		<defName>MakeBeer</defName>
-		<label>brew beer</label>
+		<label>brew Beer</label>
 		<description>Brew a batch of beer from hops.</description>
 		<jobString>Brewing beer.</jobString>
 		<workSpeedStat>BrewingSpeed</workSpeedStat>
@@ -1135,7 +1135,7 @@
 
 	<RecipeDef>
 		<defName>MakeWine</defName>
-		<label>Press wine</label>
+		<label>Press Wine</label>
 		<description>Make a bottle of wine.</description>
 		<jobString>Pressing Grapes.</jobString>
 		<workSpeedStat>BrewingSpeed</workSpeedStat>
@@ -1889,7 +1889,7 @@
 
 	<RecipeDef>
 		<defName>MakeCaramel</defName>
-		<label>Make Caramel</label>
+		<label>Make caramel</label>
 		<description>Turns sugar into a sweet candy.</description>
 		<jobString>Making candy.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>

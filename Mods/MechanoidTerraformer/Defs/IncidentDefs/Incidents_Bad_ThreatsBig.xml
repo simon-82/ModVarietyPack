@@ -4,8 +4,8 @@
   <IncidentDef>
     <defName>MechanoidTerraformerIncident</defName>
     <workerClass>MechanoidTerraformer.IncidentWorker_MechanoidTerraformer</workerClass>
-    <chance>1.0</chance>
-    <minRefireDays>120</minRefireDays>
+    <chance>0.7</chance>
+    <minRefireDays>150</minRefireDays>
     <category>ThreatBig</category>
   </IncidentDef>
   

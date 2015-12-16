@@ -70,16 +70,16 @@
     <projectile>
       <explosionRadius>0.1</explosionRadius>
       <damageDef>Bomb</damageDef>
-      <damageAmountBase>15</damageAmountBase>
+      <damageAmountBase>10</damageAmountBase>
       <explosionDelay>10</explosionDelay>
     </projectile>
   <fragRange>2.0</fragRange>
   <fragProjectileSmall>Fragment_GrenadeFragSmall</fragProjectileSmall>
-  <fragAmountSmall>20</fragAmountSmall>
+  <fragAmountSmall>10</fragAmountSmall>
   <fragProjectileMedium>Fragment_GrenadeFragMedium</fragProjectileMedium>
-  <fragAmountMedium>10</fragAmountMedium>
+  <fragAmountMedium>5</fragAmountMedium>
   <fragProjectileLarge>Fragment_GrenadeFragLarge</fragProjectileLarge>
-  <fragAmountLarge>5</fragAmountLarge>
+  <fragAmountLarge>3</fragAmountLarge>
     <comps>
       <li Class="Combat_Realism.CompProperties_AP">
         <compClass>Combat_Realism.CompAP</compClass>
@@ -104,7 +104,7 @@
     <menuHidden>True</menuHidden>
     <statBases>
       <MarketValue>100</MarketValue>
-      <RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>NorbalHammer</li>
@@ -115,7 +115,7 @@
         <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <range>12</range>
-        <forcedMissRadius>1.0</forcedMissRadius>
+        <forcedMissRadius>2.4</forcedMissRadius>
         <warmupTicks>120</warmupTicks>
         <noiseRadius>1</noiseRadius>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
@@ -202,7 +202,7 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Arrow</damageDef>
-      <DamageAmountBase>20</DamageAmountBase>
+      <DamageAmountBase>15</DamageAmountBase>
       <Speed>88</Speed>
     </projectile>
     <comps>
@@ -270,7 +270,7 @@
     <projectile>
       <flyOverhead>false</flyOverhead>
       <damageDef>Arrow</damageDef>
-      <DamageAmountBase>16</DamageAmountBase>
+      <DamageAmountBase>13</DamageAmountBase>
       <Speed>98</Speed>
     </projectile>
     <comps>
@@ -390,7 +390,7 @@
       <li>NorbalHeroMelee</li>
     </weaponTags>
     <statBases>
-      <MeleeWeapon_DamageAmount>18</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_DamageAmount>16</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>0.975</MeleeWeapon_Cooldown>
     </statBases>
     <equippedAngleOffset>-65</equippedAngleOffset>
@@ -464,7 +464,7 @@
       <li>NorbalHeroMelee</li>
     </weaponTags>
     <statBases>
-      <MeleeWeapon_DamageAmount>22</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_DamageAmount>20</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.25</MeleeWeapon_Cooldown>
     </statBases>
     <equippedAngleOffset>0</equippedAngleOffset>
@@ -501,7 +501,7 @@
       <li>NorbalMelee</li>
     </weaponTags>
     <statBases>
-      <MeleeWeapon_DamageAmount>25</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_DamageAmount>22</MeleeWeapon_DamageAmount>
       <MeleeWeapon_Cooldown>1.4</MeleeWeapon_Cooldown>
     </statBases>
     <equippedAngleOffset>-25</equippedAngleOffset>

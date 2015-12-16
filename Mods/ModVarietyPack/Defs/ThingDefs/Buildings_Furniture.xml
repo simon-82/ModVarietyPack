@@ -2829,7 +2829,7 @@
         <li>ITab_Storage</li>
       </inspectorTabs>
       <researchPrerequisite>StorageI</researchPrerequisite>
-        <DesignationCategory>Storage</DesignationCategory>
+      <DesignationCategory>Storage</DesignationCategory>
     </ThingDef>
 
     <ThingDef ParentName="BuildingBase">
@@ -2887,7 +2887,7 @@
       <surfaceType>Item</surfaceType>
       <designationCategory>Storage</designationCategory>
       <staticSunShadowHeight>0.5</staticSunShadowHeight>
-      <researchPrerequisite>StorageI</researchPrerequisite>
+      <!--<researchPrerequisite>StorageI</researchPrerequisite>-->
     </ThingDef>
 
     <ThingDef ParentName="FurnitureBase">
@@ -3042,12 +3042,12 @@
       </inspectorTabs>
       <surfaceType>Item</surfaceType>
       <designationCategory>Storage</designationCategory>
-      <researchPrerequisite>StorageI</researchPrerequisite>
+      <!--<researchPrerequisite>StorageI</researchPrerequisite>-->
     </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
     <defName>WoodenPallet</defName>
-    <label>Wooden Pallet</label>
+    <label>Pallet</label>
     <graphicData>        
         <texPath>Buildings/Storage/WoodenPallet</texPath>
         <graphicClass>Graphic_Single</graphicClass>    
@@ -3090,7 +3090,7 @@
     <surfaceType>Item</surfaceType>
     <designationCategory>Storage</designationCategory>
     <staticSunShadowHeight>0.025</staticSunShadowHeight>
-    <researchPrerequisite>StorageI</researchPrerequisite>
+    <!--<researchPrerequisite>StorageI</researchPrerequisite>-->
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
@@ -3187,7 +3187,7 @@
     </inspectorTabs>
     <surfaceType>Item</surfaceType>
     <designationCategory>Storage</designationCategory>
-    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <staticSunShadowHeight>0.025</staticSunShadowHeight>
     <researchPrerequisite>StorageI</researchPrerequisite>
   </ThingDef>
 
@@ -3206,30 +3206,43 @@
     <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
     <constructEffect>ConstructMetal</constructEffect>
     <repairEffect>Repair</repairEffect>
-    <altitudeLayer>Waist</altitudeLayer>
-    <passability>Impassable</passability>
+    <AltitudeLayer>Projectile</AltitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
     <castEdgeShadows>false</castEdgeShadows>
     <filthLeaving>BuildingRubble</filthLeaving>
     <graphicData>
       <texPath>Buildings/DeepStorage</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-    <drawSize>(2,1)</drawSize>
+      <shadowData>
+            <volume>(0.3, 0.6, 0.3)</volume>
+          </shadowData> 
+      <drawSize>(2,1)</drawSize>
     </graphicData>
     <building>
       <fixedStorageSettings>
         <priority>Important</priority>
         <filter>
           <categories>
-            <li>Root</li>
+            <li>ResourcesRaw</li>
+            <li>Manufactured</li>
+            <li>FoodRaw</li>
+            <li>CookingSupplies</li>
           </categories>
         </filter>
       </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
     </building>
     <inspectorTabs>
       <li>ITab_Storage</li>
     </inspectorTabs>
     <designationCategory>Storage</designationCategory>
-    <staticSunShadowHeight>0.2</staticSunShadowHeight>
     <surfaceType>Item</surfaceType>
     <size>(2,1)</size>
     <tickerType>Normal</tickerType>
