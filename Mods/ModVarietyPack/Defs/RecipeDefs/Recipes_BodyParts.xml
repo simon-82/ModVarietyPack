@@ -1875,13 +1875,13 @@
 
 
 
-  <!-- === crafting bionic === -->
+  <!-- === crafting bionic (no unfinished, errors with made from stuff) === -->
   <RecipeDef Abstract="True" Name="RecipeBionicProsthesis">
     <workSpeedStat>TailoringSpeed</workSpeedStat>
     <soundWorking>EPOEAssembling</soundWorking>
-    <unfinishedThingDef>UnfinishedProsthesis</unfinishedThingDef>
+    <!--<unfinishedThingDef>UnfinishedProsthesis</unfinishedThingDef>-->
     <workSkill>Crafting</workSkill>
-    <workAmount>8000</workAmount>
+    <workAmount>7000</workAmount>
     <skillRequirements>
       <li>
         <skill>Crafting</skill>
@@ -3085,13 +3085,13 @@
 
 
 
-  <!-- === crafting bionic advanced === -->
+  <!-- === crafting bionic advanced (no unfinished, errors with made from stuff)=== -->
   <RecipeDef Abstract="True" Name="RecipeAdvancedProsthesis">
     <workSpeedStat>TailoringSpeed</workSpeedStat>
     <soundWorking>EPOEAssembling</soundWorking>
-    <unfinishedThingDef>UnfinishedProsthesis</unfinishedThingDef>
+    <!--<unfinishedThingDef>UnfinishedProsthesis</unfinishedThingDef>-->
     <workSkill>Crafting</workSkill>
-    <workAmount>10000</workAmount>
+    <workAmount>8000</workAmount>
     <skillRequirements>
       <li>
         <skill>Crafting</skill>

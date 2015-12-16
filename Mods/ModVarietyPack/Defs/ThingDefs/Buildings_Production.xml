@@ -1820,7 +1820,6 @@
 		<interactionCellOffset>(1,0,-1)</interactionCellOffset>
 		<surfaceType>Item</surfaceType>
 		<recipes>
-			<li>MakeCaramel</li>
 			<li>MakeDriedfruit</li>
 			<li>MakeHardcandy</li>
 			<li>MakeTaffy</li>

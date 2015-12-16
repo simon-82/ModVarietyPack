@@ -100,6 +100,85 @@
 
 
 	<!-- natural -->
+	<!-- vanilla parts (texture overrride) -->
+	<ThingDef ParentName="BodyPartBase">
+    <defName>Heart</defName>
+    <label>heart</label>
+    <description>Supplies blood and oxygen to all parts of the body. Ready to find a new owner.</description>
+    <graphicData>
+      <texPath>Items/MedOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>500</MarketValue>
+    </statBases>
+    <tradeTags>
+		<li>BodyPart</li>
+	</tradeTags>
+	<thingCategories>
+		<li>BodyPartsAndImplants</li>
+	</thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>Lung</defName>
+    <label>lung</label>
+    <description>Essential part of the respiratory system.</description>
+    <graphicData>
+      <texPath>Items/MedOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>400</MarketValue>
+    </statBases>
+    <tradeTags>
+		<li>BodyPart</li>
+	</tradeTags>
+	<thingCategories>
+		<li>BodyPartsAndImplants</li>
+	</thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>Kidney</defName>
+    <label>kidney</label>
+    <description>Filters and removes waste products from the blood.</description>
+    <graphicData>
+      <texPath>Items/MedOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>250</MarketValue>
+    </statBases>
+    <tradeTags>
+		<li>BodyPart</li>
+	</tradeTags>
+	<thingCategories>
+		<li>BodyPartsAndImplants</li>
+	</thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="BodyPartBase">
+    <defName>Liver</defName>
+    <label>liver</label>
+    <description>Plays an important role in metabolism.</description>
+    <graphicData>
+      <texPath>Items/MedOrgan</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>500</MarketValue>
+    </statBases>
+    <tradeTags>
+		<li>BodyPart</li>
+	</tradeTags>
+	<thingCategories>
+		<li>BodyPartsAndImplants</li>
+	</thingCategories>
+  </ThingDef>
+  <!-- vanilla parts end -->
+
+
 	<ThingDef ParentName="BodyPartBase">
 		<defName>Leg</defName>
 		<label>leg</label>

@@ -178,6 +178,7 @@
         </recipeDefs>
         <thingDefs>
             <li>Human</li>
+            <li>Norbal</li>
         </thingDefs>                              
     </AdvancedResearchDef>
 
@@ -222,6 +223,7 @@
         </recipeDefs>
         <thingDefs>
             <li>Human</li>
+            <li>Norbal</li>
         </thingDefs>   
     </AdvancedResearchDef>
 
@@ -240,10 +242,13 @@
             <li>InstallNaturalNose</li>
             <li>InstallNaturalEar</li>
             <li>InstallNaturalJaw</li>
-            <li>InstallNaturalArm</li>      
+            <li>InstallNaturalArm</li>
+            <li>InstallNaturalLeg</li>
+            <li>InstallNaturalStomach</li>     
         </recipeDefs>
         <thingDefs>
             <li>Human</li>
+            <li>Norbal</li>
         </thingDefs>   
     </AdvancedResearchDef>
 
@@ -270,6 +275,7 @@
         </recipeDefs>
         <thingDefs>
             <li>Human</li>
+            <li>Norbal</li>
         </thingDefs>   
     </AdvancedResearchDef>
 
@@ -317,6 +323,7 @@
         </recipeDefs>
         <thingDefs>
             <li>Human</li>
+            <li>Norbal</li>
         </thingDefs>   
     </AdvancedResearchDef>
 
@@ -543,16 +550,66 @@
 
             <!-- SR -->
             <li>MakeGun_AccuracyInternationalAWM_PA</li>
-            <li>MakeGun_SVD_PA</li>
-
-            <!-- L -->
-            <li>MakeGun_IncendiaryLauncher</li>
-            <li>MakeGun_RPG7_PA</li>
+            <li>MakeGun_SVD_PA</li>            
         </recipeDefs>        
         <thingDefs>
             <li>TableWeaponCrafting</li>
         </thingDefs>        
     </AdvancedResearchDef> 
+
+    <AdvancedResearchDef>         
+        <defName>WeaponCraftingIIL</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Launchers</li>
+        </researchDefs>        
+        <recipeDefs>
+            <!-- L -->
+            <li>MakeGun_IncendiaryLauncher</li>
+            <li>MakeGun_RPG7_PA</li>
+        </recipeDefs>
+        <thingDefs>
+            <li>TableWeaponCrafting</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>WeaponCraftingIIAR</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>ARAccuracy</li>
+        </researchDefs>        
+        <recipeDefs>
+            <!-- AR -->
+            <li>MakeGun_SteyrAUGA1_PA</li>
+            <li>MakeGun_AR_SAvz58Tactical_PA</li>
+            <li>MakeGun_SG552Commando_PA</li>
+            <li>MakeGun_AK12_PA</li>
+        </recipeDefs>
+        <thingDefs>
+            <li>TableWeaponCrafting</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>WeaponCraftingIISR</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>SRAccuracy</li>
+        </researchDefs>        
+        <recipeDefs>
+            <!-- R -->
+            <li>MakeGun_6P62_PA</li>
+
+            <!-- SR -->
+            <li>MakeGun_BarrettM82A1_PA</li>
+            <li>MakeGun_M25_PA</li>
+            <li>MakeGun_MCMillanTac50_PA</li>
+        </recipeDefs>
+        <thingDefs>
+            <li>TableWeaponCrafting</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
 
     <AdvancedResearchDef>         
         <defName>SecurityIIShells</defName>

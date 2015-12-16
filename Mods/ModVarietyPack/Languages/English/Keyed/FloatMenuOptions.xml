@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <DroidCremate>Cremate corpse of {0}</DroidCremate>
+  <DroidButcher>Butcher corpse of {0}</DroidButcher>
+  <DroidCannotButcher>Cannot butcher corpse ( corpse is {0} )</DroidCannotButcher>
+  <DroidManThing>Man {0}</DroidManThing>
+
+  <DroidArrestNoBedsAvailable>There are no prisoner beds available</DroidArrestNoBedsAvailable>
+
+  <DroidRescueNoMedicalBedsAvailable>There are no beds available to rescue this colonist</DroidRescueNoMedicalBedsAvailable>
+  
+</LanguageData>

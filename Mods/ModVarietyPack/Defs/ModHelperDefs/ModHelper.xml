@@ -3,15 +3,20 @@
 
     <ModHelperDef>
         <defName>RedistHeat</defName>
-
         <ModName>RedistHeat</ModName>
-
         <version>0.12.1</version>
-
         <MapComponents>
             <li>RedistHeat.AirNetTicker</li>
         </MapComponents>
+    </ModHelperDef>
 
+    <ModHelperDef>
+        <defName>StorageSearch</defName>
+        <ModName>StorageSearch</ModName>
+        <version>0.12.3</version>
+        <SpecialInjectors>
+            <li>StorageSearch.Injector_StorageSearch</li>
+        </SpecialInjectors>
     </ModHelperDef>
 
 </Defs>

@@ -79,7 +79,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>50</count>
+				<count>30</count>
 			</li>
 		</ingredients>
 		<products>
@@ -115,7 +115,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>90</count>
+				<count>60</count>
 			</li>
 		</ingredients>
 		<products>
@@ -151,7 +151,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>90</count>
+				<count>70</count>
 			</li>
 		</ingredients>
 		<products>
@@ -187,7 +187,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>100</count>
+				<count>80</count>
 			</li>
 		</ingredients>
 		<products>
@@ -223,7 +223,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>150</count>
+				<count>90</count>
 			</li>
 		</ingredients>
 		<products>
@@ -259,7 +259,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>90</count>
+				<count>70</count>
 			</li>
 		</ingredients>
 		<products>
@@ -295,11 +295,11 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>120</count>
+				<count>90</count>
 			</li>
 		</ingredients>
 		<products>
-			<Gun_PDW>1</Gun_PDW>
+			<Gun_HeavySMG>1</Gun_HeavySMG>
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
@@ -308,6 +308,10 @@
 		</fixedIngredientFilter>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
+
+
+
+	<!-- L --> 
 
 	<RecipeDef>
 		<defName>MakeGun_IncendiaryLauncher</defName>
@@ -393,6 +397,9 @@
 
 
 	<!-- === New Guns === -->
+
+
+	<!-- P -->
 	<RecipeDef>
 		<defName>MakeGun_DesertEagleMarkI</defName>
 		<label>(P) Make Desert Eagle MkI</label>
@@ -415,7 +422,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>60</count>
+				<count>40</count>
 			</li>
 		</ingredients>
 		<products>
@@ -451,7 +458,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>55</count>
+				<count>50</count>
 			</li>
 		</ingredients>
 		<products>
@@ -487,7 +494,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>55</count>
+				<count>52</count>
 			</li>
 		</ingredients>
 		<products>
@@ -523,7 +530,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>55</count>
+				<count>48</count>
 			</li>
 		</ingredients>
 		<products>
@@ -537,6 +544,14 @@
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>	
 
+
+
+
+
+
+
+
+	<!-- AR -->
 	<RecipeDef>
 		<defName>MakeGun_AK47_AR</defName>
 		<label>(AR) Make AK-47</label>
@@ -559,7 +574,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>110</count>
+				<count>82</count>
 			</li>
 		</ingredients>
 		<products>
@@ -595,7 +610,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>115</count>
+				<count>85</count>
 			</li>
 		</ingredients>
 		<products>
@@ -631,7 +646,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>105</count>
+				<count>88</count>
 			</li>
 		</ingredients>
 		<products>
@@ -667,7 +682,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>115</count>
+				<count>92</count>
 			</li>
 		</ingredients>
 		<products>
@@ -681,12 +696,179 @@
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
 
+
+
+
+
+	<!-- High accuracy AR -->
+	<RecipeDef>
+		<defName>MakeGun_SteyrAUGA1_PA</defName>
+		<label>(AR) Make Steyr AUG A1</label>
+		<description>Make a Steyr AUG A1.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>110</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_SteyrAUGA1_PA>1</Gun_SteyrAUGA1_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_AR_SAvz58Tactical_PA</defName>
+		<label>(AR) Make SA vz.58 Tactical</label>
+		<description>Make a SA vz.58 Tactical.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>115</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_AR_SAvz58Tactical_PA>1</Gun_AR_SAvz58Tactical_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_SG552Commando_PA</defName>
+		<label>(AR) Make SG 552 Commando</label>
+		<description>Make a SG 552 Commando.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>115</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_SG552Commando_PA>1</Gun_SG552Commando_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_AK12_PA</defName>
+		<label>(AR) Make AK-12</label>
+		<description>Make an AK-12.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>5000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>118</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_AK12_PA>1</Gun_AK12_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- R -->
 	<RecipeDef>
 		<defName>MakeGun_M14_PA</defName>
 		<label>(R) Make M14</label>
 		<description>Make an M14 rifle.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>5000</workAmount>
+		<workAmount>6000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -703,7 +885,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>95</count>
+				<count>80</count>
 			</li>
 		</ingredients>
 		<products>
@@ -722,7 +904,92 @@
 		<label>(R) Make Barrett M107</label>
 		<description>Make a Barrett M107.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>5000</workAmount>
+		<workAmount>6000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>85</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_BarrettM107_PA>1</Gun_BarrettM107_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+
+
+	<!-- High Accuracy R -->
+	<RecipeDef>
+		<defName>MakeGun_6P62_PA</defName>
+		<label>(R) Make 6P62</label>
+		<description>Make a 6P62.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>6500</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>7</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>100</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_6P62_PA>1</Gun_6P62_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+
+
+
+
+
+
+
+
+
+	<!-- SR -->
+	<RecipeDef>
+		<defName>MakeGun_AccuracyInternationalAWM_PA</defName>
+		<label>(SR) Make Accuracy International (AWM)</label>
+		<description>Make an Accuracy International (AWM).</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>6000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -743,42 +1010,6 @@
 			</li>
 		</ingredients>
 		<products>
-			<Gun_BarrettM107_PA>1</Gun_BarrettM107_PA>
-		</products>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>WeaponParts</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-		<workSkill>Crafting</workSkill>
-	</RecipeDef>
-
-	<RecipeDef>
-		<defName>MakeGun_AccuracyInternationalAWM_PA</defName>
-		<label>(SR) Make Accuracy International (AWM)</label>
-		<description>Make an Accuracy International (AWM).</description>
-		<jobString>Making gun.</jobString>
-		<workAmount>5000</workAmount>
-		<workSpeedStat>SmeltingSpeed</workSpeedStat>
-		<effectWorking>Smelt</effectWorking>
-		<soundWorking>Recipe_Smelt</soundWorking>
-		<skillRequirements>
-			<li>
-				<skill>Crafting</skill>
-				<minLevel>7</minLevel>
-			</li>
-		</skillRequirements>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>WeaponParts</li>
-					</thingDefs>
-				</filter>
-				<count>160</count>
-			</li>
-		</ingredients>
-		<products>
 			<Gun_AccuracyInternationalAWM_PA>1</Gun_AccuracyInternationalAWM_PA>
 		</products>
 		<fixedIngredientFilter>
@@ -794,7 +1025,7 @@
 		<label>(SR) Make SVD</label>
 		<description>Make an SVD.</description>
 		<jobString>Making gun.</jobString>
-		<workAmount>5000</workAmount>
+		<workAmount>6000</workAmount>
 		<workSpeedStat>SmeltingSpeed</workSpeedStat>
 		<effectWorking>Smelt</effectWorking>
 		<soundWorking>Recipe_Smelt</soundWorking>
@@ -811,7 +1042,7 @@
 						<li>WeaponParts</li>
 					</thingDefs>
 				</filter>
-				<count>170</count>
+				<count>102</count>
 			</li>
 		</ingredients>
 		<products>
@@ -824,6 +1055,125 @@
 		</fixedIngredientFilter>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
+
+	<!-- High Accuracy SR -->
+	<RecipeDef>
+		<defName>MakeGun_BarrettM82A1_PA</defName>
+		<label>(SR) Make Barrett M82A1</label>
+		<description>Make a Barrett M82A1.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>7000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>112</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_BarrettM82A1_PA>1</Gun_BarrettM82A1_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_M25_PA</defName>
+		<label>(SR) Make M25</label>
+		<description>Make an M25.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>7000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>120</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_M25_PA>1</Gun_M25_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeGun_MCMillanTac50_PA</defName>
+		<label>(SR) Make MC Millan Tac-50</label>
+		<description>Make a MC Millan Tac-50.</description>
+		<jobString>Making gun.</jobString>
+		<workAmount>7000</workAmount>
+		<workSpeedStat>SmeltingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+			<li>
+				<skill>Crafting</skill>
+				<minLevel>8</minLevel>
+			</li>
+		</skillRequirements>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WeaponParts</li>
+					</thingDefs>
+				</filter>
+				<count>125</count>
+			</li>
+		</ingredients>
+		<products>
+			<Gun_MCMillanTac50_PA>1</Gun_MCMillanTac50_PA>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WeaponParts</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+
+
+
+
+
+
+
+
+	<!-- S -->
 
 	<RecipeDef>
 		<defName>MakeGun_Mosbearg500_PA</defName>

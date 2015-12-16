@@ -5,25 +5,29 @@
 		<defName>Communications</defName>
 		<label>communications I</label>
 		<description>"These guys that keep coming by." \n"Yes, I saw them. They have stuff in their tents we could buy. But they won't sell us anything because we don't have this thing they call 'Trade Beacon'." \n"Maybe build one then. Make sure it's outside though."</description>
-		<totalCost>500</totalCost>
-	</ResearchProjectDef>
+		<totalCost>400</totalCost>
+	</ResearchProjectDef>	
 	
-		<ResearchProjectDef>
-			<defName>AdvancedCommunications</defName>
-			<label>communications II</label>
-			<description>"I was stargazing last night, it was wonderful! I saw one star was moving faster than all the others. So cool!" \n"Wait, maybe that wasn't a star. Maybe it was a space ship passing by. We need to build a Communications Console so we can contact them when they fly by next time!" \n"A telephone you mean?" \n"Uhm, yes, basically ... Only bigger."</description>
-			<totalCost>1000</totalCost>
-			<prerequisites>
-				<li>Communications</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>AdvancedCommunications</defName>
+		<label>communications II</label>
+		<description>"I was stargazing last night, it was wonderful! I saw one star was moving faster than all the others. So cool!" \n"Wait, maybe that wasn't a star. Maybe it was a space ship passing by. We need to build a Communications Console so we can contact them when they fly by next time!" \n"A telephone you mean?" \n"Uhm, yes, basically ... Only bigger."</description>
+		<totalCost>1100</totalCost>
+		<prerequisites>
+			<li>Communications</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-
-
-
-
-
-
+	<ResearchProjectDef>
+        <defName>ManagingSoftware</defName>
+        <label>basic managing software</label>
+        <description>Develop basic software for colony management. \nAllows building a manager desks with a computer, pre-installed with a host of guaranteed bug free(tm) managing software.
+        </description>
+        <totalCost>1200</totalCost>
+        <prerequisites>
+			<li>AdvancedCommunications</li>
+		</prerequisites>
+    </ResearchProjectDef>
 
 
 
@@ -35,14 +39,14 @@
 		<defName>AgricultureI</defName>
 		<label>Agriculture I</label>
 		<description>"What do you mean? These potato salads are hard work!" \n"No, no I know. I'm just saying we could plant something different for a change. Maybe we could even build a ChemLab, plant some Xerigium and make herbal medicine." \n"And what about fences? Fences are pretty!"</description>
-		<totalCost>500</totalCost>
+		<totalCost>600</totalCost>
 	</ResearchProjectDef>		
 
 		<ResearchProjectDef>
 			<defName>HospitalBed</defName>
 			<label>Medicine I</label>
 			<description>"Outch!" \n... \n"I'm afraid that doesn't look too good. I think we need to amputate. There is nothing else we can do." \n"Oh my. We should have made some real medicine much earlier I guess."</description>
-			<totalCost>1000</totalCost>
+			<totalCost>500</totalCost>
 			<prerequisites>
 				<li>AgricultureI</li>
 			</prerequisites>
@@ -92,7 +96,7 @@
 		<defName>AgricultureII</defName>
 		<label>Agriculture II</label>
 		<description>"These new plants grow faster and yield more than the ones we have been growing so far. But we need to fertilize the soil for them to grow. I'll set up a composter so we can get that going." \n"Well, you do that. I'm off catching some fish!" \nUnlocks: Fertilized Soil, Fishing Rod, Harpoon (made at the Basic Weapon Crafting Workbench)</description>
-		<totalCost>1000</totalCost>
+		<totalCost>1100</totalCost>
 		<prerequisites>
 			<li>AgricultureI</li>
 		</prerequisites>
@@ -165,7 +169,7 @@
 		<defName>Stonecutting</defName>
 		<label>Construction I</label>
 		<description>"Look at our food! It's rotting before we can eat it. And my bedroom is too cold!" \n"Ok, then. We should build some heaters and coolers. Some nicer tables and chairs also wouldn't hurt."</description>
-		<totalCost>500</totalCost>
+		<totalCost>450</totalCost>
 	</ResearchProjectDef>
 
 		<ResearchProjectDef>
@@ -222,7 +226,7 @@
 		<defName>ConstructionII</defName>
 		<description>"These small coolers and heaters are not enough. We need to think bigger." \n"Or we could build a duct network, that would be more efficient." \n"Efficient you say? We don't even have real automatic doors yet..."</description>
 		<label>Construction II</label>
-		<totalCost>1000</totalCost>
+		<totalCost>1200</totalCost>
 		<prerequisites>
 			<li>Stonecutting</li>
 		</prerequisites>
@@ -363,14 +367,14 @@
 		<defName>CraftingI</defName>
 		<label>Crafting I</label>
 		<description>"Building this wall out of round stone chunks didn't work. We have to cut them into some kind of block shape." \n"We also need to find a way to get the metal out of these rocks. Maybe if we smelt the ore in some kind of furnace?" \n"A wall? Who needs a wall when I could make a beautiful sculpture with these blocks!"</description>
-		<totalCost>500</totalCost>
+		<totalCost>400</totalCost>
 	</ResearchProjectDef>		
 
 		<ResearchProjectDef>
 			<defName>TextileI</defName>
 			<label>textile I</label>
 			<description>"Our clothes won't last forever. It's time to think about growing some cotton so we can weave cloth and start tailoring." \n"We have all these clothes the tribals came in that nobody wants to wear. We could use the materials from them to make some neat clothing for us!" \n"I just want a Baseball Cap!"</description>
-			<totalCost>1000</totalCost>
+			<totalCost>800</totalCost>
 			<prerequisites>
 				<li>CraftingI</li>
 			</prerequisites>
@@ -379,8 +383,8 @@
 		<ResearchProjectDef>
 			<defName>CarpetMaking</defName>
 			<label>textile II</label>
-			<description>"Hyperweave: High-tech nano-fibers woven into sheets. It is somewhat heavy, but is incredibly difficult to break. Devilstrand: Fabric spun from microfibers extracted from silk-producing Devilstrand mushrooms. Very tough, but insulates no better than cloth." \n"Ok Sherlock, everybody knows that... \nWhy Don't we just make some nice carpets first? My feet are getting cold."</description>
-			<totalCost>1500</totalCost>
+			<description>"Hyperweave: High-tech nano-fibers woven into sheets. It is somewhat heavy, but is incredibly difficult to break. Devilstrand: Fabric spun from microfibers extracted from silk-producing Devilstrand mushrooms. Very tough, but insulates no better than cloth." \n"Ok Sherlock, everybody knows that..." \n"Why Don't we just make some nice carpets first? My feet are getting cold."</description>
+			<totalCost>1700</totalCost>
 			<prerequisites>
 				<li>TextileI</li>
 			</prerequisites>
@@ -389,7 +393,7 @@
 		<ResearchProjectDef>
 			<defName>TextileIII</defName>
 			<label>textile III</label>
-			<description>"" \nUnlocks: Recycle Apparel, advanced Armor (made at the Smithing Table)</description>
+			<description>"The last raiders came with some pretty good weapons. Our armor vests didn't do very well against these." \n"Alright, I can try making better armor for us. But I will need a lot of stuff and time to make those." \n"What are you waiting for then? Get to work!"</description>
 			<totalCost>2000</totalCost>
 			<prerequisites>
 				<li>CarpetMaking</li>
@@ -400,7 +404,7 @@
 		<defName>ElectricSmelting</defName>
 		<label>Crafting II</label>
 		<description>"It's taking forever to cut all the chunks by hand! We need better equipment!" \n"Powered crafting tables would be a good idea. The better tools would even allow us to make armor vests to protect ourselves."</description>
-		<totalCost>1000</totalCost>
+		<totalCost>1200</totalCost>
 		<prerequisites>
 			<li>CraftingI</li>
 		</prerequisites>
@@ -464,7 +468,7 @@
 		<defName>PowerI</defName>
 		<label>Power I</label>
 		<description>"It's pretty unsafe having a campfire inside your room, you know?" \n"But it was so cold and dark inside." \n"We really need to start generating power so we can have some lights."</description>
-		<totalCost>500</totalCost>
+		<totalCost>400</totalCost>
 	</ResearchProjectDef>
 
 		<ResearchProjectDef>
@@ -496,7 +500,7 @@
 				<specialAction>SuperiorCrafting.SCUpgrades.PowerII</specialAction>
 			</li>
 		</researchMods>
-		<totalCost>1000</totalCost>
+		<totalCost>800</totalCost>
 		<prerequisites>
 			<li>PowerI</li>
 		</prerequisites>
@@ -544,7 +548,7 @@
 				<specialAction>SuperiorCrafting.SCUpgrades.PowerIII</specialAction>
 			</li>
 		</researchMods>
-		<totalCost>1500</totalCost>
+		<totalCost>2000</totalCost>
 		<prerequisites>
 			<li>PowerII</li>
 		</prerequisites>
@@ -628,7 +632,7 @@
 			<defName>WeaponCraftingI</defName>
 			<label>Weapon Crafting I</label>
 			<description>"These Pilas are pretty good but I feel we need some real weapons rather sooner than later." \n"Ok, I make the weapon parts, you assemble them. Quick! Before the tribals come!"</description>
-			<totalCost>1000</totalCost>
+			<totalCost>900</totalCost>
 			<prerequisites>
 				<li>SecurityI</li>
 			</prerequisites>
@@ -638,7 +642,7 @@
 				<defName>TurretM2Browning</defName>
 				<label>Turret: M2 Browning</label>
 				<description>"This turret we can build right now is rather improvised. With the weapon parts we have now, we can make a much better one."</description>
-				<totalCost>1000</totalCost>
+				<totalCost>1200</totalCost>
 				<prerequisites>
 					<li>WeaponCraftingI</li>
 				</prerequisites>
@@ -648,7 +652,7 @@
 				<defName>TurretsUtility</defName>
 				<label>Turrets: Utility</label>
 				<description>"The Raiders will attack at night? That is bad news. Build a Spotlight Tower so we can see where they are coming from!"</description>
-				<totalCost>1000</totalCost>
+				<totalCost>800</totalCost>
 				<prerequisites>
 					<li>WeaponCraftingI</li>
 				</prerequisites>
@@ -665,10 +669,40 @@
 		</ResearchProjectDef>
 
 			<ResearchProjectDef>
+				<defName>Launchers</defName>
+				<label>Launchers</label>
+				<description>Rocket Launchers.</description>
+				<totalCost>800</totalCost>
+				<prerequisites>
+					<li>WeaponCraftingII</li>
+				</prerequisites>
+			</ResearchProjectDef>
+
+			<ResearchProjectDef>
+				<defName>ARAccuracy</defName>
+				<label>Assault Rifles: High Accuracy</label>
+				<description>Assault Rifles with improved accuracy.</description>
+				<totalCost>1200</totalCost>
+				<prerequisites>
+					<li>WeaponCraftingII</li>
+				</prerequisites>
+			</ResearchProjectDef>
+
+			<ResearchProjectDef>
+				<defName>SRAccuracy</defName>
+				<label>Rifles: High Accuracy</label>
+				<description>Rifles and Sniper Rifles with improved accuracy.</description>
+				<totalCost>1200</totalCost>
+				<prerequisites>
+					<li>WeaponCraftingII</li>
+				</prerequisites>
+			</ResearchProjectDef>
+
+			<ResearchProjectDef>
 				<defName>TurretMiniGun</defName>
 				<label>Turret: Mini Gun</label>
 				<description>"This thing fires so many bullets, I can't even count them..."</description>
-				<totalCost>1500</totalCost>
+				<totalCost>1900</totalCost>
 				<prerequisites>
 					<li>WeaponCraftingII</li>
 				</prerequisites>
@@ -718,7 +752,7 @@
 		    <defName>IEDBomb</defName>
 		    <label>Explosive IEDs</label>
 		    <description>"Hehe - They will never see this artillery shell I burried over there. Once they get close and step on it - boom!" \n"That's so unfair! I like it!"</description>
-		    <totalCost>1000</totalCost>
+		    <totalCost>500</totalCost>
 		    <prerequisites>
 				<li>Mortars</li>
 			</prerequisites>
@@ -728,7 +762,7 @@
 			<defName>IEDIncendiary</defName>
 			<label>Incendiary IEDs</label>
 			<description>"The improved version of my trap. It's even more boom per shell!"</description>
-			<totalCost>1000</totalCost>
+			<totalCost>500</totalCost>
 			<prerequisites>
 				<li>IEDBomb</li>
 			</prerequisites>
