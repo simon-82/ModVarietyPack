@@ -13,7 +13,6 @@ ____
 **Mods Used** 
 
 * [Superior Crafting](https://ludeon.com/forums/index.php?topic=11741.0)
-
 * [FinerThings](https://ludeon.com/forums/index.php?topic=10865.0)
 
 * [Vegetable Garden](https://ludeon.com/forums/index.php?topic=12934.0)
