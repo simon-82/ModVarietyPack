@@ -10,7 +10,7 @@ IMPORTANT:
 **Installation Instructions** and **more information** in the **[ModVarietyPack wiki](https://github.com/simon-82/ModVarietyPack/wiki)**     
 
 ____     
-**Mods Used** 
+**Mods Included** 
 
 * [Superior Crafting](https://ludeon.com/forums/index.php?topic=11741.0)
 * [FinerThings](https://ludeon.com/forums/index.php?topic=10865.0)
@@ -37,33 +37,37 @@ ____
 * [EnhancedDevelopment](https://ludeon.com/forums/index.php?topic=15606.0) | Jaxxa
 * [VeinMiner](https://ludeon.com/forums/index.php?topic=9616.0) | JuliaEllie 
 * [CTS](https://ludeon.com/forums/index.php?topic=14763.0)
-* [DoorMat](https://ludeon.com/forums/index.php?topic=11171.0) - Latta
-* [NoCleaning](https://ludeon.com/forums/index.php?topic=11171.0) - Latta, 
+* [DoorMat](https://ludeon.com/forums/index.php?topic=11171.0) | Latta
+* [NoCleaning](https://ludeon.com/forums/index.php?topic=11171.0) | Latta
 * [Infusion](https://ludeon.com/forums/index.php?topic=12783.0)
 * [RedistHeat](https://ludeon.com/forums/index.php?topic=11056.0)
-* [StorageSearch](https://ludeon.com/forums/index.php?topic=16658.0) - meonester 
-* [BackstoriesCore](https://ludeon.com/forums/index.php?topic=11730.0) - mipen
+* [StorageSearch](https://ludeon.com/forums/index.php?topic=16658.0) | meonester 
+* [BackstoriesCore](https://ludeon.com/forums/index.php?topic=11730.0) | mipen
 * [MD2](https://ludeon.com/forums/index.php?topic=7380.0)
 * [Clutter](https://ludeon.com/forums/index.php?topic=2541.0)
 * [NeuffsTextures](https://github.com/neuffs/NeuffsTextures)
 * [Combat Realism](https://ludeon.com/forums/index.php?topic=9759.0)
 * [RoofSupport](https://ludeon.com/forums/index.php?topic=7458.0)
-* [Hospitality](https://ludeon.com/forums/index.php?action=profile;u=33462) -Project Armory Dev Team for
-* [ProjectArmory](http://moddb.com/mods/project-armory) - Ratys for [Fusebox](https://ludeon.com/forums/index.php?topic=11272.0),
-* [QuantumStorage](https://ludeon.com/forums/index.php?topic=11272.0) - Rikiki for
-* [M&Co.](http://ludeon.com/forums/index.php?topic=5930.0),
+* [Hospitality](https://ludeon.com/forums/index.php?action=profile;u=33462)
+* [ProjectArmory](http://moddb.com/mods/project-armory) | Project Armory Dev Team
+* [Fusebox](https://ludeon.com/forums/index.php?topic=11272.0) | Ratys
+* [QuantumStorage](https://ludeon.com/forums/index.php?topic=11272.0)
+* [M&Co.](http://ludeon.com/forums/index.php?topic=5930.0) | Rikiki
 * [FishIndustry](https://ludeon.com/forums/index.php?topic=13172.msg133445#msg133445),
 * [CaveWorldFlora](https://ludeon.com/forums/index.php?topic=13172.msg133446#msg133446),
-* [MechanoidTerraformer](https://ludeon.com/forums/index.php?topic=13172.0) - RimWorld CCL Team for 
-* [Community Core Library](https://ludeon.com/forums/index.php?topic=14172.0) - rooki1 for
-* [Rimsenal](https://ludeon.com/forums/index.php?topic=11160.0)
-* [Pawn State Icons](https://ludeon.com/forums/index.php?topic=9163.0) - Shinzy for
-* [Apparello](https://ludeon.com/forums/index.php?topic=5085.msg48933#msg48933),
-* [MoreHair](https://ludeon.com/forums/index.php?topic=6585.0), [Norbals](https://ludeon.com/forums/index.php?topic=7670.0) - Telkir for
-* [OmniFloors](https://ludeon.com/forums/index.php?topic=4373.0) - Temeez for [FloorLights](http://temeez.me) - TLHeart for
-* [EndTable](https://ludeon.com/forums/index.php?topic=16554.0), [RecycleApparel](https://ludeon.com/forums/index.php?topic=16626.0) -
-* Ykara for [EPOE](https://ludeon.com/forums/index.php?topic=10571.0) - ZOMBIE2 for
-* [Sleep](https://ludeon.com/forums/index.php?topic=15162.0)
+* [MechanoidTerraformer](https://ludeon.com/forums/index.php?topic=13172.0)
+* [Community Core Library](https://ludeon.com/forums/index.php?topic=14172.0) | RimWorld CCL Team
+* [Rimsenal](https://ludeon.com/forums/index.php?topic=11160.0) | rooki1
+* [Pawn State Icons](https://ludeon.com/forums/index.php?topic=9163.0)
+* [Apparello](https://ludeon.com/forums/index.php?topic=5085.msg48933#msg48933) | Shinzy
+* [MoreHair](https://ludeon.com/forums/index.php?topic=6585.0)
+* [Norbals](https://ludeon.com/forums/index.php?topic=7670.0)
+* [OmniFloors](https://ludeon.com/forums/index.php?topic=4373.0) | Telkir 
+* [FloorLights](http://temeez.me) | Temeez
+* [EndTable](https://ludeon.com/forums/index.php?topic=16554.0) | TLHeart
+* [RecycleApparel](https://ludeon.com/forums/index.php?topic=16626.0)
+* [EPOE](https://ludeon.com/forums/index.php?topic=10571.0) | Ykara
+* [Sleep](https://ludeon.com/forums/index.php?topic=15162.0) | ZOMBIE2
 
 ____     
 The content of all individual mods is licensed under their respective licenses.    
