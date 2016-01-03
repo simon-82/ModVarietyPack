@@ -1027,12 +1027,189 @@
 
 
 
-
   <!-- === HATS === -->
+  <!-- === Hat Base === -->
+
+  <ThingDef Name="HatBase" Abstract="True">
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <selectable>True</selectable>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>TailoringSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li>TableHats</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+    </recipeMaker>
+  </ThingDef>
 
 
+
+
+
+
+
+  <!-- 2 Vanilla Hats override to make them craftable at TableHats -->
+  <ThingDef ParentName="HatBase">
+    <defName>Apparel_CowboyHat</defName>
+    <label>cowboy hat</label>
+    <description>Stylish yet rugged, this hat keeps the sun and rain off - and it gives anyone who wears it a bit of extra charm. It is the most important part of traditional western attire.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <Insulation_Heat>8</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <SocialImpact>0.15</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <worngraphicPath>Things/Pawn/Humanlike/Apparel/CowboyHat/CowboyHat</worngraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <commonality>1</commonality>
+      <tags>
+        <li>Outlander</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.9,0.54,0.15,1)</only>
+        </li>
+        <li>
+          <weight>15</weight>
+          <only>RGBA(0.9,0.6,0.18,1)</only>
+        </li>
+        <li>
+          <weight>20</weight>
+          <only>RGBA(0.9,0.42,0.23,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+  <ThingDef ParentName="HatBase">
+    <defName>Apparel_Tuque</defName>
+    <label>tuque</label>
+    <description>A soft, thick cap. Great for keeping warm in winter.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/Tuque/Tuque</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <statBases>
+      <WorkToMake>800</WorkToMake>
+      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+      <Insulation_Cold>-10</Insulation_Cold>
+      <Insulation_Heat>-2</Insulation_Heat>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <worngraphicPath>Things/Pawn/Humanlike/Apparel/Tuque/Tuque</worngraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <commonality>1</commonality>
+      <tags>
+        <li>Outlander</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.33,0.33,0.33,1)</only>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.65,0.65,0.65,1)</only>
+        </li>
+        <li>
+          <weight>6</weight>
+          <min>RGBA(0.3,0.3,0.3,1)</min>
+          <max>RGBA(0.5,0.5,0.5,1)</max>
+        </li>
+        <li>
+          <weight>10</weight>
+          <only>RGBA(0.9,0.9,0.9,1)</only>
+        </li>
+      </options>
+    </colorGenerator>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- NEW HATS -->
   <!--Beret-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Beret</defName>
     <label>Beret</label>
     <description>Soft and keeps the head warm. Very common amongst offduty soldiers. Uniforms commonly inspire respect.</description>
@@ -1088,7 +1265,7 @@
 
 
   <!--Fedora-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Fedora</defName>
     <label>Fedora</label>
     <description>Nah, see! These hats are often associated with gangsters and government officials, which are both practically the same.</description>
@@ -1144,7 +1321,7 @@
 
 
   <!--Cardshark-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Cardshark</defName>
     <label>Cardshark hat</label>
     <description>Stylish, elegant and soft to the touch. Known as the most important part of western attire. Especially amongst the card cheats and otherwise slippery individuals</description>
@@ -1199,7 +1376,7 @@
 
 
   <!--Bandit-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Bandit</defName>
     <label>Bandit hat and scarf</label>
     <description>Stylish, elegant and soft to the touch. Known as the most important part of western attire. Especially amongst the card cheats and otherwise slippery individuals, comes with a scarf for added banditry.</description>
@@ -1258,7 +1435,7 @@
 
 
   <!--Furhat-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Furhat</defName>
     <label>Furhat</label>
     <description>Keep your head warm in cold climates, wear fur! Be warned though, in the right place, the fur wears you!</description>
@@ -1318,7 +1495,7 @@
 
 
   <!--Woolly-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Woolcap</defName>
     <label>Woollen cap</label>
     <description>Woollen cap made from very woollen material, Nothing can compete with it in keeping your head warm. The tuft on top keeps your nerves cold!</description>
@@ -1373,7 +1550,7 @@
 
 
   <!--Tricorn-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Tricorn</defName>
     <label>Tricorn</label>
     <description>Long out of fashion, Why anyone would still wear these is strange. Still they are comfortable to wear</description>
@@ -1433,7 +1610,7 @@
 
 
   <!--Sombo-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Sombrero</defName>
     <label>Sombrero</label>
     <description>Keeps the sun off your eyes during siesta! Ay caramba!</description>
@@ -1488,7 +1665,7 @@
 
 
    <!--Morion-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Moron</defName>
     <label>Explorer's Morion</label>
     <description>17th century morion. Extremely common in medieval worlds. However finding these usually means it's remnants of the Spacefaring lockpick squad (They'd always have Lock with two razors painted on their morions)
@@ -1549,7 +1726,7 @@ Their morions are still found floating around the far corners of space.</descrip
 
 
   <!--Hoody-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Hood</defName>
     <label>hood</label>
     <description>Ultimate protection from the wind! The kind of headwear you see worn by shady characters in dark alleys, glaring at you, with gleaming eyes, Ready to stab yo.. *gurgle* </description>
@@ -1606,7 +1783,7 @@ Their morions are still found floating around the far corners of space.</descrip
 
 
   <!--LeCap-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Lecap</defName>
     <label>Legionnaire's cap</label>
     <description>The most important piece of many a rebel army uniform</description>
@@ -1665,7 +1842,7 @@ Their morions are still found floating around the far corners of space.</descrip
 
 
   <!--Vandal-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Vandal</defName>
     <label>Vandal's cap and scarf</label>
     <description>Your common cap. Urbworld crims would often don these on while robbing the local corner store. These kind of criminals are famous for their itchy trigger fingers, poor aim, brick throwing and trashcan kicking shenanigans</description>
@@ -1723,7 +1900,7 @@ Their morions are still found floating around the far corners of space.</descrip
 
 
   <!--Basecap-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Bandal</defName>
     <label>Baseball cap</label>
     <description>Your common cap. Perhaps most famed from the ages old game where you hit balls with your bat and then run home</description>
@@ -1779,7 +1956,7 @@ Their morions are still found floating around the far corners of space.</descrip
 
 
   <!--Gus-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Gas</defName>
     <label>Gasmask</label>
     <description>Unwieldy and cumbersome protection from gas attacks, Not in common use anymore due to better more advanced alternatives. However, still favoured by the raiders for it's intimidating look</description>
@@ -1834,7 +2011,7 @@ Their morions are still found floating around the far corners of space.</descrip
 
 
   <!--Cybo-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Cyninja</defName>
     <label>Tac-Team Headcover</label>
     <description>Designed to be used by tactical squads in urban warfare situations. comes with pre-installed velocity booster and inbuilt aiming assist. It does expose the wearer's brain to minimal and totally acceptable levels of radioactivity, which is okay!</description>
@@ -1892,7 +2069,7 @@ Their morions are still found floating around the far corners of space.</descrip
 
 
   <!--TribalMask-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Mojo</defName>
     <label>Tribal Mask</label>
     <description>Basic tribal mask, for that wooden impression.</description>
@@ -1943,7 +2120,7 @@ Their morions are still found floating around the far corners of space.</descrip
 
 
   <!--Bucket-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Bucket</defName>
     <label>Bucket</label>
     <description>For keeping up appereances. And I think you'll find it's actually pronounced bouquet - not bucket.</description>
@@ -1995,7 +2172,7 @@ Their morions are still found floating around the far corners of space.</descrip
 
 
   <!--medical hat-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Docteur</defName>
     <label>Surgeon's headgear</label>
     <description>When fiddling with someone else's vital organs, sanitary equipment is crucial. Wearing these enhances the doctor's sight with the amplifier modules on the goggles.
@@ -2048,7 +2225,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--cooking hat-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Chefhatplus</defName>
     <label>Tinkercraft Chefhat</label>
     <description>Armed with timers and very basic scent-detector helps anyone cook the meals just right. The chef hat on it is just for declaring the purpose of this headgear</description>
@@ -2103,7 +2280,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Prototype nerve-enhancer-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Proto</defName>
     <label>Prototype nerve-enhancer</label>
     <description>Prototype of very innovative headgear aimed to enhance synaptic reaction rates. It has some very unsavory side effects such as overbearing nervousness, Ringing ears, strange background noises and/or voices.</description>
@@ -2166,7 +2343,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Nerve-enhancer-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_ProtoFin</defName>
     <label>Nerve-enhancer</label>
     <description>Very innovative headgear aimed to enhance synaptic reaction rates. It still has some very unsavory side effects although not as bad as before. placing the advanced AI core on it seemed to work out most of the kinks. Unfortunately the AI core also amplifies wearer psychic sensitivity, leaving them extremely vulnerable to psychic powers</description>
@@ -2226,7 +2403,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
     </thingCategories>
   </ThingDef>
 
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Antsyhat</defName>
     <label>AI Core nerve-enhancer</label>
     <description>Very curious piece of technology, the final iteration of the prototype. Negates the awkward effects even further.</description>
@@ -2295,7 +2472,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Tophat-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Tophat</defName>
     <label>Tophat</label>
     <description>Rare sight on the rimworlds, Tophats make the wearer feel the power over the lesser beings</description>
@@ -2351,7 +2528,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Headset-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Headset</defName>
     <label>Headset with bandana</label>
     <description>Common usage for these has been communication. it's wireless and doesn't work. But it gives the impression that you're somehow more social!</description>
@@ -2405,7 +2582,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Hardhat-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Hardhat</defName>
     <label>Hardhat</label>
     <description>Favoured by the constructions workers all across the galaxy. These are known to have saved lives of many a prey of the infamous falling lunchbox, hammer or brick</description>
@@ -2460,7 +2637,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Farmhat-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Plainhat</defName>
     <label>Plainwalker's hat</label>
     <description>Weighted hats for the hardy men who worked the desert plains where winds were strong enough to blow mans hat off, and the sun so strong it would fell an ox. But not the Plainsmen! They'd work dusk till dawn! ..or atleast till supper.</description>
@@ -2512,7 +2689,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Tradecone-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Tradecone</defName>
     <label>Traders's Paddy hat</label>
     <description>Traveling merchants and rice paddy farmers would often protect themselves from the sun with hats like these. It has very oriental feel to it.</description>
@@ -2565,7 +2742,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Chef-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Chefhat</defName>
     <label>Chef's hat</label>
     <description>These iconic chef hats do serve an actual purpose - Keeping the hair in check. Finding hair in your soup often means dissatisfied customer.</description>
@@ -2616,7 +2793,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Commissar-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Commissar</defName>
     <label>Peaked cap</label>
     <description>Often seen on military officers. These indigenous alpha mammals of the battlefields tend to be so amazing their skills rubs off on their clothes</description>
@@ -2672,7 +2849,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Medband-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Medband</defName>
     <label>Medic's bandana</label>
     <description>Medic's bandana. Used to point out medics from the crowd</description>
@@ -2726,7 +2903,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--crowny-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_ohlala</defName>
     <label>Shimmering crown</label>
     <description>Awe inspiring crown, Makes your subjects hearts beat ever so faster around you.</description>
@@ -2790,7 +2967,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
   <!-- === EYEWEAR === -->
 
   <!--Goggles-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Goggles</defName>
     <label>Science goggles</label>
     <description>Due to intense radiation these goggles have been subjected to; they cause temporary and sudden baldness.</description>
@@ -2845,7 +3022,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Visors-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Visoor</defName>
     <label>Shuttlepilot's Visor</label>
     <description>Shuttlepilot's visors. used to fulfill your usual piloting needs like calling in "houston; mayday mayday - landing struts are jammed, I repeat landing struts are jammed. Copy? Roger Wilco. Starfox one out."</description>
@@ -2899,7 +3076,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--Shades-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Shadess</defName>
     <label>Sunshades</label>
     <description>Sunshades. Most favoured protection from the sun. Wearer never gets caught with the excuse 'sun was shining in my eye'</description>
@@ -2953,7 +3130,7 @@ And the surgical mask prevents unwanted bacteria entering the vic.. patient</des
 
 
   <!--ArchNem© Ski™ goggles-->
-  <ThingDef ParentName="ApparelBase">
+  <ThingDef ParentName="HatBase">
     <defName>Apparello_Brimsk</defName>
     <label>ArchNem© Ski™ goggles</label>
     <description>Military grade skiing goggles, slightly stylized design. Known for it's heavy impact resistance</description>

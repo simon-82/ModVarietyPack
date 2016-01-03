@@ -11,9 +11,11 @@
     <li>Rimsenal_Federation</li>
     <li>Norbals</li>
     <li>VeinMiner</li>
+    <li>RW_Manager-12.3.3</li>
+    <li>RT Storage</li>
     <li>ModVarietyPack</li>
     <li>EnhancedDevelopment</li>  
-    <li>MechanoidTerraformer</li>  
+    <li>MechanoidTerraformer</li> 
     <li>BackstoriesCore</li>
     <li>EdBInterface</li>
     <li>EdBPrepareCarefully</li>
@@ -21,11 +23,9 @@
     <li>RW_MedicalInfo</li>
     <li>RW_EnhancedTabs</li>
     <li>LT_NoCleaningPlease</li>
-    <li>Hospitality</li>
-    <li>RT Storage</li>
+    <li>Hospitality</li>    
     <li>LT_Infusion</li>
     <li>MAI</li>
     <li>RWAutoSell</li>
-    <li>RW_Manager-A12d.2b1</li>
   </activeMods>
 </ModsConfigData>

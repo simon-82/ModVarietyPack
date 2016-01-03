@@ -36,7 +36,7 @@
     </AdvancedResearchDef>    
 
     <AdvancedResearchDef>         
-        <defName>AgricultureIIIFoodPrep</defName>
+        <defName>AgricultureIIIPressing</defName>
         <Priority>0</Priority>        
         <researchDefs>
             <li>Hydroponics</li>
@@ -47,7 +47,7 @@
             <li>Makesoymilk</li>
         </recipeDefs>        
         <thingDefs>
-            <li>TableButcher</li>
+            <li>TableFoodPress</li>
         </thingDefs>        
     </AdvancedResearchDef>    
 
@@ -80,9 +80,6 @@
         <recipeDefs>
             <li>MakeSugar</li>
             <li>MakeFlour</li>
-            <li>Makecheese</li>
-            <li>MakeFruitDrink</li>
-            <li>MakeEthanolFuel</li>
         </recipeDefs>        
         <thingDefs>
             <li>TableButcher</li>
@@ -244,7 +241,7 @@
             <li>InstallNaturalJaw</li>
             <li>InstallNaturalArm</li>
             <li>InstallNaturalLeg</li>
-            <li>InstallNaturalStomach</li>     
+            <li>InstallNaturalStomach</li>    
         </recipeDefs>
         <thingDefs>
             <li>Human</li>

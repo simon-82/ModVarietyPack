@@ -1259,6 +1259,72 @@
 
 
   <!-- === Work Tables === -->
+
+
+  	<ThingDef ParentName="BenchBase">
+		<DefName>TableHats</DefName>
+		<label>hatter's workbench</label>
+		<ThingClass>Building_WorkTable</ThingClass>
+		<Description>A workbench equipped for hat production. Needs Power: 10/100W</Description>
+		<graphicData>
+			<texPath>Buildings/TableHats</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,1)</drawSize>
+		</graphicData>
+		<CostList>
+			<SteelBar>50</SteelBar>
+			<WoodPlank>10</WoodPlank>
+		</CostList>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToMake>2500</WorkToMake>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<Size>(3,1)</Size>
+		<DesignationCategory>ProductionGoods</DesignationCategory>
+		<Passability>PassThroughOnly</Passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li>
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>true</startElectricalFires>
+				<basePowerConsumption>100</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+			</li>
+			<li Class="CommunityCoreLibrary.CompProperties_LowIdleDraw">
+				<compClass>CommunityCoreLibrary.CompPowerLowIdleDraw</compClass>
+				<idlePowerFactor>0.1</idlePowerFactor>
+				<operationalMode>InUse</operationalMode>
+			</li>
+			<li>
+				<compClass>CompAffectedByFacilities</compClass>
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+		<researchPrerequisite>TextileI</researchPrerequisite>
+	</ThingDef>
+
+
+
 	<ThingDef ParentName="BuildingBase">
 		<defName>TableSawmillHand</defName>
 		<label>hand sawmill</label>
@@ -1861,17 +1927,18 @@
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
-		<DefName>TableCanningstove</DefName>
-		<label>canning station</label>
+		<DefName>TableFoodPress</DefName>
+		<label>food Press</label>
 		<ThingClass>Building_WorkTable_HeatPush</ThingClass>
-		<Description>A stove for canning foods. Needs Power: 20/200W</Description>
+		<Description>A stove for canning and pressing foods. Needs Power: 20/200W</Description>
 		<graphicData>
-		  <texPath>Buildings/TableCanningstove</texPath>
+		  <texPath>Buildings/TableFoodPress</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		  <drawSize>(2,1)</drawSize>
 			</graphicData>
 		  <CostList>
 				<SteelBar>80</SteelBar>
+				<WoodPlank>20</WoodPlank>
 		  </CostList>
 		<minifiedDef>MinifiedFurniture</minifiedDef>
 		<tradeTags>
@@ -1896,6 +1963,9 @@
 		<surfaceType>Item</surfaceType>
 		<recipes>
 			<li>MakeMealCannedFood</li>
+			<li>Makecheese</li>
+            <li>MakeFruitDrink</li>
+            <li>MakeEthanolFuel</li>
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -2936,18 +3006,20 @@
 	    <ThingClass>Building_WorkTable</ThingClass>
 	    <Description>A well. Fill water from it into buckets to carry it around.</Description>
 	    <graphicData>
-	      <texPath>Buildings/Well</texPath>
-	      <graphicClass>Graphic_Single</graphicClass>
+	      <texPath>Buildings/Well/Well</texPath>
+	      <graphicClass>Graphic_Multi</graphicClass>
 	      <drawSize>(2,2)</drawSize>
+	      <shadowData>
+            <volume>(1.3, 1.6, 1.3)</volume>
+          </shadowData>  
 	    </graphicData>
-	    <rotatable>false</rotatable>
+	    <rotatable>true</rotatable>
 	    <stuffCategories>
 	      <li>Stony</li>
 	    </stuffCategories>
 	    <costStuffCount>150</costStuffCount>
 	    <altitudeLayer>BuildingTall</altitudeLayer>
 	    <passability>Impassable</passability>
-	    <castEdgeShadows>true</castEdgeShadows>
 	    <fillPercent>0.6</fillPercent>
 	    <useHitPoints>True</useHitPoints>
 	    <statBases>

@@ -375,7 +375,7 @@
       <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
     </blueprintGraphicData>
     <statBases>
-      <MaxHitPoints>300</MaxHitPoints>
+      <MaxHitPoints>350</MaxHitPoints>
       <WorkToMake>150</WorkToMake>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -404,7 +404,7 @@
       <li>Woody</li>
       <li>Stony</li>
     </stuffCategories>
-    <costStuffCount>6</costStuffCount>
+    <costStuffCount>5</costStuffCount>
     <building>
     <ignoreNeedsPower>false</ignoreNeedsPower>
     </building>
@@ -454,7 +454,7 @@
     </blueprintGraphicData>
     <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
     <statBases>
-      <MaxHitPoints>225</MaxHitPoints>
+      <MaxHitPoints>350</MaxHitPoints>
       <WorkToMake>150</WorkToMake>
       <Flammability>1.0</Flammability>
     </statBases>
@@ -480,7 +480,7 @@
       <li>Woody</li>
       <li>Stony</li>
     </stuffCategories>
-    <costStuffCount>6</costStuffCount>
+    <costStuffCount>5</costStuffCount>
     <Comps>
       <li>
         <compClass>CompPowerTransmitter</compClass>

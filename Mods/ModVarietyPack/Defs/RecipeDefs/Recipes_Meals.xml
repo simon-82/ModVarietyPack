@@ -704,7 +704,7 @@
 						<li>MeatRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>1</count>
 			</li>
 			<li>
 				<filter>
@@ -745,7 +745,7 @@
 						<li>MeatRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>2</count>
 			</li>
 			<li>
 				<filter>
@@ -795,7 +795,7 @@
 						<li>MeatRaw</li>
 					</categories>
 				</filter>
-				<count>10</count>
+				<count>1</count>
 			</li>
 			<li>
 				<filter>
@@ -819,7 +819,7 @@
 						<li>RawTomatoes</li>
 					</thingDefs>
 				</filter>
-				<count>3</count>
+				<count>1</count>
 			</li>
 			<li>
 				<filter>
@@ -827,7 +827,7 @@
 						<li>RawLettuce</li>
 					</thingDefs>
 				</filter>
-				<count>3</count>
+				<count>1</count>
 			</li>
 		</ingredients>
 		<fixedIngredientFilter>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<rep>
+		<path>GuestConvinced.stages[0].label</path>
+		<trans>убежден колонистом</trans>
+	</rep>
+	<rep>
+		<path>GuestConvinced.stages[0].description</path>
+		<trans>Этот колонист и я имели разговор о колонии. Это выглядитт как хорошее место...</trans>
+	</rep>
+
+	<rep>
+		<path>GuestOffended.stages[0].label</path>
+		<trans>обижен на колониста</trans>
+	</rep>
+	<rep>
+		<path>GuestOffended.stages[0].description</path>
+		<trans>Этот колонист пытался завербовать меня. Но я не хочу покидать свой фракцию!</trans>
+	</rep>
+
+</LanguageData>

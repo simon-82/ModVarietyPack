@@ -84,7 +84,7 @@
 
 		<ThingCategoryDef>
         		<defName>Sweets</defName>
-        		<label>Candies, Sweet Meals</label>
+        		<label>Sweets, Joy</label>
         		<parent>Foods</parent>
         		<resourceReadoutRoot>true</resourceReadoutRoot>
         		<iconPath>ThingCategories/Sweets</iconPath>

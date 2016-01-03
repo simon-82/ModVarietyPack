@@ -468,12 +468,12 @@
     <statBases>
       <DeteriorationRate>10</DeteriorationRate>
       <MarketValue>32</MarketValue>
-      <WorkToMake>600</WorkToMake>
+      <WorkToMake>150</WorkToMake>
     </statBases>
     <ingestible>
       <preferability>Fine</preferability>
-      <nutrition>0.85</nutrition>
-      <joy>0.08</joy>
+      <nutrition>0.95</nutrition>
+      <joy>0.09</joy>
       <eatEffect>EatVegetarian</eatEffect>
       <ingestedDirectThought>AteFineMeal</ingestedDirectThought>
       <soundEat>Meal_Eat</soundEat>
@@ -491,14 +491,14 @@
     <statBases>
       <DeteriorationRate>10</DeteriorationRate>
       <MarketValue>39</MarketValue>
-      <WorkToMake>650</WorkToMake>
+      <WorkToMake>150</WorkToMake>
     </statBases>
     <ingestible>
-      <preferability>Fine</preferability>
-      <nutrition>0.89</nutrition>
-      <joy>0.2</joy>
+      <preferability>Lavish</preferability>
+      <nutrition>0.98</nutrition>
+      <joy>0.1</joy>
       <eatEffect>EatVegetarian</eatEffect>
-      <ingestedDirectThought>AteFineMeal</ingestedDirectThought>
+      <ingestedDirectThought>AteLavishMeal</ingestedDirectThought>
       <soundEat>Meal_Eat</soundEat>
     </ingestible>
   </ThingDef>
@@ -514,12 +514,12 @@
     <statBases>
       <DeteriorationRate>10</DeteriorationRate>
       <MarketValue>40</MarketValue>
-      <WorkToMake>800</WorkToMake>
+      <WorkToMake>150</WorkToMake>
     </statBases>
     <ingestible>
       <preferability>Lavish</preferability>
       <nutrition>1.0</nutrition>
-      <joy>0.3</joy>
+      <joy>0.12</joy>
       <eatEffect>EatVegetarian</eatEffect>
       <ingestedDirectThought>AteLavishMeal</ingestedDirectThought>
       <soundEat>Meal_Eat</soundEat>
@@ -536,7 +536,8 @@
       </graphicData>
       <statBases>
          <DeteriorationRate>10</DeteriorationRate>
-         <MarketValue>20</MarketValue>         
+         <MarketValue>20</MarketValue> 
+         <WorkToMake>600</WorkToMake>        
       </statBases>
       <ingestible>
          <preferability>Simple</preferability>
@@ -724,12 +725,12 @@
     </thingCategories>
     <ingestible>
       <preferability>NeverForNutrition</preferability>
-      <nutrition>0.08</nutrition>
+      <nutrition>0.005</nutrition>
       <joy>0.17</joy>
       <joyKind>Chemical</joyKind>
       <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
       <soundEat>Ingest_Beer</soundEat>
-      <isPleasureDrug>false</isPleasureDrug>
+      <isPleasureDrug>true</isPleasureDrug>
       <ingestedDirectThought>HadMedicalDrink</ingestedDirectThought>
       <hediffGivers>
         <li>
@@ -1219,6 +1220,10 @@
 
 
 
+
+
+
+
   <!-- === sweets etc === -->
   <ThingDef ParentName="ResourceBase">
       <defName>Caramel</defName>
@@ -1239,6 +1244,7 @@
       <ingestible>
         <preferability>NeverForNutrition</preferability>
         <isPleasureDrug>true</isPleasureDrug>
+        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
         <nutrition>0.05</nutrition>
         <joy>0.1</joy>
         <ingestedDirectThought>AteCandy</ingestedDirectThought>
@@ -1265,7 +1271,8 @@
       </thingCategories>
       <ingestible>
          <preferability>NeverForNutrition</preferability>
-      <isPleasureDrug>true</isPleasureDrug>
+        <isPleasureDrug>true</isPleasureDrug>
+        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
          <nutrition>0.05</nutrition>
          <joy>0.1</joy>
          <ingestedDirectThought>AteCandy</ingestedDirectThought>
@@ -1292,7 +1299,8 @@
     </thingCategories>
       <ingestible>
          <preferability>NeverForNutrition</preferability>
-      <isPleasureDrug>true</isPleasureDrug>
+        <isPleasureDrug>true</isPleasureDrug>
+        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
          <nutrition>0.05</nutrition>
          <joy>0.1</joy>
          <ingestedDirectThought>AteCandy</ingestedDirectThought>
@@ -1368,7 +1376,8 @@
     </thingCategories>
       <ingestible>
          <preferability>NeverForNutrition</preferability>
-      <isPleasureDrug>true</isPleasureDrug>
+        <isPleasureDrug>true</isPleasureDrug>
+        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
          <nutrition>0.05</nutrition>
          <joy>0.4</joy>
          <ingestedDirectThought>AteCandy</ingestedDirectThought>
@@ -1407,7 +1416,8 @@
       </thingCategories>
       <ingestible>
          <preferability>NeverForNutrition</preferability>
-      <isPleasureDrug>true</isPleasureDrug>
+         <isPleasureDrug>true</isPleasureDrug>
+         <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
          <nutrition>0.05</nutrition>
          <joy>0.4</joy>
          <ingestedDirectThought>AteCandy</ingestedDirectThought>
@@ -1445,76 +1455,72 @@
       </thingCategories>
       <ingestible>
          <preferability>NeverForNutrition</preferability>
-      <isPleasureDrug>true</isPleasureDrug>
+        <isPleasureDrug>true</isPleasureDrug>
+        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
          <nutrition>0.1</nutrition>
          <joy>0.4</joy>
          <ingestedDirectThought>AteCandy</ingestedDirectThought>
          <eatEffect>EatVegetarian</eatEffect>
          <soundEat>Meal_Eat</soundEat>
       </ingestible>
-   </ThingDef>
+   </ThingDef>   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Cigarillos</defName>
     <label>pack of cigarillos</label>
     <description>A pack of twenty cigarillos</description>
     <graphicData>
-    <texPath>Items/Cigarillos</texPath>
-    <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Items/Cigarillos</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <stackLimit>50</stackLimit>
     <statBases>
-    <MarketValue>10</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+      <MarketValue>25</MarketValue>
+      <WorkToMake>600</WorkToMake>
     </statBases>
+    <thingCategories>
+        <li>Sweets</li>
+    </thingCategories>
     <ingestible>
        <preferability>NeverForNutrition</preferability>
-       <nutrition>0.08</nutrition>
-       <joy>0.2</joy>
+       <nutrition>0.01</nutrition>
+       <joy>0.18</joy>
        <ingestedDirectThought>Smoking</ingestedDirectThought>
        <soundEat>Harvest_Standard</soundEat>
        <joyKind>Meditative</joyKind>
        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
        <isPleasureDrug>true</isPleasureDrug>
       <hediffGivers>
-      <li>
-      <chance>1</chance>
-      <hediffDef>Tobacco</hediffDef>
-      </li>
+        <li>
+        <chance>1</chance>
+        <hediffDef>Tobacco</hediffDef>
+        </li>
       </hediffGivers>
     </ingestible>
   </ThingDef>
 
-  <ThingDef ParentName="MealBase">
+  <ThingDef ParentName="ResourceBase">
     <defName>Cigars</defName>
     <label>cigars</label>
     <description>hefty cigars</description>
     <graphicData>
-    <texPath>Items/Cigars</texPath>
-    <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Items/Cigars</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <stackLimit>10</stackLimit>
+    <stackLimit>50</stackLimit>
     <statBases>
-      <MarketValue>15</MarketValue>
+      <DeteriorationRate>0</DeteriorationRate>
+      <MarketValue>35</MarketValue>
+      <WorkToMake>650</WorkToMake>
     </statBases>
+    <thingCategories>
+        <li>Sweets</li>
+    </thingCategories>
     <ingestible>
        <preferability>NeverForNutrition</preferability>
-       <nutrition>0.08</nutrition>
-       <joy>0.3</joy>
+       <nutrition>0.01</nutrition>
+       <joy>0.2</joy>
        <ingestedDirectThought>Smoking</ingestedDirectThought>
        <joyKind>Meditative</joyKind>
        <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
