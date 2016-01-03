@@ -21,12 +21,39 @@
 	<ResearchProjectDef>
         <defName>ManagingSoftware</defName>
         <label>basic managing software</label>
-        <description>Develop basic software for colony management. \nAllows building a manager desks with a computer, pre-installed with a host of guaranteed bug free(tm) managing software.
+        <description>Develop basic software for colony management. \nAllows building a manager desks with a computer, pre-installed with a host of guaranteed bug free™ managing software.
         </description>
         <totalCost>1200</totalCost>
         <prerequisites>
 			<li>AdvancedCommunications</li>
 		</prerequisites>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>AdvancedManagingSoftware</defName>
+        <label>advanced managing software</label>
+        <description>Develop advanced software for colony management. \nAdvancements in AI and colony-aware computers allow the building of Colony Aware Supercomputers, preinstalled with FluffyOS™. Some colonists have reported doors opening and closing, airconditioning systems going haywire, and electric smelters suddenly turning on. Nevertheless, the manufacturer guarantees™ that FluffyOS™ is not programmed to kill colonists. 
+        </description>
+        <totalCost>2500</totalCost>
+        <prerequisites>
+            <li>ManagingSoftware</li>
+        </prerequisites>
+    </ResearchProjectDef>
+
+    <ResearchProjectDef>
+        <defName>PowerManagement</defName>
+        <label>power management</label>
+        <description>Create management software to monitor the colony's power usage. 
+        </description>
+        <totalCost>1000</totalCost>
+        <prerequisites>
+            <li>ManagingSoftware</li>
+        </prerequisites>
+        <researchMods>
+          <li>
+            <specialAction>FluffyManager.ResearchWorkers.UnlockPowerTab</specialAction>
+          </li>
+        </researchMods>
     </ResearchProjectDef>
 
 
@@ -75,7 +102,7 @@
 		<ResearchProjectDef>
 			<defName>MedicineIV</defName>
 			<label>Medicine IV</label>
-			<description>"Bionics! I already feel like a robot! That is, if robots could feel anything. Oh well, forget about it and give me a bionic leg already!"</description>
+			<description>"Bionics! I already feel like a robot! That is, if robots could feel anything. Oh well, forget about it and give me a bionic leg already!" \n"Bionics are nice and stuff, but with all the injuries we had I feel it's time to build a Dermal Regenerator to heal the scars."</description>
 			<totalCost>2000</totalCost>
 			<prerequisites>
 				<li>Chemlab</li>
@@ -115,7 +142,7 @@
 		<ResearchProjectDef>
 			<defName>CookingII</defName>
 			<label>Cooking II</label>
-			<description>"How about some nice hot drinks with the good food we have now?" \n"Sure, coffee or tea?" \n"Spectago tea for me! I always feel so funny after drinking that." /n "No, no we first need some better cooking tools, this all takes way too long. And to make some money, let's make some cigars and cigarillos and sell them to the traders."</description>
+			<description>"How about some nice hot drinks with the good food we have now?" \n"Sure, coffee or tea?" \n"Spectago tea for me! I always feel so funny after drinking that." \n "No, no we first need some better cooking tools, this all takes way too long. And to make some money, let's make some cigars and cigarillos and sell them to the traders."</description>
 			<totalCost>1500</totalCost>
 			<prerequisites>
 				<li>Brewing</li>
@@ -261,6 +288,83 @@
 				<li>StorageI</li>
 			</prerequisites>
 		</ResearchProjectDef>
+
+			<ResearchProjectDef>
+			    <defName>RTStorage_QuantumStockpile_SelfDefrag</defName>
+			    <label>quantum stockpiles self-defrag</label>
+			    <description>Allows quantum stockpiles to periodically minimize the amount of stored incomplete stacks.</description>
+			    <totalCost>1000</totalCost>
+			    <prerequisites>
+			      <li>StorageII</li>
+			    </prerequisites>
+			    <researchMods>
+			      <li>
+			        <specialAction>RTStorage.ResearchModsSpecial.QuantumStockpileUpgradeSelfDefrag</specialAction>
+			      </li>
+			    </researchMods>
+			</ResearchProjectDef>
+
+			<ResearchProjectDef>
+			    <defName>RTStorage_QuantumStockpile_1</defName>
+			    <label>quantum stockpiles upgrade 1</label>
+			    <description>Allows quantum stockpiles to store one additional stack of items for a total of five per cell.</description>
+			    <totalCost>1000</totalCost>
+			    <prerequisites>
+			      <li>StorageII</li>
+			    </prerequisites>
+			    <researchMods>
+			      <li>
+			        <specialAction>RTStorage.ResearchModsSpecial.QuantumStockpileUpgrade1</specialAction>
+			      </li>
+			    </researchMods>
+			  </ResearchProjectDef>
+
+			  <ResearchProjectDef>
+			    <defName>RTStorage_QuantumStockpile_2</defName>
+			    <label>quantum stockpiles upgrade 2</label>
+			    <description>Quantum stockpiles store one more stack of items for a total of six per cell.</description>
+			    <totalCost>1200</totalCost>
+			    <prerequisites>
+			      <li>RTStorage_QuantumStockpile_1</li>
+			    </prerequisites>
+			    <researchMods>
+			      <li>
+			        <specialAction>RTStorage.ResearchModsSpecial.QuantumStockpileUpgrade2</specialAction>
+			      </li>
+			    </researchMods>
+			  </ResearchProjectDef>
+
+			  <ResearchProjectDef>
+			    <defName>RTStorage_QuantumStockpile_3</defName>
+			    <label>quantum stockpiles upgrade 3</label>
+			    <description>Quantum stockpiles store one more stack of items for a total of seven per cell.</description>
+			    <totalCost>1500</totalCost>
+			    <prerequisites>
+			      <li>RTStorage_QuantumStockpile_2</li>
+			    </prerequisites>
+			    <researchMods>
+			      <li>
+			        <specialAction>RTStorage.ResearchModsSpecial.QuantumStockpileUpgrade3</specialAction>
+			      </li>
+			    </researchMods>
+			  </ResearchProjectDef>
+
+			  <ResearchProjectDef>
+			    <defName>RTStorage_QuantumStockpile_4</defName>
+			    <label>quantum stockpiles upgrade 4</label>
+			    <description>Quantum stockpiles store one more stack of items for a total of eight per cell.</description>
+			    <totalCost>2000</totalCost>
+			    <prerequisites>
+			      <li>RTStorage_QuantumStockpile_3</li>
+			    </prerequisites>
+			    <researchMods>
+			      <li>
+			        <specialAction>RTStorage.ResearchModsSpecial.QuantumStockpileUpgrade4</specialAction>
+			      </li>
+			    </researchMods>
+			  </ResearchProjectDef>
+
+
 	
 	<ResearchProjectDef>
 		<defName>ConstructionIII</defName>
@@ -484,7 +588,7 @@
 		<ResearchProjectDef>
 			<defName>ColoredLights</defName>
 			<label>colored lights</label>
-			<description>"Look! Look! Isn't this green light beautiful?" \n"Stop wasting all of our glass! You think this is a disco or what?" \n"Aww, common..."</description>
+			<description>"Look! Look! Isn't this green light beautiful?" \n"Stop wasting all of our glass! You think this is a disco or what?" \n"Aww, come on..."</description>
 			<totalCost>800</totalCost>
 			<prerequisites>
 				<li>PowerI</li>

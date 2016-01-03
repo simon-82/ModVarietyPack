@@ -452,7 +452,7 @@
         <shortCircuitInRain>false</shortCircuitInRain>
         <basePowerConsumption>-1</basePowerConsumption>
         <transmitsPower>true</transmitsPower>
-        <powerToggleable>false</powerToggleable>
+        <powerToggleable>true</powerToggleable>
       </li>
       <li>
         <compClass>CompHeatPusher</compClass>

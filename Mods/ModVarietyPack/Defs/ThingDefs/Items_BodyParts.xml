@@ -3,7 +3,7 @@
 <ThingDefs>
 
 
-	<!-- unfinished -->
+	<!-- unfinished base -->
 	<ThingDef Name="UnfinishedBase" Abstract="True">
 		<thingClass>UnfinishedThing</thingClass>
 		<category>Item</category>
@@ -57,23 +57,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<!-- part base -->
 	<ThingDef Name="BodyPartBase" Abstract="True">
 		<label>body part</label>
 		<thingClass>ThingWithComps</thingClass>
@@ -95,6 +79,13 @@
 		</comps>      
 		<pathCost>10</pathCost>
 	</ThingDef>
+
+
+
+
+
+
+
 
 
 

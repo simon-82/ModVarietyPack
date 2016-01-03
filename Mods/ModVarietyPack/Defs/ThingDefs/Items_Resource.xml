@@ -1235,8 +1235,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>IntegratedCircuitsBoard</defName>
 		<label>Integrated circuits board</label>
-		<description>A home-made integrated circuits board used by the mineral sonar console. Even if you pay the greatest attention making it, it is still fragile and unreliable.
-Don't let it rust under the rain as it will deteriorate really fast!</description>
+		<description>A home-made integrated circuits board used by the mineral sonar console. Even if you pay the greatest attention making it, it is still fragile and unreliable. Don't let it rust under the rain as it will deteriorate really fast!</description>
 		<graphicData>
 			<texPath>Items/IntegratedCircuitsBoard</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -1247,7 +1246,7 @@ Don't let it rust under the rain as it will deteriorate really fast!</descriptio
 			<DeteriorationRate>3</DeteriorationRate>
 			<MaxHitPoints>100</MaxHitPoints>
 			<Flammability>0.1</Flammability>
-			<MarketValue>35</MarketValue>
+			<MarketValue>150</MarketValue>
 		</statBases>
 		<thingCategories>
 			<li>Electronics</li>

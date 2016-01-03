@@ -913,6 +913,19 @@
     </requiredCapacities>
   </WorkGiverDef>
 
+  <WorkGiverDef>
+    <defName>DoBillsMakeApparel</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Tailoring</workType>
+    <priorityInType>110</priorityInType>
+    <singleBillGiverDef>TableHats</singleBillGiverDef>
+    <verb>tailor</verb>
+    <gerund>tailoring at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
 
 
 
@@ -946,13 +959,13 @@
   </WorkGiverDef>
 
   <WorkGiverDef>
-    <defName>DoBillsCanningstove</defName>
+    <defName>DoBillsTableFoodPress</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Cooking</workType>
     <priorityInType>85</priorityInType>
-    <singleBillGiverDef>TableCanningstove</singleBillGiverDef>
-    <verb>canning</verb>
-    <gerund>canning</gerund>
+    <singleBillGiverDef>TableFoodPress</singleBillGiverDef>
+    <verb>work</verb>
+    <gerund>working</gerund>
     <requiredCapacities>
         <li>Manipulation</li>
     </requiredCapacities>

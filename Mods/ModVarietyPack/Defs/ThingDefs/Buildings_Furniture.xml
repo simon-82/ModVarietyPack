@@ -2401,6 +2401,74 @@
 
 
 
+
+
+  <!-- === Wall Light === -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Lighting_WallLight</defName>
+    <label>Wall light</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Buildings/Lights/WallLight</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawsize>1.4,1.4</drawsize>
+    </graphicData>
+    <uiIconPath>Buildings/Lights/WallLightUI</uiIconPath>
+    <altitudeLayer>PawnUnused</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>150</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>5</Beauty>
+    </statBases>
+    <selectable>true</selectable>
+    <description>Wall light that lights an area. Must be placed on a wall.</description>
+    <size>(1,1)</size>
+    <costList>
+      <SteelBar>10</SteelBar>
+      <Glass>3</Glass>
+    </costList>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <comps>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+        <soundPowerOn>PowerOnSmall</soundPowerOn>
+        <soundPowerOff>PowerOffSmall</soundPowerOff>
+      </li>
+      <li>
+        <compClass>CompGlower</compClass>
+        <glowRadius>8</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+      <li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
+        <compClass>CommunityCoreLibrary.CompColoredLight</compClass>
+      </li>
+    </comps>
+    <designationCategory>Lighting</designationCategory>    
+    <rotatable>true</rotatable>
+    <researchPrerequisite>PowerI</researchPrerequisite>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- === Floor Lights === -->
   <!-- SQUARE -->
   <ThingDef Name="FloorLightSquare" ParentName="BuildingBase" Abstract="True">
@@ -2740,6 +2808,49 @@
     </comps>
     <designationCategory>Lighting</designationCategory>
     <rotatable>True</rotatable>
+    <researchPrerequisite>OutdoorLighting</researchPrerequisite>
+  </ThingDef>
+
+  <!-- === Path Lamp === -->
+  <ThingDef ParentName="BuildingBase">
+    <defName>Lighting_PathLamp</defName>
+    <label>Path light</label>
+    <thingClass>AdditionalLighting.Building_PathLamp</thingClass>
+    <category>Building</category>
+    <graphicData>
+      <texPath>Buildings/Lights/LampPath</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <altitudeLayer>BuildingTall</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <statBases>
+      <MaxHitPoints>10</MaxHitPoints>
+      <WorkToMake>50</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>5</Beauty>
+    </statBases>
+    <selectable>true</selectable>
+    <description>Small light with built in solar panel that lights an area.</description>
+    <size>(1,1)</size>
+    <costList>
+      <AluBar>8</AluBar>
+      <Glass>3</Glass>      
+    </costList>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <comps>
+      <li>
+        <compClass>CompGlower</compClass>
+        <glowRadius>5</glowRadius>
+        <glowColor>(217,217,208,0)</glowColor>
+      </li>
+    </comps>
+    <designationCategory>Lighting</designationCategory>
+    <rotatable>false</rotatable>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <tickerType>Rare</tickerType>
     <researchPrerequisite>OutdoorLighting</researchPrerequisite>
   </ThingDef>
 

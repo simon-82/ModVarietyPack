@@ -95,6 +95,7 @@
       <defName>SteelArm</defName>
       <label>steel arm</label>
       <defaultLabelColor>(148,117,14)</defaultLabelColor>
+      <spawnThingOnRemoved>SteelArm</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>0.35</partEfficiency>
@@ -105,6 +106,7 @@
       <defName>EyePatch</defName>
       <label>eye patch</label>
       <defaultLabelColor>(148,117,14)</defaultLabelColor>
+      <spawnThingOnRemoved>EyePatch</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>1.0</partEfficiency>
@@ -125,6 +127,7 @@
       <defName>HookHand</defName>
       <label>Hook hand</label>
       <defaultLabelColor>(148,117,14)</defaultLabelColor>
+      <spawnThingOnRemoved>HookHand</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>0.3</partEfficiency>
@@ -148,6 +151,7 @@
       <defName>denture</defName>
       <label>denture</label>
       <defaultLabelColor>(148,117,14)</defaultLabelColor>
+      <spawnThingOnRemoved>denture</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>1.0</partEfficiency>
@@ -172,6 +176,7 @@
       <defName>PegLeg</defName>
       <label>peg leg</label>
       <defaultLabelColor>(148,117,14)</defaultLabelColor>
+      <spawnThingOnRemoved>PegLeg</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>0.6</partEfficiency>
@@ -182,6 +187,7 @@
       <defName>WoodenFoot</defName>
       <label>wooden foot</label>
       <defaultLabelColor>(148,117,14)</defaultLabelColor>
+      <spawnThingOnRemoved>WoodenFoot</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>0.7</partEfficiency>
@@ -200,6 +206,7 @@
       <defName>GlassEye</defName>
       <label>glass eye</label>
       <defaultLabelColor>(102,178,255)</defaultLabelColor>
+      <spawnThingOnRemoved>GlassEye</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>1.0</partEfficiency>
@@ -220,6 +227,7 @@
       <defName>CrystalEye</defName>
       <label>crystal eye</label>
       <defaultLabelColor>(102,178,255)</defaultLabelColor>
+      <spawnThingOnRemoved>CrystalEye</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>1.0</partEfficiency>
@@ -244,6 +252,7 @@
       <defName>SimpleProstheticHand</defName>
       <label>simple prosthetic hand</label>
       <defaultLabelColor>(102,178,255)</defaultLabelColor>
+      <spawnThingOnRemoved>SimpleProstheticHand</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>0.7</partEfficiency>
@@ -254,6 +263,7 @@
       <defName>SimpleProstheticFoot</defName>
       <label>simple prosthetic foot</label>
       <defaultLabelColor>(102,178,255)</defaultLabelColor>
+      <spawnThingOnRemoved>SimpleProstheticFoot</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>0.9</partEfficiency>
@@ -264,6 +274,7 @@
       <defName>SimpleProstheticArm</defName>
       <label>simple prosthetic arm</label>
       <defaultLabelColor>(102,178,255)</defaultLabelColor>
+      <spawnThingOnRemoved>SimpleProstheticArm</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>0.7</partEfficiency>
@@ -274,6 +285,7 @@
       <defName>SimpleProstheticLeg</defName>
       <label>simple prosthetic leg</label>
       <defaultLabelColor>(102,178,255)</defaultLabelColor>
+      <spawnThingOnRemoved>SimpleProstheticLeg</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>0.8</partEfficiency>
@@ -284,6 +296,7 @@
       <defName>ArtificialNose</defName>
       <label>artificial nose</label>
       <defaultLabelColor>(102,178,255)</defaultLabelColor>
+      <spawnThingOnRemoved>ArtificialNose</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>1</partEfficiency>
@@ -294,6 +307,7 @@
       <defName>HydraulicJaw</defName>
       <label>hydraulic jaw</label>
       <defaultLabelColor>(102,178,255)</defaultLabelColor>
+      <spawnThingOnRemoved>HydraulicJaw</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>1</partEfficiency>
@@ -318,6 +332,7 @@
       <defName>ArtificialPelvis</defName>
       <label>artificial pelvis</label>
       <defaultLabelColor>(102,178,255)</defaultLabelColor>
+      <spawnThingOnRemoved>ArtificialPelvis</spawnThingOnRemoved>
       <addedPartProps>
          <isSolid>true</isSolid>
          <partEfficiency>0.9</partEfficiency>
@@ -338,6 +353,7 @@
       <defName>PowerArm</defName>
       <label>power arm</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>PowerArm</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -372,6 +388,7 @@
       <defName>BionicArm</defName>
       <label>bionic arm</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>BionicArm</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -393,6 +410,7 @@
       <defName>BionicHand</defName>
       <label>bionic hand</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>BionicHand</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -414,6 +432,7 @@
       <defName>BionicLeg</defName>
       <label>bionic leg</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>BionicLeg</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -435,6 +454,7 @@
       <defName>BionicFoot</defName>
       <label>bionic foot</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>BionicFoot</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -456,6 +476,7 @@
       <defName>BionicEar</defName>
       <label>bionic ear implant</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>BionicEar</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -477,6 +498,7 @@
       <defName>BionicJaw</defName>
       <label>bionic jaw implant</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>BionicJaw</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -498,6 +520,7 @@
       <defName>SilentJaw</defName>
       <label>silent jaw implant</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>SilentJaw</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -519,6 +542,7 @@
       <defName>BionicEye</defName>
       <label>bionic eye implant</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>BionicEye</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -540,6 +564,7 @@
       <defName>BionicSpine</defName>
       <label>bionic spine</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>BionicSpine</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -565,6 +590,7 @@
       <defName>MedicalRib</defName>
       <label>medical rib replacement</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>MedicalRib</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -586,6 +612,7 @@
       <defName>DruggedRib</defName>
       <label>drugged rib</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>DruggedRib</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -611,6 +638,7 @@
       <defName>AdrenalineRib</defName>
       <label>adrenaline rib</label>
       <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+      <spawnThingOnRemoved>AdrenalineRib</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -638,6 +666,7 @@
       <defName>AdvancedPowerArm</defName>
       <label>advanced power arm</label>
       <defaultLabelColor>(18,215,57)</defaultLabelColor>
+      <spawnThingOnRemoved>AdvancedPowerArm</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -672,6 +701,7 @@
       <defName>AdvancedBionicArm</defName>
       <label>advanced bionic arm</label>
       <defaultLabelColor>(18,215,57)</defaultLabelColor>
+      <spawnThingOnRemoved>AdvancedBionicArm</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -706,6 +736,7 @@
       <defName>AdvancedBionicLeg</defName>
       <label>advanced bionic leg</label>
       <defaultLabelColor>(18,215,57)</defaultLabelColor>
+      <spawnThingOnRemoved>AdvancedBionicLeg</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -727,6 +758,7 @@
       <defName>AdvancedBionicHand</defName>
       <label>advanced bionic hand</label>
       <defaultLabelColor>(18,215,57)</defaultLabelColor>
+      <spawnThingOnRemoved>AdvancedBionicHand</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -748,6 +780,7 @@
       <defName>AdvancedBionicFoot</defName>
       <label>advanced bionic foot</label>
       <defaultLabelColor>(18,215,57)</defaultLabelColor>
+      <spawnThingOnRemoved>AdvancedBionicFoot</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -769,6 +802,7 @@
       <defName>AdvancedBionicEar</defName>
       <label>advanced bionic ear</label>
       <defaultLabelColor>(18,215,57)</defaultLabelColor>
+      <spawnThingOnRemoved>AdvancedBionicEar</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -790,6 +824,7 @@
       <defName>AdvancedBionicJaw</defName>
       <label>advanced bionic jaw</label>
       <defaultLabelColor>(18,215,57)</defaultLabelColor>
+      <spawnThingOnRemoved>AdvancedBionicJaw</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -811,6 +846,7 @@
       <defName>AdvancedBionicEye</defName>
       <label>advanced bionic eye</label>
       <defaultLabelColor>(18,215,57)</defaultLabelColor>
+      <spawnThingOnRemoved>AdvancedBionicEye</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>
@@ -832,6 +868,7 @@
       <defName>AdvancedBionicSpine</defName>
       <label>advanced bionic spine</label>
       <defaultLabelColor>(18,215,57)</defaultLabelColor>
+      <spawnThingOnRemoved>AdvancedBionicSpine</spawnThingOnRemoved>
       <addedPartProps>
          <isBionic>true</isBionic>
          <isSolid>true</isSolid>

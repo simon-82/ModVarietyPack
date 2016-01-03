@@ -149,6 +149,9 @@
       </li>
       <li>
         <commonality>50</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
         <options>
           <li>
             <selectionWeight>200</selectionWeight>

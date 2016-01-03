@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RecipeDefs>
-  <!-- === body parts === -->
-
-
   <!-- Base installing/Surgery-->
   <RecipeDef Abstract="True" Name="SurgeryFlesh">
     <effectWorking>Surgery</effectWorking>
@@ -13,7 +10,7 @@
   </RecipeDef>
 
 
-
+  
 
   <!-- === crafting natural === -->
   <RecipeDef>

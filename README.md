@@ -14,6 +14,7 @@ ____
 
 * [AnimalHideWorking](https://ludeon.com/forums/index.php?topic=2569.0) | ItchyFlea
 * [AdditionalJoyObjects](https://ludeon.com/forums/index.php?topic=13400.0) | cuproPanda
+* [AdditionalLighting](https://ludeon.com/forums/index.php?topic=14177.0) | Skullywag
 * [AdvancedLamps](https://ludeon.com/forums/index.php?topic=6813.0) | Igabod
 * [Apparello](https://ludeon.com/forums/index.php?topic=5085.msg48933#msg48933) | Shinzy
 * [BackstoriesCore](https://ludeon.com/forums/index.php?topic=11730.0) | mipen
@@ -24,6 +25,7 @@ ____
 * [Combat Realism](https://ludeon.com/forums/index.php?topic=9759.0) | NoImageAvailable
 * [CommunityCoreLibrary](https://ludeon.com/forums/index.php?topic=14172.0) | RimWorld CCL Team
 * [CTS](https://ludeon.com/forums/index.php?topic=14763.0) | kexici
+* [DermalRegenerator](https://ludeon.com/forums/index.php?topic=14177.0) | Skullywag
 * [DoorMat](https://ludeon.com/forums/index.php?topic=11171.0) | Latta
 * [EdBInterface](https://ludeon.com/forums/index.php?topic=5258.0) | EdB
 * [EdBModOrder](https://ludeon.com/forums/index.php?topic=7454.0) | EdB
@@ -45,6 +47,7 @@ ____
 * [MD2](https://ludeon.com/forums/index.php?topic=7380.0) | mipen
 * [MechanoidTerraformer](https://ludeon.com/forums/index.php?topic=13172.0) | Rikiki
 * [Miscellaneous+MAI](https://ludeon.com/forums/index.php?topic=3612.0) | Haplo
+* [ModdedHeads](https://github.com/simon-82/ModVarietyPack) | Fluffy (l2032)
 * [ModularTables](https://ludeon.com/forums/index.php?topic=10623.0) | ItchyFlea
 * [MoreHair](https://ludeon.com/forums/index.php?topic=6585.0) | Shinzy
 * [NeuffsTextures](https://github.com/neuffs/NeuffsTextures) | neuffs

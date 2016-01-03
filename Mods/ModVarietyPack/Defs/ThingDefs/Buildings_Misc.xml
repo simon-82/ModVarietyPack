@@ -1176,4 +1176,141 @@
 
 
 
+
+
+
+  <!-- === Medicine Dermal Regen + MOTES === -->
+  <ThingDef Name="MoteBase" Abstract="True">
+    <thingClass>MoteThrown</thingClass>
+    <label>Mote</label>
+    <category>Mote</category>
+    <graphicData>
+      <graphicClass>Graphic_Mote</graphicClass>
+      <shaderType>Mote</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <tickerType>Normal</tickerType>
+    <useHitPoints>false</useHitPoints>
+    <isSaveable>false</isSaveable>
+    <rotatable>false</rotatable>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_HealGreen</defName>
+    <graphicData>
+      <texPath>Effects/MicroSparksGreen</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeinDuration>10</fadeinDuration>
+      <ticksBeforeStartFadeout>120</ticksBeforeStartFadeout>
+      <fadeoutDuration>60</fadeoutDuration>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_ScanBlue</defName>
+    <graphicData>
+      <texPath>Effects/MicroSparksBlue</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeinDuration>10</fadeinDuration>
+      <ticksBeforeStartFadeout>120</ticksBeforeStartFadeout>
+      <fadeoutDuration>60</fadeoutDuration>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_LightningGlowBlue</defName>
+    <graphicData>
+      <texPath>Effects/LightningGlowBlue</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeinDuration>50</fadeinDuration>
+      <ticksBeforeStartFadeout>50</ticksBeforeStartFadeout>
+      <fadeoutDuration>50</fadeoutDuration>
+    </mote>
+  </ThingDef>
+
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_LightningGlowGreen</defName>
+    <graphicData>
+      <texPath>Effects/LightningGlowGreen</texPath>
+      <shaderType>MoteGlow</shaderType>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <mote>
+      <fadeinDuration>50</fadeinDuration>
+      <ticksBeforeStartFadeout>50</ticksBeforeStartFadeout>
+      <fadeoutDuration>50</fadeoutDuration>
+    </mote>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>DermalRegenerator</defName>
+    <label>dermal regenerator</label>
+    <graphicData>
+      <texPath>Buildings/DermalRegenerator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawsize>3,3</drawsize>
+    </graphicData>
+    <thingClass>DermalRegenerator.Building_DermalRegeneratorNew</thingClass>
+    <altitudeLayer>Waist</altitudeLayer>
+    <passability>Standable</passability>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <WorkToMake>3200</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <description>A medical device able to scan and repair surface tissue.</description>
+    <size>(3,3)</size>
+    <designationCategory>Production</designationCategory>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,0)</interactionCellOffset>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <rotatable>false</rotatable>
+    <costList>
+      <AluBar>100</AluBar>
+      <Electronics>85</Electronics>
+      <Medicine>5</Medicine>      
+    </costList>
+    <killedLeavings>
+      <ChunkSlagSteel>1</ChunkSlagSteel>
+    </killedLeavings>
+    <filthLeaving>BuildingRubble</filthLeaving>
+    <comps>
+      <li>
+        <compClass>CompExplosive</compClass>
+        <explosiveRadius>2.66</explosiveRadius>
+        <explosiveDamageType>Flame</explosiveDamageType>
+      </li>
+      <li>
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>600</basePowerConsumption>
+      </li>
+    </comps>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <researchPrerequisite>MedicineIV</researchPrerequisite>
+  </ThingDef>
+
+
+
+
+
+
+
 </Buildings>

@@ -366,6 +366,7 @@
             <texPath>Things/Building/Misc/TempControl/Heater</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <minifiedDef>MinifiedFurniture</minifiedDef>
         <altitudeLayer>BuildingTall</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <pathCost>40</pathCost>

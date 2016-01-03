@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--suppress ALL -->
+<LanguageData>
+	
+	<OffendGuestChance.label>шанс оскорбить гостя</OffendGuestChance.label>
+	<OffendGuestChance.description>Базовый шанс этого человека оскорбить гостя при общении.</OffendGuestChance.description>
+
+	<RecruitRelationshipDamage.label>ухудшение отношений при вербовке</RecruitRelationshipDamage.label>
+	<RecruitRelationshipDamage.description>Ущерб, нанесенный отношениям с фракцией этого человека, при успешной вербовке.</RecruitRelationshipDamage.description>
+
+</LanguageData>

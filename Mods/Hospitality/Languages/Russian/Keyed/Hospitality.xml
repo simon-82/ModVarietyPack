@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Recruiting -->
+  <RecruitFailMood>{0} не удаловсь завербовать {1} (гостю не нравится здесь).</RecruitFailMood>
+  <RecruitAngerSelfM>{0} расстроил {1} послего его неуклюжей попытки вербовки ({2} шанс).</RecruitAngerSelfM>
+  <RecruitAngerSelfF>{0} расстроил {1} после ее неуклюжей попытки вербовки ({2} шанс).</RecruitAngerSelfF>
+  <RecruitAngerOther>{3} заметил {0} попытку вербовки {1} и обиделся ({2} шанс).</RecruitAngerOther>
+  <RecruitFactionAnger>{0} из {1} расстроен из-за Вашей вербовки {2} ({3}).</RecruitFactionAnger>
+  <RecruitFactionPlease>{0} из {1} рад что Вы взяли {2} к себе ({3}).</RecruitFactionPlease>
+
+  <!-- Tab -->
+  <RecruitmentPenalty>Ухудшение отношений произошло</RecruitmentPenalty>  
+</LanguageData>

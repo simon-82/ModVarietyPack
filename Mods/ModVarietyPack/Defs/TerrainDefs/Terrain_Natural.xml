@@ -219,6 +219,7 @@
     Note: Hydroponics = Tier III
   -->
 
+
   <TerrainDef>
     <defName>SoilCultivated</defName>
     <label>cultivated soil</label>
@@ -369,6 +370,53 @@
     </placeWorkers>
     <designationCategory>ProductionFood</designationCategory>
     <researchPrerequisite>AgricultureIV</researchPrerequisite>
+  </TerrainDef>
+
+
+
+
+  <!-- added vanilla soil to remove growing zones --> 
+  <TerrainDef Class="CommunityCoreLibrary.TerrainWithComps">
+    <defName>Soilcoverup</defName>
+    <label>soil</label>
+    <Description>Non-fertile soil. Can be used to remove any type of previously cultivated soil. Can only be placed on cultivated soils.</Description>
+    <texturePath>Terrain/Surfaces/Soil</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>340</RenderPrecedence>
+    <PathCost>2</PathCost>
+    <statBases>
+      <WorkToMake>500</WorkToMake>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <ScatterType>Rocky</ScatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <TerrainFilthDef>FilthDirt</TerrainFilthDef>
+    <Fertility>0.8</Fertility>
+    <TakeFootprints>True</TakeFootprints>
+    <comps>
+      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
+        <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>          
+        <terrainDefs>
+            <li>SoilCultivated</li>
+            <li>SoilFertilized</li>
+            <li>SoilWatered</li>
+            <li>SoilEnriched</li>
+        </terrainDefs>                
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>CommunityCoreLibrary.PlaceWorker_OnlyOnTerrain</li>
+    </placeWorkers>
+    <designationCategory>ProductionFood</designationCategory>
+
+
+
   </TerrainDef>
 
   
