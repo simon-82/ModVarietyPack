@@ -386,7 +386,6 @@
     <fillPercent>1</fillPercent>
     <coversFloor>true</coversFloor>
     <placingDraggableDimensions>1</placingDraggableDimensions>
-    <tickerType>Normal</tickerType>
     <rotatable>false</rotatable>
     <selectable>true</selectable>
     <neverMultiSelect>true</neverMultiSelect>
@@ -419,7 +418,7 @@
       </li>
       <li>
         <compClass>CompGlower</compClass>
-        <glowRadius>12</glowRadius>
+        <glowRadius>8</glowRadius>
         <glowColor>(217,217,208,0)</glowColor>
       </li>
       <li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
