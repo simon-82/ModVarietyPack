@@ -12,6 +12,7 @@ IMPORTANT:
 ____     
 **Mods included:** 
 
+* [AllowTool](https://ludeon.com/forums/index.php?topic=17218.0) | UnlimitedHugs
 * [AnimalHideWorking](https://ludeon.com/forums/index.php?topic=2569.0) | ItchyFlea
 * [AdditionalJoyObjects](https://ludeon.com/forums/index.php?topic=13400.0) | cuproPanda
 * [AdditionalLighting](https://ludeon.com/forums/index.php?topic=14177.0) | Skullywag

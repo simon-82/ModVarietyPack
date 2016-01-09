@@ -647,8 +647,7 @@
     </graphicData>
     <AltitudeLayer>Waist</AltitudeLayer>
     <CostList>
-      <Steel>75</Steel>
-      <WoodLog>30</WoodLog>
+      <SteelBar>75</SteelBar>
     </CostList>
     <constructEffect>ConstructWood</constructEffect>
     <passability>Impassable</passability>
@@ -712,8 +711,8 @@
       <drawSize>(1,8)</drawSize>
     </graphicData>
     <CostList>
-      <SteelBar>20</SteelBar>
-      <WoodLog>30</WoodLog>
+      <SteelBar>10</SteelBar>
+      <WoodLog>20</WoodLog>
     </CostList>
     <constructEffect>ConstructWood</constructEffect>
     <altitudeLayer>BuildingTall</altitudeLayer>
@@ -744,7 +743,7 @@
     </graphicData>
     <CostList>
       <SteelBar>10</SteelBar>
-      <WoodLog>30</WoodLog>
+      <WoodLog>20</WoodLog>
     </CostList>
     <constructEffect>ConstructWood</constructEffect>
     <altitudeLayer>BuildingTall</altitudeLayer>
@@ -780,8 +779,8 @@
       <drawSize>(1,8)</drawSize>
     </graphicData>
     <CostList>
-      <SteelBar>20</SteelBar>
-      <WoodLog>30</WoodLog>
+      <SteelBar>10</SteelBar>
+      <WoodLog>20</WoodLog>
     </CostList>
     <constructEffect>ConstructWood</constructEffect>
     <altitudeLayer>BuildingTall</altitudeLayer>

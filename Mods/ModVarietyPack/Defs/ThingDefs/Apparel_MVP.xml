@@ -1133,6 +1133,10 @@
         </li>
       </options>
     </colorGenerator>
+    <!-- MVP added category -->
+    <thingCategories>
+      <li>Headgear</li>
+    </thingCategories> 
   </ThingDef>
 
   <ThingDef ParentName="HatBase">
@@ -1192,6 +1196,10 @@
         </li>
       </options>
     </colorGenerator>
+    <!-- MVP added category -->
+    <thingCategories>
+      <li>Headgear</li>
+    </thingCategories> 
   </ThingDef>
 
 
