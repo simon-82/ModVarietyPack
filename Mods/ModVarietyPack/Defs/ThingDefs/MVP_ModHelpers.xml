@@ -20,5 +20,16 @@
 			<li>RTFusebox.MapComponentInjector</li>
 		</inspectorTabs>
 	</ThingDef>
+
+	<ThingDef>
+		<defName>AllowModdedHeads</defName>
+		<category>Building</category>
+		<menuHidden>true</menuHidden>
+		<label>AllowModdedHeads bootstrapper</label>
+		<thingClass>AllowModdedHeads.Bootstrap</thingClass>
+		<inspectorTabs>
+			<li>AllowModdedHeads.Bootstrap</li>
+		</inspectorTabs>
+	</ThingDef>
   
 </ThingDefs>

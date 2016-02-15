@@ -486,7 +486,7 @@
         <transmitsPower>true</transmitsPower>
       </li>
     </Comps>
-    <researchPrerequisite>ConstructionII</researchPrerequisite>
+    <researchPrerequisite>ConstructionIII</researchPrerequisite>
   </ThingDef>
 
 

@@ -601,8 +601,8 @@
     <altitudeLayer>Waist</altitudeLayer>
     <rotatable>true</rotatable>
     <statBases>
-    <WorkToMake>15000</WorkToMake>
-      <MarketValue>30</MarketValue>
+      <WorkToMake>18000</WorkToMake>
+      <SellPriceFactor>0.5</SellPriceFactor>
       <MaxHitPoints>10</MaxHitPoints>
       <Flammability>1.0</Flammability>
       <Beauty>30</Beauty>

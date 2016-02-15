@@ -1098,30 +1098,6 @@
 
   <!-- === training === -->
   <WorkGiverDef>
-    <defName>TrainingShooting</defName>
-    <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Hunting</workType>
-    <verb>train</verb>
-    <gerund>training</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  <singleBillGiverDef>ShootingRange</singleBillGiverDef>
-  </WorkGiverDef>
-  
-  <WorkGiverDef>
-    <defName>TrainingMelee</defName>
-    <giverClass>WorkGiver_DoBill</giverClass>
-    <workType>Hunting</workType>
-    <verb>train</verb>
-    <gerund>training</gerund>
-    <requiredCapacities>
-      <li>Manipulation</li>
-    </requiredCapacities>
-  <singleBillGiverDef>MrDummy</singleBillGiverDef>
-  </WorkGiverDef>
-
-  <WorkGiverDef>
     <defName>TrainingMedicine</defName>
     <giverClass>WorkGiver_DoBill</giverClass>
     <workType>Doctor</workType>

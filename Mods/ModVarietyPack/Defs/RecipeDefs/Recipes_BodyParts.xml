@@ -660,8 +660,8 @@
       </thingDefs>
     </fixedIngredientFilter>
     <appliedOnFixedBodyParts>
-      <li>LeftArm</li>
-      <li>RightArm</li>
+      <li>LeftShoulder</li>
+      <li>RightShoulder</li>
     </appliedOnFixedBodyParts>
   </RecipeDef>
 

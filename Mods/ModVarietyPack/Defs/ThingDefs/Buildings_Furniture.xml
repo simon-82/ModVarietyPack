@@ -1987,7 +1987,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>70</Beauty>
       </statBases>
       <size>(2,2)</size>
     </ThingDef>
@@ -2002,7 +2002,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>35</Beauty>
       </statBases>
     </ThingDef>
   
@@ -2016,7 +2016,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>32</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2030,7 +2030,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>33</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2044,7 +2044,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>70</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2059,7 +2059,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>70</Beauty>
       </statBases>
     <size>(2,2)</size>
     </ThingDef>
@@ -2074,7 +2074,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>70</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2088,7 +2088,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>31</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2102,7 +2102,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>32</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2116,7 +2116,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>36</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2130,7 +2130,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>40</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2145,7 +2145,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>70</Beauty>
       </statBases>
     <size>(2,2)</size>
     </ThingDef>
@@ -2160,7 +2160,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>26</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2174,7 +2174,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>35</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2188,7 +2188,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>65</Beauty>
       </statBases>
     </ThingDef>
     
@@ -2202,7 +2202,7 @@
       </graphicData>
       <minifiedDef>MinifiedSculpture</minifiedDef>
       <statBases>
-        <Beauty>100</Beauty>
+        <Beauty>70</Beauty>
       </statBases>
     </ThingDef>
 

@@ -81,8 +81,7 @@
 				</totalPriceRange>
 			</li>	
 
-	<!-- added for fish industry to get full fish for eggs -->
-
+			<!-- added for fish industry to get fish for eggs -->
 			<li Class="StockGenerator_Category">
 				<categoryDef>CorpsesFish</categoryDef>
 				<thingDefCountRange>
@@ -219,6 +218,13 @@
 				<countRange>
 					<min>10</min>
 					<max>30</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Electronics</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>100</max>
 				</countRange>
 			</li>
 			
@@ -471,6 +477,13 @@
 					<max>40</max>
 				</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>WeaponParts</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>500</max>
+				</countRange>
+			</li>
 
 			<li Class="StockGenerator_Category">
 				<categoryDef>Armor</categoryDef>
@@ -582,8 +595,7 @@
 					<min>150</min>
 					<max>300</max>
 				</countRange>
-			</li>
-			
+			</li>			
 			<li Class="StockGenerator_SingleDef">
 				<thingDef>GlitterworldMedicine</thingDef>
 				<countRange>
@@ -591,6 +603,16 @@
 					<max>20</max>
 				</countRange>
 			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Electronics</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>100</max>
+				</countRange>
+			</li>
+
+
+
 			<li Class="StockGenerator_Tag">
 				<tradeTag>Exotic</tradeTag>
 				<thingDefCountRange>
@@ -695,6 +717,13 @@
 				<countRange>
 					<min>10</min>
 					<max>40</max>
+				</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>WeaponParts</thingDef>
+				<countRange>
+					<min>10</min>
+					<max>500</max>
 				</countRange>
 			</li>			
 

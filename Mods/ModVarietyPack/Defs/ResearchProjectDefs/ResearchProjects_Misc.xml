@@ -369,7 +369,7 @@
 	<ResearchProjectDef>
 		<defName>ConstructionIII</defName>
 		<label>Construction III</label>
-		<description>"Oh my?" \n"I said M - A - I. That's a Mobile Artificial Intelligence. These robots can support the colony." \n"Can they help me build some of the Lighted Walls you wanted so much?" \n"Sure, but we need to program them first so they know how to build stuff."</description>
+		<description>"I found a way to speed things up! Why not put the wires and lights in the walls when we build them? It's sure faster than going back and doing it afterwards." \n"Nice! And I found more use for the electronic chips we have lying around. With a little more research I might be able to make basic robots that can help us with our daily tasks."</description>
 		<totalCost>1500</totalCost>
 		<prerequisites>
 			<li>ConstructionII</li>
@@ -377,60 +377,70 @@
 	</ResearchProjectDef>
 
 		<ResearchProjectDef>
-			<defName>AIPawnAdvResearchConstruction</defName>
-			<label>AI: Construction</label>
-			<description>Researches how an artificial intelligence can construct buildings. \nThe next mobile AIs you build have the ability to support you where construction is needed.</description>
-			<totalCost>150</totalCost>
-			<prerequisites><li>ConstructionIII</li></prerequisites>
+			<defName>RobotsI</defName>
+			<label>Basic Robots</label>
+			<description>"Spending all those hours at the electronic workbench finally pays off! So far I can make a basic flying thing that can haul stuff and a cleaning bot!"</description>
+			<totalCost>1500</totalCost>
+			<prerequisites>
+				<li>ConstructionIII</li>
+			</prerequisites>
 		</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>AIPawnAdvResearchMining</defName>
-			<label>AI: Mining</label>
-			<description>Researches how an artificial intelligence can mine. \nThe next mobile AIs you build have the ability to support you where mining is needed.</description>
-			<totalCost>150</totalCost>
-			<prerequisites><li>ConstructionIII</li></prerequisites>
-		</ResearchProjectDef>
+			<ResearchProjectDef>
+				<defName>RobotsIICook</defName>
+				<label>Bots: Cook Bot</label>
+				<description>"Now this is some next level stuff! Look at this thing! It can cook!"</description>
+				<totalCost>1500</totalCost>
+				<prerequisites>
+					<li>RobotsI</li>
+				</prerequisites>
+			</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>AIPawnAdvResearchCombat</defName>
-			<label>AI: Combat Tactics</label>
-			<description>Researches how an artificial intelligence can use combat tactics. \nThe next mobile AIs you build have the ability to support you in combat situations.</description>
-			<totalCost>350</totalCost>
-			<prerequisites><li>ConstructionIII</li></prerequisites>
-		</ResearchProjectDef>
+			<ResearchProjectDef>
+				<defName>RobotsIIMiner</defName>
+				<label>Bots: Miner Bot</label>
+				<description>"Now this is some next level stuff! Look at this thing! It can mine rocks!"</description>
+				<totalCost>1500</totalCost>
+				<prerequisites>
+					<li>RobotsI</li>
+				</prerequisites>
+			</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>AIPawnAdvResearchCooking</defName>
-			<label>AI: Cooking</label>
-			<description>Researches how an artificial intelligence can cook. \nThe next mobile AIs you build have the ability to support you where cooking is needed.</description>
-			<totalCost>150</totalCost>
-			<prerequisites><li>ConstructionIII</li></prerequisites>
-		</ResearchProjectDef>
+			<ResearchProjectDef>
+				<defName>RobotsIIFarmer</defName>
+				<label>Bots: Farmer Bot</label>
+				<description>"Now this is some next level stuff! Look at this thing! It can grow plants and help us with farming!"</description>
+				<totalCost>1500</totalCost>
+				<prerequisites>
+					<li>RobotsI</li>
+				</prerequisites>
+			</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>AIPawnAdvResearchCaring</defName>
-			<label>AI: Caring</label>
-			<description>Researches how an artificial intelligence can care for colonists. \nThe next mobile AIs you build have the ability to support you where caring is needed.</description>
-			<totalCost>350</totalCost>
-			<prerequisites><li>ConstructionIII</li></prerequisites>
-		</ResearchProjectDef>
+			<ResearchProjectDef>
+				<defName>RobotsIICrafter</defName>
+				<label>Bots: Crafter Bot</label>
+				<description>"Now this is some next level stuff! Look at this thing! It can help us with crafting!"</description>
+				<totalCost>1500</totalCost>
+				<prerequisites>
+					<li>RobotsI</li>
+				</prerequisites>
+			</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>AIPawnAdvResearchCrafting</defName>
-			<label>AI: Crafting</label>
-			<description>Researches how an artificial intelligence can craft. \nThe next mobile AIs you build have the ability to support you where crafting is needed.</description>
-			<totalCost>450</totalCost>
-			<prerequisites><li>ConstructionIII</li></prerequisites>
-		</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>AIPawnAdvResearchIntellectual</defName>
-			<label>AI: Intellectual</label>
-			<description>Researches how an artificial intelligence can research. \nThe next mobile AIs you build have the ability to support you where research is needed.</description>
-			<totalCost>500</totalCost>
-			<prerequisites><li>ConstructionIII</li></prerequisites>
-		</ResearchProjectDef>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
 	
 	<ResearchProjectDef>
 		<defName>ConstructionIV</defName>

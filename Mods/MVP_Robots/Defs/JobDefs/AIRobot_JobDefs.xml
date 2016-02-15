@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<JobDefs>
+
+	<JobDef>
+		<defName>AIPawn_GoRecharge</defName>
+		<driverClass>AIRobot.JobDriver_GoRecharging</driverClass>
+		<reportString>Going to recharge station.</reportString>
+	</JobDef>
+
+	<JobDef>
+		<defName>AIPawn_Goto</defName>
+		<driverClass>JobDriver_Goto</driverClass>
+		<reportString>Moving.</reportString>
+	</JobDef>
+  
+</JobDefs>

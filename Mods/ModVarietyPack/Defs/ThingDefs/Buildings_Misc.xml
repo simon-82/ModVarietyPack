@@ -622,15 +622,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
   
   
 <!-- === training === -->
@@ -640,14 +631,14 @@
     <ThingClass>Building_WorkTable</ThingClass>
     <Description>Doctors hone their skills by testing their techniques on corpses.</Description>
     <graphicData>
-      <texPath>Buildings/TableAutopsy</texPath>
+      <texPath>Buildings/Training/TableAutopsy</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(1,2)</drawSize>
     </graphicData>
     <AltitudeLayer>Waist</AltitudeLayer>
     <CostList>
-      <SteelBar>75</SteelBar>
+      <SteelBar>50</SteelBar>
     </CostList>
     <constructEffect>ConstructWood</constructEffect>
     <passability>Impassable</passability>
@@ -672,166 +663,64 @@
   </ThingDef>
 
   <ThingDef ParentName="BuildingBase">
-    <defName>Target</defName>
-    <label>Target</label>
-    <thingClass>Building</thingClass>
+    <defName>ShootingRangeTarget</defName>
+    <thingClass>TrainingFacilityCR.Building_ShootingRange</thingClass>
+    <label>shooting target</label>
+    <description>The shooting range is a place where you can train your hand-eye coordination.</description>
     <graphicData>
-      <texPath>Buildings/TargetPractice/Target</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
-    <description>A target for your sharpshooters to hone their skills with.</description>
-    <size>(1,1)</size>
-    <useHitPoints>False</useHitPoints>
-    <costList>
-        <SteelBar>20</SteelBar>
-    </costList>
-    <statBases>
-      <WorkToMake>250</WorkToMake>
-      <Flammability>0</Flammability>
-    </statBases>
-    <passability>PassThroughOnly</passability>
-    <castEdgeShadows>true</castEdgeShadows>
-    <pathCost>60</pathCost>
-    <fillPercent>0.4</fillPercent>
-    <designationCategory>Training</designationCategory>
-    <staticSunShadowHeight>0.20</staticSunShadowHeight>
-    <researchPrerequisite>SecurityI</researchPrerequisite>
-  </ThingDef>
-
-  <ThingDef ParentName="BuildingBase">
-    <DefName>ShootingRangeLeft</DefName>
-    <label>shooting range left</label>
-    <ThingClass>Building_WorkTable</ThingClass>
-    <Description>The left side of the shooting range.</Description>
-    <uiIconPath>Buildings/TargetPractice/WallLeft_back</uiIconPath>
-    <graphicData>
-      <texPath>Buildings/TargetPractice/WallLeft</texPath>
+      <texPath>Buildings/Training/ShootingRangeTarget</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(1,8)</drawSize>
+      <drawSize>(1.5,1.5)</drawSize>
     </graphicData>
-    <CostList>
-      <SteelBar>10</SteelBar>
-      <WoodLog>20</WoodLog>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-    <altitudeLayer>BuildingTall</altitudeLayer>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>1</fillPercent>
-    <useHitPoints>True</useHitPoints>
-    <statBases>
-      <WorkToMake>400</WorkToMake>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <Size>(1,8)</Size>
-    <DesignationCategory>Training</DesignationCategory>
-    <Passability>PassThroughOnly</Passability>
-    <researchPrerequisite>SecurityI</researchPrerequisite>
-  </ThingDef>  
-  
-  <ThingDef ParentName="BuildingBase">
-    <DefName>ShootingRange</DefName>
-    <label>shooting range</label>
-    <ThingClass>Building_WorkTable</ThingClass>
-    <Description>A shooting range for training shooting skill.</Description>
-    <uiIconPath>Buildings/TargetPractice/WallMiddle_back</uiIconPath>
-    <graphicData>
-      <texPath>Buildings/TargetPractice/WallMiddle</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(1,8)</drawSize>
-    </graphicData>
-    <CostList>
-      <SteelBar>10</SteelBar>
-      <WoodLog>20</WoodLog>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-    <altitudeLayer>BuildingTall</altitudeLayer>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>1</fillPercent>
-    <useHitPoints>True</useHitPoints>
-    <statBases>
-      <WorkToMake>500</WorkToMake>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <Size>(1,8)</Size>
-    <DesignationCategory>Training</DesignationCategory>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-4)</interactionCellOffset>
-    <surfaceType>Item</surfaceType>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
-    <passability>PassThroughOnly</passability>
-    <researchPrerequisite>SecurityI</researchPrerequisite>
-  </ThingDef>
-  
-  <ThingDef ParentName="BuildingBase">
-    <DefName>ShootingRangeRight</DefName>
-    <label>shooting range right</label>
-    <ThingClass>Building_WorkTable</ThingClass>
-    <Description>The right side of the shooting range.</Description>
-    <uiIconPath>Buildings/TargetPractice/WallRight_back</uiIconPath>
-    <graphicData>
-      <texPath>Buildings/TargetPractice/WallRight</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(1,8)</drawSize>
-    </graphicData>
-    <CostList>
-      <SteelBar>10</SteelBar>
-      <WoodLog>20</WoodLog>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-    <altitudeLayer>BuildingTall</altitudeLayer>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>1</fillPercent>
-    <useHitPoints>True</useHitPoints>
-    <statBases>
-      <WorkToMake>400</WorkToMake>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <Size>(1,8)</Size>
-    <DesignationCategory>Training</DesignationCategory>
-    <Passability>PassThroughOnly</Passability>
-    <researchPrerequisite>SecurityI</researchPrerequisite>
-  </ThingDef>
-  
-  <ThingDef ParentName="BuildingBase">
-    <DefName>MrDummy</DefName>
-    <label>training dummy</label>
-    <ThingClass>Building_WorkTable</ThingClass>
-    <Description>A straw dummy for training melee skill.</Description>
-    <uiIconPath>Buildings/TargetPractice/MrDummy_back</uiIconPath>
-    <graphicData>
-      <texPath>Buildings/TargetPractice/MrDummy</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <drawSize>(2,2)</drawSize>
-    </graphicData>
-    <CostList>
-      <SteelBar>15</SteelBar>
-      <WoodLog>10</WoodLog>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-    <altitudeLayer>BuildingTall</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>1</fillPercent>
-    <useHitPoints>True</useHitPoints>
-    <statBases>
-      <WorkToMake>200</WorkToMake>
-      <MaxHitPoints>350</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-    </statBases>
     <Size>(1,1)</Size>
-    <DesignationCategory>Training</DesignationCategory>
-    <hasInteractionCell>True</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <surfaceType>Item</surfaceType>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
+    <altitudeLayer>Waist</altitudeLayer>
+    <rotatable>true</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>750</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <SteelBar>35</SteelBar>
+      <Cloth>20</Cloth>
+    </costList>
+    <pathCost>120</pathCost>
+    <designationCategory>Training</designationCategory>
+    <placeWorkers>
+      <li>TrainingFacilityCR.PlaceWorker_ShootingRange</li>
+    </placeWorkers>
+    <researchPrerequisite>SecurityI</researchPrerequisite>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>MartialArtsTarget</defName>
+    <thingClass>TrainingFacilityCR.Building_MartialArtsTarget</thingClass>
+    <label>martial arts target</label>
+    <description>The martial arts dummy is a place where you can train your martial arts, with or without a weapon.</description>
+    <graphicData>
+      <texPath>Buildings/Training/MartialArtsTarget</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5,1.5)</drawSize>
+    </graphicData>
+    <Size>(1,1)</Size>
+    <altitudeLayer>Waist</altitudeLayer>
+    <rotatable>true</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>750</WorkToMake>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodPlank>35</WoodPlank>
+      <Cloth>20</Cloth>
+    </costList>
+    <pathCost>120</pathCost>
+    <designationCategory>Training</designationCategory>
+    <placeWorkers>
+      <li>TrainingFacilityCR.PlaceWorker_MartialArtsTarget</li>
+    </placeWorkers>
     <researchPrerequisite>SecurityI</researchPrerequisite>
   </ThingDef>
 
@@ -842,7 +731,7 @@
 
 
 
-  <!-- === Energy Pack === -->
+  <!-- === MMS Energy Pack === -->
   <ThingDef ParentName="BuildingBase">
     <defName>ChargingEnergyPack</defName>
     <label>Charging energy pack</label>
@@ -884,7 +773,7 @@
     <designationCategory>Power</designationCategory>
     <staticSunShadowHeight>0.1</staticSunShadowHeight>
     <constructEffect>ConstructMetal</constructEffect>
-    <researchPrerequisite>ResearchMineralSonarEnhancedScan</researchPrerequisite>
+    <researchPrerequisite>PowerII</researchPrerequisite>
   </ThingDef>
 
 

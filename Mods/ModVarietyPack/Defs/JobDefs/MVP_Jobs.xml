@@ -1,30 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
-
-  
-<!-- === training === -->
-  <JobDef>
-    <defName>UseDummy</defName>
-    <driverClass>JobDriver_WatchBuilding</driverClass>
-    <reportString>Training Melee.</reportString>
+<Defs>  
+  <!-- === training === -->
+  <JobDef Name="UseShootingRangeBase">
+    <defName>UseShootingRange</defName>
+    <driverClass>TrainingFacilityCR.JobDriver_ShootingRange</driverClass>
+    <reportString>Shooting a few bullets.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
-    <joySkill>Melee</joySkill>
-    <joyXpPerTick>0.004</joyXpPerTick>
-    <joyGainRate>1.2</joyGainRate>
-    <joyKind>Meditative</joyKind>
+    <joyGainRate>1</joyGainRate>
+    <joySkill>Shooting</joySkill>
+    <joyXpPerTick>0.006</joyXpPerTick>
+    <joyKind>GamingDexterity</joyKind>
+  </JobDef>
+
+  <JobDef ParentName="UseShootingRangeBase">
+    <defName>UseShootingRange_NonJoy</defName>
+    <driverClass>TrainingFacilityCR.JobDriver_ShootingRange_NonJoy</driverClass>
+    <joyDuration>8000</joyDuration>
+    <joyXpPerTick>0.012</joyXpPerTick>
   </JobDef>
   
-  <JobDef>
-    <defName>UseTarget</defName>
-    <driverClass>JobDriver_WatchBuilding</driverClass>
-    <reportString>Training Shooting.</reportString>
+  <JobDef Name="UseMartialArtsBase">
+    <defName>UseMartialArtsTarget</defName>
+    <driverClass>TrainingFacilityCR.JobDriver_MartialArtsTarget</driverClass>
+    <reportString>Practising martial arts.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
-    <joySkill>Shooting</joySkill>
-    <joyXpPerTick>0.004</joyXpPerTick>
-    <joyGainRate>1.2</joyGainRate>
-    <joyKind>Meditative</joyKind>
+    <joyGainRate>1</joyGainRate>
+    <joySkill>Melee</joySkill>
+    <joyXpPerTick>0.012</joyXpPerTick>
+    <joyKind>GamingDexterity</joyKind>
+  </JobDef>
+
+  <JobDef ParentName="UseMartialArtsBase">
+    <defName>UseMartialArtsTarget_NonJoy</defName>
+    <driverClass>TrainingFacilityCR.JobDriver_MartialArtsTarget_NonJoy</driverClass>
+    <joyDuration>8000</joyDuration>
+    <joyXpPerTick>0.024</joyXpPerTick>
   </JobDef>
 
 

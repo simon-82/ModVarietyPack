@@ -3,7 +3,7 @@
 
 	<MapGeneratorBlueprintDef>
 		<defName>BilliardRoom</defName>
-		<chance>5</chance>
+		<chance>8</chance>
 		<size>8,7</size>
 		<canHaveHoles>false</canHaveHoles>
 		<buildingData>

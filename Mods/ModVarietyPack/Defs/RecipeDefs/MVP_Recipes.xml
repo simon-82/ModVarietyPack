@@ -2,34 +2,6 @@
 <RecipeDefs>
 	<!-- === training === -->
 	<RecipeDef>
-		<defName>ShootingRange</defName>
-		<label>train shooting</label>
-		<description>Shoots at a target to train shooting accuracy.</description>
-		<jobString>Training.</jobString>
-		<workAmount>700</workAmount>
-		<effectWorking>CutStone</effectWorking>
-		<soundWorking>Recipe_Smelt</soundWorking>
-		<workSkill>Shooting</workSkill>
-		<recipeUsers>
-			<li>ShootingRange</li>
-		</recipeUsers>
-	</RecipeDef>
-
-	<RecipeDef>
-		<defName>TrainingDummy</defName>
-		<label>train melee</label>
-		<description>Trains close quarters combat against a straw dummy.</description>
-		<jobString>Training.</jobString>
-		<workAmount>700</workAmount>
-		<effectWorking>CutStone</effectWorking>
-		<soundWorking>Recipe_Smelt</soundWorking>
-		<workSkill>Melee</workSkill>
-		<recipeUsers>
-			<li>MrDummy</li>
-		</recipeUsers>
-	</RecipeDef>
-
-	<RecipeDef>
 		<defName>Autopsy</defName>
 		<label>perform autopsy</label>
 		<description>Doctors hone their skills by testing their techniques on corpses.</description>
@@ -60,6 +32,13 @@
 				<li>CorpsesMechanoid</li>
 				<li>CorpsesAnimal</li>
 			</exceptedCategories>
+			<exceptedThingDefs>
+		        <li>AIRobot_Cleaner_Corpse</li>
+		        <li>AIRobot_Hauler_Corpse</li>
+		        <li>AIRobot_Cook_Corpse</li>
+		        <li>AIRobot_Miner_Corpse</li>
+		        <li>AIRobot_Farmer_Corpse</li>
+		     </exceptedThingDefs>
 		</fixedIngredientFilter>
 		<defaultIngredientFilter>
 			<thingDefs>
@@ -658,6 +637,13 @@
 				<li>CorpsesMechanoid</li>
 				<li>CorpsesFish</li>
 			</exceptedCategories>
+			<exceptedThingDefs>
+		        <li>AIRobot_Cleaner_Corpse</li>
+		        <li>AIRobot_Hauler_Corpse</li>
+		        <li>AIRobot_Cook_Corpse</li>
+		        <li>AIRobot_Miner_Corpse</li>
+		        <li>AIRobot_Farmer_Corpse</li>
+		     </exceptedThingDefs>
       <specialFiltersToDisallow>
         <li>AllowRotten</li>
       </specialFiltersToDisallow>
@@ -2518,6 +2504,340 @@
       <li>TableTaxidermy</li>
     </recipeUsers>
   </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+  <!-- === Robots === -->
+  <RecipeDef>
+		<defName>MakeBotHauler</defName>
+		<label>make hauler bot</label>
+		<description>Make a basic bot capable of hauling stuff around.</description>
+		<jobString>Making bot.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+	      	<li>
+	        <skill>Crafting</skill>
+	        <minLevel>7</minLevel>
+	      	</li>
+    	</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<workAmount>2000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Electronics</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>EnergyPack</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>AluBar</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+		</ingredients>
+		<products>
+			<AIRobot_RechargeStation_Hauler>1</AIRobot_RechargeStation_Hauler>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Electronics</li>
+				<li>AluBar</li>
+				<li>EnergyPack</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeBotCleaner</defName>
+		<label>make cleaner bot</label>
+		<description>Make a basic bot capable of cleaning.</description>
+		<jobString>Making bot.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+	      	<li>
+	        <skill>Crafting</skill>
+	        <minLevel>7</minLevel>
+	      	</li>
+    	</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<workAmount>2000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Electronics</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>EnergyPack</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>AluBar</li>
+					</thingDefs>
+				</filter>
+				<count>75</count>
+			</li>
+		</ingredients>
+		<products>
+			<AIRobot_RechargeStation_Cleaner>1</AIRobot_RechargeStation_Cleaner>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Electronics</li>
+				<li>AluBar</li>
+				<li>EnergyPack</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeBotCook</defName>
+		<label>make cook bot</label>
+		<description>Make an advanced bot capable of cooking.</description>
+		<jobString>Making bot.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+	      	<li>
+	        <skill>Crafting</skill>
+	        <minLevel>7</minLevel>
+	      	</li>
+    	</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<workAmount>4000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IntegratedCircuitsBoard</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>EnergyPack</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>PlasteelBar</li>
+					</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+		</ingredients>
+		<products>
+			<AIRobot_RechargeStation_Cook>1</AIRobot_RechargeStation_Cook>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IntegratedCircuitsBoard</li>
+				<li>EnergyPack</li>
+				<li>PlasteelBar</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeBotMiner</defName>
+		<label>make miner bot</label>
+		<description>Make an advanced bot capable of mining.</description>
+		<jobString>Making bot.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+	      	<li>
+	        <skill>Crafting</skill>
+	        <minLevel>7</minLevel>
+	      	</li>
+    	</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<workAmount>4000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IntegratedCircuitsBoard</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>EnergyPack</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>PlasteelBar</li>
+					</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+		</ingredients>
+		<products>
+			<AIRobot_RechargeStation_Miner>1</AIRobot_RechargeStation_Miner>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IntegratedCircuitsBoard</li>
+				<li>EnergyPack</li>
+				<li>PlasteelBar</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeBotFarmer</defName>
+		<label>make farmer bot</label>
+		<description>Make an advanced bot capable of growing plants.</description>
+		<jobString>Making bot.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+	      	<li>
+	        <skill>Crafting</skill>
+	        <minLevel>7</minLevel>
+	      	</li>
+    	</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<workAmount>4000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IntegratedCircuitsBoard</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>EnergyPack</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>PlasteelBar</li>
+					</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+		</ingredients>
+		<products>
+			<AIRobot_RechargeStation_Farmer>1</AIRobot_RechargeStation_Farmer>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IntegratedCircuitsBoard</li>
+				<li>EnergyPack</li>
+				<li>PlasteelBar</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeBotCrafter</defName>
+		<label>make crafter bot</label>
+		<description>Make an advanced bot capable of crafting.</description>
+		<jobString>Making bot.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Smelt</effectWorking>
+		<soundWorking>Recipe_Smelt</soundWorking>
+		<skillRequirements>
+	      	<li>
+	        <skill>Crafting</skill>
+	        <minLevel>7</minLevel>
+	      	</li>
+    	</skillRequirements>
+		<workSkill>Crafting</workSkill>
+		<workAmount>4000</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>IntegratedCircuitsBoard</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>EnergyPack</li>
+					</thingDefs>
+				</filter>
+				<count>4</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>PlasteelBar</li>
+					</thingDefs>
+				</filter>
+				<count>80</count>
+			</li>
+		</ingredients>
+		<products>
+			<AIRobot_RechargeStation_Crafter>1</AIRobot_RechargeStation_Crafter>
+		</products>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>IntegratedCircuitsBoard</li>
+				<li>EnergyPack</li>
+				<li>PlasteelBar</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
 
 
 

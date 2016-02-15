@@ -817,7 +817,7 @@
         </categories>
     </fixedIngredientFilter>
     <products>
-      <Sand>20</Sand>
+      <Sand>30</Sand>
     </products>
     <workSkill>Crafting</workSkill>
   </RecipeDef>
@@ -847,7 +847,7 @@
         </categories>
     </fixedIngredientFilter>
     <products>
-      <Sand>30</Sand>
+      <Sand>40</Sand>
     </products>
     <workSkill>Crafting</workSkill>
   </RecipeDef>
@@ -868,11 +868,11 @@
             <li>Sand</li>
           </thingDefs>
         </filter>
-        <count>10</count>
+        <count>15</count>
       </li>
     </ingredients>
     <products>
-      <Glass>5</Glass>
+      <Glass>10</Glass>
     </products>
     <fixedIngredientFilter>
       <thingDefs>
@@ -1394,7 +1394,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
             <li>WoodLog</li>
           </thingDefs>
         </filter>
-        <count>40</count>
+        <count>20</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
@@ -1428,15 +1428,17 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
           <thingDefs>
             <li>Bamboo</li>
             <li>WoodLog</li>
+            <li>WoodPlank</li>
           </thingDefs>
         </filter>
-        <count>3</count>
+        <count>1</count>
       </li>
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
         <li>Bamboo</li>
         <li>WoodLog</li>
+        <li>WoodPlank</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
@@ -1487,10 +1489,11 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
         <li>Robots</li>
       </exceptedCategories>
       <exceptedThingDefs>
-        <li>AIPawn_Corpse</li>
-        <li>AIPawnE_Corpse</li>
         <li>AIRobot_Cleaner_Corpse</li>
         <li>AIRobot_Hauler_Corpse</li>
+        <li>AIRobot_Cook_Corpse</li>
+        <li>AIRobot_Miner_Corpse</li>
+        <li>AIRobot_Farmer_Corpse</li>
       </exceptedThingDefs>
       <specialFiltersToDisallow>
         <li>AllowRotten</li>

@@ -3,9 +3,9 @@
   <buildNumber>914</buildNumber>
   <activeMods>
     <li>Core</li>
-    <li>EdBModOrder</li>
-    <li>MVP_CoreTextures</li>
     <li>Community Core Library</li>
+    <li>EdBModOrder</li>
+    <li>MVP_CoreTextures</li>    
     <li>CombatRealism</li>    
     <li>Rimsenal_CR</li>
     <li>Rimsenal_Federation</li>
@@ -26,7 +26,7 @@
     <li>LT_NoCleaningPlease</li>
     <li>Hospitality</li>    
     <li>LT_Infusion</li>
-    <li>MAI</li>
+    <li>MVP_Robots</li>
     <li>RWAutoSell</li>    
   </activeMods>
 </ModsConfigData>

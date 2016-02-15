@@ -8,9 +8,14 @@
   <RWAutoSell.Clear>Vider</RWAutoSell.Clear>
   <RWAutoSell.RuleMaxReached>Trop de Règle en place./n 100 règles maximum (Pensez à éditer des règles existantes)</RWAutoSell.RuleMaxReached>
   <RWAutoSell.Delete>Supprimer</RWAutoSell.Delete>
-  <RWAutoSell.Kept>Minimum conserver en Stock</RWAutoSell.Kept>
+  <RWAutoSell.AdvancedRule>Configuration règle avancée</RWAutoSell.AdvancedRule>
+  <RWAutoSell.Advanced>Avancée</RWAutoSell.Advanced>
+  <RWAutoSell.KeptShort>vendre quand</RWAutoSell.KeptShort>
+  <RWAutoSell.Kept>Vendre quand par-dessus</RWAutoSell.Kept>
+  <RWAutoSell.Reorder>racheter de point</RWAutoSell.Reorder>
+  <RWAutoSell.Restock>niveau d'achat</RWAutoSell.Restock>  
   <RWAutoSell.VToggle>Couleur règle Vérification</RWAutoSell.VToggle>
-  <RWAutoSell.ASTradeBehaviour>Comportement de négociation</RWAutoSell.ASTradeBehaviour>
+  <RWAutoSell.TradeBehaviour>Comportement de négociation</RWAutoSell.TradeBehaviour>
   <RWAutoSell.SortByUnSorted>non trié</RWAutoSell.SortByUnSorted>
   <RWAutoSell.SortByHealth>par la santé</RWAutoSell.SortByHealth>
   <RWAutoSell.SortByValue>par valeur</RWAutoSell.SortByValue>
@@ -27,14 +32,15 @@
   <RWAutoSell.RuleLabelMat> constituées de {0}{1}</RWAutoSell.RuleLabelMat>
   <RWAutoSell.Materials>matériels</RWAutoSell.Materials>
   <!-- Health Rule Labels -->
-  <RWAutoSell.RuleHBelow> avec {0} dessous de {1}%</RWAutoSell.RuleHBelow>
+  <RWAutoSell.RuleHBelow> avec {0} sous {1}%</RWAutoSell.RuleHBelow>
   <RWAutoSell.RuleHBetween> avec la {0} entre {1}% et {2}%</RWAutoSell.RuleHBetween>
-  <RWAutoSell.RuleHAbove> avec {0} dessus de {1}%</RWAutoSell.RuleHAbove>
+  <RWAutoSell.RuleHAbove> avec {0} au dessus {1}%</RWAutoSell.RuleHAbove>
   <!-- Quality Rule Labels -->
-  <RWAutoSell.RuleQBelow> de {0} dessous de {1}</RWAutoSell.RuleQBelow>
+  <RWAutoSell.RuleQBelow> de {0} sous {1}</RWAutoSell.RuleQBelow>
   <RWAutoSell.RuleQBetween> de la {0} entre {1} et {2}</RWAutoSell.RuleQBetween>
-  <RWAutoSell.RuleQAbove> de {0} dessus de {1}</RWAutoSell.RuleQAbove>
-  <RWAutoSell.RuleKeepMin> et de garder un minimum de {0}</RWAutoSell.RuleKeepMin>
+  <RWAutoSell.RuleQAbove> de {0} au dessus {1}</RWAutoSell.RuleQAbove>
+  <RWAutoSell.RuleKeepMin> vendre quand par-dessus {0}</RWAutoSell.RuleKeepMin>
+  <RWAutoSell.RuleBuyPoint>et acheter plus lorsque le stock est inférieur à {0} jusqu'à {1}</RWAutoSell.RuleBuyPoint>
     <!-- Pawn Rule Labels -->
   <RWAutoSell.ExceptsMaxReached>Trop nombreuses exceptions définies./n S'il vous plaît garder votre nombre d'exceptions à moins de 10 ou modifier les exceptions existantes</RWAutoSell.ExceptsMaxReached>
   <RWAutoSell.RuleLabelAll>Tous {0}</RWAutoSell.RuleLabelAll>
@@ -56,6 +62,9 @@
   <RWAutoSell.PawnRules.ASRuleTraitsLabelSingular>{0} trait de personnalité</RWAutoSell.PawnRules.ASRuleTraitsLabelSingular>
   <RWAutoSell.PawnRules.ASRuleTraitsLabelPluralAny>a un de ces traits de personnalité</RWAutoSell.PawnRules.ASRuleTraitsLabelPluralAny>
   <RWAutoSell.PawnRules.ASRuleTraitsLabelPluralAll>a tous ces traits de personnalité</RWAutoSell.PawnRules.ASRuleTraitsLabelPluralAll>
+  <RWAutoSell.PawnRules.ASRulePartsMissingLabelSingular>A {0} manquant</RWAutoSell.PawnRules.ASRulePartsMissingLabelSingular>
+  <RWAutoSell.PawnRules.ASRulePartsMissingLabelPluralAny>a l'une de ces parties du corps manquantes</RWAutoSell.PawnRules.ASRulePartsMissingLabelPluralAny>
+  <RWAutoSell.PawnRules.ASRulePartsMissingLabelPluralAll>possède toutes ces parties du corps manquantes</RWAutoSell.PawnRules.ASRulePartsMissingLabelPluralAll>    
   <RWAutoSell.MC>y</RWAutoSell.MC>
   <!--Rule Label Order 
   
@@ -64,6 +73,7 @@
   2=Health  (e.g. With Health Above 50%)
   3=Quality (e.g. of Quality Below poor)
   4=Keep Count (e.g. and keep a minimum of 30)
+  5=Reorder Point (e.g. and buy more when stock is below 10)
   -->
-  <RWAutoSell.RuleLabel>{0}{1}{2}{3}{4}</RWAutoSell.RuleLabel>
+  <RWAutoSell.RuleLabel>{0}{1}{2}{3}{4}{5}</RWAutoSell.RuleLabel>
 </LanguageData>

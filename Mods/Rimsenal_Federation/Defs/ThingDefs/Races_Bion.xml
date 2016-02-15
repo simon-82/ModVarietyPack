@@ -258,7 +258,7 @@
 
   <ThingDef ParentName="BaseBion">
     <defName>Race_BionDemo</defName>
-    <label>bion</label>
+    <label>bion peacebuilder</label>
     <description>Mass produced, lobotomized, brainwashed and genetically modified, Federation Bions are xenohuman that designed for war. Technically, they are not human anymore.</description>
     <statBases>
       <MoveSpeed>4.0</MoveSpeed>

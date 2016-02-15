@@ -1,22 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
+    <!--CCL only one def allowed, combined in one for MVP -->
     <ModHelperDef>
-        <defName>RedistHeat</defName>
-        <ModName>RedistHeat</ModName>
-        <version>0.12.1</version>
+        <defName>MVPHelpers</defName>
+        <ModName>ModVarietyPack</ModName>
+        <version>0.12.6</version>
         <MapComponents>
             <li>RedistHeat.AirNetTicker</li>
         </MapComponents>
-    </ModHelperDef>
-
-    <ModHelperDef>
-        <defName>StorageSearch</defName>
-        <ModName>StorageSearch</ModName>
-        <version>0.12.3</version>
         <SpecialInjectors>
             <li>StorageSearch.Injector_StorageSearch</li>
         </SpecialInjectors>
     </ModHelperDef>
-
 </Defs>

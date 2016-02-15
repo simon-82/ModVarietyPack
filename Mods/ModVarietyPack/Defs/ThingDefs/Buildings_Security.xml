@@ -81,7 +81,7 @@
     <description>An artillery shell connected to a homemade trigger. When someone disturbs the trigger, the shell explodes. The improvised trigger has a random delay that might allow a nimble enemy to escape.</description>
     <costList>
       <ArtilleryShell>1</ArtilleryShell>
-      <Steel>50</Steel>
+      <SteelBar>30</SteelBar>
     </costList>
     <designationCategory>Security</designationCategory>
     <designationHotKey>M</designationHotKey>
@@ -126,7 +126,7 @@
     <description>Explosives mixed into an incendiary paste with a chemical trigger for dispersal. Its chemical trigger is simple and reliable.</description>
     <costList>
       <ArtilleryShell>1</ArtilleryShell>
-      <Steel>50</Steel>
+      <SteelBar>30</SteelBar>
     </costList>
     <designationCategory>Security</designationCategory>
     <designationHotKey>N</designationHotKey>

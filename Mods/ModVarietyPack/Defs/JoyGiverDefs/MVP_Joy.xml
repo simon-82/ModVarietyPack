@@ -1,25 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  
-
   <!-- === training === -->
-  <JoyGiverDef>
-    <defName>UseDummy</defName>
-    <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
-    <baseChance>2</baseChance>
-    <thingDef>MrDummy</thingDef>
-    <jobDef>UseDummy</jobDef>
-    <joyKind>Meditative</joyKind>
+ <JoyGiverDef>
+    <defName>PracticeShooting</defName>
+    <giverClass>TrainingFacilityCR.JoyGiver_PracticeShooting</giverClass>
+    <baseChance>2.5</baseChance>
+    <thingDef>ShootingRangeTarget</thingDef>
+    <standDistanceRange>
+      <min>8</min>
+      <max>10</max>
+    </standDistanceRange>
+    <desireSit>false</desireSit>
+    <jobDef>UseShootingRange</jobDef>
+    <joyKind>GamingDexterity</joyKind>
   </JoyGiverDef>
   
   <JoyGiverDef>
-    <defName>UseTarget</defName>
-    <giverClass>JoyGiver_InteractBuildingInteractionCell</giverClass>
-    <baseChance>2</baseChance>
-    <thingDef>ShootingRange</thingDef>
-    <jobDef>UseTarget</jobDef>
-    <joyKind>Meditative</joyKind>
+    <defName>PracticeMartialArts</defName>
+    <giverClass>TrainingFacilityCR.JoyGiver_PracticeMartialArts</giverClass>
+    <baseChance>2.5</baseChance>
+    <thingDef>MartialArtsTarget</thingDef>
+    <standDistanceRange>
+      <min>1</min>
+      <max>1</max>
+    </standDistanceRange>
+    <desireSit>false</desireSit>
+    <jobDef>UseMartialArtsTarget</jobDef>
+    <joyKind>GamingDexterity</joyKind>
   </JoyGiverDef>
 
 

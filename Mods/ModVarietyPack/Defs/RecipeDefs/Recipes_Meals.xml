@@ -45,6 +45,11 @@
 			<exceptedThingDefs>
 				<li>Human_Meat</li>
 				<li>Norbal_Meat</li>
+				<li>Race_Bion_Meat</li>
+				<li>Race_BionStalker_Meat</li>
+				<li>Race_BionHulk_Meat</li>
+				<li>Race_BionPrime_Meat</li>
+				<li>Race_BionDemo_Meat</li>
 			</exceptedThingDefs>
 		</defaultIngredientFilter>
 		<workSkill>Cooking</workSkill>
@@ -109,6 +114,11 @@
 			<exceptedThingDefs>
 				<li>Human_Meat</li>
 				<li>Norbal_Meat</li>
+				<li>Race_Bion_Meat</li>
+				<li>Race_BionStalker_Meat</li>
+				<li>Race_BionHulk_Meat</li>
+				<li>Race_BionPrime_Meat</li>
+				<li>Race_BionDemo_Meat</li>
 			</exceptedThingDefs>
 		</defaultIngredientFilter>
 		<skillRequirements>
@@ -170,6 +180,11 @@
 			<exceptedThingDefs>
 				<li>Human_Meat</li>
 				<li>Norbal_Meat</li>
+				<li>Race_Bion_Meat</li>
+				<li>Race_BionStalker_Meat</li>
+				<li>Race_BionHulk_Meat</li>
+				<li>Race_BionPrime_Meat</li>
+				<li>Race_BionDemo_Meat</li>
 			</exceptedThingDefs>
 		</defaultIngredientFilter>
 		<skillRequirements>
@@ -240,6 +255,11 @@
 			<exceptedThingDefs>
 				<li>Human_Meat</li>
 				<li>Norbal_Meat</li>
+				<li>Race_Bion_Meat</li>
+				<li>Race_BionStalker_Meat</li>
+				<li>Race_BionHulk_Meat</li>
+				<li>Race_BionPrime_Meat</li>
+				<li>Race_BionDemo_Meat</li>
 			</exceptedThingDefs>
 		</defaultIngredientFilter>
 		<skillRequirements>
@@ -302,6 +322,11 @@
 			<exceptedThingDefs>
 				<li>Human_Meat</li>
 				<li>Norbal_Meat</li>
+				<li>Race_Bion_Meat</li>
+				<li>Race_BionStalker_Meat</li>
+				<li>Race_BionHulk_Meat</li>
+				<li>Race_BionPrime_Meat</li>
+				<li>Race_BionDemo_Meat</li>
 			</exceptedThingDefs>
 		</defaultIngredientFilter>
 		<skillRequirements>
@@ -364,6 +389,11 @@
 			<exceptedThingDefs>
 				<li>Human_Meat</li>
 				<li>Norbal_Meat</li>
+				<li>Race_Bion_Meat</li>
+				<li>Race_BionStalker_Meat</li>
+				<li>Race_BionHulk_Meat</li>
+				<li>Race_BionPrime_Meat</li>
+				<li>Race_BionDemo_Meat</li>
 			</exceptedThingDefs>
 		</defaultIngredientFilter>
 		<skillRequirements>
@@ -464,10 +494,15 @@
 			<categories>
 				<li>MeatRaw</li>
 			</categories>
-			<exceptedThingDefs>
-				<li>Human_Meat</li>
-				<li>Norbal_Meat</li>
-			</exceptedThingDefs>
+		<exceptedThingDefs>
+			<li>Human_Meat</li>
+			<li>Norbal_Meat</li>
+			<li>Race_Bion_Meat</li>
+			<li>Race_BionStalker_Meat</li>
+			<li>Race_BionHulk_Meat</li>
+			<li>Race_BionPrime_Meat</li>
+			<li>Race_BionDemo_Meat</li>
+		</exceptedThingDefs>
 		</defaultIngredientFilter>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
@@ -723,6 +758,23 @@
 				<li>bread</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li>bread</li>
+			</thingDefs>
+			<exceptedThingDefs>
+				<li>Human_Meat</li>
+				<li>Norbal_Meat</li>
+				<li>Race_Bion_Meat</li>
+				<li>Race_BionStalker_Meat</li>
+				<li>Race_BionHulk_Meat</li>
+				<li>Race_BionPrime_Meat</li>
+				<li>Race_BionDemo_Meat</li>
+			</exceptedThingDefs>
+		</defaultIngredientFilter>
 		<products>
 			<Burger>1</Burger>
 		</products>
@@ -773,6 +825,24 @@
 				<li>Cheese</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li>bread</li>
+				<li>Cheese</li>
+			</thingDefs>
+			<exceptedThingDefs>
+				<li>Human_Meat</li>
+				<li>Norbal_Meat</li>
+				<li>Race_Bion_Meat</li>
+				<li>Race_BionStalker_Meat</li>
+				<li>Race_BionHulk_Meat</li>
+				<li>Race_BionPrime_Meat</li>
+				<li>Race_BionDemo_Meat</li>
+			</exceptedThingDefs>
+		</defaultIngredientFilter>
 		<products>
 			<CheeseBurger>1</CheeseBurger>
 		</products>
@@ -841,6 +911,26 @@
 				<li>RawLettuce</li>
 			</thingDefs>
 		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+			<thingDefs>
+				<li>bread</li>
+				<li>Cheese</li>
+				<li>RawTomatoes</li>
+				<li>RawLettuce</li>
+			</thingDefs>
+			<exceptedThingDefs>
+				<li>Human_Meat</li>
+				<li>Norbal_Meat</li>
+				<li>Race_Bion_Meat</li>
+				<li>Race_BionStalker_Meat</li>
+				<li>Race_BionHulk_Meat</li>
+				<li>Race_BionPrime_Meat</li>
+				<li>Race_BionDemo_Meat</li>
+			</exceptedThingDefs>
+		</defaultIngredientFilter>
 		<products>
 			<DeluxeBurger>1</DeluxeBurger>
 		</products>

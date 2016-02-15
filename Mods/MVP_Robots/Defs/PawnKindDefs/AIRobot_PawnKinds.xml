@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PawnKindDefs>
+
+	<PawnKindDef>
+		<defName>AIRobot_Hauler</defName>
+		<label>Hauling Bot</label>
+		<race>AIRobot_Hauler</race>
+		<combatPower>999999</combatPower>
+		<defaultFactionType>Colony</defaultFactionType>
+		<baseRecruitDifficulty>5</baseRecruitDifficulty>
+		<backstoryCategory>Spacer</backstoryCategory>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/AIRobot/HoverBot</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.2, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>1000</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<apparelTags>
+			<li>Spacer</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>0</min>
+			<max>0</max>
+		</apparelMoney>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<forceNormalGearQuality>false</forceNormalGearQuality>
+	</PawnKindDef>
+
+	<PawnKindDef>
+		<defName>AIRobot_Cleaner</defName>
+		<label>Cleaning Bot</label>
+		<race>AIRobot_Cleaner</race>
+		<combatPower>999999</combatPower>
+		<defaultFactionType>Colony</defaultFactionType>
+		<baseRecruitDifficulty>5</baseRecruitDifficulty>
+		<backstoryCategory>Spacer</backstoryCategory>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/AIRobot/CleanBot</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.2, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>1000</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<apparelTags>
+			<li>Spacer</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>0</min>
+			<max>0</max>
+		</apparelMoney>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<forceNormalGearQuality>false</forceNormalGearQuality>
+	</PawnKindDef>
+
+	<PawnKindDef>
+		<defName>AIRobot_Cook</defName>
+		<label>Cook Bot</label>
+		<race>AIRobot_Cook</race>
+		<combatPower>999999</combatPower>
+		<defaultFactionType>Colony</defaultFactionType>
+		<baseRecruitDifficulty>5</baseRecruitDifficulty>
+		<backstoryCategory>Spacer</backstoryCategory>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/AIRobot/CookBot</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.2, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>1000</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<apparelTags>
+			<li>Spacer</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>0</min>
+			<max>0</max>
+		</apparelMoney>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<forceNormalGearQuality>false</forceNormalGearQuality>
+	</PawnKindDef>
+
+
+	<PawnKindDef>
+		<defName>AIRobot_Miner</defName>
+		<label>Miner Bot</label>
+		<race>AIRobot_Miner</race>
+		<combatPower>999999</combatPower>
+		<defaultFactionType>Colony</defaultFactionType>
+		<baseRecruitDifficulty>5</baseRecruitDifficulty>
+		<backstoryCategory>Spacer</backstoryCategory>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/AIRobot/MineBot</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.2, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>1000</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<apparelTags>
+			<li>Spacer</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>0</min>
+			<max>0</max>
+		</apparelMoney>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<forceNormalGearQuality>false</forceNormalGearQuality>
+	</PawnKindDef>
+
+
+	<PawnKindDef>
+		<defName>AIRobot_Farmer</defName>
+		<label>Farmer Bot</label>
+		<race>AIRobot_Farmer</race>
+		<combatPower>999999</combatPower>
+		<defaultFactionType>Colony</defaultFactionType>
+		<baseRecruitDifficulty>5</baseRecruitDifficulty>
+		<backstoryCategory>Spacer</backstoryCategory>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/AIRobot/GrowBot</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.2, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>1000</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<apparelTags>
+			<li>Spacer</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>0</min>
+			<max>0</max>
+		</apparelMoney>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<forceNormalGearQuality>false</forceNormalGearQuality>
+	</PawnKindDef>
+
+	<PawnKindDef>
+		<defName>AIRobot_Crafter</defName>
+		<label>Crafter Bot</label>
+		<race>AIRobot_Crafter</race>
+		<combatPower>999999</combatPower>
+		<defaultFactionType>Colony</defaultFactionType>
+		<baseRecruitDifficulty>5</baseRecruitDifficulty>
+		<backstoryCategory>Spacer</backstoryCategory>
+		<isFighter>false</isFighter>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/AIRobot/CraftBot</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.2, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>1000</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<apparelTags>
+			<li>Spacer</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>0</min>
+			<max>0</max>
+		</apparelMoney>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<forceNormalGearQuality>false</forceNormalGearQuality>
+	</PawnKindDef>
+	
+</PawnKindDefs>

@@ -1032,7 +1032,7 @@
 		<soundDrop>Standard_Drop</soundDrop>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
-			<MarketValue>5</MarketValue>
+			<MarketValue>10</MarketValue>
 			<Flammability>1.0</Flammability>
 			<MedicalPotency>0.75</MedicalPotency>
 			<DeteriorationRate>5</DeteriorationRate>
@@ -1334,7 +1334,7 @@
 		</graphicData>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
-			<MarketValue>0.05</MarketValue>
+			<MarketValue>5</MarketValue>
 			<Flammability>1.0</Flammability>
 			<DeteriorationRate>2</DeteriorationRate>
 		</statBases>

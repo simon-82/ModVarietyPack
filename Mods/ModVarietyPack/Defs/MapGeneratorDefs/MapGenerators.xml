@@ -26,9 +26,9 @@
       <!-- Misc_HiRes Ruins -->
       <!-- Empty ruins village -->
       <li Class="MapGenerator.Genstep_CreateBlueprintVillage">
-        <countPer10kCellsRange><min>0.15</min><max>0.35</max></countPer10kCellsRange>
-    <ruinCountRange><min>3</min><max>6</max></ruinCountRange>
-    <ruinDistanceRange><min>2</min><max>6</max></ruinDistanceRange>
+        <countPer10kCellsRange><min>0.15</min><max>0.30</max></countPer10kCellsRange>
+    <ruinCountRange><min>1</min><max>4</max></ruinCountRange>
+    <ruinDistanceRange><min>3</min><max>8</max></ruinDistanceRange>
     <ruinOffsetHorizontalRange><min>4</min><max>15</max></ruinOffsetHorizontalRange>
     <ruinOffsetVerticalRange><min>4</min><max>15</max></ruinOffsetVerticalRange>
       </li>
@@ -63,28 +63,6 @@
           </li>
         </validators>
       </li>
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-
-
-
-
       
       <!-- Some essentials -->
       <li Class="Genstep_Plants" />

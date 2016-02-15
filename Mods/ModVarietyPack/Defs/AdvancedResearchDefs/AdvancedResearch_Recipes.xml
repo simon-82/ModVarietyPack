@@ -362,6 +362,79 @@
         </thingDefs>        
     </AdvancedResearchDef>
 
+    <AdvancedResearchDef>         
+        <defName>BotBasic</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>RobotsI</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeBotHauler</li>
+            <li>MakeBotCleaner</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>ElectronicWorkbench</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>BotCook</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>RobotsIICook</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeBotCook</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>ElectronicWorkbench</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>BotMiner</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>RobotsIIMiner</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeBotMiner</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>ElectronicWorkbench</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>BotFarmer</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>RobotsIIFarmer</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeBotFarmer</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>ElectronicWorkbench</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    <AdvancedResearchDef>         
+        <defName>BotCrafter</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>RobotsIICrafter</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeBotCrafter</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>ElectronicWorkbench</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+
+
 
 
 
