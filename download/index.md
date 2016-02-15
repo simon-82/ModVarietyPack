@@ -6,8 +6,8 @@ description:
 
 ---
 
-<div markdown="0"><a href="https://github.com/simon-82/ModVarietyPack/archive/1.24.zip" class="btn btn-info">download latest release as .zip file (Windows)</a></div>
-<div markdown="0"><a href="https://github.com/simon-82/ModVarietyPack/archive/1.24.tar.gz" class="btn btn-info">or as .tar.gz file (Linux / Mac)</a></div>    
+<div markdown="0"><a href="https://github.com/simon-82/ModVarietyPack/archive/1.25.zip" class="btn btn-info">download latest release as .zip file (Windows)</a></div>
+<div markdown="0"><a href="https://github.com/simon-82/ModVarietyPack/archive/1.25.tar.gz" class="btn btn-info">or as .tar.gz file (Linux / Mac)</a></div>    
 
 Only compatible with version Alpha12d of Rimworld.           
 Needs to be run in English.    
