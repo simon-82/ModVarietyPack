@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
 
+  <!-- MVP smelt products changed to bars -->
+
   <ThingDef Name="BasePawn" Abstract="True">
     <thingClass>Pawn</thingClass>
     <category>Pawn</category>
@@ -45,14 +47,15 @@
     </race>
   </ThingDef>
 
+  <!-- MVP reduced Armor from .7 / .8 -->
   <ThingDef ParentName="BaseMech">
     <defName>Race_Federator</defName>
     <label>federator</label>
     <description>The M2A4 "Federator" Main Battle Mechsuit is a mechsuit model produced by Arms Dynamics. Developed as a heavy assault mechsuit, the Federator's design has been compared to a main battle tank.</description>
     <statBases>
       <MoveSpeed>1.5</MoveSpeed>
-      <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
       <MeatAmount>30</MeatAmount>
     </statBases>
     <verbs>
@@ -97,22 +100,23 @@
       <soundMeleeMiss>Pawn_MechMiss</soundMeleeMiss>
     </race>
     <butcherProducts>
-      <Steel>80</Steel>
-      <Plasteel>50</Plasteel>
+      <SteelBar>80</SteelBar>
+      <PlasteelBar>50</PlasteelBar>
     </butcherProducts>
     <recipes>
       <li>ShutDownMechanoid</li>
     </recipes>
   </ThingDef>
 
+  <!-- MVP reduced Armor from .75 / .85 --> 
   <ThingDef ParentName="BaseMech">
     <defName>Race_Ordinator</defName>
     <label>ordinator</label>
     <description>M3A1 "Ordinator" is a close quarter combat variant of "Federator" Mechsuit. Although it lacks with overwhelming firepower of the Federator, even heavier armor plates and deadly close combat capability makes the Ordinator fearsome foe.</description>
     <statBases>
       <MoveSpeed>1.4</MoveSpeed>
-      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.63</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.63</ArmorRating_Sharp>
       <MeatAmount>30</MeatAmount>
     </statBases>
     <verbs>
@@ -137,7 +141,8 @@
       <thinkTree>Mechanoid</thinkTree>
       <body>MechBody</body>
       <baseBodySize>4</baseBodySize>
-      <baseHealthScale>1.7</baseHealthScale>
+      <!-- MVP up scale from 1.7 -->
+      <baseHealthScale>3.4</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>MechanoidFullyFormed</def>
@@ -157,8 +162,8 @@
       <soundMeleeMiss>Pawn_MechMiss</soundMeleeMiss>
     </race>
     <butcherProducts>
-      <Steel>80</Steel>
-      <Plasteel>50</Plasteel>
+      <SteelBar>80</SteelBar>
+      <PlasteelBar>50</PlasteelBar>
     </butcherProducts>
     <recipes>
       <li>ShutDownMechanoid</li>
@@ -217,8 +222,8 @@
       <soundMeleeMiss>Pawn_MechMiss</soundMeleeMiss>
     </race>
     <butcherProducts>
-      <Steel>80</Steel>
-      <Plasteel>50</Plasteel>
+      <SteelBar>80</SteelBar>
+      <PlasteelBar>50</PlasteelBar>
     </butcherProducts>
     <recipes>
       <li>ShutDownMechanoid</li>

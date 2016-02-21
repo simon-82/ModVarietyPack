@@ -2884,6 +2884,7 @@
     </projectile>
   </ThingDef>
 
+  <!-- Centipede -->
   <ThingDef ParentName="BaseGun">
     <defName>Gun_InfernoCannon</defName>
     <label>inferno cannon</label>
@@ -2930,6 +2931,80 @@
         <shooterVariation>0.05</shooterVariation>
         <recoilOffsetX>(0.0,0.0)</recoilOffsetX>
         <recoilOffsetY>(0.0,0.0)</recoilOffsetY>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Minigun</defName>
+    <label>minigun bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>24</damageAmountBase>
+      <speed>333</speed>
+    </projectile>
+    <comps>
+      <li Class="Combat_Realism.CompProperties_AP">
+        <compClass>Combat_Realism.CompAP</compClass>
+        <armorPenetration>0.7</armorPenetration>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanGun">
+    <defName>Gun_Minigun</defName>
+    <label>minigun</label>
+    <description>A multi-barrel machine gun with an extremely high rate of fire. Mechanoid-built.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Minigun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractRifle</soundInteract>
+    <statBases>
+      <MarketValue>2200</MarketValue>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.50</AccuracyShort>
+      <AccuracyMedium>0.60</AccuracyMedium>
+      <AccuracyLong>0.60</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+    <tradeability>Never</tradeability>
+    <destroyOnDrop>True</destroyOnDrop>
+    <menuHidden>True</menuHidden>
+    <weaponTags>
+      <li>MechanoidGunHeavy</li>
+    </weaponTags>
+    <equippedStatOffsets>
+      <MoveSpeed>0.00</MoveSpeed>
+      <WorkSpeedGlobal>0.00</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <verbs>
+      <li>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Minigun</projectileDef>
+        <forcedMissRadius>2.4</forcedMissRadius>
+        <warmupTicks>180</warmupTicks>
+        <minRange>3</minRange>
+        <range>107</range>
+        <burstShotCount>150</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <soundCast>ShotMinigun</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <comps>
+      <li Class="Combat_Realism.CompPropertiesCustom">
+        <compClass>Combat_Realism.CompAim</compClass>
+        <shotVariation>0.20</shotVariation>
+        <shooterVariation>0.4</shooterVariation>
+        <recoilOffsetX>(-0.3,0.3)</recoilOffsetX>
+        <recoilOffsetY>(-0.3,0.3)</recoilOffsetY>
       </li>
     </comps>
   </ThingDef>

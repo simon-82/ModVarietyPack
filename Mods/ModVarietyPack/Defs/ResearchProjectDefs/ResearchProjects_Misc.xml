@@ -122,7 +122,7 @@
     <ResearchProjectDef>
 		<defName>AgricultureII</defName>
 		<label>Agriculture II</label>
-		<description>"These new plants grow faster and yield more than the ones we have been growing so far. But we need to fertilize the soil for them to grow. I'll set up a composter so we can get that going." \n"Well, you do that. I'm off catching some fish!" \nUnlocks: Fertilized Soil, Fishing Rod, Harpoon (made at the Basic Weapon Crafting Workbench)</description>
+		<description>"These new plants grow faster and yield more than the ones we have been growing so far. But we need to fertilize the soil for them to grow. I'll set up a composter so we can get that going." \n"Well, you do that. I'm off catching some fish!"</description>
 		<totalCost>1100</totalCost>
 		<prerequisites>
 			<li>AgricultureI</li>
@@ -147,7 +147,7 @@
 			<prerequisites>
 				<li>Brewing</li>
 			</prerequisites>
-		</ResearchProjectDef>		
+		</ResearchProjectDef>				
 	
 	<ResearchProjectDef>
 		<defName>Hydroponics</defName>
@@ -581,7 +581,7 @@
 	<ResearchProjectDef>
 		<defName>PowerI</defName>
 		<label>Power I</label>
-		<description>"It's pretty unsafe having a campfire inside your room, you know?" \n"But it was so cold and dark inside." \n"We really need to start generating power so we can have some lights."</description>
+		<description>"It's pretty unsafe having a campfire inside your room, you know?" \n"But it was so cold and dark inside." \n"We really need to start generating power so we can have some lights." \n"A basic cook stove would also help. No more salads and jerky, please?!"</description>
 		<totalCost>400</totalCost>
 	</ResearchProjectDef>
 

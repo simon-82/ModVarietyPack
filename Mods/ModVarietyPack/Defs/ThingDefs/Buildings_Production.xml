@@ -172,6 +172,11 @@
 		<recipes>
 			<li>CookMealSalad</li>
 			<li>ButcherCorpseFlesh</li>
+			<li>ShellMashgon</li>
+            <li>PrepareSduiggles</li>
+            <li>PrepareSeasnake</li>
+            <li>PrepareBlueblade</li>
+            <li>ButcherTailteeth</li>
 			<!-- advanced research basic food prep recipes -->
 		</recipes>
 		<inspectorTabs>
@@ -539,7 +544,7 @@
 			<heatPerTickWhileWorking>0.25</heatPerTickWhileWorking>
 		</building>
 		<designationHotKey>O</designationHotKey>
-		<researchPrerequisite>Brewing</researchPrerequisite>
+		<researchPrerequisite>PowerI</researchPrerequisite>
 	</ThingDef>
 
 
@@ -1891,6 +1896,8 @@
 			<li>MakeTaffy</li>
 			<li>MakeCookies</li>
 			<li>MakeBread</li>
+			<li>MakePieBlueberry</li>
+            <li>MakePiePumpkin</li>
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -2299,7 +2306,7 @@
 		<DefName>TableWeapon</DefName>
 		<label>Weapon Crafting Workbench</label>
 		<ThingClass>Building_WorkTable</ThingClass>
-		<Description>A workbench to produce primitive weapons.</Description>
+		<Description>A workbench to produce primitive weapons / turrets.</Description>
 		<graphicData>
 			<texPath>Buildings/TableWeapon</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -2329,7 +2336,7 @@
 		<recipes>
 		<li>MakeFishingRod</li>
 		</recipes>
-			<!--ALL vanilla melee+ranged neolithic CR modified + fishing rod, harpoon-->
+			<!--ALL vanilla melee+ranged neolithic CR modified + fishing rod, harpoon via adv research-->
 		<inspectorTabs>
 			<li>ITab_Bills</li>
 		</inspectorTabs>

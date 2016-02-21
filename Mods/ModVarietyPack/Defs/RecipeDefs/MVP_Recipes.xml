@@ -568,7 +568,7 @@
 						<li>WoodPlank</li>
 					</thingDefs>
 				</filter>
-				<count>20</count>
+				<count>30</count>
 			</li>
 			<li>
 				<filter>
@@ -576,7 +576,7 @@
 						<li>Cloth</li>
 					</thingDefs>
 				</filter>
-				<count>10</count>
+				<count>20</count>
 			</li>
 			<li>
 				<filter>
@@ -596,6 +596,45 @@
 		</fixedIngredientFilter>
 		<products>
 			<FishingRod>1</FishingRod>
+		</products>
+		<workSkill>Crafting</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>MakeHarpoon</defName>
+		<label>Make harpoon</label>
+		<description>Make a harpoon. Designed to hunt big fishes, it can serve other purposes.</description>
+		<jobString>Making harpoon.</jobString>
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<workAmount>800</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>WoodPlank</li>
+					</thingDefs>
+				</filter>
+				<count>60</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SteelBar</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>WoodPlank</li>
+				<li>SteelBar</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Harpoon>1</Harpoon>
 		</products>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>

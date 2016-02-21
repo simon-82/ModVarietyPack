@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+
+  <ThingDef Name="BaseGun" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <selectable>True</selectable>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>0.9</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <SellPriceFactor>0.6</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Spacer</techLevel>
+    <thingCategories>
+      <li>ADWeapons</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompForbiddable</compClass>
+      </li>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li>
+        <compClass>CompArt</compClass>
+        <nameMaker>NamerGun</nameMaker>
+        <descriptionMaker>ArtWeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <smeltProducts>
+      <SteelBar>20</SteelBar>
+      <PlasteelBar>20</PlasteelBar>
+    </smeltProducts>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseHumanGun" ParentName="BaseGun" Abstract="True">
+    <weaponTags>
+      <li>FedPrime</li>
+    </weaponTags>
+  </ThingDef>
+
+
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+
+  </ThingDef>
+
+  <!-- ============================================================== -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>RS_Bullet_Terminus</defName>
+		<label>particle blast</label>
+		<graphicData> <texPath>Things/Projectile/Ion</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<thingClass>Projectile_Explosive</thingClass>		
+		<projectile>
+			<damageDef>Ion</damageDef>
+			<DamageAmountBase>50</DamageAmountBase>
+			<Speed>300</Speed>
+			<explosionRadius>1</explosionRadius>
+			<explosionDelay>100</explosionDelay>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseHumanGun">
+		<defName>PrimeTerminus</defName>
+		<label>Terminus rifle</label>
+		<description>Stripping enemies apart molecule by molecule, origin of this mysterious weapon dates as far back as the pic of the Federation.</description>
+		<graphicData> <texPath>Things/A9/Terminus</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<soundInteract>InteractChargeRifle</soundInteract>
+		<!--<menuHidden>True</menuHidden> MVP removed --> 
+		<tradeability>Never</tradeability>
+		<statBases>
+			<MarketValue>3000</MarketValue>
+			<MaxHitPoints>200</MaxHitPoints>
+				<AccuracyTouch>0.60</AccuracyTouch>
+				<AccuracyShort>0.60</AccuracyShort>
+				<AccuracyMedium>0.70</AccuracyMedium>
+				<AccuracyLong>0.70</AccuracyLong>
+				<RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>RS_Bullet_Terminus</projectileDef>
+        <ticksBetweenBurstShots>25</ticksBetweenBurstShots>
+				<warmupTicks>100</warmupTicks>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<range>50</range>
+				<soundCast>IonicShot</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>19</muzzleFlashScale>
+			</li>
+		</verbs>
+	</ThingDef>
+</ThingDefs>

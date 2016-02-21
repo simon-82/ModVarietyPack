@@ -439,7 +439,13 @@
     <costStuffCount>8</costStuffCount>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
     <altitudeLayer>BuildingTall</altitudeLayer>
-    <passability>Impassable</passability>
+    <!-- <passability>Impassable</passability> 
+    test with high pathcost to fix AI shooting buildings have 70 -->
+
+    <pathCost>999</pathCost>
+    <passability>PassThroughOnly</passability>
+    
+
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>0.73</fillPercent>
     <coversFloor>true</coversFloor>

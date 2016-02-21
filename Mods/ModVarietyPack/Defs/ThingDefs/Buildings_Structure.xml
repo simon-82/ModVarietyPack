@@ -301,7 +301,7 @@
       <MarketValue>10</MarketValue>
       <WorkToMake>100</WorkToMake>
       <Flammability>1.0</Flammability>
-      <Beauty>80</Beauty>
+      <Beauty>5</Beauty>
     </statBases>
     <costStuffCount>5</costStuffCount>
     <stuffCategories>

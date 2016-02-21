@@ -3,37 +3,19 @@
 
     <!-- Agriculture -->
     <AdvancedResearchDef>         
-        <defName>AgricultureIIButcherFish</defName>
+        <defName>AgricultureIIRodHarpoon</defName>
         <Priority>0</Priority>        
         <researchDefs>
             <li>AgricultureII</li>
         </researchDefs>        
         <recipeDefs>
-            <li>ShellMashgon</li>
-            <li>PrepareSduiggles</li>
-            <li>PrepareSeasnake</li>
-            <li>PrepareBlueblade</li>
-            <li>ButcherTailteeth</li>
+            <li>MakeFishingRod</li>
+            <li>MakeHarpoon</li>
         </recipeDefs>        
         <thingDefs>
-            <li>TableButcher</li>
+            <li>TableWeapon</li>
         </thingDefs>        
     </AdvancedResearchDef>
-
-     <AdvancedResearchDef>         
-        <defName>AgricultureIICook</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>AgricultureII</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>MakePieBlueberry</li>
-            <li>MakePiePumpkin</li>            
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableOven</li>
-        </thingDefs>        
-    </AdvancedResearchDef>    
 
     <AdvancedResearchDef>         
         <defName>AgricultureIIIPressing</defName>

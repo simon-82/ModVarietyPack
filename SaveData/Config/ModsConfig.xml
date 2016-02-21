@@ -6,13 +6,15 @@
     <li>Community Core Library</li>
     <li>EdBModOrder</li>
     <li>MVP_CoreTextures</li>    
-    <li>CombatRealism</li>    
+    <li>CombatRealism</li>
+    <li>LT_Infusion</li>    
     <li>Rimsenal_CR</li>
     <li>Rimsenal_Federation</li>
     <li>Norbals</li>
     <li>VeinMiner</li>
     <li>RW_Manager-12.3.3</li>
     <li>RT Storage</li>
+    <li>Hospitality</li> 
     <li>ModVarietyPack</li>
     <li>AllowTool</li>
     <li>EnhancedDevelopment</li>  
@@ -23,9 +25,7 @@
     <li>Pawn State Icons</li>
     <li>RW_MedicalInfo</li>
     <li>RW_EnhancedTabs</li>
-    <li>LT_NoCleaningPlease</li>
-    <li>Hospitality</li>    
-    <li>LT_Infusion</li>
+    <li>LT_NoCleaningPlease</li>    
     <li>MVP_Robots</li>
     <li>RWAutoSell</li>    
   </activeMods>

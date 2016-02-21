@@ -6,6 +6,8 @@
     <workerClass>MechanoidTerraformer.IncidentWorker_MechanoidTerraformer</workerClass>
     <chance>0.7</chance>
     <minRefireDays>150</minRefireDays>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>900</minThreatPoints>
     <category>ThreatBig</category>
   </IncidentDef>
   
