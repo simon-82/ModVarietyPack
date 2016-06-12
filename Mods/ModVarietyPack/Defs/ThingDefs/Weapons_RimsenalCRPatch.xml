@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+	<!-- base can stay as is -->
+	<ThingDef Name="BaseADGun" Abstract="True">
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<equipmentType>Primary</equipmentType>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<selectable>True</selectable>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<SellPriceFactor>0.5</SellPriceFactor>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<techLevel>Spacer</techLevel>
+		<thingCategories>
+			<li>WeaponsRanged</li>
+		</thingCategories>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>ArtName_WeaponGun</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>FedGun</li>
+		</weaponTags>
+
+
+		<!-- recipes need to be changed -->
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+		</recipeMaker>
+		<smeltProducts>
+			<Plasteel>20</Plasteel>
+			<Steel>20</Steel>
+		</smeltProducts>
+	</ThingDef>
+
+
+
+
+	<!-- projectile base changed to CR base -->
+	<ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Combat_Realism.BulletCR</thingClass>
+    <label>bullet</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+	<projectile Class="Combat_Realism.ProjectilePropertiesCR"/>
+  </ThingDef>
+
+  <!-- example CR Pistol Bullet def 
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_40Rimfire</defName>
+    <label>.40 Rimfire bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <speed>71</speed>
+      <damageAmountBase>6</damageAmountBase>
+	  <armorPenetration>0.1</armorPenetration>
+    </projectile>
+  </ThingDef> -->
+
+
+
+
+
+
+	<!-- 
+			 projectile defs / damage defs have CR base 
+	-->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_Pacificator</defName>
+		<label>energy bolt</label>
+		<graphicData>
+			<texPath>Things/Projectile/Laser</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<!--  <thingClass>Projectile_Explosive</thingClass> -->
+		<thingClass>Combat_Realism.ProjectileCR_Explosive</thingClass>
+		<projectile>
+			<damageDef>Optic</damageDef>
+			<explosionRadius>0.5</explosionRadius>
+			<damageAmountBase>11</damageAmountBase>
+			<speed>200</speed> <!-- was 300 -->
+		</projectile>
+	</ThingDef>
+
+	<!-- add new ammo for optic weapons (based on charge ion) -->
+	<ThingDef Class="Combat_Realism.AmmoDef" ParentName="6x24mmChargedBase">
+    <defName>Ammo_6x24mm_Energy</defName>
+    <label>6x24mm energy cartridge</label>
+    <graphicData>
+      <texPath>Things/Ammo/Charged/Ion</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.97</MarketValue>
+    </statBases>
+	<linkedProjectile>Bullet_Pacificator</linkedProjectile>
+	<!-- add new ammoClass = AmmoCategoryDef -->
+	<ammoClass>Optic</ammoClass>
+	<canBeSpawningInventory>false</canBeSpawningInventory>
+  </ThingDef>
+
+  <AmmoCategoryDef>
+    <defName>Optic</defName>
+    <label>energy cartridge</label>
+    <description>energy cartridge for optic weapons.</description>
+  </AmmoCategoryDef>
+
+  <AmmoSetDef>
+    <defName>AmmoSet_6x24mm_Energy</defName>
+    <label>6x24mm energy cartridge</label>
+	<ammoTypes>
+	  <li>Ammo_6x24mm_Energy</li>
+	</ammoTypes>
+  </AmmoSetDef>
+
+
+  <!-- todo change research, costs -->
+	<ThingDef ParentName="BaseADGun">
+		<defName>AD_Pacificator</defName>
+		<label>crucible rifle</label>
+		<weaponTags>
+			<li>FedRifle</li>
+		</weaponTags>
+		<description>The Arms Dynamics "Pacificator" crucible rifle, the standard issue rifle of the notorious Federation Peacekeepers. This rifle fires focused energy bolt that vaporise everything in their path. It has does however have a relatively slow fire late due to possible overheating.</description>
+		<graphicData>
+			<texPath>Things/A13/Pacificator</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractADWeapons</soundInteract>
+		<recipeMaker>
+			<researchPrerequisite>CrucibleTech</researchPrerequisite>
+		</recipeMaker>
+		<statBases>
+			<WorkToMake>20500</WorkToMake>
+			<MarketValue>950</MarketValue>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+			<!-- remove vanilla accuracy stats
+			<AccuracyTouch>0.7</AccuracyTouch>
+			<AccuracyShort>0.8</AccuracyShort>
+			<AccuracyMedium>0.82</AccuracyMedium>
+			<AccuracyLong>0.7</AccuracyLong> 
+
+			add CR statBases, verbs, comps-->
+			<AimEfficiency>0.50</AimEfficiency>
+      <ShotSpread>0.08</ShotSpread>
+      <SwayFactor>1.42</SwayFactor>
+      <Bulk>9.50</Bulk>
+      <Weight>4.00</Weight>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+			<Plasteel>60</Plasteel>
+			<Components>10</Components>
+		</costList>
+		<verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+	    <recoilPattern>Regular</recoilPattern>
+	    <recoilAmount>0.96</recoilAmount>
+        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Pacificator</projectileDef>
+        <warmupTicks>125</warmupTicks>
+        <range>73</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>30</ticksBetweenBurstShots>
+        <soundCast>RS_ShotCR</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_AmmoUser">
+	    <magazineSize>30</magazineSize>
+		<reloadTicks>300</reloadTicks>
+		<ammoSet>AmmoSet_6x24mm_Energy</ammoSet>
+	  </li>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+	    <aimedBurstShotCount>1</aimedBurstShotCount>
+		<aiUseBurstMode>TRUE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+	</ThingDef>
+
+
+
+	<!-- REST OF THE RIMSENAL WEAPONS GO HERE (started with AD) -->
+</ThingDefs>

@@ -5,9 +5,9 @@
   <BodyPartDef>
     <defName>Heart</defName>
     <label>heart</label>
-    <hitPoints>15</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.5</bleedingRateMultiplier>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.32</oldInjuryBaseChance>
+    <bleedingRateMultiplier>6.75</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
     <activities>
       <li>BloodPumping</li>
@@ -19,9 +19,9 @@
   <BodyPartDef>
     <defName>LeftLung</defName>
     <label>left lung</label>
-    <hitPoints>15</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.32</oldInjuryBaseChance>
+    <bleedingRateMultiplier>3.9</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
     <activities>
       <li>Breathing_main</li>
@@ -32,9 +32,9 @@
   <BodyPartDef>
     <defName>RightLung</defName>
     <label>right lung</label>
-    <hitPoints>15</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.32</oldInjuryBaseChance>
+    <bleedingRateMultiplier>3.9</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
     <activities>
       <li>Breathing_main</li>
@@ -45,9 +45,9 @@
   <BodyPartDef>
     <defName>LeftKidney</defName>
     <label>left kidney</label>
-    <hitPoints>15</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.32</oldInjuryBaseChance>
+    <bleedingRateMultiplier>3.9</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
     <activities>
       <li>BloodFiltration_kidney</li>
@@ -58,9 +58,9 @@
   <BodyPartDef>
     <defName>RightKidney</defName>
     <label>right kidney</label>
-    <hitPoints>15</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.32</oldInjuryBaseChance>
+    <bleedingRateMultiplier>3.9</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
     <activities>
       <li>BloodFiltration_kidney</li>
@@ -71,9 +71,9 @@
   <BodyPartDef>
     <defName>Liver</defName>
     <label>liver</label>
-    <hitPoints>13</hitPoints>
-    <oldInjuryBaseChance>0.08</oldInjuryBaseChance>
-    <bleedingRateMultiplier>1.3</bleedingRateMultiplier>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0.32</oldInjuryBaseChance>
+    <bleedingRateMultiplier>5.85</bleedingRateMultiplier>
     <skinCovered>false</skinCovered>
     <activities>
       <li>Metabolism</li>

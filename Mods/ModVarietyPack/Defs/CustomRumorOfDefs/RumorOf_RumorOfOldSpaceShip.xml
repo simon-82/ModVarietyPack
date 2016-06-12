@@ -2,8 +2,8 @@
 <CustomRumorOfDefs>
 	<CustomRumorOfDef>
 		<defName>RumorOfOldSpaceShip</defName>
-		<daysPawnsAreGoneMin>3</daysPawnsAreGoneMin>
-		<daysPawnsAreGoneMax>7</daysPawnsAreGoneMax>
+		<daysPawnsAreGoneMin>2</daysPawnsAreGoneMin>
+		<daysPawnsAreGoneMax>5</daysPawnsAreGoneMax>
 		<treasureDefs>
 			<li>
 				<TreasureDef>Apparel_PowerArmor</TreasureDef>
@@ -15,11 +15,12 @@
 				<GiveStack>false</GiveStack>
 				<Chance>20</Chance>
 			</li>
+			<!-- rimsenal gun 
 			<li>
-				<TreasureDef>RS_Gun_Grendel</TreasureDef>
+				<TreasureDef>Gun_RailgunMKI</TreasureDef>
 				<GiveStack>false</GiveStack>
-				<Chance>10</Chance>
-			</li>
+				<Chance>15</Chance>
+			</li> -->
 			<li>
 				<TreasureDef>BionicEye</TreasureDef>
 				<GiveStack>false</GiveStack>
@@ -36,14 +37,14 @@
 				<Chance>25</Chance>
 			</li>
 			<li>
-				<TreasureDef>AIPersonaCore</TreasureDef>
+				<TreasureDef>Gold</TreasureDef>
 				<GiveStack>false</GiveStack>
 				<Chance>15</Chance>
 			</li>
 			<li>
-				<TreasureDef>Plasteel</TreasureDef>
+				<TreasureDef>PlasteelBar</TreasureDef>
 				<GiveStack>true</GiveStack>
-				<Chance>35</Chance>
+				<Chance>10</Chance>
 			</li>
 		</treasureDefs>
 		<enemySpawnChanceTreasure>75</enemySpawnChanceTreasure>

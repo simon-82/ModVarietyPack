@@ -1,32 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModsConfigData>
-  <buildNumber>914</buildNumber>
+  <buildNumber>1135</buildNumber>
   <activeMods>
     <li>Core</li>
     <li>Community Core Library</li>
     <li>EdBModOrder</li>
-    <li>MVP_CoreTextures</li>    
     <li>CombatRealism</li>
-    <li>LT_Infusion</li>    
-    <li>Rimsenal_CR</li>
-    <li>Rimsenal_Federation</li>
-    <li>Norbals</li>
-    <li>VeinMiner</li>
-    <li>RW_Manager-12.3.3</li>
-    <li>RT Storage</li>
-    <li>Hospitality</li> 
-    <li>ModVarietyPack</li>
-    <li>AllowTool</li>
-    <li>EnhancedDevelopment</li>  
-    <li>MechanoidTerraformer</li> 
-    <li>BackstoriesCore</li>
-    <li>EdBInterface</li>
+    <li>EdBColonistBar</li>
+    <li>EdBInventory</li>
     <li>EdBPrepareCarefully</li>
-    <li>Pawn State Icons</li>
-    <li>RW_MedicalInfo</li>
-    <li>RW_EnhancedTabs</li>
-    <li>LT_NoCleaningPlease</li>    
-    <li>MVP_Robots</li>
-    <li>RWAutoSell</li>    
+    <li>EnhancedTabs-0.13.0.1</li>
+    <li>FluffyRelations-0.13.1.2</li>
+    <li>kNumbers-0.4.3.1</li>
+    <li>kSmartOptimizeApparel-0.1</li>
+    <li>LT_Infusion_CR</li>
+    <li>Rimsenal</li>
+    <li>Rimsenal_Federation</li>
+    <li>Rimsenal_Feral</li>
+    <li>ModVarietyPack</li>
+    <li>ModVarietyPack_CoreTextures</li>
+    <li>ModVarietyPack_Robots</li>
+    <li>ED-Shields_CR</li>
   </activeMods>
 </ModsConfigData>

@@ -6,6 +6,7 @@
 		<chance>5</chance>
 		<size>30,20</size>
 		<canHaveHoles>false</canHaveHoles>
+		<createTrigger>true</createTrigger>
 		<buildingData>
 			wwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 			w...w.....w..w.....w...w.....w

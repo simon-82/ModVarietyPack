@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<EdB.ColonistBar.HideColonistBar>Скрыть иконки колонистов</EdB.ColonistBar.HideColonistBar>
+	<!-- NEEDS TRANSLATION --> <EdB.ColonistBar.Prefs>Colonist Bar</EdB.ColonistBar.Prefs>
+	<!-- CHECK TRANSLATION --> <EdB.ColonistBar.Prefs.Enable>Показывать персональные иконки колонистов</EdB.ColonistBar.Prefs.Enable> <!-- I've changed the name from "Colonist Status Bar" to "Colonist Bar" -->
+	<EdB.ColonistBar.Prefs.SmallIcons>Использовать маленькие иконки</EdB.ColonistBar.Prefs.SmallIcons>
+	<!-- NEEDS TRANSLATION --> <EdB.ColonistBar.Prefs.SmallIcons.Tip>Select this option to display small icons in the colonist status bar.\n\nThis option works best for smaller screen resolutions or colonies with lots of colonists.</EdB.ColonistBar.Prefs.SmallIcons.Tip>
+	<!-- SUGGEST BETTER TRANSLATION --> <EdB.ColonistBar.RemoveDeadColonist>Убрать</EdB.ColonistBar.RemoveDeadColonist> <!-- "Remove Dead Colonist" -->
+	<!-- SUGGEST BETTER TRANSLATION --> <EdB.ColonistBar.RemoveMissingColonist>Убрать</EdB.ColonistBar.RemoveMissingColonist> <!-- "Remove Missing Colonist" -->
+	<!-- SUGGEST BETTER TRANSLATION --> <EdB.ColonistBar.Status.BINGING>Пьяный</EdB.ColonistBar.Status.BINGING> <!-- Seems like this translation is not quite right, and should be all uppercase letters -->
+	<EdB.ColonistBar.Status.BROKEN>Ранен</EdB.ColonistBar.Status.BROKEN>
+	<!-- NEEDS TRANSLATION --> <EdB.ColonistBar.Status.CRYPTOSLEEP>CRYPTOSLEEP</EdB.ColonistBar.Status.CRYPTOSLEEP>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Status.DAZED>DAZED</EdB.ColonistBar.Status.DAZED>
+	<EdB.ColonistBar.Status.DEAD>МЁРТВ</EdB.ColonistBar.Status.DEAD>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Status.FIGHT>FIGHT</EdB.ColonistBar.Status.FIGHT>
+	<EdB.ColonistBar.Status.KIDNAPPED>ПОХИЩЕН</EdB.ColonistBar.Status.KIDNAPPED>
+	<EdB.ColonistBar.Status.MISSING>ПОТЕРЯН</EdB.ColonistBar.Status.MISSING>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Status.PANIC>PANIC</EdB.ColonistBar.Status.PANIC>
+	<EdB.ColonistBar.Status.RAMPAGE>БЕЗУМСТВО</EdB.ColonistBar.Status.RAMPAGE>
+</LanguageData>

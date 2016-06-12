@@ -1,813 +1,1076 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
+	<!-- vanilla overrides -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>ChessTable</defName>
+		<label>chess table</label>
+		<description>The ancient game of kings. Fun for a few hours here and there, even playing alone.</description>
+		<graphicData>
+			<texPath>Things/Building/Joy/ChessTable</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.09375,0.296875,0.796875,0.703125)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<altitudeLayer>Waist</altitudeLayer>
+		<rotatable>false</rotatable>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<fillPercent>0.40</fillPercent>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>10000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>10</Beauty>
+			<EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<costStuffCount>70</costStuffCount>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<designationCategory>Joy</designationCategory>
+		<designationHotKey>C</designationHotKey>
+		<researchPrerequisites><li>TubeTelevision</li></researchPrerequisites>
+	</ThingDef>
 
-
-  <ThingDef Name="BuildingBase" Abstract="True">
-    <category>Building</category>
-    <thingClass>Building</thingClass>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <selectable>true</selectable>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <repairEffect>Repair</repairEffect>
-    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-    <filthLeaving>BuildingRubble</filthLeaving>
-  </ThingDef>
-
-
-
-<!-- === VanillaStart === -->
-
-
-  <ThingDef ParentName="BuildingBase">
-    <defName>HorseshoesPin</defName>
-    <label>horseshoes pin</label>
-    <description>A simple ancient game played with a few horseshoes and a large pin in the ground. Players toss horseshoes from a distance and attempt to get them to land close to or around the pin. It's relaxing, and even trains hand-eye coordination.</description>
-    <graphicData>
-      <texPath>Things/Building/Joy/HorseshoesPin</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
-    <rotatable>false</rotatable>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <statBases>
-      <MaxHitPoints>75</MaxHitPoints>
-      <WorkToMake>150</WorkToMake>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>15</costStuffCount>
-    <pathCost>10</pathCost>
-    <designationCategory>Joy</designationCategory>
-    <designationHotKey>H</designationHotKey>
-  </ThingDef>
-  
-  
-  <ThingDef ParentName="BuildingBase">
-    <defName>ChessTable</defName>
-    <label>chess table</label>
-    <description>The ancient game of kings. Fun for a few hours here and there, even playing alone.</description>
-    <graphicData>
-      <texPath>Things/Building/Joy/ChessTable</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-      </shadowData>
-    </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
-    <rotatable>false</rotatable>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <fillPercent>0.40</fillPercent>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>10000</WorkToMake>
-      <Flammability>1.0</Flammability>
-      <Beauty>10</Beauty>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>70</costStuffCount>
-    <pathCost>70</pathCost>
-    <passability>PassThroughOnly</passability>
-    <designationCategory>Joy</designationCategory>
-    <designationHotKey>C</designationHotKey>
-    <researchPrerequisite>FurnitureI</researchPrerequisite>
-  </ThingDef>
-
-
-  <ThingDef ParentName="BuildingBase">
-    <defName>BilliardsTable</defName>
-    <label>billiards table</label>
-    <description>A soft-topped bounded table for playing a variety of billiards-type games.</description>
-    <graphicData>
-      <texPath>Things/Building/Joy/BilliardsTable</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <drawSize>(4,5)</drawSize>
-    </graphicData>
-    <staticSunShadowHeight>0.20</staticSunShadowHeight>
-    <altitudeLayer>Waist</altitudeLayer>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <fillPercent>0.40</fillPercent>
-    <statBases>
-      <MaxHitPoints>250</MaxHitPoints>
-      <WorkToMake>12000</WorkToMake>
-      <Flammability>1.0</Flammability>
-      <Beauty>10</Beauty>
-    </statBases>
-    <size>(2,3)</size>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>80</costStuffCount>
-    <costList>
-      <Cloth>80</Cloth>
-      <WoodPlank>30</WoodPlank>
-    </costList>
-    <pathCost>70</pathCost>
-    <passability>PassThroughOnly</passability>
-    <designationCategory>Joy</designationCategory>
-    <designationHotKey>B</designationHotKey>
+	<ThingDef ParentName="BuildingBase">
+		<defName>BilliardsTable</defName>
+		<label>billiards table</label>
+		<description>A soft-topped bounded table for playing a variety of billiards-type games.</description>
+		<graphicData>
+			<texPath>Things/Building/Joy/BilliardsTable</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(4,5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<altitudeLayer>Waist</altitudeLayer>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<fillPercent>0.40</fillPercent>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToMake>12000</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>10</Beauty>
+			<EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+		</statBases>
+		<size>(2,3)</size>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<costStuffCount>80</costStuffCount>
+		<costList>
+			<Cloth>80</Cloth>
+			<WoodLog>30</WoodLog>
+		</costList>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<designationCategory>Joy</designationCategory>
+		<designationHotKey>B</designationHotKey>
 		<placeWorkers>
 			<li>PlaceWorker_NeverAdjacentUnstandable</li>
 		</placeWorkers>
-    <researchPrerequisite>FurnitureI</researchPrerequisite>
-  </ThingDef>
-
-
-  <ThingDef ParentName="BuildingBase">
-    <defName>Television</defName>
-    <label>television</label>
-    <description>A cathode ray tube display for showing moving pictures with sound. Even on the rimworlds, there is often an old transmitter running something at least marginally interesting.</description>
-    <graphicData>
-      <texPath>Things/Building/Joy/Television</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-      </shadowData>
-    </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
-    <rotatable>true</rotatable>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <fillPercent>0.40</fillPercent>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <MarketValue>700</MarketValue>
-    </statBases>
-    <pathCost>70</pathCost>
-    <passability>PassThroughOnly</passability>
-    <comps>
-      <li>
-        <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>true</startElectricalFires>
-        <basePowerConsumption>200</basePowerConsumption>
-      </li>
-    </comps>
-  </ThingDef>
-
-  <ThingDef ParentName="BuildingBase">
-    <defName>Telescope</defName>
-    <label>telescope</label>
-    <description>A telescope for doing amateur astronomy. It's a relaxing and fun hobby for a certain kind of person.</description>
-    <graphicData>
-      <texPath>Things/Building/Joy/Telescope</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawRotated>false</drawRotated>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-      </shadowData>
-    </graphicData>
-    <fillPercent>0.15</fillPercent>
-    <altitudeLayer>Waist</altitudeLayer>
-    <hasInteractionCell>true</hasInteractionCell>
-    <interactionCellOffset>(0,0,1)</interactionCellOffset>
-    <passability>PassThroughOnly</passability>
-    <pathCost>50</pathCost>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <statBases>
-      <MaxHitPoints>75</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <MarketValue>350</MarketValue>
-    </statBases>
-  </ThingDef>
-
-
-  <!-- === VanillaEnd === -->
-
-
-
-
-
-
-
-
-
-
-  <!-- furniture base -->
-  <ThingDef Name="FurnitureBase" ParentName="BuildingBase" Abstract="True">
-    <comps>
-      <li>
-        <compClass>CompQuality</compClass>
-      </li>
-    </comps>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
-  </ThingDef>
-
-  <ThingDef Name="JoyTableBase" ParentName="FurnitureBase" Abstract="True">
-    <graphicData>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-      </shadowData>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <altitudeLayer>Waist</altitudeLayer>
-    <rotatable>false</rotatable>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <size>(1,1)</size>
-    <pathCost>70</pathCost>
-    <passability>PassThroughOnly</passability>
-  </ThingDef>
-
-
-
-
-
-
-
-
-
-  <!-- joy tables -->
-  <ThingDef ParentName="JoyTableBase">
-    <defName>GoTable</defName>
-    <label>go table</label>
-    <description>One of the oldest strategy games, and one of the simplest to build. </description>
-    <graphicData>
-      <texPath>Buildings/Joy/GoTable</texPath>
-    </graphicData>
-    <statBases>
-      <WorkToMake>8000</WorkToMake>
-      <Beauty>10</Beauty>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>80</costStuffCount>
-    <designationCategory>Joy</designationCategory>
-    <researchPrerequisite>FurnitureI</researchPrerequisite>
-  </ThingDef>
-  
-  <ThingDef ParentName="JoyTableBase">
-    <defName>ReversiTable</defName>
-    <label>reversi table</label>
-    <description>Simple strategy game involving placing rocks on both sides of your opponent's pieces, switching that piece to your color. </description>
-    <graphicData>
-      <texPath>Buildings/Joy/ReversiTable</texPath> 
-    </graphicData>
-    <statBases>
-      <WorkToMake>9000</WorkToMake>
-      <Beauty>10</Beauty>
-    </statBases>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>80</costStuffCount>
-    <designationCategory>Joy</designationCategory>
-    <researchPrerequisite>FurnitureI</researchPrerequisite>
-  </ThingDef>
-  
-  <ThingDef ParentName="JoyTableBase">
-    <defName>CardTable</defName>
-    <label>card table</label>
-    <description>A table specially made for playing a wide variety of card games. Suitable for 1-4 players </description>
-    <graphicData>
-      <texPath>Buildings/Joy/CardTable</texPath>
-    </graphicData>
-    <statBases>
-      <WorkToMake>10000</WorkToMake>
-      <Beauty>15</Beauty>
-    </statBases>
-    <costList>
-      <WoodPlank>80</WoodPlank>
-      <Cloth>20</Cloth>
-    </costList>
-    <designationCategory>Joy</designationCategory>
-    <tickerType>Rare</tickerType>
-    <comps>
-      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
-         <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
-      </li>
-    </comps>
-    <placeWorkers>
-      <li>CommunityCoreLibrary.PlaceWorker_OnlyUnderRoof</li>
-    </placeWorkers>
-    <researchPrerequisite>FurnitureI</researchPrerequisite>
-  </ThingDef>
-  
-  <ThingDef ParentName="JoyTableBase">
-    <defName>RimColony</defName>
-    <label>RimColony</label>
-    <description>RimColony is a game about building and sustaining a colony after crash landing on a rim world. Some roaming trader had a twisted sense of humor bringing this along.</description>
-    <graphicData>
-      <texPath>Buildings/Joy/RimColony</texPath>
-    </graphicData>
-    <statBases>
-      <MarketValue>300</MarketValue>
-      <Beauty>20</Beauty>
-    </statBases>
-    <tradeTags>
-      <li>Exotic</li>
-      <li>Joy</li>
-    </tradeTags>
-    <tickerType>Rare</tickerType>
-    <comps>
-      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
-         <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
-      </li>
-    </comps>
-    <placeWorkers>
-      <li>CommunityCoreLibrary.PlaceWorker_OnlyUnderRoof</li>
-    </placeWorkers>
-  </ThingDef>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- books -->
-  <ThingDef ParentName="FurnitureBase">
-    <defName>Bookcase</defName>
-    <label>bookcase</label>
-    <description>A bookcase with a wide variety of books.</description>
-    <graphicData>
-      <texPath>Buildings/Bookcase/Bookcase</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-    </graphicData>
-    <uiIconPath>Buildings/Bookcase/Bookcase_back</uiIconPath>
-    <altitudeLayer>Waist</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <castEdgeShadows>true</castEdgeShadows>
-    <fillPercent>1</fillPercent>
-    <statBases>
-      <MaxHitPoints>600</MaxHitPoints>
-      <WorkToMake>4000</WorkToMake>
-      <Flammability>1.0</Flammability>
-      <MarketValue>500</MarketValue>
-      <Beauty>50</Beauty>
-    </statBases>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <size>(1,1)</size>
-    <hasInteractionCell>true</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <costList>
-      <WoodPlank>150</WoodPlank>
-      <PileOfBooks>10</PileOfBooks>
-    </costList>
-    <rotatable>true</rotatable>
-    <designationCategory>Joy</designationCategory>
-    <tradeTags>
-      <li>Exotic</li>
-      <li>Joy</li>
-    </tradeTags>
-    <tickerType>Rare</tickerType>
-    <comps>
-      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
-         <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
-      </li>
-    </comps>
-    <placeWorkers>
-      <li>CommunityCoreLibrary.PlaceWorker_OnlyUnderRoof</li>
-    </placeWorkers>
-    <researchPrerequisite>FurnitureII</researchPrerequisite>
-  </ThingDef>
-
-  <ThingDef ParentName="FurnitureBase">
-    <defName>ReadingTable</defName>
-    <label>reading table</label>
-    <description>A small table made to be the perfect height for reading. Has a small drawer for holding books.</description>
-    <graphicData>
-      <texPath>Buildings/ReadingTable/ReadingTable</texPath>
-      <shaderType>CutoutComplex</shaderType>
-      <graphicClass>Graphic_Multi</graphicClass>
-        <shadowData>
-          <volume>(0.3, 0.6, 0.3)</volume>
-        </shadowData>
-    </graphicData>
-    <uiIconPath>Buildings/ReadingTable/ReadingTable_back</uiIconPath>
-    <altitudeLayer>Waist</altitudeLayer>
-    <rotatable>true</rotatable>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <statBases>
-      <MaxHitPoints>100</MaxHitPoints>
-      <WorkToMake>9000</WorkToMake>
-      <Flammability>1.0</Flammability>
-      <Beauty>10</Beauty>
-    </statBases>
-    <size>(1,1)</size>
-    <stuffCategories>
-      <li>Metallic</li>
-      <li>Woody</li>
-      <li>Stony</li>
-    </stuffCategories>
-    <costStuffCount>90</costStuffCount>
-    <costList>
-      <PileOfBooks>1</PileOfBooks>
-    </costList>
-    <pathCost>70</pathCost>
-    <passability>PassThroughOnly</passability>
-    <designationCategory>Joy</designationCategory>
-    <tickerType>Rare</tickerType>
-    <researchPrerequisite>FurnitureII</researchPrerequisite>
-  </ThingDef>
-
-
-
-
-
-
-
-
-
-
-
-  <!-- painting -->
-  <!-- painting easel -->
-  <ThingDef ParentName="FurnitureBase">
-    <DefName>Easel</DefName>
-    <label>painting easel</label>
-    <ThingClass>Building_WorkTable</ThingClass>
-    <Description>An easel equipped for artistic painting.</Description>
-    <graphicData>
-      <texPath>Buildings/Easel/Easel</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
-    </graphicData>
-    <uiIconPath>Buildings/Easel/Easel_back</uiIconPath>
-    <costList>
-      <WoodPlank>75</WoodPlank>
-    </costList>
-    <altitudeLayer>Waist</altitudeLayer>
-    <fillPercent>0.5</fillPercent>
-    <useHitPoints>true</useHitPoints>
-    <statBases>
-      <WorkToMake>500</WorkToMake>
-      <MaxHitPoints>50</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <Beauty>5</Beauty>
-    </statBases>
-    <size>(1,1)</size>
-    <DesignationCategory>Joy</DesignationCategory>
-    <passability>PassThroughOnly</passability>
-    <pathCost>40</pathCost>
-    <hasInteractionCell>true</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <surfaceType>Item</surfaceType>
-    <recipes>
-      <li>MakePainting</li>
-    </recipes>
-    <inspectorTabs>
-      <li>ITab_Bills</li>
-    </inspectorTabs>
-    <building>
-      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-    </building>
-    <researchPrerequisite>FurnitureII</researchPrerequisite>
-  </ThingDef>
-
-
-
-
-  <!-- painting bases -->
-  <ThingDef ParentName="BuildingBase" Name="PaintingBase" Abstract="True">
-    <thingClass>Building_Art</thingClass>
-    <altitudeLayer>MoteOverhead</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <pathCost>0</pathCost>
-    <castEdgeShadows>false</castEdgeShadows>
-    <useHitPoints>true</useHitPoints>
-    <statBases>
-      <Flammability>1.0</Flammability>
-    </statBases>
-    <comps>
-      <li>
-        <compClass>CompQuality</compClass>
-      </li>
-      <li>
-        <compClass>CompArt</compClass>
-        <nameMaker>NamerSculpture</nameMaker>
-        <descriptionMaker>ArtSculpture</descriptionMaker>
-      </li>
-    </comps>
-    <inspectorTabs>
-      <li>ITab_Art</li>
-    </inspectorTabs>  
-  </ThingDef>
-
-  <ThingDef Name="UnfinishedBase" Abstract="True">
-    <thingClass>UnfinishedThing</thingClass>
-    <category>Item</category>
-    <label>Unfinished thing</label>
-    <graphicData>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <altitudeLayer>Item</altitudeLayer>
-    <useHitPoints>true</useHitPoints>
-    <isUnfinishedThing>true</isUnfinishedThing>
-    <selectable>true</selectable>
-    <tradeability>Never</tradeability>
-    <drawerType>RealtimeOnly</drawerType>
-    <statBases>
-      <MaxHitPoints>10</MaxHitPoints>
-    </statBases>
-    <comps>
-      <li>
-        <compClass>CompForbiddable</compClass>
-      </li>
-    </comps>
-    <alwaysHaulable>true</alwaysHaulable>
-    <rotatable>false</rotatable>
-    <pathCost>15</pathCost>
-    <thingCategories>
-      <li>Unfinished</li>
-    </thingCategories>
-  </ThingDef>
-  
-  <ThingDef ParentName="UnfinishedBase">
-    <defName>UnfinishedPainting</defName>
-    <label>Unfinished painting</label>
-    <graphicData>
-      <texPath>Buildings/PaintingUnfinished</texPath>
-    </graphicData>
-    <stuffCategories>
-      <li>Fabric</li>
-      <li>Paint</li>
-      <li>Woody</li>
-    </stuffCategories>
-  </ThingDef>
-
-  <ThingDef Name="MinifiedBase" Abstract="True">
-    <thingClass>MinifiedThing</thingClass>
-    <category>Item</category>
-    <useHitPoints>true</useHitPoints>
-    <selectable>true</selectable>
-    <altitudeLayer>Item</altitudeLayer>
-    <!-- for CompForbiddable -->
-    <drawerType>RealtimeOnly</drawerType>
-    <comps>
-      <li>
-        <compClass>CompForbiddable</compClass>
-      </li>
-    </comps>
-    <alwaysHaulable>true</alwaysHaulable>
-    <rotatable>false</rotatable>
-    <pathCost>15</pathCost>
-  </ThingDef>
-
-  <ThingDef ParentName="MinifiedBase">
-    <defName>MinifiedPainting</defName>
-    <label>Painting</label>
-    <thingCategories>
-      <li>Art</li>
-    </thingCategories>
-    <inspectorTabs>
-      <li>ITab_Art</li>
-    </inspectorTabs>
-  </ThingDef>
-
-
-
-  <!-- painting -->
-  <ThingDef ParentName="PaintingBase">
-    <defName>Painting</defName>
-    <label>painting</label>
-    <description>A painting. Useful for covering up holes, and quite easy on the eyes.</description>
-    <graphicData>
-      <graphicClass>Graphic_Single</graphicClass>
-      <texPath>Buildings/Painting</texPath>
-    </graphicData>
-    <minifiedDef>MinifiedPainting</minifiedDef>
-    <hasInteractionCell>true</hasInteractionCell>
-    <interactionCellOffset>(0,0,1)</interactionCellOffset>
-    <fillPercent>0.0</fillPercent>
-    <altitudeLayer>Waist</altitudeLayer>
-    <rotatable>true</rotatable>
-    <statBases>
-      <WorkToMake>18000</WorkToMake>
-      <SellPriceFactor>0.5</SellPriceFactor>
-      <MaxHitPoints>10</MaxHitPoints>
-      <Flammability>1.0</Flammability>
-      <Beauty>30</Beauty>
-    </statBases>
-    <costList>
-      <Cloth>1</Cloth>
-    </costList>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
-         <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
-      </li>
-    </comps>
-    <placeWorkers>
-      <li>CommunityCoreLibrary.PlaceWorker_WallAttachment</li>
-    </placeWorkers>
-  </ThingDef>
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- Arcades -->
-  <ThingDef Name="ArcadeBase" ParentName="FurnitureBase" Abstract="True">
-    <graphicData>
-      <graphicClass>Graphic_Multi</graphicClass>
-      <shadowData>
-        <volume>(0.3, 0.6, 0.3)</volume>
-      </shadowData>
-    </graphicData>
-    <altitudeLayer>Waist</altitudeLayer>
-    <rotatable>true</rotatable>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
-    <socialPropernessMatters>true</socialPropernessMatters>
-    <statBases>
-      <MaxHitPoints>150</MaxHitPoints>
-      <Flammability>0.1</Flammability>
-      <MarketValue>1000</MarketValue>
-      <Beauty>10</Beauty>
-    </statBases>
-    <size>(1,1)</size>
-    <hasInteractionCell>true</hasInteractionCell>
-    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
-    <passability>PassThroughOnly</passability>
-    <pathCost>150</pathCost>
-    <tradeTags>
-      <li>Exotic</li>
-      <li>Joy</li>
-      <li>Arcades</li>
-    </tradeTags>
-    <tickerType>Normal</tickerType>
-    <comps>
-      <li>
-        <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>false</startElectricalFires>
-        <basePowerConsumption>500</basePowerConsumption>
-        <soundPowerOn>PowerOnSmall</soundPowerOn>
-        <soundPowerOff>PowerOffSmall</soundPowerOff>
-      </li>
-      <li Class="CommunityCoreLibrary.CompProperties_LowIdleDraw">
-        <compClass>CommunityCoreLibrary.CompPowerLowIdleDraw</compClass>
-        <idlePowerFactor>0.1</idlePowerFactor>
-        <operationalMode>InUse</operationalMode>
-      </li>
-      <li>
-          <compClass>CompGlower</compClass>
-          <glowRadius>3</glowRadius>
-          <glowColor>(30,60,75,0)</glowColor>
-      </li>
-      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
-          <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>
-      </li>
-      </comps>
-      <placeWorkers>
-          <li>CommunityCoreLibrary.PlaceWorker_OnlyUnderRoof</li>
-      </placeWorkers>
-    </ThingDef>
-  
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadeRS</defName>
-    <label>Arcade, Rum Swirled</label>
-    <description>A game about sailors shipwrecked on an island with plenty of rum, but no shelter.</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/RumSwirled</texPath>
-    </graphicData>
-  </ThingDef>
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadeMC</defName>
-    <label>Arcade, MintCraft</label>
-    <description>A game where the entire world can be shaped by the player, who crafts many things out of mint leaves. Don't ask how.</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/MintCraft</texPath>
-    </graphicData>
-  </ThingDef>
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadeHL</defName>
-    <label>Arcade, Halva Life</label>
-    <description>In Halva Life, the player plays as Gordon, the red hot pastry chef who must reign in his kitchen before it becomes a total nightmare.</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/HalvaLife</texPath>
-    </graphicData>
-  </ThingDef>
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadeES</defName>
-    <label>Arcade, Elder Scones</label>
-    <description>"It's just you, a butter knife, and a plate full of week old scones you must defend from ravenous townspeople..." Was what the box read for this game.</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/ElderScones</texPath>
-    </graphicData>
-  </ThingDef>
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadeBG</defName>
-    <label>Arcade, Baguettris</label>
-    <description>Oh no! A baguette supply ship didn't close it's hatch correctly! Quickly stack the falling baguettes for loading onto another ship!</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/Baguettris</texPath>
-    </graphicData>
-  </ThingDef>
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadeCB</defName>
-    <label>Arcade, Cooking Baba</label>
-    <description>Join Hakase Baba in the kitchen as he teaches you legendary cooking techniques. Then play challenge mode and compete for the title of Best Chef in the System!</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/CookingBaba</texPath>
-    </graphicData>
-  </ThingDef>
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadePS</defName>
-    <label>Arcade, Plants Vs. Salamis</label>
-    <description>A Salami mothership aproaches on an intercept vector; they mean to board you! Armed only with genetically modified super plants, you must grow your defenses and keep the ships cargo safe!</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/PlantsVSalamis</texPath>
-    </graphicData>
-  </ThingDef>
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadePK</defName>
-    <label>Arcade, Psycho Knots</label>
-    <description>The artisanal pizzeria championships are back for their 72nd tournament, can you out-bake your way to the top? </description>
-    <graphicData>
-      <texPath>Buildings/Arcades/PsychoKnots</texPath>
-    </graphicData>
-  </ThingDef>
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadeSP</defName>
-    <label>Arcade, Speltunky</label>
-    <description>One day, a sinkhole collapses in the middle of your dinkel wheat farm, sending you plummeting into a massive underground cave network. Your only hope for escape is to mine your way out, but danger lurks around every corner.</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/Speltunky</texPath>
-    </graphicData>
-  </ThingDef>
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadeTZ</defName>
-    <label>Arcade, The Zimz</label>
-    <description>In The Zimz, you play a game that simulates people and watch as they sometimes play games that simulate people. Talk about a multiverse...</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/TheZimz</texPath>
-    </graphicData>
-  </ThingDef>
-    
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadeTV</defName>
-    <label>Arcade, Trauma Vendor</label>
-    <description>It's 14:00, time to drive the truck around and see who needs medical treatment. Just another day on a warring urbworld.</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/TraumaVendor</texPath>
-    </graphicData>
-  </ThingDef>
-  
-  <ThingDef ParentName="ArcadeBase">
-    <defName>ArcadeGD</defName>
-    <label>Arcade, Glutendogs</label>
-    <description>Can you tame your new pets before they get flour all over the bakery? Why did you even bring dogs to a bakery?</description>
-    <graphicData>
-      <texPath>Buildings/Arcades/Glutendogs</texPath>
-    </graphicData>
-  </ThingDef>
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
+		<researchPrerequisites><li>TubeTelevision</li></researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>TubeTelevision</defName>
+		<label>tube television</label>
+		<description>A cathode ray tube display for showing moving pictures with sound. Even on the rimworlds, there is often an old transmitter running something at least marginally interesting.</description>
+		<graphicData>
+			<texPath>Things/Building/Joy/TubeTelevision</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.7, 0.6, 0.7)</volume>
+				<offset>(0,0,-0.15)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<rotatable>true</rotatable>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<fillPercent>0.40</fillPercent>
+		<statBases>
+			<WorkToMake>6000</WorkToMake>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>700</MarketValue>
+			<EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+		</statBases>
+		<costList>
+			<SteelBar>60</SteelBar>
+			<Components>2</Components>
+			<Electronics>10</Electronics>
+		</costList>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<building>
+			<spawnedConceptLearnOpportunity>TVForSickPeople</spawnedConceptLearnOpportunity>
+			<boughtConceptLearnOpportunity>TVForSickPeople</boughtConceptLearnOpportunity>
+			<watchBuildingStandDistanceRange>
+				<min>2</min>
+				<max>4</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>5</watchBuildingStandRectWidth>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+		</placeWorkers>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>true</startElectricalFires>
+				<basePowerConsumption>200</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<tradeTags>
+			<li>Television</li>
+		</tradeTags>
+		<constructEffect>ConstructMetal</constructEffect>
+		<designationCategory>Joy</designationCategory>
+		<designationHotKey>T</designationHotKey>
+		<researchPrerequisites>
+			<li>TubeTelevision</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>FlatscreenTelevision</defName>
+		<label>flatscreen television</label>
+		<description>A high-tech flat-screen television with crystal-clear image and rich color. More entertaining than a grainy tube TV.</description>
+		<graphicData>
+			<texPath>Things/Building/Joy/FlatscreenTelevision</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<rotatable>true</rotatable>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<fillPercent>0.25</fillPercent>
+		<statBases>
+			<MaxHitPoints>80</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>1200</MarketValue>
+			<EntertainmentStrengthFactor>1.2</EntertainmentStrengthFactor>
+		</statBases>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<size>(2,1)</size>
+		<building>
+			<spawnedConceptLearnOpportunity>TVForSickPeople</spawnedConceptLearnOpportunity>
+			<boughtConceptLearnOpportunity>TVForSickPeople</boughtConceptLearnOpportunity>
+			<watchBuildingStandDistanceRange>
+				<min>2</min>
+				<max>6</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>6</watchBuildingStandRectWidth>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+		</placeWorkers>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>true</startElectricalFires>
+				<basePowerConsumption>150</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<tradeTags>
+			<li>Television</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>MegascreenTelevision</defName>
+		<label>megascreen television</label>
+		<description>A huge, high-tech television. Gigantic, hyper-vibrant images almost leap out of the screen. Very entertaining.</description>
+		<graphicData>
+			<texPath>Things/Building/Joy/MegascreenTelevision</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
+			<drawSize>(3,1)</drawSize>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<rotatable>true</rotatable>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<fillPercent>0.25</fillPercent>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>2000</MarketValue>
+			<EntertainmentStrengthFactor>1.35</EntertainmentStrengthFactor>
+		</statBases>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<size>(3,1)</size>
+		<building>
+			<spawnedConceptLearnOpportunity>TVForSickPeople</spawnedConceptLearnOpportunity>
+			<boughtConceptLearnOpportunity>TVForSickPeople</boughtConceptLearnOpportunity>
+			<watchBuildingStandDistanceRange>
+				<min>2</min>
+				<max>7</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>7</watchBuildingStandRectWidth>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+		</placeWorkers>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>true</startElectricalFires>
+				<basePowerConsumption>220</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<tradeTags>
+			<li>Television</li>
+		</tradeTags>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>Telescope</defName>
+		<label>telescope</label>
+		<description>A telescope for doing amateur astronomy. It's a relaxing and fun hobby for a certain kind of person.</description>
+		<graphicData>
+			<texPath>Things/Building/Joy/Telescope</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
+		</graphicData>
+		<fillPercent>0.15</fillPercent>
+		<altitudeLayer>Waist</altitudeLayer>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<passability>PassThroughOnly</passability>
+		<pathCost>50</pathCost>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<MarketValue>350</MarketValue>
+			<EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+		</statBases>
+	</ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Holo Emitter -->
+	<ThingDef Name="HoloBase" ParentName="FurnitureBase" Abstract="True">
+		<thingClass>Building</thingClass>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>ArtName_Furniture</nameMaker>
+				<descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<recipeMaker>
+			<workSpeedStat>SmeltingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Smith</effectWorking>
+			<soundWorking>Recipe_Machining</soundWorking>
+			<unfinishedThingDef>UnfinishedSculpture</unfinishedThingDef>
+		</recipeMaker>
+		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<designationCategory>Joy</designationCategory>
+	</ThingDef>
+
+	<ThingDef Class="Clutter_Furniture.HoloBaseDefs" ParentName="HoloBase">
+		<defName>HoloEmitter</defName>
+		<label>Holographic Emitter</label>
+		<thingClass>Clutter_Furniture.HoloBase</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<shaderType>Transparent</shaderType>
+			<texPath>Buildings/Holo/HoloOff</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<DrawGUIOverlay>true</DrawGUIOverlay>
+		<Passability>PassThroughOnly</Passability>
+		<statBases>
+			<MarketValue>926</MarketValue>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.0</Flammability>
+			<Beauty>8</Beauty>
+		</statBases>
+		<costList>
+			<AluBar>80</AluBar>
+			<Electronics>5</Electronics>
+			<Components>5</Components>
+		</costList>
+		<PathCost>60</PathCost>
+		<tickerType>Normal</tickerType>
+		<selectable>true</selectable>
+		<Description>Projects holograms of various things</Description>
+		<Size>(1,1)</Size>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>true</startElectricalFires>
+				<basePowerConsumption>200</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+		<filthLeaving>BuildingRubble</filthLeaving>
+		<rotatable>false</rotatable>
+		<tradeTags>
+			<li>Exotic</li>
+		</tradeTags>
+		<ActiveTexturePath>Buildings/Holo/HoloOn</ActiveTexturePath>
+		<HoloButtonPath>Buildings/Holo/HoloOn</HoloButtonPath>
+		<HologramList>
+			<li>HoloSciSign</li>
+			<li>HoloFlyingDots</li>
+		</HologramList>
+		<building>
+			<watchBuildingStandDistanceRange>
+				<min>1</min>
+				<max>3</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>5</watchBuildingStandRectWidth>
+		</building>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+		</placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+	</ThingDef>
+
+	<ThingDef Class="Clutter_Furniture.ClutterHoloDefs">
+		<defName>HoloFlyingDots</defName>
+		<label>Hologram of flying dots</label>
+		<category>Item</category>
+		<thingClass>Clutter_Furniture.Holo</thingClass>
+		<graphicData>
+			<texPath>Buildings/Holo/Holo1/Frame1</texPath>
+			<shaderType>Transparent</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<tickerType>Normal</tickerType>
+		<selectable>false</selectable>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToMake>1200</WorkToMake>
+			<Beauty>10</Beauty>
+			<EntertainmentStrengthFactor>0.51</EntertainmentStrengthFactor>
+		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<Size>1,1</Size>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<compClass>CompGlower</compClass>
+				<glowRadius>2</glowRadius>
+				<glowColor>(52,210,255,1)</glowColor>
+			</li>
+		</comps>
+		<Description>A holographic projection to pretty up the place.</Description>
+		<PathCost>80</PathCost>
+		<AltitudeLayer>Blueprint</AltitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<FramePath>Buildings/Holo/Holo1/Frame</FramePath>
+		<FrameCount>12</FrameCount>
+		<building>
+			<isEdifice>false</isEdifice>
+			<watchBuildingStandDistanceRange>
+				<min>1</min>
+				<max>3</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>5</watchBuildingStandRectWidth>
+		</building>
+	</ThingDef>
+	
+	<ThingDef Class="Clutter_Furniture.ClutterHoloDefs">
+		<defName>HoloSciSign</defName>
+		<label>Hologram of nucleon</label>
+		<category>Item</category>
+		<thingClass>Clutter_Furniture.Holo</thingClass>
+		<graphicData>
+			<texPath>Buildings/Holo/Holo2/Frame11</texPath>
+			<shaderType>Transparent</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<tickerType>Normal</tickerType>
+		<selectable>false</selectable>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToMake>1000</WorkToMake>
+			<Beauty>10</Beauty>
+			<EntertainmentStrengthFactor>0.51</EntertainmentStrengthFactor>
+		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<Size>1,1</Size>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<compClass>CompGlower</compClass>
+				<glowRadius>2</glowRadius>
+				<glowColor>(52,210,255,1)</glowColor>
+			</li>
+		</comps>
+		<Description>A holographic projection to pretty up the place.</Description>
+		<PathCost>1200</PathCost>
+		<AltitudeLayer>Blueprint</AltitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<FramePath>Buildings/Holo/Holo2/Frame</FramePath>
+		<FrameCount>11</FrameCount>
+		<building>
+			<isEdifice>false</isEdifice>
+			<watchBuildingStandDistanceRange>
+				<min>1</min>
+				<max>3</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>5</watchBuildingStandRectWidth>
+		</building>
+	</ThingDef>
+
+
+
+
+
+
+	<!-- Bookshelf -->
+	<ThingDef ParentName="FurnitureBase" Class="Clutter_Furniture.ClutterThingDefsFurniture">
+		<defName>ClutterBookShelf</defName>
+		<label>Book Shelf</label>
+		<thingClass>Clutter_Furniture.Bookshelf</thingClass>
+		<category>Building</category>
+		<graphicData>
+		 <texPath>Clutter/Furniture/BookShelf/BookShelf</texPath>
+		<shaderType>Transparent</shaderType>
+		<graphicClass>Graphic_Multi</graphicClass>
+		 <drawSize>(3,3)</drawSize>
+		</graphicData>
+		<uiIconPath>Clutter/Furniture/BookShelf/BookShelf_ico</uiIconPath>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,0)</interactionCellOffset>
+		<AltitudeLayer>Pawn</AltitudeLayer>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<WorkToMake>500</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>50</Beauty>
+		</statBases>
+		<PathCost>1</PathCost>
+		<Passability>PassThroughOnly</Passability>
+		<fillPercent>0.1</fillPercent>
+		<Size>1,1</Size>
+		<Description>Simple bookshelf that contains some stories for colonists to read</Description>
+		<costList>
+			<SteelBar>70</SteelBar>
+		</costList>
+		<rotatable>true</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<DesignationCategory>Furniture</DesignationCategory>
+	   <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+	    <placeWorkers>
+	      <li>CommunityCoreLibrary.PlaceWorker_WallAttachment</li>
+	    </placeWorkers>
+		<BooksList>
+			<li>ParallelBook</li>
+			<li>MaidenWine</li>
+			<li>StormyNight</li>
+			<li>BookOfAncientChineseWisdoms</li>
+			<li>DiaryOfTheFirstMAI</li>
+			<li>ThreeLittleBoars</li>
+			<li>ElerdStory</li>
+		</BooksList>
+		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<designationCategory>Joy</designationCategory>
+	</ThingDef>
+
+
+
+
+
+
+
+
+
+
+	<!-- Joy Tables -->
+	<ThingDef Name="JoyTableBase" ParentName="FurnitureBase" Abstract="True">
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
+			<damageData>
+				<rect>(0.09375,0.296875,0.796875,0.703125)</rect>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+		</statBases>
+		<altitudeLayer>Waist</altitudeLayer>
+		<rotatable>false</rotatable>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<size>(1,1)</size>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<researchPrerequisites><li>TubeTelevision</li></researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="JoyTableBase">
+		<defName>AJO_GoTable</defName>
+		<label>go table</label>
+		<description>One of the oldest strategy games, and one of the simplest to build. </description>
+		<graphicData>
+			<texPath>Buildings/Joy/GoTable</texPath>
+		</graphicData>
+		<statBases>
+			<WorkToMake>8000</WorkToMake>
+			<Beauty>10</Beauty>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>70</costStuffCount>
+		<designationCategory>Joy</designationCategory>
+	</ThingDef>
+	
+	<ThingDef ParentName="JoyTableBase">
+		<defName>AJO_ReversiTable</defName>
+		<label>reversi table</label>
+		<description>Simple strategy game involving placing rocks on both sides of your opponent's pieces, switching that piece to your color. </description>
+		<graphicData>
+			<texPath>Buildings/Joy/ReversiTable</texPath>	
+		</graphicData>
+		<statBases>
+			<WorkToMake>9000</WorkToMake>
+			<Beauty>10</Beauty>
+		</statBases>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>80</costStuffCount>
+		<designationCategory>Joy</designationCategory>
+	</ThingDef>
+	
+	<ThingDef ParentName="JoyTableBase">
+		<defName>AJO_CardTable</defName>
+		<label>card table</label>
+		<description>A table specially made for playing a wide variety of card games. Suitable for 1-4 players </description>
+		<graphicData>
+			<texPath>Buildings/Joy/CardTable</texPath>
+		</graphicData>
+		<statBases>
+			<WorkToMake>10000</WorkToMake>
+			<Beauty>15</Beauty>
+		</statBases>
+		<costList>
+			<WoodPlank>80</WoodPlank>
+			<Cloth>1</Cloth>
+		</costList>
+		<designationCategory>Joy</designationCategory>
+	</ThingDef>
+	
+	<ThingDef ParentName="JoyTableBase">
+		<defName>AJO_RimColony</defName>
+		<label>RimColony</label>
+		<description>RimColony is a game about building and sustaining a colony after crash landing on a rim world. Some roaming trader had a twisted sense of humor bringing this along.</description>
+		<graphicData>
+			<texPath>Buildings/Joy/RimColony</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>300</MarketValue>
+			<Beauty>20</Beauty>
+		</statBases>
+		<costList>
+			<WoodPlank>100</WoodPlank>
+			<Cloth>1</Cloth>
+		</costList>
+		<designationCategory>Joy</designationCategory>
+	</ThingDef>
+
+
+
+
+
+
+
+
+
+	<!-- Archery + Mote -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>ArcheryTarget</defName>
+		<label>archery target</label>
+		<description>The bow is an ancient hunting weapon that is nowadays mostly used for fun. It's relaxing and trains hand-eye coordination.</description>
+		<graphicData>
+			<texPath>Buildings/Archery/ArcheryStand</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+				<rect>(0.2,0.2,0.8,0.8)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<rotatable>true</rotatable>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToMake>750</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>-2</Beauty>
+			<EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+		</statBases>
+		<building>
+			<watchBuildingStandDistanceRange>
+				<min>5</min>
+				<max>8</max>
+			</watchBuildingStandDistanceRange>
+			<watchBuildingStandRectWidth>3</watchBuildingStandRectWidth>
+		</building>
+		<size>(1,1)</size>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>50</costStuffCount>
+		<costList>
+			<Bow_Short>1</Bow_Short>
+		</costList>
+		<pathCost>10</pathCost>
+		<designationCategory>Joy</designationCategory>
+	</ThingDef>
+	<ThingDef ParentName="MoteBase">
+		<defName>Mote_ArcheryArrow</defName>
+		<graphicData>
+			<texPath>Buildings/Archery/Motes/Arrow</texPath>
+		</graphicData>
+		<mote>
+			<fadeInDuration>0</fadeInDuration>
+			<ticksBeforeStartFadeout>600</ticksBeforeStartFadeout>
+			<fadeoutDuration>240</fadeoutDuration>
+			<landSound>ArrowImpact</landSound>
+		</mote>
+	</ThingDef>
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+	
+	<!-- painting -->
+	<!-- painting easel -->
+	<ThingDef ParentName="FurnitureBase">
+		<DefName>Easel</DefName>
+		<label>painting easel</label>
+		<ThingClass>Building_WorkTable</ThingClass>
+		<Description>An easel equipped for artistic painting.</Description>
+		<graphicData>
+			<texPath>Buildings/Easel/Easel</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+		</graphicData>
+		<uiIconPath>Buildings/Easel/Easel_front</uiIconPath>
+		<costList>
+			<WoodPlank>50</WoodPlank>
+		</costList>
+		<altitudeLayer>Waist</altitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>true</useHitPoints>
+		<statBases>
+			<WorkToMake>500</WorkToMake>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>5</Beauty>
+			<EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+		</statBases>
+		<size>(1,1)</size>
+		<DesignationCategory>Joy</DesignationCategory>
+		<passability>PassThroughOnly</passability>
+		<pathCost>40</pathCost>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<recipes>
+		     <li>MakePainting</li>
+		</recipes>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+	</ThingDef>
+
+	
+
+
+
+
+	<!-- painting bases -->
+	<ThingDef Name="OnWallBase" ParentName="BuildingBase" Abstract="True">
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<altitudeLayer>Pawn</altitudeLayer>
+		<rotatable>true</rotatable>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<fillPercent>0.0</fillPercent>
+		<passability>PassThroughOnly</passability>
+		<pathCost>0</pathCost>
+		<castEdgeShadows>false</castEdgeShadows>
+		<useHitPoints>true</useHitPoints>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CommunityCoreLibrary.CompProperties_RestrictedPlacement">
+					<compClass>CommunityCoreLibrary.CompRestrictedPlacement</compClass>
+					<!--  <thingDefs>
+							<li>Wall</li>
+					</thingDefs>-->
+			</li>
+		</comps>    
+		<placeWorkers>
+				<li>CommunityCoreLibrary.PlaceWorker_WallAttachment</li>
+		</placeWorkers>
+		<!--  <placeWorkers>
+			<li>CorePanda.PlaceWorker_AgainstWall</li>
+		</placeWorkers> -->
+	</ThingDef>
+
+	<ThingDef ParentName="UnfinishedBase">
+		<defName>UnfinishedPainting</defName>
+		<label>Unfinished painting</label>
+		<graphicData>
+			<texPath>Buildings/Painting/UnfinishedPainting</texPath>
+		</graphicData>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Paint</li>
+		</stuffCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="MinifiedBase">
+		<defName>AJO_MinifiedPainting</defName>
+		<label>Painting</label>
+		<thingCategories>
+			<li>Art</li>
+		</thingCategories>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+	</ThingDef>
+
+
+
+	<!-- painting -->
+	<ThingDef ParentName="OnWallBase">
+		<defName>Painting</defName>
+		<thingClass>Building_Art</thingClass>
+		<label>painting</label>
+		<description>A painting. Useful for covering up holes, and quite easy on the eyes.</description>
+		<graphicData>
+			<texPath>Buildings/Painting/Painting</texPath>
+		</graphicData>
+		<uiIconPath>Buildings/Painting/Painting_icon</uiIconPath>
+		<size>(1,1)</size>
+		<minifiedDef>AJO_MinifiedPainting</minifiedDef>
+		<statBases>
+			<WorkToMake>15000</WorkToMake>
+			<MarketValue>30</MarketValue>
+			<MaxHitPoints>10</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>30</Beauty>
+			<EntertainmentStrengthFactor>1</EntertainmentStrengthFactor>
+		</statBases>
+		<costList>
+			<Cloth>1</Cloth>
+		</costList>
+		<building>
+			<watchBuildingStandDistanceRange>
+				<min>1</min>
+				<max>3</max>
+			</watchBuildingStandDistanceRange> 
+			<watchBuildingStandRectWidth>5</watchBuildingStandRectWidth>
+		</building>
+		<comps>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>ArtName_Sculpture</nameMaker>
+				<descriptionMaker>AJO_ArtDescription_Painting</descriptionMaker>
+			</li>
+		</comps>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<placeWorkers>
+			<li>PlaceWorker_WatchArea</li>
+		</placeWorkers>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>  
+	</ThingDef>
+
+	
+
+
+
+
+
+
+
+	<!-- Arcades -->	
+	<ThingDef Name="ArcadeBase" ParentName="BuildingBase" Abstract="True">
+		<graphicData>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<damageData>
+			  <rect>(0.3,0.3,0.4,0.4)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<rotatable>true</rotatable>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<MarketValue>1000</MarketValue>
+			<Beauty>10</Beauty>
+			<EntertainmentStrengthFactor>1.2</EntertainmentStrengthFactor>
+		</statBases>
+		<size>(1,1)</size>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(0,0,1)</interactionCellOffset>
+		<passability>PassThroughOnly</passability>
+		<pathCost>150</pathCost>
+		<tradeTags>
+			<li>Exotic</li>
+			<li>AJO_Joy</li>
+		</tradeTags>
+		<tickerType>Normal</tickerType>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>true</startElectricalFires>
+				<basePowerConsumption>200</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+		</comps>
+	</ThingDef>	
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadeRS</defName>
+		<label>Arcade, Rum Swirled</label>
+		<description>A game about sailors shipwrecked on an island with plenty of rum, but no shelter.</description>
+		<graphicData>
+			<texPath>Buildings/Joy/RumSwirled/RumSwirled</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadeMC</defName>
+		<label>Arcade, MintCraft</label>
+		<description>A game where the entire world can be shaped by the player, who crafts many things out of mint leaves. Don't ask how.</description>
+		<graphicData>
+			<texPath>Buildings/Joy/MintCraft/MintCraft</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadeHL</defName>
+		<label>Arcade, Halva Life</label>
+		<description>In Halva Life, the player plays as Gordon, the red hot pastry chef who must reign in his kitchen before it becomes a total nightmare.</description>
+		<graphicData>
+			<texPath>Buildings/Joy/HalvaLife/HalvaLife</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadeES</defName>
+		<label>Arcade, Elder Scones</label>
+		<description>"It's just you, a butter knife, and a plate full of week old scones you must defend from ravenous townspeople..." Was what the box read for this game.</description>
+		<graphicData>
+			<texPath>Buildings/Joy/ElderScones/ElderScones</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadeBG</defName>
+		<label>Arcade, Baguettris</label>
+		<description>Oh no! A baguette supply ship didn't close it's hatch correctly! Quickly stack the falling baguettes for loading onto another ship!</description>
+		<graphicData>
+			<texPath>Buildings/Joy/Baguettris/Baguettris</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadeCB</defName>
+		<label>Arcade, Cooking Baba</label>
+		<description>Join Hakase Baba in the kitchen as he teaches you legendary cooking techniques. Then play challenge mode and compete for the title of Best Chef in the System!</description>
+		<graphicData>
+			<texPath>Buildings/Joy/CookingBaba/CookingBaba</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadePS</defName>
+		<label>Arcade, Plants Vs. Salamis</label>
+		<description>A Salami mothership aproaches on an intercept vector; they mean to board you! Armed only with genetically modified super plants, you must grow your defenses and keep the ships cargo safe!</description>
+		<graphicData>
+			<texPath>Buildings/Joy/PlantsVSalamis/PlantsVSalamis</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadePK</defName>
+		<label>Arcade, Psycho Knots</label>
+		<description>The artisanal pizzeria championships are back for their 72nd tournament, can you out-bake your way to the top? </description>
+		<graphicData>
+			<texPath>Buildings/Joy/PsychoKnots/PsychoKnots</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadeSP</defName>
+		<label>Arcade, Speltunky</label>
+		<description>One day, a sinkhole collapses in the middle of your dinkel wheat farm, sending you plummeting into a massive underground cave network. Your only hope for escape is to mine your way out, but danger lurks around every corner.</description>
+		<graphicData>
+			<texPath>Buildings/Joy/Speltunky/Speltunky</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadeTZ</defName>
+		<label>Arcade, The Zimz</label>
+		<description>In The Zimz, you play a game that simulates people and watch as they sometimes play games that simulate people. Talk about a multiverse...</description>
+		<graphicData>
+			<texPath>Buildings/Joy/TheZimz/TheZimz</texPath>
+		</graphicData>
+	</ThingDef>
+		
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadeTV</defName>
+		<label>Arcade, Trauma Vendor</label>
+		<description>It's 14:00, time to drive the truck around and see who needs medical treatment. Just another day on a warring urbworld.</description>
+		<graphicData>
+			<texPath>Buildings/Joy/TraumaVendor/TraumaVendor</texPath>
+		</graphicData>
+	</ThingDef>
+	
+	<ThingDef ParentName="ArcadeBase">
+		<defName>AJO_ArcadeGD</defName>
+		<label>Arcade, Glutendogs</label>
+		<description>Can you tame your new pets before they get flour all over the bakery? Why did you even bring dogs to a bakery?</description>
+		<graphicData>
+			<texPath>Buildings/Joy/Glutendogs/Glutendogs</texPath>
+		</graphicData>
+	</ThingDef>
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
 </ThingDefs>

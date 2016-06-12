@@ -1,6 +1,182 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FactionDefs>
 
+  <!-- Normal humanlike factions -->
+	
+	<FactionDef>
+		<defName>Tribe</defName>
+		<label>tribe</label>
+    <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nSome tribes are more aggressive than others; many are open to trade and alliances, even with strange peoples like yourselves. Close cooperation or recruitment will be very difficult because of the vast sociotechnological and linguistic gap between the tribals and yourselves.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.</description>
+    <pawnsPlural>tribespeople</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <raidCommonality>100</raidCommonality>
+    <canStageAttacks>true</canStageAttacks>
+    <startingGoodwill>
+      <min>-50</min>
+      <max>30</max>
+    </startingGoodwill>
+    <mustStartOneEnemy>true</mustStartOneEnemy>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+		<pawnNameMaker>NamerPersonTribal</pawnNameMaker>
+		<techLevel>Neolithic</techLevel>
+		<backstoryCategory>Tribal</backstoryCategory>
+    <leaderTitle>Chief</leaderTitle>
+    <hairTags>
+			<li>Tribal</li>
+		</hairTags>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>10</max>
+    </naturalColonyGoodwill>
+    <caravanTraderKinds>
+      <li>Caravan_Neolithic_BulkGoods</li>
+      <li>Caravan_Neolithic_CombatSupplier</li>
+      <li>Caravan_Neolithic_SlavesMerchant</li>
+    </caravanTraderKinds>
+		<!--
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+		-->
+    <pawnGroupMakers>
+      <li Class="PawnGroupMaker_Normal">
+        <options>
+          <li>
+            <selectionWeight>60</selectionWeight>
+            <kind>TribalWarrior</kind>
+          </li>
+          <li>
+            <selectionWeight>100</selectionWeight>
+            <kind>TribalArcher</kind>
+          </li>
+          <li>
+            <selectionWeight>70</selectionWeight>
+            <kind>TribalChief</kind>
+          </li>
+        </options>
+      </li>
+      <li Class="PawnGroupMaker_Trader">
+        <traders>
+          <li>
+            <selectionWeight>1</selectionWeight>
+            <kind>TribalTrader</kind>
+          </li>
+        </traders>
+        <carriers>
+          <li>
+            <selectionWeight>1</selectionWeight>
+            <kind>PackMuffalo</kind>
+          </li>
+        </carriers>
+        <guards>
+          <li>
+            <selectionWeight>60</selectionWeight>
+            <kind>TribalWarrior</kind>
+          </li>
+          <li>
+            <selectionWeight>100</selectionWeight>
+            <kind>TribalArcher</kind>
+          </li>
+        </guards>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/FactionHomes/DefaultHome</homeIconPath>
+    <homeIconColor>(50,200,50)</homeIconColor>
+  </FactionDef>
+	
+  <FactionDef>
+		<defName>Outlander</defName>
+		<label>outlander town</label>
+    <description>A small community of survivors.\n\nThese people have lived here for decades or centuries, and have lost most of the technology that brought them to this world. They usually work with simple mechanical tools and defend themselves with advanced gunpowder weapons.\n\nThey are concerned with the practical matters of trade, trust, and survival.</description>
+    <pawnsPlural>outlanders</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <raidCommonality>100</raidCommonality>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Mayor</leaderTitle>
+    <startingGoodwill>
+      <min>-40</min>
+      <max>40</max>
+    </startingGoodwill>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<techLevel>Midworld</techLevel>
+		<backstoryCategory>Civil</backstoryCategory>
+		<hairTags>
+			<li>Rural</li>
+		</hairTags>
+    <naturalColonyGoodwill>
+      <min>-60</min>
+      <max>0</max>
+    </naturalColonyGoodwill>
+    <caravanTraderKinds>
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+      <li>Caravan_Outlander_PirateMerchant</li>
+    </caravanTraderKinds>
+    <!--<visitorTraderKinds>
+      <li>Visitor_Outlander_Standard</li>
+    </visitorTraderKinds>-->
+    <pawnGroupMakers>
+      <li Class="PawnGroupMaker_Normal">
+        <options>
+          <li>
+            <selectionWeight>50</selectionWeight>
+            <kind>Villager</kind>
+          </li>
+          <li>
+            <selectionWeight>250</selectionWeight>
+            <kind>TownGuard</kind>
+          </li>
+          <li>
+            <selectionWeight>250</selectionWeight>
+            <kind>TownCouncilman</kind>
+          </li>
+          <li>
+            <selectionWeight>100</selectionWeight>
+            <kind>MercenaryGunner</kind>
+          </li>
+          <li>
+            <selectionWeight>100</selectionWeight>
+            <kind>MercenarySlasher</kind>
+          </li>
+        </options>
+      </li>
+      <li Class="PawnGroupMaker_Trader">
+        <traders>
+          <li>
+            <selectionWeight>1</selectionWeight>
+            <kind>TownTrader</kind>
+          </li>
+        </traders>
+        <carriers>
+          <li>
+            <selectionWeight>1</selectionWeight>
+            <kind>PackMuffalo</kind>
+          </li>
+        </carriers>
+        <guards>
+          <li>
+            <selectionWeight>250</selectionWeight>
+            <kind>TownGuard</kind>
+          </li>
+          <li>
+            <selectionWeight>100</selectionWeight>
+            <kind>MercenaryGunner</kind>
+          </li>
+          <li>
+            <selectionWeight>100</selectionWeight>
+            <kind>MercenarySlasher</kind>
+          </li>
+        </guards>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/FactionHomes/DefaultHome</homeIconPath>
+    <homeIconColor>(150,150,255)</homeIconColor>
+  </FactionDef>
+
 
 	<FactionDef>
 		<defName>Pirate</defName>
@@ -30,7 +206,7 @@
       <max>-80</max>
     </naturalColonyGoodwill>
     <pawnGroupMakers>
-      <li>
+      <li Class="PawnGroupMaker_Normal">
         <commonality>100</commonality>
         <options>
           <li>
@@ -41,14 +217,6 @@
             <selectionWeight>70</selectionWeight>
             <kind>Thrasher</kind>
           </li>
-          <li>
-            <selectionWeight>100</selectionWeight>
-            <kind>GrenadierDestructive</kind>
-          </li>
-          <li>
-            <selectionWeight>50</selectionWeight>
-            <kind>GrenadierEMP</kind>
-          </li> 
           <li>
             <selectionWeight>100</selectionWeight>
             <kind>Scavenger</kind>
@@ -87,7 +255,7 @@
           </li>
         </options>
       </li>
-      <li>
+      <li Class="PawnGroupMaker_Normal">
         <commonality>50</commonality>
         <disallowedStrategies>
           <li>Siege</li>
@@ -121,7 +289,7 @@
     <hidden>true</hidden>
     <canFlee>false</canFlee>
     <techLevel>Ultra</techLevel>
-		<earliestRaidDays>90</earliestRaidDays>
+		<earliestRaidDays>60</earliestRaidDays>
     <startingGoodwill>
       <min>-100</min>
       <max>-100</max>
@@ -132,7 +300,7 @@
       <max>-100</max>
     </naturalColonyGoodwill>
     <pawnGroupMakers>
-      <li>
+      <li Class="PawnGroupMaker_Normal">
         <options>
           <li>
             <selectionWeight>75</selectionWeight>

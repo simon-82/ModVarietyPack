@@ -92,7 +92,6 @@
 	<MapGeneratorBlueprintDef ParentName="HaciendaABase">
 		<defName>HaciendaA_wo_holes</defName>
 		<chance>15</chance>
-		<createTrigger>true</createTrigger>
 		<canHaveHoles>false</canHaveHoles>
 	</MapGeneratorBlueprintDef>
 

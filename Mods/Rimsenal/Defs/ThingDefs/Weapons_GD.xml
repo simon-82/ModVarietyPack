@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef Name="BaseGDGun" Abstract="True">
+    <category>Item</category>
+    <thingClass>ThingWithComps</thingClass>
+    <equipmentType>Primary</equipmentType>
+    <pathCost>10</pathCost>
+    <useHitPoints>True</useHitPoints>
+    <selectable>True</selectable>
+    <graphicData>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <SellPriceFactor>0.5</SellPriceFactor>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>True</alwaysHaulable>
+    <tickerType>Never</tickerType>
+    <techLevel>Midworld</techLevel>
+    <weaponTags>
+       <li>GDGun</li>
+    </weaponTags>
+    <thingCategories>
+      <li>WeaponsRanged</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_WeaponGun</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <recipeMaker>
+      <workSpeedStat>SmithingSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Smith</soundWorking>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+    </recipeMaker>
+    <smeltProducts>
+      <Steel>30</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+
+
+  <!-- ============================================== -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Lynx</defName>
+    <label>pistol bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Gbullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>ArmorPiercing</damageDef>
+      <DamageAmountBase>7</DamageAmountBase>
+      <Speed>65</Speed>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseGDGun">
+    <defName>GD_Lynx</defName>
+    <label>tactical pistol</label>
+    <description>A Greydale Defense "Lynx". Light and easy to use, ideal personal defense weapon. It use small-caliber, high-velocity armor-piercing cartridge.</description>
+    <graphicData>
+      <texPath>Things/A13/Lynx</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <MarketValue>300</MarketValue>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.8</AccuracyShort>
+      <AccuracyMedium>0.6</AccuracyMedium>
+      <AccuracyLong>0.4</AccuracyLong>
+      <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>45</Steel>
+      <Components>4</Components>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>DefenceTech</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Lynx</projectileDef>
+        <warmupTicks>60</warmupTicks>
+        <range>20</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>ShotLynx</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GRC</defName>
+    <label>carbine bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Gbullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>7</DamageAmountBase>
+      <Speed>75</Speed>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseGDGun">
+    <defName>GD_GRC</defName>
+    <label>tactical carbine</label>
+    <description>A Greydale Defense "panther" general purpose rifle platform. This is a carbine model.</description>
+    <graphicData>
+      <texPath>Things/A13/GRC</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractGDWeapons</soundInteract>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <MarketValue>700</MarketValue>
+      <AccuracyTouch>0.75</AccuracyTouch>
+      <AccuracyShort>0.89</AccuracyShort>
+      <AccuracyMedium>0.79</AccuracyMedium>
+      <AccuracyLong>0.71</AccuracyLong>
+      <RangedWeapon_Cooldown>0.6</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>165</Steel>
+      <Components>6</Components>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>DefenceTech</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_GRC</projectileDef>
+        <warmupTicks>85</warmupTicks>
+        <range>28</range>
+        <burstShotCount>4</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>ShotGRC</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GRM</defName>
+    <label>rifle bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Gbullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>14</DamageAmountBase>
+      <Speed>85</Speed>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseGDGun">
+    <defName>GD_GRM</defName>
+    <label>marksman rifle</label>
+    <description>A Greydale Defense "panther" general purpose rifle platform. This is a marksman rifle model.</description>
+    <graphicData>
+      <texPath>Things/A13/GRM</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractGDWeapons</soundInteract>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <MarketValue>800</MarketValue>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.9</AccuracyMedium>
+      <AccuracyLong>0.85</AccuracyLong>
+      <RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DefenceTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>170</Steel>
+      <Components>8</Components>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_GRM</projectileDef>
+        <warmupTicks>160</warmupTicks>
+        <range>39</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>ShotGRM</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_GRS</defName>
+    <label>carbine bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/GbulletBig</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Bullet</damageDef>
+      <DamageAmountBase>7</DamageAmountBase>
+      <Speed>70</Speed>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseGDGun">
+    <defName>GD_GRS</defName>
+    <label>support machinegun</label>
+    <description>A Greydale Defense "panther" general purpose rifle platform. This is a LMG model.</description>
+    <graphicData>
+      <texPath>Things/A13/GRS</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractGDWeapons</soundInteract>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <MarketValue>900</MarketValue>
+      <AccuracyTouch>0.55</AccuracyTouch>
+      <AccuracyShort>0.65</AccuracyShort>
+      <AccuracyMedium>0.6</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>2.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>DefenceTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>180</Steel>
+      <Components>10</Components>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_GRS</projectileDef>
+        <warmupTicks>115</warmupTicks>
+        <range>32</range>
+        <burstShotCount>12</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>ShotGRS</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+
+  <!-- ============================================= -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Jaguar</defName>
+    <label>grenade</label>
+    <graphicData> <texPath>Things/Projectile/GShell</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <flyOverhead>True</flyOverhead>
+      <speed>45</speed>
+      <soundHitThickRoof>ArtilleryHitThickRoof</soundHitThickRoof>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>25</damageAmountBase>
+      <explosionRadius>2.5</explosionRadius>
+      <explosionDelay>10</explosionDelay>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseGDGun">
+    <defName>GD_Jaguar</defName>
+    <label>grenade launcher</label>
+    <description>Designed by Greydale Defense, the "Jaguar" is a simple but effective indirect fire support weapon.</description>
+    <graphicData>
+      <texPath>Things/A13/Jaguar</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractGDWeapons</soundInteract>
+    <statBases>
+      <WorkToMake>19000</WorkToMake>
+      <MarketValue>930</MarketValue>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.4</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.2</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>190</Steel>
+      <Components>10</Components>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>DefenceTech</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <forcedMissRadius>1.5</forcedMissRadius>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Jaguar</projectileDef>
+        <warmupTicks>220</warmupTicks>
+        <range>22</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ShotGdgrenade</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>15</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+  <!-- ============================================== -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Caracal</defName>
+    <label>pistol bullet</label>
+    <graphicData>
+      <texPath>Things/Projectile/Gbullet</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>ArmorPiercing</damageDef>
+      <DamageAmountBase>5</DamageAmountBase>
+      <Speed>95</Speed>
+    </projectile>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseGDGun">
+    <defName>GD_Caracal</defName>
+    <label>HV SMG</label>
+    <description>The "Caracal" is a SMG that manufactured by Graydale Defence. It was designed for close assault and fires special small calibre high velocity cartridges that can penetrate armour.</description>
+    <graphicData>
+      <texPath>Things/A13/Caracal</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>14000</WorkToMake>
+      <MarketValue>780</MarketValue>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.85</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.1</AccuracyLong>
+      <RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <Steel>45</Steel>
+      <Components>4</Components>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>DefenceTech</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Caracal</projectileDef>
+        <warmupTicks>65</warmupTicks>
+        <range>17</range>
+        <burstShotCount>5</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>ShotCaracal</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+</ThingDefs>

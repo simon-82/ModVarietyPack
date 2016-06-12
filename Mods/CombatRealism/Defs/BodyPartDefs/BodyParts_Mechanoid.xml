@@ -4,10 +4,11 @@
   <BodyPartDef>
     <defName>MechanicalThorax</defName>
     <label>thorax</label>
-    <hitPoints>60</hitPoints>
+    <hitPoints>50</hitPoints>
     <oldInjuryBaseChance>0</oldInjuryBaseChance>
     <skinCovered>false</skinCovered>
     <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
   </BodyPartDef>
 
   <BodyPartDef>
@@ -79,84 +80,6 @@
     <isSolid>true</isSolid>
     <activities>
       <li>Moving_way2</li>
-    </activities>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>MechanicalCentipedeBodyFirstRing</defName>
-    <label>first body ring</label>
-    <hitPoints>200</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-    <isSolid>true</isSolid>
-    <activities>
-      <li>Moving_tool</li>
-      <li>Manipulation_tool</li>
-    </activities>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>MechanicalCentipedeBodySecondRing</defName>
-    <label>second body ring</label>
-    <hitPoints>170</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-    <isSolid>true</isSolid>
-    <activities>
-      <li>Moving_tool</li>
-      <li>Manipulation_tool</li>
-    </activities>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>MechanicalCentipedeBodyThirdRing</defName>
-    <label>third body ring</label>
-    <hitPoints>140</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-    <isSolid>true</isSolid>
-    <activities>
-      <li>Moving_tool</li>
-      <li>Manipulation_tool</li>
-    </activities>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>MechanicalCentipedeBodyFourthRing</defName>
-    <label>fourth body ring</label>
-    <hitPoints>110</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-    <isSolid>true</isSolid>
-    <activities>
-      <li>Moving_tool</li>
-      <li>Manipulation_tool</li>
-    </activities>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>MechanicalCentipedeBodyFifthRing</defName>
-    <label>fifth body ring</label>
-    <hitPoints>80</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-    <isSolid>true</isSolid>
-    <activities>
-      <li>Moving_tool</li>
-      <li>Manipulation_tool</li>
-    </activities>
-  </BodyPartDef>
-
-  <BodyPartDef>
-    <defName>MechanicalCentipedeBodySixthRing</defName>
-    <label>sixth body ring</label>
-    <hitPoints>200</hitPoints>
-    <oldInjuryBaseChance>0</oldInjuryBaseChance>
-    <skinCovered>false</skinCovered>
-    <isSolid>true</isSolid>
-    <activities>
-      <li>Moving_tool</li>
-      <li>Manipulation_tool</li>
     </activities>
   </BodyPartDef>
   

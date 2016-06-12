@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<EdB.ColonistBar.HideColonistBar>Verstecke Kolonisten anzeige</EdB.ColonistBar.HideColonistBar>
+	<!-- NEEDS TRANSLATION --> <EdB.ColonistBar.Prefs>Colonist Bar</EdB.ColonistBar.Prefs>
+	<!-- SUGGEST BETTER TRANSLATION --> <EdB.ColonistBar.Prefs.Enable>Kolonisten Statusanzeige anzeigen</EdB.ColonistBar.Prefs.Enable> <!-- I've changed the name from "Colonist Status Bar" to "Colonist Bar" -->
+	<EdB.ColonistBar.Prefs.SmallIcons>Kleinere Bilder</EdB.ColonistBar.Prefs.SmallIcons>
+	<!-- NEEDS TRANSLATION --> <EdB.ColonistBar.Prefs.SmallIcons.Tip>Select this option to display small icons in the colonist status bar.\n\nThis option works best for smaller screen resolutions or colonies with lots of colonists.</EdB.ColonistBar.Prefs.SmallIcons.Tip>
+	<!-- SUGGEST BETTER TRANSLATION --> <EdB.ColonistBar.RemoveDeadColonist>Entferne Kolonist</EdB.ColonistBar.RemoveDeadColonist>
+	<!-- SUGGEST BETTER TRANSLATION --> <EdB.ColonistBar.RemoveMissingColonist>Entferne Kolonist</EdB.ColonistBar.RemoveMissingColonist>
+	<!-- NEEDS TRANSLATION --> <EdB.ColonistBar.Status.BINGING>BINGING</EdB.ColonistBar.Status.BINGING>
+	<EdB.ColonistBar.Status.BROKEN>GEBROCHEN</EdB.ColonistBar.Status.BROKEN>
+	<!-- NEEDS TRANSLATION --> <EdB.ColonistBar.Status.CRYPTOSLEEP>CRYPTOSLEEP</EdB.ColonistBar.Status.CRYPTOSLEEP>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Status.DAZED>DAZED</EdB.ColonistBar.Status.DAZED>
+	<EdB.ColonistBar.Status.DEAD>TOT</EdB.ColonistBar.Status.DEAD>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Status.FIGHT>FIGHT</EdB.ColonistBar.Status.FIGHT>
+	<EdB.ColonistBar.Status.KIDNAPPED>ENTFÜHRT</EdB.ColonistBar.Status.KIDNAPPED>
+	<EdB.ColonistBar.Status.MISSING>VERMISST</EdB.ColonistBar.Status.MISSING>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Status.PANIC>PANIC</EdB.ColonistBar.Status.PANIC>
+	<EdB.ColonistBar.Status.RAMPAGE>RANDALIERT</EdB.ColonistBar.Status.RAMPAGE>
+</LanguageData>

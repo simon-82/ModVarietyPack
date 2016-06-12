@@ -25,10 +25,10 @@
       <li>Designator_Open</li>
       <li>Designator_PlanAdd</li>
       <li>Designator_PlanRemove</li>
-      <!-- Vein Miner Mod -->
-        <li>VeinMiner.Designator_VeinMiner</li>      
-        <li>MineBrush.DesognatorMineBrush</li>
-        <li>MineBrush.StripMiner</li>
+      <!-- Add VeinMiner -->
+        <li>MVP.MVP_Designator_VeinMiner</li>      
+        <li>MVP.MVP_Designator_MineBrush</li>
+        <li>MVP.MVP_Designator_StripMiner</li>
     </specialDesignatorClasses>
   </DesignationCategoryDef>
   
@@ -170,7 +170,7 @@ Armor</label>
     <DefName>ProductionGoods</DefName>
     <label>Goods / 
 Services</label>
-    <description>Structures used for producing miscellaneous goods and droid services.</description>
+    <description>Structures used for producing miscellaneous goods and services.</description>
     <order>600</order>
     <specialDesignatorClasses>
       <li>Designator_Cancel</li>

@@ -1,95 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ThingDefs>
-
-
-	<!-- unfinished base -->
-	<ThingDef Name="UnfinishedBase" Abstract="True">
-		<thingClass>UnfinishedThing</thingClass>
-		<category>Item</category>
-		<label>Unfinished thing</label>
-		<graphicData>
-			<texPath>Things/Item/Unfinished/UnfinishedSculpture</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<altitudeLayer>Item</altitudeLayer>
-		<useHitPoints>true</useHitPoints>
-		<isUnfinishedThing>true</isUnfinishedThing>
-		<selectable>true</selectable>
-		<tradeability>Never</tradeability>
-		<drawerType>RealtimeOnly</drawerType>
-		<!-- For CompForbiddable -->
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-		</statBases>
-		<comps>
-			<li>
-				<compClass>CompForbiddable</compClass>
-			</li>
-		</comps>
-		<alwaysHaulable>true</alwaysHaulable>
-		<rotatable>false</rotatable>
-		<pathCost>15</pathCost>
-		<thingCategories>
-			<li>Unfinished</li>
-		</thingCategories>
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
-		</stuffCategories>
-	</ThingDef>
-
-	<ThingDef ParentName="UnfinishedBase">
-		<defName>UnfinishedProsthesis</defName>
-		<label>Unfinished prosthesis</label>
-		<graphicData>
-			<texPath>Items/MedProsthesis_unfinished</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
-		</stuffCategories>
-	</ThingDef>
-
-
-
-
-	<!-- part base -->
-	<ThingDef Name="BodyPartBase" Abstract="True">
-		<label>body part</label>
-		<thingClass>ThingWithComps</thingClass>
-		<category>Item</category>
-		<useHitPoints>true</useHitPoints>
-		<selectable>true</selectable>
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-		</statBases>
-		<altitudeLayer>Item</altitudeLayer>
-		<tickerType>Never</tickerType>
-		<alwaysHaulable>true</alwaysHaulable>
-		<isBodyPartOrImplant>true</isBodyPartOrImplant>
-		<comps>
-			<li>
-				<compClass>CompForbiddable</compClass>
-			</li>
-		</comps>      
-		<pathCost>10</pathCost>
-	</ThingDef>
-
-
-
-
-
-
-
-
-
-
-
 	<!-- natural -->
 	<!-- vanilla parts (texture overrride) -->
 	<ThingDef ParentName="BodyPartBase">
@@ -167,9 +78,10 @@
 		<li>BodyPartsAndImplants</li>
 	</thingCategories>
   </ThingDef>
-  <!-- vanilla parts end -->
+  
 
 
+  <!-- new parts -->
 	<ThingDef ParentName="BodyPartBase">
 		<defName>Leg</defName>
 		<label>leg</label>

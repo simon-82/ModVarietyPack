@@ -204,6 +204,55 @@
 
 
 
+  <!-- terrain fishindustry -->
+  <TerrainDef>
+    <defName>FishingPierFloorDeepWater</defName>
+    <label>Fishing pier floor</label>
+    <texturePath>Terrain/Surfaces/WaterDeep</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>394</RenderPrecedence>
+    <PathCost>0</PathCost>
+    <acceptFilth>false</acceptFilth>
+    <fertility>0</fertility>
+    <avoidWander>false</avoidWander>
+    <changeable>false</changeable>
+    <holdSnow>true</holdSnow>
+  </TerrainDef>
+
+  <TerrainDef>
+    <defName>FishingPierFloorShallowWater</defName>
+    <label>Fishing pier floor</label>
+    <texturePath>Terrain/Surfaces/WaterShallow</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>394</RenderPrecedence>
+    <PathCost>0</PathCost>
+    <acceptFilth>false</acceptFilth>
+    <fertility>0</fertility>
+    <avoidWander>false</avoidWander>
+    <changeable>false</changeable>
+    <holdSnow>true</holdSnow>
+  </TerrainDef>
+
+  <TerrainDef>
+    <defName>FishingPierFloorMarsh</defName>
+    <label>Fishing pier floor</label>
+    <texturePath>Terrain/Surfaces/Marsh</texturePath>
+    <EdgeType>FadeRough</EdgeType>
+    <RenderPrecedence>394</RenderPrecedence>
+    <PathCost>0</PathCost>
+    <acceptFilth>false</acceptFilth>
+    <fertility>0</fertility>
+    <avoidWander>false</avoidWander>
+    <changeable>false</changeable>
+    <holdSnow>true</holdSnow>
+  </TerrainDef>
+
+
+
+
+
+
+
 
 
 
@@ -273,8 +322,8 @@
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
     <comps>
-      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
-        <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>          
+      <li Class="CommunityCoreLibrary.CompProperties_RestrictedPlacement">
+        <compClass>CommunityCoreLibrary.CompRestrictedPlacement</compClass>          
         <terrainDefs>
             <li>SoilCultivated</li>
         </terrainDefs>                
@@ -284,7 +333,9 @@
       <li>CommunityCoreLibrary.PlaceWorker_OnlyOnTerrain</li>
     </placeWorkers>
     <designationCategory>ProductionFood</designationCategory>
-    <researchPrerequisite>AgricultureII</researchPrerequisite>
+    <researchPrerequisites>
+      <li>AgricultureII</li>
+    </researchPrerequisites>
   </TerrainDef>
 
   <TerrainDef Class="CommunityCoreLibrary.TerrainWithComps">
@@ -314,8 +365,8 @@
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
     <comps>
-      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
-        <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>          
+      <li Class="CommunityCoreLibrary.CompProperties_RestrictedPlacement">
+        <compClass>CommunityCoreLibrary.CompRestrictedPlacement</compClass>          
         <terrainDefs>
             <li>SoilFertilized</li>
         </terrainDefs>                
@@ -325,7 +376,9 @@
       <li>CommunityCoreLibrary.PlaceWorker_OnlyOnTerrain</li>
     </placeWorkers>
     <designationCategory>ProductionFood</designationCategory>
-    <researchPrerequisite>Hydroponics</researchPrerequisite>
+    <researchPrerequisites>
+      <li>Hydroponics</li>
+    </researchPrerequisites>
   </TerrainDef>
 
   <TerrainDef Class="CommunityCoreLibrary.TerrainWithComps">
@@ -356,8 +409,8 @@
     <terrainAffordanceNeeded>GrowSoil</terrainAffordanceNeeded>
     <constructEffect>ConstructDirt</constructEffect>
     <comps>
-      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
-        <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>          
+      <li Class="CommunityCoreLibrary.CompProperties_RestrictedPlacement">
+        <compClass>CommunityCoreLibrary.CompRestrictedPlacement</compClass>         
         <terrainDefs>
             <li>SoilCultivated</li>
             <li>SoilFertilized</li>
@@ -369,7 +422,9 @@
       <li>CommunityCoreLibrary.PlaceWorker_OnlyOnTerrain</li>
     </placeWorkers>
     <designationCategory>ProductionFood</designationCategory>
-    <researchPrerequisite>AgricultureIV</researchPrerequisite>
+    <researchPrerequisites>
+      <li>AgricultureIV</li>
+    </researchPrerequisites>
   </TerrainDef>
 
 
@@ -400,8 +455,8 @@
     <Fertility>0.8</Fertility>
     <TakeFootprints>True</TakeFootprints>
     <comps>
-      <li Class="CommunityCoreLibrary.RestrictedPlacement_Properties">
-        <compClass>CommunityCoreLibrary.RestrictedPlacement_Comp</compClass>          
+      <li Class="CommunityCoreLibrary.CompProperties_RestrictedPlacement">
+        <compClass>CommunityCoreLibrary.CompRestrictedPlacement</compClass>          
         <terrainDefs>
             <li>SoilCultivated</li>
             <li>SoilFertilized</li>

@@ -7,24 +7,9 @@
   </StuffCategoryDef>
 
   <StuffCategoryDef>
-    <defName>Woody</defName>
-    <label>woody</label>
+    <defName>Metallic_Weapon</defName>
+    <label>metallic</label>
   </StuffCategoryDef>
-
-  <StuffCategoryDef>
-    <defName>Stony</defName>
-    <label>stony</label>
-  </StuffCategoryDef>
-
-  <StuffCategoryDef>
-    <defName>Fabric</defName>
-    <label>fabric</label>
-  </StuffCategoryDef>
-
-  <StuffCategoryDef>
-    <defName>Leathery</defName>
-    <label>leathery</label>
-  </StuffCategoryDef>  
   
   
 

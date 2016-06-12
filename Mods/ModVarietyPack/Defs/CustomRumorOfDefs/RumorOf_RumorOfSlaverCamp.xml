@@ -2,8 +2,8 @@
 <CustomRumorOfDefs>
 	<CustomRumorOfDef>
 		<defName>RumorOfSlaverCamp</defName>
-		<daysPawnsAreGoneMin>3</daysPawnsAreGoneMin>
-		<daysPawnsAreGoneMax>4</daysPawnsAreGoneMax>
+		<daysPawnsAreGoneMin>1</daysPawnsAreGoneMin>
+		<daysPawnsAreGoneMax>3</daysPawnsAreGoneMax>
 		<treasureDefs>
 			<li>
 				<TreasureDef>Gun_PumpShotgun</TreasureDef>

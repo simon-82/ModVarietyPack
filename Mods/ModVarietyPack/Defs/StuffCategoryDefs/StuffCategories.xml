@@ -1,42 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!-- === VanillaStart === -->
-
+  <!-- Dummy 
+    used for steel ore,...
+  --> 
   <StuffCategoryDef>
-    <defName>Metallic</defName>
-    <label>metallic</label>
-  </StuffCategoryDef>
-
-  <StuffCategoryDef>
-    <defName>Woody</defName>
-    <label>woody</label>
-  </StuffCategoryDef>
-
-  <StuffCategoryDef>
-    <defName>Stony</defName>
-    <label>stony</label>
-  </StuffCategoryDef>
-
-  <StuffCategoryDef>
-    <defName>Fabric</defName>
-    <label>fabric</label>
-  </StuffCategoryDef>
-
-  <StuffCategoryDef>
-    <defName>Leathery</defName>
-    <label>leathery</label>
-  </StuffCategoryDef>  
-
-<!-- === VanillaEnd === -->  
-
-
-
-
-  
-  <StuffCategoryDef>
-    <defName>Stuff</defName>
-    <label>stuff</label>
+    <defName>Stuff_Locker</defName>
+    <label>stuff_locker</label>
   </StuffCategoryDef>
 
   <StuffCategoryDef>
@@ -48,6 +18,8 @@
     <defName>Paint</defName>
     <label>paint</label>
   </StuffCategoryDef>
+
+  
 
 
 

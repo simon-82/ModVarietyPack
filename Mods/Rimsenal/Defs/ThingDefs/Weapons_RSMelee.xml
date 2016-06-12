@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>
+  
+  <!-- ============================================================== -->
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp">
+    <defName>GD_Sabertooth</defName>
+    <label>combat blade</label>
+    <description>A "Sabertooth" combat blade of Greydale Defence. Good for chop down trees or enemies limbs.</description>
+    <graphicData> <texPath>Things/A13/Sabertooth</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+      <WorkToMake>20500</WorkToMake>
+      <MarketValue>1150</MarketValue>
+      <MeleeWeapon_DamageAmount>19</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>1.8</MeleeWeapon_Cooldown>
+    </statBases>
+    <equippedAngleOffset>35</equippedAngleOffset>
+    <equippedStatOffsets>
+      <PlantWorkSpeed>0.4</PlantWorkSpeed>
+    </equippedStatOffsets>
+    <costList>
+      <Steel>75</Steel>
+      <Components>2</Components>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Cut</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp">
+    <defName>YP_BingJu</defName>
+    <label>Vibrosword</label>
+    <description>Light but extremely sharp, the "BingJu(Ice pillar)" is the close combat weapon of Yunhwa Precision's private army.</description>
+    <graphicData> <texPath>Things/A13/BingJu</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <statBases>
+      <WorkToMake>32000</WorkToMake>
+      <MarketValue>1365</MarketValue>
+      <MeleeWeapon_DamageAmount>14</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>0.9</MeleeWeapon_Cooldown>
+    </statBases>
+   <costList>
+      <Steel>20</Steel>
+      <Plasteel>40</Plasteel>
+      <Components>5</Components>
+    </costList>
+    <equippedAngleOffset>0</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Cut</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+    <defName>JI_Ormbane</defName>
+    <label>Assault hammer</label>
+    <techLevel>Spacer</techLevel>
+    <description>"Ormbane" is a massive combat sledge hammer that manufactured from Jotun Interstellar.</description>
+    <graphicData> <texPath>Things/A13/Ormbane</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <statBases>
+      <WorkToMake>38500</WorkToMake>
+      <MarketValue>1550</MarketValue>
+      <MeleeWeapon_DamageAmount>38</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>2.9</MeleeWeapon_Cooldown>
+    </statBases>
+    <equippedAngleOffset>0</equippedAngleOffset>
+   <costList>
+      <Steel>75</Steel>
+      <Plasteel>180</Plasteel>
+      <Components>6</Components>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+
+  <ThingDef ParentName="BaseMeleeWeapon_Blunt">
+    <defName>AD_Verdict</defName>
+    <label>Concussion baton</label>
+    <description>Standard issue close combat weapon of Federation Peacekeeper Corps, the "Verdict" is simple non lethal weapon in show, but it's not.</description>
+    <graphicData> <texPath>Things/A13/Verdict</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <techLevel>Spacer</techLevel>
+ 		<weaponTags>
+  		    <li>FedCC</li>
+ 		</weaponTags>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <WorkToMake>36500</WorkToMake>
+      <MarketValue>1380</MarketValue>
+      <MeleeWeapon_DamageAmount>24</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>2</MeleeWeapon_Cooldown>
+    </statBases>
+   <costList>
+      <Steel>20</Steel>
+      <Plasteel>75</Plasteel>
+      <Components>6</Components>
+    </costList>
+    <equippedAngleOffset>0</equippedAngleOffset>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+
+</ThingDefs>

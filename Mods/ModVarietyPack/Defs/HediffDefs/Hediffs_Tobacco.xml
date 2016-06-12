@@ -5,10 +5,15 @@
 
   <HediffDef>
     <defName>Tobacco</defName>
-    <hediffClass>Hediff_Staged</hediffClass>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li>
+        <compClass>HediffComp_Immunizable</compClass>
+        <severityPerDayNotImmune>-1</severityPerDayNotImmune>
+      </li>
+    </comps>
     <label>tobacco</label>
-    <initialSeverity>.49</initialSeverity>
-    <severityPerDay>-0.25</severityPerDay>   
+    <initialSeverity>2</initialSeverity> 
     <stages>
         <li>
           <minSeverity>0</minSeverity>
@@ -45,10 +50,15 @@
 
 <HediffDef>
     <defName>StrongTobacco</defName>
-    <hediffClass>Hediff_Staged</hediffClass>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li>
+        <compClass>HediffComp_Immunizable</compClass>
+        <severityPerDayNotImmune>-1</severityPerDayNotImmune>
+      </li>
+    </comps>
     <label>tobacco</label>
-    <initialSeverity>1</initialSeverity>
-    <severityPerDay>-0.25</severityPerDay>
+    <initialSeverity>2</initialSeverity>
     <stages>
         <li>
           <minSeverity>0</minSeverity>

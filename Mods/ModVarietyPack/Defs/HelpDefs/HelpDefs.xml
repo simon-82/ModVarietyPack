@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<HelpDefs>
+
+    <HelpDef>
+        <defName>RedistHeat_Basics</defName>
+        <category>RedistHeat_AirNet</category>
+        <label>Building duct networks</label>
+        <description>A duct network needs three parts: Intakes, pipes, and outlets. Air from intakes will change the network's temperature, while outlets will use it to change its room's temperature.</description>
+    </HelpDef>
+
+    <HelpDef>
+        <defName>RedistHeat_SmartDucts</defName>
+        <category>RedistHeat_AirNet</category>
+        <label>Using smart duct outlets</label>
+        <description>Smart duct outlets are able to close themself without player interactions, depends on the room's and the network's temperature it is connected.\n\nUsage: Cooling hospital using one of freezer's air, without a risk of freezing patients.</description>
+    </HelpDef>
+
+    <HelpDef>
+        <defName>RedistHeat_Channels</defName>
+        <category>RedistHeat_AirNet</category>
+        <label>Lower and upper channel</label>
+        <description>Lower and upper networks do not link with each other. All duct buildings are able to change its connection channel using "Cycle channel" button.</description>
+    </HelpDef>
+
+
+
+
+
+    <HelpDef>
+        <defName>RTQuantumStockpile</defName>
+        <category>QuantumStockpiles</category>
+        <label>quantum stockpiles</label>
+        <description>quantum stockpiles: devices that are placed underneath stockpile zones in order to store more than one item or stack of items in a given space.
+    
+When powered, these stockpiles scan zone spaces adjacent to them and, if the zone's filter allows it, pull any items onto themselves, up to 4 items per space.
+
+Items are steadily superposed, so each one remains fully accessible, and nothing catastrophic will happen even if the power supply fails.</description>
+    </HelpDef>
+
+    <HelpDef>
+        <defName>RTQuantumRelay</defName>
+        <category>QuantumStockpiles</category>
+        <label>quantum relays</label>
+        <description>quantum relays: stand-alone devices that can connect to any quantum warehouse anywhere in the colony to transfer items and chunks back and forth.
+
+When powered, relays scan adjacent stockpile zone (and storage building) spaces and send items in them to the connected warehouse, provided that warehouse's zone accepts them and has higher or equal priority (compared to the scanned space).
+
+At the same time, connected warehouse will try to push items onto the relay, as defined by relay's own filter, if relay's priority is higher or equal to that of the warehouse's zone.</description>
+    </HelpDef>
+
+    <HelpDef>
+        <defName>RTQuantumWarehouse</defName>
+        <category>QuantumStockpiles</category>
+        <label>quantum warehouses</label>
+        <description>quantum warehouses: devices that are placed underneath stockpile zones to network all of the zone's quantum storage devices, on top of acting like quantum stockpiles themselves.
+        
+When powered, a zone's warehouse makes sure that all stockpiles (itself included) are evenly filled and tries to minimize the amount of incomplete item stacks. If chunk storage is researched, any chunks in the zone will be sent to stockpiles in chunk-storing mode, providing the zone accepts those chunks at all and there's space.</description>
+    </HelpDef>
+
+
+</HelpDefs>

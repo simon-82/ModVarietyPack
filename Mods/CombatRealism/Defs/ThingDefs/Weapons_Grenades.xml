@@ -1,31 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
 
   <!-- ==================== Bases ========================== -->
 
   <ThingDef Name="BaseEquipment" Abstract="True">
-    <equipmentType>Secondary</equipmentType>
+    <equipmentType>Primary</equipmentType>
     <label>equipment lacks label</label>
     <thingClass>ThingWithComps</thingClass>
     <category>Item</category>
     <useHitPoints>true</useHitPoints>
     <selectable>true</selectable>
-    <graphicData>
-      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
-    </graphicData>
     <drawGUIOverlay>true</drawGUIOverlay>
     <statBases>
       <MaxHitPoints>100</MaxHitPoints>
       <Flammability>1.0</Flammability>
-      <DeteriorationRate>1</DeteriorationRate>
+      <DeteriorationRate>2</DeteriorationRate>
       <SellPriceFactor>0.5</SellPriceFactor>
     </statBases>
     <altitudeLayer>Item</altitudeLayer>
     <description>Equipment lacks desc.</description>
     <comps>
-      <li>
-        <compClass>CompForbiddable</compClass>
-      </li>
+      <li Class="CompProperties_Forbiddable"/>
       <li>
         <compClass>CompEquippable</compClass>
       </li>
@@ -34,11 +29,14 @@
     <tickerType>Never</tickerType>
   </ThingDef>
 
+  <ThingDef Name="BaseGrenadeEquipment" ParentName="BaseEquipment" Abstract="True">
+    <stackLimit>75</stackLimit>
+  </ThingDef>
 
   <ThingDef Name="BaseGrenadeProjectile" Abstract="True">
     <category>Projectile</category>
     <altitudeLayer>Projectile</altitudeLayer>
-    <thingClass>Projectile_Explosive</thingClass>
+    <thingClass>Combat_Realism.ProjectileCR_Explosive</thingClass>
     <label>projectile</label>
     <tickerType>Normal</tickerType>
     <useHitPoints>False</useHitPoints>
@@ -46,7 +44,7 @@
     <graphicData>
       <shaderType>Transparent</shaderType>
     </graphicData>
-    <projectile>
+    <projectile Class="Combat_Realism.ProjectilePropertiesCR">
       <speed>24</speed>
       <flyOverhead>false</flyOverhead>
     </projectile>
@@ -56,49 +54,46 @@
 
   <!-- ==================== Frag grenade ========================== -->
 
-  <ThingDef Class="Combat_Realism.ThingDef_ProjectileFrag" ParentName="BaseGrenadeProjectile">
+  <ThingDef ParentName="BaseGrenadeProjectile">
     <defName>Proj_GrenadeFrag</defName>
     <label>frag grenade</label>
-    <thingClass>Combat_Realism.ProjectileCR_Frag</thingClass>
     <graphicData>
-      <texPath>Things/Projectile/Grenade</texPath>
+      <texPath>Things/Projectile/Grenades/Frag</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <explosionRadius>1</explosionRadius>
+      <explosionRadius>1.5</explosionRadius >
       <damageDef>Bomb</damageDef>
-      <damageAmountBase>70</damageAmountBase>
+      <damageAmountBase>80</damageAmountBase>
       <explosionDelay>60</explosionDelay>
     </projectile>
-	<fragRange>5.0</fragRange>
-	<fragProjectileSmall>Fragment_GrenadeFragSmall</fragProjectileSmall>
-	<fragAmountSmall>90</fragAmountSmall>
-	<fragProjectileMedium>Fragment_GrenadeFragMedium</fragProjectileMedium>
-	<fragAmountMedium>30</fragAmountMedium>
-	<fragProjectileLarge>Fragment_GrenadeFragLarge</fragProjectileLarge>
-	<fragAmountLarge>20</fragAmountLarge>
-    <comps>
-      <li Class="Combat_Realism.CompProperties_AP">
-        <compClass>Combat_Realism.CompAP</compClass>
-        <armorPenetration>0.55</armorPenetration>
+		<comps>
+      <li Class="Combat_Realism.CompProperties_ExplosiveCR">
+        <fragRange>4.0</fragRange>
+				<fragments>
+					<Fragment_GrenadeFragSmall>225</Fragment_GrenadeFragSmall>
+					<Fragment_GrenadeFragMedium>150</Fragment_GrenadeFragMedium>
+					<Fragment_GrenadeFragLarge>45</Fragment_GrenadeFragLarge>
+				</fragments>
       </li>
-    </comps>
+		</comps>
   </ThingDef>
 
-  <ThingDef ParentName="BaseEquipment">
+  <ThingDef ParentName="BaseGrenadeEquipment">
     <defName>Weapon_GrenadeFrag</defName>
     <equipmentType>Primary</equipmentType>
-    <label>frag grenades</label>
-    <description>Old-school fragmentation grenades.</description>
+    <label>frag grenade</label>
+    <description>Old-school fragmentation grenade.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/Grenades</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Ammo/HandGrenades/Frag</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <soundInteract>InteractGrenade</soundInteract>
     <techLevel>Midworld</techLevel>
     <statBases>
-      <MarketValue>200</MarketValue>
-      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+      <MarketValue>5.25</MarketValue>
+      <AimEfficiency>0.15</AimEfficiency>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>GrenadeDestructive</li>
@@ -107,13 +102,12 @@
       <li>Grenades</li>
     </thingCategories>
     <verbs>
-      <li>
+      <li Class="Combat_Realism.VerbPropertiesCR">
         <label>throw frag grenade</label>
-        <verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+        <verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <range>10</range>
-        <forcedMissRadius>1.0</forcedMissRadius>
-        <warmupTicks>120</warmupTicks>
+        <range>10.0</range>
+        <warmupTicks>60</warmupTicks>
         <noiseRadius>4</noiseRadius>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
         <soundCast>ThrowGrenade</soundCast>
@@ -121,10 +115,11 @@
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
         <projectileDef>Proj_GrenadeFrag</projectileDef>
+        <onlyManualCast>true</onlyManualCast>
       </li>
     </verbs>
     <smeltProducts>
-      <Steel>10</Steel>
+      <Steel>2</Steel>
     </smeltProducts>
   </ThingDef>
 
@@ -136,31 +131,32 @@
     <defName>Proj_GrenadeMolotov</defName>
     <label>molotov cocktail</label>
     <graphicData>
-      <texPath>Things/Projectile/Molotov</texPath>
+      <texPath>Things/Projectile/Grenades/Molotov</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <explosionRadius>1.1</explosionRadius>
+      <explosionRadius>1.5</explosionRadius >
       <damageDef>Flame</damageDef>
-      <damageAmountBase>10</damageAmountBase>
-      <postExplosionSpawnThingDef>Puddle_Fuel</postExplosionSpawnThingDef>
+      <damageAmountBase>30</damageAmountBase>
+      <preExplosionSpawnThingDef>Puddle_Fuel</preExplosionSpawnThingDef>
     </projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseEquipment">
+  <ThingDef ParentName="BaseGrenadeEquipment">
     <defName>Weapon_GrenadeMolotov</defName>
     <equipmentType>Primary</equipmentType>
-    <label>molotov cocktails</label>
-    <description>Glass bottles filled with flammable liquid, with a burning cloth in the neck. A favorite weapon of hooligans and desperate warriors from rim to rim.</description>
+    <label>molotov cocktail</label>
+    <description>Glass bottle filled with flammable liquid, with a burning cloth in the neck. A favorite weapon of hooligans and desperate warriors from rim to rim.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/Molotov</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Ammo/HandGrenades/Molotov</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <soundInteract>InteractMolotovCocktail</soundInteract>
     <techLevel>Midworld</techLevel>
     <statBases>
-      <MarketValue>100</MarketValue>
-      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+      <MarketValue>2.10</MarketValue>
+      <AimEfficiency>0.15</AimEfficiency>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>GrenadeDestructive</li>
@@ -169,13 +165,12 @@
       <li>Grenades</li>
     </thingCategories>
     <verbs>
-      <li>
+      <li Class="Combat_Realism.VerbPropertiesCR">
         <label>throw molotov</label>
-        <verbClass>Verb_LaunchProjectile</verbClass>
+        <verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <range>10</range>
-        <forcedMissRadius>2.9</forcedMissRadius>
-        <warmupTicks>120</warmupTicks>
+        <warmupTicks>60</warmupTicks>
         <noiseRadius>4</noiseRadius>
         <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
         <ai_IsIncendiary>true</ai_IsIncendiary>
@@ -184,6 +179,7 @@
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
         <projectileDef>Proj_GrenadeMolotov</projectileDef>
+        <onlyManualCast>true</onlyManualCast>
       </li>
     </verbs>
   </ThingDef>
@@ -193,33 +189,41 @@
   <ThingDef ParentName="BaseGrenadeProjectile">
     <defName>Proj_GrenadeEMP</defName>
     <label>EMP grenade</label>
-    <thingClass>Projectile_Explosive</thingClass>
     <graphicData>
-      <texPath>Things/Projectile/GrenadeEMP</texPath>
+      <texPath>Things/Projectile/Grenades/EMP</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <projectile>
-      <explosionRadius>3.5</explosionRadius>
+      <explosionRadius>3</explosionRadius>
       <damageDef>EMP</damageDef>
-      <damageAmountBase>80</damageAmountBase>
+      <damageAmountBase>40</damageAmountBase>
       <explosionDelay>60</explosionDelay>
     </projectile>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_ExplosiveCR">
+	    <explosionDamage>10</explosionDamage>
+	    <explosionDamageDef>Electrical</explosionDamageDef>
+	    <explosionRadius>4</explosionRadius>
+	    <soundExplode>MortarEMP_Explode</soundExplode>
+	  </li>
+	</comps>
   </ThingDef>
 
-  <ThingDef ParentName="BaseEquipment">
+  <ThingDef ParentName="BaseGrenadeEquipment">
     <defName>Weapon_GrenadeEMP</defName>
     <equipmentType>Primary</equipmentType>
-    <label>EMP grenades</label>
-    <description>Electromagnetic pulse grenades damaging to electronic equipment.</description>
+    <label>EMP grenade</label>
+    <description>Electromagnetic pulse grenade damaging to electronic equipment.</description>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/EMPGrenades</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Ammo/HandGrenades/EMP</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
     </graphicData>
     <soundInteract>InteractGrenade</soundInteract>
     <techLevel>Midworld</techLevel>
     <statBases>
-      <MarketValue>250</MarketValue>
-      <RangedWeapon_Cooldown>1.0</RangedWeapon_Cooldown>
+      <MarketValue>7.65</MarketValue>
+      <AimEfficiency>0.15</AimEfficiency>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
       <li>GrenadeEMP</li>
@@ -228,13 +232,12 @@
       <li>Grenades</li>
     </thingCategories>
     <verbs>
-      <li>
+      <li Class="Combat_Realism.VerbPropertiesCR">
         <label>throw EMP grenade</label>
-        <verbClass>Verb_LaunchProjectile</verbClass>
+        <verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <range>10</range>
-        <forcedMissRadius>1.0</forcedMissRadius>
-        <warmupTicks>120</warmupTicks>
+        <warmupTicks>60</warmupTicks>
         <noiseRadius>4</noiseRadius>
         <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
         <soundCast>ThrowGrenade</soundCast>
@@ -242,10 +245,73 @@
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
         <projectileDef>Proj_GrenadeEMP</projectileDef>
+        <onlyManualCast>true</onlyManualCast>
       </li>
     </verbs>
     <smeltProducts>
-      <Steel>10</Steel>
+      <Steel>2</Steel>
+    </smeltProducts>
+  </ThingDef>
+
+  <!-- ==================== Flashbang grenade ========================== -->
+
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_GrenadeFlashbang</defName>
+    <label>flashbang grenade</label>
+    <graphicData>
+      <texPath>Things/Projectile/Grenades/Flashbang</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius>3.5</explosionRadius>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <explosionDelay>60</explosionDelay>
+      <soundExplode>Explosion_Stun</soundExplode>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseGrenadeEquipment">
+    <defName>Weapon_GrenadeFlashbang</defName>
+    <equipmentType>Primary</equipmentType>
+    <label>flashbang grenade</label>
+    <description>Pyrotechnic charge designed to produce a blinding flash of light and loud noise, temporarily blinding and disorienting anyone nearby.</description>
+    <graphicData>
+      <texPath>Things/Ammo/HandGrenades/Flashbang</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>InteractGrenade</soundInteract>
+    <techLevel>Midworld</techLevel>
+    <statBases>
+      <MarketValue>4.85</MarketValue>
+      <AimEfficiency>0.15</AimEfficiency>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>CR_GrenadeFlashbang</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <label>throw flashbang grenade</label>
+        <verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>10</range>
+        <warmupTicks>60</warmupTicks>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <projectileDef>Proj_GrenadeFlashbang</projectileDef>
+        <onlyManualCast>true</onlyManualCast>
+      </li>
+    </verbs>
+    <smeltProducts>
+      <Steel>2</Steel>
     </smeltProducts>
   </ThingDef>
 

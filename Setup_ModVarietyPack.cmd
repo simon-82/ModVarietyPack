@@ -31,8 +31,8 @@ ECHO.
 ECHO Set oWS = WScript.CreateObject("WScript.Shell") > CreateShortcut.vbs
 ECHO sLinkFile = "%cd%\RimWorld ModVarietyPack.lnk" >> CreateShortcut.vbs
 ECHO Set oLink = oWS.CreateShortcut(sLinkFile) >> CreateShortcut.vbs
-ECHO oLink.TargetPath = "%cd%\RimWorld914Win.exe" >> CreateShortcut.vbs
-ECHO oLink.Arguments = " -savedatafolder SaveData" >> CreateShortcut.vbs
+ECHO oLink.TargetPath = "%cd%\RimWorld1135Win.exe" >> CreateShortcut.vbs
+ECHO oLink.Arguments = " -savedatafolder=SaveData" >> CreateShortcut.vbs
 ECHO oLink.Save >> CreateShortcut.vbs
 cscript	CreateShortcut.vbs
 del CreateShortcut.vbs
@@ -46,4 +46,4 @@ ECHO Have Fun :)
 ECHO.
 ECHO.
 PAUSE
-del Setup_ModVarietyPack.cmd
+REM del Setup_ModVarietyPack.cmd

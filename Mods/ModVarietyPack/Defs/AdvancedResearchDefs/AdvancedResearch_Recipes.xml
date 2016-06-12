@@ -3,21 +3,6 @@
 
     <!-- Agriculture -->
     <AdvancedResearchDef>         
-        <defName>AgricultureIIRodHarpoon</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>AgricultureII</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>MakeFishingRod</li>
-            <li>MakeHarpoon</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableWeapon</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
-
-    <AdvancedResearchDef>         
         <defName>AgricultureIIIPressing</defName>
         <Priority>0</Priority>        
         <researchDefs>
@@ -82,7 +67,7 @@
             <li>MakeFruitYogurt</li>
         </recipeDefs>        
         <thingDefs>
-            <li>CookStove</li>
+            <li>ElectricStove</li>
         </thingDefs>        
     </AdvancedResearchDef>
 
@@ -134,7 +119,7 @@
         </researchDefs>        
         <recipeDefs>
             <li>MakeMedicine</li>
-            <li>MakeSyringe</li>
+            <!--  <li>MakeSyringe</li> -->
         </recipeDefs>        
         <thingDefs>
             <li>TableChemlab</li>
@@ -157,7 +142,6 @@
         </recipeDefs>
         <thingDefs>
             <li>Human</li>
-            <li>Norbal</li>
         </thingDefs>                              
     </AdvancedResearchDef>
 
@@ -165,7 +149,7 @@
         <defName>MedicineIIcraft</defName>
         <Priority>0</Priority>        
         <researchDefs>
-            <li>MedicineII</li>
+            <li>VitalsMonitor</li>
         </researchDefs>        
         <recipeDefs>
             <li>CreateSimpleProstheticLeg</li>
@@ -187,7 +171,7 @@
         <defName>MedicineIIinstall</defName>
         <Priority>0</Priority>        
         <researchDefs>
-            <li>MedicineII</li>
+            <li>VitalsMonitor</li>
         </researchDefs>        
         <recipeDefs>           
             <li>InstallSimpleProstheticLeg</li>
@@ -202,7 +186,6 @@
         </recipeDefs>
         <thingDefs>
             <li>Human</li>
-            <li>Norbal</li>
         </thingDefs>   
     </AdvancedResearchDef>
 
@@ -210,7 +193,7 @@
         <defName>MedicineIIIinstall</defName>
         <Priority>0</Priority>        
         <researchDefs>
-            <li>Chemlab</li>
+            <li>MedicineIII</li>
         </researchDefs>        
         <recipeDefs>           
             <li>InstallNaturalHeart</li>
@@ -227,7 +210,6 @@
         </recipeDefs>
         <thingDefs>
             <li>Human</li>
-            <li>Norbal</li>
         </thingDefs>   
     </AdvancedResearchDef>
 
@@ -254,7 +236,6 @@
         </recipeDefs>
         <thingDefs>
             <li>Human</li>
-            <li>Norbal</li>
         </thingDefs>   
     </AdvancedResearchDef>
 
@@ -302,7 +283,6 @@
         </recipeDefs>
         <thingDefs>
             <li>Human</li>
-            <li>Norbal</li>
         </thingDefs>   
     </AdvancedResearchDef>
 
@@ -319,7 +299,7 @@
         <defName>MMS</defName>
         <Priority>0</Priority>        
         <researchDefs>
-            <li>ResearchMineralSonarEnhancedScan</li>
+            <li>MobileMineralSonar</li>
         </researchDefs>        
         <recipeDefs>
             <li>MakeMineralSonarModule</li>
@@ -333,14 +313,14 @@
         <defName>FurnitureII</defName>
         <Priority>0</Priority>        
         <researchDefs>
-            <li>FurnitureII</li>
+            <li>MultiAnalyzer</li>
         </researchDefs>        
         <recipeDefs>
             <li>MakePaintingSupplies</li>
             <li>MakePaintingSuppliesTempera</li>
         </recipeDefs>        
         <thingDefs>
-            <li>CookStove</li>
+            <li>ElectricStove</li>
         </thingDefs>        
     </AdvancedResearchDef>
 
@@ -446,6 +426,7 @@
         </thingDefs>        
     </AdvancedResearchDef> 
 
+    <!-- switch to vanilla unlock Textile III in thingdef 
     <AdvancedResearchDef>         
         <defName>TextileIIIArmor</defName>
         <Priority>0</Priority>        
@@ -467,7 +448,7 @@
         <thingDefs>
             <li>TableSmithing</li>
         </thingDefs>        
-    </AdvancedResearchDef> 
+    </AdvancedResearchDef> -->
 
 
 
@@ -486,11 +467,12 @@
 
 
     <!-- Security -->
+    <!-- vanilla unlock of building recipe now 
     <AdvancedResearchDef>         
         <defName>SecurityITurret</defName>
         <Priority>0</Priority>        
         <researchDefs>
-            <li>SecurityI</li>
+            <li>Firefoam</li>
         </researchDefs>        
         <recipeDefs>
             <li>MakeImprovisedTurret</li>
@@ -499,169 +481,9 @@
             <li>TableWeapon</li>
         </thingDefs>        
     </AdvancedResearchDef> 
-
-    <AdvancedResearchDef>         
-        <defName>TurretM2</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>TurretM2Browning</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>MakeTurretM2Browning</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableSmithing</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
-
-    <AdvancedResearchDef>         
-        <defName>TurretUtility</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>TurretsUtility</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>MakeSpotlightTower</li>
-            <li>MakeTurretStun</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableSmithing</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
-
-    <AdvancedResearchDef>         
-        <defName>TurretMiniGun</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>TurretMiniGun</li>
-        </researchDefs>        
-        <recipeDefs>            
-            <li>MakeTurretM134Minigun</li>            
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableSmithing</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
-
-    <AdvancedResearchDef>         
-        <defName>TurretCannon</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>TurretCannon</li>
-        </researchDefs>        
-        <recipeDefs>            
-            <li>MakeCannonShell</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableSmithing</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
-
-    <AdvancedResearchDef>         
-        <defName>TurretsAdvanced</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>TurretsAdvanced</li>
-        </researchDefs>        
-        <recipeDefs>
-            <li>MakeTurretAM</li>
-            <li>MakeTurretLaser</li>
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableSmithing</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
-
-    <AdvancedResearchDef>         
-        <defName>WeaponCraftingII</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>WeaponCraftingII</li>
-        </researchDefs>        
-        <recipeDefs>
-            <!-- Pistols -->
-            <li>MakeGun_DesertEagleMarkI</li>
-            <li>MakeGun_ColtPolicePositive</li>
-            <li>MakeGun_WaltherPPK</li>
-            <li>MakeGun_Glock18_P</li>
-
-            <!-- S -->
-            <li>MakeGun_Mosbearg500_PA</li>
-            <li>MakeGun_Saiga12K030_PA</li>
-            <li>MakeGun_USAS12_PA</li>
-
-            <!-- AR -->
-            <li>MakeGun_AK47_AR</li>
-            <li>MakeGun_M4A1_AR</li>
-            <li>MakeGun_FAMASG2_PA</li>
-            <li>MakeGun_L85A1_PA</li>
-
-            <!-- R -->
-            <li>MakeGun_M14_PA</li>
-            <li>MakeGun_BarrettM107_PA</li>
-
-            <!-- SR -->
-            <li>MakeGun_AccuracyInternationalAWM_PA</li>
-            <li>MakeGun_SVD_PA</li>            
-        </recipeDefs>        
-        <thingDefs>
-            <li>TableWeaponCrafting</li>
-        </thingDefs>        
-    </AdvancedResearchDef> 
-
-    <AdvancedResearchDef>         
-        <defName>WeaponCraftingIIL</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>Launchers</li>
-        </researchDefs>        
-        <recipeDefs>
-            <!-- L -->
-            <li>MakeGun_IncendiaryLauncher</li>
-            <li>MakeGun_RPG7_PA</li>
-        </recipeDefs>
-        <thingDefs>
-            <li>TableWeaponCrafting</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
-
-    <AdvancedResearchDef>         
-        <defName>WeaponCraftingIIAR</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>ARAccuracy</li>
-        </researchDefs>        
-        <recipeDefs>
-            <!-- AR -->
-            <li>MakeGun_SteyrAUGA1_PA</li>
-            <li>MakeGun_AR_SAvz58Tactical_PA</li>
-            <li>MakeGun_SG552Commando_PA</li>
-            <li>MakeGun_AK12_PA</li>
-        </recipeDefs>
-        <thingDefs>
-            <li>TableWeaponCrafting</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
-
-    <AdvancedResearchDef>         
-        <defName>WeaponCraftingIISR</defName>
-        <Priority>0</Priority>        
-        <researchDefs>
-            <li>SRAccuracy</li>
-        </researchDefs>        
-        <recipeDefs>
-            <!-- R -->
-            <li>MakeGun_6P62_PA</li>
-
-            <!-- SR -->
-            <li>MakeGun_BarrettM82A1_PA</li>
-            <li>MakeGun_M25_PA</li>
-            <li>MakeGun_MCMillanTac50_PA</li>
-        </recipeDefs>
-        <thingDefs>
-            <li>TableWeaponCrafting</li>
-        </thingDefs>        
-    </AdvancedResearchDef>
+    -->
+    <!-- temp deleted turrets + all gun unlocks  -->
+    
 
     <AdvancedResearchDef>         
         <defName>SecurityIIShells</defName>
@@ -673,7 +495,7 @@
             <li>MakeArtilleryShell</li>
         </recipeDefs>        
         <thingDefs>
-            <li>TableSmithing</li>
+            <li>ElectricSmithy</li>
         </thingDefs>        
     </AdvancedResearchDef>
 

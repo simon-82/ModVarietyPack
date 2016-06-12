@@ -11,6 +11,16 @@
         <resourceDefName>Steel</resourceDefName>
         <fissureSizeRequired>Small</fissureSizeRequired>
       </MinerResourceDef>
+
+      <MinerResourceDef>
+        <defName>MD2BauxiteResourceInfo</defName>
+        <label>Bauxite</label>
+        <spawnRangeMin>15</spawnRangeMin>
+        <spawnRangeMax>40</spawnRangeMax>
+        <ticksToProduce>4800</ticksToProduce>
+        <resourceDefName>Bauxite</resourceDefName>
+        <fissureSizeRequired>Small</fissureSizeRequired>
+      </MinerResourceDef>
   
       <MinerResourceDef>
         <defName>MD2SilverResourceInfo</defName>
@@ -53,13 +63,13 @@
       </MinerResourceDef>
   
       <MinerResourceDef>
-        <defName>MD2BauxiteResourceInfo</defName>
-        <label>Bauxite</label>
-        <spawnRangeMin>15</spawnRangeMin>
-        <spawnRangeMax>40</spawnRangeMax>
+        <defName>MD2JadeResourceInfo</defName>
+        <label>Jade</label>
+        <spawnRangeMin>5</spawnRangeMin>
+        <spawnRangeMax>10</spawnRangeMax>
         <ticksToProduce>4800</ticksToProduce>
-        <resourceDefName>Bauxite</resourceDefName>
-        <fissureSizeRequired>Small</fissureSizeRequired>
+        <resourceDefName>Jade</resourceDefName>
+        <fissureSizeRequired>Large</fissureSizeRequired>
       </MinerResourceDef>
     
 </MinerResourceDefs>

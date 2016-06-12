@@ -6,15 +6,22 @@
 
         <ModName>Community Core Library</ModName>
 
-        <version>0.12.6</version>
+        <minCCLVersion>0.13.3</minCCLVersion>
+
+        <ModConfigurationMenus>
+            <li>
+                <label>Minimap</label>
+                <mcmClass>CommunityCoreLibrary.MCM_MiniMap</mcmClass>
+            </li>
+        </ModConfigurationMenus>
 
         <MapComponents>
-            <li>CommunityCoreLibrary.ResearchController</li>
             <li>CommunityCoreLibrary.HideItemManager</li>
+            <li>CommunityCoreLibrary.MiniMap.MiniMapController</li>
         </MapComponents>
 
         <SpecialInjectors>
-            <li>CommunityCoreLibrary.CompRottableRefrigerated_Injector</li>
+            <li>CommunityCoreLibrary.DetourInjector</li>
         </SpecialInjectors>
 
     </ModHelperDef>

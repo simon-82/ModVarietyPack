@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>AJO_ArtDescription_Painting</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>art_description_root->This [painting] [depicts] [image]</li>
+        <li>art_description_root->This [painting] bears a [depiction] of [image]</li>
+        <li>art_description_root->On this [painting] is a [depiction] of [image]</li>
+        <li>painting->painting</li>
+        <li>painting->work</li>
+        <li>painting->piece</li>
+        <li>painting->canvas</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>AJO_ArtDescription_Book</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+		  <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [bookImage]</li>
+        <li>art_description_root->This [book] tells the [bookMood] story of [image4w]</li>
+		  
+        <li>book->book</li>
+        <li>book->booklet</li>
+        <li>book->novel</li>
+		  
+        <li>bookMood->interesting</li>
+        <li>bookMood->curious</li>
+        <li>bookMood->disgusting</li>
+        <li>bookMood->amusing</li>
+        <li>bookMood->hopeful</li>
+        <li>bookMood->scary</li>
+        <li>bookMood->joyous</li>
+        <li>bookMood->triumphant</li>
+        <li>bookMood->sorrowful</li>
+        <li>bookMood->disappointing</li>
+        <li>bookMood->proud</li>
+        <li>bookMood->embarrassing</li>
+        <li>bookMood->loving</li>
+        <li>bookMood->boring</li>
+        <li>bookMood->shocking</li>
+        <li>bookMood->exciting</li>
+        <li>bookMood->relaxing</li>
+        <li>bookMood->surprising</li>
+		  
+		  <li>bookImage->a [outlander] surrounded by [outlander]s. [part2]</li>
+        <li>bookImage->a [outlander] playing [game] with [quantity_adjphrase] [outlander]s. [part2]</li>
+        <li>bookImage->a [outlander] [subject_desc] holding a [weapon]. [part2]</li>
+        <li>bookImage->a solitary [outlander]. [part2]</li>
+        <li>bookImage->a [adjective] [outlander] wearing a [apparel]. [part2]</li>
+        <li>bookImage->an empty [apparel] [subject_desc]. [part2]</li>
+        <li>bookImage->a [adjective] [terrainfeature]. [part2]</li>
+        <li>bookImage->[animal]s playing [game]. [part2]</li>
+        <li>bookImage->a [animal] wearing a [apparel] [subject_desc]. [part2]</li>
+        <li>image4w->a person from the 21st century [subject_desc] while playing the game RimWorld. The story is [bookstyle_adj]</li>
+		  
+        <li>part2->[bookextra_sentence] [bookextra_sentence]</li>
+        <li>part2->[bookextra_sentence] [Bstyle_sentence]</li>
+        <li>part2->The story is [bookstyle_adj]</li>
+        <li>part2->[Bstyle_sentence]</li>
+		  
+        <li>subject_desc->flying through the air</li>
+        <li>subject_desc->suspended in the air</li>
+        <li>subject_desc->standing on the ground</li>
+        <li>subject_desc->moving to the left</li>
+        <li>subject_desc->moving to the right</li>
+        <li>subject_desc->sitting on a table</li>
+        <li>subject_desc->seen through a looking glass</li>
+        <li>subject_desc->rendered in silhouette</li>
+        <li>subject_desc->riding on a [animal] wearing a [apparel]</li>
+        <li>subject_desc->looking [adjective]</li>
+		  
+		  <li>bookextra_sentence->The cover image is bordered by [quantity_adjphrase] [animal]s.</li>
+        <li>bookextra_sentence->There is a [community] [Bside_position].</li>
+        <li>bookextra_sentence->There is a [terrainfeature] [Bside_position].</li>
+        <li>bookextra_sentence->There is a [animal] [Bside_position].</li>
+        <li>bookextra_sentence->The subjects are in front of a [terrainfeature].</li>
+        <li>bookextra_sentence->The story takes place in the middle of a [community].</li>
+        <li>bookextra_sentence->The story seems to take place on the outskirts of a [community].</li>
+        <li>bookextra_sentence->The lower part of the cover image is dominated by a [terrainfeature].</li>
+        <li>bookextra_sentence->A [outlander] [idle_verb_progressive] [Bside_position].</li>
+        <li>bookextra_sentence->A [animal] [idle_verb_progressive] [Bside_position].</li>
+        <li>bookextra_sentence->If you squint your eyes, the [composition] composition of the cover image reveals the outline of a [animal].</li>
+        <li>bookextra_sentence->The whole cover image is depicted by the careful arrangement of hundreds of tiny [animal]s.</li>
+        <li>bookextra_sentence->The smiling head of a [outlander] watches over all.</li>
+        <li>bookextra_sentence->A dead [animal] [idle_verb_progressive] [Bside_position].</li>
+        <li>bookextra_sentence->A personified depiction of [concept] [idle_verb_progressive] [Bside_position].</li>
+        <li>bookextra_sentence->A [animal] [Bside_position] seems to symbolize [concept].</li>
+        <li>bookextra_sentence->A set of [quantity_adjphrase] [outlander]s [idle_verb_progressive] [Bside_position].</li>
+        <li>bookextra_sentence->The story takes place inside a [community] built near a [terrainfeature].</li>
+		  
+		  <li>bookstyle_adj->unoriginal</li>
+        <li>bookstyle_adj->simple</li>
+        <li>bookstyle_adj->complex, realistic</li>
+        <li>bookstyle_adj->surrealistic</li>
+        <li>bookstyle_adj->classical</li>
+        <li>bookstyle_adj->modern</li>
+        <li>bookstyle_adj->symbolic</li>
+        <li>bookstyle_adj->amateurish yet attractive</li>
+        <li>bookstyle_adj->detail-oriented</li>
+        <li>bookstyle_adj->impressionistic</li>
+        <li>bookstyle_adj->expressionistic</li>
+        <li>bookstyle_adj->photographic</li>
+        <li>bookstyle_adj->dadaist</li>
+        <li>bookstyle_adj->folksy</li>
+        <li>bookstyle_adj->figurative</li>
+        <li>bookstyle_adj->abstract</li>
+        <li>bookstyle_adj->neoclassical</li>
+        <li>bookstyle_adj->romantic</li>
+        <li>bookstyle_adj->erotic</li>
+        <li>bookstyle_adj->sensual</li>
+        <li>bookstyle_adj->heartfelt</li>
+        <li>bookstyle_adj->dramatic</li>
+        <li>bookstyle_adj->comedic</li>
+        <li>bookstyle_adj->satirical</li>
+        <li>bookstyle_adj->tragic</li>
+        <li>bookstyle_adj->terrifying</li>
+        <li>bookstyle_adj->articulate</li>
+        <li>bookstyle_adj->chatty</li>
+        <li>bookstyle_adj->clean</li>
+        <li>bookstyle_adj->conversational</li>
+        <li>bookstyle_adj->declamatory</li>
+        <li>bookstyle_adj->diffuse</li>
+        <li>bookstyle_adj->discursive</li>
+        <li>bookstyle_adj->elliptical</li>
+        <li>bookstyle_adj->eloquent</li>
+        <li>bookstyle_adj->emphatic</li>
+        <li>bookstyle_adj->epigrammatic</li>
+        <li>bookstyle_adj->epistolary</li>
+        <li>bookstyle_adj->euphemistic</li>
+        <li>bookstyle_adj->idiomatic</li>
+        <li>bookstyle_adj->inarticulate</li>
+        <li>bookstyle_adj->incoherent</li>
+        <li>bookstyle_adj->parenthetical</li>
+        <li>bookstyle_adj->picturesque</li>
+        <li>bookstyle_adj->poetic</li>
+        <li>bookstyle_adj->rambling</li>
+        <li>bookstyle_adj->rhetorical</li>
+        <li>bookstyle_adj->Shakespearean</li>
+        <li>bookstyle_adj->vague</li>
+        <li>bookstyle_adj->verbose</li>
+		  
+		  <li>Bstyle_sentence->The cover image seems to express [concept].</li>
+        <li>Bstyle_sentence->The work is infused with the idea of [concept] and is written in a [bookstyle_adj] style.</li>
+        <li>Bstyle_sentence->The work suggests the concept of [concept].</li>
+        <li>Bstyle_sentence->The work is written in a [bookstyle_adj] style.</li>
+        <li>Bstyle_sentence->The [bookstyle_adj] style of the central plot clashes with the [bookstyle_adj] description of the characters.</li>
+        <li>Bstyle_sentence->Almost every shape in the cover image seems to be [composition].</li>
+        <li>Bstyle_sentence->The work has a [bookstyle_adj] feeling and a [composition] structure.</li>
+        <li>Bstyle_sentence->The overall composition is [composition].</li>
+        <li>Bstyle_sentence->The style is [bookstyle_adj] with [bookstyle_adj] elements.</li>
+        <li>Bstyle_sentence->The cover image is totally devoid of both [concept] and [concept].</li>
+        <li>Bstyle_sentence->The cover image somehow expresses both [concept] and [concept].</li>
+        <li>Bstyle_sentence->The [composition] structure of the cover image almost conflicts with the book's [bookstyle_adj] style.</li>
+		  
+		  <li>Bside_position->off to one side</li>
+        <li>Bside_position->near the edge of the cover image</li>
+        <li>Bside_position->in the background</li>
+        <li>Bside_position->in the distance</li>
+        <li>Bside_position->in the lower part of the cover image</li>
+        <li>Bside_position->in the upper part of the cover image</li>
+        <li>Bside_position->beneath the main subject</li>
+        <li>Bside_position->behind the focal point</li>
+        <li>Bside_position->at the left part of the cover image</li>
+        <li>Bside_position->to the right of the cover image</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+</Defs>

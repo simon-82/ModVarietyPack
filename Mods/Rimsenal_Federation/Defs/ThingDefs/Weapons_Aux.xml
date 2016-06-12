@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Sentinel</defName>
+    <label>plasma sphere</label>
+    <graphicData>
+      <texPath>Things/Projectile/Plasma</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Plasma</damageDef>
+      <explosionRadius>1</explosionRadius>
+      <damageAmountBase>20</damageAmountBase>
+      <speed>30</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFedGun">
+    <defName>AD_Sentinel</defName>
+    <label>plasma rifle</label>
+    <weaponTags>
+       <li>Sentinel</li>
+    </weaponTags>
+    <description>Rare and gruesome weapon even in the Federation standards, "Sentinel" is a personal portable plasma weapon. It fires small bursts of magnetic cells that contain metal plasma.</description>
+    <menuHidden>True</menuHidden>
+    <tradeability>Never</tradeability>
+    <graphicData>
+      <texPath>Things/A13/Sentinel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractADWeapons</soundInteract>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+    <statBases>
+     <MarketValue>2000</MarketValue>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.74</AccuracyShort>
+      <AccuracyMedium>0.87</AccuracyMedium>
+      <AccuracyLong>0.9</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Sentinel</projectileDef>
+        <warmupTicks>125</warmupTicks>
+        <range>26</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>RS_ShotCR</soundCast>
+        <muzzleFlashScale>12</muzzleFlashScale>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_PBomb</defName>
+    <label>plasma bomb</label>
+    <graphicData>
+      <texPath>Things/A13/MechPlasma</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <thingClass>Projectile_Explosive</thingClass>
+    <projectile>
+      <damageDef>Plasma</damageDef>
+      <explosionRadius>5</explosionRadius>
+      <damageAmountBase>100</damageAmountBase>
+      <explosionDelay>20</explosionDelay>
+      <speed>30</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFedGun">
+    <defName>AD_PBomb</defName>
+    <label>plasma bomb</label>
+    <weaponTags>
+       <li>FedBomb</li>
+    </weaponTags>
+    <description>A portable plasma reactor converted to suicide bombing.</description>
+    <menuHidden>True</menuHidden>
+    <tradeability>Never</tradeability>
+    <graphicData>
+      <texPath>Things/A13/PBomb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractADWeapons</soundInteract>
+    <destroyOnDrop>True</destroyOnDrop>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+     <MarketValue>400</MarketValue>
+      <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.74</AccuracyShort>
+      <AccuracyMedium>0.87</AccuracyMedium>
+      <AccuracyLong>0.9</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_PBomb</projectileDef>
+        <warmupTicks>425</warmupTicks>
+        <range>3</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>RS_ShotCR</soundCast>
+        <noiseRadius>8</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <!-- ============================================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_AuxPistol</defName>
+    <label>energy bolt</label>
+    <graphicData>
+      <texPath>Things/Projectile/Laser</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Optic</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseFedGun">
+    <defName>AD_AuxPistol</defName>
+    <label>auxiliary pistol</label>
+    <weaponTags>
+       <li>AuxPistol</li>
+    </weaponTags>
+    <description>A crude, mass produced version of more delicate Negotiator pistol.</description>
+    <graphicData>
+      <texPath>Things/A13/AuxPistol</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractADWeapons</soundInteract>
+    <menuHidden>True</menuHidden>
+    <statBases>
+      <MarketValue>450</MarketValue>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.5</AccuracyShort>
+      <AccuracyMedium>0.3</AccuracyMedium>
+      <AccuracyLong>0.2</AccuracyLong>
+      <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_AuxPistol</projectileDef>
+        <warmupTicks>105</warmupTicks>
+        <range>18</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>45</ticksBetweenBurstShots>
+        <soundCast>RS_ShotCP</soundCast>
+        <muzzleFlashScale>10</muzzleFlashScale>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</ThingDefs>

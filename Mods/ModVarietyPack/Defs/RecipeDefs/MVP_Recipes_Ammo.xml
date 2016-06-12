@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RecipeDefs>
+  <!-- CR new ammo -->
+
+  <RecipeDef Name="AmmoRecipeBase" Abstract="true">
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>10000</workAmount>
+    <workSkill>Crafting</workSkill>
+    <targetCountAdjustment>500</targetCountAdjustment>
+	<recipeUsers>
+	  <!-- Need an empty list here or the ammo injector will throw a null ref exception -->
+	</recipeUsers>
+  </RecipeDef>
+  
+  
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_6x24mm_Energy</defName>
+    <label>make 6x24mm energy cartridge x100</label>
+    <description>Craft 100 6x24mm energy cartridges.</description>
+    <jobString>Making 6x24mm energy cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_6x24mm_Energy>100</Ammo_6x24mm_Energy>
+    </products>
+  </RecipeDef>
+
+</RecipeDefs>

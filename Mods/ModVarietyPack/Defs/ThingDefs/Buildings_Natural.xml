@@ -1,14 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
+	<!-- CR bases + Bauxite -->
 
-  <ThingDef Name="BuildingNaturalBase" Abstract="True">
+	<ThingDef Name="BuildingNaturalBase" Abstract="True">
     <category>Building</category>
     <selectable>true</selectable>
     <drawerType>MapMeshOnly</drawerType>
     <filthLeaving>RockRubble</filthLeaving>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2.5</multiplier>
+      </li>
+      <li>
+        <damageDef>Thermobaric</damageDef>
+        <multiplier>2.5</multiplier>
+      </li>
+      <li>
+        <damageDef>Bullet</damageDef>
+        <multiplier>0.05</multiplier>
+      </li>
+      <li>
+        <damageDef>Fragment</damageDef>
+        <multiplier>0.05</multiplier>
+      </li>
+      <li>
+        <damageDef>Electrical</damageDef>
+        <multiplier>0.0</multiplier>
+      </li>
+    </damageMultipliers>
   </ThingDef>
 
-<!-- === VanillaStart === -->
 
   <ThingDef Name="RockBase" ParentName="BuildingNaturalBase" Abstract="True" >
     <thingClass>Mineable</thingClass>
@@ -43,378 +65,43 @@
       <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
       <deconstructible>false</deconstructible>
     </building>
-  </ThingDef>
+  </ThingDef>  
 
+	<!-- 
+	MVP Bauxite 
+	slightly less common than steel:
+	<mineableYield>35</mineableYield>
+			<mineableScatterCommonality>1</mineableScatterCommonality>
+			<mineableScatterBlotchSizeRange>
+				<min>20</min>
+				<max>40</max>
+			</mineableScatterBlotchSizeRange>
+	-->
 
-  <!--============================ Simple mineables ===============================-->
-
-
-  <ThingDef ParentName="RockBase">
-    <defName>CollapsedRocks</defName>
-    <label>collapsed rocks</label>
-    <graphicData>
-      <texPath>Things/Building/Natural/CollapsedRocks</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <linkType>None</linkType>
-      <drawSize>(3,3)</drawSize>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>500</MaxHitPoints>
-    </statBases>
-    <description>Collapsed rocks, packed tightly enough to hold up a roof.</description>
-    <rotatable>true</rotatable>
-    <building>
-      <isNaturalRock>false</isNaturalRock>
-      <claimable>false</claimable>
-    </building>
-  </ThingDef>
-
-
-
-  <!--============================ Resource rocks ===============================-->
-  
-  
-  <ThingDef ParentName="RockBase">
-    <defName>MineableSteel</defName>
-    <label>compacted steel</label>
-    <graphicData>
-      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <color>(114,92,83)</color>
-      <colorTwo>(155,133,107)</colorTwo>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>1500</MaxHitPoints>
-    </statBases>
-    <description>The remains of some ancient, collapsed structure. Rich in steel.</description>
-    <building>
-      <isResourceRock>true</isResourceRock>
-      <mineableThing>Steel</mineableThing>
-      <mineableYield>35</mineableYield>
-      <mineableScatterCommonality>1</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
-        <min>20</min>
-        <max>40</max>
-      </mineableScatterBlotchSizeRange>
-    </building>
-  </ThingDef>
-
-  <ThingDef ParentName="RockBase">
-    <defName>MineableSilver</defName>
-    <label>silver ore</label>
-    <graphicData>
-      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <color>(89,83,68)</color>
-      <colorTwo>(147,144,134)</colorTwo>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>1500</MaxHitPoints>
-    </statBases>
-    <description>Rock containing bits of silver.</description>
-    <building>
-      <isResourceRock>true</isResourceRock>
-      <mineableThing>Silver</mineableThing>
-      <mineableYield>35</mineableYield>
-      <mineableScatterCommonality>0.10</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
-        <min>4</min>
-        <max>12</max>
-      </mineableScatterBlotchSizeRange>
-    </building>
-  </ThingDef>
-
-
-  <ThingDef ParentName="RockBase">
-    <defName>MineableGold</defName>
-    <label>gold ore</label>
-    <graphicData>
-      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <color>(89,83,68)</color>
-      <colorTwo>(187,173,25)</colorTwo>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>1500</MaxHitPoints>
-    </statBases>
-    <description>Rock containing bits of gold.</description>
-    <building>
-      <isResourceRock>true</isResourceRock>
-      <mineableThing>Gold</mineableThing>
-      <mineableYield>35</mineableYield>
-      <mineableScatterCommonality>0.07</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
-        <min>1</min>
-        <max>6</max>
-      </mineableScatterBlotchSizeRange>
-    </building>
-  </ThingDef>
-
-
-  <ThingDef ParentName="RockBase">
-    <defName>MineableUranium</defName>
-    <label>uranium ore</label>
-    <graphicData>
-      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <color>(114,114,114)</color>
-      <colorTwo>(70,70,70)</colorTwo>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>4000</MaxHitPoints>
-    </statBases>
-    <description>Rock containing bits of uranium.</description>
-    <building>
-      <isResourceRock>true</isResourceRock>
-      <mineableThing>Uranium</mineableThing>
-      <mineableYield>35</mineableYield>
-      <mineableScatterCommonality>0.07</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
-        <min>1</min>
-        <max>6</max>
-      </mineableScatterBlotchSizeRange>
-    </building>
-  </ThingDef>
-
-
-
-  <ThingDef ParentName="RockBase">
-    <defName>MineablePlasteel</defName>
-    <label>compacted plasteel</label>
-    <graphicData>
-      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <color>(110,118,118)</color>
-      <colorTwo>(134,166,166)</colorTwo>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>10000</MaxHitPoints>
-    </statBases>
-    <description>Ancient compacted rubble rich in plasteel.</description>
-    <building>
-      <isResourceRock>true</isResourceRock>
-      <mineableThing>Plasteel</mineableThing>
-      <mineableYield>35</mineableYield>
-      <mineableScatterCommonality>0.05</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
-        <min>10</min>
-        <max>50</max>
-      </mineableScatterBlotchSizeRange>
-    </building>
-  </ThingDef>
-
-  
-  
-
-  <ThingDef ParentName="BuildingNaturalBase">
-    <category>Ethereal</category>
-    <label>steam geyser</label>
-    <defName>SteamGeyser</defName>
-    <thingClass>SteamGeyser</thingClass>
-    <graphicData>
-      <texPath>Things/Building/Natural/SteamGeyser</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>Transparent</shaderType>
-      <drawSize>(4,4)</drawSize>
-    </graphicData>
-    <altitudeLayer>Floor</altitudeLayer>
-    <destroyable>false</destroyable>
-    <useHitPoints>false</useHitPoints>
-    <tickerType>Normal</tickerType>
-    <selectable>true</selectable>
-    <description>Natural steam source.</description>
-    <size>(2,2)</size>
-    <neverOverlapFloors>true</neverOverlapFloors>
-    <blockPlants>true</blockPlants>
-  </ThingDef>
-
-  <!-- === VanillaEnd === -->
-
-
-
-
-
-
-
-  
-  <ThingDef ParentName="RockBase">
-    <defName>MineableBauxite</defName>
-    <label>bauxite ore</label>
-    <graphicData>
-      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>CutoutComplex</shaderType>
-      <color>(114,92,83)</color>
-      <colorTwo>(120,0,0)</colorTwo>
-    </graphicData>
-    <statBases>
-      <MaxHitPoints>1700</MaxHitPoints>
-    </statBases>
-    <description>Rock containing bits of bauxite.</description>
-    <building>
-      <isResourceRock>true</isResourceRock>
-      <mineableThing>Bauxite</mineableThing>
-      <mineableYield>50</mineableYield>
-      <mineableScatterCommonality>0.8</mineableScatterCommonality>
-      <mineableScatterBlotchSizeRange>
-        <min>10</min>
-        <max>50</max>
-      </mineableScatterBlotchSizeRange>
-    </building>
-  </ThingDef>
-
-
-
-
-  <!-- CaveWorld Flora -->
-  <ThingDef Name="CavePlantGlowerBase" Abstract="True">
-    <category>Building</category>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <terrainAffordanceNeeded>Any</terrainAffordanceNeeded>
-    <graphicData>
-      <texPath>Items/mushrooms/DummyTexture</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <ThingClass>Building</ThingClass>
-    <AltitudeLayer>Floor</AltitudeLayer>
-    <useHitPoints>False</useHitPoints>
-    <selectable>False</selectable>
-    <Size>(1,1)</Size>
-    <Passability>Standable</Passability>
-    <building>
-      <isEdifice>False</isEdifice>
-    </building>
-  </ThingDef>
-
-  <ThingDef ParentName="CavePlantGlowerBase">
-    <defName>ShimmershroomGlowerSmall</defName>
-    <label>Glowing shimmershroom</label>
-    <Description>A small shimmershroom glower.</Description>
-    <comps>
-      <li>
-        <compClass>CompGlower</compClass>
-        <glowRadius>2</glowRadius>
-        <glowColor>(255,0,200,0)</glowColor>
-      </li>
-    </comps>
-  </ThingDef>
-
-  <ThingDef ParentName="CavePlantGlowerBase">
-    <defName>ShimmershroomGlowerMedium</defName>
-    <label>Glowing shimmershroom</label>
-    <Description>A medium shimmershroom glower.</Description>
-    <comps>
-      <li>
-        <compClass>CompGlower</compClass>
-        <glowRadius>3</glowRadius>
-        <glowColor>(230,0,255,0)</glowColor>
-      </li>
-    </comps>
-  </ThingDef>
-
-  <ThingDef ParentName="CavePlantGlowerBase">
-    <defName>ShimmershroomGlowerBig</defName>
-    <label>Glowing shimmershroom</label>
-    <Description>A big shimmershroom glower.</Description>
-    <comps>
-      <li>
-        <compClass>CompGlower</compClass>
-        <glowRadius>4</glowRadius>
-        <glowColor>(150,0,255,0)</glowColor>
-      </li>
-    </comps>
-  </ThingDef>
-
-  <ThingDef ParentName="CavePlantGlowerBase">
-    <defName>GlowbulbGlowerSmall</defName>
-    <label>Glowing glowbulb</label>
-    <Description>A small glowbulb glower.</Description>
-    <comps>
-      <li>
-        <compClass>CompGlower</compClass>
-        <glowRadius>2</glowRadius>
-        <glowColor>(0,0,255,0)</glowColor>
-      </li>
-    </comps>
-  </ThingDef>
-
-  <ThingDef ParentName="CavePlantGlowerBase">
-    <defName>GlowbulbGlowerMedium</defName>
-    <label>Glowing glowbulb</label>
-    <Description>A medium glowbulb glower.</Description>
-    <comps>
-      <li>
-        <compClass>CompGlower</compClass>
-        <glowRadius>4</glowRadius>
-        <glowColor>(0,127,255,0)</glowColor>
-      </li>
-    </comps>
-  </ThingDef>
-
-  <ThingDef ParentName="CavePlantGlowerBase">
-    <defName>GlowbulbGlowerBig</defName>
-    <label>Glowing glowbulb</label>
-    <Description>A big glowbulb glower.</Description>
-    <comps>
-      <li>
-        <compClass>CompGlower</compClass>
-        <glowRadius>6</glowRadius>
-        <glowColor>(0,255,255,0)</glowColor>
-      </li>
-    </comps>
-  </ThingDef>
-
-  <ThingDef ParentName="CavePlantGlowerBase">
-    <defName>GleamcapGlowerSmall</defName>
-    <label>Glowing gleamcap</label>
-    <Description>A small gleamcap glower.</Description>
-    <comps>
-      <li>
-        <compClass>CompGlower</compClass>
-        <glowRadius>2</glowRadius>
-        <glowColor>(91,255,121,0)</glowColor>
-      </li>
-    </comps>
-  </ThingDef>
-
-  <ThingDef ParentName="CavePlantGlowerBase">
-    <defName>GleamcapGlowerMedium</defName>
-    <label>Glowing gleamcap</label>
-    <Description>A medium gleamcap glower.</Description>
-    <comps>
-      <li>
-        <compClass>CompGlower</compClass>
-        <glowRadius>4</glowRadius>
-        <glowColor>(56,255,142,0)</glowColor>
-      </li>
-    </comps>
-  </ThingDef>
-
-  <ThingDef ParentName="CavePlantGlowerBase">
-    <defName>GleamcapGlowerBig</defName>
-    <label>Glowing gleamcap</label>
-    <Description>A big gleamcap glower.</Description>
-    <comps>
-      <li>
-        <compClass>CompGlower</compClass>
-        <glowRadius>7</glowRadius>
-        <glowColor>(0,255,170,0)</glowColor>
-      </li>
-    </comps>
-  </ThingDef>
-
-  <ThingDef ParentName="CavePlantGlowerBase">
-    <defName>GleamcapSporeSpawner</defName>
-    <label>Spores</label>
-    <Description>Building used to spawn gleamcap spores.</Description>
-    <ThingClass>CaveworldFlora.GleamcapSporeSpawner</ThingClass>
-    <TickerType>Normal</TickerType>
-  </ThingDef>
+	<ThingDef ParentName="RockBase">
+		<defName>MineableBauxite</defName>
+		<label>bauxite ore</label>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(114,92,83)</color>
+			<colorTwo>(120,0,0)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1700</MaxHitPoints>
+		</statBases>
+		<description>Rock containing bits of Bauxite. Smeltable into Aluminium </description>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>Bauxite</mineableThing>
+			<mineableYield>50</mineableYield>
+			<mineableScatterCommonality>0.8</mineableScatterCommonality>
+			<mineableScatterBlotchSizeRange>
+				<min>10</min>
+				<max>50</max>
+			</mineableScatterBlotchSizeRange>
+		</building>
+	</ThingDef>
 
 </ThingDefs>

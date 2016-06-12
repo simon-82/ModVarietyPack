@@ -1,0 +1,808 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef ParentName="ApparelBase">
+    <defName>Carbonsuit</defName>
+    <label>Carbon jumpsuit</label>
+    <techLevel>Spacer</techLevel>
+    <description>A carbon crystalline fiber jumpsuit for military personnel. It is light and thin, but surprisingly sturdy.</description>
+    <graphicData> <texPath>Things/Apparel/Carbon</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<MarketValue>800</MarketValue>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.35</ArmorRating_Heat>
+			<Insulation_Cold>-25</Insulation_Cold>
+			<Insulation_Heat>15</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+			<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+     <tags>
+       <li>ADJS</li>
+     </tags>
+     <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+     </defaultOutfitTags>
+     <worngraphicPath>Things/Apparel/Carbon</worngraphicPath>
+			<layers>
+			    <li>OnSkin</li>
+			</layers>
+     <commonality>2</commonality>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+    </apparel>
+    <colorGenerator Class="ColorGenerator_Options">
+      <options>
+				<li>
+					<weight>6</weight>
+					<only>RGBA(0.5,0.5,0.5,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.7,0.7,0.7,0.7)</only>
+				</li>
+      </options>
+    </colorGenerator>
+    </ThingDef>
+
+  
+
+
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_TacVest</defName>
+    <label>tactical vest</label>
+    <description>An ergonomically designed body armor. This type of armor increase wearer's combat efficiency.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData> <texPath>Things/Apparel/TacVest</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <statBases>
+      <WorkToMake>15000</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <MarketValue>1000</MarketValue>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+    </statBases>
+    <equippedStatOffsets>
+      <AimingDelayFactor>-0.05</AimingDelayFactor>
+      <MoveSpeed>-0.04</MoveSpeed>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+    </recipeMaker>
+    <costList>
+      <Components>6</Components>
+      <Plasteel>70</Plasteel>
+    </costList>
+    <apparel>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <bodyPartGroups>
+        <li>Torso</li>
+      </bodyPartGroups>
+      <worngraphicPath>Things/Apparel/TacVest</worngraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+      <commonality>1</commonality>
+      <tags>
+        <li>Military</li>
+      </tags>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_TacHelmet</defName>
+    <label>tactical helmet</label>
+    <description>Advanced combat helmet designed specifically to protect the head during combat.</description>
+    <graphicData> <texPath>Things/Apparel/TacHelmet</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <statBases>
+      <WorkToMake>12000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <MarketValue>500</MarketValue>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.01</MoveSpeed>
+      <AimingDelayFactor>-0.05</AimingDelayFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+    </recipeMaker>
+    <costList>
+      <Components>3</Components>
+      <Plasteel>35</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <worngraphicPath>Things/Apparel/TacHelmet</worngraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <commonality>1</commonality>
+      <tags>
+        <li>Military</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+	<ThingDef ParentName="ArmorMakeableBase">
+		<defName>Apparel_Exoframe</defName>
+		<label>Exoframe</label>
+		<description>A exoframe is a mobile machine that is powered by a system of motors, pneumatics, levers or hydraulics that allow for limb movement and assists the wearer by boosting their strength and endurance.</description>
+		<graphicData> <texPath>Things/Apparel/Exo</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<tickerType>Normal</tickerType>
+		<statBases>
+     			<WorkToMake>18000</WorkToMake>
+			<MaxHitPoints>650</MaxHitPoints>
+			<MarketValue>1150</MarketValue>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>1.2</MoveSpeed>
+		</equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <costList>
+      <Components>8</Components>
+      <Plasteel>75</Plasteel>
+    </costList>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>PoweredArmor</researchPrerequisite>
+    </recipeMaker>
+		<apparel>
+<worngraphicPath>Things/Apparel/Exo</worngraphicPath>
+			<layers>
+			    <li>Shell</li>
+			</layers>
+			<commonality>0.2</commonality>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_Laconian</defName>
+    <label>pioneer armor</label>
+    <description>An armor designed primarily for combat engineer, Greydale "Laconian" pioneer armor has integrated tool set. It's a pretty good gear for builds something while gunfight.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData> <texPath>Things/Apparel/Laconian</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>PoweredArmor</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>150</Steel>
+      <Components>15</Components>
+      <Plasteel>120</Plasteel>
+    </costList>
+    <statBases>
+     <WorkToMake>35000</WorkToMake>
+      <MaxHitPoints>250</MaxHitPoints>
+      <MarketValue>3500</MarketValue>
+      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.60</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.3</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <ConstructionSpeed>0.1</ConstructionSpeed>
+      <SmoothingSpeed>0.1</SmoothingSpeed>
+      <MiningSpeed>0.1</MiningSpeed>
+      <MoveSpeed>-0.09</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <worngraphicPath>Things/Apparel/Laconian</worngraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <commonality>1</commonality>
+      <tags>
+        <li>Military</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_LaconianH</defName>
+    <label>pioneer helmet</label>
+    <description>A helmet of the Laconian pioneer armor. A simple target assist system integrated.</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData> <texPath>Things/Apparel/LaconianH</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <statBases>
+     <WorkToMake>18000</WorkToMake>
+      <MaxHitPoints>120</MaxHitPoints>
+      <MarketValue>700</MarketValue>
+      <ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.3</ArmorRating_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.02</MoveSpeed>
+      <AimingDelayFactor>-0.05</AimingDelayFactor>
+    </equippedStatOffsets>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>PoweredArmor</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>75</Steel>
+      <Components>7</Components>
+      <Plasteel>60</Plasteel>
+    </costList>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <worngraphicPath>Things/Apparel/LaconianH</worngraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <commonality>1</commonality>
+      <tags>
+        <li>Military</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_Dropsuit</defName>
+    <label>drop suit</label>
+    <techLevel>Spacer</techLevel>
+      <description>It is the Yunhwa Precision's 'JanYeong(shadow remains)' drop suit, produced for Corp world drop troops. This completely enclosed suit was designed to operate in extreme environments like the void of space. It has thrusters for reinforcing a wearer's movement speed.</description>
+    <graphicData> <texPath>Things/Apparel/JanYeong</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>ShardTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>50</Steel>
+      <Components>22</Components>
+      <Plasteel>150</Plasteel>
+    </costList>
+    <statBases>
+     <WorkToMake>42000</WorkToMake>
+      <MaxHitPoints>390</MaxHitPoints>
+      <MarketValue>4800</MarketValue>
+      <ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.3</ArmorRating_Heat>
+      <Insulation_Cold>-45</Insulation_Cold>
+      <Insulation_Heat>45</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>1.2</MoveSpeed>
+      <WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <apparel>
+      <worngraphicPath>Things/Apparel/JanYeong</worngraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+     </apparel>
+   </ThingDef>
+
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_DropsuitH</defName>
+    <label>dropsuit helmet</label>
+    <description>It is a state-of-the-art helmet, optimized for EVA and orbital drop operations. This helmet has lots of shiny gadgets. Of course, all of these flashing toys are useless in the surface environment except the targeting assist pseudo A.I.</description>
+    <graphicData> <texPath>Things/Apparel/JanYeongH</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingCategories>
+		<li>Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>ShardTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>5</Steel>
+      <Components>12</Components>
+      <Plasteel>70</Plasteel>
+    </costList>
+    <statBases>
+     <WorkToMake>19000</WorkToMake>
+		<MaxHitPoints>300</MaxHitPoints>
+		<MarketValue>1200</MarketValue>
+		<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.3</ArmorRating_Heat>
+		<Insulation_Cold>-45</Insulation_Cold>
+		<Insulation_Heat>45</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+		<WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
+		<ShootingAccuracy>0.10</ShootingAccuracy>
+		<AimingDelayFactor>-0.05</AimingDelayFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <worngraphicPath>Things/Apparel/JanYeongH</worngraphicPath>
+        <layers>
+          <li>Overhead</li>
+        </layers>
+     <commonality>1</commonality>
+     <bodyPartGroups>
+       <li>FullHead</li>
+     </bodyPartGroups>
+     <defaultOutfitTags>
+        <li>Soldier</li>
+     </defaultOutfitTags>
+    </apparel>
+    </ThingDef>
+
+
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_Nervesuit</defName>
+    <label>nerve suit</label>
+    <techLevel>Spacer</techLevel>
+      <description>Yunhwa precision "JinCheon" nerve suit. It makes the wearer faster via direct neural links with artificial nerve system. However, the word "faster" doesn't means "more accurate."</description>
+    <graphicData> <texPath>Things/Apparel/JinCheon</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>ShardTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>30</Steel>
+      <Components>25</Components>
+      <Plasteel>80</Plasteel>
+    </costList>
+    <statBases>
+     <WorkToMake>40000</WorkToMake>
+      <MaxHitPoints>150</MaxHitPoints>
+      <MarketValue>3200</MarketValue>
+      <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.1</ArmorRating_Heat>
+      <Insulation_Cold>-25</Insulation_Cold>
+      <Insulation_Heat>25</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+      <MoveSpeed>2</MoveSpeed>
+      <MeleeWeapon_Cooldown>-0.2</MeleeWeapon_Cooldown>
+      <WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
+    </equippedStatOffsets>
+    <apparel>
+      <worngraphicPath>Things/Apparel/JinCheon</worngraphicPath>
+      <layers>
+        <li>Middle</li>
+        <li>Shell</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+     </apparel>
+   </ThingDef>
+
+  <ThingDef ParentName="ArmorMakeableBase">
+    <defName>Apparel_NervesuitH</defName>
+    <label>nervesuit helmet</label>
+    <description>A helmet of delicate nerve suit. Sophisticated artificial nerve system inside this helmet makes wearer to act faster. This rapid reaction function costs accurate manipulation capability.</description>
+    <graphicData> <texPath>Things/Apparel/JinCheonH</texPath>
+    <graphicClass>Graphic_Single</graphicClass> </graphicData>
+    <thingCategories>
+		<li>Apparel</li>
+    </thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>ShardTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>3</Steel>
+      <Components>15</Components>
+      <Plasteel>50</Plasteel>
+    </costList>
+    <statBases>
+     <WorkToMake>18000</WorkToMake>
+		<MaxHitPoints>300</MaxHitPoints>
+		<MarketValue>1200</MarketValue>
+		<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.1</ArmorRating_Heat>
+		<Insulation_Cold>-15</Insulation_Cold>
+		<Insulation_Heat>15</Insulation_Heat>
+    </statBases>
+    <equippedStatOffsets>
+		<WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+		<ShootingAccuracy>-0.2</ShootingAccuracy>
+		<AimingDelayFactor>-0.2</AimingDelayFactor>
+    </equippedStatOffsets>
+    <apparel>
+      <worngraphicPath>Things/Apparel/JinCheonH</worngraphicPath>
+        <layers>
+          <li>Overhead</li>
+        </layers>
+     <commonality>1</commonality>
+     <bodyPartGroups>
+       <li>FullHead</li>
+     </bodyPartGroups>
+     <defaultOutfitTags>
+        <li>Soldier</li>
+     </defaultOutfitTags>
+    </apparel>
+    </ThingDef>
+	
+  	<ThingDef ParentName="ArmorMakeableBase">
+		<defName>Apparel_Bjorn</defName>
+		<techLevel>Spacer</techLevel>
+		<label>assault armor</label>
+		<description>The Bjorn assault armor, basically a man-shaped walking tank, is covering the wearer completely with plasteel alloy.</description>
+		<graphicData> <texPath>Things/Apparel/Bjorn</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<tickerType>Normal</tickerType>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>MoltenTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>200</Steel>
+      <Components>18</Components>
+      <Plasteel>210</Plasteel>
+    </costList>
+		<statBases>
+			<WorkToMake>44000</WorkToMake>
+			<MaxHitPoints>650</MaxHitPoints>
+			<MarketValue>4850</MarketValue>
+			<ArmorRating_Blunt>0.95</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.80</ArmorRating_Heat>
+			<Insulation_Cold>-45</Insulation_Cold>
+			<Insulation_Heat>45</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-2.0</MoveSpeed>
+			<WorkSpeedGlobal>-0.20</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<apparel>
+<worngraphicPath>Things/Apparel/Bjorn</worngraphicPath>
+			<layers>
+			    <li>Middle</li>
+			    <li>Shell</li>
+			</layers>
+			<commonality>0.2</commonality>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorMakeableBase">
+	<defName>Apparel_BjornH</defName>
+	<label>assault armor helmet</label>
+	<techLevel>Spacer</techLevel>
+	<description>Rugged and trustworthy helmet of the assault armor.</description>
+	<graphicData> <texPath>Things/Apparel/BjornH</texPath>
+	<graphicClass>Graphic_Single</graphicClass> </graphicData>
+	<thingCategories>
+		<li>Apparel</li>
+	</thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>MoltenTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Steel>100</Steel>
+      <Components>8</Components>
+      <Plasteel>100</Plasteel>
+    </costList>
+	<statBases>
+     <WorkToMake>21000</WorkToMake>
+		<MaxHitPoints>510</MaxHitPoints>
+		<MarketValue>1355</MarketValue>
+		<ArmorRating_Blunt>0.95</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.80</ArmorRating_Heat>
+		<Insulation_Cold>-45</Insulation_Cold>
+		<Insulation_Heat>45</Insulation_Heat>
+	</statBases>
+	<equippedStatOffsets>
+			<MoveSpeed>-0.50</MoveSpeed>
+	</equippedStatOffsets>
+	<apparel>
+		<worngraphicPath>Things/Apparel/BjornH</worngraphicPath>
+		<layers>
+			<li>Overhead</li>
+		</layers>
+		<commonality>1</commonality>
+		<bodyPartGroups>
+			<li>FullHead</li>
+		</bodyPartGroups>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+	</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorMakeableBase">
+		<defName>Apparel_Judicator</defName>
+		<label>riot gear</label>
+		<techLevel>Spacer</techLevel>
+		<description>A "Judicator" riot gear was produced by Arms Dynamics for the creepy Federation Peacekeeper. This is a really great personal armor if you can withstand from scornful eyes of the people.</description>
+		<graphicData> <texPath>Things/Apparel/Judicator</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>CrucibleTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Components>16</Components>
+      <Plasteel>160</Plasteel>
+    </costList>
+		<statBases>
+     <WorkToMake>39000</WorkToMake>
+			<MaxHitPoints>500</MaxHitPoints>
+			<MarketValue>4050</MarketValue>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.7</ArmorRating_Heat>
+			<Insulation_Cold>-45</Insulation_Cold>
+			<Insulation_Heat>45</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
+			<MoveSpeed>-0.05</MoveSpeed>
+			<SocialImpact>-0.5</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+    		 <tags>
+   		     <li>ADJS</li>
+   		 </tags>
+<worngraphicPath>Things/Apparel/Judicator</worngraphicPath>
+			<layers>
+			    <li>Middle</li>
+			    <li>Shell</li>
+			</layers>
+			<commonality>0.2</commonality>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorMakeableBase">
+	<defName>Apparel_JudicatorH</defName>
+	<label>riot gear helmet</label>
+	<techLevel>Spacer</techLevel>
+	<description>It is a helmet of the FPC riot gear. If you wear this, you will be an eyesore of your colony.</description>
+	<graphicData> <texPath>Things/Apparel/JudicatorH</texPath>
+	<graphicClass>Graphic_Single</graphicClass> </graphicData>
+	<thingCategories>
+		<li>Apparel</li>
+	</thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>CrucibleTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Components>8</Components>
+      <Plasteel>70</Plasteel>
+    </costList>
+	<statBases>
+     <WorkToMake>18000</WorkToMake>
+		<MaxHitPoints>450</MaxHitPoints>
+		<MarketValue>1220</MarketValue>
+		<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.7</ArmorRating_Heat>
+		<Insulation_Cold>-25</Insulation_Cold>
+		<Insulation_Heat>25</Insulation_Heat>
+	</statBases>
+	<equippedStatOffsets>
+		<MoveSpeed>-0.02</MoveSpeed>
+		<SocialImpact>-0.5</SocialImpact>
+	</equippedStatOffsets>
+	<apparel>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    		 <tags>
+   		     <li>ADJS</li>
+   		 </tags>
+		<worngraphicPath>Things/Apparel/JudicatorH</worngraphicPath>
+		<layers>
+			<li>Overhead</li>
+		</layers>
+		<commonality>1</commonality>
+		<bodyPartGroups>
+			<li>FullHead</li>
+		</bodyPartGroups>
+	</apparel>
+	</ThingDef>
+
+
+
+	<ThingDef ParentName="ArmorMakeableBase">
+		<defName>Apparel_MarksmanGear</defName>
+		<label>marksman gear</label>
+		<techLevel>Spacer</techLevel>
+		<description>Arms Dynamics "Condemner" Marksman gear. With joint stabilizer unit, this outfit assure steady aim. Standard issue gear of the Federation Peacebringer assassin corps.</description>
+		<graphicData> <texPath>Things/Apparel/Condemner</texPath>
+		<graphicClass>Graphic_Single</graphicClass> </graphicData>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>CrucibleTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Components>10</Components>
+      <Plasteel>80</Plasteel>
+    </costList>
+		<statBases>
+     <WorkToMake>39000</WorkToMake>
+			<MaxHitPoints>150</MaxHitPoints>
+			<MarketValue>1250</MarketValue>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+			<Insulation_Cold>-25</Insulation_Cold>
+			<Insulation_Heat>25</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			 <ShootingAccuracy>0.3</ShootingAccuracy>
+			<MoveSpeed>-0.05</MoveSpeed>
+			<SocialImpact>-0.5</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+    		 <tags>
+   		     <li>ADJS</li>
+   		 </tags>
+<worngraphicPath>Things/Apparel/Condemner</worngraphicPath>
+			<layers>
+			    <li>Middle</li>
+			    <li>Shell</li>
+			</layers>
+			<commonality>0.2</commonality>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorMakeableBase">
+	<defName>Apparel_MarksmanGearH</defName>
+	<label>marksmangear helmet</label>
+	<techLevel>Spacer</techLevel>
+	<description>It is a helmet of the "Condemner" marksman gear. Integrated target spotter guarantees high accuracy and fast reaction.</description>
+	<graphicData> <texPath>Things/Apparel/CondemnerH</texPath>
+	<graphicClass>Graphic_Single</graphicClass> </graphicData>
+	<thingCategories>
+		<li>Apparel</li>
+	</thingCategories>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <researchPrerequisite>CrucibleTech</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Components>21</Components>
+      <Plasteel>65</Plasteel>
+    </costList>
+	<statBases>
+     <WorkToMake>18000</WorkToMake>
+		<MaxHitPoints>150</MaxHitPoints>
+		<MarketValue>1220</MarketValue>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.5</ArmorRating_Heat>
+			<Insulation_Cold>-25</Insulation_Cold>
+			<Insulation_Heat>25</Insulation_Heat>
+	</statBases>
+	<equippedStatOffsets>
+		<ShootingAccuracy>0.4</ShootingAccuracy>
+		<AimingDelayFactor>-0.1</AimingDelayFactor>
+		<SocialImpact>-0.5</SocialImpact>
+	</equippedStatOffsets>
+	<apparel>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    		 <tags>
+   		     <li>ADJS</li>
+   		 </tags>
+		<worngraphicPath>Things/Apparel/CondemnerH</worngraphicPath>
+		<layers>
+			<li>Overhead</li>
+		</layers>
+		<commonality>1</commonality>
+		<bodyPartGroups>
+			<li>FullHead</li>
+		</bodyPartGroups>
+	</apparel>
+	</ThingDef>
+
+</ThingDefs>

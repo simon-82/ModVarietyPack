@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>
+  
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp">
+    <defName>MeleeWeapon_Cleaver</defName>
+    <label>cleaver</label>
+    <description>A crude makeshift cleaver.</description>
+    <graphicData>
+      <texPath>Things/A13/Cleaver</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <costStuffCount>30</costStuffCount>
+    <statBases>
+      <WorkToMake>23000</WorkToMake>
+      <MeleeWeapon_DamageAmount>15</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>2.3</MeleeWeapon_Cooldown>
+    </statBases>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <ChunkSlagSteel>1</ChunkSlagSteel>
+    </costList>
+    <weaponTags>
+      <li>FeralMelee</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Cut</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp">
+    <defName>MeleeWeapon_Glaive</defName>
+    <label>glaive</label>
+    <description>A deadly makeshift glaive.</description>
+    <graphicData>
+      <texPath>Things/A13/Glaive</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costStuffCount>80</costStuffCount>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+      <MeleeWeapon_DamageAmount>19</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>2.8</MeleeWeapon_Cooldown>
+    </statBases>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <ChunkSlagSteel>1</ChunkSlagSteel>
+    </costList>
+    <weaponTags>
+      <li>FeralMelee</li>
+    </weaponTags>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Cut</meleeDamageDef>
+      </li>
+    </verbs>
+  </ThingDef>
+
+</ThingDefs>

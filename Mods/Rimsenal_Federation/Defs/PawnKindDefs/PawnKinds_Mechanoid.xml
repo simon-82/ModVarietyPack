@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PawnKindDefs>
+
+  <PawnKindDef>
+    <defName>FPCMonitor</defName>
+    <label>monitor</label>
+    <race>Mechanoid_Monitor</race>
+    <combatPower>45</combatPower>
+    <defaultFactionType>FPC</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Monitor</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.2, 0.4, 0.2)</volume>
+            <offset>(0,0,-1.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</PawnKindDefs>

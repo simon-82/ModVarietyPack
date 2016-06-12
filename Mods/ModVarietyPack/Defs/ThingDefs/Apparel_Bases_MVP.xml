@@ -1,0 +1,2552 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+	<!-- bases -->
+	<ThingDef Name="ApparelBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<SellPriceFactor>0.5</SellPriceFactor>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<recipeMaker>
+			<workSpeedStat>TailoringSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<recipeUsers>
+				<li>ElectricTailoringBench</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef Name="HatBase" Abstract="True">
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<SellPriceFactor>0.5</SellPriceFactor>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<recipeMaker>
+			<workSpeedStat>TailoringSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<recipeUsers>
+				<li>TableHats</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+		</recipeMaker>
+	</ThingDef>
+
+
+
+	
+	<!-- fishing rod -->
+	<ThingDef>
+		<defName>FishingRod</defName>
+		<label>fishing rod</label>
+		<description>A simple fishing rod made of wood. With some patience, you can catch fishes with it.</description>
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<graphicData>
+			<texPath>Apparel/FishingRod</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<OnGroundRandomRotateAngle>35</OnGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<thingCategories>
+			<li>Items</li>
+		</thingCategories>
+		<comps>
+			<li>
+				<compClass>CompForbiddable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>1</DeteriorationRate>
+			<SellPriceFactor>0.5</SellPriceFactor>
+			<MarketValue>70</MarketValue>
+		</statBases>
+		<apparel>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<bodyPartGroups>
+				<li>Hands</li>
+			</bodyPartGroups>
+		</apparel>
+	</ThingDef>
+
+
+
+
+
+	<!-- overalls -->
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Jumpsuit</defName>
+		<label>jumpsuit</label>
+		<description>A basic Jumpsuit. Normally seen worn on Glitterworld light infantry and officials and especially firefighters for it's heat absorbing properties</description>
+		<graphicData>
+			<texPath>Apparel/Jumpsuit/Glitterskin</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>9000</WorkToMake>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.17</ArmorRating_Heat>
+			<Insulation_Cold>-5</Insulation_Cold>
+			<Insulation_Heat>1</Insulation_Heat>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Jumpsuit/Glitterskin</worngraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Spacer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Overall</defName>
+		<label>overalls</label>
+		<description>Spaceship engineers all across the galaxy are known to wear these for the resistance they provide against their worst enemy: The electric cables.</description>
+		<graphicData>
+			<texPath>Apparel/Overall/Xcom1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>9000</WorkToMake>
+			<ArmorRating_Blunt>0.08</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.06</ArmorRating_Sharp>
+			<ArmorRating_Electric>0.50</ArmorRating_Electric>
+			<Insulation_Cold>-8</Insulation_Cold>
+			<Insulation_Heat>-5</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<FixBrokenDownBuildingFailChance>-0.10</FixBrokenDownBuildingFailChance>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Overall/Xcom1</worngraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Spacer</li>
+				<li>CR_Pocket</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_OverallTwo</defName>
+		<label>standard issue overalls</label>
+		<description>Standard military issue air force overalls. Very common amongst orbital drop squads</description>
+		<tradeability>Sellable</tradeability>
+		<graphicData>
+			<texPath>Apparel/Overall2/Xcom1</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<statBases>
+			<MarketValue>300</MarketValue>
+			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.10</ArmorRating_Heat>
+			<Insulation_Cold>-5</Insulation_Cold>
+			<Insulation_Heat>-1</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<WorkSpeedGlobal>0.01</WorkSpeedGlobal>
+			<FixBrokenDownBuildingFailChance>-0.01</FixBrokenDownBuildingFailChance>
+		</equippedStatOffsets>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Overall2/Xcom1</worngraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.005</commonality>
+			<tags>
+				<li>Spacer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+
+
+
+
+	<!-- tops -->
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Tunic</defName>
+		<label>Tunic</label>
+		<description>Very sleek and skillfully crafted suit capable of protecting the wearer from formidable threats.</description>
+		<graphicData>
+			<texPath>Apparel/Tunic/MogoSimple</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<tradeability>Sellable</tradeability>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>9000</WorkToMake>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<Insulation_Cold>-8</Insulation_Cold>
+			<Insulation_Heat>-2</Insulation_Heat>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Tunic/lp</worngraphicPath>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Tribal</li>
+				<li>TribalTrader</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+
+
+
+
+	<!-- middle -->
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Paddedvest</defName>
+		<label>padded vest</label>
+		<description>Crude Leather padding for added protection against blunt damage.</description>
+		<graphicData>
+			<texPath>Apparel/Paddedvest/Sheet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>55</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Paddedvest/lp</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.7</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Military</li>
+				<li>Norbal</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Tradercoat</defName>
+		<label>Trader's coat</label>
+		<description>What is a trader? A miserable little pile of bags -Count Dravania, moments before being lynched by an angry mob.</description>
+		<graphicData>
+			<texPath>Apparel/Tradercoat/Trypophobia</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>55</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>21000</WorkToMake>
+			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+			<Insulation_Cold>-10</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<TradePriceImprovement>0.15</TradePriceImprovement>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Tradercoat/LC</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>OutlanderTrader</li>
+				<li>Western</li>
+				<li>Scrap</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Longcoat</defName>
+		<label>longcoat</label>
+		<description>Very, very warm and majestic.</description>
+		<graphicData>
+			<texPath>Apparel/Longcoat/LongCoat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>55</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>200</MaxHitPoints>
+			<WorkToMake>22000</WorkToMake>
+			<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+			<Insulation_Cold>-28</Insulation_Cold>
+			<Insulation_Heat>-1</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<RecruitPrisonerChance>0.04</RecruitPrisonerChance>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Longcoat/LC</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Outlander</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Brocade</defName>
+		<label>Brocade vest</label>
+		<description>Always keep calm and collected. And wear brocade. The definite go to piece of apparel for any gentleguy or gal</description>
+		<graphicData>
+			<texPath>Apparel/Brocade/Broc</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>55</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>11000</WorkToMake>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<Insulation_Cold>-5</Insulation_Cold>
+		</statBases>
+		<equippedStatOffsets>
+			<SocialImpact>0.13</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Brocade/Broc</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>OutlanderTrader</li>
+				<li>Western</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Brocademed</defName>
+		<label>Joywirer's brocade</label>
+			<description>All the joywire artists wearing these know how to talk to their clients or at the very least, give the impression that they'd know what the heck they are doing.</description>
+		<graphicData>
+			<texPath>Apparel/Brocademed/Meditux</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<costList>
+			<SteelBar>20</SteelBar>
+			<Medicine>5</Medicine>
+			<Apparello_Brocade>1</Apparello_Brocade>
+		</costList>
+		<statBases>
+			<WorkToMake>1000</WorkToMake>
+			<MaxHitPoints>130</MaxHitPoints>
+			<MarketValue>600</MarketValue>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<Insulation_Cold>-5</Insulation_Cold>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.28</MoveSpeed>
+			<SocialImpact>0.13</SocialImpact>
+			<BaseHealingQuality>0.30</BaseHealingQuality>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Brocademed/Meditux</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Joywirer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>	
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Meshshirt</defName>
+		<label>mesh shirt</label>
+		<description>All the punks felt lucky wearing these.</description>
+		<graphicData>
+			<texPath>Apparel/Meshshirt/UrbShirt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>11000</WorkToMake>
+			<ArmorRating_Blunt>0.02</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.02</ArmorRating_Sharp>
+		</statBases>
+		<equippedStatOffsets>
+			<MentalBreakThreshold>-0.03</MentalBreakThreshold>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Meshshirt/Urb</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.7</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Spacer</li>
+				<li>Raider</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+
+
+	<!-- middle extra stuff -->
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Apron</defName>
+		<label>bib apron</label>
+		<description>These kind of hardened leather aprons are used by professionals of many trades.</description>
+		<graphicData>
+			<texPath>Apparel/Apron/Apron</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>40</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+			<ArmorRating_Blunt>0.02</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<SmithingSpeed>0.10</SmithingSpeed>
+			<SmeltingSpeed>0.20</SmeltingSpeed>
+			<SmoothingSpeed>0.05</SmoothingSpeed>
+			<SculptingSpeed>0.05</SculptingSpeed>
+			<StonecuttingSpeed>0.05</StonecuttingSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Apron/Apron</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Outlander</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Aproncook</defName>
+		<label>cooking apron</label>
+		<description>Pocketed cloth apron intended for enhancing your housekeeping experience. It's a hygiene thing, you wouldn't understand.</description>
+		<graphicData>
+			<texPath>Apparel/Apron/Apron</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>40</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+		</statBases>
+		<equippedStatOffsets>
+			<TailoringSpeed>0.10</TailoringSpeed>
+			<CookSpeed>0.05</CookSpeed>
+			<FoodPoisonChance>-0.05</FoodPoisonChance>
+			<BrewingSpeed>0.05</BrewingSpeed>
+			<ButcheryFleshSpeed>0.10</ButcheryFleshSpeed>
+			<ButcheryFleshEfficiency>0.10</ButcheryFleshEfficiency>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Apron/Apron</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.1</commonality>
+			<tags>
+				<li>Outlander</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Apronmed</defName>
+		<label>Surgeon's apron</label>
+		<description>Lovely plastic apron for all your bloodspilling needs.</description>
+		<graphicData>
+			<texPath>Apparel/Apronmed/SurgeonApron</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<costList>
+			<Medicine>1</Medicine>
+			<Cloth>80</Cloth>
+		</costList>
+		<statBases>
+			<MarketValue>200</MarketValue>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+		</statBases>
+		<equippedStatOffsets>
+			<BaseHealingQuality>0.10</BaseHealingQuality>
+			<SurgerySuccessChance>0.05</SurgerySuccessChance>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Apronmed/Apron</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Doctor</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.3,0.8,0.6,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Ammobelt</defName>
+		<label>ammo belt</label>
+		<description>Belt designed for carrying ammunition.</description>
+		<graphicData>
+			<texPath>Apparel/Belt/Belt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>30</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>4000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<AimingDelayFactor>-0.07</AimingDelayFactor>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Belt/Belt</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.8</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Military</li>
+				<li>Western</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+
+
+
+
+	<!-- shell -->
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Poncho</defName>
+		<description>Gunslinger's second best friend, Right after the sixshooter and Ten-Gallon Stetson! No, wait make that the third best.</description>
+		<label>poncho</label>
+		<graphicData>
+			<texPath>Apparel/Poncho/Ponpon</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>75</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToMake>24000</WorkToMake>
+			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.07</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.07</ArmorRating_Heat>
+			<Insulation_Cold>-9</Insulation_Cold>
+			<Insulation_Heat>18</Insulation_Heat>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Poncho/Ponpon</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Western</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Tribalpads</defName>
+		<description>Ceremonial shoulderguard</description>
+		<label>Tribal shoulderpads</label>
+		<graphicData>
+			<texPath>Apparel/Tribalpads/Tripads</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>15</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<Insulation_Heat>1</Insulation_Heat>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Tribalpads/Apron</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.1</commonality>
+			<tags>
+				<li>Tribal</li>
+				<li>TribalTrader</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Tribalshield</defName>
+		<description>Shield made of planks and padding. Used by native tribes in hopes to deflect bullets and to summon the courage of the great 'Shiled-Sheild Téh Gaurdian' A Godly protector of the tribes.</description>
+		<label>Tribal shield</label>
+		<graphicData>
+			<texPath>Apparel/Tribalshield/MogoShield</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>15</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<statBases>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Arms</li>
+				<li>LeftHand</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Tribalshield/Shield</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.1</commonality>
+			<tags>
+				<li>Tribal</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Shoulderpads</defName>
+		<description>Shoulderpads cobbled together from urban scraps. Sometimes even leather</description>
+		<label>shoulderpads</label>
+		<graphicData>
+			<texPath>Apparel/Shoulderpads/UrbPads</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>35</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Shoulderpads/Urb</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.1</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Spacer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Raiderjacket</defName>
+		<label>raider jacket</label>
+		<description>Your basic jacket modified with crude shoulderpads and spikes.</description>
+		<graphicData>
+			<texPath>Apparel/Raiderjacket/Jacket</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>85</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>190</MaxHitPoints>
+			<WorkToMake>18000</WorkToMake>
+			<ArmorRating_Sharp>0.07</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.03</ArmorRating_Heat>
+			<Insulation_Cold>-15</Insulation_Cold>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.06</MoveSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Raiderjacket/Jacket</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.7</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Military</li>
+				<li>Raider</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Uniformcoat</defName>
+		<description>Captain's uniform jacket. Gives the wearer very commanding presence. Most often seen on Starfleet admirals. Commanders wearing garments like these would only need to say "Make it so" and all the tachyon colliders would be rerouted to the shields to withstand the devastating blast no other ships could even hope to survive</description>
+		<label>uniform coat</label>
+		<graphicData>
+			<texPath>Apparel/Uniformcoat/Preston</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>90</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>250</MaxHitPoints>
+			<WorkToMake>24000</WorkToMake>
+			<ArmorRating_Blunt>0.04</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.03</ArmorRating_Heat>
+			<Insulation_Cold>-15</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<RecruitPrisonerChance>0.02</RecruitPrisonerChance>
+			<SocialImpact>0.05</SocialImpact>
+			<MentalBreakThreshold>-0.01</MentalBreakThreshold>
+			<MoveSpeed>-0.1</MoveSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Uniformcoat/Preston</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.7</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Spacer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- bottom -->
+		<!-- vanilla pants -->
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparel_Pants</defName>
+		<label>pants</label>
+		<description>A simple set of pants.</description>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Various/Pants_OnMap</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>7000</WorkToMake>
+			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+			<Insulation_Cold>-3</Insulation_Cold>
+		</statBases>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Pants/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.7</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Spacer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Urban</defName>
+		<label>Urban trousers</label>
+		<description>Trousers with suspenders, leave them hanging for that urban look</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Urban/Urb</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>7000</WorkToMake>
+			<Insulation_Cold>-2</Insulation_Cold>
+			<Insulation_Heat>-3</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.01</MoveSpeed>
+			<MentalBreakThreshold>-0.01</MentalBreakThreshold>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Urban/Urb</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Spacer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Suspender</defName>
+		<label>stablehand trousers</label>
+		<description>Ain't a chap on earf lookin' as honest as one wearin' these. With these equipped one should feel more comfortable wading through mud and filth and therefore more inclined to get the job done without distractions</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Suspenders/Suspenders</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>50</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>7000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<TameAnimalChance>0.06</TameAnimalChance>
+			<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+			<PlantWorkSpeed>0.03</PlantWorkSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Suspenders/Suspenders</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Outlander</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Armorpants</defName>
+		<label>padded pants</label>
+		<description>Pair of pants with extra padding in key locations.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Armorpants/Armorpants</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>12000</WorkToMake>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+			<Insulation_Cold>-1</Insulation_Cold>
+		</statBases>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Armorpants/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.6</commonality>
+			<tags>
+				<li>Military</li>
+				<li>Outlander</li>
+				<li>CR_Bulky</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_SpacerPants</defName>
+		<label>Spacemarine leggings</label>
+		<description>Highly advanced plasteel leggings</description>
+		<graphicData>
+			<texPath>Apparel/Pants/SpacerPants/SpacerPants</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<Components>3</Components>
+			<Plasteel>75</Plasteel>
+		</costList>
+		<techLevel>Midworld</techLevel>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>20000</WorkToMake>
+			<MaxHitPoints>300</MaxHitPoints>
+			<MarketValue>2000</MarketValue>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.20</ArmorRating_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.10</MoveSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/SpacerPants/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Shell</li>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.10</commonality>
+			<tags>
+				<li>Military</li>
+				<li>Spacer</li>
+				<li>CR_Bulky</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_SpacerpantsTwo</defName>
+		<label>Enviro-leggings</label>
+		<description>High quality and adapts well to temperature changes. Ideal for space exploration</description>
+		<graphicData>
+			<texPath>Apparel/Pants/SpacerPants/GlitterPants</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Midworld</techLevel>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<statBases>
+			<WorkToMake>11000</WorkToMake>
+			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+			<Insulation_Cold>-3</Insulation_Cold>
+			<Insulation_Heat>3</Insulation_Heat>
+		</statBases>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/SpacerPants/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Spacer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Chaps</defName>
+		<label>chaps</label>
+		<description>Chaps with holsters. All the fastest shots wore these. They usually got shot in the back. Tinkle winkle moonshine, probably should wear some pants with these.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Chaps/Chaps</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>8000</WorkToMake>
+		</statBases>
+		<equippedStatOffsets>
+			<AimingDelayFactor>-0.02</AimingDelayFactor>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Chaps/Belt</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Shell</li>
+				<li>Middle</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Military</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_TribalPants</defName>
+		<label>waistcloth</label>
+		<description>Waistcloth. They itch a little.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/TribalPants/Tribants</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<techLevel>Neolithic</techLevel>
+		<costStuffCount>8</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<tradeability>Sellable</tradeability>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>3500</WorkToMake>
+			<Insulation_Cold>-1</Insulation_Cold>
+		</statBases>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/TribalPants/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.3</commonality>
+			<tags>
+				<li>Tribal</li>
+				<li>TribalTrader</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Fancypants</defName>
+		<label>fancy pants</label>
+		<description>They're very stylish.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Pants/Fancypants</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>70</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>7000</WorkToMake>
+			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.04</ArmorRating_Sharp>
+			<Insulation_Cold>-1</Insulation_Cold>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>0.05</MoveSpeed>
+			<SocialImpact>0.03</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Pants/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>OutlanderTrader</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Patchpants</defName>
+		<label>patch pants</label>
+		<description>very crude and ugly pair of pants.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Pants/Patchpants</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>10</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<equippedStatOffsets>
+			<SocialImpact>-0.25</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Pants/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.2</commonality>
+			<tags>
+				<li>Scrap</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Constructorstrousers</defName>
+		<label>Constructor's trousers</label>
+		<description>Trousers with huge pocket space. They help weakened beings to carry more.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Pants/Constructorstrousers</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>70</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>11000</WorkToMake>
+			<ArmorRating_Blunt>0.06</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.04</ArmorRating_Sharp>
+			<Insulation_Cold>-1</Insulation_Cold>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.08</MoveSpeed>
+			<ConstructionSpeed>0.02</ConstructionSpeed>
+			<CarryingCapacity>15</CarryingCapacity>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Pants/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Spacer</li>
+				<li>CR_Pockets</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Jeans</defName>
+		<label>jeans</label>
+		<description>Sturdy farmer pants.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Jeans/Jeans</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>65</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>9000</WorkToMake>
+			<ArmorRating_Blunt>0.04</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<Insulation_Cold>-1</Insulation_Cold>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.03</MoveSpeed>
+			<HarvestFailChance>-0.05</HarvestFailChance>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Jeans/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Outlander</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Jodhpurs</defName>
+		<label>jodhpurs</label>
+		<description>Very commanding.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Pants/Jodhpurs</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>65</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>9000</WorkToMake>
+			<ArmorRating_Blunt>0.03</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+			<Insulation_Cold>-1</Insulation_Cold>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.03</MoveSpeed>
+			<TrainAnimalChance>0.05</TrainAnimalChance>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Pants/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Outlander</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Skirt</defName>
+		<label>skirt</label>
+		<description>For when your legs need all that extra space.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Skirt/Skirt</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>9000</WorkToMake>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+			<Insulation_Cold>-1</Insulation_Cold>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.07</MoveSpeed>
+			<SocialImpact>0.03</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Skirt/Skirt</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Skirt</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Lederhose</defName>
+		<label>leather pants</label>
+		<description>Leather pants (sometimes even real leather!) The punk wearing these will always feel lucky.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Jeans/Lederhose</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>9000</WorkToMake>
+			<ArmorRating_Blunt>0.04</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.03</ArmorRating_Sharp>
+			<Insulation_Heat>-3</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.03</MoveSpeed>
+			<MentalBreakThreshold>-0.04</MentalBreakThreshold>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Jeans/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Outlander</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ApparelBase">
+		<defName>Apparello_Checkeredtrousers</defName>
+		<label>checkered trousers</label>
+		<description>Checkered and ready to go!.</description>
+		<graphicData>
+			<texPath>Apparel/Pants/Checkeredtrousers/Checker</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costStuffCount>70</costStuffCount>
+		<stuffCategories>
+			<li>Fabric</li>
+		</stuffCategories>
+		<thingCategories>
+			<li>Pants</li>
+		</thingCategories>
+		<statBases>
+			<WorkToMake>8000</WorkToMake>
+			<ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.03</MoveSpeed>
+			<ResearchSpeed>0.05</ResearchSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<worngraphicPath>Apparel/Pants/Checkeredtrousers/Pants</worngraphicPath>
+			<bodyPartGroups>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<layers>
+				<li>OnSkin</li>
+			</layers>
+			<commonality>0.5</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>OutlanderTrader</li>
+				<li>Spacer</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	
+
+
+
+
+
+
+
+
+
+
+	<!-- Armor -->
+	<!-- add ArmorBase to add unlock via TextileIII(PoweredArmor) + ElectricSmithy 
+	-->
+	<ThingDef Name="ArmorBase" Abstract="True"> 
+		<thingClass>Apparel</thingClass>
+		<category>Item</category>
+		<selectable>True</selectable>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<SellPriceFactor>0.5</SellPriceFactor>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompColorable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<recipeMaker>
+			<workSpeedStat>TailoringSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>Tailor</effectWorking>
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<recipeUsers>
+				<li>ElectricSmithy</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+		</recipeMaker>
+	</ThingDef>
+
+
+	<ThingDef ParentName="ArmorBase">
+		<defName>Apparello_Tunica</defName>
+		<label>Tunica El Mógo</label>
+		<description>Ritual vestments of the ancient, now extinct tribe - Chéw Õn Tuna Sãmmich - 
+	El Mógo for short. The El Mógoan Muffalo Prophets' prophecied of a day when three meteors, bearing sleeping gods would descent from the skies. Common belief was that the gods would build a lift to the spirit realms.
+	These vestments were created in the intent of binding the soul of slain gods to the wearer and thus gaining passage on the lift.</description>
+		<graphicData>
+			<texPath>Apparel/Tunica/Mogo</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<Cloth>60</Cloth>
+			<WoodPlank>5</WoodPlank>
+			<SteelBar>20</SteelBar>
+		</costList>
+		<tradeability>Sellable</tradeability>
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<statBases>
+			<MarketValue>500</MarketValue>
+			<ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+			<Insulation_Cold>-8</Insulation_Cold>
+			<Insulation_Heat>-2</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.03</MoveSpeed>
+			<GiftImpact>0.25</GiftImpact>
+			<PsychicSensitivity>-0.05</PsychicSensitivity>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Tunica/lp</worngraphicPath>
+			<layers>
+				<li>OnSkin</li>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Tribal</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.4,0.3,0.15,1)</only>
+				</li>
+				<li>
+					<weight>15</weight>
+					<only>RGBA(0.6,0.45,0.18,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.8,0.6,0.23,1)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<max>RGBA(1,1,0.90,1)</max>
+					<min>RGBA(1,0.90,0.75,1)</min>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorBase">
+		<defName>Apparello_ShoulderpadsTwo</defName>
+		<description>Shoulderpads cobbled together from metal scraps. All painted and ready for action!</description>
+		<label>Metal shoulderpads</label>
+		<graphicData>
+			<texPath>Apparel/Shoulderpads2/Orkpad</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<Cloth>10</Cloth>
+			<SteelBar>30</SteelBar>
+		</costList>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Shoulderpads2/Orkpad</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Military</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_StandardApparel" />
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorBase">
+		<defName>Apparello_Alloyvest</defName>
+		<label>alloy vest</label>
+		<description>Standard issue protective vest on the glitterworlds. Made of multiple layers of extremely light but strong alloy.</description>
+		<graphicData>
+			<texPath>Apparel/Alloyvest/Glittermid</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<costList>
+			<PlasteelBar>10</PlasteelBar>
+			<AluBar>50</AluBar>
+		</costList>
+		<statBases>
+			<WorkToMake>9500</WorkToMake>
+			<MaxHitPoints>220</MaxHitPoints>
+			<MarketValue>750</MarketValue>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.58</ArmorRating_Sharp>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Alloyvest/Glittermid</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Military</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.1,0.70,1,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.60,0,0.60,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.5,0.7,0.1,1)</only>
+				</li>
+				<li>
+					<weight>5</weight>
+					<max>RGBA(1,1,1,1)</max>
+					<min>RGBA(0.30,0.30,0.30,1)</min>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.33,0.33,0.33,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.65,0.65,0.65,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.9,0.9,0.9,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.4,0.8,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorBase">
+		<defName>Apparello_Lightpowerarmor</defName>
+		<label>light power armor</label>
+		<description>Powered light armor, fashioned after the infamous Light power armor mark IV which comes with attached GlitOrion© hip'n'hop™ thrusters, which enables slightly faster movement.</description>
+		<graphicData>
+			<texPath>Apparel/Lightpowerarmor/Glittershell</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<costList>
+			<PlasteelBar>10</PlasteelBar>
+			<AluBar>80</AluBar>
+			<Electronics>15</Electronics>
+		</costList>
+		<statBases>
+			<WorkToMake>9500</WorkToMake>
+			<MaxHitPoints>220</MaxHitPoints>
+			<MarketValue>1500</MarketValue>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>0.10</MoveSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Arms</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Lightpowerarmor/Glittershell</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>1</commonality>
+			<tags>
+				<li>Military</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.1,0.70,1,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.60,0,0.60,1)</only>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.5,0.7,0.1,1)</only>
+				</li>
+				<li>
+					<weight>5</weight>
+					<max>RGBA(1,1,1,1)</max>
+					<min>RGBA(0.30,0.30,0.30,1)</min>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.33,0.33,0.33,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.65,0.65,0.65,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.9,0.9,0.9,1)</only>
+				</li>
+				<li>
+					<weight>20</weight>
+					<only>RGBA(0.4,0.8,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorBase">
+		<defName>Apparello_LightpowerarmorMedic</defName>
+		<label>Medic's powered armor</label>
+		<description>Powered medium armor, designed for combat medics. Comes with attached GlitOrion© hip'n'hop™ thrusters and StimulantPak™ for faster mobility and healing</description>
+		<tradeability>Sellable</tradeability>
+		<graphicData>
+			<texPath>Apparel/LightpowerarmorMedic/Glitterfull</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<costList>
+			<PlasteelBar>15</PlasteelBar>
+			<AluBar>50</AluBar>
+			<Electronics>15</Electronics>
+			<Medicine>5</Medicine>
+		</costList>
+		<statBases>
+			<MarketValue>850</MarketValue>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+		</statBases>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<equippedStatOffsets>
+			<MoveSpeed>0.08</MoveSpeed>
+			<MedicalOperationSpeed>0.05</MedicalOperationSpeed>
+			<BaseHealingQuality>0.03</BaseHealingQuality>
+			<HealingSpeed>0.10</HealingSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/LightpowerarmorMedic/Glitterfull</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.005</commonality>
+			<tags>
+				<li>Spacer</li>
+				<li>Military</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorBase">
+		<defName>Apparello_Shieldedcoat</defName>
+		<thingClass>PersonalShield</thingClass>
+		<label>Shielded coat</label>
+		<description>A long coat with bullet resistant alloy breastplate, fitted with personal shield. Modern technology full of grit</description>
+		<techLevel>Midworld</techLevel>
+		<graphicData>
+			<texPath>Apparel/Shieldedcoat/Synd</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>30000</WorkToMake>
+			<MaxHitPoints>300</MaxHitPoints>
+			<MarketValue>1800</MarketValue>
+			<ArmorRating_Blunt>0.13</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.28</ArmorRating_Sharp>
+			<Insulation_Cold>-18</Insulation_Cold>
+			<PersonalShieldRechargeRate>0.14</PersonalShieldRechargeRate>
+			<PersonalShieldEnergyMax>1.5</PersonalShieldEnergyMax>
+			<DeteriorationRate>0.3</DeteriorationRate>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-1</MoveSpeed>
+			<WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<tickerType>Normal</tickerType>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<costList>
+			<SteelBar>20</SteelBar>
+			<Components>1</Components>
+			<Apparel_PersonalShield>1</Apparel_PersonalShield>
+			<Apparel_Duster>1</Apparel_Duster>
+		</costList>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Shieldedcoat/Synd</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+	<li>Accessory</li>
+			</layers>
+			<commonality>0.3</commonality>
+			<tags>
+				<li>PersonalShield</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(0.65,0.65,0.65,1)</only>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>RGBA(0.3,0.3,0.3,1)</min>
+					<max>RGBA(0.5,0.5,0.5,1)</max>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorBase">
+		<defName>Apparello_Wandererchestplate</defName>
+		<label>Wanderer's chestplate</label>
+		<description>Lone wanderers would wear something like this while on their noble crusade or vendetta.</description>
+		<tradeability>Sellable</tradeability>
+		<graphicData>
+			<texPath>Apparel/Wandererchestplate/SyndRare</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<costList>
+			<SteelBar>60</SteelBar>
+			<Cloth>80</Cloth>
+		</costList>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+			<Insulation_Cold>-10</Insulation_Cold>
+			<Insulation_Heat>2</Insulation_Heat>
+		</statBases>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Torso</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Wandererchestplate/Synd</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.008</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Spacer</li>
+				<li>Military</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>5</weight>
+					<min>RGBA(0.3,0.3,0.3,1)</min>
+					<max>RGBA(0.5,0.5,0.5,1)</max>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorBase">
+		<defName>Apparello_Scytherframe</defName>
+		<label>Prototype scyther frame</label>
+		<description>Mobility enhancing wireframe based on inner workings of a mechanoid 'scyther' unit. Warning! Due to awkward adaptation to human bodystructure long usage may cause major muscle strains. Wearer may be rendered susceptible to unwanted side-effects. Including but not limited to: Complete loss of motor functions, Motion sickness, and nose bleed.</description>
+		<tradeability>Sellable</tradeability>
+		<graphicData>
+			<texPath>Apparel/Scytherframe/Scy</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<ArmorRating_Blunt>0.20</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.20</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+		</statBases>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<costList>
+			<PlasteelBar>20</PlasteelBar>
+			<AluBar>20</AluBar>
+			<Electronics>25</Electronics>
+		</costList>
+		<equippedStatOffsets>
+			<MoveSpeed>1.8</MoveSpeed>
+			<AimingDelayFactor>0.3</AimingDelayFactor>
+			<CarryingCapacity>0.20</CarryingCapacity>
+			<ImmunityGainSpeed>-0.10</ImmunityGainSpeed>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Scytherframe/Scy</worngraphicPath>
+			<layers>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.005</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Spacer</li>
+				<li>Military</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Worker</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>5</weight>
+					<min>RGBA(0.3,0.3,0.3,1)</min>
+					<max>RGBA(0.5,0.5,0.5,1)</max>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorBase">
+		<defName>Apparello_HiveArmor</defName>
+		<label>Prototype hive armor</label>
+		<description>Fashioned after the centipede bodystructure. This extremely bulky armor is nigh indestructable. The Sheer weight of this piece of armor drastically hinders mobility</description>
+		<tradeability>Sellable</tradeability>
+		<graphicData>
+			<texPath>Apparel/HiveArmor/HiveArmor</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<costList>
+			<SteelBar>80</SteelBar>
+			<AluBar>20</AluBar>
+			<Electronics>5</Electronics>
+		</costList>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<ArmorRating_Blunt>0.35</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.65</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.80</ArmorRating_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.20</MoveSpeed>
+			<WorkSpeedGlobal>-0.20</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/HiveArmor/ha</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.005</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Spacer</li>
+				<li>Military</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>5</weight>
+					<min>RGBA(0.3,0.3,0.3,1)</min>
+					<max>RGBA(0.5,0.5,0.5,1)</max>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="ArmorBase">
+		<defName>Apparello_Steamhull</defName>
+		<label>Prototype Steamhull</label>
+		<description>Combination of mobility enhancing components of the Scyther frame and heavy plating of the Hive armor. The increased energy consumption from the added scyther frame servos, have forced the shock dampeners work on lesser capacity, thus rendering the wearer more vulnerable to injuries but the higher mobility under combat situations are well worth it. Generates absurd amounts of heat though.</description>
+		<tradeability>Sellable</tradeability>
+		<graphicData>
+			<texPath>Apparel/Steamhull/Steamhull</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingCategories>
+			<li>Apparel</li>
+			<li>Armor</li>
+		</thingCategories>
+		<costList>
+			<Apparello_Scytherframe>1</Apparello_Scytherframe>
+			<SteelBar>40</SteelBar>
+		</costList>
+		<statBases>
+			<MarketValue>1000</MarketValue>
+			<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.40</ArmorRating_Heat>
+			<Insulation_Cold>-60</Insulation_Cold>
+			<Insulation_Heat>-15</Insulation_Heat>
+		</statBases>
+		<equippedStatOffsets>
+			<MoveSpeed>-0.05</MoveSpeed>
+			<WorkSpeedGlobal>-0.05</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>Torso</li>
+				<li>Shoulders</li>
+				<li>Arms</li>
+				<li>Legs</li>
+			</bodyPartGroups>
+			<worngraphicPath>Apparel/Steamhull/Steamhull</worngraphicPath>
+			<layers>
+				<li>Middle</li>
+				<li>Shell</li>
+			</layers>
+			<commonality>0.005</commonality>
+			<tags>
+				<li>Outlander</li>
+				<li>Spacer</li>
+				<li>Military</li>
+			</tags>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		<colorGenerator Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>5</weight>
+					<min>RGBA(0.3,0.3,0.3,1)</min>
+					<max>RGBA(0.5,0.5,0.5,1)</max>
+				</li>
+				<li>
+					<weight>10</weight>
+					<only>RGBA(1,1,1,1)</only>
+				</li>
+			</options>
+		</colorGenerator>
+		<recipeMaker>
+			<researchPrerequisite>PoweredArmor</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+
+
+
+
+
+
+
+</ThingDefs>

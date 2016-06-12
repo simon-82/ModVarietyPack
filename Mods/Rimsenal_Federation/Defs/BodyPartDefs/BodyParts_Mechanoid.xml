@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyPartDef>
+    <defName>MonitorHull</defName>
+    <label>hull</label>
+    <hitPoints>20</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+  </BodyPartDef>
+
+
+  <BodyPartDef>
+    <defName>MonitorFrame</defName>
+    <label>frame</label>
+    <hitPoints>15</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Talking</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>MonitorCore</defName>
+    <label>core</label>
+    <hitPoints>15</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Talking</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftMonitorShoulder</defName>
+    <label>left shoulder</label>
+    <hitPoints>15</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_way0</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftMonitorArm</defName>
+    <label>left arm</label>
+    <hitPoints>15</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_way1</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftMonitorHand</defName>
+    <label>left hand</label>
+    <hitPoints>10</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_way2</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftHandMonitorPinky</defName>
+    <label>left pinky</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftHandMonitorMiddleFinger</defName>
+    <label>left middle finger</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftHandMonitorIndexFinger</defName>
+    <label>left index finger</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftHandMonitorThumb</defName>
+    <label>left thumb</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightMonitorShoulder</defName>
+    <label>right shoulder</label>
+    <hitPoints>15</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_way0</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightMonitorArm</defName>
+    <label>right arm</label>
+    <hitPoints>15</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_way1</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightMonitorHand</defName>
+    <label>right hand</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_way2</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightHandMonitorPinky</defName>
+    <label>right pinky</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightHandMonitorMiddleFinger</defName>
+    <label>right middle finger</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightHandMonitorIndexFinger</defName>
+    <label>right index finger</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightHandMonitorThumb</defName>
+    <label>right thumb</label>
+    <hitPoints>7</hitPoints>
+    <frostbiteVulnerability>10</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Manipulation_tool</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftMonitorEngine</defName>
+    <label>left engine</label>
+    <hitPoints>15</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Moving_leftWay1</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>LeftMonitorThruster</defName>
+    <label>left thruster</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Moving_way2</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightMonitorEngine</defName>
+    <label>right engine</label>
+    <hitPoints>15</hitPoints>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Moving_rightWay1</li>
+    </activities>
+  </BodyPartDef>
+
+  <BodyPartDef>
+    <defName>RightMonitorThruster</defName>
+    <label>right thruster</label>
+    <hitPoints>10</hitPoints>
+    <frostbiteVulnerability>2</frostbiteVulnerability>
+    <oldInjuryBaseChance>0</oldInjuryBaseChance>
+    <skinCovered>false</skinCovered>
+    <isSolid>true</isSolid>
+    <isAlive>false</isAlive>
+    <activities>
+      <li>Moving_way2</li>
+    </activities>
+  </BodyPartDef>
+  
+</Defs>

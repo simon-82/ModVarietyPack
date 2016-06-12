@@ -1,107 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <RecipeDefs>
-
- <!-- === VanillaStart === -->
-
-	<RecipeDef>
-    <workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
-		<defName>MakeStoneBlocks</defName>
-		<label>make stone blocks</label>
-		<description>Cuts rock chunks into usable stone blocks.</description>
-		<jobString>Stonecutting.</jobString>
-		<workAmount>1600</workAmount>
-		<workSpeedStat>StonecuttingSpeed</workSpeedStat>
-    <workSkill>Crafting</workSkill>
-    <workSkillLearnFactor>0.25</workSkillLearnFactor>
-		<effectWorking>CutStone</effectWorking>
-    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
-    <targetCountAdjustment>50</targetCountAdjustment>
-    <ingredients>
-			<li>
-				<filter>
-					<categories>
-						<li>StoneChunks</li>
-					</categories>
-				</filter>
-				<count>1</count>
-			</li>
-		</ingredients>
-    <specialProducts>
-      <li>Butchery</li>
-    </specialProducts>
-		<fixedIngredientFilter>
-      <categories>
-        <li>StoneChunks</li>
-      </categories>
-		</fixedIngredientFilter>
-  </RecipeDef>
-
-  <RecipeDef>
-    <defName>ExtractMetalFromSlag</defName>
-    <label>smelt metal from slag</label>
-    <description>Use heat and strong electromagnets to separate useful metal from slag chunks.</description>
-    <jobString>Smelting metal from slag.</jobString>
-    <workAmount>1600</workAmount>
-    <workSpeedStat>SmeltingSpeed</workSpeedStat>
-    <effectWorking>Smelt</effectWorking>
-    <soundWorking>Recipe_Smelt</soundWorking>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>ChunkSlagSteel</li>
-          </thingDefs>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <!-- Switched to standard products so we can do "do until you have X"
-    <specialProducts>
-      <li>Smelted</li>
-    </specialProducts>-->
-    <products>
-      <Steel>10</Steel>
-    </products>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>ChunkSlagSteel</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-  </RecipeDef>
-
-  <RecipeDef>
-    <defName>SmeltWeapon</defName>
-    <label>smelt metal from weapon</label>
-    <description>Use heat and strong electromagnets to separate useful metal from weapons.</description>
-    <jobString>Smelting metal from weapon.</jobString>
-    <workAmount>1600</workAmount>
-    <workSpeedStat>SmeltingSpeed</workSpeedStat>
-    <effectWorking>Smelt</effectWorking>
-    <soundWorking>Recipe_Smelt</soundWorking>
-    <ingredients>
-      <li>
-        <filter>
-          <categories>
-            <li>Weapons</li>
-          </categories>
-        </filter>
-        <count>1</count>
-      </li>
-    </ingredients>
-    <specialProducts>
-      <li>Smelted</li>
-    </specialProducts>
-    <fixedIngredientFilter>
-      <categories>
-        <li>Weapons</li>
-      </categories>
-      <specialFiltersToDisallow>
-        <li>AllowNonSmeltableWeapons</li>
-      </specialFiltersToDisallow>
-    </fixedIngredientFilter>
-  </RecipeDef>
-
-
+ <!-- vanilla overrides -->
   <RecipeDef>
     <defName>MakeArtilleryShell</defName>
     <label>make artillery shell</label>
@@ -134,17 +33,56 @@
     <workSkill>Crafting</workSkill>
   </RecipeDef>
 
+  <RecipeDef>
+    <defName>MakeComponent</defName>
+    <label>make component</label>
+    <description>Make a component.</description>
+    <jobString>Making component.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>10000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>AluBar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>AluBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Components>1</Components>
+    </products>
+    <skillRequirements>
+      <li>
+        <skill>Crafting</skill>
+        <minLevel>7</minLevel>
+      </li>
+    </skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
 
- <!-- === VanillaEnd === -->
 
 
 
-
-
-
-
- <!-- === Stone, Wood, Kindling === -->
- <!-- === StoneCutting individual blocks first one overrides vanilla recipe === -->
+ <!-- Stone, Wood, Kindling -->
+ <!-- StoneCutting individual blocks first one overrides vanilla recipe -->
  <RecipeDef>
     <defName>MakeStoneBlocks</defName>
     <label>make sandstone blocks</label>
@@ -307,7 +245,7 @@
 
 
 
-  <!-- === StoneCutting individual blocks powered crafting table === -->
+  <!-- StoneCutting individual blocks powered crafting table -->
   <RecipeDef>
     <defName>MakeStoneBlocksSandstone_Electric</defName>
     <label>make sandstone blocks</label>
@@ -526,7 +464,7 @@
     <workSkill>Crafting</workSkill>
   </RecipeDef>
 
-  <RecipeDef>
+  <!--  <RecipeDef>
     <defName>MakeKindling_Hand</defName>
     <label>make wood kindling</label>
     <description>Cuts 10 woodlogs/planks into 15 kindling by hand. Quite slow.</description>
@@ -594,7 +532,8 @@
       <Kindling>40</Kindling>
     </products>
     <workSkill>Crafting</workSkill>
-  </RecipeDef>
+  </RecipeDef> 
+  -->
 
 
 
@@ -1526,7 +1465,7 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
 
 
 
-  <!-- ===== OmniGel TableMK1Replicator ======= -->
+  <!-- OmniGel TableMK1Replicator = ComponentAssemblyBench -->
   <RecipeDef>
     <defName>MakeChunkSlagSteelFromOmniGel</defName>
     <label>Replicate Slag from Omni-Gel</label>

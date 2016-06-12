@@ -5,11 +5,12 @@
 		<daysPawnsAreGoneMin>2</daysPawnsAreGoneMin>
 		<daysPawnsAreGoneMax>5</daysPawnsAreGoneMax>
 		<treasureDefs>
+			<!-- rimsenal gun 
 			<li>
-				<TreasureDef>RS_Gun_Grendel</TreasureDef>
+				<TreasureDef>Gun_RailgunMKI</TreasureDef>
 				<GiveStack>false</GiveStack>
 				<Chance>10</Chance>
-			</li>
+			</li> -->
 			<li>
 				<TreasureDef>BionicEye</TreasureDef>
 				<GiveStack>false</GiveStack>

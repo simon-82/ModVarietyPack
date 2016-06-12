@@ -14,7 +14,7 @@
     <defName>Centipede</defName>
     <label>centipede</label>
     <race>Mechanoid_Centipede</race>
-    <combatPower>850</combatPower>
+    <combatPower>870</combatPower>
     <defaultFactionType>Mechanoid</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
     <lifeStages>
@@ -36,6 +36,41 @@
     <weaponTags>
       <li>MechanoidGunHeavy</li>
     </weaponTags>
+	<fixedInventory>
+	  <LoadoutGen_MechanoidAmmo>1</LoadoutGen_MechanoidAmmo>
+	</fixedInventory>
+  </PawnKindDef>
+
+
+  <PawnKindDef>
+    <defName>Scyther</defName>
+    <label>scyther</label>
+    <race>Mechanoid_Scyther</race>
+    <combatPower>160</combatPower>
+    <defaultFactionType>Mechanoid</defaultFactionType>
+    <aiAvoidCover>false</aiAvoidCover>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Mechanoid/Scyther</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>5000</min>
+      <max>5000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>MechanoidGunMedium</li>
+    </weaponTags>
+	<fixedInventory>
+	  <LoadoutGen_MechanoidAmmo>1</LoadoutGen_MechanoidAmmo>
+	</fixedInventory>
   </PawnKindDef>
 
 </PawnKindDefs>

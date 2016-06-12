@@ -26,21 +26,27 @@
     <CommandGroupOfThingsByDefInRoomLabel>Synchronize all {0} in room</CommandGroupOfThingsByDefInRoomLabel>
     <CommandGroupOfThingsByLinkerInRoomLabel>Synchronize all linked {0} in room</CommandGroupOfThingsByLinkerInRoomLabel>
 
-    <HelpOTabTitle>Mod Help</HelpOTabTitle>
+    <HelpOTabTitle>ModPack Help</HelpOTabTitle>
     <NoHelpDefs>No help defs found</NoHelpDefs>
-    <JumpToTopic>Jump to topic</JumpToTopic>
+    <JumpToTopic>Click to jump to topic</JumpToTopic>
 
     <RefrigeratedStorage>In refrigerated storage</RefrigeratedStorage>
 
-    <!-- Research Tab -->
-    <RI.none>none</RI.none>
-    <RI.All>All</RI.All>
-    <RI.Available>Available</RI.Available>
-    <RI.PreReqLocked>Locked</RI.PreReqLocked>
+    <ModConfigurationOptions>Mod Options</ModConfigurationOptions>
+    <ModConfigurationSaved>Saved {0} mod configuration</ModConfigurationSaved>
 
-    <RI.filterTooltip>Type a few letters to filter by name.</RI.filterTooltip>
-    <RI.deleteFilterTooltip>Click to delete the current filter.</RI.deleteFilterTooltip>
-    <RI.sortByNameTooltip>Click to sort by name.</RI.sortByNameTooltip>
-    <RI.sortByCostTooltip>Click to sort by research cost.</RI.sortByCostTooltip>
+    <BadLoadOrder>A bad load order has been detected.\n\nCommunity Core Library is not the second mod loaded.  Select 'Restart Now' from this menu to correct this issue and restart RimWorld.</BadLoadOrder>
+    <WarnAboutRestart>A major change has been made to the games data set, such as the loaded mods or the language.\n\nAny major change requires RimWorld to be restarted.\n\nPlaying the game without restarting can cause any number of problems from small errors to aliens invading Earth.</WarnAboutRestart>
+    <ReallyWarnAboutRestart>You really like playing with fire.\n\nYou should stop now while you're behind.</ReallyWarnAboutRestart>
+    <WarnAboutRestartDebug>You should restart the game after making any major to the games data set.\n\nAs a modder you already know this, right?</WarnAboutRestartDebug>
+    <ContinueWithoutRestart>Play without restart</ContinueWithoutRestart>
+    <RestartLater>Later</RestartLater>
+    <RestartNow>Restart Now</RestartNow>
+    <AcceptTheConsequences>I accept the consequences</AcceptTheConsequences>
+
+    <!-- Validation error messages used in CCL.UI.LabeledInput and it's child classes -->
+    <CCL.UI.InputField.DefaultValidationError>Validation error; {0} is not a valid input</CCL.UI.InputField.DefaultValidationError>
+    <CCL.UI.InputField_Float.ValidationError>Validation error; {0} is not a valid number</CCL.UI.InputField_Float.ValidationError>
+    <CCL.UI.InputField_Int.ValidationError>Validation error; {0} is not a valid whole number</CCL.UI.InputField_Int.ValidationError>
 
 </LanguageData>

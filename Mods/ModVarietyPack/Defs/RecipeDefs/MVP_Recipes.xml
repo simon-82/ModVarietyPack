@@ -107,7 +107,7 @@
 
 
 
-	<!-- === Armor crafting=== -->
+	<!-- === Armor crafting=== 
 	<RecipeDef>
 		<defName>MakeApparello_HA</defName>
 		<label>Make Hive armor</label>
@@ -541,6 +541,7 @@
 		</fixedIngredientFilter>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
+	-->
 
 
 
@@ -956,7 +957,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>RawXerigium</li>
+						<li>Healroot</li>
 					</thingDefs>
 				</filter>
 				<count>5</count>
@@ -967,7 +968,7 @@
 		</products>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>RawXerigium</li>
+				<li>Healroot</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<workSkill>Medicine</workSkill>

@@ -1,13 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Defs>  
-  <!-- === training === -->
+<JobDefs>
+  <!-- no cleaning please -->
+  <JobDef>
+    <defName>Clean</defName>
+    <driverClass>NoCleaningPlease.JobDriver_CleanFilth_NoHome</driverClass>
+    <reportString>Cleaning TargetA.</reportString>
+  </JobDef>
+
+
+
+
+  <!-- Miscellaneous Incidents -->
+  <JobDef>
+    <defName>LeaveMapForRumorOf</defName>
+    <driverClass>Incidents.JobDriver_GotoCellAndDeSpawnForRumorOf</driverClass>
+    <reportString>Traveling.</reportString>
+  </JobDef>
+
+  <!-- Miscellaneous training -->
+  <JobDef>
+    <defName>ArcheryShootArrows</defName>
+    <driverClass>TrainingFacility.JobDriver_Archery</driverClass>
+    <reportString>Shooting a few arrows.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>2</joyMaxParticipants>
+    <joyGainRate>1.3</joyGainRate>
+    <joySkill>Shooting</joySkill>
+    <joyXpPerTick>0.006</joyXpPerTick>
+    <joyKind>GamingDexterity</joyKind>
+  </JobDef>
+
   <JobDef Name="UseShootingRangeBase">
     <defName>UseShootingRange</defName>
-    <driverClass>TrainingFacilityCR.JobDriver_ShootingRange</driverClass>
+    <driverClass>TrainingFacility.JobDriver_ShootingRange</driverClass>
     <reportString>Shooting a few bullets.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
-    <joyGainRate>1</joyGainRate>
+    <joyGainRate>1.3</joyGainRate>
     <joySkill>Shooting</joySkill>
     <joyXpPerTick>0.006</joyXpPerTick>
     <joyKind>GamingDexterity</joyKind>
@@ -15,14 +44,14 @@
 
   <JobDef ParentName="UseShootingRangeBase">
     <defName>UseShootingRange_NonJoy</defName>
-    <driverClass>TrainingFacilityCR.JobDriver_ShootingRange_NonJoy</driverClass>
-    <joyDuration>8000</joyDuration>
+    <driverClass>TrainingFacility.JobDriver_ShootingRange_NonJoy</driverClass>
+    <joyDuration>12000</joyDuration>
     <joyXpPerTick>0.012</joyXpPerTick>
   </JobDef>
   
   <JobDef Name="UseMartialArtsBase">
     <defName>UseMartialArtsTarget</defName>
-    <driverClass>TrainingFacilityCR.JobDriver_MartialArtsTarget</driverClass>
+    <driverClass>TrainingFacility.JobDriver_MartialArtsTarget</driverClass>
     <reportString>Practising martial arts.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
@@ -34,80 +63,67 @@
 
   <JobDef ParentName="UseMartialArtsBase">
     <defName>UseMartialArtsTarget_NonJoy</defName>
-    <driverClass>TrainingFacilityCR.JobDriver_MartialArtsTarget_NonJoy</driverClass>
-    <joyDuration>8000</joyDuration>
+    <driverClass>TrainingFacility.JobDriver_MartialArtsTarget_NonJoy</driverClass>
+    <joyDuration>12000</joyDuration>
     <joyXpPerTick>0.024</joyXpPerTick>
   </JobDef>
 
 
-  <!-- === CATS! === -->
+
+
+
+  <!-- Clutter -->
   <JobDef>
-    <defName>Fluffy_Scratch</defName>
-    <driverClass>Fluffy.JobDriver_Scratch</driverClass>
-    <reportString>Sharpening claws on TargetA.</reportString>
+    <defName>ClutterLockerBasic</defName>
+    <driverClass>Clutter_Furniture.JobDriver_LockerBasic</driverClass>
+    <reportString>Going to locker.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+  <JobDef>
+    <defName>HoloSciSignJob</defName>
+    <driverClass>JobDriver_WatchBuilding</driverClass>
+    <reportString>Watching hologram.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyMaxParticipants>4</joyMaxParticipants>
+    <joyGainRate>1.2</joyGainRate>
+    <joyKind>Passive</joyKind>
+  </JobDef>
+  <JobDef>
+    <defName>ClutterSitAndRead</defName>
+    <driverClass>Clutter_Furniture.JobDriver_ReadBookLong</driverClass>
+    <reportString>Looking for a book to read.</reportString>
+    <joyGainRate>1.2</joyGainRate>
+    <joyKind>Study</joyKind>
+  </JobDef>
+  <JobDef>
+    <defName>ClutterColorChanger</defName>
+    <driverClass>ApparelColor.RainbowSquieerl_Job</driverClass>
+    <reportString>Going to coloring station.</reportString>
   </JobDef>
 
-  <JobDef>
-    <defName>Fluffy_CrazyTime</defName>
-    <driverClass>Fluffy.JobDriver_CrazyTime</driverClass>
-    <reportString>Crazy time!</reportString>
-  </JobDef>
 
 
 
-  
-
-
-
-
-  <!-- === fishing === -->
+  <!-- fish industry -->
   <JobDef>
     <defName>JobDef_FishAtFishingPier</defName>
     <driverClass>FishIndustry.JobDriver_FishAtFishingPier</driverClass>
     <reportString>Fishing at TargetA.</reportString>
     <alwaysShowWeapon>false</alwaysShowWeapon>
   </JobDef>
-
   <JobDef>
     <defName>JobDef_HarvestAquacultureBasinProduction</defName>
     <driverClass>FishIndustry.JobDriver_HarvestAquacultureBasinProduction</driverClass>
-    <reportString>Harvesting at TargetA.</reportString>
+    <reportString>Harvesting TargetA.</reportString>
     <alwaysShowWeapon>false</alwaysShowWeapon>
   </JobDef>
 
 
 
 
-
-
-
-  <!--========= Laser Fence ============-->
+  <!-- joy tables -->
   <JobDef>
-    <defName>JobDef_SwitchLaserFence</defName>
-    <driverClass>LaserFence.JobDriver_SwitchLaserFence</driverClass>
-    <reportString>Switching laser fence.</reportString>
-  </JobDef>
-
-
-  <!--========= Trading ============-->
-  <JobDef>
-    <defName>TraderGoTrading</defName>
-    <driverClass>Trader.JobDriver_GoTrading</driverClass>
-    <reportString>Trading.</reportString>
-  </JobDef>
-
-
-  <!--========= RumorOf ============-->
-  <JobDef>
-    <defName>LeaveMapForRumorOf</defName>
-    <driverClass>Incidents.JobDriver_GotoCellAndDeSpawnForRumorOf</driverClass>
-    <reportString>Traveling.</reportString>
-  </JobDef>
-
-
-  <!--========= Joy ============-->
-  <JobDef>
-    <defName>PlayGo</defName>
+    <defName>AJO_PlayGo</defName>
     <driverClass>JobDriver_SitFacingBuilding</driverClass>
     <reportString>Playing go.</reportString>
     <joyDuration>4000</joyDuration>
@@ -117,9 +133,9 @@
     <joyXpPerTick>0.003</joyXpPerTick>
     <joyKind>GamingCerebral</joyKind>
   </JobDef>
-  
+
   <JobDef>
-    <defName>PlayCards</defName>
+    <defName>AJO_PlayCards</defName>
     <driverClass>JobDriver_SitFacingBuilding</driverClass>
     <reportString>Playing a card game.</reportString>
     <joyDuration>5000</joyDuration>
@@ -131,7 +147,7 @@
   </JobDef>
   
   <JobDef>
-    <defName>PlayReversi</defName>
+    <defName>AJO_PlayReversi</defName>
     <driverClass>JobDriver_SitFacingBuilding</driverClass>
     <reportString>Playing reversi.</reportString>
     <joyDuration>4000</joyDuration>
@@ -143,7 +159,7 @@
   </JobDef>
   
   <JobDef>
-    <defName>PlayRimColony</defName>
+    <defName>AJO_PlayRimColony</defName>
     <driverClass>JobDriver_SitFacingBuilding</driverClass>
     <reportString>Playing RimColony.</reportString>
     <joyDuration>6000</joyDuration>
@@ -154,28 +170,12 @@
     <joyKind>Social</joyKind>
   </JobDef>
 
-  <JobDef>
-    <defName>ReadBook</defName>
-    <driverClass>JobDriver_SitFacingBuilding</driverClass>
-    <reportString>Reading a book.</reportString>
-    <joyDuration>4000</joyDuration>
-    <joyMaxParticipants>4</joyMaxParticipants>
-    <joyGainRate>0.8</joyGainRate>
-    <joyKind>Passive</joyKind>
-  </JobDef>
-  
-  <JobDef>
-    <defName>SkimBook</defName>
-    <driverClass>JobDriver_WatchBuilding</driverClass>
-    <reportString>Skimming through books.</reportString>
-    <joyDuration>1250</joyDuration>
-    <joyMaxParticipants>1</joyMaxParticipants>
-    <joyGainRate>0.8</joyGainRate>
-    <joyKind>Passive</joyKind>
-  </JobDef>
 
+
+
+  <!-- painting -->
   <JobDef>
-    <defName>Doodle</defName>
+    <defName>AJO_Doodle</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Doodling.</reportString>
     <joyDuration>2500</joyDuration>
@@ -187,156 +187,162 @@
   </JobDef>
   
   <JobDef>
-    <defName>InterpretArt</defName>
+    <defName>AJO_InterpretArt</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Interpreting artwork.</reportString>
-    <joyDuration>625</joyDuration>
-    <joyMaxParticipants>1</joyMaxParticipants>
+    <joyDuration>2500</joyDuration>
+    <joyMaxParticipants>8</joyMaxParticipants>
     <joyGainRate>1</joyGainRate>
     <joyKind>Study</joyKind>
   </JobDef>
 
+
+
+
+
+
+  <!-- arcades -->
   <JobDef>
-    <defName>PlayArcadeRS</defName>
+    <defName>AJO_PlayArcadeRS</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing Rum Swirled.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Construction</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>GamingCerebral</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadeMC</defName>
+    <defName>AJO_PlayArcadeMC</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing MintCraft.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Crafting</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>GamingCerebral</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadeHL</defName>
+    <defName>AJO_PlayArcadeHL</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing Halva Life.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Shooting</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>GamingDexterity</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadeES</defName>
+    <defName>AJO_PlayArcadeES</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing Elder Scones.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Melee</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>GamingDexterity</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadeBG</defName>
+    <defName>AJO_PlayArcadeBG</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing Baguettris.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Research</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>GamingCerebral</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadeCB</defName>
+    <defName>AJO_PlayArcadeCB</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing Cooking Baba.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Cooking</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>GamingCerebral</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadePS</defName>
+    <defName>AJO_PlayArcadePS</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing Plants Vs. Salamis.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Growing</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>GamingDexterity</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadePK</defName>
+    <defName>AJO_PlayArcadePK</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing Psycho Knots.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Artistic</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>GamingCerebral</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadeSP</defName>
+    <defName>AJO_PlayArcadeSP</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing Speltunky.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Mining</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>GamingDexterity</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadeTZ</defName>
+    <defName>AJO_PlayArcadeTZ</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing The Zimz.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Social</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>Social</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadeTV</defName>
+    <defName>AJO_PlayArcadeTV</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing Trauma Vendor.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Medicine</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>GamingDexterity</joyKind>
   </JobDef>
   
   <JobDef>
-    <defName>PlayArcadeGD</defName>
+    <defName>AJO_PlayArcadeGD</defName>
     <driverClass>JobDriver_WatchBuilding</driverClass>
     <reportString>Playing Glutendogs.</reportString>
     <joyDuration>4000</joyDuration>
     <joyMaxParticipants>1</joyMaxParticipants>
     <joyGainRate>1.2</joyGainRate>
     <joySkill>Animals</joySkill>
-    <joyXpPerTick>0.005</joyXpPerTick>
+    <joyXpPerTick>0.01</joyXpPerTick>
     <joyKind>Social</joyKind>
   </JobDef>
 
@@ -349,19 +355,11 @@
 
 
 
- 
 
 
 
 
 
 
+</JobDefs>
 
-  
-  
-  
-  
-  
-
-
-</Defs>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Smart Optimize Apparel</name>
+	<author>koisama</author>
+	<url>https://ludeon.com/forums/index.php?topic=16558.0</url>
+	<targetVersion>Alpha 13</targetVersion>
+	<description>
+Overrides vanilla JobGiver_OptimizeApparel for better apparel handling.
+	</description>
+</ModMetaData>

@@ -15,7 +15,7 @@
             <li>PlantCorn</li>
             <li>PlantRice</li>
             <li>PlantStrawberry</li>
-            <li>PlantXerigium</li>
+            <li>PlantHealroot</li>
         </thingDefs>
     </AdvancedResearchDef>
 
@@ -141,7 +141,7 @@
         <defName>TextileIPlants</defName>
         <Priority>0</Priority>
         <researchDefs>
-            <li>TextileI</li>
+            <li>Devilstrand</li>
         </researchDefs>
         <sowTags>
             <li>Ground</li>
@@ -171,7 +171,7 @@
         <defName>CraftingIVPlants</defName>
         <Priority>0</Priority>
         <researchDefs>
-            <li>CraftingIV</li>
+            <li>ComponentAssembly</li>
         </researchDefs>
         <sowTags>
             <li>Ground</li>

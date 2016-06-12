@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+	<EdB.ColonistBar.HideColonistBar>Cacher la barre de Colons</EdB.ColonistBar.HideColonistBar>
+	<EdB.ColonistBar.Prefs>La barre de Colons</EdB.ColonistBar.Prefs>
+	<EdB.ColonistBar.Prefs.Enable>Afficher la barre de statut des colons</EdB.ColonistBar.Prefs.Enable>
+	<EdB.ColonistBar.Prefs.SmallIcons>Utiliser des petites icônes</EdB.ColonistBar.Prefs.SmallIcons>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Prefs.SmallIcons.Tip>Select this option to display small icons in the colonist status bar.\n\nThis option works best for smaller screen resolutions or colonies with lots of colonists.</EdB.ColonistBar.Prefs.SmallIcons.Tip>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.RemoveDeadColonist>Supprimer ce Colon</EdB.ColonistBar.RemoveDeadColonist>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.RemoveMissingColonist>Supprimer ce Colon</EdB.ColonistBar.RemoveMissingColonist>
+	<EdB.ColonistBar.Status.BINGING>SAOUL</EdB.ColonistBar.Status.BINGING>
+	<EdB.ColonistBar.Status.BROKEN>EFFONDRE</EdB.ColonistBar.Status.BROKEN>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Status.CRYPTOSLEEP>CRYPTOSLEEP</EdB.ColonistBar.Status.CRYPTOSLEEP>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Status.DAZED>DAZED</EdB.ColonistBar.Status.DAZED>
+	<EdB.ColonistBar.Status.DEAD>MORT</EdB.ColonistBar.Status.DEAD>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Status.FIGHT>FIGHT</EdB.ColonistBar.Status.FIGHT>
+	<EdB.ColonistBar.Status.KIDNAPPED>KIDNAPPE</EdB.ColonistBar.Status.KIDNAPPED>
+	<EdB.ColonistBar.Status.MISSING>DISPARU</EdB.ColonistBar.Status.MISSING>
+	<!-- NEEDS TRANSLATION --><EdB.ColonistBar.Status.PANIC>PANIC</EdB.ColonistBar.Status.PANIC>
+	<EdB.ColonistBar.Status.RAMPAGE>ENRAGE</EdB.ColonistBar.Status.RAMPAGE>
+
+</LanguageData>

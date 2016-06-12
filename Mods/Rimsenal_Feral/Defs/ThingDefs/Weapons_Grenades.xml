@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Proj_MADness</defName>
+    <label>portable nuclear device</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <shaderType>TransparentPostLight</shaderType>
+      <texPath>Projectile/MADness</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <explosionRadius >50</explosionRadius >
+      <damageDef>Nuke</damageDef>
+      <damageAmountBase>1000</damageAmountBase>
+      <explosionDelay>1500</explosionDelay>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseEquipment">
+    <defName>Weapon_MADness</defName>
+    <equipmentType>Primary</equipmentType>
+    <label>MADness</label>
+    <description>Modified portable fusion reactor, used for rimworld scale Mutual Assured Destruction strategy.</description>
+    <graphicData>
+      <texPath>Things/A13/MADness</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractGrenade</soundInteract>
+    <techLevel>Midworld</techLevel>
+    <statBases>
+      <MarketValue>3000</MarketValue>
+      <RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>MADness</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Exotic</li>
+    </tradeTags>
+    <verbs>
+      <li>
+        <label>activate MADness</label>
+        <verbClass>Verb_ShootOneUse</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>3</range>
+        <forcedMissRadius>1.0</forcedMissRadius>
+        <warmupTicks>1030</warmupTicks>
+        <noiseRadius>4</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ShotMADness</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <projectileDef>Proj_MADness</projectileDef>
+      </li>
+    </verbs>
+    <smeltProducts>
+      <Uranium>50</Uranium>
+    </smeltProducts>
+  </ThingDef>
+
+</ThingDefs>

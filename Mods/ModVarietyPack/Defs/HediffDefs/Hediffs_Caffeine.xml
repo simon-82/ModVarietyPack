@@ -2,10 +2,15 @@
 <Defs>
   <HediffDef>
     <defName>Caffeine</defName>
-    <hediffClass>Hediff_Staged</hediffClass>
+    <hediffClass>HediffWithComps</hediffClass>
+    <comps>
+      <li>
+        <compClass>HediffComp_Immunizable</compClass>
+        <severityPerDayNotImmune>-1</severityPerDayNotImmune>
+      </li>
+    </comps>
     <label>caffeine</label>
-    <initialSeverity>.49</initialSeverity>
-    <severityPerDay>-0.5</severityPerDay>
+    <initialSeverity>2</initialSeverity>
     <stages>
       <li>
         <minSeverity>0</minSeverity>

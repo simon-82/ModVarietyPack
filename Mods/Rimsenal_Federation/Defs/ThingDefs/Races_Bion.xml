@@ -1,71 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
 
-  <ThingDef Name="BasePawn" Abstract="True">
-    <thingClass>Pawn</thingClass>
-    <category>Pawn</category>
-    <selectable>true</selectable>
-    <tickerType>Normal</tickerType>
-    <altitudeLayer>Pawn</altitudeLayer>
-    <useHitPoints>false</useHitPoints>
-    <hasTooltip>true</hasTooltip>
-    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
-    <inspectorTabs>
-      <li>ITab_Pawn_Health</li>
-      <li>ITab_Pawn_Needs</li>
-      <li>ITab_Pawn_Character</li>
-      <li>ITab_Pawn_Training</li>
-      <li>ITab_Pawn_Gear</li>
-      <li>ITab_Pawn_Guest</li>
-      <li>ITab_Pawn_Prisoner</li>
-    </inspectorTabs>
-    <comps>
-      <li>
-        <compClass>CompAttachBase</compClass>
-      </li>
-    </comps>
-    <drawGUIOverlay>true</drawGUIOverlay>
-  </ThingDef>
-
 
 
   <ThingDef ParentName="BasePawn" Name="BaseBion" Abstract="True">
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <statBases>
+      <PsychicSensitivity>0</PsychicSensitivity>
       <Flammability>1</Flammability>
-      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
-      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+      <ComfyTemperatureMin>-45</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
     <race>
-      <mechanoid>false</mechanoid>
+      <meatColor>(250,100,140)</meatColor>
       <needsRest>false</needsRest>
       <hasGenders>false</hasGenders>
-      <isFlesh>true</isFlesh>
-      <diet>NeverEats</diet>
+      <foodType>None</foodType>
     </race>
   </ThingDef>
 
+
   <ThingDef ParentName="BaseBion">
-    <defName>Race_Bion</defName>
+    <defName>Bion_Grunt</defName>
     <label>bion</label>
     <description>Mass produced, lobotomized, brainwashed and genetically modified, Federation Bions are xenohuman that designed for war. Technically, they are not human anymore.</description>
     <statBases>
-      <MoveSpeed>4.8</MoveSpeed>
+      <MoveSpeed>5</MoveSpeed>
       <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
-      <MeatAmount>30</MeatAmount>
+      <ArmorRating_Heat>0.6</ArmorRating_Heat>
+      <MeatAmount>50</MeatAmount>
     </statBases>
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
-        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+        <defaultCooldownTicks>135</defaultCooldownTicks>
+        <meleeDamageBaseAmount>21</meleeDamageBaseAmount>
         <meleeDamageDef>Cut</meleeDamageDef>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTicks>75</defaultCooldownTicks>
         <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
@@ -73,9 +49,8 @@
     </verbs>
     <race>
       <intelligence>ToolUser</intelligence>
-      <mechanoid>false</mechanoid>
-      <thinkTree>Humanlike</thinkTree>
-      <body>Bion</body>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <body>Human</body>
       <baseBodySize>1.3</baseBodySize>
       <baseHealthScale>1.5</baseHealthScale>
       <lifeStageAges>
@@ -92,32 +67,40 @@
         <min>1000</min>
         <max>2000</max>
       </soundCallIntervalRange>
-       <soundMeleeHitPawn>Pawn_Bion_HitPawn</soundMeleeHitPawn>                   <soundMeleeHitBuilding>Pawn_Bion_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeHitPawn>Pawn_Bion_HitPawn</soundMeleeHitPawn>                         <soundMeleeHitBuilding>Pawn_Bion_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Bion_Miss</soundMeleeMiss>
     </race>
+    <recipes>
+      <li>ShutDownMechanoid</li>
+    </recipes>
+    <butcherProducts>
+      <Plasteel>15</Plasteel>
+    </butcherProducts>
   </ThingDef>
 
+
   <ThingDef ParentName="BaseBion">
-    <defName>Race_BionStalker</defName>
-    <label>bion stalker</label>
-    <description>Designed for infiltration and assassination, Bion stalker is an extremely dangerous foe.</description>
+    <defName>Bion_Stalker</defName>
+    <label>bion</label>
+    <description>The 'stalker' model bion is specially designed for infiltration and spying. Nimble and silent, the stalker is not easy prey.</description>
     <statBases>
-      <MoveSpeed>5.2</MoveSpeed>
+      <MoveSpeed>6</MoveSpeed>
       <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
-      <MeatAmount>30</MeatAmount>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.2</ArmorRating_Heat>
+      <MeatAmount>35</MeatAmount>
     </statBases>
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
-        <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+        <defaultCooldownTicks>105</defaultCooldownTicks>
+        <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
         <meleeDamageDef>Cut</meleeDamageDef>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <defaultCooldownTicks>75</defaultCooldownTicks>
         <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
@@ -125,11 +108,10 @@
     </verbs>
     <race>
       <intelligence>ToolUser</intelligence>
-      <mechanoid>false</mechanoid>
-      <thinkTree>Humanlike</thinkTree>
-      <body>Bion</body>
-      <baseBodySize>0.6</baseBodySize>
-      <baseHealthScale>1.0</baseHealthScale>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <body>Human</body>
+      <baseBodySize>0.5</baseBodySize>
+      <baseHealthScale>0.8</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>BionAdultStage</def>
@@ -144,98 +126,51 @@
         <min>1000</min>
         <max>2000</max>
       </soundCallIntervalRange>
-       <soundMeleeHitPawn>Pawn_Bion_HitPawn</soundMeleeHitPawn>                   <soundMeleeHitBuilding>Pawn_Bion_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeHitPawn>Pawn_Bion_HitPawn</soundMeleeHitPawn>                         <soundMeleeHitBuilding>Pawn_Bion_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Bion_Miss</soundMeleeMiss>
     </race>
+    <recipes>
+      <li>ShutDownMechanoid</li>
+    </recipes>
   </ThingDef>
 
-  <ThingDef ParentName="BaseBion">
-    <defName>Race_BionHulk</defName>
-    <label>bion hulk</label>
-    <description>More larger and stronger version of the already dangerous federation Bion, Bion hulk is a dreadful enemy.</description>
-    <statBases>
-      <MoveSpeed>3.8</MoveSpeed>
-      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
-      <MeatAmount>50</MeatAmount>
-    </statBases>
-    <verbs>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
-        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
-        <meleeDamageDef>Cut</meleeDamageDef>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
-        <meleeDamageBaseAmount>8</meleeDamageBaseAmount>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-      </li>
-    </verbs>
-    <race>
-      <intelligence>ToolUser</intelligence>
-      <mechanoid>false</mechanoid>
-      <thinkTree>Humanlike</thinkTree>
-      <body>Bion</body>
-      <baseBodySize>2</baseBodySize>
-      <baseHealthScale>2.5</baseHealthScale>
-      <lifeStageAges>
-        <li>
-          <def>BionAdultStage</def>
-          <minAge>0</minAge>
-          <soundWounded>Pawn_Bion_Wounded</soundWounded>
-          <soundDeath>Pawn_Bion_Death</soundDeath>
-          <soundCall>Pawn_Bion_Call</soundCall>
-          <soundAngry>Pawn_Bion_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <soundCallIntervalRange>
-        <min>1000</min>
-        <max>2000</max>
-      </soundCallIntervalRange>
-       <soundMeleeHitPawn>Pawn_Bion_HitPawn</soundMeleeHitPawn>                   <soundMeleeHitBuilding>Pawn_Bion_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Bion_Miss</soundMeleeMiss>
-    </race>
-  </ThingDef>
+
 
   <ThingDef ParentName="BaseBion">
-    <defName>Race_BionPrime</defName>
-    <label>bion prime</label>
-    <description>The result of wicked technology, bion prime is nothing less than the embodiment of the Federation's tyranny, a living nightmare.</description>
+    <defName>Bion_Federator</defName>
+    <label>federator</label>
+    <description>The "Federator" Main Battle Mechsuit is a mechsuit model produced by Arms Dynamics. Developed as a heavy assault exosuit, the Federator's design has been compared to a main battle tank.</description>
     <statBases>
       <Flammability>0</Flammability>
-      <MoveSpeed>5</MoveSpeed>
-      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <MoveSpeed>2</MoveSpeed>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>200</ComfyTemperatureMax>
+      <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
       <ArmorRating_Heat>0.9</ArmorRating_Heat>
-      <MeatAmount>50</MeatAmount>
     </statBases>
     <verbs>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>60</defaultCooldownTicks>
-        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+        <defaultCooldownTicks>135</defaultCooldownTicks>
+        <meleeDamageBaseAmount>28</meleeDamageBaseAmount>
         <meleeDamageDef>Cut</meleeDamageDef>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
       </li>
       <li>
         <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>60</defaultCooldownTicks>
-        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+        <defaultCooldownTicks>115</defaultCooldownTicks>
+        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>
         <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
       </li>
     </verbs>
     <race>
       <intelligence>ToolUser</intelligence>
-      <mechanoid>false</mechanoid>
-      <thinkTree>Mechanoid</thinkTree>
-      <body>Bion</body>
-      <baseBodySize>2.5</baseBodySize>
-      <baseHealthScale>6</baseHealthScale>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <body>Human</body>
+      <baseBodySize>4</baseBodySize>
+      <baseHealthScale>5</baseHealthScale>
       <lifeStageAges>
         <li>
           <def>BionAdultStage</def>
@@ -250,62 +185,17 @@
         <min>1000</min>
         <max>2000</max>
       </soundCallIntervalRange>
-       <soundMeleeHitPawn>Pawn_Bion_HitPawn</soundMeleeHitPawn>                   <soundMeleeHitBuilding>Pawn_Bion_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeHitPawn>Pawn_Bion_HitPawn</soundMeleeHitPawn>                         <soundMeleeHitBuilding>Pawn_Bion_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Bion_Miss</soundMeleeMiss>
     </race>
+    <recipes>
+      <li>ShutDownMechanoid</li>
+    </recipes>
+    <butcherProducts>
+      <Plasteel>50</Plasteel>
+    </butcherProducts>
   </ThingDef>
 
 
-  <ThingDef ParentName="BaseBion">
-    <defName>Race_BionDemo</defName>
-    <label>bion peacebuilder</label>
-    <description>Mass produced, lobotomized, brainwashed and genetically modified, Federation Bions are xenohuman that designed for war. Technically, they are not human anymore.</description>
-    <statBases>
-      <MoveSpeed>4.0</MoveSpeed>
-      <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
-      <MeatAmount>30</MeatAmount>
-    </statBases>
-    <verbs>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
-        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-      </li>
-      <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTicks>100</defaultCooldownTicks>
-        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-        <meleeDamageDef>Blunt</meleeDamageDef>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-      </li>
-    </verbs>
-    <race>
-      <intelligence>ToolUser</intelligence>
-      <mechanoid>false</mechanoid>
-      <thinkTree>Humanlike</thinkTree>
-      <body>Bion</body>
-      <baseBodySize>1.3</baseBodySize>
-      <baseHealthScale>1.3</baseHealthScale>
-      <lifeStageAges>
-        <li>
-          <def>BionAdultStage</def>
-          <minAge>0</minAge>
-          <soundWounded>Pawn_Bion_Wounded</soundWounded>
-          <soundDeath>Pawn_Bion_Death</soundDeath>
-          <soundCall>Pawn_Bion_Call</soundCall>
-          <soundAngry>Pawn_Bion_Angry</soundAngry>
-        </li>
-      </lifeStageAges>
-      <soundCallIntervalRange>
-        <min>1000</min>
-        <max>2000</max>
-      </soundCallIntervalRange>
-       <soundMeleeHitPawn>Pawn_Bion_HitPawn</soundMeleeHitPawn>                   <soundMeleeHitBuilding>Pawn_Bion_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Bion_Miss</soundMeleeMiss>
-    </race>
-  </ThingDef>
 
 </ThingDefs>

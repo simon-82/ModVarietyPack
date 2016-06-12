@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>ED-Shields-CR</name>
+	<author>Jaxxa</author>
+	<url>https://ludeon.com/forums/index.php?topic=15606.0</url>
+	<description>
+	Requires: ED-Shields, Community Core Library, CombatRealism
+	
+Modifies the Shields from ED-Shields to intercept the projectiles fired by weapons from Combat Realism.
+	</description>
+</ModMetaData>

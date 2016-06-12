@@ -1,45 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef Name="ApparelShieldBase" Abstract="True">
-		<thingClass>Apparel</thingClass>
-		<category>Item</category>
-		<selectable>True</selectable>
-		<pathCost>10</pathCost>
-		<useHitPoints>True</useHitPoints>
-    <graphicData>
-      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
-    </graphicData>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <statBases>
-			<MaxHitPoints>100</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-      <DeteriorationRate>1</DeteriorationRate>
-      <SellPriceFactor>0.5</SellPriceFactor>
-    </statBases>
-		<altitudeLayer>Item</altitudeLayer>
-		<alwaysHaulable>True</alwaysHaulable>
-		<tickerType>Never</tickerType>
-		<thingCategories>
-			<li>Apparel</li>
-		</thingCategories>
-		<comps>
-			<li>
-				<compClass>CompForbiddable</compClass>
-			</li>
-      <li>
-        <compClass>CompColorable</compClass>
-      </li>
-			<li>
-				<compClass>CompQuality</compClass>
-			</li>
-		</comps>
-	</ThingDef>
-
-
-
-
-	<ThingDef ParentName="ApparelShieldBase">
+	<ThingDef ParentName="ApparelBase">
 		<thingClass>PersonalShield</thingClass>
 		<defName>Apparel_PersonalShield</defName>
 		<label>personal shield</label>
@@ -48,13 +10,21 @@
       <texPath>Things/Pawn/Humanlike/Apparel/PersonalShield/PersonalShield</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
+    <techLevel>Spacer</techLevel>
     <tickerType>Normal</tickerType>
-		<statBases>
-			<MarketValue>1200</MarketValue>
-      <PersonalShieldRechargeRate>0.2</PersonalShieldRechargeRate>
-      <PersonalShieldEnergyMax>1.65</PersonalShieldEnergyMax>
+    <statBases>
+      <MarketValue>1200</MarketValue>
+      <PersonalShieldRechargeRate>0.15</PersonalShieldRechargeRate>
+      <PersonalShieldEnergyMax>1.5</PersonalShieldEnergyMax>
+	  <Weight>5</Weight>
+	  <Bulk>10</Bulk>
+	  <WornWeight>5</WornWeight>
+	  <WornBulk>4</WornBulk>
     </statBases>
-		<apparel>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
 			<bodyPartGroups>
 				<li>Torso</li>
 			</bodyPartGroups>
