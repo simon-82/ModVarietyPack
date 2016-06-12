@@ -646,6 +646,9 @@
 			<thingDefs>
 				<li>SteelBar</li>
 			</thingDefs>
+			<exceptedThingDefs>
+		        <li>Hay</li>
+		     </exceptedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<MealCannedFood>1</MealCannedFood>

@@ -1,32 +1,2079 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <RecipeDefs>
-  <!-- CR new ammo -->
+	<!-- CR bases -->
+	<RecipeDef Name="AmmoRecipeBase" Abstract="true">
+		<workSpeedStat>SmithingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Machining</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>10000</workAmount>
+		<workSkill>Crafting</workSkill>
+		<targetCountAdjustment>500</targetCountAdjustment>
+		<recipeUsers>
+			<!-- Need an empty list here or the ammo injector will throw a null ref exception 
+			     CR dll adds recipes to AmmoBench automatically
+			 -->
+		</recipeUsers>
+	</RecipeDef>
 
-  <RecipeDef Name="AmmoRecipeBase" Abstract="true">
-    <workSpeedStat>SmithingSpeed</workSpeedStat>
-    <effectWorking>Cook</effectWorking>
-    <soundWorking>Recipe_Machining</soundWorking>
-    <allowMixingIngredients>true</allowMixingIngredients>
-    <workAmount>10000</workAmount>
-    <workSkill>Crafting</workSkill>
-    <targetCountAdjustment>500</targetCountAdjustment>
-	<recipeUsers>
-	  <!-- Need an empty list here or the ammo injector will throw a null ref exception -->
-	</recipeUsers>
+	<!-- switch from TableMachining to second weapon table (shells + hand grenades) -->
+	<RecipeDef ParentName="AmmoRecipeBase" Name="GrenadeRecipeBase" Abstract="true">
+		<recipeUsers>
+			<li>TableWeaponCrafting</li>
+		</recipeUsers>
   </RecipeDef>
-  
-  
+
+
+
+
+
+
+
+	<!-- CR overrides 
+		All recipes steel to steelbar
+		left Ammo_Neolithic as is
+	-->
+
+	<!-- Recipes_AmmoHighCal -->
+	<!-- ==================== .50 BMG ========================== -->
 
   <RecipeDef ParentName="AmmoRecipeBase">
-    <defName>MakeAmmo_6x24mm_Energy</defName>
-    <label>make 6x24mm energy cartridge x100</label>
-    <description>Craft 100 6x24mm energy cartridges.</description>
-    <jobString>Making 6x24mm energy cartridges.</jobString>
+    <defName>MakeAmmo_50BMG_FMJ</defName>
+    <label>make .50 BMG (FMJ) cartridge x200</label>
+    <description>Craft 200 .50 BMG (FMJ) cartridges.</description>
+    <jobString>Making .50 BMG (FMJ) cartridges.</jobString>
     <ingredients>
       <li>
         <filter>
           <thingDefs>
             <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>44</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_50BMG_FMJ>200</Ammo_50BMG_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_50BMG_AP</defName>
+    <label>make .50 BMG (Sabot) cartridge x200</label>
+    <description>Craft 200 .50 BMG (Sabot) cartridges.</description>
+    <jobString>Making .50 BMG (Sabot) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>32</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Uranium</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_50BMG_AP>200</Ammo_50BMG_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_50BMG_HE</defName>
+    <label>make .50 BMG (HE) cartridge x200</label>
+    <description>Craft 200 .50 BMG (HE) cartridges.</description>
+    <jobString>Making .50 BMG (HE) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>32</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>6</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_50BMG_HE>200</Ammo_50BMG_HE>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_50BMG_Incendiary</defName>
+    <label>make .50 BMG (AP-I) cartridge x200</label>
+    <description>Craft 200 .50 BMG (AP-I) cartridges.</description>
+    <jobString>Making .50 BMG (AP-I) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>6</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Prometheum</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_50BMG_Incendiary>200</Ammo_50BMG_Incendiary>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== 14.5x114mm ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_145x114mm_FMJ</defName>
+    <label>make 14.5x114mm (FMJ) cartridge x200</label>
+    <description>Craft 200 14.5x114mm (FMJ) cartridges.</description>
+    <jobString>Making 14.5x114mm (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>80</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_145x114mm_FMJ>200</Ammo_145x114mm_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_145x114mm_HE</defName>
+    <label>make 14.5x114mm (HE) cartridge x200</label>
+    <description>Craft 200 14.5x114mm (HE) cartridges.</description>
+    <jobString>Making 14.5x114mm (HE) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>58</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_145x114mm_HE>200</Ammo_145x114mm_HE>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_145x114mm_Incendiary</defName>
+    <label>make 14.5x114mm (AP-I) cartridge x200</label>
+    <description>Craft 200 14.5x114mm (AP-I) cartridges.</description>
+    <jobString>Making 14.5x114mm (AP-I) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>68</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>8</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Prometheum</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_145x114mm_Incendiary>200</Ammo_145x114mm_Incendiary>
+    </products>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Recipes_AmmoPistols -->
+	<!-- ==================== .40 Rimfire ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40Rimfire</defName>
+    <label>make .40 Rimfire cartridge x500</label>
+    <description>Craft 500 .40 Rimfire cartridges.</description>
+    <jobString>Making .40 Rimfire cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40Rimfire>500</Ammo_40Rimfire>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== .32 ACP ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_32ACP_FMJ</defName>
+    <label>make .32 ACP cartridge x500</label>
+    <description>Craft 500 .32 ACP cartridges.</description>
+    <jobString>Making .32 ACP cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_32ACP_FMJ>500</Ammo_32ACP_FMJ>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== 7.62x25mm Tokarev ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x25mmTokarev_FMJ</defName>
+    <label>make 7.62x25mm Tokarev (FMJ) cartridge x500</label>
+    <description>Craft 500 7.62x25mm Tokarev (FMJ) cartridges.</description>
+    <jobString>Making 7.62x25mm Tokarev (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x25mmTokarev_FMJ>500</Ammo_762x25mmTokarev_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x25mmTokarev_AP</defName>
+    <label>make 7.62x25mm Tokarev (AP) cartridge x500</label>
+    <description>Craft 500 7.62x25mm Tokarev (AP) cartridges.</description>
+    <jobString>Making 7.62x25mm Tokarev (AP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x25mmTokarev_AP>500</Ammo_762x25mmTokarev_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x25mmTokarev_HP</defName>
+    <label>make 7.62x25mm Tokarev (HP) cartridge x500</label>
+    <description>Craft 500 7.62x25mm Tokarev (HP) cartridges.</description>
+    <jobString>Making 7.62x25mm Tokarev (HP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x25mmTokarev_HP>500</Ammo_762x25mmTokarev_HP>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== 9x19mm Parabellum ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_9x19mmPara_FMJ</defName>
+    <label>make 9x19mm Parabellum (FMJ) cartridge x500</label>
+    <description>Craft 500 9x19mm Parabellum (FMJ) cartridges.</description>
+    <jobString>Making 9x19mm Parabellum (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_9x19mmPara_FMJ>500</Ammo_9x19mmPara_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_9x19mmPara_AP</defName>
+    <label>make 9x19mm Parabellum (AP) cartridge x500</label>
+    <description>Craft 500 9x19mm Parabellum (AP) cartridges.</description>
+    <jobString>Making 9x19mm Parabellum (AP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>14</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_9x19mmPara_AP>500</Ammo_9x19mmPara_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_9x19mmPara_HP</defName>
+    <label>make 9x19mm Parabellum (HP) cartridge x500</label>
+    <description>Craft 500 9x19mm Parabellum (HP) cartridges.</description>
+    <jobString>Making 9x19mm Parabellum (HP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>14</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_9x19mmPara_HP>500</Ammo_9x19mmPara_HP>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== .45 ACP ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_45ACP_FMJ</defName>
+    <label>make .45 ACP (FMJ) cartridge x500</label>
+    <description>Craft 500 .45 ACP (FMJ) cartridges.</description>
+    <jobString>Making .45 ACP (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_45ACP_FMJ>500</Ammo_45ACP_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_45ACP_AP</defName>
+    <label>make .45 ACP (AP) cartridge x500</label>
+    <description>Craft 500 .45 ACP (AP) cartridges.</description>
+    <jobString>Making .45 ACP (AP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>22</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_45ACP_AP>500</Ammo_45ACP_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_45ACP_HP</defName>
+    <label>make .45 ACP (HP) cartridge x500</label>
+    <description>Craft 500 .45 ACP (HP) cartridges.</description>
+    <jobString>Making .45 ACP (HP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>22</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_45ACP_HP>500</Ammo_45ACP_HP>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== .45 Colt ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_45Colt_FMJ</defName>
+    <label>make .45 Colt (FMJ) cartridge x500</label>
+    <description>Craft 500 .45 Colt (FMJ) cartridges.</description>
+    <jobString>Making .45 Colt (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_45Colt_FMJ>500</Ammo_45Colt_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_45Colt_AP</defName>
+    <label>make .45 Colt (AP) cartridge x500</label>
+    <description>Craft 500 .45 Colt (AP) cartridges.</description>
+    <jobString>Making .45 Colt (AP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>22</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_45Colt_AP>500</Ammo_45Colt_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_45Colt_HP</defName>
+    <label>make .45 Colt (HP) cartridge x500</label>
+    <description>Craft 500 .45 Colt (HP) cartridges.</description>
+    <jobString>Making .45 Colt (HP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>22</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_45Colt_HP>500</Ammo_45Colt_HP>
+    </products>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Recipes_AmmoRifles -->
+  <!-- ==================== 5.56x45mm NATO ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_556x45mmNATO_FMJ</defName>
+    <label>make 5.56x45mm NATO (FMJ) cartridge x500</label>
+    <description>Craft 500 5.56x45mm NATO (FMJ) cartridges.</description>
+    <jobString>Making 5.56x45mm NATO (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_556x45mmNATO_FMJ>500</Ammo_556x45mmNATO_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_556x45mmNATO_AP</defName>
+    <label>make 5.56x45mm NATO (AP) cartridge x500</label>
+    <description>Craft 500 5.56x45mm NATO (AP) cartridges.</description>
+    <jobString>Making 5.56x45mm NATO (AP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>14</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_556x45mmNATO_AP>500</Ammo_556x45mmNATO_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_556x45mmNATO_HP</defName>
+    <label>make 5.56x45mm NATO (HP) cartridge x500</label>
+    <description>Craft 500 5.56x45mm NATO (HP) cartridges.</description>
+    <jobString>Making 5.56x45mm NATO (HP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>14</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_556x45mmNATO_HP>500</Ammo_556x45mmNATO_HP>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== 7.62x39mm Soviet ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x39mmSoviet_FMJ</defName>
+    <label>make 7.62x39mm Soviet (FMJ) cartridge x500</label>
+    <description>Craft 500 7.62x39mm Soviet (FMJ) cartridges.</description>
+    <jobString>Making 7.62x39mm Soviet (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>16</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x39mmSoviet_FMJ>500</Ammo_762x39mmSoviet_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x39mmSoviet_AP</defName>
+    <label>make 7.62x39mm Soviet (AP) cartridge x500</label>
+    <description>Craft 500 7.62x39mm Soviet (AP) cartridges.</description>
+    <jobString>Making 7.62x39mm Soviet (AP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>18</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x39mmSoviet_AP>500</Ammo_762x39mmSoviet_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x39mmSoviet_HP</defName>
+    <label>make 7.62x39mm Soviet (HP) cartridge x500</label>
+    <description>Craft 500 7.62x39mm Soviet (HP) cartridges.</description>
+    <jobString>Making 7.62x39mm Soviet (HP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>18</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x39mmSoviet_HP>500</Ammo_762x39mmSoviet_HP>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== .303 British ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_303British_FMJ</defName>
+    <label>make .303 British (FMJ) cartridge x500</label>
+    <description>Craft 500 .303 British (FMJ) cartridges.</description>
+    <jobString>Making .303 British (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>22</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_303British_FMJ>500</Ammo_303British_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_303British_AP</defName>
+    <label>make .303 British (AP) cartridge x500</label>
+    <description>Craft 500 .303 British (AP) cartridges.</description>
+    <jobString>Making .303 British (AP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>24</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_303British_AP>500</Ammo_303British_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_303British_HP</defName>
+    <label>make .303 British (HP) cartridge x500</label>
+    <description>Craft 500 .303 British (HP) cartridges.</description>
+    <jobString>Making .303 British (HP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>24</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_303British_HP>500</Ammo_303British_HP>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== 7.62x51mm NATO ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x51mmNATO_FMJ</defName>
+    <label>make 7.62x51mm NATO (FMJ) cartridge x500</label>
+    <description>Craft 500 7.62x51mm NATO (FMJ) cartridges.</description>
+    <jobString>Making 7.62x51mm NATO (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>25</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x51mmNATO_FMJ>500</Ammo_762x51mmNATO_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x51mmNATO_AP</defName>
+    <label>make 7.62x51mm NATO (AP) cartridge x500</label>
+    <description>Craft 500 7.62x51mm NATO (AP) cartridges.</description>
+    <jobString>Making 7.62x51mm NATO (AP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>27</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x51mmNATO_AP>500</Ammo_762x51mmNATO_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x51mmNATO_HP</defName>
+    <label>make 7.62x51mm NATO (HP) cartridge x500</label>
+    <description>Craft 500 7.62x51mm NATO (HP) cartridges.</description>
+    <jobString>Making 7.62x51mm NATO (HP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>27</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x51mmNATO_HP>500</Ammo_762x51mmNATO_HP>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== 7.62x54mmR ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x54mmR_FMJ</defName>
+    <label>make 7.62x54mmR (FMJ) cartridge x500</label>
+    <description>Craft 500 7.62x54mmR (FMJ) cartridges.</description>
+    <jobString>Making 7.62x54mmR (FMJ) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>22</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x54mmR_FMJ>500</Ammo_762x54mmR_FMJ>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x54mmR_AP</defName>
+    <label>make 7.62x54mmR (AP) cartridge x500</label>
+    <description>Craft 500 7.62x54mmR (AP) cartridges.</description>
+    <jobString>Making 7.62x54mmR (AP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>24</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x54mmR_AP>500</Ammo_762x54mmR_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_762x54mmR_HP</defName>
+    <label>make 7.62x54mmR (HP) cartridge x500</label>
+    <description>Craft 500 7.62x54mmR (HP) cartridges.</description>
+    <jobString>Making 7.62x54mmR (HP) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>24</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_762x54mmR_HP>500</Ammo_762x54mmR_HP>
+    </products>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Recipes_AmmoShotgun -->
+  <!-- ==================== .410 Bore ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_410Bore_Buck</defName>
+    <label>make .410 Bore (Buck) shell x200</label>
+    <description>Craft 200 .410 Bore (Buck) shells.</description>
+    <jobString>Making .410 Bore (Buck) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_410Bore_Buck>200</Ammo_410Bore_Buck>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== 12 Gauge ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_12Gauge_Buck</defName>
+    <label>make 12 gauge (Buck) shell x200</label>
+    <description>Craft 200 12 gauge (Buck) shells.</description>
+    <jobString>Making 12 gauge (Buck) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_12Gauge_Buck>200</Ammo_12Gauge_Buck>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_12Gauge_Bird</defName>
+    <label>make 12 gauge (Bird) shell x200</label>
+    <description>Craft 200 12 gauge (Bird) shells.</description>
+    <jobString>Making 12 gauge (Bird) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_12Gauge_Bird>200</Ammo_12Gauge_Bird>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_12Gauge_Slug</defName>
+    <label>make 12 gauge (Slug) shell x200</label>
+    <description>Craft 200 12 gauge (Slug) shells.</description>
+    <jobString>Making 12 gauge (Slug) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>26</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_12Gauge_Slug>200</Ammo_12Gauge_Slug>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_12Gauge_Beanbag</defName>
+    <label>make 12 gauge (Beanbag) shell x200</label>
+    <description>Craft 200 12 gauge (Beanbag) shells.</description>
+    <jobString>Making 12 gauge (Beanbag) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>6</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Cloth</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_12Gauge_Beanbag>200</Ammo_12Gauge_Beanbag>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_12Gauge_ElectroSlug</defName>
+    <label>make 12 gauge (EMP) shell x200</label>
+    <description>Craft 200 12 gauge (EMP) shells.</description>
+    <jobString>Making 12 gauge (EMP) shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_12Gauge_ElectroSlug>200</Ammo_12Gauge_ElectroSlug>
+    </products>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Recipes_Grenades -->
+  <!-- ==================== 30x29mm Grenades ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_30x29mmGrenade_HE</defName>
+    <label>make 30x29mm HE grenades x50</label>
+    <description>Craft 50 30x29mm HE grenades.</description>
+    <jobString>Making 30x29mm HE grenades.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_30x29mmGrenade_HE>50</Ammo_30x29mmGrenade_HE>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_30x29mmGrenade_EMP</defName>
+    <label>make 30x29mm EMP grenades x50</label>
+    <description>Craft 50 30x29mm EMP grenades.</description>
+    <jobString>Making 30x29mm EMP grenades.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>15</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_30x29mmGrenade_EMP>50</Ammo_30x29mmGrenade_EMP>
+    </products>
+  </RecipeDef>
+
+  <!-- ==================== 40x46mm Grenades ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x46mmGrenade_HE</defName>
+    <label>make 40x46mm HE grenades x50</label>
+    <description>Craft 50 40x46mm HE grenades.</description>
+    <jobString>Making 40x46mm HE grenades.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x46mmGrenade_HE>50</Ammo_40x46mmGrenade_HE>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_40x46mmGrenade_EMP</defName>
+    <label>make 40x46mm EMP grenades x50</label>
+    <description>Craft 50 40x46mm EMP grenades.</description>
+    <jobString>Making 40x46mm EMP grenades.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_40x46mmGrenade_EMP>50</Ammo_40x46mmGrenade_EMP>
+    </products>
+  </RecipeDef>
+
+
+
+
+
+
+
+  <!-- Recipes_HandGrenades -->
+  <RecipeDef ParentName="GrenadeRecipeBase">
+    <defName>MakeFragGrenade</defName>
+    <label>make frag grenades x10</label>
+    <description>Craft 10 frag grenades.</description>
+    <jobString>Making frag grenades.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Weapon_GrenadeFrag>10</Weapon_GrenadeFrag>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="GrenadeRecipeBase">
+    <defName>MakeMolotovCocktail</defName>
+    <label>make molotov cocktails x10</label>
+    <description>Craft 10 molotov cocktails.</description>
+    <jobString>Making frag grenades.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Cloth</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Prometheum</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Weapon_GrenadeMolotov>10</Weapon_GrenadeMolotov>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="GrenadeRecipeBase">
+    <defName>MakeEMPGrenade</defName>
+    <label>make EMP grenades x10</label>
+    <description>Craft 10 EMP grenades.</description>
+    <jobString>Making EMP grenades.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Weapon_GrenadeEMP>10</Weapon_GrenadeEMP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="GrenadeRecipeBase">
+    <defName>MakeFlashbangGrenade</defName>
+    <label>make flashbang grenades x10</label>
+    <description>Craft 10 flashbang grenades.</description>
+    <jobString>Making flashbang grenades.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Prometheum</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Proj_GrenadeFlashbang>10</Proj_GrenadeFlashbang>
+    </products>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+  <!-- Recipes_Rockets -->
+  <!-- ==================== RPG-7 Grenades ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_RPG7Grenade_HEAT</defName>
+    <label>make RPG-7 HEAT grenades x5</label>
+    <description>Craft 5 RPG-7 HEAT grenades.</description>
+    <jobString>Making RPG-7 HEAT grenades.</jobString>
+    <workAmount>15000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>13</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_RPG7Grenade_HEAT>5</Ammo_RPG7Grenade_HEAT>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_RPG7Grenade_Thermobaric</defName>
+    <label>make RPG-7 thermobaric grenades x5</label>
+    <description>Craft 5 RPG-7 thermobaric grenades.</description>
+    <jobString>Making RPG-7 thermobaric grenades.</jobString>
+    <workAmount>15000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>13</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>9</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_RPG7Grenade_Thermobaric>5</Ammo_RPG7Grenade_Thermobaric>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_RPG7Grenade_Frag</defName>
+    <label>make RPG-7 frag grenades x5</label>
+    <description>Craft 5 RPG-7 frag grenades.</description>
+    <jobString>Making RPG-7 frag grenades.</jobString>
+    <workAmount>15000</workAmount>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>7</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_RPG7Grenade_Frag>5</Ammo_RPG7Grenade_Frag>
+    </products>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+  <!-- Recipes_Shells (make 10, up from 5) -->
+  <!-- ==================== 81mm mortar shells ========================== -->
+
+  <RecipeDef ParentName="GrenadeRecipeBase">
+    <defName>MakeArtilleryShell</defName>
+    <label>make 81mm HE mortar shells x10</label>
+    <description>Craft 10 81mm HE mortar shells.</description>
+    <jobString>Making 81mm HE mortar shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>22</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <ArtilleryShell>10</ArtilleryShell>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="GrenadeRecipeBase">
+    <defName>MakeAmmo_81mmMortarShell_Incendiary</defName>
+    <label>make 81mm incendiary mortar shells x10</label>
+    <description>Craft 10 81mm incendiary mortar shells.</description>
+    <jobString>Making 81mm incendiary mortar shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>22</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Prometheum</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_81mmMortarShell_Incendiary>10</Ammo_81mmMortarShell_Incendiary>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="GrenadeRecipeBase">
+    <defName>MakeAmmo_81mmMortarShell_EMP</defName>
+    <label>make 81mm EMP mortar shells x10</label>
+    <description>Craft 10 81mm EMP mortar shells.</description>
+    <jobString>Making 81mm EMP mortar shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>22</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_81mmMortarShell_EMP>10</Ammo_81mmMortarShell_EMP>
+    </products>
+  </RecipeDef>
+
+  <!-- ==================== 90mm cannon shells ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_90mmCannonShell_HEAT</defName>
+    <label>make 90mm HEAT cannon shells x10</label>
+    <description>Craft 10 90mm HEAT cannon shells.</description>
+    <jobString>Making 90mm HEAT cannon shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>23</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_90mmCannonShell_HEAT>10</Ammo_90mmCannonShell_HEAT>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_90mmCannonShell_HE</defName>
+    <label>make 90mm HE cannon shells x10</label>
+    <description>Craft 10 90mm HE cannon shells.</description>
+    <jobString>Making 90mm HE cannon shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>23</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_90mmCannonShell_HE>10</Ammo_90mmCannonShell_HE>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_90mmCannonShell_EMP</defName>
+    <label>make 90mm EMP cannon shells x10</label>
+    <description>Craft 10 90mm EMP cannon shells.</description>
+    <jobString>Making 90mm EMP cannon shells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>23</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_90mmCannonShell_EMP>10</Ammo_90mmCannonShell_EMP>
+    </products>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Recipes_AmmoAdvanced -->
+  <!-- ==================== 30x64mm Fuel Cell ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_30x64mmFuel_Incendiary</defName>
+    <label>make 30x64mm fuel cell (Incendiary) x50</label>
+    <description>Craft 50 30x64mm incendiary fuel cells.</description>
+    <jobString>Making incendiary fuel cells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>Prometheum</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_30x64mmFuel_Incendiary>50</Ammo_30x64mmFuel_Incendiary>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_30x64mmFuel_Thermobaric</defName>
+    <label>make 30x64mm fuel cell (Thermobaric) x50</label>
+    <description>Craft 50 30x64mm thermobaric fuel cells.</description>
+    <jobString>Making thermobaric fuel cells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>7</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_30x64mmFuel_Thermobaric>50</Ammo_30x64mmFuel_Thermobaric>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_30x64mmFuel_Foam</defName>
+    <label>make 30x64mm fuel cell (Foam) x50</label>
+    <description>Craft 50 30x64mm foam fuel cells.</description>
+    <jobString>Making foam fuel cells.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>SteelBar</li>
+          </thingDefs>
+        </filter>
+        <count>12</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>SteelBar</li>
+      </thingDefs>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_30x64mmFuel_Foam>50</Ammo_30x64mmFuel_Foam>
+    </products>
+  </RecipeDef>
+  
+  <!-- ==================== 6x24mm Charged ========================== -->
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_6x24mmCharged</defName>
+    <label>make 6x24mm Charged cartridge x100</label>
+    <description>Craft 100 6x24mm Charged cartridges.</description>
+    <jobString>Making 6x24mm Charged cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
           </thingDefs>
         </filter>
         <count>2</count>
@@ -42,13 +2089,125 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>SteelBar</li>
+        <li>Plasteel</li>
         <li>Components</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <Ammo_6x24mm_Energy>100</Ammo_6x24mm_Energy>
+      <Ammo_6x24mmCharged>100</Ammo_6x24mmCharged>
     </products>
   </RecipeDef>
 
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_6x24mmCharged_AP</defName>
+    <label>make 6x24mm Charged (Conc.) cartridge x100</label>
+    <description>Craft 100 6x24mm Charged (Conc.) cartridges.</description>
+    <jobString>Making 6x24mm Charged (Conc.) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_6x24mmCharged_AP>100</Ammo_6x24mmCharged_AP>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef ParentName="AmmoRecipeBase">
+    <defName>MakeAmmo_6x24mmCharged_Ion</defName>
+    <label>make 6x24mm Charged (Ion) cartridge x100</label>
+    <description>Craft 100 6x24mm Charged (Ion) cartridges.</description>
+    <jobString>Making 6x24mm Charged (Ion) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Plasteel</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Components</li>
+          </thingDefs>
+        </filter>
+        <count>2</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Plasteel</li>
+        <li>Components</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_6x24mmCharged_Ion>100</Ammo_6x24mmCharged_Ion>
+    </products>
+  </RecipeDef>
+
+
+
+
+
+
+
+
+
+
+
+	<!-- MVP new ammo -->
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_6x24mm_Energy</defName>
+		<label>make 6x24mm energy cartridge x100</label>
+		<description>Craft 100 6x24mm energy cartridges.</description>
+		<jobString>Making 6x24mm energy cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SteelBar</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Electronics</li>
+					</thingDefs>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SteelBar</li>
+				<li>Electronics</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_6x24mm_Energy>100</Ammo_6x24mm_Energy>
+		</products>
+	</RecipeDef>
 </RecipeDefs>

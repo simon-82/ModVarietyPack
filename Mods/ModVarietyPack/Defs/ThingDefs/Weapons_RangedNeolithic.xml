@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ThingDefs>
 
+  <!-- todo need CR patch -->
+
   <ThingDef Name="BaseWeaponFishIndustry" Abstract="True">
     <category>Item</category>
     <thingClass>ThingWithComps</thingClass>
@@ -42,12 +44,6 @@
         <minQualityForArtistic>Excellent</minQualityForArtistic>
       </li>
     </comps>
-    <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <effectWorking>Smelt</effectWorking>
-      <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
-    </recipeMaker>
     <inspectorTabs>
       <li>ITab_Art</li>
     </inspectorTabs>
@@ -90,10 +86,6 @@
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_BeatFire</soundInteract>
-    <costList>
-      <WoodLog>80</WoodLog>
-      <Steel>20</Steel>
-    </costList>
     <statBases>
       <WorkToMake>1400</WorkToMake>
       <MarketValue>90</MarketValue>
@@ -116,14 +108,6 @@
         <soundCast>Interact_BeatFire</soundCast>
       </li>
     </verbs>
-    <recipeMaker>
-      <workSpeedStat>SmithingSpeed</workSpeedStat>
-      <workSkill>Crafting</workSkill>
-      <recipeUsers>
-        <li>TableWeapon</li>
-      </recipeUsers>
-      <effectWorking>Smelt</effectWorking>
-    </recipeMaker>
   </ThingDef>
 
 

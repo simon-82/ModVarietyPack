@@ -2,38 +2,6 @@
 <RecipeDefs>
  <!-- vanilla overrides -->
   <RecipeDef>
-    <defName>MakeArtilleryShell</defName>
-    <label>make artillery shell</label>
-    <description>Craft an artillery shell.</description>
-    <jobString>Making artillery shell.</jobString>
-    <workSpeedStat>SmithingSpeed</workSpeedStat>
-    <effectWorking>Cook</effectWorking>
-    <soundWorking>Recipe_Machining</soundWorking>
-    <allowMixingIngredients>true</allowMixingIngredients>
-    <workAmount>800</workAmount>
-    <targetCountAdjustment>5</targetCountAdjustment>
-    <ingredients>
-      <li>
-        <filter>
-          <thingDefs>
-            <li>SteelBar</li>
-          </thingDefs>
-        </filter>
-        <count>10</count>
-      </li>
-    </ingredients>
-    <fixedIngredientFilter>
-      <thingDefs>
-        <li>SteelBar</li>
-      </thingDefs>
-    </fixedIngredientFilter>
-    <products>
-      <ArtilleryShell>1</ArtilleryShell>
-    </products>
-    <workSkill>Crafting</workSkill>
-  </RecipeDef>
-
-  <RecipeDef>
     <defName>MakeComponent</defName>
     <label>make component</label>
     <description>Make a component.</description>

@@ -2362,6 +2362,15 @@
 		<researchPrerequisites><li>Devilstrand</li></researchPrerequisites>
 	</ThingDef>
 
+
+
+
+
+
+
+
+
+	<!-- weapon / ammo crafting -->
 	<ThingDef ParentName="MVPBenchBase">
 		<DefName>TableWeapon</DefName>
 		<label>Weapon Crafting Workbench</label>
@@ -2384,9 +2393,9 @@
 		<DesignationCategory>ProductionWeaponsArmor</DesignationCategory>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<recipes>
+			<!-- ALL vanilla melee+ranged neolithic CR modified + fishing rod, harpoon -->
 		     <li>MakeFishingRod</li>
-		     <li>MakeHarpoon</li>
-			<!-- ALL vanilla melee+ranged neolithic CR modified + fishing rod, harpoon via adv research -->
+		     <li>MakeHarpoon</li>			
 		</recipes>		
 		<comps>
 			<li Class="CompProperties_AffectedByFacilities">
@@ -2404,7 +2413,7 @@
 	<ThingDef ParentName="MVPBenchBase">
 		<DefName>TableWeaponCrafting</DefName>
 		<label>Weapon Crafting Table</label>
-		<Description>A table to produce weapon parts and guns. Needs Power: 50/500W.</Description>
+		<Description>A table to produce weapon parts, guns and grenades. Needs Power: 50/500W.</Description>
 		<graphicData>
 			<texPath>Buildings/TableWeapon2</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -2423,15 +2432,11 @@
 		<DesignationCategory>ProductionWeaponsArmor</DesignationCategory>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<recipes>
-			<!-- <li>MakeWeaponParts</li>
-			vanilla guns, no LMG and launchers 
-			<li>MakeGun_Pistol</li>
-			<li>MakeGun_PumpShotgun</li>
-			<li>MakeGun_SurvivalRifle</li>
-			<li>MakeGun_AssaultRifle</li>
-			<li>MakeGun_SniperRifle</li>
-			<li>MakeGun_PDW</li>
-			<li>MakeGun_HeavySMG</li>-->
+			<li>MakeWeaponParts</li>
+			<!--
+			grenades + shells from CR
+			vanilla guns, add LMG and launchers via research 
+			-->
 		</recipes>
 		<tickerType>Normal</tickerType>
 		<comps>
@@ -2476,7 +2481,10 @@
 		<DesignationCategory>ProductionWeaponsArmor</DesignationCategory>
 		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
 		<recipes>
-			<!--  <li>MakeRS_Gun_Trollbane</li>
+			<!--  vanilla charge rifle
+
+
+			<li>MakeRS_Gun_Trollbane</li>
 			<li>MakeRS_Gun_Fafnir</li>
 			<li>MakeRS_Gun_Beowulf</li>
 			<li>MakeRS_Gun_Notung</li>
@@ -2519,6 +2527,81 @@
 		</placeWorkers>
 		<researchPrerequisites><li>MultibarrelWeapons</li></researchPrerequisites>
 	</ThingDef>
+
+	<!-- CR ammo bench -->
+	<ThingDef ParentName="BenchBase">
+		<DefName>AmmoBench</DefName>
+		<label>loading bench</label>
+		<ThingClass>Building_WorkTable</ThingClass>
+		<Description>A workstation for handloading ammo.</Description>
+		<graphicData>
+			<texPath>Things/Building/AmmoBench/ammobench</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(3.5,1.5)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+		</graphicData>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+		</stuffCategories>
+		<costStuffCount>100</costStuffCount>
+		<CostList>
+			<Components>5</Components>
+		</CostList>
+		<AltitudeLayer>Waist</AltitudeLayer>
+		<fillPercent>0.5</fillPercent>
+		<useHitPoints>True</useHitPoints>
+		<statBases>
+			<WorkToMake>3000</WorkToMake>
+			<MaxHitPoints>180</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Cleanliness>-2</Cleanliness>
+		</statBases>
+		<Size>(3,1)</Size>
+		<DesignationCategory>ProductionWeaponsArmor</DesignationCategory>
+		<Passability>PassThroughOnly</Passability>
+		<pathCost>70</pathCost>
+		<hasInteractionCell>True</hasInteractionCell>
+		<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+		<surfaceType>Item</surfaceType>
+		<inspectorTabs>
+			<li>ITab_Bills</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_AffectedByFacilities">
+				<linkableFacilities>
+					<li>ToolCabinet</li>
+				</linkableFacilities>
+			</li>
+		</comps>
+		<building>
+			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+		</building>
+		<researchPrerequisites>
+			<li>Firefoam</li>
+		</researchPrerequisites>
+		<placeWorkers>
+			<li>PlaceWorker_ShowFacilitiesConnections</li>
+		</placeWorkers>
+	</ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<ThingDef ParentName="BuildingBase">
 		<DefName>Well</DefName>
@@ -2569,6 +2652,8 @@
 		</building>
 		<researchPrerequisites><li>Hydroponics</li></researchPrerequisites>
 	</ThingDef>
+
+	
 
 
 

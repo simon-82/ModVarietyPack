@@ -641,10 +641,8 @@
 	</RecipeDef>
 
 
-	<!-- === butcher fish === -->
-
-
-	<!-- need to change core recipe because of added thing category fish corpses!!! -->
+	<!-- butcher fish -->
+	<!-- need to change core recipe because of added thing category fish corpses -->
 	<RecipeDef>
 		<defName>ButcherCorpseFlesh</defName>
 		<label>butcher creature</label>
