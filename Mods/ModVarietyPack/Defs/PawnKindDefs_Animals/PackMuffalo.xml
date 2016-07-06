@@ -107,7 +107,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/PackMuffalo</texPath>
+          <texPath>Animals/PackMuffalo</texPath>
           <drawSize>2.25</drawSize>
           <shadowData>
             <volume>(0.6, 0.45, 0.45)</volume>
@@ -129,7 +129,7 @@
           </shadowData>
         </bodyGraphicData>
         <femaleGraphicData>
-          <texPath>Pawn/PackMuffalo</texPath>
+          <texPath>Animals/PackMuffalo</texPath>
           <drawSize>3</drawSize>
           <shadowData>
             <volume>(0.8, 0.6, 0.6)</volume>

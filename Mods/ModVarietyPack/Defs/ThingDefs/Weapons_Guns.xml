@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ThingDefs>
-  <!-- CR overrides -->
+  <!-- CR overrides, only vanilla guns -->
   <ThingDef Name="BaseGun" Abstract="True">
     <category>Item</category>
     <thingClass>ThingWithComps</thingClass>

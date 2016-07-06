@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ThingDefs>
+	<!-- 
+		not craftable, no new ammo, mech weapons destroy on drop
+		use ammo defined in RS CR patch 
+	-->
+	<ThingDef Name="BaseFedGun" Abstract="True">
+		<category>Item</category>
+		<thingClass>ThingWithComps</thingClass>
+		<equipmentType>Primary</equipmentType>
+		<pathCost>10</pathCost>
+		<useHitPoints>True</useHitPoints>
+		<selectable>True</selectable>
+		<graphicData>
+			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+		</graphicData>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+			<SellPriceFactor>0.5</SellPriceFactor>
+		</statBases>
+		<altitudeLayer>Item</altitudeLayer>
+		<alwaysHaulable>True</alwaysHaulable>
+		<tickerType>Never</tickerType>
+		<techLevel>Ultra</techLevel>
+		<thingCategories>
+			<li>WeaponsRanged</li>
+		</thingCategories>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Art">
+				<nameMaker>ArtName_WeaponGun</nameMaker>
+				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+				<minQualityForArtistic>Excellent</minQualityForArtistic>
+			</li>
+		</comps>
+		<smeltProducts>
+			<PlasteelBar>20</PlasteelBar>
+			<SteelBar>20</SteelBar>
+		</smeltProducts>
+	</ThingDef>
+
+
+
+
+	<!-- weapons mech -->
+	<ThingDef ParentName="BaseFedGun">
+		<defName>AD_PlasmaBombard</defName>
+		<label>plasma bombard</label>
+		<weaponTags>
+			<li>Federator</li>
+		</weaponTags>
+		<description>Designed to deliver spheres of superheated metal plsama to the target, "Leveler" plasma bombard is a mordernized variant of the ancient assault gun.</description>
+		<menuHidden>True</menuHidden>
+		<tradeability>Never</tradeability>
+		<graphicData>
+			<texPath>Things/A13/MechPlasma</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractADWeapons</soundInteract>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<AimEfficiency>0.50</AimEfficiency>
+			<ShotSpread>0.17</ShotSpread>
+			<SwayFactor>1.26</SwayFactor>
+			<Bulk>11.25</Bulk>
+			<Weight>4.20</Weight>
+			<RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+			<!-- 
+			<AccuracyTouch>0.7</AccuracyTouch>
+			<AccuracyShort>0.6</AccuracyShort>
+			<AccuracyMedium>0.5</AccuracyMedium>
+			<AccuracyLong>0.4</AccuracyLong>
+			<RangedWeapon_Cooldown>5</RangedWeapon_Cooldown> -->
+		</statBases>
+		<destroyOnDrop>True</destroyOnDrop>
+		<verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Bullet_Axiom</projectileDef>
+				<warmupTicks>200</warmupTicks>
+				<minRange>3</minRange>
+				<range>26</range>
+				<!-- was 25 -->
+				<burstShotCount>1</burstShotCount>
+				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+				<soundCast>RS_ShotHarmonizer</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>18</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>24</magazineSize>
+				<reloadTicks>300</reloadTicks>
+				<ammoSet>AmmoSet_EnergyCartridgePlasma</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiUseAimMode>TRUE</aiUseAimMode>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseFedGun">
+		<defName>AD_CrucibleCannon</defName>
+		<label>crucible cannon</label>
+		<weaponTags>
+			<li>Federator</li>
+		</weaponTags>
+		<description>Heavy crucible cannon.</description>
+		<menuHidden>True</menuHidden>
+		<tradeability>Never</tradeability>
+		<graphicData>
+			<texPath>Things/A13/MechPlasma</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractADWeapons</soundInteract>
+		<destroyOnDrop>True</destroyOnDrop>
+		<techLevel>Spacer</techLevel>
+		<statBases>
+			<MarketValue>2000</MarketValue>
+			<AimEfficiency>0.50</AimEfficiency>
+			<ShotSpread>0.08</ShotSpread>
+			<SwayFactor>1.42</SwayFactor>
+			<Bulk>9.50</Bulk>
+			<Weight>4.00</Weight>
+			<RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+			<!-- <AccuracyTouch>0.9</AccuracyTouch>
+			     <AccuracyShort>0.8</AccuracyShort>
+			     <AccuracyMedium>0.7</AccuracyMedium>
+			     <AccuracyLong>0.6</AccuracyLong>
+			     <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown> -->
+		</statBases>
+		<verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Regular</recoilPattern>
+				<recoilAmount>0.96</recoilAmount>
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Bullet_Optic</projectileDef>
+				<warmupTicks>160</warmupTicks>
+				<range>65</range>
+				<burstShotCount>10</burstShotCount>
+				<ticksBetweenBurstShots>28</ticksBetweenBurstShots>
+				<soundCast>RS_ShotCR</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>12</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>60</magazineSize>
+				<reloadTicks>300</reloadTicks>
+				<ammoSet>AmmoSet_EnergyCartridge</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aimedBurstShotCount>5</aimedBurstShotCount>
+				<aiUseBurstMode>TRUE</aiUseBurstMode>
+				<aiUseAimMode>TRUE</aiUseAimMode>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+
+
+
+
+
+	<!-- weapons aux -->
+	<ThingDef ParentName="BaseFedGun">
+    <defName>AD_Sentinel</defName>
+    <label>plasma rifle</label>
+    <weaponTags>
+       <li>Sentinel</li>
+    </weaponTags>
+    <description>Rare and gruesome weapon even in the Federation standards, "Sentinel" is a personal portable plasma weapon. It fires small bursts of magnetic cells that contain metal plasma.</description>
+    <menuHidden>True</menuHidden>
+    <tradeability>Never</tradeability>
+    <graphicData>
+      <texPath>Things/A13/Sentinel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractADWeapons</soundInteract>
+    <equippedStatOffsets>
+      <MoveSpeed>-0.1</MoveSpeed>
+    </equippedStatOffsets>
+    <statBases>
+     <MarketValue>2000</MarketValue>     
+			<AimEfficiency>0.50</AimEfficiency>
+			<ShotSpread>0.17</ShotSpread>
+			<SwayFactor>1.26</SwayFactor>
+			<Bulk>11.25</Bulk>
+			<Weight>4.20</Weight>
+			<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+      <!-- <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.74</AccuracyShort>
+      <AccuracyMedium>0.87</AccuracyMedium>
+      <AccuracyLong>0.9</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown> -->
+    </statBases>
+    <verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Bullet_Axiom</projectileDef>
+				<warmupTicks>125</warmupTicks>
+				<minRange>3</minRange>
+				<range>40</range>
+				<!-- was 25 -->
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<soundCast>RS_ShotHarmonizer</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>12</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>10</magazineSize>
+				<reloadTicks>300</reloadTicks>
+				<ammoSet>AmmoSet_EnergyCartridgePlasma</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiUseAimMode>TRUE</aiUseAimMode>
+			</li>
+		</comps>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseFedGun">
+		<defName>AD_AuxPistol</defName>
+		<label>auxiliary pistol</label>
+		<weaponTags>
+			<li>AuxPistol</li>
+		</weaponTags>
+		<description>A crude, mass produced version of more delicate Negotiator pistol.</description>
+		<graphicData>
+			<texPath>Things/A13/AuxPistol</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractADWeapons</soundInteract>
+		<menuHidden>True</menuHidden>
+		<statBases>
+			<MarketValue>450</MarketValue>
+			<AimEfficiency>0.35</AimEfficiency>
+			<ShotSpread>0.16</ShotSpread>
+			<SwayFactor>1.55</SwayFactor>
+			<RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
+			<Bulk>2.10</Bulk>
+			<Weight>1.00</Weight>
+			<!-- <AccuracyTouch>0.7</AccuracyTouch>
+			     <AccuracyShort>0.5</AccuracyShort>
+			     <AccuracyMedium>0.3</AccuracyMedium>
+			     <AccuracyLong>0.2</AccuracyLong>
+			     <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown> -->
+		</statBases>
+		<verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Bullet_Optic</projectileDef>
+				<warmupTicks>105</warmupTicks>
+				<range>18</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>45</ticksBetweenBurstShots>
+				<soundCast>RS_ShotCP</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>10</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>10</magazineSize>
+				<reloadTicks>220</reloadTicks>
+				<ammoSet>AmmoSet_EnergyCartridge</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiUseAimMode>FALSE</aiUseAimMode>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+
+
+
+  <!-- plasma bomb grenade base -->
+  <ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>Bullet_PBomb</defName>
+		<label>plasma bomb</label>
+		<graphicData>
+			<texPath>Things/A13/MechPlasma</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<thingClass>Combat_Realism.ProjectileCR_Explosive</thingClass>
+		<projectile>
+			<damageDef>Plasma</damageDef>
+			<explosionRadius>5</explosionRadius>
+			<damageAmountBase>100</damageAmountBase>
+			<explosionDelay>20</explosionDelay>
+		</projectile>
+	</ThingDef>
+
+  <ThingDef ParentName="BaseEquipment">
+    <defName>AD_PBomb</defName>
+    <label>plasma bomb</label>
+    <weaponTags>
+       <li>FedBomb</li>
+    </weaponTags>
+    <description>A portable plasma reactor converted to suicide bombing.</description>
+    <menuHidden>True</menuHidden>
+    <tradeability>Never</tradeability>
+    <graphicData>
+      <texPath>Things/A13/PBomb</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractADWeapons</soundInteract>
+    <destroyOnDrop>True</destroyOnDrop>
+    <techLevel>Spacer</techLevel>
+    <statBases>
+     <MarketValue>400</MarketValue>
+     <AimEfficiency>0.15</AimEfficiency>
+			<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <!--  <AccuracyTouch>0.65</AccuracyTouch>
+      <AccuracyShort>0.74</AccuracyShort>
+      <AccuracyMedium>0.87</AccuracyMedium>
+      <AccuracyLong>0.9</AccuracyLong>
+      <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown> -->
+    </statBases>
+    <verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<label>throw plasma grenade</label>
+				<verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>3</range>
+				<warmupTicks>425</warmupTicks>
+				<noiseRadius>8</noiseRadius>
+				<burstShotCount>1</burstShotCount>
+				<ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+				<soundCast>RS_ShotCR</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<projectileDef>Bullet_PBomb</projectileDef>
+				<onlyManualCast>true</onlyManualCast>
+			</li>
+		</verbs>
+  </ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+</ThingDefs>

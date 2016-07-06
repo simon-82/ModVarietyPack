@@ -25,7 +25,7 @@
 		<!-- add fishing -->
 		<recipes>
 		     <li>MakeFishingRod</li>
-		     <li>MakeHarpoon</li>
+		     <!--  <li>MakeHarpoon</li> -->
 		</recipes>
 		<inspectorTabs>
 			<li>ITab_Bills</li>
@@ -2395,7 +2395,7 @@
 		<recipes>
 			<!-- ALL vanilla melee+ranged neolithic CR modified + fishing rod, harpoon -->
 		     <li>MakeFishingRod</li>
-		     <li>MakeHarpoon</li>			
+		     <!--  <li>MakeHarpoon</li> -->			
 		</recipes>		
 		<comps>
 			<li Class="CompProperties_AffectedByFacilities">

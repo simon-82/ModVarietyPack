@@ -63,8 +63,8 @@
 	<!-- MVP Building_SmallSolar (overrides vanilla) -->
 	<ThingDef ParentName="BuildingBase">
 		<defName>SolarGenerator</defName>
-		<label>solar Panel</label>
-		<thingClass>Building_MVP_SmallSolar</thingClass>
+		<label>solar Panel MkI</label>
+		<thingClass>Building_MVP_SolarPanelMkI</thingClass>
 		<graphicData>
 			<texPath>Buildings/SolarPanel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -83,13 +83,14 @@
 		<tickerType>Normal</tickerType>
 		<description>Produces electricity from sunlight. Does not work in the dark. Output: 700W</description>
 		<size>(2,2)</size>
+		<rotatable>false</rotatable>
 		<building>
 			<ignoreNeedsPower>true</ignoreNeedsPower>
 		</building>
 		<costList>
 			<SteelBar>20</SteelBar>
 			<AluBar>10</AluBar>
-			<Glass>80</Glass>
+			<Glass>60</Glass>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -791,6 +792,55 @@
 
 
 	<!-- Natural -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>SolarGeneratorMKII</defName>
+		<label>solar Panel MkII</label>
+		<thingClass>Building_MVP_SolarPanelMkII</thingClass>
+		<graphicData>
+			<texPath>Buildings/SolarPanelMkII</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.5</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToMake>2500</WorkToMake>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<description>Produces electricity from sunlight. Does not work in the dark. Output: 1000W</description>
+		<size>(2,2)</size>
+		<!-- <rotatable>false</rotatable> -->
+		<building>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+		</building>
+		<costList>
+			<SteelBar>40</SteelBar>
+			<AluBar>20</AluBar>
+			<Glass>120</Glass>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>-1</basePowerConsumption>
+				<transmitsPower>true</transmitsPower>
+			</li>
+			<li Class="CompProperties_Breakdownable"/>
+		</comps>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<designationCategory>Power</designationCategory>
+		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites><li>PowerII</li></researchPrerequisites>
+	</ThingDef>
+
+
+
+
 	<ThingDef ParentName="BuildingBase">
 		<defName>GauseWindTurbine</defName>
 		<thingClass>MVP.GauseWindTurbine</thingClass>

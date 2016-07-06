@@ -601,6 +601,7 @@
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
 
+	<!--  
 	<RecipeDef>
 		<defName>MakeHarpoon</defName>
 		<label>Make harpoon</label>
@@ -639,6 +640,7 @@
 		</products>
 		<workSkill>Crafting</workSkill>
 	</RecipeDef>
+	-->
 
 
 	<!-- butcher fish -->

@@ -487,7 +487,7 @@
 		<ResearchProjectDef>
 			<defName>CarpetMaking</defName>
 			<label>textile II</label>
-			<description>"Hyperweave: High-tech nano-fibers woven into sheets. It is somewhat heavy, but is incredibly difficult to break. Devilstrand: Fabric spun from microfibers extracted from silk-producing Devilstrand mushrooms. Very tough, but insulates no better than cloth." \n"Ok Sherlock, everybody knows that..." \n"Why Don't we just make some nice carpets first? My feet are getting cold."</description>
+			<description>"Hyperweave: High-tech nano-fibers woven into sheets. It is somewhat heavy, but is incredibly difficult to break. Devilstrand: Fabric spun from microfibers extracted from silk-producing Devilstrand mushrooms. Very tough, but insulates no better than cloth." \n"Ok Sherlock, everybody knows that... \nWhy Don't we just make some nice carpets first? My feet are getting cold."</description>
 			<totalCost>1700</totalCost>
 			<prerequisites>
 				<li>Devilstrand</li>
@@ -730,7 +730,7 @@
 		<defName>Firefoam</defName>
 		<label>Security I</label>
 		<description>"I would give you this bow so you can help defending the colony. But not before you get some practice at the shooting range first." \n"Really? Just because I shot myself in the foot last time the tribals came?"</description>
-		<totalCost>500</totalCost>
+		<totalCost>400</totalCost>
 	</ResearchProjectDef>				
 
 	  	<ResearchProjectDef>
