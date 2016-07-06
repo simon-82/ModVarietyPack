@@ -68,7 +68,7 @@
 		<fillPercent>0.20</fillPercent>
 		<costList>
 			<SteelBar>5</SteelBar>
-			<Glass>10</Glass>			
+			<Glass>10</Glass>
 		</costList>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
@@ -109,7 +109,7 @@
 		<description>Standing lamp that lights an area.</description>
 		<designationHotKey>L</designationHotKey>
 		<graphicData>
-			<texPath>Buildings/Lights/Lamps_Yellow</texPath>			
+			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
 		</graphicData>
 		<comps>
 			<li Class="CompProperties_Glower">
@@ -133,7 +133,7 @@
 		<label>standing lamp (red)</label>
 		<designationHotKey>O</designationHotKey>
 		<graphicData>
-			<texPath>Buildings/Lights/Lamps_Yellow</texPath>			
+			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
 		</graphicData>
 		<description>Standing lamp that lights an area in red.</description>
 		<comps>
@@ -152,7 +152,7 @@
 		<description>Standing lamp that lights an area in green.</description>
 		<designationHotKey>K</designationHotKey>
 		<graphicData>
-			<texPath>Buildings/Lights/Lamps_Yellow</texPath>			
+			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
 		</graphicData>
 		<comps>
 			<li Class="CompProperties_Glower">
@@ -170,7 +170,7 @@
 		<description>Standing lamp that lights an area in blue.</description>
 		<designationHotKey>M</designationHotKey>
 		<graphicData>
-			<texPath>Buildings/Lights/Lamps_Yellow</texPath>			
+			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
 		</graphicData>
 		<comps>
 			<li Class="CompProperties_Glower">
@@ -189,7 +189,7 @@
 
 
 
-	
+
 
 
 	<!-- new lights -->
@@ -276,7 +276,7 @@
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<selectable>true</selectable>
-		<rotatable>true</rotatable>		
+		<rotatable>true</rotatable>
 		<size>(1,1)</size>
 		<statBases>
 			<MaxHitPoints>100</MaxHitPoints>
@@ -286,11 +286,11 @@
 		</statBases>
 		<building>
 			<isEdifice>false</isEdifice>
-		</building>		
+		</building>
 		<costList>
 			<SteelBar>10</SteelBar>
 			<Glass>3</Glass>
-		</costList>		
+		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -317,7 +317,7 @@
 			<li>CommunityCoreLibrary.PlaceWorker_WallAttachment</li>
 		</placeWorkers>
 		<tickerType>Rare</tickerType>
-		<designationCategory>Lighting</designationCategory>		
+		<designationCategory>Lighting</designationCategory>
 		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
 	</ThingDef>
 
@@ -336,7 +336,7 @@
 				<volume>(0.3, 0.3, 0.1)</volume>
 				<offset>(0,0,-0.1)</offset>
 			</shadowData>
-		</graphicData>		
+		</graphicData>
 		<altitudeLayer>Floor</altitudeLayer>
 		<passability>Standable</passability>
 		<statBases>
@@ -689,7 +689,7 @@
     <size>(1,1)</size>
     <costList>
       <AluBar>10</AluBar>
-      <Glass>3</Glass>      
+      <Glass>3</Glass>
     </costList>
     <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
     <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
@@ -892,8 +892,8 @@
 		<Size>(1,2)</Size>
 		<stuffCategories>
 			<li>Leathery</li>
-		</stuffCategories>  
-		<costStuffCount>10</costStuffCount>   
+		</stuffCategories>
+		<costStuffCount>10</costStuffCount>
 		<costList>
 			<WoodPlank>30</WoodPlank>
 		</costList>
@@ -949,8 +949,8 @@
 		<Size>(2,2)</Size>
 		<stuffCategories>
 			<li>Leathery</li>
-		</stuffCategories>  
-		<costStuffCount>20</costStuffCount>   
+		</stuffCategories>
+		<costStuffCount>20</costStuffCount>
 		<costList>
 			<WoodPlank>55</WoodPlank>
 		</costList>
@@ -1008,8 +1008,8 @@
 		<Size>(2,2)</Size>
 		<stuffCategories>
 			<li>Leathery</li>
-		</stuffCategories>  
-		<costStuffCount>20</costStuffCount>   
+		</stuffCategories>
+		<costStuffCount>20</costStuffCount>
 		<costList>
 			<WoodPlank>55</WoodPlank>
 			<Gold>50</Gold>
@@ -1551,7 +1551,7 @@
 		<rotatable>false</rotatable>
 		<placingDraggableDimensions>2</placingDraggableDimensions>
 		<researchPrerequisites><li>Stonecutting</li></researchPrerequisites>
-	</ThingDef> 
+	</ThingDef>
 
 	<ThingDef ParentName="FurnitureBase" Class="Clutter_Furniture.ClutterThingDefsFurniture">
 		<defName>ClutterSmallTableModern</defName>
@@ -2048,7 +2048,7 @@
 		<Size>(1,1)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>SquirrelRug</defName>
 		<Label>Squirrel Rug</Label>
@@ -2068,7 +2068,7 @@
 		<Size>(1,2)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>HumanRug</defName>
 		<Label>Human Rug</Label>
@@ -2088,7 +2088,7 @@
 		<Size>(2,2)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>DeerRug</defName>
 		<Label>Deer Rug</Label>
@@ -2108,7 +2108,7 @@
 		<Size>(2,2)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>IguanaRug</defName>
 		<Label>Iguana Rug</Label>
@@ -2128,7 +2128,7 @@
 		<Size>(1,2)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>MegascarabRug</defName>
 		<Label>Megascarab Rug</Label>
@@ -2148,7 +2148,7 @@
 		<Size>(1,1)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>RhinocerosRug</defName>
 		<Label>Rhinoceros Rug</Label>
@@ -2168,7 +2168,7 @@
 		<Size>(3,3)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>DromedaryRug</defName>
 		<Label>Dromedary Rug</Label>
@@ -2188,7 +2188,7 @@
 		<Size>(3,3)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>TortoiseRug</defName>
 		<Label>Tortoise Rug</Label>
@@ -2208,7 +2208,7 @@
 		<Size>(1,1)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>CobraRug</defName>
 		<Label>Cobra Rug</Label>
@@ -2228,7 +2228,7 @@
 		<Size>(1,2)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>MonkeyRug</defName>
 		<Label>Monkey Rug</Label>
@@ -2248,7 +2248,7 @@
 		<Size>(1,1)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>WildBoarRug</defName>
 		<Label>Boar Rug</Label>
@@ -2268,7 +2268,7 @@
 		<Size>(1,1)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>AlphaBeaverRug</defName>
 		<Label>Beaver Rug</Label>
@@ -2288,7 +2288,7 @@
 		<Size>(1,1)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>ElkRug</defName>
 		<Label>Elk Rug</Label>
@@ -2308,7 +2308,7 @@
 		<Size>(2,2)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>HareRug</defName>
 		<Label>Hare Rug</Label>
@@ -2328,7 +2328,7 @@
 		<Size>(1,1)</Size>
 		<Passability>Standable</Passability>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="RugBase">
 		<defName>WargRug</defName>
 		<Label>Warg Rug</Label>
@@ -2355,8 +2355,8 @@
 
 
 
-	
-	<!-- Stuffed Animals -->	
+
+	<!-- Stuffed Animals -->
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedMuffalo</defName>
 		<label>stuffed Muffalo</label>
@@ -2372,7 +2372,7 @@
 		</statBases>
 		<size>(2,2)</size>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedBeaver</defName>
 		<label>stuffed Beaver</label>
@@ -2386,7 +2386,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedBoomrat</defName>
 		<label>stuffed Boomrat</label>
@@ -2400,7 +2400,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedCobra</defName>
 		<label>stuffed Cobra</label>
@@ -2414,7 +2414,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedDeer</defName>
 		<label>stuffed Deer</label>
@@ -2428,7 +2428,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedDromedary</defName>
 		<label>stuffed Dromedary</label>
@@ -2444,7 +2444,7 @@
 		</statBases>
 		<size>(2,2)</size>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedElk</defName>
 		<label>stuffed Elk</label>
@@ -2458,7 +2458,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedHare</defName>
 		<label>stuffed Hare</label>
@@ -2472,7 +2472,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedIguana</defName>
 		<label>stuffed Iguana</label>
@@ -2486,7 +2486,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedMegascarab</defName>
 		<label>stuffed Megascarab</label>
@@ -2500,7 +2500,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedMonkey</defName>
 		<label>stuffed Monkey</label>
@@ -2514,7 +2514,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedRhino</defName>
 		<label>stuffed Rhino</label>
@@ -2530,7 +2530,7 @@
 		</statBases>
 		<size>(2,2)</size>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedSquirrel</defName>
 		<label>stuffed Squirrel</label>
@@ -2544,7 +2544,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedTortoise</defName>
 		<label>stuffed Tortoise</label>
@@ -2558,7 +2558,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedWildBoar</defName>
 		<label>stuffed Boar</label>
@@ -2572,7 +2572,7 @@
 			<Beauty>100</Beauty>
 		</statBases>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedWarg</defName>
 		<label>stuffed Warg</label>
@@ -2673,14 +2673,18 @@
 		</killedLeavings>
 		<filthLeaving>BuildingRubble</filthLeaving>
 		<building>
-			<fixedStorageSettings>
-				<priority>Important</priority>
-				<filter>
-					<categories>
-						<li>Root</li>
-					</categories>
-				</filter>
-			</fixedStorageSettings>
+		  <defaultStorageSettings>
+			<priority>Important</priority>
+			<filter>
+			  <categories>
+				<li>Resources</li>
+				<li>Items</li>
+				<li>Weapons</li>
+				<li>Apparel</li>
+				<li>BodyPartsAndImplants</li>
+			  </categories>
+			</filter>
+		</defaultStorageSettings>
 		</building>
 		<inspectorTabs>
 			<li>ITab_Storage</li>
@@ -3302,5 +3306,5 @@
 	</ThingDef>
 
 
-	
+
 </Buildings>
