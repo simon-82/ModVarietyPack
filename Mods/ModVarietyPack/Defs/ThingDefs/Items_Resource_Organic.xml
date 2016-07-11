@@ -575,7 +575,7 @@
 		<label>shimmershroom</label>
 		<description>Raw shimmershroom. Its delicate taste and nutrition qualities are much appreciated by caveworlds inhabitants.</description>
 		<graphicData>
-			<texPath>Items/Mushrooms/RawShimmershroom</texPath>
+			<texPath>Items/mushrooms/RawShimmershroom</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -598,7 +598,7 @@
 		<label>glowbulb</label>
 		<description>Raw glowbulb. While being nutritious, its very rough taste make it better used as a cooked ingredient.</description>
 		<graphicData>
-			<texPath>Items/Mushrooms/RawGlowbulb</texPath>
+			<texPath>Items/mushrooms/RawGlowbulb</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -621,7 +621,7 @@
 		<description>A massive gleamcap stem. Known for its natural healing properties by caveworld tenders, it can be used to treat injuries and ease the pain.</description>
 		<thingClass>Medicine</thingClass>
 		<graphicData>
-			<texPath>Items/Mushrooms/GleamcapStem</texPath>
+			<texPath>Items/mushrooms/GleamcapStem</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Standard_Drop</soundInteract>

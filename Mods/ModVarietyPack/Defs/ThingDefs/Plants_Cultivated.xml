@@ -416,7 +416,7 @@
 		<label>apple tree</label>
 		<description>A fruit bearing tree that grows apples and is not destroyed when picked. Needs enriched soil to grow.</description>
 		<graphicData>
-			<texPath>Plant/AppleTree</texPath>
+			<texPath>Plant/appleTree</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -448,7 +448,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/BambooPlant</texPath>
+			<texPath>Plant/bambooPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -484,7 +484,7 @@
 		<label>banana tree</label>
 		<description>A fruit bearing tree that grows banana and is not destroyed when picked. Needs enriched soil to grow.</description>
 		<graphicData>
-			<texPath>Plant/BananaTree</texPath>
+			<texPath>Plant/bananaTree</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
@@ -516,7 +516,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/BeanPlant</texPath>
+			<texPath>Plant/beanPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -556,7 +556,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/BlueberryPlant</texPath>
+			<texPath>Plant/blueberryPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -634,7 +634,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/CloudberryPlant</texPath>
+			<texPath>Plant/cloudberryPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -673,7 +673,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/CocoaPlant</texPath>
+			<texPath>Plant/cocoaPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -902,7 +902,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/EggplantPlant</texPath>
+			<texPath>Plant/eggplantPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -970,7 +970,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/GooseberryPlant</texPath>
+			<texPath>Plant/gooseberryPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -1009,7 +1009,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/GrapePlant</texPath>
+			<texPath>Plant/grapePlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.3, 0.3, 0.3)</volume>
@@ -1182,7 +1182,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/MushroomPlant</texPath>
+			<texPath>Plant/mushroomPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -1222,7 +1222,7 @@
 			<Beauty>2</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/WheatPlant</texPath>
+			<texPath>Plant/wheatPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -1302,7 +1302,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/OnionPlant</texPath>
+			<texPath>Plant/onionPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -1338,7 +1338,7 @@
 		<label>orange tree</label>
 		<description>A fruit bearing tree that grows oranges and is not destroyed when picked. Needs enriched soil to grow.</description>
 		<graphicData>
-			<texPath>Plant/OrangeTree</texPath>
+			<texPath>Plant/orangeTree</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.3, 0.3, 0.3)</volume>
@@ -1389,7 +1389,7 @@
 		<label>peach tree</label>
 		<description>A fruit bearing tree that grows peaches and is not destroyed when picked. Needs enriched soil to grow.</description>
 		<graphicData>
-			<texPath>Plant/PeachTree</texPath>
+			<texPath>Plant/peachTree</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.3, 0.3, 0.3)</volume>
@@ -1440,7 +1440,7 @@
 		<label>pineapple plant</label>
 		<description>Think skin fruit that grows on top of a bush. The fruits are very nutritious but the plant needs more space to grow. Needs at least watered soil to grow.</description>
 		<graphicData>
-			<texPath>Plant/PineapplePlant</texPath>
+			<texPath>Plant/pineapplePlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
 				<volume>(0.3, 0.3, 0.3)</volume>
@@ -1539,7 +1539,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/PumpkinPlant</texPath>
+			<texPath>Plant/pumpkinPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -1666,7 +1666,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/SquashPlant</texPath>
+			<texPath>Plant/squashPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -1746,7 +1746,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/SugarcanePlant</texPath>
+			<texPath>Plant/sugarcanePlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -1786,7 +1786,7 @@
 			<Beauty>2</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/TeaPlant</texPath>
+			<texPath>Plant/teaPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -1906,7 +1906,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/WatermelonPlant</texPath>
+			<texPath>Plant/watermelonPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
@@ -1946,7 +1946,7 @@
 			<Beauty>1</Beauty>
 		</statBases>
 		<graphicData>
-			<texPath>Plant/WheatPlant</texPath>
+			<texPath>Plant/wheatPlant</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>

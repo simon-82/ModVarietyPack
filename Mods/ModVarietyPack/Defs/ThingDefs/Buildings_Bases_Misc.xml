@@ -962,7 +962,7 @@
 		<drawerType>MapMeshAndRealTime</drawerType>
 		<terrainAffordanceNeeded>Any</terrainAffordanceNeeded>
 		<graphicData>
-			<texPath>Items/Mushrooms/DummyTexture</texPath>
+			<texPath>Items/mushrooms/DummyTexture</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<AltitudeLayer>Floor</AltitudeLayer>
