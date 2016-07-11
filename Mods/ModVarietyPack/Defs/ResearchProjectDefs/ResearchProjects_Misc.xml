@@ -746,7 +746,7 @@
 			<ResearchProjectDef>
 				<defName>TurretM2Browning</defName>
 				<label>Turret: M2 Browning</label>
-				<description>"This turret we can build right now is rather improvised. With the weapon parts we have now, we can make a much better one."</description>
+				<description>"This turret we can build right now is rather improvised. Using the weapon parts, we can make a much better one."</description>
 				<totalCost>1200</totalCost>
 				<prerequisites>
 					<li>WeaponCraftingI</li>
