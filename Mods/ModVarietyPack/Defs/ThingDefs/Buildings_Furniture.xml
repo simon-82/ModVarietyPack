@@ -45,7 +45,7 @@
 				<startElectricalFires>true</startElectricalFires>
 				<basePowerConsumption>1600</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 		</comps>
 		<!-- Determined by trial and error
 			 This value isn't perfect because these radii use different algorithms
@@ -54,7 +54,9 @@
 		<designationCategory>Lighting</designationCategory>
 		<rotatable>false</rotatable>
 		<designationHotKey>U</designationHotKey>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<!-- vanilla lamps -->
@@ -91,7 +93,7 @@
 				<basePowerConsumption>150</basePowerConsumption>
 				<shortCircuitInRain>false</shortCircuitInRain>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
@@ -103,7 +105,7 @@
 		</statBases>
 	</ThingDef>
 
-	<ThingDef ParentName="StandingLampBase" >
+	<ThingDef ParentName="StandingLampBase">
 		<defName>StandingLamp</defName>
 		<label>standing lamp</label>
 		<description>Standing lamp that lights an area.</description>
@@ -124,7 +126,9 @@
 				<hideGizmos>false</hideGizmos>
 			</li>
 		</comps>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<!-- vanilla colored lights diabled with CommunityCoreLibraryResearchLocker -->
@@ -187,11 +191,6 @@
 
 
 
-
-
-
-
-
 	<!-- new lights -->
 	<ThingDef ParentName="BuildingBase">
 		<defName>CeilingLamp</defName>
@@ -238,7 +237,7 @@
 				<basePowerConsumption>150</basePowerConsumption>
 				<shortCircuitInRain>false</shortCircuitInRain>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
@@ -256,7 +255,9 @@
 		</comps>
 		<designationCategory>Lighting</designationCategory>
 		<rotatable>false</rotatable>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -297,7 +298,7 @@
 				<basePowerConsumption>100</basePowerConsumption>
 				<shortCircuitInRain>false</shortCircuitInRain>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
@@ -318,7 +319,9 @@
 		</placeWorkers>
 		<tickerType>Rare</tickerType>
 		<designationCategory>Lighting</designationCategory>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<!--Floor Lights -->
@@ -361,7 +364,7 @@
 				<basePowerConsumption>100</basePowerConsumption>
 				<shortCircuitInRain>false</shortCircuitInRain>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
@@ -377,7 +380,9 @@
 				<hideGizmos>false</hideGizmos>
 			</li>
 		</comps>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<!-- STRIPE -->
@@ -418,7 +423,7 @@
 				<basePowerConsumption>60</basePowerConsumption>
 				<shortCircuitInRain>false</shortCircuitInRain>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
@@ -434,7 +439,9 @@
 				<hideGizmos>false</hideGizmos>
 			</li>
 		</comps>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<!-- SMALL STRIPE -->
@@ -475,7 +482,7 @@
 				<basePowerConsumption>40</basePowerConsumption>
 				<shortCircuitInRain>false</shortCircuitInRain>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li>
 				<compClass>CompQuality</compClass>
 			</li>
@@ -491,7 +498,9 @@
 				<hideGizmos>false</hideGizmos>
 			</li>
 		</comps>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<!-- Outdoor Lights -->
@@ -532,7 +541,7 @@
 				<basePowerConsumption>150</basePowerConsumption>
 				<shortCircuitInRain>false</shortCircuitInRain>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li Class="CompProperties_Glower">
 				<glowRadius>24</glowRadius>
 				<glowColor>(217,217,208,0)</glowColor>
@@ -547,7 +556,9 @@
 		</comps>
 		<designationCategory>Lighting</designationCategory>
 		<rotatable>True</rotatable>
-		<researchPrerequisites><li>OutdoorLighting</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>OutdoorLighting</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -587,7 +598,7 @@
 				<basePowerConsumption>250</basePowerConsumption>
 				<shortCircuitInRain>false</shortCircuitInRain>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li Class="CompProperties_Glower">
 				<glowRadius>40</glowRadius>
 				<glowColor>(217,217,208,0)</glowColor>
@@ -602,7 +613,9 @@
 		</comps>
 		<designationCategory>Lighting</designationCategory>
 		<rotatable>false</rotatable>
-		<researchPrerequisites><li>OutdoorLighting</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>OutdoorLighting</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -645,7 +658,7 @@
 				<basePowerConsumption>75</basePowerConsumption>
 				<shortCircuitInRain>false</shortCircuitInRain>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li Class="CompProperties_Glower">
 				<glowRadius>8</glowRadius>
 				<glowColor>(250,250,175,0)</glowColor>
@@ -664,53 +677,53 @@
 		<tickerType>Rare</tickerType>
 		<designationCategory>Lighting</designationCategory>
 		<rotatable>True</rotatable>
-		<researchPrerequisites><li>OutdoorLighting</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>OutdoorLighting</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
-    <defName>Lighting_PathLamp</defName>
-    <label>Path light</label>
-    <thingClass>AdditionalLighting.Building_PathLamp</thingClass>
-    <category>Building</category>
-    <graphicData>
-      <texPath>Buildings/Lights/LampPath</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <altitudeLayer>BuildingTall</altitudeLayer>
-    <passability>PassThroughOnly</passability>
-    <statBases>
-      <MaxHitPoints>10</MaxHitPoints>
-      <WorkToMake>50</WorkToMake>
-      <Flammability>1.0</Flammability>
-      <Beauty>5</Beauty>
-    </statBases>
-    <selectable>true</selectable>
-    <description>Small light with built in solar panel that lights an area.</description>
-    <size>(1,1)</size>
-    <costList>
-      <AluBar>10</AluBar>
-      <Glass>3</Glass>
-    </costList>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <comps>
-      <li Class="CompProperties_Glower">
-        <glowRadius>5</glowRadius>
-        <glowColor>(217,217,208,0)</glowColor>
-      </li>
-    </comps>
-    <designationCategory>Lighting</designationCategory>
-    <rotatable>false</rotatable>
-    <placeWorkers>
-      <li>PlaceWorker_NotUnderRoof</li>
-    </placeWorkers>
-    <tickerType>Rare</tickerType>
-    <researchPrerequisites><li>OutdoorLighting</li></researchPrerequisites>
-  </ThingDef>
-
-
-
-
+		<defName>Lighting_PathLamp</defName>
+		<label>Path light</label>
+		<thingClass>AdditionalLighting.Building_PathLamp</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Buildings/Lights/LampPath</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<altitudeLayer>BuildingTall</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<statBases>
+			<MaxHitPoints>10</MaxHitPoints>
+			<WorkToMake>50</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>5</Beauty>
+		</statBases>
+		<selectable>true</selectable>
+		<description>Small light with built in solar panel that lights an area.</description>
+		<size>(1,1)</size>
+		<costList>
+			<AluBar>10</AluBar>
+			<Glass>3</Glass>
+		</costList>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>5</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+		</comps>
+		<designationCategory>Lighting</designationCategory>
+		<rotatable>false</rotatable>
+		<placeWorkers>
+			<li>PlaceWorker_NotUnderRoof</li>
+		</placeWorkers>
+		<tickerType>Rare</tickerType>
+		<researchPrerequisites>
+			<li>OutdoorLighting</li>
+		</researchPrerequisites>
+	</ThingDef>
 
 
 
@@ -770,7 +783,9 @@
 				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
 			</li>
 		</comps>
-		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="FurnitureBase">
@@ -823,10 +838,10 @@
 				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
 			</li>
 		</comps>
-		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
 	</ThingDef>
-
-
 
 
 
@@ -1039,7 +1054,9 @@
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
-		<researchPrerequisites><li>TubeTelevision</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>TubeTelevision</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="FurnitureBase">
@@ -1159,7 +1176,9 @@
 		<PrisonerBedTexture>Buildings/Beds/SlabBedPrisoner</PrisonerBedTexture>
 		<MedicalBedTexture>Buildings/Beds/SlabBedMedical</MedicalBedTexture>
 		<MedicalPrisonerBedTexture>Buildings/Beds/SlabBedPrisonerMedical</MedicalPrisonerBedTexture>
-		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef Class="Clutter_Furniture.ClutterThingDefsFurniture" ParentName="FurnitureBase">
@@ -1219,11 +1238,10 @@
 		<PrisonerBedTexture>Buildings/Beds/MBedPrisoner</PrisonerBedTexture>
 		<MedicalBedTexture>Buildings/Beds/MBedMedical</MedicalBedTexture>
 		<MedicalPrisonerBedTexture>Buildings/Beds/MBedPrisonerMedical</MedicalPrisonerBedTexture>
-		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
 	</ThingDef>
-
-
-
 
 
 
@@ -1269,7 +1287,9 @@
 		<building>
 			<isSittable>true</isSittable>
 		</building>
-		<researchPrerequisites><li>Stonecutting</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>Stonecutting</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="FurnitureBase">
@@ -1310,7 +1330,9 @@
 		<building>
 			<isSittable>true</isSittable>
 		</building>
-		<researchPrerequisites><li>TubeTelevision</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>TubeTelevision</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 
@@ -1355,7 +1377,9 @@
 		<building>
 			<isSittable>true</isSittable>
 		</building>
-		<researchPrerequisites><li>Stonecutting</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>Stonecutting</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="FurnitureBase">
@@ -1411,7 +1435,9 @@
 		<building>
 			<isSittable>true</isSittable>
 		</building>
-		<researchPrerequisites><li>TubeTelevision</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>TubeTelevision</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="FurnitureBase">
@@ -1429,8 +1455,7 @@
 			</damageData>
 		</graphicData>
 		<AltitudeLayer>Waist</AltitudeLayer>
-		<Description>Old fashioned, comfy, and mostly out of cloth. Or so they say.
-	Provide Adjacency Bonus for Modern Table (Medium) and Modern Table (Small)</Description>
+		<Description>Old fashioned, comfy, and mostly out of cloth. Or so they say. Provide Adjacency Bonus for Modern Table (Medium) and Modern Table (Small)</Description>
 		<Size>(1,1)</Size>
 		<statBases>
 			<MaxHitPoints>200</MaxHitPoints>
@@ -1463,7 +1488,9 @@
 		<building>
 			<isSittable>true</isSittable>
 		</building>
-		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="FurnitureBase">
@@ -1515,13 +1542,10 @@
 				<mustBePlacedAdjacent>true</mustBePlacedAdjacent>
 			</li>
 		</comps>
-		<researchPrerequisites><li>TubeTelevision</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>TubeTelevision</li>
+		</researchPrerequisites>
 	</ThingDef>
-
-
-
-
-
 
 
 
@@ -1550,7 +1574,9 @@
 		<costStuffCount>10</costStuffCount>
 		<rotatable>false</rotatable>
 		<placingDraggableDimensions>2</placingDraggableDimensions>
-		<researchPrerequisites><li>Stonecutting</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>Stonecutting</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="FurnitureBase" Class="Clutter_Furniture.ClutterThingDefsFurniture">
@@ -1610,7 +1636,9 @@
 			<li>Buildings/Tables/TableMidworldSmallClutter</li>
 			<li>Buildings/Tables/TableGlassSmall</li>
 		</SwitchTexPath>
-		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="FurnitureBase" Class="Clutter_Furniture.ClutterThingDefsFurniture">
@@ -1671,7 +1699,9 @@
 			<li>Buildings/Tables/TableMidworldMediumClean</li>
 			<li>Buildings/Tables/TableMidworldMediumClutter</li>
 		</SwitchTexPath>
-		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="FurnitureBase" Class="Clutter_Furniture.ClutterThingDefsFurniture">
@@ -1730,7 +1760,75 @@
 			<li>Clutter/Tables/TableSpacerSquare</li>
 			<li>Clutter/Tables/TableMidworldSquare</li>
 		</SwitchTexPath>
-		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="HighQualityFurnitureBase">
+		<defName>EndTable</defName>
+		<label>End Table with lamp.</label>
+		<description>A small table with a lamp and a drawer, great beside a bed. Uses 20 watts of power to light a small area.</description>
+		<graphicData>
+			<texPath>Buildings/EndTable/StandingLampOnTable</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.5,1.5)</drawSize>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Waist</altitudeLayer>
+		<rotatable>True</rotatable>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>500</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>15</Beauty>
+		</statBases>
+		<size>(1,1)</size>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<costStuffCount>20</costStuffCount>
+		<costList>
+			<Glass>10</Glass>
+		</costList>
+		<pathCost>70</pathCost>
+		<passability>PassThroughOnly</passability>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CommunityCoreLibrary.CompProperties_RestrictedPlacement">
+				<compClass>CommunityCoreLibrary.CompRestrictedPlacement</compClass>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>20</basePowerConsumption>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+			</li>
+			<li Class="CompProperties_Glower">
+				<compClass>CompGlower</compClass>
+				<glowRadius>4</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+			<li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
+				<compClass>CommunityCoreLibrary.CompColoredLight</compClass>
+			</li>
+		</comps>
+		<inspectorTabs>
+			<li>ITab_Art</li>
+		</inspectorTabs>
+		<designationCategory>Furniture</designationCategory>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
+		<placeWorkers>
+			<li>CommunityCoreLibrary.PlaceWorker_OnlyUnderRoof</li>
+		</placeWorkers>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase" Class="Clutter_Furniture.ClutterThingDefsFurniture">
@@ -1801,11 +1899,13 @@
 				<cycleLowTicks>3000</cycleLowTicks>
 				<cycleHighTicks>6000</cycleHighTicks>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 		</comps>
 		<DesignationCategory>Furniture</DesignationCategory>
 		<FreezerBase>Buildings/Tables/FridgeLayer</FreezerBase>
-		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 
@@ -1911,9 +2011,6 @@
 
 
 
-
-
-
 	<!-- Misc -->
 	<!-- vanilla overrrides -->
 	<ThingDef ParentName="FurnitureBase">
@@ -1937,7 +2034,7 @@
 		</stuffCategories>
 		<costStuffCount>45</costStuffCount>
 		<building>
-      <bed_humanlike>false</bed_humanlike>
+			<bed_humanlike>false</bed_humanlike>
 			<bed_ShowSleeperBody>true</bed_ShowSleeperBody>
 			<bed_HealTickInterval>2100</bed_HealTickInterval>
 		</building>
@@ -1950,7 +2047,9 @@
 			<Comfort>0.75</Comfort>
 			<ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
 		</statBases>
-		<researchPrerequisites><li>TubeTelevision</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>TubeTelevision</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 
@@ -1992,17 +2091,16 @@
 				<glowRadius>6</glowRadius>
 				<glowColor>(180,255,0,1)</glowColor>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 		</comps>
 		<rotatable>true</rotatable>
 		<tickerType>Normal</tickerType>
 		<selectable>true</selectable>
 		<neverMultiSelect>false</neverMultiSelect>
-		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>MultiAnalyzer</li>
+		</researchPrerequisites>
 	</ThingDef>
-
-
-
 
 
 
@@ -2353,9 +2451,6 @@
 
 
 
-
-
-
 	<!-- Stuffed Animals -->
 	<ThingDef ParentName="StuffedAnimalBase">
 		<defName>StuffedMuffalo</defName>
@@ -2591,8 +2686,6 @@
 
 
 
-
-
 	<!-- storage -->
 	<ThingDef ParentName="FurnitureBase">
 		<defName>Basket</defName>
@@ -2683,7 +2776,7 @@
 						<li>Chunks</li>
 						<li>Corpses</li>
 					</exceptedCategories>
-					</filter>
+				</filter>
 			</defaultStorageSettings>
 		</building>
 		<inspectorTabs>
@@ -2738,7 +2831,9 @@
 		<surfaceType>Item</surfaceType>
 		<designationCategory>Storage</designationCategory>
 		<staticSunShadowHeight>0.025</staticSunShadowHeight>
-		<researchPrerequisites><li>StorageI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>StorageI</li>
+		</researchPrerequisites>
 	</ThingDef>
 	<ThingDef ParentName="FurnitureBase">
 		<defName>MedicineCabinet</defName>
@@ -2784,7 +2879,9 @@
 		<surfaceType>Item</surfaceType>
 		<designationCategory>Storage</designationCategory>
 		<staticSunShadowHeight>0.025</staticSunShadowHeight>
-		<researchPrerequisites><li>StorageI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>StorageI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 
@@ -2792,111 +2889,116 @@
 
 	<!-- MD2 Deep Storage -->
 	<ThingDef Name="DSUBase" Abstract="True">
-	<category>Building</category>
-	<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-	<selectable>true</selectable>
-	<drawerType>MapMeshAndRealTime</drawerType>
-	<thingClass>MD2.Building_DeepStorage</thingClass>
-	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-	<constructEffect>ConstructMetal</constructEffect>
-	<repairEffect>Repair</repairEffect>
-	<altitudeLayer>Waist</altitudeLayer>
-	<passability>Impassable</passability>
-	<castEdgeShadows>false</castEdgeShadows>
-	<filthLeaving>BuildingRubble</filthLeaving>
-	<graphicData>
-	  <texPath>Buildings/Storage/DeepStorage</texPath>
-	  <graphicClass>Graphic_Single</graphicClass>
-	<drawSize>(2,1)</drawSize>
-	</graphicData>
-	<building>
-	  <fixedStorageSettings>
-		<priority>Important</priority>
-		<filter>
-		  <categories>
-			<li>ResourcesRaw</li>
-			<li>Manufactured</li>
-			<li>FoodRaw</li>
-			<li>CookingSupplies</li>
-		  </categories>
-		</filter>
-	  </fixedStorageSettings>
-	  <defaultStorageSettings>
-		<priority>Important</priority>
-		<filter>
-		  <categories>
-		  </categories>
-		</filter>
-	  </defaultStorageSettings>
-	</building>
-	<inspectorTabs>
-	  <li>ITab_Storage</li>
-	</inspectorTabs>
-	<designationCategory>Storage</designationCategory>
-	<staticSunShadowHeight>0.2</staticSunShadowHeight>
-	<surfaceType>Item</surfaceType>
-	<size>(2,1)</size>
-	<tickerType>Normal</tickerType>
-  </ThingDef>
+		<category>Building</category>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<thingClass>MD2.Building_DeepStorage</thingClass>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<constructEffect>ConstructMetal</constructEffect>
+		<repairEffect>Repair</repairEffect>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>Impassable</passability>
+		<castEdgeShadows>false</castEdgeShadows>
+		<filthLeaving>BuildingRubble</filthLeaving>
+		<graphicData>
+			<texPath>Buildings/Storage/DeepStorage</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,1)</drawSize>
+		</graphicData>
+		<building>
+			<fixedStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+						<li>ResourcesRaw</li>
+						<li>Manufactured</li>
+						<li>FoodRaw</li>
+						<li>CookingSupplies</li>
+					</categories>
+				</filter>
+			</fixedStorageSettings>
+			<defaultStorageSettings>
+				<priority>Important</priority>
+				<filter>
+					<categories>
+					</categories>
+				</filter>
+			</defaultStorageSettings>
+		</building>
+		<inspectorTabs>
+			<li>ITab_Storage</li>
+		</inspectorTabs>
+		<designationCategory>Storage</designationCategory>
+		<staticSunShadowHeight>0.2</staticSunShadowHeight>
+		<surfaceType>Item</surfaceType>
+		<size>(2,1)</size>
+		<tickerType>Normal</tickerType>
+	</ThingDef>
 
 
-  <ThingDef ParentName="DSUBase" Class="MD2.DSUDef">
-	<defName>MD2DeepStorageI</defName>
-	<label>Deep Storage Unit Mk.I</label>
-	<description>A contained unit for storing up to 1000 of a single item.</description>
-	<statBases>
-	  <MaxHitPoints>300</MaxHitPoints>
-	  <Flammability>1.0</Flammability>
-	  <WorkToMake>1200</WorkToMake>
-	</statBases>
-	<maxStorage>1000</maxStorage>
-	<costList>
-	  <SteelBar>100</SteelBar>
-	  <WoodPlank>20</WoodPlank>
-	</costList>
-	<researchPrerequisites><li>StorageI</li></researchPrerequisites>
-  </ThingDef>
+	<ThingDef ParentName="DSUBase" Class="MD2.DSUDef">
+		<defName>MD2DeepStorageI</defName>
+		<label>Deep Storage Unit Mk.I</label>
+		<description>A contained unit for storing up to 1000 of a single item.</description>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToMake>1200</WorkToMake>
+		</statBases>
+		<maxStorage>1000</maxStorage>
+		<costList>
+			<SteelBar>100</SteelBar>
+			<WoodPlank>20</WoodPlank>
+		</costList>
+		<researchPrerequisites>
+			<li>StorageI</li>
+		</researchPrerequisites>
+	</ThingDef>
 
-  <ThingDef ParentName="DSUBase" Class="MD2.DSUDef">
-	<defName>MD2DeepStorageII</defName>
-	<label>Deep Storage Unit Mk.II</label>
-	<description>A contained unit for storing up to 1500 of a single item.</description>
-	<statBases>
-	  <MaxHitPoints>400</MaxHitPoints>
-	  <Flammability>1.0</Flammability>
-	  <WorkToMake>2400</WorkToMake>
-	</statBases>
-	<maxStorage>1500</maxStorage>
-	<costList>
-	  <SteelBar>120</SteelBar>
-	  <WoodPlank>30</WoodPlank>
-	</costList>
-	<researchPrerequisites><li>StorageII</li></researchPrerequisites>
-  </ThingDef>
+	<ThingDef ParentName="DSUBase" Class="MD2.DSUDef">
+		<defName>MD2DeepStorageII</defName>
+		<label>Deep Storage Unit Mk.II</label>
+		<description>A contained unit for storing up to 1500 of a single item.</description>
+		<statBases>
+			<MaxHitPoints>400</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToMake>2400</WorkToMake>
+		</statBases>
+		<maxStorage>1500</maxStorage>
+		<costList>
+			<SteelBar>120</SteelBar>
+			<WoodPlank>30</WoodPlank>
+		</costList>
+		<researchPrerequisites>
+			<li>StorageII</li>
+		</researchPrerequisites>
+	</ThingDef>
 
-  <ThingDef ParentName="DSUBase" Class="MD2.DSUDef">
-	<defName>MD2DeepStorageIII</defName>
-	<label>Deep Storage Unit Mk.III</label>
-	<description>A contained unit for storing up to 2250 of a single item.</description>
-	<statBases>
-	  <MaxHitPoints>500</MaxHitPoints>
-	  <Flammability>1.0</Flammability>
-	  <WorkToMake>3400</WorkToMake>
-	</statBases>
-	<maxStorage>2250</maxStorage>
-	<costList>
-	  <SteelBar>180</SteelBar>
-	  <WoodPlank>50</WoodPlank>
-	</costList>
-	<researchPrerequisites><li>StorageII</li></researchPrerequisites>
-  </ThingDef>
+	<ThingDef ParentName="DSUBase" Class="MD2.DSUDef">
+		<defName>MD2DeepStorageIII</defName>
+		<label>Deep Storage Unit Mk.III</label>
+		<description>A contained unit for storing up to 2250 of a single item.</description>
+		<statBases>
+			<MaxHitPoints>500</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<WorkToMake>3400</WorkToMake>
+		</statBases>
+		<maxStorage>2250</maxStorage>
+		<costList>
+			<SteelBar>180</SteelBar>
+			<WoodPlank>50</WoodPlank>
+		</costList>
+		<researchPrerequisites>
+			<li>StorageII</li>
+		</researchPrerequisites>
+	</ThingDef>
 
 
 
 
 
-
-  <!-- RT Quantum storage (UI icons hardcoded to textures/RT_UI) -->
+	<!-- RT Quantum storage (UI icons hardcoded to textures/RT_UI) -->
 	<ThingDef>
 		<defName>Building_RTQuantumStockpileSmall</defName>
 		<label>small quantum stockpile</label>
@@ -2935,10 +3037,10 @@
 			<Beauty>0</Beauty>
 		</statBases>
 		<costList>
-	      <SteelBar>30</SteelBar>
-	      <AluBar>30</AluBar>
-	      <Electronics>25</Electronics>
-	    </costList>
+			<SteelBar>30</SteelBar>
+			<AluBar>30</AluBar>
+			<Electronics>25</Electronics>
+		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -2958,7 +3060,7 @@
 			<li Class="RT_QuantumStorage.CompProperties_RTDeviceModeSwitcher">
 				<canSwitchModes>false</canSwitchModes>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<placeWorkers>
 			<li>RT_QuantumStorage.PlaceWorker_RTNoQSOverlap</li>
@@ -3007,8 +3109,8 @@
 		</statBases>
 		<costList>
 			<SteelBar>80</SteelBar>
-      		<AluBar>80</AluBar>
-      		<Electronics>25</Electronics>
+			<AluBar>80</AluBar>
+			<Electronics>25</Electronics>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -3029,7 +3131,7 @@
 			<li Class="RT_QuantumStorage.CompProperties_RTDeviceModeSwitcher">
 				<canSwitchModes>false</canSwitchModes>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<placeWorkers>
 			<li>RT_QuantumStorage.PlaceWorker_RTNoQSOverlap</li>
@@ -3077,8 +3179,8 @@
 		</statBases>
 		<costList>
 			<SteelBar>30</SteelBar>
-      		<AluBar>30</AluBar>
-      		<IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
+			<AluBar>30</AluBar>
+			<IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -3090,8 +3192,8 @@
 				<soundPowerOff>PowerOffSmall</soundPowerOff>
 			</li>
 			<li Class="CompProperties_Flickable" />
-			<li Class="RT_QuantumStorage.CompProperties_RTQuantumRelay"/>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="RT_QuantumStorage.CompProperties_RTQuantumRelay" />
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<inspectorTabs>
 			<li>ITab_Storage</li>
@@ -3140,8 +3242,8 @@
 		</statBases>
 		<costList>
 			<SteelBar>80</SteelBar>
-      		<AluBar>80</AluBar>
-      		<IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
+			<AluBar>80</AluBar>
+			<IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -3153,8 +3255,8 @@
 				<soundPowerOff>PowerOffSmall</soundPowerOff>
 			</li>
 			<li Class="CompProperties_Flickable" />
-			<li Class="RT_QuantumStorage.CompProperties_RTQuantumRelay"/>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="RT_QuantumStorage.CompProperties_RTQuantumRelay" />
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<inspectorTabs>
 			<li>ITab_Storage</li>
@@ -3200,8 +3302,8 @@
 		</statBases>
 		<costList>
 			<SteelBar>30</SteelBar>
-      		<AluBar>30</AluBar>
-      		<IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
+			<AluBar>30</AluBar>
+			<IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -3213,7 +3315,7 @@
 				<soundPowerOff>PowerOffSmall</soundPowerOff>
 			</li>
 			<li Class="CompProperties_Flickable" />
-			<li Class="RT_QuantumStorage.CompProperties_RTQuantumWarehouse"/>
+			<li Class="RT_QuantumStorage.CompProperties_RTQuantumWarehouse" />
 			<li Class="RT_QuantumStorage.CompProperties_RTQuantumStockpile">
 				<maxStacks>4</maxStacks>
 			</li>
@@ -3223,7 +3325,7 @@
 			<li Class="RT_QuantumStorage.CompProperties_RTDeviceModeSwitcher">
 				<canSwitchModes>false</canSwitchModes>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<placeWorkers>
 			<li>RT_QuantumStorage.PlaceWorker_RTNoQSOverlap</li>
@@ -3273,8 +3375,8 @@
 		</statBases>
 		<costList>
 			<SteelBar>80</SteelBar>
-      		<AluBar>80</AluBar>
-      		<IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
+			<AluBar>80</AluBar>
+			<IntegratedCircuitsBoard>10</IntegratedCircuitsBoard>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -3286,7 +3388,7 @@
 				<soundPowerOff>PowerOffSmall</soundPowerOff>
 			</li>
 			<li Class="CompProperties_Flickable" />
-			<li Class="RT_QuantumStorage.CompProperties_RTQuantumWarehouse"/>
+			<li Class="RT_QuantumStorage.CompProperties_RTQuantumWarehouse" />
 			<li Class="RT_QuantumStorage.CompProperties_RTQuantumStockpile">
 				<maxStacks>4</maxStacks>
 			</li>
@@ -3296,7 +3398,7 @@
 			<li Class="RT_QuantumStorage.CompProperties_RTDeviceModeSwitcher">
 				<canSwitchModes>false</canSwitchModes>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<placeWorkers>
 			<li>RT_QuantumStorage.PlaceWorker_RTNoQSOverlap</li>
