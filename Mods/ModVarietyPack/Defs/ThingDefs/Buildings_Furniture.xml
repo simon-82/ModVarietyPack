@@ -1733,6 +1733,72 @@
 		<researchPrerequisites><li>MultiAnalyzer</li></researchPrerequisites>
 	</ThingDef>
 
+	<ThingDef ParentName="HighQualityFurnitureBase">
+    <defName>EndTable</defName>
+    <label>End Table with lamp.</label>
+    <description>A small table with a lamp and a drawer, great beside a bed. Uses 20 watts of power to light a small area.</description>    
+    <graphicData>
+      <texPath>Buildings/EndTable/StandingLampOnTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+		<drawSize>(1.5,1.5)</drawSize>
+      <shadowData>
+        <volume>(0.3, 0.6, 0.3)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Waist</altitudeLayer>
+    <rotatable>True</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>500</WorkToMake>
+      <Flammability>1.0</Flammability>
+      <Beauty>15</Beauty>
+    </statBases>
+    <size>(1,1)</size>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <costStuffCount>20</costStuffCount>
+    <costList>
+      <Glass>10</Glass>
+    </costList>
+    <pathCost>70</pathCost>
+    <passability>PassThroughOnly</passability>
+    <tickerType>Rare</tickerType>
+    <comps>
+    	<li Class="CommunityCoreLibrary.CompProperties_RestrictedPlacement">
+       		<compClass>CommunityCoreLibrary.CompRestrictedPlacement</compClass>
+        </li>
+    	<li Class="CompProperties_Power">
+        	<compClass>CompPowerTrader</compClass>
+        	<basePowerConsumption>20</basePowerConsumption>
+        	<soundPowerOn>PowerOnSmall</soundPowerOn>
+        	<soundPowerOff>PowerOffSmall</soundPowerOff>
+      	</li>
+      	<li Class="CompProperties_Glower">
+        	<compClass>CompGlower</compClass>
+        	<glowRadius>4</glowRadius>
+        	<glowColor>(217,217,208,0)</glowColor>
+      	</li>
+      <li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
+        <compClass>CommunityCoreLibrary.CompColoredLight</compClass>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+    <designationCategory>Furniture</designationCategory>
+    <researchPrerequisites>
+    	<li>MultiAnalyzer</li>
+    </researchPrerequisites>
+    <placeWorkers>
+        <li>CommunityCoreLibrary.PlaceWorker_OnlyUnderRoof</li>
+    </placeWorkers>
+  </ThingDef>
+
 	<ThingDef ParentName="BuildingBase" Class="Clutter_Furniture.ClutterThingDefsFurniture">
 		<defName>ClutterFreezer</defName>
 		<label>Serving Table (cooled)</label>
