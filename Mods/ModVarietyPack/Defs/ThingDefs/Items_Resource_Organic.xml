@@ -13,6 +13,7 @@
 			<MarketValue>1.9</MarketValue>
 		</statBases>
 		<ingestible>
+			<nutrition>0.05</nutrition>
 			<foodType>VegetableOrFruit</foodType>
 			<ingestedDirectThought>AteRawFood</ingestedDirectThought>
 		</ingestible>
@@ -36,6 +37,7 @@
 			<MarketValue>2.1</MarketValue>
 		</statBases>
 		<ingestible>
+			<nutrition>0.05</nutrition>
 			<foodType>VegetableOrFruit</foodType>
 		</ingestible>
 		<comps>
@@ -58,6 +60,7 @@
 			<MarketValue>1.9</MarketValue>
 		</statBases>
 		<ingestible>
+			<nutrition>0.05</nutrition>
 			<foodType>Seeds</foodType>
 			<ingestedDirectThought>AteRawFood</ingestedDirectThought>
 		</ingestible>
@@ -68,7 +71,7 @@
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="PlantFoodRawBase">
+	<ThingDef ParentName="FruitFoodRawBase">
 		<defName>RawBerries</defName>
 		<label>berries</label>
 		<description>Assorted berries. Nice to eat, even when raw.</description>
@@ -84,6 +87,7 @@
 			</li>
 		</comps>
 		<ingestible>
+			<nutrition>0.05</nutrition>
 			<foodType>VegetableOrFruit</foodType>
 			<joy>0.004</joy>
 		</ingestible>
@@ -100,6 +104,7 @@
 			<MarketValue>2.1</MarketValue>
 		</statBases>
 		<ingestible>
+			<nutrition>0.05</nutrition>
 			<foodType>VegetableOrFruit</foodType>
 			<ingestedDirectThought>AteRawFood</ingestedDirectThought>
 		</ingestible>
