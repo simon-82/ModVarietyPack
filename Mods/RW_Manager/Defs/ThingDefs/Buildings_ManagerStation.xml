@@ -5,7 +5,6 @@
 
 	<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
-		<thingClass>Building</thingClass>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
