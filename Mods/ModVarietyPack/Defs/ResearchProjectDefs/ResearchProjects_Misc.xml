@@ -672,7 +672,6 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
-	<!--
 	<ResearchProjectDef>
         <defName>PowerManagement</defName>
         <label>power management</label>
@@ -688,7 +687,6 @@
           </li>
         </researchMods>
     </ResearchProjectDef>
-	-->
 
 
 
