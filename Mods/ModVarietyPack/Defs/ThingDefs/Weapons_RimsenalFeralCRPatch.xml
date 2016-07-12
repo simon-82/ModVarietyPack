@@ -1,505 +1,542 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
+	<!-- use CR ammo -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_Scraptooth</defName>
+		<label>scraptooth</label>
+		<description>Improvised pistols, manufactured by ferals. Stronger and faster than normal pistol, scraptooth has lower accuracy and range.</description>
+		<graphicData>
+			<texPath>Things/A13/Scraptooth</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractPistol</soundInteract>
+		<statBases>
+			<WorkToMake>10000</WorkToMake>
+			<MarketValue>350</MarketValue>
+			<AimEfficiency>0.25</AimEfficiency>
+			<ShotSpread>0.16</ShotSpread>
+			<SwayFactor>1.55</SwayFactor>
+			<RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
+			<Bulk>2.10</Bulk>
+			<Weight>1.00</Weight>
+			<!--  <AccuracyTouch>0.55</AccuracyTouch>
+						<AccuracyShort>0.65</AccuracyShort>
+						<AccuracyMedium>0.3</AccuracyMedium>
+						<AccuracyLong>0.2</AccuracyLong>
+						<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown> -->
+		</statBases>
+		<weaponTags>
+			<li>FeralPistol</li>
+			<li>FeralGun</li>
+		</weaponTags>
+		<costList>
+			<WeaponParts>42</WeaponParts>
+		</costList>
+		<verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Bullet_45ACP_FMJ</projectileDef>
+				<warmupTicks>20</warmupTicks>
+				<range>8</range>
+				<burstShotCount>2</burstShotCount>
+				<ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+				<soundCast>ShotPistol</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>16</magazineSize>
+				<reloadTicks>140</reloadTicks>
+				<ammoSet>AmmoSet_45ACP</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aiUseBurstMode>TRUE</aiUseBurstMode>
+				<aiUseAimMode>FALSE</aiUseAimMode>
+			</li>
+		</comps>
+	</ThingDef>
 
-  <!-- TODO -->
+	<!-- use CR ammo -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_ScatterStick</defName>
+		<label>scatter stick</label>
+		<description>Improvised muzzleloader shotgun. Deadly, but extremely short range and long reload.</description>
+		<graphicData>
+			<texPath>Things/A13/ScatterStick</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractShotgun</soundInteract>
+		<statBases>
+			<WorkToMake>6500</WorkToMake>
+			<MarketValue>390</MarketValue>
+			<ShotSpread>0.5</ShotSpread>
+			<SwayFactor>1.54</SwayFactor>
+			<Bulk>8.10</Bulk>
+			<Weight>3.00</Weight>
+			<RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+			<!--  <AccuracyTouch>0.65</AccuracyTouch>
+						<AccuracyShort>0.6</AccuracyShort>
+						<AccuracyMedium>0.3</AccuracyMedium>
+						<AccuracyLong>0.2</AccuracyLong>
+						<RangedWeapon_Cooldown>2.15</RangedWeapon_Cooldown> -->
+		</statBases>
+		<weaponTags>
+			<li>FeralGun</li>
+			<li>FeralRifle</li>
+		</weaponTags>
+		<costList>
+			<WeaponParts>60</WeaponParts>
+		</costList>
+		<verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Bullet_12Gauge_Buck</projectileDef>
+				<warmupTicks>35</warmupTicks>
+				<range>10</range>
+				<soundCast>ShotShotgun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>5</magazineSize>
+				<reloadTicks>280</reloadTicks>
+				<ammoSet>AmmoSet_12Gauge</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiUseAimMode>FALSE</aiUseAimMode>
+			</li>
+		</comps>
+	</ThingDef>
 
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Scraptooth</defName>
-    <label>scraptooth bullet</label>
-    <graphicData>
-      <texPath>Projectile/FBullet</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <flyOverhead>false</flyOverhead>
-      <damageDef>Bullet</damageDef>
-      <DamageAmountBase>9</DamageAmountBase>
-      <Speed>75</Speed>
-    </projectile>
-  </ThingDef>
+	<!-- use CR ammo -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_Thrasher</defName>
+		<label>thrasher</label>
+		<description>Improvised assault rifle with crude fire mechanism. High firepower, shorter range.</description>
+		<graphicData>
+			<texPath>Things/A13/Thrasher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractRifle</soundInteract>
+		<statBases>
+			<WorkToMake>9500</WorkToMake>
+			<MarketValue>530</MarketValue>
+			<AimEfficiency>0.50</AimEfficiency>
+			<ShotSpread>0.08</ShotSpread>
+			<SwayFactor>1.28</SwayFactor>
+			<Bulk>10.03</Bulk>
+			<Weight>3.40</Weight>
+			<RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+			<!-- <AccuracyTouch>0.32</AccuracyTouch>
+						<AccuracyShort>0.6</AccuracyShort>
+						<AccuracyMedium>0.55</AccuracyMedium>
+						<AccuracyLong>0.45</AccuracyLong>
+						<RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown> -->
+		</statBases>
+		<weaponTags>
+			<li>FeralGun</li>
+			<li>FeralRifle</li>
+		</weaponTags>
+		<costList>
+			<WeaponParts>85</WeaponParts>
+		</costList>
+		<verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Regular</recoilPattern>
+				<recoilAmount>0.96</recoilAmount>
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Bullet_556x45mmNATO_FMJ</projectileDef>
+				<warmupTicks>75</warmupTicks>
+				<range>60</range>
+				<burstShotCount>4</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<soundCast>ShotAssaultRifle</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>26</magazineSize>
+				<reloadTicks>300</reloadTicks>
+				<ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aimedBurstShotCount>2</aimedBurstShotCount>
+				<aiUseBurstMode>TRUE</aiUseBurstMode>
+				<aiUseAimMode>TRUE</aiUseAimMode>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- use CR great arrows as ammo, SR stats -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_Crucifier</defName>
+		<label>crucifier</label>
+		<description>Electric gun shooting great arrows. Slow charge rate, long range, impressive fire power.</description>
+		<graphicData>
+			<texPath>Things/A13/Crucifier</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractRifle</soundInteract>
+		<statBases>
+			<WorkToMake>17000</WorkToMake>
+			<MarketValue>950</MarketValue>
+			<AimEfficiency>1.25</AimEfficiency>
+			<ShotSpread>0.04</ShotSpread>
+			<SwayFactor>2.09</SwayFactor>
+			<Bulk>10.92</Bulk>
+			<Weight>7.30</Weight>
+			<RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+			<!--  <AccuracyTouch>0.40</AccuracyTouch>
+						<AccuracyShort>0.56</AccuracyShort>
+						<AccuracyMedium>0.6</AccuracyMedium>
+						<AccuracyLong>0.65</AccuracyLong>
+						<RangedWeapon_Cooldown>3.1</RangedWeapon_Cooldown> -->
+		</statBases>
+		<costList>
+			<WeaponParts>90</WeaponParts>
+			<Components>4</Components>
+		</costList>
+		<verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Projectile_GreatArrow_Stone</projectileDef>
+				<warmupTicks>85</warmupTicks>
+				<range>107</range>
+				<soundCast>ShotCrucifier</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<ammoSet>AmmoSet_GreatArrow</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aiUseBurstMode>false</aiUseBurstMode>
+				<aiUseAimMode>false</aiUseAimMode>
+			</li>
+		</comps>
+		<weaponTags>
+			<li>FeralSniperRifle</li>
+		</weaponTags>
+	</ThingDef>
+
+	<!-- use CR ammo -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_Deathdealer</defName>
+		<label>deathdealer</label>
+		<description>The Deathdealer is a crude improvised SMG. lethal in close quarters and features a high magazine capacity.</description>
+		<graphicData>
+			<texPath>Things/A13/Deathdealer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractSMG</soundInteract>
+		<statBases>
+			<WorkToMake>8500</WorkToMake>
+			<MarketValue>500</MarketValue>
+			<AimEfficiency>0.50</AimEfficiency>
+			<ShotSpread>0.12</ShotSpread>
+			<SwayFactor>0.98</SwayFactor>
+			<Bulk>5.44</Bulk>
+			<Weight>3.50</Weight>
+			<RangedWeapon_Cooldown>0.33</RangedWeapon_Cooldown>
+			<!--  <AccuracyTouch>0.8</AccuracyTouch>
+						<AccuracyShort>0.65</AccuracyShort>
+						<AccuracyMedium>0.35</AccuracyMedium>
+						<AccuracyLong>0.1</AccuracyLong>
+						<RangedWeapon_Cooldown>0.86</RangedWeapon_Cooldown> -->
+		</statBases>
+		<weaponTags>
+			<li>FeralGun</li>
+			<li>FeralRifle</li>
+		</weaponTags>
+		<costList>
+			<WeaponParts>70</WeaponParts>
+		</costList>
+		<verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Regular</recoilPattern>
+				<recoilAmount>0.19</recoilAmount>
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Bullet_9x19mmPara_FMJ</projectileDef>
+				<warmupTicks>63</warmupTicks>
+				<range>14</range>
+				<burstShotCount>5</burstShotCount>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<soundCast>ShotDeathdealer</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>45</magazineSize>
+				<reloadTicks>240</reloadTicks>
+				<ammoSet>AmmoSet_9x19mmPara</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aimedBurstShotCount>3</aimedBurstShotCount>
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiUseAimMode>FALSE</aiUseAimMode>
+			</li>
+		</comps>
+	</ThingDef>
 
 
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_Scraptooth</defName>
-    <label>scraptooth</label>
-    <description>Improvised pistols, manufactured by ferals. Stronger and faster than normal pistol, scraptooth has lower accuracy and range.</description>
-    <graphicData>
-      <texPath>Things/A13/Scraptooth</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>InteractPistol</soundInteract>
-    <statBases>
-      <WorkToMake>10000</WorkToMake>
-      <MarketValue>350</MarketValue>
-      <AccuracyTouch>0.55</AccuracyTouch>
-      <AccuracyShort>0.65</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.2</AccuracyLong>
-      <RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
-    </statBases>
-    <weaponTags>
-      <li>FeralPistol</li>
-      <li>FeralGun</li>
-    </weaponTags>
-    <costList>
-      <ChunkSlagSteel>1</ChunkSlagSteel>
-      <Steel>36</Steel>
-      <Components>2</Components>
-    </costList>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
+	<!-- new nail ammo + projectile -->
+	<ThingDef ParentName="BaseBullet">
+		<defName>Bullet_Gnasher</defName>
+		<label>gnasher nail</label>
+		<graphicData>
+			<texPath>Projectile/Nail</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>2</damageAmountBase>
+			<speed>150</speed>
+			<armorPenetration>0.6</armorPenetration>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="Combat_Realism.AmmoDef" ParentName="SmallAmmoBase">
+		<defName>Ammo_Nails</defName>
+		<label>nails cartridge</label>
+		<description>Cartridge for use in the Gnasher nailgun.</description>
+		<tradeTags>
+			<li>CR_AutoEnableTrade</li>
+			<li>CR_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo6x24mmCharged</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/AP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.02</MarketValue>
+			<Weight>0.012</Weight>
+			<Bulk>0.01</Bulk>
+		</statBases>
+		<linkedProjectile>Bullet_Gnasher</linkedProjectile>
+		<!-- add new ammoClass = AmmoCategoryDef -->
+		<ammoClass>Nails</ammoClass>
+	</ThingDef>
+
+	<AmmoCategoryDef>
+		<defName>Nails</defName>
+		<label>nails cartridge</label>
+		<description>Cartridge for use in the Gnasher nailgun.</description>
+	</AmmoCategoryDef>
+
+	<AmmoSetDef>
+		<defName>AmmoSet_NailsCartridge</defName>
+		<label>energy cartridge</label>
+		<description>Cartridge for use in the Gnasher nailgun.</description>
+		<ammoTypes>
+			<li>Ammo_Nails</li>
+		</ammoTypes>
+	</AmmoSetDef>
+
+	<!-- use PDW stats -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_Gnasher</defName>
+		<label>gnasher</label>
+		<description>Heavily modified nailgun. Shoots at a very high rate of fire, but is very inaccurate and does only little damage.</description>
+		<graphicData>
+			<texPath>Things/A13/Gnasher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractSMG</soundInteract>
+		<statBases>
+			<WorkToMake>8500</WorkToMake>
+			<MarketValue>450</MarketValue>
+			<AimEfficiency>0.50</AimEfficiency>
+			<ShotSpread>0.12</ShotSpread>
+			<SwayFactor>0.98</SwayFactor>
+			<Bulk>5.44</Bulk>
+			<Weight>3.50</Weight>
+			<RangedWeapon_Cooldown>0.33</RangedWeapon_Cooldown>
+			<!--  <AccuracyTouch>0.7</AccuracyTouch>
+						<AccuracyShort>0.5</AccuracyShort>
+						<AccuracyMedium>0.2</AccuracyMedium>
+						<AccuracyLong>0.1</AccuracyLong>
+						<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown> -->
+		</statBases>
+		<costList>
+			<WeaponParts>80</WeaponParts>
+		</costList>
+		<weaponTags>
+			<li>FeralPistol</li>
+			<li>FeralGun</li>
+		</weaponTags>
+		<verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Regular</recoilPattern>
+				<recoilAmount>0.19</recoilAmount>
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Bullet_Gnasher</projectileDef>
+				<warmupTicks>45</warmupTicks>
+				<range>20</range>
+				<burstShotCount>15</burstShotCount>
+				<ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+				<soundCast>ShotGnasher</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>3</muzzleFlashScale>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>45</magazineSize>
+				<reloadTicks>240</reloadTicks>
+				<ammoSet>AmmoSet_NailsCartridge</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aimedBurstShotCount>7</aimedBurstShotCount>
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiUseAimMode>FALSE</aiUseAimMode>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- needs testing and maybe nerf -->
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>Gun_Scorcher</defName>
+		<label>scorcher</label>
+		<description>Makeshift flamethrower. Starts fires.</description>
+		<graphicData>
+			<texPath>Things/A13/Scorcher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>InteractRifle</soundInteract>
+		<statBases>
+			<WorkToMake>11500</WorkToMake>
+			<MarketValue>690</MarketValue>
+			<AimEfficiency>0.50</AimEfficiency>
+			<ShotSpread>0.12</ShotSpread>
+			<SwayFactor>0.98</SwayFactor>
+			<Bulk>5.44</Bulk>
+			<Weight>3.50</Weight>
+			<RangedWeapon_Cooldown>0.33</RangedWeapon_Cooldown>
+			<!--  
+			<AccuracyTouch>0.3</AccuracyTouch>
+			<AccuracyShort>0.3</AccuracyShort>
+			<AccuracyMedium>0.2</AccuracyMedium>
+			<AccuracyLong>0.01</AccuracyLong>
+			<RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown> -->
+		</statBases>
+		<weaponTags>
+			<li>FeralGun</li>
+			<li>FeralFlame</li>
+		</weaponTags>
+		<costList>
+			<WeaponParts>110</WeaponParts>
+			<Components>2</Components>
+		</costList>
+		<verbs>
+			<li Class="Combat_Realism.VerbPropertiesCR">
+				<recoilPattern>Regular</recoilPattern>
+				<recoilAmount>0.19</recoilAmount>
+				<verbClass>Combat_Realism.Verb_ShootCR</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<projectileDef>Bullet_30x64mmFuel_Incendiary</projectileDef>
+				<warmupTicks>45</warmupTicks>
+				<range>10</range>
+				<burstShotCount>7</burstShotCount>
+				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+				<soundCast>ShotScorcher</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>14</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="Combat_Realism.CompProperties_AmmoUser">
+				<magazineSize>45</magazineSize>
+				<reloadTicks>240</reloadTicks>
+				<ammoSet>AmmoSet_30x64mmFuel</ammoSet>
+			</li>
+			<li Class="Combat_Realism.CompProperties_FireModes">
+				<aiUseBurstMode>FALSE</aiUseBurstMode>
+				<aiUseAimMode>FALSE</aiUseAimMode>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+	<!-- single use doomsday rocket stats, uses rocket projectile -->
+	<ThingDef ParentName="BaseGun">
+		<defName>Gun_Thumper</defName>
+		<label>thumper</label>
+		<description>A simple single-use makeshift rocket launcher.</description>
+		<graphicData>
+			<texPath>Things/A13/Thumper</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<WorkToMake>9500</WorkToMake>
+			<MarketValue>830</MarketValue>
+			<AimEfficiency>1.25</AimEfficiency>
+      <ShotSpread>0.2</ShotSpread>
+      <SwayFactor>3.90</SwayFactor>
+      <Bulk>17.50</Bulk>
+      <Weight>11.00</Weight>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+			<!--  <AccuracyTouch>0.1</AccuracyTouch>
+			<AccuracyShort>0.1</AccuracyShort>
+			<AccuracyMedium>0.1</AccuracyMedium>
+			<AccuracyLong>0.1</AccuracyLong>
+			<RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown> -->
+		</statBases>
+		<destroyOnDrop>false</destroyOnDrop>
+		<weaponTags>
+			<li>FeralGun</li>
+			<li>FeralGunHeavy</li>
+		</weaponTags>
+		<verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Scraptooth</projectileDef>
-        <warmupTicks>48</warmupTicks>
-        <range>15</range>
-        <burstShotCount>2</burstShotCount>
-        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-        <soundCast>ShotScraptooth</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
-
-  <!-- ============================================================== -->
-
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_ScatterStick</defName>
-    <label>shrapnel</label>
-    <graphicData>
-      <texPath>Projectile/Scrap</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>10</damageAmountBase>
-      <speed>55</speed>
-    </projectile>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_ScatterStick</defName>
-    <label>scatter stick</label>
-    <description>Improvised muzzleloader shotgun. Deadly, but extremely short range and long reload.</description>
-    <graphicData>
-      <texPath>Things/A13/ScatterStick</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>InteractShotgun</soundInteract>
-    <statBases>
-      <WorkToMake>6500</WorkToMake>
-      <MarketValue>390</MarketValue>
-      <AccuracyTouch>0.65</AccuracyTouch>
-      <AccuracyShort>0.6</AccuracyShort>
-      <AccuracyMedium>0.3</AccuracyMedium>
-      <AccuracyLong>0.2</AccuracyLong>
-      <RangedWeapon_Cooldown>2.15</RangedWeapon_Cooldown>
-    </statBases>
-    <weaponTags>
-      <li>FeralGun</li>
-      <li>FeralRifle</li>
-    </weaponTags>
-    <costList>
-      <ChunkSlagSteel>1</ChunkSlagSteel>
-      <Steel>80</Steel>
-      <Components>3</Components>
-    </costList>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_ScatterStick</projectileDef>
-        <warmupTicks>90</warmupTicks>
-        <range>13</range>
-        <forcedMissRadius>1</forcedMissRadius>
-        <burstShotCount>3</burstShotCount>
-        <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
-        <soundCast>ShotScatterStick</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
-
-  <!-- ============================================== -->
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Thrasher</defName>
-    <label>thrasher bullet</label>
-    <graphicData>
-      <texPath>Projectile/FBullet</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>12</damageAmountBase>
-      <speed>75</speed>
-    </projectile>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_Thrasher</defName>
-    <label>thrasher</label>
-    <description>Improvised assault rifle with crude fire mechanism. High firepower, shorter range.</description>
-    <graphicData>
-      <texPath>Things/A13/Thrasher</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
-    <statBases>
-      <WorkToMake>9500</WorkToMake>
-      <MarketValue>530</MarketValue>
-      <AccuracyTouch>0.32</AccuracyTouch>
-      <AccuracyShort>0.6</AccuracyShort>
-      <AccuracyMedium>0.55</AccuracyMedium>
-      <AccuracyLong>0.45</AccuracyLong>
-      <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
-    </statBases>
-    <weaponTags>
-      <li>FeralGun</li>
-      <li>FeralRifle</li>
-    </weaponTags>
-    <costList>
-      <ChunkSlagSteel>1</ChunkSlagSteel>
-      <Steel>75</Steel>
-      <Components>3</Components>
-    </costList>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Thrasher</projectileDef>
-        <warmupTicks>105</warmupTicks>
-        <range>24</range>
-        <burstShotCount>2</burstShotCount>
-        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-        <soundCast>ShotThrasher</soundCast>
-        <soundCastTail>GunTail_Medium</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
-
-  <!-- ============================================== -->
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Crucifier</defName>
-    <label>harpoon</label>
-    <graphicData>
-      <texPath>Projectile/Crucifier</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>55</damageAmountBase>
-      <speed>130</speed>
-    </projectile>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_Crucifier</defName>
-    <label>crucifier</label>
-    <description>Electric harpoon gun. Slow charge rate, long range, impressive fire power.</description>
-    <graphicData>
-      <texPath>Things/A13/Crucifier</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
-    <statBases>
-      <WorkToMake>17000</WorkToMake>
-      <MarketValue>950</MarketValue>
-      <AccuracyTouch>0.40</AccuracyTouch>
-      <AccuracyShort>0.56</AccuracyShort>
-      <AccuracyMedium>0.6</AccuracyMedium>
-      <AccuracyLong>0.65</AccuracyLong>
-      <RangedWeapon_Cooldown>3.1</RangedWeapon_Cooldown>
-    </statBases>
-    <costList>
-      <ChunkSlagSteel>1</ChunkSlagSteel>
-      <Steel>140</Steel>
-      <Components>4</Components>
-    </costList>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Crucifier</projectileDef>
-        <warmupTicks>255</warmupTicks>
-        <range>43</range>
-        <soundCast>ShotCrucifier</soundCast>
-        <soundCastTail>GunTail_Heavy</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-    <weaponTags>
-      <li>FeralSniperRifle</li>
-    </weaponTags>
-  </ThingDef>
-
-  <!-- ============================================== -->
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Deathdealer</defName>
-    <label>deathdealer bullet</label>
-    <graphicData>
-      <texPath>Projectile/FBullet</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>6</damageAmountBase>
-      <speed>60</speed>
-    </projectile>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_Deathdealer</defName>
-    <label>deathdealer</label>
-    <description>The Deathdealer is a crude improvised SMG. lethal in close quarters and features a high magazine capacity.</description>
-    <graphicData>
-      <texPath>Things/A13/Deathdealer</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>InteractSMG</soundInteract>
-    <statBases>
-      <WorkToMake>8500</WorkToMake>
-      <MarketValue>500</MarketValue>
-      <AccuracyTouch>0.8</AccuracyTouch>
-      <AccuracyShort>0.65</AccuracyShort>
-      <AccuracyMedium>0.35</AccuracyMedium>
-      <AccuracyLong>0.1</AccuracyLong>
-      <RangedWeapon_Cooldown>0.86</RangedWeapon_Cooldown>
-    </statBases>
-    <weaponTags>
-      <li>FeralGun</li>
-      <li>FeralRifle</li>
-    </weaponTags>
-    <costList>
-      <ChunkSlagSteel>1</ChunkSlagSteel>
-      <Steel>90</Steel>
-      <Components>3</Components>
-    </costList>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Deathdealer</projectileDef>
-        <warmupTicks>63</warmupTicks>
-        <range>19</range>
-        <burstShotCount>5</burstShotCount>
-        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-        <soundCast>ShotDeathdealer</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>9</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
-
-  <!-- ============================================== -->
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Gnasher</defName>
-    <label>gnasher nail</label>
-    <graphicData>
-      <texPath>Projectile/Nail</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-      <damageDef>Bullet</damageDef>
-      <damageAmountBase>2</damageAmountBase>
-      <speed>70</speed>
-    </projectile>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_Gnasher</defName>
-    <label>gnasher</label>
-    <description>Heavily modified nailgun. Shoots at a very high rate of fire, but is very inaccurate and does only little damage.</description>
-    <graphicData>
-      <texPath>Things/A13/Gnasher</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>InteractSMG</soundInteract>
-    <statBases>
-      <WorkToMake>8500</WorkToMake>
-      <MarketValue>450</MarketValue>
-      <AccuracyTouch>0.7</AccuracyTouch>
-      <AccuracyShort>0.5</AccuracyShort>
-      <AccuracyMedium>0.2</AccuracyMedium>
-      <AccuracyLong>0.1</AccuracyLong>
-      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
-    </statBases>
-    <costList>
-      <ChunkSlagSteel>1</ChunkSlagSteel>
-      <Steel>95</Steel>
-      <Components>3</Components>
-    </costList>
-    <weaponTags>
-      <li>FeralPistol</li>
-      <li>FeralGun</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Gnasher</projectileDef>
-        <warmupTicks>85</warmupTicks>
-        <range>15</range>
-        <burstShotCount>15</burstShotCount>
-        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
-        <soundCast>ShotGnasher</soundCast>
-        <forcedMissRadius>1</forcedMissRadius>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>3</muzzleFlashScale>
-      </li>
-    </verbs>
-  </ThingDef>
-
-  <!-- ============================================== -->
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Scorcher</defName>
-    <label>napalm</label>
-    <graphicData>
-      <texPath>Things/Projectile/InfernoCannonShot</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
-      <speed>15</speed>
-      <damageDef>Flame</damageDef>
-      <damageAmountBase>5</damageAmountBase>
-      <explosionRadius>0.5</explosionRadius>
-      <preExplosionSpawnThingDef>Puddle_Fuel</preExplosionSpawnThingDef>
-      <explosionSpawnChance>1</explosionSpawnChance>
-    </projectile>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_Scorcher</defName>
-    <label>scorcher</label>
-    <description>Makeshift flamethrower. Starts fires.</description>
-    <graphicData>
-      <texPath>Things/A13/Scorcher</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>InteractRifle</soundInteract>
-    <statBases>
-      <WorkToMake>11500</WorkToMake>
-      <MarketValue>690</MarketValue>
-      <AccuracyTouch>0.3</AccuracyTouch>
-      <AccuracyShort>0.3</AccuracyShort>
-      <AccuracyMedium>0.2</AccuracyMedium>
-      <AccuracyLong>0.01</AccuracyLong>
-      <RangedWeapon_Cooldown>1.2</RangedWeapon_Cooldown>
-    </statBases>
-    <weaponTags>
-      <li>FeralGun</li>
-      <li>FeralFlame</li>
-    </weaponTags>
-    <costList>
-      <ChunkSlagSteel>1</ChunkSlagSteel>
-      <Steel>160</Steel>
-      <Components>2</Components>
-    </costList>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Scorcher</projectileDef>
-        <ai_IsIncendiary>true</ai_IsIncendiary>
-        <warmupTicks>170</warmupTicks>
-        <range>10</range>
-        <burstShotCount>7</burstShotCount>
-        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-        <soundCast>ShotScorcher</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>14</muzzleFlashScale>
-        <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
-      </li>
-    </verbs>
-  </ThingDef>
-
-
-
-
-  <ThingDef ParentName="BaseBullet">
-    <defName>Bullet_Thumper</defName>
-    <label>rocket</label>
-    <graphicData>
-      <texPath>Projectile/Thumper</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
-      <damageDef>Bomb</damageDef>
-      <damageAmountBase>35</damageAmountBase>
-      <explosionRadius>4.0</explosionRadius>
-      <speed>35</speed>
-    </projectile>
-  </ThingDef>
-
-  <ThingDef ParentName="BaseGun">
-    <defName>Gun_Thumper</defName>
-    <label>thumper</label>
-    <description>A simple single-use makeshift rocket launcher.</description>
-    <graphicData>
-      <texPath>Things/A13/Thumper</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <WorkToMake>9500</WorkToMake>
-      <MarketValue>830</MarketValue>
-      <AccuracyTouch>0.1</AccuracyTouch>
-      <AccuracyShort>0.1</AccuracyShort>
-      <AccuracyMedium>0.1</AccuracyMedium>
-      <AccuracyLong>0.1</AccuracyLong>
-      <RangedWeapon_Cooldown>4.8</RangedWeapon_Cooldown>
-    </statBases>
-    <!--<recipeMaker>
-      <researchPrerequisite>LargeRockets</researchPrerequisite>
-    </recipeMaker>
-    <costList>
-      <ChunkSlagSteel>1</ChunkSlagSteel>
-      <Steel>120</Steel>
-      <Components>3</Components>
-    </costList>-->
-    <destroyOnDrop>false</destroyOnDrop>
-    <weaponTags>
-      <li>FeralGun</li>
-      <li>FeralGunHeavy</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_ShootOneUse</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>Bullet_Thumper</projectileDef>
-        <forcedMissRadius>2.5</forcedMissRadius>
-        <warmupTicks>350</warmupTicks>
-        <range>28</range>
+        <projectileDef>Bullet_RPG7Grenade_Frag</projectileDef>
+        <forcedMissRadius>0.0</forcedMissRadius>
+        <warmupTicks>270</warmupTicks>
+        <range>80</range>
         <burstShotCount>1</burstShotCount>
         <soundCast>InfernoCannon_Fire</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <onlyManualCast>true</onlyManualCast>
-        <stopBurstWithoutLos>false</stopBurstWithoutLos>
         <targetParams>
           <canTargetLocations>true</canTargetLocations>
         </targetParams>
         <muzzleFlashScale>14</muzzleFlashScale>
       </li>
     </verbs>
-  </ThingDef>
+	<comps>
+	  <li Class="Combat_Realism.CompProperties_FireModes">
+		<aiUseBurstMode>FALSE</aiUseBurstMode>
+		<aiUseAimMode>TRUE</aiUseAimMode>
+	  </li>
+	</comps>
+	</ThingDef>
 
-
-  <!-- ============================================== -->
-
-  <ThingDef ParentName="BaseBullet">
+	<!-- NEEDS TESTING based on pila, one shot -->
+	<ThingDef ParentName="BaseProjectileNeolithic">
     <defName>Bullet_RatStick</defName>
     <label>rat stick</label>
     <graphicData>
@@ -507,51 +544,63 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
-      <speed>26</speed>
-      <damageDef>Bomb</damageDef>
-      <damageAmountBase>20</damageAmountBase>
-      <explosionRadius>1.8</explosionRadius>
-    </projectile>
+    <thingClass>Combat_Realism.ProjectileCR_Explosive</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<explosionRadius>1.8</explosionRadius>
+			<damageAmountBase>20</damageAmountBase>
+			<speed>70</speed>
+			<!-- was 26 -->
+		</projectile>
   </ThingDef>
 
-  <ThingDef ParentName="BaseHumanGun">
-    <defName>Gun_RatStick</defName>
-    <label>rat sticks</label>
-    <description>Javelins tied with explosive boomrat tumor.</description>
-    <graphicData>
-      <texPath>Things/A13/BoomStick</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Interact_BeatFire</soundInteract>
-    <statBases>
-      <MarketValue>690</MarketValue>
-      <AccuracyTouch>0.9</AccuracyTouch>
-      <AccuracyShort>0.7</AccuracyShort>
-      <AccuracyMedium>0.5</AccuracyMedium>
-      <AccuracyLong>0.03</AccuracyLong>
-      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
-    </statBases>
-    <weaponTags>
-      <li>FeralGun</li>
-      <li>FeralGrenade</li>
-    </weaponTags>
-    <verbs>
-      <li>
-        <verbClass>Verb_Shoot</verbClass>
+
+  <!-- pila base -->
+	<ThingDef ParentName="BaseWeaponNeolithic">
+		<defName>Gun_RatStick</defName>
+		<label>rat stick</label>
+		<description>Javelins tied with explosive boomrat tumor.</description>
+		<graphicData>
+			<texPath>Things/A13/BoomStick</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_BeatFire</soundInteract>
+		<costList>
+      <WoodLog>1</WoodLog>
+      <Boomrat_Corpse>1</Boomrat_Corpse>
+    </costList>
+		<statBases>
+			<MarketValue>690</MarketValue>
+			<AimEfficiency>0.25</AimEfficiency>
+      <ShotSpread>2.5</ShotSpread>
+      <SwayFactor>2</SwayFactor>
+      <Bulk>4.00</Bulk>
+      <Weight>3.00</Weight>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+			<!--  <AccuracyTouch>0.9</AccuracyTouch>
+			<AccuracyShort>0.7</AccuracyShort>
+			<AccuracyMedium>0.5</AccuracyMedium>
+			<AccuracyLong>0.03</AccuracyLong>
+			<RangedWeapon_Cooldown>4</RangedWeapon_Cooldown> -->
+		</statBases>
+		<weaponTags>
+			<li>FeralGun</li>
+			<li>FeralGrenade</li>
+		</weaponTags>
+		<verbs>
+      <li Class="Combat_Realism.VerbPropertiesCR">
+        <verbClass>Combat_Realism.Verb_ShootCROneUse</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>Bullet_RatStick</projectileDef>
         <warmupTicks>240</warmupTicks>
-        <range>16</range>
-        <forcedMissRadius>1</forcedMissRadius>
-        <soundCast>Interact_BeatFire</soundCast>
+        <range>12</range>
+        <!-- was 16 -->
         <targetParams>
-          <canTargetLocations>true</canTargetLocations>
-        </targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
       </li>
     </verbs>
-  </ThingDef>
+	</ThingDef>
 
 
 </ThingDefs>

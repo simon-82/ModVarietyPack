@@ -2493,6 +2493,32 @@
 		</products>
 	</RecipeDef>
 
+	<!-- Rimsenal Feral ammo -->
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_Nails</defName>
+		<label>make nails cartridge x100</label>
+		<description>Craft 100 nails cartridges.</description>
+		<jobString>Making nails cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SteelBar</li>
+					</thingDefs>
+				</filter>
+				<count>5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SteelBar</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_Nails>100</Ammo_Nails>
+		</products>
+	</RecipeDef>
+
 
 
 </RecipeDefs>
