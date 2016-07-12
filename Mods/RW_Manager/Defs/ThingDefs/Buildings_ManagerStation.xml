@@ -5,6 +5,7 @@
 
 	<ThingDef Name="BuildingBase" Abstract="True">
 		<category>Building</category>
+		<thingClass>Building</thingClass>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<selectable>true</selectable>
 		<drawerType>MapMeshAndRealTime</drawerType>
@@ -12,6 +13,32 @@
 		<repairEffect>Repair</repairEffect>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 		<filthLeaving>BuildingRubble</filthLeaving>
+		<damageMultipliers>
+			<li>
+				<damageDef>Bomb</damageDef>
+				<multiplier>2.5</multiplier>
+			</li>
+			<li>
+				<damageDef>Thermobaric</damageDef>
+				<multiplier>2.5</multiplier>
+			</li>
+			<li>
+				<damageDef>Bullet</damageDef>
+				<multiplier>0.2</multiplier>
+			</li>
+			<li>
+				<damageDef>Fragment</damageDef>
+				<multiplier>0.1</multiplier>
+			</li>
+			<li>
+				<damageDef>Arrow</damageDef>
+				<multiplier>0.05</multiplier>
+			</li>
+			<li>
+				<damageDef>Electrical</damageDef>
+				<multiplier>0.2</multiplier>
+			</li>
+		</damageMultipliers>
 	</ThingDef>
 
 	<!-- ========================= Work tables ==========================-->
