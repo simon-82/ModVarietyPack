@@ -1,88 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <ThingDefs>
 	<!-- natural -->
 	<!-- vanilla parts (texture overrride) -->
-	<ThingDef ParentName="BodyPartBase">
-    <defName>Heart</defName>
-    <label>heart</label>
-    <description>Supplies blood and oxygen to all parts of the body. Ready to find a new owner.</description>
-    <graphicData>
-      <texPath>Items/MedOrgan</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <MarketValue>500</MarketValue>
-    </statBases>
-    <tradeTags>
-		<li>BodyPart</li>
-	</tradeTags>
-	<thingCategories>
-		<li>BodyPartsAndImplants</li>
-	</thingCategories>
-  </ThingDef>
+	<ThingDef ParentName="OrganicBodyPartBase">
+		<defName>Heart</defName>
+		<label>heart</label>
+		<description>Supplies blood and oxygen to all parts of the body. Ready to find a new owner.</description>
+		<graphicData>
+			<texPath>Items/MedOrgan</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>BodyPart</li>
+		</tradeTags>
+		<thingCategories>
+			<li>BodyPartsAndImplants</li>
+		</thingCategories>
+	</ThingDef>
 
-  <ThingDef ParentName="BodyPartBase">
-    <defName>Lung</defName>
-    <label>lung</label>
-    <description>Essential part of the respiratory system.</description>
-    <graphicData>
-      <texPath>Items/MedOrgan</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <MarketValue>400</MarketValue>
-    </statBases>
-    <tradeTags>
-		<li>BodyPart</li>
-	</tradeTags>
-	<thingCategories>
-		<li>BodyPartsAndImplants</li>
-	</thingCategories>
-  </ThingDef>
+	<ThingDef ParentName="OrganicBodyPartBase">
+		<defName>Lung</defName>
+		<label>lung</label>
+		<description>Essential part of the respiratory system.</description>
+		<graphicData>
+			<texPath>Items/MedOrgan</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>400</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>BodyPart</li>
+		</tradeTags>
+		<thingCategories>
+			<li>BodyPartsAndImplants</li>
+		</thingCategories>
+	</ThingDef>
 
-  <ThingDef ParentName="BodyPartBase">
-    <defName>Kidney</defName>
-    <label>kidney</label>
-    <description>Filters and removes waste products from the blood.</description>
-    <graphicData>
-      <texPath>Items/MedOrgan</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <MarketValue>250</MarketValue>
-    </statBases>
-    <tradeTags>
-		<li>BodyPart</li>
-	</tradeTags>
-	<thingCategories>
-		<li>BodyPartsAndImplants</li>
-	</thingCategories>
-  </ThingDef>
+	<ThingDef ParentName="OrganicBodyPartBase">
+		<defName>Kidney</defName>
+		<label>kidney</label>
+		<description>Filters and removes waste products from the blood.</description>
+		<graphicData>
+			<texPath>Items/MedOrgan</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>250</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>BodyPart</li>
+		</tradeTags>
+		<thingCategories>
+			<li>BodyPartsAndImplants</li>
+		</thingCategories>
+	</ThingDef>
 
-  <ThingDef ParentName="BodyPartBase">
-    <defName>Liver</defName>
-    <label>liver</label>
-    <description>Plays an important role in metabolism.</description>
-    <graphicData>
-      <texPath>Items/MedOrgan</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <statBases>
-      <MarketValue>500</MarketValue>
-    </statBases>
-    <tradeTags>
-		<li>BodyPart</li>
-	</tradeTags>
-	<thingCategories>
-		<li>BodyPartsAndImplants</li>
-	</thingCategories>
-  </ThingDef>
-  
+	<ThingDef ParentName="OrganicBodyPartBase">
+		<defName>Liver</defName>
+		<label>liver</label>
+		<description>Plays an important role in metabolism.</description>
+		<graphicData>
+			<texPath>Items/MedOrgan</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>500</MarketValue>
+		</statBases>
+		<tradeTags>
+			<li>BodyPart</li>
+		</tradeTags>
+		<thingCategories>
+			<li>BodyPartsAndImplants</li>
+		</thingCategories>
+	</ThingDef>
 
 
-  <!-- new parts -->
-	<ThingDef ParentName="BodyPartBase">
+
+	<!-- new parts -->
+	<ThingDef ParentName="OrganicBodyPartBase">
 		<defName>Leg</defName>
 		<label>leg</label>
 		<description>They're long meaty sticks that let you move around.</description>
@@ -101,7 +101,7 @@
 		</thingCategories>
 	</ThingDef>
 
-	<ThingDef ParentName="BodyPartBase">
+	<ThingDef ParentName="OrganicBodyPartBase">
 		<defName>Arm</defName>
 		<label>arm</label>
 		<description>Arms are like legs, except you can carry stuff with them.</description>
@@ -120,7 +120,7 @@
 		</thingCategories>
 	</ThingDef>
 
-	<ThingDef ParentName="BodyPartBase">
+	<ThingDef ParentName="OrganicBodyPartBase">
 		<defName>Stomach</defName>
 		<label>stomach</label>
 		<description>Digests food and turns it into energy and nutrients.</description>
@@ -139,7 +139,7 @@
 		</thingCategories>
 	</ThingDef>
 
-	<ThingDef ParentName="BodyPartBase">
+	<ThingDef ParentName="OrganicBodyPartBase">
 		<defName>Eye</defName>
 		<label>eyeball</label>
 		<description>Absorbs light, which lets a person know what's around them.</description>
@@ -158,7 +158,7 @@
 		</thingCategories>
 	</ThingDef>
 
-	<ThingDef ParentName="BodyPartBase">
+	<ThingDef ParentName="OrganicBodyPartBase">
 		<defName>Nose</defName>
 		<label>nose</label>
 		<description>A useful organ to distinguish odors.</description>
@@ -177,7 +177,7 @@
 		</thingCategories>
 	</ThingDef>
 
-	<ThingDef ParentName="BodyPartBase">
+	<ThingDef ParentName="OrganicBodyPartBase">
 		<defName>Ear</defName>
 		<label>ear</label>
 		<description>Picks up vibrations in the air, allowing people to hear sound.</description>
@@ -214,21 +214,6 @@
 			<li>BodyPartsAndImplants</li>
 		</thingCategories>
 	</ThingDef>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -353,12 +338,6 @@
 
 
 
-
-
-
-
-
-
 	<!-- simple -->
 	<ThingDef ParentName="BodyPartBase">
 		<defName>GlassEye</defName>
@@ -446,7 +425,7 @@
 		<thingCategories>
 			<li>Prostheses</li>
 		</thingCategories>
-	</ThingDef>   
+	</ThingDef>
 
 	<ThingDef ParentName="BodyPartBase">
 		<defName>SimpleProstheticHand</defName>
@@ -557,10 +536,6 @@
 			<li>Prostheses</li>
 		</thingCategories>
 	</ThingDef>
-
-
-
-
 
 
 
@@ -899,234 +874,226 @@
 
 
 
-
-
-
-
-
-
-
-
 	<!-- bionic advanced-->
 	<ThingDef ParentName="BodyPartBase">
-      <defName>AdvancedPowerArm</defName>
-      <label>advanced power arm</label>
-      <description>Even more unparalleled strength and dexterity, and with sharp, retractable claws. Now it's the ultimate arm upgrade!</description>
-      <graphicData>
-         <texPath>Items/MedBionic</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <statBases>
-         <MarketValue>10000</MarketValue>
-      </statBases>
-      <techHediffsTags>
-         <li>AdvancedWeapon</li>
-      </techHediffsTags>
-      <tradeTags>
+		<defName>AdvancedPowerArm</defName>
+		<label>advanced power arm</label>
+		<description>Even more unparalleled strength and dexterity, and with sharp, retractable claws. Now it's the ultimate arm upgrade!</description>
+		<graphicData>
+			<texPath>Items/MedBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>10000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>AdvancedWeapon</li>
+		</techHediffsTags>
+		<tradeTags>
 			<li>Prostheses</li>
 		</tradeTags>
 		<thingCategories>
 			<li>Prostheses</li>
 		</thingCategories>
-   </ThingDef>
-   
-   <ThingDef ParentName="BodyPartBase">
-      <defName>AdvancedBionicHand</defName>
-      <label>advanced bionic hand</label>
-      <description>Some people would chop their own hands off just to get this gorgeous piece of tech.</description>
-      <graphicData>
-         <texPath>Items/MedBionic</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <statBases>
-         <MarketValue>5000</MarketValue>
-      </statBases>
-      <techHediffsTags>
-         <li>Advanced</li>
-      </techHediffsTags>
-      <tradeTags>
-			<li>Prostheses</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Prostheses</li>
-		</thingCategories>
-   </ThingDef>
-   
-   <ThingDef ParentName="BodyPartBase">
-      <defName>AdvancedBionicArm</defName>
-      <label>advanced bionic arm</label>
-      <description>Remember when you struggled with opening jars? Now you struggle with not breaking them instantly.</description>
-      <graphicData>
-         <texPath>Items/MedBionic</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <statBases>
-         <MarketValue>7000</MarketValue>
-      </statBases>
-      <techHediffsTags>
-         <li>Advanced</li>
-      </techHediffsTags>
-      <tradeTags>
-			<li>Prostheses</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Prostheses</li>
-		</thingCategories>
-   </ThingDef>
-   
-   <ThingDef ParentName="BodyPartBase">
-      <defName>AdvancedBionicLeg</defName>
-      <label>advanced bionic leg</label>
-      <description>Impressing technology allows the user to move around faster than ever.</description>
-      <graphicData>
-         <texPath>Items/MedBionic</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <statBases>
-         <MarketValue>7000</MarketValue>
-      </statBases>
-      <techHediffsTags>
-         <li>Advanced</li>
-      </techHediffsTags>
-      <tradeTags>
-			<li>Prostheses</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Prostheses</li>
-		</thingCategories>
-   </ThingDef>
-   
-   <ThingDef ParentName="BodyPartBase">
-      <defName>AdvancedBionicFoot</defName>
-      <label>advanced bionic foot</label>
-      <description>Dozens of servomotors grant faster movement and ultimate comfort.</description>
-      <graphicData>
-         <texPath>Items/MedBionic</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <statBases>
-         <MarketValue>5000</MarketValue>
-      </statBases>
-      <techHediffsTags>
-         <li>Advanced</li>
-      </techHediffsTags>
-      <tradeTags>
-			<li>Prostheses</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Prostheses</li>
-		</thingCategories>
-   </ThingDef>
-   
-   <ThingDef ParentName="BodyPartBase">
-      <defName>AdvancedBionicEar</defName>
-      <label>advanced bionic ear</label>
-      <description>This device allows the user to hear better than bats.</description>
-      <graphicData>
-         <texPath>Items/MedBionic</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <statBases>
-         <MarketValue>3000</MarketValue>
-      </statBases>
-      <techHediffsTags>
-         <li>Advanced</li>
-      </techHediffsTags>
-      <tradeTags>
-			<li>Prostheses</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Prostheses</li>
-		</thingCategories>
-   </ThingDef>
-   
-   <ThingDef ParentName="BodyPartBase">
-      <defName>AdvancedBionicJaw</defName>
-      <label>advanced bionic jaw</label>
-      <description>The voice this jaw creates is so beautiful that even some mechanoids stop to listen to this sound.</description>
-      <graphicData>
-         <texPath>Items/MedBionic</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <statBases>
-         <MarketValue>4000</MarketValue>
-      </statBases>
-      <techHediffsTags>
-         <li>Advanced</li>
-      </techHediffsTags>
-      <tradeTags>
-			<li>Prostheses</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Prostheses</li>
-		</thingCategories>
-   </ThingDef>
-   
-   <ThingDef ParentName="BodyPartBase">
-      <defName>AdvancedBionicEye</defName>
-      <label>advanced bionic eye</label>
-      <description>This advanced piece of technology allows the user to perfectly see in the dark as well as to see through walls.</description>
-      <graphicData>
-         <texPath>Items/MedBionic</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <statBases>
-         <MarketValue>6000</MarketValue>
-      </statBases>
-      <techHediffsTags>
-         <li>Advanced</li>
-      </techHediffsTags>
-      <tradeTags>
-			<li>Prostheses</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Prostheses</li>
-		</thingCategories>
-   </ThingDef>
-   
-   <ThingDef ParentName="BodyPartBase">
-      <defName>AdvancedBionicSpine</defName>
-      <label>advanced bionic spine</label>
-      <description>This durable device supports the back and makes working and walking much easier.</description>
-      <graphicData>
-         <texPath>Items/MedBionic</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <statBases>
-         <MarketValue>5000</MarketValue>
-      </statBases>
-      <techHediffsTags>
-         <li>Advanced</li>
-      </techHediffsTags>
-      <tradeTags>
-			<li>Prostheses</li>
-		</tradeTags>
-		<thingCategories>
-			<li>Prostheses</li>
-		</thingCategories>
-   </ThingDef>
+	</ThingDef>
 
-  <ThingDef ParentName="BodyPartBase">
-    <defName>ExoskeletonSuit</defName>
-    <label>exoskeleton suit</label>
-    <description>A high tech device made out of two components: a light skeletal structure to relieve the back and servomotors to make the user stronger.</description>
-      <graphicData>
-         <texPath>Items/MedBionic</texPath>
-         <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-    <statBases>
-      <MarketValue>10000</MarketValue>
-    </statBases>
-    <techHediffsTags>
-      <li>Advanced</li>
-    </techHediffsTags>
-    <tradeTags>
+	<ThingDef ParentName="BodyPartBase">
+		<defName>AdvancedBionicHand</defName>
+		<label>advanced bionic hand</label>
+		<description>Some people would chop their own hands off just to get this gorgeous piece of tech.</description>
+		<graphicData>
+			<texPath>Items/MedBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
 			<li>Prostheses</li>
 		</tradeTags>
 		<thingCategories>
 			<li>Prostheses</li>
 		</thingCategories>
-  </ThingDef>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPartBase">
+		<defName>AdvancedBionicArm</defName>
+		<label>advanced bionic arm</label>
+		<description>Remember when you struggled with opening jars? Now you struggle with not breaking them instantly.</description>
+		<graphicData>
+			<texPath>Items/MedBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>7000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>Prostheses</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Prostheses</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPartBase">
+		<defName>AdvancedBionicLeg</defName>
+		<label>advanced bionic leg</label>
+		<description>Impressing technology allows the user to move around faster than ever.</description>
+		<graphicData>
+			<texPath>Items/MedBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>7000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>Prostheses</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Prostheses</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPartBase">
+		<defName>AdvancedBionicFoot</defName>
+		<label>advanced bionic foot</label>
+		<description>Dozens of servomotors grant faster movement and ultimate comfort.</description>
+		<graphicData>
+			<texPath>Items/MedBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>Prostheses</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Prostheses</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPartBase">
+		<defName>AdvancedBionicEar</defName>
+		<label>advanced bionic ear</label>
+		<description>This device allows the user to hear better than bats.</description>
+		<graphicData>
+			<texPath>Items/MedBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>3000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>Prostheses</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Prostheses</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPartBase">
+		<defName>AdvancedBionicJaw</defName>
+		<label>advanced bionic jaw</label>
+		<description>The voice this jaw creates is so beautiful that even some mechanoids stop to listen to this sound.</description>
+		<graphicData>
+			<texPath>Items/MedBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>4000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>Prostheses</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Prostheses</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPartBase">
+		<defName>AdvancedBionicEye</defName>
+		<label>advanced bionic eye</label>
+		<description>This advanced piece of technology allows the user to perfectly see in the dark as well as to see through walls.</description>
+		<graphicData>
+			<texPath>Items/MedBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>6000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>Prostheses</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Prostheses</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPartBase">
+		<defName>AdvancedBionicSpine</defName>
+		<label>advanced bionic spine</label>
+		<description>This durable device supports the back and makes working and walking much easier.</description>
+		<graphicData>
+			<texPath>Items/MedBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>5000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>Prostheses</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Prostheses</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef ParentName="BodyPartBase">
+		<defName>ExoskeletonSuit</defName>
+		<label>exoskeleton suit</label>
+		<description>A high tech device made out of two components: a light skeletal structure to relieve the back and servomotors to make the user stronger.</description>
+		<graphicData>
+			<texPath>Items/MedBionic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>10000</MarketValue>
+		</statBases>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<tradeTags>
+			<li>Prostheses</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Prostheses</li>
+		</thingCategories>
+	</ThingDef>
 
 
 
