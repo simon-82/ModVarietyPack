@@ -50,6 +50,82 @@
 	</ThingDef>
 
 
+	<ThingDef ParentName="BuildingBase">
+		<defName>Embrasure</defName>
+		<label>embrasure</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<description>A wall with a firing port to allow shooting from relative safety.</description>
+		<graphicData>
+			<texPath>Buildings/Embrasure</texPath>
+			<graphicClass>Graphic_Appearances</graphicClass>
+			<linkType>CornerFiller</linkType>
+			<linkFlags>
+				<li>Wall</li>
+				<li>Rock</li>
+			</linkFlags>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+				<edgeTop>Damage/Edge</edgeTop>
+				<edgeBot>Damage/Edge</edgeBot>
+				<edgeLeft>Damage/Edge</edgeLeft>
+				<edgeRight>Damage/Edge</edgeRight>
+			</damageData>
+		</graphicData>
+		<blueprintGraphicData>
+			<texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+		</blueprintGraphicData>
+		<uiIconPath>Buildings/Embrasure/EmbrasureSmooth_MenuIcon</uiIconPath>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToMake>150</WorkToMake>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<costStuffCount>4</costStuffCount>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<altitudeLayer>Waist</altitudeLayer>
+
+		<!--  Test possible fix for raiders not targeting things behind embrasures
+		<passability>Impassable</passability>
+		-->
+		<pathCost>10000</pathCost>
+    	<passability>PassThroughOnly</passability>
+
+		<castEdgeShadows>true</castEdgeShadows>
+		<fillPercent>0.73</fillPercent>
+		<coversFloor>true</coversFloor>
+		<placingDraggableDimensions>1</placingDraggableDimensions>
+		<tickerType>Never</tickerType>
+		<rotatable>false</rotatable>
+		<selectable>true</selectable>
+		<neverMultiSelect>true</neverMultiSelect>
+		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+		<holdsRoof>true</holdsRoof>
+		<designationCategory>Structure</designationCategory>
+		<staticSunShadowHeight>1</staticSunShadowHeight>
+		<blockLight>false</blockLight>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<building>
+			<isInert>true</isInert>
+			<ignoreNeedsPower>true</ignoreNeedsPower>
+		</building>
+		<researchPrerequisites><li>SecurityIII</li></researchPrerequisites>
+	</ThingDef>
+
+
+
+
+
+
+
+
 
 	<!--=============== Improvised turret ===============-->
 	<ThingDef ParentName="BuildingBase">
