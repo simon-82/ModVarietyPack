@@ -419,7 +419,7 @@
 	</ThingDef>	
 
 	<ThingDef ParentName="BuildingBase">
-		<defName>IndustrialCooler</defName>
+		<defName>RedistHeat_IndustrialCooler</defName>
 		<thingClass>RedistHeat.Building_IndustrialCooler</thingClass>
 		<label>industrial cooler</label>
 		<description>A massive electrical device that pushes cold air into a room. It needs at least one extenal exhaust port.</description>
