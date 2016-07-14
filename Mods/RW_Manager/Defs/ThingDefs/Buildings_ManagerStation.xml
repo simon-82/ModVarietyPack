@@ -12,7 +12,6 @@
 		<repairEffect>Repair</repairEffect>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 		<filthLeaving>BuildingRubble</filthLeaving>
-		<minifiedDef>MinifiedFurniture</minifiedDef>
 		<damageMultipliers>
 			<li>
 				<damageDef>Bomb</damageDef>
@@ -86,7 +85,7 @@
 			<li Class="FluffyManager.CompProperties_ManagerStation">
 				<compClass>FluffyManager.Comp_ManagerStation</compClass>
 				<speed>1000</speed>
-			</li>
+			</li>     
 		</comps>
 	</ThingDef>
 
@@ -138,7 +137,7 @@
 			<li Class="FluffyManager.CompProperties_ManagerStation">
 				<compClass>FluffyManager.Comp_ManagerStation</compClass>
 				<speed>500</speed>
-			</li>
+			</li>     
 		</comps>
 		<researchPrerequisites>
 			<li>ManagingSoftware</li>
@@ -185,7 +184,7 @@
 			<li Class="FluffyManager.CompProperties_ManagerStation">
 				<compClass>FluffyManager.Comp_ManagerStation</compClass>
 				<speed>250</speed>
-			</li>
+			</li>     
 			<li Class="CompProperties_Glower">
 		        <compClass>CompGlower</compClass>
 		        <glowRadius>3</glowRadius>

@@ -12,7 +12,6 @@
 		<repairEffect>Repair</repairEffect>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 		<filthLeaving>BuildingRubble</filthLeaving>
-		<minifiedDef>MinifiedFurniture</minifiedDef>
 		<damageMultipliers>
 			<li>
 				<damageDef>Bomb</damageDef>
@@ -106,7 +105,7 @@
 		<DesignationCategory>Furniture</DesignationCategory>
 		<minifiedDef>MinifiedFurniture</minifiedDef>
 	</ThingDef>
-
+	
 	<ThingDef Name="RugBase" ParentName="BuildingBase" Abstract="True">
 		<comps>
 			<li>
@@ -133,8 +132,8 @@
 		<castEdgeShadows>true</castEdgeShadows>
 		<useHitPoints>true</useHitPoints>
 		<!-- <thingCategories>
-			 <li>Apparel</li>
-			 Because the art category only accepts art with the defName "SculptureAbstract"
+			 <li>Apparel</li> 
+			 Because the art category only accepts art with the defName "SculptureAbstract" 
 			 </thingCategories> -->
 		<size>(1,1)</size>
 		<statBases>
@@ -600,10 +599,15 @@
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
+<<<<<<< HEAD
 		<researchPrerequisites>
 			<li>CookingII</li>
 		</researchPrerequisites>
 	</ThingDef>
+=======
+		<researchPrerequisites><li>CookingII</li></researchPrerequisites>
+	</ThingDef>	
+>>>>>>> parent of 76aa2c8... Minified literally every building
 
 
 	<ThingDef ParentName="BuildingBase">
@@ -825,7 +829,7 @@
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<staticSunShadowHeight>0.4</staticSunShadowHeight>
 	</ThingDef>
-
+	
 	<ThingDef ParentName="BuildingBase">
 		<defName>AncientCryptosleepCasket</defName>
 		<label>ancient cryptosleep casket</label>
@@ -872,7 +876,7 @@
 
 
 
-
+	
 
 	<!-- Misc Artefact -->
 	<ThingDef Name="BuildingBaseArtefact" Abstract="True">
@@ -1152,7 +1156,7 @@
 		<researchPrerequisites>
 			<li>HospitalBed</li>
 		</researchPrerequisites>
-	</ThingDef>
+	</ThingDef>	
 
 	<!-- misc training facilities -->
 	<ThingDef ParentName="BuildingBase">
