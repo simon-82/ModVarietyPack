@@ -26,12 +26,16 @@
       <li>Designator_PlanAdd</li>
       <li>Designator_PlanRemove</li>
       <!-- Add VeinMiner -->
-        <li>MVP.MVP_Designator_VeinMiner</li>      
-        <li>MVP.MVP_Designator_MineBrush</li>
-        <li>MVP.MVP_Designator_StripMiner</li>
+      <li>MVP.MVP_Designator_VeinMiner</li>
+      <li>MVP.MVP_Designator_MineBrush</li>
+      <li>MVP.MVP_Designator_StripMiner</li>
+      <!-- Add HaulPriority-->
+      <li>HaulPriority.Designator_HaulPriority</li>
+	  <li>HaulPriority.Designator_HaulPriorityHighPriorityOverride</li>
+	  <li>HaulPriority.Designator_Unforbid</li>
     </specialDesignatorClasses>
   </DesignationCategoryDef>
-  
+
   <DesignationCategoryDef>
     <DefName>Zone</DefName>
     <label>zone/Area</label>
@@ -39,7 +43,7 @@
     <order>800</order>
     <specialDesignatorClasses>
       <li>Designator_Cancel</li>
-      <li>Designator_Deconstruct</li> 
+      <li>Designator_Deconstruct</li>
       <li>Designator_ZoneAddStockpile_Resources</li>
       <li>Designator_ZoneAddStockpile_Dumping</li>
       <li>Designator_ZoneAdd_Growing</li>
@@ -97,7 +101,7 @@
       <li>Designator_Cancel</li>
       <li>Designator_Deconstruct</li>
     </specialDesignatorClasses>
-  </DesignationCategoryDef>  
+  </DesignationCategoryDef>
 
   <DesignationCategoryDef>
     <DefName>ProductionFood</DefName>
@@ -156,7 +160,7 @@
 
   <DesignationCategoryDef>
     <DefName>ProductionWeaponsArmor</DefName>
-    <label>Weapons / 
+    <label>Weapons /
 Armor</label>
     <description>Structures used for producing weapons and armor.</description>
     <order>610</order>
@@ -168,7 +172,7 @@ Armor</label>
 
   <DesignationCategoryDef>
     <DefName>ProductionGoods</DefName>
-    <label>Goods / 
+    <label>Goods /
 Services</label>
     <description>Structures used for producing miscellaneous goods and services.</description>
     <order>600</order>
@@ -256,5 +260,5 @@ Services</label>
       <li>Designator_RemoveFloor</li>
     </specialDesignatorClasses>
   </DesignationCategoryDef>
-  
+
 </Defs>
