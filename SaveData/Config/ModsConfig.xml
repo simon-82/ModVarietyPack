@@ -19,11 +19,11 @@
     <li>Rimsenal</li>
     <li>Rimsenal_Federation</li>
     <li>Rimsenal_Feral</li>
-    <li>AllowTool</li>    
+    <li>HaulPriorityLite</li>
+    <li>Hospitality</li>      
     <li>ModVarietyPack</li>
     <li>ModVarietyPack_CoreTextures</li>
     <li>ModVarietyPack_Robots</li>
     <li>ED-Shields_CR</li>
-    <li>Hospitality</li>    
   </activeMods>
 </ModsConfigData>
