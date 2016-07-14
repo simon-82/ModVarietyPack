@@ -46,12 +46,12 @@
   
   <ThingDef ParentName="FurnitureBase">
     <defName>GuestBed</defName>
-    <label>guest hide bed</label>
+    <label>guest bed</label>
     <Description>A place for guests to sleep during their stay.</Description>
     <ThingClass>Hospitality.Building_GuestBed</ThingClass>
     <graphicData>
-      <texPath>Buildings/Beds/BedHide</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
+      <texPath>Things/Building/Furniture/Bed/BedGuest</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(3,4)</drawSize>
       <damageData>
@@ -64,18 +64,17 @@
       <Flammability>1.0</Flammability>
       <Beauty>8</Beauty>
       <WorkToMake>870</WorkToMake>
-      <BedRestEffectiveness>0.95</BedRestEffectiveness>
+      <BedRestEffectiveness>1</BedRestEffectiveness>
       <Comfort>0.75</Comfort>
       <ImmunityGainSpeedFactor>1.1</ImmunityGainSpeedFactor>
     </statBases>
     <Size>(1,2)</Size>
     <stuffCategories>
-      <li>Leathery</li>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
     </stuffCategories>
-    <costStuffCount>10</costStuffCount>
-    <costList>
-      <WoodPlank>30</WoodPlank>
-    </costList>
+    <costStuffCount>35</costStuffCount>
     <building>
       <Bed_ShowSleeperBody>False</Bed_ShowSleeperBody>
       <Bed_HealTickInterval>2100</Bed_HealTickInterval>
@@ -84,8 +83,6 @@
       <li Class="CompProperties_AffectedByFacilities">
         <linkableFacilities>
           <li>VitalsMonitor</li>
-          <li>ClutterCabinetA</li>
-          <li>ClutterLockerA</li>
         </linkableFacilities>
       </li>
     </comps>
