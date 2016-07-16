@@ -7,5 +7,8 @@
         <PostLoadInjectors>            
             <li>ArchitectSense.Bootstrap</li>
         </PostLoadInjectors>
+        <SpecialInjectors>              
+            <li>MVP.MVP_Detours</li>
+        </SpecialInjectors> 
     </CommunityCoreLibrary.ModHelperDef>
 </Defs>
