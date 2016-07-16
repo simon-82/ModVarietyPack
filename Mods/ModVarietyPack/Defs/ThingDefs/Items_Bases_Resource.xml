@@ -3,22 +3,22 @@
 	<!-- item bases -->
 	<!-- ressource -->
 	<ThingDef Name="ResourceBase" Abstract="True">
-		<thingClass>ThingWithComps</thingClass>
-		<label>unspecified resource</label>
-		<category>Item</category>
-		<resourceReadoutPriority>Middle</resourceReadoutPriority>
-		<useHitPoints>true</useHitPoints>
-		<selectable>true</selectable>
-		<altitudeLayer>Item</altitudeLayer>
-		<stackLimit>75</stackLimit>
-		<comps>
-			<li Class="CompProperties_Forbiddable" />
-		</comps>
-		<alwaysHaulable>true</alwaysHaulable>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<rotatable>false</rotatable>
-		<pathCost>15</pathCost>
-	</ThingDef>
+    <thingClass>ThingWithComps</thingClass>
+    <label>unspecified resource</label>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
 
 	<ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
 		<graphicData>
@@ -45,7 +45,7 @@
 			<li>PlantFoodRaw</li>
 		</thingCategories>
 	</ThingDef>
-	<ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase">
+	<ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase" >
 		<ingestible>
 			<preferability>Awful</preferability>
 			<!-- MVP modded to scale with plants
@@ -58,600 +58,17 @@
 		</thingCategories>
 	</ThingDef>
 
-	<!-- raw fish base -->
-	<ThingDef Name="FishBase" Abstract="True" ParentName="OrganicProductBase">
-		<label>Base fish properties</label>
-		<soundInteract>Food_Drop</soundInteract>
-		<soundDrop>Food_Drop</soundDrop>
-		<tickerType>Rare</tickerType>
-		<statBases>
-			<Flammability>1.0</Flammability>
-			<DeteriorationRate>10</DeteriorationRate>
-			<Beauty>-10</Beauty>
-		</statBases>
-		<comps>
-			<li Class="CompProperties_Rottable">
-				<daysToRotStart>2</daysToRotStart>
-			</li>
-		</comps>
-		<thingCategories>
-			<li>CorpsesFish</li>
-		</thingCategories>
-	</ThingDef>
-
-	<!-- butchered fish base -->
-	<ThingDef Name="SeaProductBase" Abstract="True" ParentName="OrganicProductBase">
-		<soundInteract>Food_Drop</soundInteract>
-		<soundDrop>Food_Drop</soundDrop>
-		<socialPropernessMatters>true</socialPropernessMatters>
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-			<DeteriorationRate>10</DeteriorationRate>
-			<Beauty>-20</Beauty>
-		</statBases>
-		<tickerType>Rare</tickerType>
-	</ThingDef>
-
-	<ThingDef Name="RawSeaFoodBase" Abstract="True" ParentName="SeaProductBase">
-		<label>Base sea food properties</label>
-		<comps>
-			<li Class="CompProperties_Rottable">
-				<daysToRotStart>4</daysToRotStart>
-				<rotDestroys>True</rotDestroys>
-			</li>
-		</comps>
-		<ingestible>
-			<foodType>Meat</foodType>
-			<preferability>Raw</preferability>
-			<nutrition>0.05</nutrition>
-			<eatEffect>EatMeat</eatEffect>
-			<soundEat>RawMeat_Eat</soundEat>
-		</ingestible>
-		<thingCategories>
-			<li>FoodFreshFish</li>
-		</thingCategories>
-	</ThingDef>
-
-
-	<!-- meal -->
-	<ThingDef Name="MealBase" Abstract="True">
-		<label>meal</label>
-		<thingClass>Meal</thingClass>
-		<category>Item</category>
-		<useHitPoints>true</useHitPoints>
-		<selectable>true</selectable>
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-		</statBases>
-		<altitudeLayer>Item</altitudeLayer>
-		<stackLimit>10</stackLimit>
-		<tickerType>Rare</tickerType>
-		<description>"Meal lacks desc."</description>
-		<socialPropernessMatters>true</socialPropernessMatters>
-		<thingCategories>
-			<li>FoodMeals</li>
-		</thingCategories>
-		<alwaysHaulable>true</alwaysHaulable>
-		<comps>
-			<li Class="CompProperties_Forbiddable" />
-		</comps>
-		<pathCost>15</pathCost>
-		<resourceReadoutPriority>Last</resourceReadoutPriority>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<ingestible>
-			<foodType>Meal, Processed</foodType>
-			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-		</ingestible>
-	</ThingDef>
-
-	<ThingDef ParentName="MealBase" Name="MealRottable" Abstract="True">
-		<comps>
-			<li Class="CompProperties_Rottable">
-				<daysToRotStart>4</daysToRotStart>
-				<rotDestroys>true</rotDestroys>
-			</li>
-		</comps>
-	</ThingDef>
-
-
-	<!-- body part -->
-	<ThingDef Name="BodyPartBase" Abstract="True">
-		<label>body part</label>
-		<thingClass>ThingWithComps</thingClass>
-		<category>Item</category>
-		<useHitPoints>true</useHitPoints>
-		<selectable>true</selectable>
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-		</statBases>
-		<altitudeLayer>Item</altitudeLayer>
-		<tickerType>Never</tickerType>
-		<alwaysHaulable>true</alwaysHaulable>
-		<isBodyPartOrImplant>true</isBodyPartOrImplant>
-		<comps>
-			<li Class="CompProperties_Forbiddable" />
-		</comps>
-		<pathCost>10</pathCost>
-	</ThingDef>
-
-	<ThingDef ParentName="BodyPartBase" Name="OrganicBodyPartBase" Abstract="True">
-		<tickerType>Rare</tickerType>
-		<comps>
-			<li Class="CompProperties_Rottable">
-				<daysToRotStart>1</daysToRotStart>
-				<rotDestroys>true</rotDestroys>
-			</li>
-		</comps>
-	</ThingDef>
-
-
-	<!-- unfinished bases -->
-	<ThingDef Name="UnfinishedBase" Abstract="True">
-		<thingClass>UnfinishedThing</thingClass>
-		<category>Item</category>
-		<label>Unfinished thing</label>
-		<graphicData>
-			<texPath>Things/Item/Unfinished/UnfinishedSculpture</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<altitudeLayer>Item</altitudeLayer>
-		<useHitPoints>true</useHitPoints>
-		<isUnfinishedThing>true</isUnfinishedThing>
-		<selectable>true</selectable>
-		<tradeability>Never</tradeability>
-		<drawerType>RealtimeOnly</drawerType>
-		<!-- For CompForbiddable -->
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-		</statBases>
-		<comps>
-			<li Class="CompProperties_Forbiddable" />
-		</comps>
-		<alwaysHaulable>true</alwaysHaulable>
-		<rotatable>false</rotatable>
-		<pathCost>15</pathCost>
-		<thingCategories>
-			<li>Unfinished</li>
-		</thingCategories>
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
-		</stuffCategories>
-	</ThingDef>
-
-	<ThingDef ParentName="UnfinishedBase">
-		<defName>UnfinishedProsthesis</defName>
-		<label>Unfinished prosthesis</label>
-		<graphicData>
-			<texPath>Items/MedProsthesis_unfinished</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
-		</stuffCategories>
-	</ThingDef>
 
 
 
 
 
-	<!-- metals raw -->
-	<!-- vanilla overrides -->
-	<ThingDef ParentName="ResourceBase">
-		<defName>Steel</defName>
-		<label>steel ore</label>
-		<description>An iron-carbon metal alloy used for building structures, tools, and weapons.</description>
-		<graphicData>
-			<texPath>Things/Item/Resource/Metal</texPath>
-			<graphicClass>Graphic_Random</graphicClass>
-			<color>(255,255,255)</color>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Metal_Drop</soundDrop>
-		<statBases>
-			<MarketValue>2.0</MarketValue>
-			<SharpDamageMultiplier>1</SharpDamageMultiplier>
-			<BluntDamageMultiplier>1</BluntDamageMultiplier>
-		</statBases>
-		<useHitPoints>false</useHitPoints>
-		<slagDef>ChunkSlagSteel</slagDef>
-		<thingCategories>
-			<li>ResourcesRaw</li>
-		</thingCategories>
-		<stuffProps>
-			<categories>
-				<li>Stuff_Locker</li>
-			</categories>
-			<constructEffect>ConstructMetal</constructEffect>
-			<color>(102,102,105)</color>
-			<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
-			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-			<statFactors>
-				<MaxHitPoints>1</MaxHitPoints>
-				<Beauty>1</Beauty>
-				<Flammability>0.2</Flammability>
-				<MeleeWeapon_Cooldown>1</MeleeWeapon_Cooldown>
-			</statFactors>
-			<smeltable>true</smeltable>
-		</stuffProps>
-	</ThingDef>
-	<ThingDef ParentName="ResourceBase">
-		<defName>Plasteel</defName>
-		<label>plasteel ore</label>
-		<description>Advanced spacer tech structural material. Plasteel is extremely strong due to its unique molecular structure.</description>
-		<graphicData>
-			<texPath>Things/Item/Resource/Plasteel</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Metal_Drop</soundDrop>
-		<useHitPoints>false</useHitPoints>
-		<statBases>
-			<MarketValue>27</MarketValue>
-			<SharpDamageMultiplier>1.2</SharpDamageMultiplier>
-			<BluntDamageMultiplier>1.0</BluntDamageMultiplier>
-		</statBases>
-		<thingCategories>
-			<li>ResourcesRaw</li>
-		</thingCategories>
-		<stuffProps>
-			<categories>
-				<li>Stuff_Locker</li>
-			</categories>
-			<constructEffect>ConstructMetal</constructEffect>
-			<color>(160,178,181)</color>
-			<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
-			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-			<statFactors>
-				<MaxHitPoints>2.8</MaxHitPoints>
-				<Beauty>1.2</Beauty>
-				<Flammability>0.1</Flammability>
-				<WorkToMake>2.0</WorkToMake>
-				<MeleeWeapon_Cooldown>0.8</MeleeWeapon_Cooldown>
-			</statFactors>
-			<smeltable>true</smeltable>
-		</stuffProps>
-	</ThingDef>
-
-	<!-- add Bauxite -->
-	<ThingDef ParentName="ResourceBase">
-		<defName>Bauxite</defName>
-		<label>bauxite</label>
-		<description>Bauxite, an aluminium ore, is the main source of aluminium.</description>
-		<graphicData>
-			<texPath>Items/Bauxite</texPath>
-			<graphicClass>Graphic_Random</graphicClass>
-			<color>(255,255,255)</color>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Metal_Drop</soundDrop>
-		<statBases>
-			<MarketValue>2.0</MarketValue>
-			<SharpDamageMultiplier>1</SharpDamageMultiplier>
-			<BluntDamageMultiplier>1</BluntDamageMultiplier>
-		</statBases>
-		<useHitPoints>false</useHitPoints>
-		<thingCategories>
-			<li>ResourcesRaw</li>
-		</thingCategories>
-		<stuffProps>
-			<categories>
-				<li>Stuff_Locker</li>
-			</categories>
-			<constructEffect>ConstructMetal</constructEffect>
-			<color>(102,102,105)</color>
-			<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
-			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-			<statFactors>
-				<MaxHitPoints>1</MaxHitPoints>
-				<Beauty>1</Beauty>
-				<Flammability>0.2</Flammability>
-				<MeleeWeapon_Cooldown>1</MeleeWeapon_Cooldown>
-			</statFactors>
-			<smeltable>true</smeltable>
-		</stuffProps>
-	</ThingDef>
-
-
-	<!-- metals smelted -->
-	<ThingDef ParentName="ResourceBase">
-		<defName>AluBar</defName>
-		<label>Aluminum bar</label>
-		<description>Aluminum bars crafted from Bauxite. Useful for building structures, weapons, and even some prosthetics.</description>
-		<graphicData>
-			<texPath>Items/AluBar</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Metal_Drop</soundDrop>
-		<statBases>
-			<MarketValue>2.4</MarketValue>
-			<SharpDamageMultiplier>1</SharpDamageMultiplier>
-			<BluntDamageMultiplier>1</BluntDamageMultiplier>
-		</statBases>
-		<useHitPoints>false</useHitPoints>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<stuffProps>
-			<stuffAdjective>aluminum</stuffAdjective>
-			<categories>
-				<li>Metallic</li>
-			</categories>
-			<constructEffect>ConstructMetal</constructEffect>
-			<color>(102,102,105)</color>
-			<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
-			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-			<statFactors>
-				<MaxHitPoints>1.0</MaxHitPoints>
-				<Beauty>1.0</Beauty>
-				<Flammability>0.2</Flammability>
-				<WorkToMake>1.0</WorkToMake>
-				<DoorOpenSpeed>1.0</DoorOpenSpeed>
-				<MeleeWeapon_Cooldown>1.0</MeleeWeapon_Cooldown>
-			</statFactors>
-		</stuffProps>
-	</ThingDef>
-	<ThingDef ParentName="ResourceBase">
-		<defName>SteelBar</defName>
-		<label>steel bar</label>
-		<description>Steel bars crafted from ore. Useful for building structures, weapons, and even some prosthetics.</description>
-		<graphicData>
-			<texPath>Items/SteelBar</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Metal_Drop</soundDrop>
-		<statBases>
-			<MarketValue>2.4</MarketValue>
-			<SharpDamageMultiplier>1</SharpDamageMultiplier>
-			<BluntDamageMultiplier>1</BluntDamageMultiplier>
-		</statBases>
-		<useHitPoints>false</useHitPoints>
-		<slagDef>ChunkSlagSteel</slagDef>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<stuffProps>
-			<stuffAdjective>steel</stuffAdjective>
-			<categories>
-				<li>Metallic</li>
-			</categories>
-			<constructEffect>ConstructMetal</constructEffect>
-			<color>(102,102,105)</color>
-			<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
-			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-			<statFactors>
-				<MaxHitPoints>1.0</MaxHitPoints>
-				<Beauty>1.0</Beauty>
-				<Flammability>0.2</Flammability>
-				<WorkToMake>1.0</WorkToMake>
-				<DoorOpenSpeed>1.0</DoorOpenSpeed>
-				<MeleeWeapon_Cooldown>1.0</MeleeWeapon_Cooldown>
-			</statFactors>
-		</stuffProps>
-	</ThingDef>
-	<ThingDef ParentName="ResourceBase">
-		<defName>PlasteelBar</defName>
-		<label>plasteel bar</label>
-		<description>Plasteel bars crafted from ore. Useful for building structures, weapons, and even some prosthetics.</description>
-		<graphicData>
-			<texPath>Items/PlasteelBar</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Metal_Drop</soundDrop>
-		<useHitPoints>false</useHitPoints>
-		<statBases>
-			<MarketValue>22</MarketValue>
-			<SharpDamageMultiplier>1.2</SharpDamageMultiplier>
-			<BluntDamageMultiplier>1.0</BluntDamageMultiplier>
-		</statBases>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<stuffProps>
-			<stuffAdjective>plasteel</stuffAdjective>
-			<categories>
-				<li>Metallic</li>
-			</categories>
-			<constructEffect>ConstructMetal</constructEffect>
-			<color>(160,178,181)</color>
-			<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
-			<statFactors>
-				<MaxHitPoints>3.0</MaxHitPoints>
-				<Beauty>1.2</Beauty>
-				<Flammability>0.1</Flammability>
-				<WorkToMake>2.0</WorkToMake>
-				<DoorOpenSpeed>0.8</DoorOpenSpeed>
-				<MeleeWeapon_Cooldown>0.8</MeleeWeapon_Cooldown>
-			</statFactors>
-		</stuffProps>
-	</ThingDef>
 
 
 
 
 
-	<!-- WoodPlank -->
-	<ThingDef ParentName="ResourceBase">
-		<defName>WoodPlank</defName>
-		<label>wood plank</label>
-		<description>Wood planks crafted from logs. Useful for building structures, weapons, and even simple prosthetics.</description>
-		<graphicData>
-			<texPath>Items/WoodPlank</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Wood_Drop</soundInteract>
-		<soundDrop>Wood_Drop</soundDrop>
-		<statBases>
-			<MarketValue>1.7</MarketValue>
-			<Flammability>1.0</Flammability>
-			<DeteriorationRate>1.0</DeteriorationRate>
-			<SharpDamageMultiplier>0.3</SharpDamageMultiplier>
-			<BluntDamageMultiplier>0.8</BluntDamageMultiplier>
-		</statBases>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<stuffProps>
-			<stuffAdjective>wood plank</stuffAdjective>
-			<categories>
-				<li>Woody</li>
-			</categories>
-			<color>(240,190,120)</color>
-			<constructEffect>ConstructWood</constructEffect>
-			<appearance>Planks</appearance>
-			<soundImpactStuff>BulletImpactWood</soundImpactStuff>
-			<soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
-			<soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
-			<statOffsets>
-				<Beauty>2</Beauty>
-			</statOffsets>
-			<statFactors>
-				<MaxHitPoints>0.5</MaxHitPoints>
-				<Beauty>1.5</Beauty>
-				<Flammability>1</Flammability>
-				<WorkToMake>0.7</WorkToMake>
-				<DoorOpenSpeed>1.3</DoorOpenSpeed>
-				<MeleeWeapon_Cooldown>0.9</MeleeWeapon_Cooldown>
-			</statFactors>
-		</stuffProps>
-		<verbs>
-			<li>
-				<verbClass>Verb_MeleeAttack</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<meleeDamageDef>Blunt</meleeDamageDef>
-			</li>
-		</verbs>
-	</ThingDef>
 
-
-
-
-
-	<!-- Sand, Glass + Products -->
-	<ThingDef ParentName="ResourceBase">
-		<defName>Sand</defName>
-		<label>sand</label>
-		<description>Sand made from stone chunks. For making glass and other items.</description>
-		<graphicData>
-			<texPath>Items/Sand</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Wood_Drop</soundInteract>
-		<soundDrop>Wood_Drop</soundDrop>
-		<statBases>
-			<MarketValue>1.8</MarketValue>
-		</statBases>
-		<stackLimit>300</stackLimit>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<stuffProps>
-			<categories>
-				<li>Stuff_Locker</li>
-			</categories>
-		</stuffProps>
-	</ThingDef>
-
-	<ThingDef ParentName="ResourceBase">
-		<defName>Glass</defName>
-		<label>glass</label>
-		<description>Glass made from sand. Used for building structures and items.</description>
-		<graphicData>
-			<texPath>Items/Glass</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Metal_Drop</soundDrop>
-		<statBases>
-			<MarketValue>4.3</MarketValue>
-		</statBases>
-		<stackLimit>100</stackLimit>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<stuffProps>
-			<stuffAdjective>glass</stuffAdjective>
-			<categories>
-				<li>Glassy</li>
-			</categories>
-			<color>(205,230,250)</color>
-			<constructEffect>ConstructMetal</constructEffect>
-			<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
-			<statFactors>
-				<MaxHitPoints>0.2</MaxHitPoints>
-				<Flammability>1</Flammability>
-				<MeleeWeapon_Cooldown>0.8</MeleeWeapon_Cooldown>
-			</statFactors>
-		</stuffProps>
-	</ThingDef>
-
-	<ThingDef ParentName="ResourceBase">
-		<defName>SafetyGlass</defName>
-		<label>safety glass</label>
-		<description>Stronger than normal glass but harder to work with.</description>
-		<graphicData>
-			<texPath>Items/SafetyGlass</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Metal_Drop</soundDrop>
-		<statBases>
-			<MarketValue>18</MarketValue>
-		</statBases>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<stuffProps>
-			<stuffAdjective>safetyglass</stuffAdjective>
-			<categories>
-				<li>Glassy</li>
-			</categories>
-			<color>(240,240,245)</color>
-			<constructEffect>ConstructMetal</constructEffect>
-			<soundImpactStuff>BulletImpactMetal</soundImpactStuff>
-			<statFactors>
-				<MaxHitPoints>1</MaxHitPoints>
-				<Flammability>0</Flammability>
-				<MeleeWeapon_Cooldown>0.8</MeleeWeapon_Cooldown>
-			</statFactors>
-		</stuffProps>
-	</ThingDef>
-
-	<ThingDef ParentName="ResourceBase">
-		<defName>Silicon</defName>
-		<label>silicon</label>
-		<description>A lump of silicon.</description>
-		<graphicData>
-			<texPath>Items/Silicon</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<resourceReadoutPriority>Last</resourceReadoutPriority>
-		<soundInteract>Standard_Drop</soundInteract>
-		<soundDrop>Standard_Drop</soundDrop>
-		<useHitPoints>false</useHitPoints>
-		<resourceReadoutAlwaysShow>false</resourceReadoutAlwaysShow>
-		<statBases>
-			<MarketValue>4</MarketValue>
-		</statBases>
-		<thingCategories>
-			<li>ResourcesRaw</li>
-		</thingCategories>
-		<stackLimit>100</stackLimit>
-	</ThingDef>
 
 
 
@@ -661,7 +78,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>EthanolFuel</defName>
 		<label>ethanol fuel</label>
-		<description>A can of ethanol fuel. It can be used to fuel the steam generator, or sold to a trader.</description>
+		<description>A can of ethanol fuel.  It can be used to fuel the steam generator, or sold to a trader.</description>
 		<graphicData>
 			<texPath>Items/EthanolFuel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -702,6 +119,7 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>BucketWater</defName>
 		<label>bucket of water</label>
@@ -725,6 +143,7 @@
 		</stuffProps>
 		<stackLimit>20</stackLimit>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>EnergyPack</defName>
 		<label>Energy pack</label>
@@ -751,10 +170,11 @@
 		</stuffProps>
 		<stackLimit>5</stackLimit>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>Electronics</defName>
 		<label>electronic chips</label>
-		<description>Electronic chips made from silicon and aluminum bars. Used in the construction of advanced structures</description>
+		<description>Electronic chips made from silicon and aluminum bars.  Used in the construction of advanced structures</description>
 		<graphicData>
 			<texPath>Items/Electronics</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -773,6 +193,7 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>IntegratedCircuitsBoard</defName>
 		<label>Integrated circuits board</label>
@@ -799,6 +220,7 @@
 		</stuffProps>
 		<stackLimit>50</stackLimit>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>Biomatter</defName>
 		<label>biomatter</label>
@@ -807,8 +229,9 @@
 			<texPath>Items/Biomatter</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<!--   food_drop is gone in a14
 		<soundInteract>Food_Drop</soundInteract>
-		<soundDrop>Food_Drop</soundDrop>
+		<soundDrop>Food_Drop</soundDrop> -->
 		<statBases>
 			<MarketValue>20</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
@@ -836,6 +259,7 @@
 		</comps>
 		<rotatable>true</rotatable>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>WeaponParts</defName>
 		<label>weapon parts</label>
@@ -859,40 +283,7 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
-	<ThingDef ParentName="ResourceBase">
-		<defName>CannonShell</defName>
-		<label>cannon shell</label>
-		<description>Fired from cannon turret.</description>
-		<graphicData>
-			<texPath>Items/CannonShell</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Standard_Drop</soundDrop>
-		<tickerType>Normal</tickerType>
-		<stackLimit>50</stackLimit>
-		<statBases>
-			<MarketValue>14</MarketValue>
-			<MaxHitPoints>70</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-			<DeteriorationRate>1</DeteriorationRate>
-		</statBases>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<comps>
-			<li Class="CompProperties_Explosive">
-				<explosiveRadius>2.9</explosiveRadius>
-				<explosiveDamageType>Bomb</explosiveDamageType>
-				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
-				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
-				<wickTicks>
-					<min>10</min>
-					<max>30</max>
-				</wickTicks>
-			</li>
-		</comps>
-	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>MineralSonarModule</defName>
 		<label>Mineral sonar module</label>
@@ -914,32 +305,7 @@
 		</thingCategories>
 		<stackLimit>4</stackLimit>
 	</ThingDef>
-	<ThingDef ParentName="ResourceBase">
-		<defName>PileOfBooks</defName>
-		<label>pile of books</label>
-		<description>A random assortment of books. Most are old and discarded classics, but occasionally a good quality book can be found.</description>
-		<graphicData>
-			<texPath>Items/PileOfBooks</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<resourceReadoutPriority>First</resourceReadoutPriority>
-		<soundInteract>Wood_Drop</soundInteract>
-		<soundDrop>Wood_Drop</soundDrop>
-		<useHitPoints>false</useHitPoints>
-		<statBases>
-			<MarketValue>35</MarketValue>
-		</statBases>
-		<stackLimit>10</stackLimit>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<tradeTags>
-			<li>Exotic</li>
-			<li>JoyItem</li>
-		</tradeTags>
-		<techLevel>Spacer</techLevel>
-		<canBeSpawningInventory>true</canBeSpawningInventory>
-	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>PaintingSupplies</defName>
 		<label>painting supplies</label>
@@ -971,6 +337,9 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
+
+
+
 
 
 

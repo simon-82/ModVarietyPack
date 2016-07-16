@@ -1,29 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModsConfigData>
-  <buildNumber>1135</buildNumber>
+  <buildNumber>1234</buildNumber>
   <activeMods>
     <li>Core</li>
     <li>Community Core Library</li>
-    <li>EdBModOrder</li>
-    <li>CombatRealism</li>
-    <li>EdBColonistBar</li>
-    <li>EdBInventory</li>
-    <li>EdBPrepareCarefully</li>
-    <li>EnhancedTabs</li>
-    <li>kNumbers</li>
-    <li>FluffyRelations</li>
-    <li>FluffyBreakdowns</li>
-    <li>kSmartOptimizeApparel</li>
-    <li>LT_Infusion_CR</li>
-    <li>RW_Manager</li>
-    <li>Rimsenal</li>
-    <li>Rimsenal_Federation</li>
-    <li>Rimsenal_Feral</li>
-    <li>HaulPriorityLite</li>
-    <li>Hospitality</li>      
     <li>ModVarietyPack</li>
-    <li>ModVarietyPack_CoreTextures</li>
-    <li>ModVarietyPack_Robots</li>
-    <li>ED-Shields_CR</li>
   </activeMods>
 </ModsConfigData>
