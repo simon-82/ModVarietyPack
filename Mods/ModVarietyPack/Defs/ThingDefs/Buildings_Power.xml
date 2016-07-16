@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Buildings>
 	<!-- Vanilla overrides -->
 	<ThingDef ParentName="BuildingBase">
@@ -57,7 +57,9 @@
 		<designationCategory>Power</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
 		<designationHotKey>U</designationHotKey>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<!-- MVP Building_SmallSolar (overrides vanilla) -->
@@ -98,14 +100,16 @@
 				<basePowerConsumption>-1</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Power</designationCategory>
 		<staticSunShadowHeight>0.20</staticSunShadowHeight>
 		<designationHotkey>L</designationHotkey>
 		<constructEffect>ConstructMetal</constructEffect>
-		<researchPrerequisites><li>PowerII</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerII</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -145,7 +149,7 @@
 				<basePowerConsumption>-3600</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<rotatable>false</rotatable>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
@@ -160,7 +164,9 @@
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
 		<designationHotkey>G</designationHotkey>
-		<researchPrerequisites><li>GeothermalPower</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>GeothermalPower</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 
@@ -218,14 +224,16 @@
 				<compClass>CompHeatPusherPowered</compClass>
 				<heatPerSecond>4</heatPerSecond>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<designationCategory>Power</designationCategory>
 		<staticSunShadowHeight>0.5</staticSunShadowHeight>
 		<designationHotkey>F</designationHotkey>
 		<constructEffect>ConstructMetal</constructEffect>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -272,14 +280,16 @@
 				<startElectricalFires>true</startElectricalFires>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Power</designationCategory>
 		<staticSunShadowHeight>0.5</staticSunShadowHeight>
 		<constructEffect>ConstructMetal</constructEffect>
 		<designationHotkey>B</designationHotkey>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<!-- power switch mod (overrides vanilla) -->
@@ -320,7 +330,7 @@
 				<compClass>CompPowerTransmitter</compClass>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 		</comps>
 		<rotatable>false</rotatable>
 		<selectable>true</selectable>
@@ -384,9 +394,11 @@
 				<basePowerConsumption>-2000</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
-		<researchPrerequisites><li>PowerI</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 
@@ -403,8 +415,8 @@
 			<texPath>Buildings/WirelessPowerNode</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shadowData>
-			<volume>(0.3, 0.6, 0.3)</volume>
-		  </shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+			</shadowData>
 		</graphicData>
 		<altitudeLayer>BuildingTall</altitudeLayer>
 		<passability>Impassable</passability>
@@ -426,7 +438,7 @@
 				<basePowerConsumption>0</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 		</comps>
 		<size>(1,1)</size>
 		<costList>
@@ -437,11 +449,10 @@
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<designationCategory>Power</designationCategory>
-		<researchPrerequisites><li>WirelessPower_Research</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>WirelessPower_Research</li>
+		</researchPrerequisites>
 	</ThingDef>
-
-
-
 
 
 
@@ -461,13 +472,13 @@
 			<linkFlags>
 				<li>PowerConduit</li>
 			</linkFlags>
-	  <damageData>
-		<rect>(0,0.35,1,0.3)</rect>
-	  </damageData>
+			<damageData>
+				<rect>(0,0.35,1,0.3)</rect>
+			</damageData>
 		</graphicData>
-	<blueprintGraphicData>
-		<texPath>Buildings/HiddenPowerConduit/PowerConduit_Invisible_Blueprint_Atlas</texPath>
-	</blueprintGraphicData>
+		<blueprintGraphicData>
+			<texPath>Buildings/HiddenPowerConduit/PowerConduit_Invisible_Blueprint_Atlas</texPath>
+		</blueprintGraphicData>
 		<uiIconPath>Buildings/HiddenPowerConduit/PowerConduit_Invisible_MenuIcon</uiIconPath>
 		<building>
 			<isInert>true</isInert>
@@ -505,12 +516,10 @@
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Power</designationCategory>
 		<constructEffect>ConstructMetal</constructEffect>
-		<researchPrerequisites><li>PowerII</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerII</li>
+		</researchPrerequisites>
 	</ThingDef>
-
-
-
-
 
 
 
@@ -584,19 +593,12 @@
 				<rotatorSpeedIdle>0.5</rotatorSpeedIdle>
 				<rotatorSpeedActive>20.0</rotatorSpeedActive>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<placeWorkers>
 			<li>RT_SolarFlareShield.PlaceWorker_RTOnlyOneShieldOnMap</li>
 		</placeWorkers>
 	</ThingDef>
-
-
-
-
-
-
-
 
 
 
@@ -644,7 +646,7 @@
 				<glowRadius>3</glowRadius>
 				<glowColor>(0,255,246,1)</glowColor>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<DesignationCategory>Power</DesignationCategory>
 		<building>
@@ -695,7 +697,7 @@
 				<compClass>CompPowerTrader</compClass>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 			<li Class="CompProperties_Glower">
 				<glowRadius>10</glowRadius>
 				<glowColor>(0,255,246,1)</glowColor>
@@ -765,7 +767,7 @@
 				<glowRadius>6</glowRadius>
 				<glowColor>(217,112,33,0)</glowColor>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<rotatable>false</rotatable>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
@@ -783,8 +785,6 @@
 			<li>PlasmaPower</li>
 		</researchPrerequisites>
 	</ThingDef>
-
-
 
 
 
@@ -829,13 +829,15 @@
 				<basePowerConsumption>-1</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
 		<designationCategory>Power</designationCategory>
 		<staticSunShadowHeight>0.20</staticSunShadowHeight>
 		<constructEffect>ConstructMetal</constructEffect>
-		<researchPrerequisites><li>PowerII</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerII</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 
@@ -884,10 +886,12 @@
 				<basePowerConsumption>-5000</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 			<li Class="CompProperties_Flickable" />
 		</comps>
-		<researchPrerequisites><li>NaturalPower</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>NaturalPower</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -934,9 +938,11 @@
 				<basePowerConsumption>-1</basePowerConsumption>
 				<transmitsPower>true</transmitsPower>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
-		<researchPrerequisites><li>NaturalPower</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>NaturalPower</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<ThingDef ParentName="BuildingBase">
@@ -978,10 +984,10 @@
 				<glowRadius>10</glowRadius>
 				<glowColor>(0,0,220,1)</glowColor>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 			<li Class="CompProperties_Explosive">
-		        <explosiveRadius>5</explosiveRadius>
-		        <explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveRadius>5</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
 			</li>
 		</comps>
 		<rotatable>false</rotatable>
@@ -993,9 +999,10 @@
 			<ignoreNeedsPower>false</ignoreNeedsPower>
 		</building>
 		<constructEffect>ConstructMetal</constructEffect>
-		<researchPrerequisites><li>PowerIV</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>PowerIV</li>
+		</researchPrerequisites>
 	</ThingDef>
-
 
 
 
@@ -1029,8 +1036,8 @@
 		</building>
 		<costList>
 			<SteelBar>100</SteelBar>
- 			<Uranium>50</Uranium>
- 			<Electronics>25</Electronics>
+			<Uranium>50</Uranium>
+			<Electronics>25</Electronics>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -1079,8 +1086,8 @@
 		</building>
 		<costList>
 			<SteelBar>150</SteelBar>
-      		<Uranium>50</Uranium>
-      		<Electronics>60</Electronics>
+			<Uranium>50</Uranium>
+			<Electronics>60</Electronics>
 		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
@@ -1146,7 +1153,7 @@
 				<glowRadius>12</glowRadius>
 				<glowColor>(20,50,230,0)</glowColor>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<rotatable>true</rotatable>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
@@ -1161,11 +1168,6 @@
 			<li>PowerIV</li>
 		</researchPrerequisites>
 	</ThingDef>
-
-
-
-
-
 
 
 
@@ -1229,7 +1231,7 @@
 				<surgeMitigation>3000</surgeMitigation>
 				<breakdownOnTrip>true</breakdownOnTrip>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 	</ThingDef>
 
@@ -1275,8 +1277,8 @@
 		</statBases>
 		<leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
 		<costList>
-      		<AluBar>50</AluBar>
-      		<Electronics>10</Electronics>
+			<AluBar>50</AluBar>
+			<Electronics>10</Electronics>
 		</costList>
 		<building>
 			<ignoreNeedsPower>True</ignoreNeedsPower>
@@ -1292,10 +1294,10 @@
 				<surgeMitigation>3000</surgeMitigation>
 				<breakdownOnTrip>false</breakdownOnTrip>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 	</ThingDef>
 
 
-	
+
 </Buildings>

@@ -1,47 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResearchProjectDefs>
-	<!--=== Comm ===-->
+	<!--=== Communication + Manager Mod ===-->
 	<ResearchProjectDef>
 		<defName>MicroelectronicsBasics</defName>
 		<label>communications</label>
 		<description>"I was stargazing last night, it was wonderful! I saw one star was moving faster than all the others. So cool!" \n"Wait, maybe that wasn't a star. Maybe it was a space ship passing by. We need to build a Communications Console so we can contact them when they fly by next time!" \n"A telephone you mean?" \n"Um, yes, basically ... Only bigger."</description>
 		<totalCost>400</totalCost>
-	</ResearchProjectDef>	
-	
-	<!--  
+	</ResearchProjectDef>
+
 	<ResearchProjectDef>
-		<defName>AdvancedCommunications</defName>
-		<label>communications II</label>
-		<description>"I was stargazing last night, it was wonderful! I saw one star was moving faster than all the others. So cool!" \n"Wait, maybe that wasn't a star. Maybe it was a space ship passing by. We need to build a Communications Console so we can contact them when they fly by next time!" \n"A telephone you mean?" \n"Uhm, yes, basically ... Only bigger."</description>
-		<totalCost>1100</totalCost>
+		<defName>ManagingSoftware</defName>
+		<label>basic managing software</label>
+		<description>Develop basic software for colony management. \nAllows building a manager desks with a computer, pre-installed with a host of guaranteed bug free™ managing software.
+		</description>
+		<totalCost>1200</totalCost>
 		<prerequisites>
-			<li>Communications</li>
+			<li>MicroelectronicsBasics</li>
 		</prerequisites>
 	</ResearchProjectDef>
-	
 
 	<ResearchProjectDef>
-        <defName>ManagingSoftware</defName>
-        <label>basic managing software</label>
-        <description>Develop basic software for colony management. \nAllows building a manager desks with a computer, pre-installed with a host of guaranteed bug free™ managing software.
-        </description>
-        <totalCost>1200</totalCost>
-        
-    </ResearchProjectDef>
+		<defName>AdvancedManagingSoftware</defName>
+		<label>advanced managing software</label>
+		<description>Develop advanced software for colony management. \nAdvancements in AI and colony-aware computers allow the building of Colony Aware Supercomputers, preinstalled with FluffyOS™. Some colonists have reported doors opening and closing, airconditioning systems going haywire, and electric smelters suddenly turning on. Nevertheless, the manufacturer guarantees™ that FluffyOS™ is not programmed to kill colonists.
+		</description>
+		<totalCost>2500</totalCost>
+		<prerequisites>
+			<li>ManagingSoftware</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-    <ResearchProjectDef>
-        <defName>AdvancedManagingSoftware</defName>
-        <label>advanced managing software</label>
-        <description>Develop advanced software for colony management. \nAdvancements in AI and colony-aware computers allow the building of Colony Aware Supercomputers, preinstalled with FluffyOS™. Some colonists have reported doors opening and closing, airconditioning systems going haywire, and electric smelters suddenly turning on. Nevertheless, the manufacturer guarantees™ that FluffyOS™ is not programmed to kill colonists. 
-        </description>
-        <totalCost>2500</totalCost>
-        <prerequisites>
-            <li>ManagingSoftware</li>
-        </prerequisites>
-    </ResearchProjectDef>
-    -->
-
-    <!--  <ResearchProjectDef>
+	<ResearchProjectDef>
         <defName>PowerManagement</defName>
         <label>power management</label>
         <description>Create management software to monitor the colony's power usage. 
@@ -55,73 +44,72 @@
             <specialAction>FluffyManager.ResearchWorkers.UnlockPowerTab</specialAction>
           </li>
         </researchMods>
-    </ResearchProjectDef> 
-    -->
+    </ResearchProjectDef>
 
-
+    
 
 
 
 
 	<!--=== Agriculture ===-->
-    <ResearchProjectDef>
+	<ResearchProjectDef>
 		<defName>AgricultureI</defName>
 		<label>Agriculture I</label>
 		<description>"What do you mean? These potato salads are hard work!" \n"No, no I know. I'm just saying we could plant something different for a change. Maybe we could even build a ChemLab, plant some Xerigium to make herbal medicine." \n"And what about fences? Fences are pretty!"</description>
 		<totalCost>600</totalCost>
-	</ResearchProjectDef>		
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>HospitalBed</defName>
-			<label>Medicine I</label>
-			<description>"Outch!" \n... \n"What have you done?! Sigh... I'm afraid that doesn't look good. I think we need to amputate. There is nothing else we can do." \n"Oh my. We should have made some real medicine much earlier I guess."</description>
-			<totalCost>500</totalCost>
-			<prerequisites>
-				<li>AgricultureI</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>HospitalBed</defName>
+		<label>Medicine I</label>
+		<description>"Outch!" \n... \n"What have you done?! Sigh... I'm afraid that doesn't look good. I think we need to amputate. There is nothing else we can do." \n"Oh my. We should have made some real medicine much earlier I guess."</description>
+		<totalCost>500</totalCost>
+		<prerequisites>
+			<li>AgricultureI</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>VitalsMonitor</defName>
-			<label>Medicine II</label>
-			<description>"This Vitals Monitor will help us to take care of our sick friends. I also think we can make much better prostetics by using steel and aluminum."</description>
-			<totalCost>1000</totalCost>
-			<prerequisites>
-				<li>HospitalBed</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>VitalsMonitor</defName>
+		<label>Medicine II</label>
+		<description>"This Vitals Monitor will help us to take care of our sick friends. I also think we can make much better prostetics by using steel and aluminum."</description>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>HospitalBed</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>MedicineIII</defName>
-			<label>Medicine III</label>
-			<description>"It might be possible to grow replacement organs. But we need Biomatter for that." \n"Biomatter?" \n"Yes, we just extract it from human corpses. Let's build an Organ Vat." \n"Eww, you sure about that?"</description>
-			<totalCost>1500</totalCost>
-			<prerequisites>
-				<li>VitalsMonitor</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>MedicineIII</defName>
+		<label>Medicine III</label>
+		<description>"It might be possible to grow replacement organs. But we need Biomatter for that." \n"Biomatter?" \n"Yes, we just extract it from human corpses. Let's build an Organ Vat." \n"Eww, you sure about that?"</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>VitalsMonitor</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>MedicineIV</defName>
-			<label>Medicine IV</label>
-			<description>"Bionics! I already feel like a robot! That is, if robots could feel anything. Oh well, forget about it and give me a bionic leg already!" \n"Bionics are nice and stuff, but with all the injuries we had I feel it's time to build a Dermal Regenerator to heal the scars."</description>
-			<totalCost>2000</totalCost>
-			<prerequisites>
-				<li>MedicineIII</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>MedicineIV</defName>
+		<label>Medicine IV</label>
+		<description>"Bionics! I already feel like a robot! That is, if robots could feel anything. Oh well, forget about it and give me a bionic leg already!" \n"Bionics are nice and stuff, but with all the injuries we had I feel it's time to build a Dermal Regenerator to heal the scars."</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>MedicineIII</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>MedicineV</defName>
-			<label>Medicine V</label>
-			<description>"Nice bionic arm you got there. You like that retro look, don't you?" \n"What?! It's so futuristic and cool." \n"Well, if we had upgraded it before we installed it, you could have a much better arm now, you know." \n"And you are telling me this now? Great..."</description>
-			<totalCost>2000</totalCost>
-			<prerequisites>
-				<li>MedicineIV</li>
-			</prerequisites>
-		</ResearchProjectDef>
-	
-    <ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>MedicineV</defName>
+		<label>Medicine V</label>
+		<description>"Nice bionic arm you got there. You like that retro look, don't you?" \n"What?! It's so futuristic and cool." \n"Well, if we had upgraded it before we installed it, you could have a much better arm now, you know." \n"And you are telling me this now? Great..."</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>MedicineIV</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
 		<defName>AgricultureII</defName>
 		<label>Agriculture II</label>
 		<description>"These new plants grow faster and yield more than the ones we have been growing so far. But we need to fertilize the soil for them to grow. I'll set up a composter so we can get that going."</description>
@@ -131,26 +119,26 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>Brewing</defName>
-			<label>Cooking I</label>
-			<description>"Yummy!"</description>
-			<totalCost>1000</totalCost>
-			<prerequisites>
-				<li>AgricultureII</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>Brewing</defName>
+		<label>Cooking I</label>
+		<description>"Yummy!"</description>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>AgricultureII</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>CookingII</defName>
-			<label>Cooking II</label>
-			<description>"How about some nice hot drinks with the good food we have now?" \n"Sure, coffee or tea?" \n"Spectago tea for me! I always feel so funny after drinking that." \n "No, no we first need some better cooking tools, this all takes way too long. And to make some money, let's make some cigars and cigarillos and sell them to the traders."</description>
-			<totalCost>1500</totalCost>
-			<prerequisites>
-				<li>Brewing</li>
-			</prerequisites>
-		</ResearchProjectDef>				
-	
+	<ResearchProjectDef>
+		<defName>CookingII</defName>
+		<label>Cooking II</label>
+		<description>"How about some nice hot drinks with the good food we have now?" \n"Sure, coffee or tea?" \n"Spectago tea for me! I always feel so funny after drinking that." \n "No, no we first need some better cooking tools, this all takes way too long. And to make some money, let's make some cigars and cigarillos and sell them to the traders."</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
 	<ResearchProjectDef>
 		<defName>Hydroponics</defName>
 		<label>Agriculture III</label>
@@ -160,7 +148,7 @@
 			<li>AgricultureII</li>
 		</prerequisites>
 	</ResearchProjectDef>
-	
+
 	<ResearchProjectDef>
 		<defName>AgricultureIV</defName>
 		<label>Agriculture IV</label>
@@ -171,7 +159,7 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
+	<ResearchProjectDef>
 		<defName>Cryptosleep</defName>
 		<label>Fruit Trees</label>
 		<description>"Even more plants you say?" \n"These fruit trees are the best! And we can harvest them without the need to replant them every time."</description>
@@ -185,14 +173,6 @@
 
 
 
-
-
-
-
-
-
-
-
 	<!--=== Construction ===-->
 	<ResearchProjectDef>
 		<defName>Stonecutting</defName>
@@ -201,17 +181,17 @@
 		<totalCost>450</totalCost>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>GlassworksResearch</defName>
-			<label>glassworks research</label>
-			<description>"By smelting sand we can produce glass." \n"Finally I get a light and a window in my room! Maybe even a glass autodoor!"</description>
-			<totalCost>600</totalCost>
-			<prerequisites>
-				<li>Stonecutting</li>
-			</prerequisites>
-		</ResearchProjectDef>		
+	<ResearchProjectDef>
+		<defName>GlassworksResearch</defName>
+		<label>glassworks research</label>
+		<description>"By smelting sand we can produce glass." \n"Finally I get a light and a window in my room! Maybe even a glass autodoor!"</description>
+		<totalCost>600</totalCost>
+		<prerequisites>
+			<li>Stonecutting</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<!-- gone in a13 
+	<!-- gone in a13 
 		<ResearchProjectDef>
 			<defName>PneumaticPicks</defName>
 			<label>mining</label>
@@ -220,29 +200,30 @@
 			<prerequisites>
 				<li>Stonecutting</li>
 			</prerequisites>
-		</ResearchProjectDef>-->
-
-				
-
-		<ResearchProjectDef>
-			<defName>TubeTelevision</defName>
-			<label>furniture I</label>
-			<description>"Argh, my back hurts! We really need some comfy furniture. And always playing horseshoes gets boring! What about a chess table?"</description>
-			<totalCost>800</totalCost>
-			<prerequisites>
-				<li>Stonecutting</li>
-			</prerequisites>
 		</ResearchProjectDef>
+		-->
 
-		<ResearchProjectDef>
-			<defName>MultiAnalyzer</defName>
-			<label>furniture II</label>
-			<description>"This room looks pretty comfy with the couch and stuff. But the walls are empty. Is somebody good at painting?"</description>
-			<totalCost>1500</totalCost>
-			<prerequisites>
-				<li>TubeTelevision</li>
-			</prerequisites>
-		</ResearchProjectDef>
+
+
+	<ResearchProjectDef>
+		<defName>TubeTelevision</defName>
+		<label>furniture I</label>
+		<description>"Argh, my back hurts! We really need some comfy furniture. And always playing horseshoes gets boring! What about a chess table?"</description>
+		<totalCost>800</totalCost>
+		<prerequisites>
+			<li>Stonecutting</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>MultiAnalyzer</defName>
+		<label>furniture II</label>
+		<description>"This room looks pretty comfy with the couch and stuff. But the walls are empty. Is somebody good at painting?"</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>TubeTelevision</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
 	<ResearchProjectDef>
 		<defName>ConstructionII</defName>
@@ -254,124 +235,124 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>MobileMineralSonar</defName>
-			<label>Mobile Mining Sonar</label>
-			<description>"Go mine some ore, we need it!" \n"Well, I don't see any ore. Where should I mine?" \n"Hm, maybe we should to scan the mountains for ore before we start digging. That would be clever."</description>
-			<totalCost>1000</totalCost>
-			<prerequisites>
-				<li>ConstructionII</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>MobileMineralSonar</defName>
+		<label>Mobile Mining Sonar</label>
+		<description>"Go mine some ore, we need it!" \n"Well, I don't see any ore. Where should I mine?" \n"Hm, maybe we should to scan the mountains for ore before we start digging. That would be clever."</description>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>ConstructionII</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>ElectricCremation</defName>
-			<label>cremation</label>
-			<description>"All this stuff! And all the corpses! I am not digging graves for all the tribals!" \n"Ok fine, let's build a crematorium."</description>
-			<totalCost>600</totalCost>
-			<prerequisites>
-				<li>ConstructionII</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ElectricCremation</defName>
+		<label>cremation</label>
+		<description>"All this stuff! And all the corpses! I am not digging graves for all the tribals!" \n"Ok fine, let's build a crematorium."</description>
+		<totalCost>600</totalCost>
+		<prerequisites>
+			<li>ConstructionII</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>StorageI</defName>
-			<label>Storage I</label>
-			<description>"So where did I put this pistol? What a mess!"</description>
-			<totalCost>600</totalCost>
-			<prerequisites>
-				<li>ConstructionII</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>StorageI</defName>
+		<label>Storage I</label>
+		<description>"So where did I put this pistol? What a mess!"</description>
+		<totalCost>600</totalCost>
+		<prerequisites>
+			<li>ConstructionII</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>StorageII</defName>
-			<label>Storage II</label>
-			<description>"Beam me up... Um, no seriously, how does this work?" \n"This is an advanced storage solution. When placed under a stockpile zone it will attempt to pile up adjacent items on top of itself, well over normal storage limits. Also does some teleporting."</description>
-			<totalCost>2000</totalCost>
-			<prerequisites>
-				<li>StorageI</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>StorageII</defName>
+		<label>Storage II</label>
+		<description>"Beam me up... Um, no seriously, how does this work?" \n"This is an advanced storage solution. When placed under a stockpile zone it will attempt to pile up adjacent items on top of itself, well over normal storage limits. Also does some teleporting."</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>StorageI</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>ResearchProject_RTQuantumChunkStorage</defName>
-				<label>quantum chunk storage</label>
-				<description>Allows quantum stockpiles to store rock chunks and metal slag. \nEvery quantum storage device now has a mode toggle, to allow freely switching between storing items and storing chunks, although it does require manual input from a colonist to finalize the swtich. \nSince chunks are considerably simpler than any other item that needs storage, and it's not as important to preserve all the miniscule details of their structure, they can be superposed much more efficiently. \nUnfortunately, this also means that only one chunk per space remains fully accessible at all times. The rest of them enter so-called 'deep-store' state, and will be ejected out of it if there's a free space on the stockpile. \nDespite this, the superposition is still stable, and does not require power to simply maintain. However, switching a stockpile full of chunks back to item mode can get messy.</description>
-				<totalCost>1000</totalCost>
-				<prerequisites>
-					<li>StorageII</li>
-				</prerequisites>
-				<researchMods>
-					<li>
-						<specialAction>RT_QuantumStorage.ResearchModsSpecial.EnableModeSwitch</specialAction>
-					</li>
-				</researchMods>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ResearchProject_RTQuantumChunkStorage</defName>
+		<label>quantum chunk storage</label>
+		<description>Allows quantum stockpiles to store rock chunks and metal slag. \nEvery quantum storage device now has a mode toggle, to allow freely switching between storing items and storing chunks, although it does require manual input from a colonist to finalize the swtich. \nSince chunks are considerably simpler than any other item that needs storage, and it's not as important to preserve all the miniscule details of their structure, they can be superposed much more efficiently. \nUnfortunately, this also means that only one chunk per space remains fully accessible at all times. The rest of them enter so-called 'deep-store' state, and will be ejected out of it if there's a free space on the stockpile. \nDespite this, the superposition is still stable, and does not require power to simply maintain. However, switching a stockpile full of chunks back to item mode can get messy.</description>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>StorageII</li>
+		</prerequisites>
+		<researchMods>
+			<li>
+				<specialAction>RT_QuantumStorage.ResearchModsSpecial.EnableModeSwitch</specialAction>
+			</li>
+		</researchMods>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>ResearchProject_RTStockpileCapacityUpgrade_1</defName>
-				<label>quantum stockpile capacity 1</label>
-				<description>Quantum stockpiles now store 1 more item stack or 2 more chunks per space, for a total of 5 and 10 per space, respectively.</description>
-				<totalCost>1000</totalCost>
-				<prerequisites>
-					<li>StorageII</li>
-				</prerequisites>
-				<researchMods>
-					<li>
-						<specialAction>RT_QuantumStorage.ResearchModsSpecial.ResetCapacity</specialAction>
-					</li>
-					<li>
-						<specialAction>RT_QuantumStorage.ResearchModsSpecial.IncreaseCapacity</specialAction>
-					</li>
-				</researchMods>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ResearchProject_RTStockpileCapacityUpgrade_1</defName>
+		<label>quantum stockpile capacity 1</label>
+		<description>Quantum stockpiles now store 1 more item stack or 2 more chunks per space, for a total of 5 and 10 per space, respectively.</description>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>StorageII</li>
+		</prerequisites>
+		<researchMods>
+			<li>
+				<specialAction>RT_QuantumStorage.ResearchModsSpecial.ResetCapacity</specialAction>
+			</li>
+			<li>
+				<specialAction>RT_QuantumStorage.ResearchModsSpecial.IncreaseCapacity</specialAction>
+			</li>
+		</researchMods>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>ResearchProject_RTStockpileCapacityUpgrade_2</defName>
-				<label>quantum stockpile capacity 2</label>
-				<description>Quantum stockpiles now store 1 more item stack or 2 more chunks per space, for a total of 6 and 12 per space, respectively.</description>
-				<totalCost>1250</totalCost>
-				<prerequisites>
-					<li>ResearchProject_RTStockpileCapacityUpgrade_1</li>
-				</prerequisites>
-				<researchMods>
-					<li>
-						<specialAction>RT_QuantumStorage.ResearchModsSpecial.IncreaseCapacity</specialAction>
-					</li>
-				</researchMods>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ResearchProject_RTStockpileCapacityUpgrade_2</defName>
+		<label>quantum stockpile capacity 2</label>
+		<description>Quantum stockpiles now store 1 more item stack or 2 more chunks per space, for a total of 6 and 12 per space, respectively.</description>
+		<totalCost>1250</totalCost>
+		<prerequisites>
+			<li>ResearchProject_RTStockpileCapacityUpgrade_1</li>
+		</prerequisites>
+		<researchMods>
+			<li>
+				<specialAction>RT_QuantumStorage.ResearchModsSpecial.IncreaseCapacity</specialAction>
+			</li>
+		</researchMods>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>ResearchProject_RTStockpileCapacityUpgrade_3</defName>
-				<label>quantum stockpile capacity 3</label>
-				<description>Quantum stockpiles now store 1 more item stack or 2 more chunks per space, for a total of 7 and 14 per space, respectively.</description>
-				<totalCost>1500</totalCost>
-				<prerequisites>
-					<li>ResearchProject_RTStockpileCapacityUpgrade_2</li>
-				</prerequisites>
-				<researchMods>
-					<li>
-						<specialAction>RT_QuantumStorage.ResearchModsSpecial.IncreaseCapacity</specialAction>
-					</li>
-				</researchMods>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ResearchProject_RTStockpileCapacityUpgrade_3</defName>
+		<label>quantum stockpile capacity 3</label>
+		<description>Quantum stockpiles now store 1 more item stack or 2 more chunks per space, for a total of 7 and 14 per space, respectively.</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>ResearchProject_RTStockpileCapacityUpgrade_2</li>
+		</prerequisites>
+		<researchMods>
+			<li>
+				<specialAction>RT_QuantumStorage.ResearchModsSpecial.IncreaseCapacity</specialAction>
+			</li>
+		</researchMods>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>ResearchProject_RTStockpileCapacityUpgrade_4</defName>
-				<label>quantum stockpile capacity 4</label>
-				<description>Quantum stockpiles now store 1 more item stack or 2 more chunks per space, for a total of 8 and 16 per space, respectively.</description>
-				<totalCost>1750</totalCost>
-				<prerequisites>
-					<li>ResearchProject_RTStockpileCapacityUpgrade_3</li>
-				</prerequisites>
-				<researchMods>
-					<li>
-						<specialAction>RT_QuantumStorage.ResearchModsSpecial.IncreaseCapacity</specialAction>
-					</li>
-				</researchMods>
-			</ResearchProjectDef>
-	
+	<ResearchProjectDef>
+		<defName>ResearchProject_RTStockpileCapacityUpgrade_4</defName>
+		<label>quantum stockpile capacity 4</label>
+		<description>Quantum stockpiles now store 1 more item stack or 2 more chunks per space, for a total of 8 and 16 per space, respectively.</description>
+		<totalCost>1750</totalCost>
+		<prerequisites>
+			<li>ResearchProject_RTStockpileCapacityUpgrade_3</li>
+		</prerequisites>
+		<researchMods>
+			<li>
+				<specialAction>RT_QuantumStorage.ResearchModsSpecial.IncreaseCapacity</specialAction>
+			</li>
+		</researchMods>
+	</ResearchProjectDef>
+
 	<ResearchProjectDef>
 		<defName>ConstructionIII</defName>
 		<label>Construction III</label>
@@ -382,56 +363,56 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>RobotsI</defName>
-			<label>Basic Robots</label>
-			<description>"Spending all those hours at the electronic workbench finally pays off! So far I can make a basic flying thing that can haul stuff and a cleaning bot!"</description>
-			<totalCost>1500</totalCost>
-			<prerequisites>
-				<li>ConstructionIII</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>RobotsI</defName>
+		<label>Basic Robots</label>
+		<description>"Spending all those hours at the electronic workbench finally pays off! So far I can make a basic flying thing that can haul stuff and a cleaning bot!"</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>ConstructionIII</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>RobotsIICook</defName>
-				<label>Bots: Cook Bot</label>
-				<description>"Now this is some next level stuff! Look at this thing! It can cook!"</description>
-				<totalCost>1500</totalCost>
-				<prerequisites>
-					<li>RobotsI</li>
-				</prerequisites>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>RobotsIICook</defName>
+		<label>Bots: Cook Bot</label>
+		<description>"Now this is some next level stuff! Look at this thing! It can cook!"</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>RobotsI</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>RobotsIIMiner</defName>
-				<label>Bots: Miner Bot</label>
-				<description>"Now this is some next level stuff! Look at this thing! It can mine rocks!"</description>
-				<totalCost>1500</totalCost>
-				<prerequisites>
-					<li>RobotsI</li>
-				</prerequisites>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>RobotsIIMiner</defName>
+		<label>Bots: Miner Bot</label>
+		<description>"Now this is some next level stuff! Look at this thing! It can mine rocks!"</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>RobotsI</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>RobotsIIFarmer</defName>
-				<label>Bots: Farmer Bot</label>
-				<description>"Now this is some next level stuff! Look at this thing! It can grow plants and help us with farming!"</description>
-				<totalCost>1500</totalCost>
-				<prerequisites>
-					<li>RobotsI</li>
-				</prerequisites>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>RobotsIIFarmer</defName>
+		<label>Bots: Farmer Bot</label>
+		<description>"Now this is some next level stuff! Look at this thing! It can grow plants and help us with farming!"</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>RobotsI</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>RobotsIICrafter</defName>
-				<label>Bots: Crafter Bot</label>
-				<description>"Now this is some next level stuff! Look at this thing! It can help us with crafting!"</description>
-				<totalCost>1500</totalCost>
-				<prerequisites>
-					<li>RobotsI</li>
-				</prerequisites>
-			</ResearchProjectDef>
-	
+	<ResearchProjectDef>
+		<defName>RobotsIICrafter</defName>
+		<label>Bots: Crafter Bot</label>
+		<description>"Now this is some next level stuff! Look at this thing! It can help us with crafting!"</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>RobotsI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
 	<ResearchProjectDef>
 		<defName>ConstructionIV</defName>
 		<label>Construction IV</label>
@@ -442,69 +423,59 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>Fissure</defName>
-			<label>Ore Extractor</label>
-			<description>"This machine digs deep into the ground and extracts metals from the earth. But we need to create a deep fissure first, which can be used to access the lower layers of the planet's crust." \n"So no more mining? Yay!" \n"Not only that. We can also create a steam geyser where ever we want!"</description>
-			<totalCost>2500</totalCost>
-			<prerequisites>
-				<li>ConstructionIV</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>Fissure</defName>
+		<label>Ore Extractor</label>
+		<description>"This machine digs deep into the ground and extracts metals from the earth. But we need to create a deep fissure first, which can be used to access the lower layers of the planet's crust." \n"So no more mining? Yay!" \n"Not only that. We can also create a steam geyser where ever we want!"</description>
+		<totalCost>2500</totalCost>
+		<prerequisites>
+			<li>ConstructionIV</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-	<!--=== Crafting ===-->	
-    <ResearchProjectDef>
+	<!--=== Crafting ===-->
+	<ResearchProjectDef>
 		<defName>Smithing</defName>
 		<label>Crafting I</label>
 		<description>"Building this wall out of round stone chunks didn't work. We have to cut them into some kind of block shape." \n"We also need to find a way to get the metal out of these rocks. Maybe if we smelt the ore in some kind of furnace?" \n"A wall? Who needs a wall when I could make a beautiful sculpture with these blocks!"</description>
 		<totalCost>400</totalCost>
-	</ResearchProjectDef>		
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>Devilstrand</defName>
-			<label>textile I</label>
-			<description>"Our clothes won't last forever. It's time to think about growing some cotton so we can weave cloth and start tailoring." \n"We have all these clothes the tribals came in that nobody wants to wear. We could use the materials from them to make some neat clothing for us!" \n"I just want a Baseball Cap!"</description>
-			<totalCost>800</totalCost>
-			<prerequisites>
-				<li>Smithing</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>Devilstrand</defName>
+		<label>textile I</label>
+		<description>"Our clothes won't last forever. It's time to think about growing some cotton so we can weave cloth and start tailoring." \n"We have all these clothes the tribals came in that nobody wants to wear. We could use the materials from them to make some neat clothing for us!" \n"I just want a Baseball Cap!"</description>
+		<totalCost>800</totalCost>
+		<prerequisites>
+			<li>Smithing</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>CarpetMaking</defName>
-			<label>textile II</label>
-			<description>"Hyperweave: High-tech nano-fibers woven into sheets. It is somewhat heavy, but is incredibly difficult to break. Devilstrand: Fabric spun from microfibers extracted from silk-producing Devilstrand mushrooms. Very tough, but insulates no better than cloth." \n"Ok Sherlock, everybody knows that... \nWhy Don't we just make some nice carpets first? My feet are getting cold."</description>
-			<totalCost>1700</totalCost>
-			<prerequisites>
-				<li>Devilstrand</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>CarpetMaking</defName>
+		<label>textile II</label>
+		<description>"Hyperweave: High-tech nano-fibers woven into sheets. It is somewhat heavy, but is incredibly difficult to break. Devilstrand: Fabric spun from microfibers extracted from silk-producing Devilstrand mushrooms. Very tough, but insulates no better than cloth." \n"Ok Sherlock, everybody knows that... \nWhy Don't we just make some nice carpets first? My feet are getting cold."</description>
+		<totalCost>1700</totalCost>
+		<prerequisites>
+			<li>Devilstrand</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>PoweredArmor</defName>
-			<label>textile III</label>
-			<description>"The last raiders came with some pretty good weapons. Our armor vests didn't do very well against these." \n"Alright, I can try making better armor for us. But I will need a lot of stuff and time to make those." \n"What are you waiting for then? Get to work!"</description>
-			<totalCost>2000</totalCost>
-			<prerequisites>
-				<li>CarpetMaking</li>
-			</prerequisites>
-		</ResearchProjectDef>
-	
-    <ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>PoweredArmor</defName>
+		<label>textile III</label>
+		<description>"The last raiders came with some pretty good weapons. Our armor vests didn't do very well against these." \n"Alright, I can try making better armor for us. But I will need a lot of stuff and time to make those." \n"What are you waiting for then? Get to work!"</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>CarpetMaking</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
 		<defName>ElectricSmelting</defName>
 		<label>Crafting II</label>
 		<description>"It's taking forever to cut all the chunks by hand! We need better equipment!" \n"Powered crafting tables would be a good idea. The better tools would even allow us to make armor vests to protect ourselves."</description>
@@ -514,17 +485,17 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>FoodSynthesizer</defName>
-			<label>food synthesizer</label>
-			<description>"This machine can make food for all of us. And we don't have to cook anymore." \n"But it tastes horrible!"</description>
-			<totalCost>1000</totalCost>	
-			<prerequisites>
-				<li>ElectricSmelting</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>FoodSynthesizer</defName>
+		<label>food synthesizer</label>
+		<description>"This machine can make food for all of us. And we don't have to cook anymore." \n"But it tastes horrible!"</description>
+		<totalCost>1000</totalCost>
+		<prerequisites>
+			<li>ElectricSmelting</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<!-- gone in a13
+	<!-- gone in a13
 		<ResearchProjectDef>
 			<defName>NutrientResynthesis</defName>
 			<label>nutrient resynthesis</label>
@@ -533,9 +504,10 @@
 			<prerequisites>
 				<li>FoodSynthesizer</li>
 			</prerequisites>
-		</ResearchProjectDef> -->		
-	
-    <ResearchProjectDef>
+		</ResearchProjectDef> 
+		-->
+
+	<ResearchProjectDef>
 		<defName>Machining</defName>
 		<label>Crafting III</label>
 		<description>"Electronic Chips, Integrated Circuitboards. It's gonna be great!" \n"That is pretty advanced. Are you sure this will work?" \n*bzzzt*</description>
@@ -544,8 +516,8 @@
 			<li>ElectricSmelting</li>
 		</prerequisites>
 	</ResearchProjectDef>
-	
-    <ResearchProjectDef>
+
+	<ResearchProjectDef>
 		<defName>ComponentAssembly</defName>
 		<label>Crafting IV</label>
 		<description>"This plant is magical! With the right tools, we can replicate any stone chunks we want from it." \n"Better plant some of them fast. The mountain I was digging in is about to collapse I think..."</description>
@@ -555,20 +527,13 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
+	
 
 
 
 
 
-
-
-
-
-
-
-
-
-	<!--=== Power ===-->	
+	<!--=== Power ===-->
 	<ResearchProjectDef>
 		<defName>PowerI</defName>
 		<label>Power I</label>
@@ -576,27 +541,27 @@
 		<totalCost>400</totalCost>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>OutdoorLighting</defName>
-			<label>Outdoor Lighting</label>
-			<description>"I can't work outside when it's so dark everywhere. We need some lamps outside, too."</description>
-			<totalCost>800</totalCost>
-			<prerequisites>
-				<li>PowerI</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>OutdoorLighting</defName>
+		<label>Outdoor Lighting</label>
+		<description>"I can't work outside when it's so dark everywhere. We need some lamps outside, too."</description>
+		<totalCost>800</totalCost>
+		<prerequisites>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>ColoredLights</defName>
-			<label>colored lights</label>
-			<description>"Look! Look! Isn't this green light beautiful?" \n"Stop wasting all of our glass! You think this is a disco or what?" \n"Aww, come on..."</description>
-			<totalCost>800</totalCost>
-			<prerequisites>
-				<li>PowerI</li>
-			</prerequisites>
-		</ResearchProjectDef>	
-	
-    <ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ColoredLights</defName>
+		<label>colored lights</label>
+		<description>"Look! Look! Isn't this green light beautiful?" \n"Stop wasting all of our glass! You think this is a disco or what?" \n"Aww, come on..."</description>
+		<totalCost>800</totalCost>
+		<prerequisites>
+			<li>PowerI</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
 		<defName>PowerII</defName>
 		<label>Power II</label>
 		<description>"Solar Power allows us to harness the power of the sun!" \n"We could also use some fuses. Last time the power went out for the whole night. Remember? It was during that solar flare." \n"If we could only shield the colony from these solar flares, all would be good." \nUnlocks: Battery efficiency +15%</description>
@@ -604,47 +569,47 @@
 			<li>
 				<specialAction>MVP.Research_PowerUpgrades.PowerII</specialAction>
 			</li>
-		</researchMods> 
+		</researchMods>
 		<totalCost>800</totalCost>
 		<prerequisites>
 			<li>PowerI</li>
 		</prerequisites>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>ResearchAutoPowerSwitch</defName>
-			<label>Automatic Power Switch</label>
-			<description>Research a motion detector for the power switch. This will allow automatic power switching.</description>
-			<descriptionDiscovered>Now your power switch can be configured to automatically switch on when someone is in the room. Additionally further enhancement is now possible.\nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
-			<totalCost>400</totalCost>
-			<prerequisites>
-				<li>PowerII</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ResearchAutoPowerSwitch</defName>
+		<label>Automatic Power Switch</label>
+		<description>Research a motion detector for the power switch. This will allow automatic power switching.</description>
+		<descriptionDiscovered>Now your power switch can be configured to automatically switch on when someone is in the room. Additionally further enhancement is now possible.\nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
+		<totalCost>400</totalCost>
+		<prerequisites>
+			<li>PowerII</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>ResearchTimerSwitch</defName>
-			<label>Timer Switch</label>
-			<description>Research an timer for the power switch. This will allow automatic power switching at specific times.</description>
-			<descriptionDiscovered>Now your power switch can be configured to automatically switch at specified times. \nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
-			<totalCost>400</totalCost>
-			<prerequisites>
-				<li>ResearchAutoPowerSwitch</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ResearchTimerSwitch</defName>
+		<label>Timer Switch</label>
+		<description>Research an timer for the power switch. This will allow automatic power switching at specific times.</description>
+		<descriptionDiscovered>Now your power switch can be configured to automatically switch at specified times. \nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
+		<totalCost>400</totalCost>
+		<prerequisites>
+			<li>ResearchAutoPowerSwitch</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>ResearchAutoEnemySwitch</defName>
-			<label>Automatic Enemy Switch</label>
-			<description>Research an enemy detector for the power switch. This will allow automatic power switching when an enemy is found.</description>
-			<descriptionDiscovered>Now your power switch can be configured to automatically switch when an enemy is detected.\nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
-			<totalCost>600</totalCost>
-			<prerequisites>
-				<li>ResearchAutoPowerSwitch</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ResearchAutoEnemySwitch</defName>
+		<label>Automatic Enemy Switch</label>
+		<description>Research an enemy detector for the power switch. This will allow automatic power switching when an enemy is found.</description>
+		<descriptionDiscovered>Now your power switch can be configured to automatically switch when an enemy is detected.\nNOTE: Do not connect your lamps, turrets, etc. directly to the switch! Add a power cable and connect that!</descriptionDiscovered>
+		<totalCost>600</totalCost>
+		<prerequisites>
+			<li>ResearchAutoPowerSwitch</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-    <ResearchProjectDef>
+	<ResearchProjectDef>
 		<defName>GeothermalPower</defName>
 		<label>Power III</label>
 		<description>"Did you see this hole in the ground over there?" \n"It looks like there is steam coming out of it." \n"I wonder if we could make use of that somehow..." \nUnlocks: Battery efficiency +15%</description>
@@ -659,47 +624,47 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>WirelessPower_Research</defName>
-			<label>Wireless Power</label>
-			<description>"Why are there cables lying everywhere? Ever heard about a wireless power grid? \n"Ok, I get on it boss. Jeez..."</description>
-			<totalCost>1250</totalCost>
-			<prerequisites>
-				<li>GeothermalPower</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>WirelessPower_Research</defName>
+		<label>Wireless Power</label>
+		<description>"Why are there cables lying everywhere? Ever heard about a wireless power grid? \n"Ok, I get on it boss. Jeez..."</description>
+		<totalCost>1250</totalCost>
+		<prerequisites>
+			<li>GeothermalPower</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>PlasmaPower</defName>
-			<label>Plasma Power</label>
-			<description>"It's plasma, who doesn't like plasma?" \n"This thing gets pretty hot and it needs to be charged before it produces power. I don't know about that."</description>
-			<totalCost>1500</totalCost>
-			<prerequisites>
-				<li>GeothermalPower</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>PlasmaPower</defName>
+		<label>Plasma Power</label>
+		<description>"It's plasma, who doesn't like plasma?" \n"This thing gets pretty hot and it needs to be charged before it produces power. I don't know about that."</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>GeothermalPower</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>NuclearPower</defName>
-			<label>Nuclear Power</label>
-			<description>"I saw you brought back some kind of green stone last time you went out for mining steel ore." \n"Ah, yes it's Uranium. I'll build a nuclear reactor with it. It's totally save." \n"Ok sure, why not. I'm sure nothing terrible happens."</description>
-			<totalCost>1500</totalCost>
-			<prerequisites>
-				<li>GeothermalPower</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>NuclearPower</defName>
+		<label>Nuclear Power</label>
+		<description>"I saw you brought back some kind of green stone last time you went out for mining steel ore." \n"Ah, yes it's Uranium. I'll build a nuclear reactor with it. It's totally save." \n"Ok sure, why not. I'm sure nothing terrible happens."</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>GeothermalPower</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>NaturalPower</defName>
-			<label>Natural Power</label>
-			<description>"Now that we got the basics down with wind and solar energy, why not upgrade the turbines and panels we have?" \n"Nah, I'm not in the mood for working today - I'll just play some horseshoes."</description>
-			<totalCost>1500</totalCost>
-			<prerequisites>
-				<li>GeothermalPower</li>
-			</prerequisites>
-		</ResearchProjectDef>
-	
-    <ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>NaturalPower</defName>
+		<label>Natural Power</label>
+		<description>"Now that we got the basics down with wind and solar energy, why not upgrade the turbines and panels we have?" \n"Nah, I'm not in the mood for working today - I'll just play some horseshoes."</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>GeothermalPower</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
 		<defName>PowerIV</defName>
 		<label>Power IV</label>
 		<description>"We still don't have enough power." \n"What about building a really big generator? It's gonna be a lot of work though." \nUnlocks: Battery efficiency +15%</description>
@@ -722,127 +687,124 @@
 
 
 
-
-
-
 	<!--=== Security ===-->
-    <ResearchProjectDef>
+	<ResearchProjectDef>
 		<defName>Firefoam</defName>
 		<label>Security I</label>
 		<description>"I would give you this bow so you can help defending the colony. But not before you get some practice at the shooting range first." \n"Really? Just because I shot myself in the foot last time the tribals came?"</description>
 		<totalCost>400</totalCost>
-	</ResearchProjectDef>				
+	</ResearchProjectDef>
 
-	  	<ResearchProjectDef>
-			<defName>WeaponCraftingI</defName>
-			<label>Weapon Crafting I</label>
-			<description>"These Pilas are pretty good but I feel we need some real weapons rather sooner than later." \n"Ok, I make the weapon parts, you assemble them. Quick! Before the tribals come!"</description>
-			<totalCost>900</totalCost>
-			<prerequisites>
-				<li>Firefoam</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>WeaponCraftingI</defName>
+		<label>Weapon Crafting I</label>
+		<description>"These Pilas are pretty good but I feel we need some real weapons rather sooner than later." \n"Ok, I make the weapon parts, you assemble them. Quick! Before the tribals come!"</description>
+		<totalCost>900</totalCost>
+		<prerequisites>
+			<li>Firefoam</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>TurretM2Browning</defName>
-				<label>Turret: M2 Browning</label>
-				<description>"This turret we can build right now is rather improvised. With the weapon parts we have now, we can make a much better one."</description>
-				<totalCost>1200</totalCost>
-				<prerequisites>
-					<li>WeaponCraftingI</li>
-				</prerequisites>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>TurretM2Browning</defName>
+		<label>Turret: M2 Browning</label>
+		<description>"This turret we can build right now is rather improvised. Using the weapon parts, we can make a much better one."</description>
+		<totalCost>1200</totalCost>
+		<prerequisites>
+			<li>WeaponCraftingI</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>TurretsUtility</defName>
-				<label>Turrets: Utility</label>
-				<description>"The Raiders will attack at night? That is bad news. Build a Spotlight Tower so we can see where they are coming from!"</description>
-				<totalCost>800</totalCost>
-				<prerequisites>
-					<li>WeaponCraftingI</li>
-				</prerequisites>
-			</ResearchProjectDef>		
+	<ResearchProjectDef>
+		<defName>TurretsUtility</defName>
+		<label>Turrets: Utility</label>
+		<description>"The Raiders will attack at night? That is bad news. Build a Spotlight Tower so we can see where they are coming from!"</description>
+		<totalCost>800</totalCost>
+		<prerequisites>
+			<li>WeaponCraftingI</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>ChargedShot</defName>
-			<label>Weapon Crafting II</label>
-			<description>"After making all these basic pistols, I came up with some better gun designs." \n"Great! We need to defend the colony!"</description>
-			<totalCost>1500</totalCost>
-			<prerequisites>
-				<li>WeaponCraftingI</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ChargedShot</defName>
+		<label>Weapon Crafting II</label>
+		<description>"After making all these basic pistols, I came up with some better gun designs." \n"Great! We need to defend the colony!"</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>WeaponCraftingI</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>Launchers</defName>
-				<label>Launchers</label>
-				<description>Rocket Launchers.</description>
-				<totalCost>800</totalCost>
-				<prerequisites>
-					<li>ChargedShot</li>
-				</prerequisites>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>Launchers</defName>
+		<label>Launchers</label>
+		<description>Rocket Launchers.</description>
+		<totalCost>800</totalCost>
+		<prerequisites>
+			<li>ChargedShot</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>ARAccuracy</defName>
-				<label>Assault Rifles: High Accuracy</label>
-				<description>Assault Rifles with improved accuracy.</description>
-				<totalCost>1200</totalCost>
-				<prerequisites>
-					<li>ChargedShot</li>
-				</prerequisites>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>ARAccuracy</defName>
+		<label>Assault Rifles: High Accuracy</label>
+		<description>Assault Rifles with improved accuracy.</description>
+		<totalCost>1200</totalCost>
+		<prerequisites>
+			<li>ChargedShot</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>SRAccuracy</defName>
-				<label>Rifles: High Accuracy</label>
-				<description>Rifles and Sniper Rifles with improved accuracy.</description>
-				<totalCost>1200</totalCost>
-				<prerequisites>
-					<li>ChargedShot</li>
-				</prerequisites>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>SRAccuracy</defName>
+		<label>Rifles: High Accuracy</label>
+		<description>Rifles and Sniper Rifles with improved accuracy.</description>
+		<totalCost>1200</totalCost>
+		<prerequisites>
+			<li>ChargedShot</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>TurretMiniGun</defName>
-				<label>Turret: Mini Gun</label>
-				<description>"This thing fires so many bullets, I can't even count them..."</description>
-				<totalCost>1900</totalCost>
-				<prerequisites>
-					<li>ChargedShot</li>
-				</prerequisites>
-			</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>TurretMiniGun</defName>
+		<label>Turret: Mini Gun</label>
+		<description>"This thing fires so many bullets, I can't even count them..."</description>
+		<totalCost>1900</totalCost>
+		<prerequisites>
+			<li>ChargedShot</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>TurretCannon</defName>
-				<label>Turret: Cannon</label>
-				<description>"Where do they come from? From the east you say? Ok I carry the turrets over there." \n"Wait! I can make a Cannon Turret. It has a much better range, but I need you to make me some cannon shells for it."</description>
-				<totalCost>1500</totalCost>
-				<prerequisites>
-					<li>ChargedShot</li>
-				</prerequisites>
-			</ResearchProjectDef>			
+	<ResearchProjectDef>
+		<defName>TurretCannon</defName>
+		<label>Turret: Cannon</label>
+		<description>"Where do they come from? From the east you say? Ok I carry the turrets over there." \n"Wait! I can make a Cannon Turret. It has a much better range, but I need you to make me some cannon shells for it."</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>ChargedShot</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>MultibarrelWeapons</defName>
-			<label>Weapon Crafting III</label>
-			<description>"Have you made the electronic chips yet? I bet I could make some really nice guns with these."</description>
-			<totalCost>2000</totalCost>
-			<prerequisites>
-				<li>ChargedShot</li>
-			</prerequisites>
-		</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>MultibarrelWeapons</defName>
+		<label>Weapon Crafting III</label>
+		<description>"Have you made the electronic chips yet? I bet I could make some really nice guns with these."</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>ChargedShot</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-			<ResearchProjectDef>
-				<defName>TurretsAdvanced</defName>
-				<label>Turrets: Advanced</label>
-				<description>"Lasers!" \n"Lasers are pretty neat indeed. But against mechs an anti-materiel turret would be better maybe."</description>
-				<totalCost>2000</totalCost>
-				<prerequisites>
-					<li>MultibarrelWeapons</li>
-				</prerequisites>
-			</ResearchProjectDef>
-	
+	<ResearchProjectDef>
+		<defName>TurretsAdvanced</defName>
+		<label>Turrets: Advanced</label>
+		<description>"Lasers!" \n"Lasers are pretty neat indeed. But against mechs an anti-materiel turret would be better maybe."</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>MultibarrelWeapons</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
 	<ResearchProjectDef>
 		<defName>Mortars</defName>
 		<label>Security II</label>
@@ -853,26 +815,26 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-		    <defName>IEDBomb</defName>
-		    <label>Explosive IEDs</label>
-		    <description>"Hehe - They will never see this artillery shell I burried over there. Once they get close and step on it - boom!" \n"That's so unfair! I like it!"</description>
-		    <totalCost>500</totalCost>
-		    <prerequisites>
-				<li>Mortars</li>
-			</prerequisites>
-	  	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>IEDBomb</defName>
+		<label>Explosive IEDs</label>
+		<description>"Hehe - They will never see this artillery shell I burried over there. Once they get close and step on it - boom!" \n"That's so unfair! I like it!"</description>
+		<totalCost>500</totalCost>
+		<prerequisites>
+			<li>Mortars</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>IEDIncendiary</defName>
-			<label>Incendiary IEDs</label>
-			<description>"The improved version of my trap. It's even more boom per shell!"</description>
-			<totalCost>500</totalCost>
-			<prerequisites>
-				<li>IEDBomb</li>
-			</prerequisites>
-	  	</ResearchProjectDef>
-	
+	<ResearchProjectDef>
+		<defName>IEDIncendiary</defName>
+		<label>Incendiary IEDs</label>
+		<description>"The improved version of my trap. It's even more boom per shell!"</description>
+		<totalCost>500</totalCost>
+		<prerequisites>
+			<li>IEDBomb</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
 	<ResearchProjectDef>
 		<defName>SecurityIII</defName>
 		<label>Security III</label>
@@ -883,50 +845,47 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>Building_ShieldStandard_research</defName>
-			<label>Standard Shield Generator</label>
-			<description>Magnetic shield field slows and heats any projectiles to the point of evaporating.\nThe basics of the principle is the eddy current brake, however the complex system allows the barier to ignore projectiles that leave the shield. 
-			</description>
-			<totalCost>2000</totalCost>
-			<prerequisites>
-				<li>SecurityIII</li>
-			</prerequisites>
-		</ResearchProjectDef>
-		
-		<ResearchProjectDef>
-			<defName>Building_ShieldFortress_research</defName>
-			<label>Fortress Shield</label>
-			<description>By refocusing the primary coil system into a vertical configuration the shields range can be extended, while lacking the flexability of the Fire Supression mode it does cover a large area and gain the ability to disrupt the avionic systems of DropPods, caulsing failure of their decent rockets and therefore a terminal velocity impact.
-			</description>
-			<totalCost>2000</totalCost>
-			<prerequisites>
-				<li>Building_ShieldStandard_research</li>
-			</prerequisites>
-		</ResearchProjectDef>
-		
+	<ResearchProjectDef>
+		<defName>Building_ShieldStandard_research</defName>
+		<label>Standard Shield Generator</label>
+		<description>Magnetic shield field slows and heats any projectiles to the point of evaporating.\nThe basics of the principle is the eddy current brake, however the complex system allows the barier to ignore projectiles that leave the shield.
+		</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>SecurityIII</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
-		<ResearchProjectDef>
-			<defName>Building_ShieldSmall_research</defName>
-			<label>Shields Small</label>
-			<description>Parts of the generator have been replaced by smaller components allowing it to be recessed into the floor allowing people to stand on the generator but reducing the size of the field generated. 
-			</description>
-			<totalCost>1500</totalCost>
-			<prerequisites>
-				<li>Building_ShieldStandard_research</li>
-			</prerequisites>
-		</ResearchProjectDef>
-		
-		<ResearchProjectDef>
-			<defName>Building_ShieldSIF_research</defName>
-			<label>Shields SIF Generator</label>
-			<description>Rather than creating a large circular shield this generator will create an small individual shield over each wall/door object.
-			</description>
-			<totalCost>2000</totalCost>
-			<prerequisites>
-				<li>Building_ShieldStandard_research</li>
-			</prerequisites>
-		</ResearchProjectDef>
-		
+	<ResearchProjectDef>
+		<defName>Building_ShieldFortress_research</defName>
+		<label>Fortress Shield</label>
+		<description>By refocusing the primary coil system into a vertical configuration the shields range can be extended, while lacking the flexability of the Fire Supression mode it does cover a large area and gain the ability to disrupt the avionic systems of DropPods, caulsing failure of their decent rockets and therefore a terminal velocity impact.
+		</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>Building_ShieldStandard_research</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
+	<ResearchProjectDef>
+		<defName>Building_ShieldSmall_research</defName>
+		<label>Shields Small</label>
+		<description>Parts of the generator have been replaced by smaller components allowing it to be recessed into the floor allowing people to stand on the generator but reducing the size of the field generated.
+		</description>
+		<totalCost>1500</totalCost>
+		<prerequisites>
+			<li>Building_ShieldStandard_research</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Building_ShieldSIF_research</defName>
+		<label>Shields SIF Generator</label>
+		<description>Rather than creating a large circular shield this generator will create an small individual shield over each wall/door object.
+		</description>
+		<totalCost>2000</totalCost>
+		<prerequisites>
+			<li>Building_ShieldStandard_research</li>
+		</prerequisites>
+	</ResearchProjectDef>
 </ResearchProjectDefs>

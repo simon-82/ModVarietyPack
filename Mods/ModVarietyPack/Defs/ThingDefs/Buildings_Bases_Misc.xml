@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<?xml version="1.0" encoding="utf-8" ?>
 <Buildings>
 	<!-- CR Building Bases -->
 	<ThingDef Name="BuildingBase" Abstract="True">
@@ -72,8 +73,8 @@
 			<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
 		</building>
 		<comps>
-			<li Class="CompProperties_Breakdownable"/>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Breakdownable" />
+			<li Class="CompProperties_Flickable" />
 		</comps>
 	</ThingDef>
 
@@ -148,9 +149,6 @@
 
 
 
-
-
-
 	<!-- vanilla overrides -->
 	<ThingDef ParentName="BuildingBase">
 		<defName>OrbitalTradeBeacon</defName>
@@ -186,8 +184,8 @@
 				<compClass>CompPowerTrader</compClass>
 				<basePowerConsumption>40</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Flickable"/>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Flickable" />
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<pathCost>20</pathCost>
@@ -240,8 +238,8 @@
 				<startElectricalFires>true</startElectricalFires>
 				<basePowerConsumption>200</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Flickable"/>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Flickable" />
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<staticSunShadowHeight>0.5</staticSunShadowHeight>
 		<designationHotkey>M</designationHotkey>
@@ -343,7 +341,7 @@
 				<explosiveRadius>2.66</explosiveRadius>
 				<explosiveDamageType>Flame</explosiveDamageType>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<staticSunShadowHeight>0.4</staticSunShadowHeight>
@@ -431,7 +429,7 @@
 				<startElectricalFires>true</startElectricalFires>
 				<basePowerConsumption>200</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li Class="CompProperties_Facility">
 				<statOffsets>
 					<ResearchSpeedFactor>0.1</ResearchSpeedFactor>
@@ -492,7 +490,7 @@
 				<startElectricalFires>true</startElectricalFires>
 				<basePowerConsumption>150</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 			<li Class="CompProperties_Facility">
 				<statOffsets>
 					<MedicalTreatmentQualityFactor>0.04</MedicalTreatmentQualityFactor>
@@ -552,7 +550,9 @@
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
-		<researchPrerequisites><li>Smithing</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>Smithing</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 	<!-- new facility -->
@@ -599,8 +599,15 @@
 		<placeWorkers>
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
+<<<<<<< HEAD
+		<researchPrerequisites>
+			<li>CookingII</li>
+		</researchPrerequisites>
+	</ThingDef>
+=======
 		<researchPrerequisites><li>CookingII</li></researchPrerequisites>
 	</ThingDef>	
+>>>>>>> parent of 76aa2c8... Minified literally every building
 
 
 	<ThingDef ParentName="BuildingBase">
@@ -817,7 +824,7 @@
 				<explosiveRadius>2.66</explosiveRadius>
 				<explosiveDamageType>Flame</explosiveDamageType>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 		</comps>
 		<terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
 		<staticSunShadowHeight>0.4</staticSunShadowHeight>
@@ -870,11 +877,6 @@
 
 
 	
-
-
-
-
-
 
 	<!-- Misc Artefact -->
 	<ThingDef Name="BuildingBaseArtefact" Abstract="True">
@@ -942,11 +944,6 @@
 			<cleaningWorkToReduceThickness>40</cleaningWorkToReduceThickness>
 		</filth>
 	</ThingDef>
-
-
-
-
-
 
 
 
@@ -1121,8 +1118,6 @@
 
 
 
-
-
 	<!-- training -->
 	<ThingDef ParentName="BuildingBase">
 		<DefName>AutopsyTable</DefName>
@@ -1253,16 +1248,11 @@
 
 
 
-
-
-
 	<!-- MMS Module + EnergyPack Spawner Building -->
 	<ThingDef ParentName="BuildingBase">
 		<defName>MobileMineralSonar</defName>
 		<Label>mobile mineral sonar</Label>
-		<Description>The mobile mineral sonar is used to detect hidden metallic objects in the heart of big mountains.
-	- It will slowly scan the surrounding rocks autonomously with its embedded battery.
-	- Supplying some additional power will speed up the scan rate.</Description>
+		<Description>The mobile mineral sonar is used to detect hidden metallic objects in the heart of big mountains. - It will slowly scan the surrounding rocks autonomously with its embedded battery. - Supplying some additional power will speed up the scan rate.</Description>
 		<graphicData>
 			<graphicClass>Graphic_Single</graphicClass>
 			<texPath>Buildings/MMS/MobileMineralSonar</texPath>
@@ -1295,7 +1285,7 @@
 				<startElectricalFires>false</startElectricalFires>
 				<basePowerConsumption>1000</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 		</comps>
 		<researchPrerequisites>
 			<li>MobileMineralSonar</li>
@@ -1338,7 +1328,7 @@
 				<startElectricalFires>false</startElectricalFires>
 				<basePowerConsumption>100</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Flickable" />
 		</comps>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
@@ -1352,7 +1342,6 @@
 			<li>PowerII</li>
 		</researchPrerequisites>
 	</ThingDef>
-
 
 
 
@@ -1400,7 +1389,9 @@
 		<placeWorkers>
 			<li>PlaceWorker_NotUnderRoof</li>
 		</placeWorkers>
-		<researchPrerequisites><li>AgricultureIV</li></researchPrerequisites>
+		<researchPrerequisites>
+			<li>AgricultureIV</li>
+		</researchPrerequisites>
 	</ThingDef>
 
 
@@ -1452,9 +1443,9 @@
 		<tickerType>Normal</tickerType>
 		<size>(3,3)</size>
 		<costList>
-      		<SteelBar>250</SteelBar>
-      		<Electronics>80</Electronics>
-    	</costList>
+			<SteelBar>250</SteelBar>
+			<Electronics>80</Electronics>
+		</costList>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -1504,8 +1495,8 @@
 		<size>(3,3)</size>
 		<costList>
 			<SteelBar>500</SteelBar>
-      		<AluBar>500</AluBar>
-      		<IntegratedCircuitsBoard>50</IntegratedCircuitsBoard>
+			<AluBar>500</AluBar>
+			<IntegratedCircuitsBoard>50</IntegratedCircuitsBoard>
 		</costList>
 		<placeWorkers>
 			<li>MD2.PlacementRestrictor_OnFissure</li>
@@ -1521,7 +1512,6 @@
 			<li>Fissure</li>
 		</researchPrerequisites>
 	</ThingDef>
-
 
 
 
@@ -1559,8 +1549,8 @@
 		<rotatable>false</rotatable>
 		<costList>
 			<AluBar>100</AluBar>
-      		<Electronics>85</Electronics>
-      		<Medicine>5</Medicine>
+			<Electronics>85</Electronics>
+			<Medicine>5</Medicine>
 		</costList>
 		<killedLeavings>
 			<ChunkSlagSteel>1</ChunkSlagSteel>
@@ -1576,7 +1566,7 @@
 				<startElectricalFires>true</startElectricalFires>
 				<basePowerConsumption>800</basePowerConsumption>
 			</li>
-			<li Class="CompProperties_Breakdownable"/>
+			<li Class="CompProperties_Breakdownable" />
 			<li Class="CompProperties_Flickable" />
 		</comps>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>

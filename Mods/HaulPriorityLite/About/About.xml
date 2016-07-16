@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>HaulPriorityLite</name>
+	<author>Renzo471</author>
+	<url>https://ludeon.com/forums/index.php?topic=18377.0</url>
+	<targetVersion>Alpha 13</targetVersion>
+	<description>
+Simple mod to manually increase the priority of hauling for the selected items and also adds an unforbid designator.
+Update of the original by Gaesatae https://ludeon.com/forums/index.php?topic=9328.0
+	Version: 1.0.1 a13
+	</description>
+</ModMetaData>
