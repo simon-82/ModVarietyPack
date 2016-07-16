@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- item bases -->
+	<!-- ressource -->
+	<ThingDef Name="ResourceBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <label>unspecified resource</label>
+    <category>Item</category>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>75</stackLimit>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+    </comps>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+    <pathCost>15</pathCost>
+  </ThingDef>
+
+	<ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>5</DeteriorationRate>
+		</statBases>
+		<tickerType>Rare</tickerType>
+	</ThingDef>
+
+	<ThingDef Abstract="True" Name="PlantFoodRawBase" ParentName="OrganicProductBase">
+		<ingestible>
+			<preferability>Raw</preferability>
+			<!-- MVP modded to scale with plants
+			was <nutrition>0.05</nutrition> -->
+			<eatEffect>EatVegetarian</eatEffect>
+			<soundEat>RawVegetable_Eat</soundEat>
+		</ingestible>
+		<thingCategories>
+			<li>PlantFoodRaw</li>
+		</thingCategories>
+	</ThingDef>
+	<ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase" >
+		<ingestible>
+			<preferability>Awful</preferability>
+			<!-- MVP modded to scale with plants
+			was <nutrition>0.05</nutrition> -->
+			<eatEffect>EatVegetarian</eatEffect>
+			<soundEat>RawVegetable_Eat</soundEat>
+		</ingestible>
+		<thingCategories>
+			<li>FruitFoodRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Misc -->
+	<ThingDef ParentName="ResourceBase">
+		<defName>EthanolFuel</defName>
+		<label>ethanol fuel</label>
+		<description>A can of ethanol fuel.  It can be used to fuel the steam generator, or sold to a trader.</description>
+		<graphicData>
+			<texPath>Items/EthanolFuel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>10</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Stuff_Locker</li>
+			</categories>
+		</stuffProps>
+	</ThingDef>
+	<ThingDef ParentName="ResourceBase">
+		<defName>Mulch</defName>
+		<label>mulch</label>
+		<description>Mulch made from food. Used for enriching the soil.</description>
+		<graphicData>
+			<texPath>Items/Mulch</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Wood_Drop</soundInteract>
+		<soundDrop>Wood_Drop</soundDrop>
+		<statBases>
+			<MarketValue>1.7</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Stuff_Locker</li>
+			</categories>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>BucketWater</defName>
+		<label>bucket of water</label>
+		<description>A bucket full of water.</description>
+		<graphicData>
+			<texPath>Items/BucketWater</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Wood_Drop</soundInteract>
+		<soundDrop>Wood_Drop</soundDrop>
+		<statBases>
+			<MarketValue>1.1</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Stuff_Locker</li>
+			</categories>
+		</stuffProps>
+		<stackLimit>20</stackLimit>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>EnergyPack</defName>
+		<label>Energy pack</label>
+		<description>Energy pack adapted from a battery. It is able to power mobile equipement.</description>
+		<graphicData>
+			<texPath>Items/EnergyPack</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<DeteriorationRate>1</DeteriorationRate>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.2</Flammability>
+			<MarketValue>50</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Electronics</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Stuff_Locker</li>
+			</categories>
+		</stuffProps>
+		<stackLimit>5</stackLimit>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Electronics</defName>
+		<label>electronic chips</label>
+		<description>Electronic chips made from silicon and aluminum bars.  Used in the construction of advanced structures</description>
+		<graphicData>
+			<texPath>Items/Electronics</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>35</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Electronics</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Stuff_Locker</li>
+			</categories>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>IntegratedCircuitsBoard</defName>
+		<label>Integrated circuits board</label>
+		<description>A home-made integrated circuits board used by the mineral sonar console. Even if you pay the greatest attention making it, it is still fragile and unreliable. Don't let it rust under the rain as it will deteriorate really fast!</description>
+		<graphicData>
+			<texPath>Items/IntegratedCircuitsBoard</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<DeteriorationRate>3</DeteriorationRate>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<MarketValue>150</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Electronics</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Stuff_Locker</li>
+			</categories>
+		</stuffProps>
+		<stackLimit>50</stackLimit>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Biomatter</defName>
+		<label>biomatter</label>
+		<description>Biomatter extracted from a human corpse. Used to grow organs in the organ vat.</description>
+		<graphicData>
+			<texPath>Items/Biomatter</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<!--   food_drop is gone in a14
+		<soundInteract>Food_Drop</soundInteract>
+		<soundDrop>Food_Drop</soundDrop> -->
+		<statBases>
+			<MarketValue>20</MarketValue>
+			<MaxHitPoints>100</MaxHitPoints>
+			<DeteriorationRate>5</DeteriorationRate>
+			<SellPriceFactor>0.1</SellPriceFactor>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Stuff_Locker</li>
+			</categories>
+		</stuffProps>
+		<tradeTags>
+			<li>Exotic</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<compClass>CompRottable</compClass>
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<rotatable>true</rotatable>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>WeaponParts</defName>
+		<label>weapon parts</label>
+		<description>manufactured weapon parts used for crafting ranged weapons.</description>
+		<graphicData>
+			<texPath>Items/WeaponParts</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>5</MarketValue>
+			<Flammability>1.0</Flammability>
+			<DeteriorationRate>2</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<stuffProps>
+			<categories>
+				<li>Stuff_Locker</li>
+			</categories>
+		</stuffProps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MineralSonarModule</defName>
+		<label>Mineral sonar module</label>
+		<description>This is a mineral sonar module. Deployed on the field with some energy packs, it can scan the surrounding area for metallic objects.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Items/MineralSonarModule</texPath>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<DeteriorationRate>0.1</DeteriorationRate>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Flammability>0.1</Flammability>
+			<MarketValue>300</MarketValue>
+		</statBases>
+		<thingCategories>
+			<li>Electronics</li>
+		</thingCategories>
+		<stackLimit>4</stackLimit>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>PaintingSupplies</defName>
+		<label>painting supplies</label>
+		<description>A large assortment of brushes and paints, perfect for any artist.</description>
+		<graphicData>
+			<texPath>Items/PaintingSupplies</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<resourceReadoutPriority>First</resourceReadoutPriority>
+		<soundInteract>Wood_Drop</soundInteract>
+		<soundDrop>Wood_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<statBases>
+			<MarketValue>20</MarketValue>
+		</statBases>
+		<stackLimit>10</stackLimit>
+		<thingCategories>
+			<li>Manufactured</li>
+		</thingCategories>
+		<tradeTags>
+			<li>Exotic</li>
+			<li>JoyItem</li>
+		</tradeTags>
+		<techLevel>Neolithic</techLevel>
+		<canBeSpawningInventory>true</canBeSpawningInventory>
+		<stuffProps>
+			<categories>
+				<li>Paint</li>
+			</categories>
+		</stuffProps>
+	</ThingDef>
+
+
+
+
+
+
+
+
+	<!-- medicine -->
+	<!-- texture override -->
+	<ThingDef ParentName="ResourceBase">
+		<defName>HerbalMedicine</defName>
+		<label>herbal medicine</label>
+		<description>A pack of herbal concoctions typically extracted from the healroot plant. Less potent than industrial pharmaceuticals, but much better than nothing.</description>
+		<thingClass>Medicine</thingClass>
+		<graphicData>
+			<texPath>Items/MedicineHerbal</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>5</MarketValue>
+			<Flammability>1.0</Flammability>
+			<MedicalPotency>0.75</MedicalPotency>
+			<DeteriorationRate>10</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Medicine</li>
+		</thingCategories>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>150</daysToRotStart>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>Medicine</defName>
+		<label>medicine</label>
+		<description>Medical staff use these supplies to heal the wounded.</description>
+		<thingClass>Medicine</thingClass>
+		<graphicData>
+			<texPath>Items/Medicine</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>18</MarketValue>
+			<Flammability>1.0</Flammability>
+			<MedicalPotency>1.0</MedicalPotency>
+			<DeteriorationRate>2</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>Medicine</li>
+		</thingCategories>
+	</ThingDef>
+</Defs>

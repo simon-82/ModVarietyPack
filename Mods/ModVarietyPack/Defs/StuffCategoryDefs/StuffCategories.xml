@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Dummy 
+    used for steel ore,...
+  --> 
+  <StuffCategoryDef>
+    <defName>Stuff_Locker</defName>
+    <label>stuff_locker</label>
+  </StuffCategoryDef>
+
+  <StuffCategoryDef>
+    <defName>Glassy</defName>
+    <label>glassy</label>
+  </StuffCategoryDef>  
+
+  <StuffCategoryDef>
+    <defName>Paint</defName>
+    <label>paint</label>
+  </StuffCategoryDef>
+
+  
+
+
+
+</Defs>
