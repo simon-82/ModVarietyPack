@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResearchProjectDefs>
-	<!-- locks out every vanilla research def, CCL bug, wait for CCL update -->
-	<!--
+	<!-- locks out every vanilla research def
+		exceptions: colored lights, IED traps
+	 -->
+	
   <ResearchProjectDef>
 	<defName>Pemmican</defName>
 	<label>pemmican</label>
@@ -26,7 +28,7 @@
 	  <li>CommunityCoreLibraryResearchLocker</li>
 	</prerequisites>
   </ResearchProjectDef>
-
+  
   <ResearchProjectDef>
 	<defName>Brewing</defName>
 	<label>brewing</label>
@@ -200,7 +202,8 @@
 	  <li>CommunityCoreLibraryResearchLocker</li>
 	</prerequisites>
   </ResearchProjectDef>
-
+	
+  <!--  
   <ResearchProjectDef>
 	<defName>ColoredLights</defName>
 	<label>colored lights</label>
@@ -211,6 +214,7 @@
 	  <li>CommunityCoreLibraryResearchLocker</li>
 	</prerequisites>
   </ResearchProjectDef>
+  -->
 
   <ResearchProjectDef>
 	<defName>Machining</defName>
@@ -234,6 +238,7 @@
 	</prerequisites>
   </ResearchProjectDef>
 
+  <!--  
   <ResearchProjectDef>
 	<defName>IEDBomb</defName>
 	<label>Explosive IEDs</label>
@@ -255,6 +260,7 @@
 	  <li>CommunityCoreLibraryResearchLocker</li>
 	</prerequisites>
   </ResearchProjectDef>
+  -->
 
   <ResearchProjectDef>
 	<defName>MicroelectronicsBasics</defName>
@@ -446,6 +452,6 @@
 	</requiredResearchFacilities>
   </ResearchProjectDef>
 
-  -->
+    
 
 </ResearchProjectDefs>

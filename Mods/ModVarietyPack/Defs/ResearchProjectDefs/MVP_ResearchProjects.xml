@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResearchProjectDefs>
-	<!--=== Communication + Manager Mod ===-->
+	<!-- Communication + Manager Mod -->
 	<ResearchProjectDef>
-		<defName>MicroelectronicsBasics</defName>
+		<defName>Communications</defName>
 		<label>communications</label>
 		<description>"I was stargazing last night, it was wonderful! I saw one star was moving faster than all the others. So cool!" \n"Wait, maybe that wasn't a star. Maybe it was a space ship passing by. We need to build a Communications Console so we can contact them when they fly by next time!" \n"A telephone you mean?" \n"Um, yes, basically ... Only bigger."</description>
 		<baseCost>400</baseCost>
@@ -16,7 +16,7 @@
 		</description>
 		<baseCost>1200</baseCost>
 		<prerequisites>
-			<li>MicroelectronicsBasics</li>
+			<li>Communications</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -34,28 +34,28 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-        <defName>PowerManagement</defName>
-        <label>power management</label>
-        <description>Create management software to monitor the colony's power usage. 
-        </description>
-        <baseCost>1000</baseCost>
-        <prerequisites>
-            <li>ManagingSoftware</li>
-        </prerequisites>
-        <researchMods>
-          <li>
-            <specialAction>FluffyManager.ResearchWorkers.UnlockPowerTab</specialAction>
-          </li>
-        </researchMods>
-        <techLevel>Neolithic</techLevel>
-    </ResearchProjectDef>
+		<defName>PowerManagement</defName>
+		<label>power management</label>
+		<description>Create management software to monitor the colony's power usage. 
+		</description>
+		<baseCost>1000</baseCost>
+		<prerequisites>
+			<li>ManagingSoftware</li>
+		</prerequisites>
+		<researchMods>
+		  <li>
+			<specialAction>FluffyManager.ResearchWorkers.UnlockPowerTab</specialAction>
+		  </li>
+		</researchMods>
+		<techLevel>Neolithic</techLevel>
+	</ResearchProjectDef>
 
-    
-
-
+	
 
 
-	<!--=== Agriculture ===-->
+
+
+	<!-- Agriculture -->
 	<ResearchProjectDef>
 		<defName>AgricultureI</defName>
 		<label>Agriculture I</label>
@@ -65,7 +65,7 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>HospitalBed</defName>
+		<defName>MedicineI</defName>
 		<label>Medicine I</label>
 		<description>"Outch!" \n... \n"What have you done?! Sigh... I'm afraid that doesn't look good. I think we need to amputate. There is nothing else we can do." \n"Oh my. We should have made some real medicine much earlier I guess."</description>
 		<baseCost>500</baseCost>
@@ -76,7 +76,7 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>VitalsMonitor</defName>
+		<defName>MedicineII</defName>
 		<label>Medicine II</label>
 		<description>"This Vitals Monitor will help us to take care of our sick friends. I also think we can make much better prostetics by using steel and aluminum."</description>
 		<baseCost>1000</baseCost>
@@ -92,7 +92,7 @@
 		<description>"It might be possible to grow replacement organs. But we need Biomatter for that." \n"Biomatter?" \n"Yes, we just extract it from human corpses. Let's build an Organ Vat." \n"Eww, you sure about that?"</description>
 		<baseCost>1500</baseCost>
 		<prerequisites>
-			<li>VitalsMonitor</li>
+			<li>MedicineII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -131,7 +131,7 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>Brewing</defName>
+		<defName>CookingI</defName>
 		<label>Cooking I</label>
 		<description>"Yummy!"</description>
 		<baseCost>1000</baseCost>
@@ -147,13 +147,13 @@
 		<description>"How about some nice hot drinks with the good food we have now?" \n"Sure, coffee or tea?" \n"Spectago tea for me! I always feel so funny after drinking that." \n "No, no we first need some better cooking tools, this all takes way too long. And to make some money, let's make some cigars and cigarillos and sell them to the traders."</description>
 		<baseCost>1500</baseCost>
 		<prerequisites>
-			<li>Brewing</li>
+			<li>CookingI</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>Hydroponics</defName>
+		<defName>AgricultureIII</defName>
 		<label>Agriculture III</label>
 		<description>"Ok, so these Muffalo ate all the crops and there are no more fish left in the pond. We should think about doing some indoor gardening. Or even start an aquaculture." \n"Good idea, maybe we should also plant some beans and make tofu." \n"But beans won't grow on that dry soil. We have to add some water to it. I might start digging a hole to build a well." \nUnlocks: Watered Soil</description>
 		<baseCost>1500</baseCost>
@@ -169,13 +169,13 @@
 		<description>"We should seriously think about planting some of these new plants. They not only grow faster and yield more, they even taste good when eaten raw!" \n"That all sounds great, but we have no more place to grow them." \n"Hm, time to build a couple terraforming pumps then. Oh, and these plants won't grow on the fields we have, it seems." \n"I'll just throw some more water and fertilizer on them. I'm sure that will work." \nUnlocks: Enriched Soil</description>
 		<baseCost>2000</baseCost>
 		<prerequisites>
-			<li>Hydroponics</li>
+			<li>AgricultureIII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>Cryptosleep</defName>
+		<defName>FruitTrees</defName>
 		<label>Fruit Trees</label>
 		<description>"Even more plants you say?" \n"These fruit trees are the best! And we can harvest them without the need to replant them every time."</description>
 		<baseCost>1500</baseCost>
@@ -189,9 +189,9 @@
 
 
 
-	<!--=== Construction ===-->
+	<!-- Construction -->
 	<ResearchProjectDef>
-		<defName>Stonecutting</defName>
+		<defName>ConstructionI</defName>
 		<label>Construction I</label>
 		<description>"Look at our food! It's rotting before we can eat it. And my bedroom is too cold!" \n"Ok, then. We should build some heaters and coolers. Some nicer tables and chairs also wouldn't hurt."</description>
 		<baseCost>450</baseCost>
@@ -204,43 +204,29 @@
 		<description>"By smelting sand we can produce glass." \n"Finally I get a light and a window in my room! Maybe even a glass autodoor!"</description>
 		<baseCost>600</baseCost>
 		<prerequisites>
-			<li>Stonecutting</li>
+			<li>ConstructionI</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
-	<!-- gone in a13 
-		<ResearchProjectDef>
-			<defName>PneumaticPicks</defName>
-			<label>mining</label>
-			<description>"Phew! Mining all this rock sure is a lot of work." \n"Why don't you use this pickaxe we have lying around? You would be 20% faster." \nUnlocks: Mining Speed +20%</description>
-			<baseCost>600</baseCost>
-			<prerequisites>
-				<li>Stonecutting</li>
-			</prerequisites>
-		</ResearchProjectDef>
-		-->
-
-
-
 	<ResearchProjectDef>
-		<defName>TubeTelevision</defName>
+		<defName>FurnitureI</defName>
 		<label>furniture I</label>
 		<description>"Argh, my back hurts! We really need some comfy furniture. And always playing horseshoes gets boring! What about a chess table?"</description>
 		<baseCost>800</baseCost>
 		<prerequisites>
-			<li>Stonecutting</li>
+			<li>ConstructionI</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>MultiAnalyzer</defName>
+		<defName>FurnitureII</defName>
 		<label>furniture II</label>
 		<description>"This room looks pretty comfy with the couch and stuff. But the walls are empty. Is somebody good at painting?"</description>
 		<baseCost>1500</baseCost>
 		<prerequisites>
-			<li>TubeTelevision</li>
+			<li>FurnitureI</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -251,7 +237,7 @@
 		<label>Construction II</label>
 		<baseCost>1200</baseCost>
 		<prerequisites>
-			<li>Stonecutting</li>
+			<li>ConstructionI</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -268,7 +254,7 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>ElectricCremation</defName>
+		<defName>Cremation</defName>
 		<label>cremation</label>
 		<description>"All this stuff! And all the corpses! I am not digging graves for all the tribals!" \n"Ok fine, let's build a crematorium."</description>
 		<baseCost>600</baseCost>
@@ -299,7 +285,7 @@
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
-
+	<!--  
 	<ResearchProjectDef>
 		<defName>ResearchProject_RTQuantumChunkStorage</defName>
 		<label>quantum chunk storage</label>
@@ -382,6 +368,7 @@
 		</researchMods>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
+	-->
 
 	<ResearchProjectDef>
 		<defName>ConstructionIII</defName>
@@ -471,13 +458,88 @@
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
+	<!-- 
+	vanilla ship building projects 
+	first one needs ConstructionIV, rest need basics
+	removed HiTech research bench
+
+	-->
+	<ResearchProjectDef Name="ShipResearchProjectBase" Abstract="True">
+		<requiredResearchFacilities>
+			<li>MultiAnalyzer</li>
+		</requiredResearchFacilities>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="ShipResearchProjectBase">
+		<defName>ShipBasics</defName>
+		<label>shipbuilding basics</label>
+		<description>Allows you to start researching more advanced shipbuilding technologies and eventually build a ship to escape the planet.</description>
+		<baseCost>250</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ConstructionIV</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="ShipResearchProjectBase">
+		<defName>ShipCryptosleep</defName>
+		<label>ship cryptosleep caskets</label>
+		<description>Allows you to construct ship cryptosleep caskets for transporting cryptosleeping colonists between the stars.</description>
+		<baseCost>750</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ShipBasics</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="ShipResearchProjectBase">
+		<defName>ShipReactor</defName>
+		<label>ship antimatter reactor</label>
+		<description>Allows you to use an antimatter containment core to build a working antimatter reactor to power a ship.</description>
+		<baseCost>1400</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ShipBasics</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="ShipResearchProjectBase">
+		<defName>ShipEngine</defName>
+		<label>ship antimatter propulsion</label>
+		<description>Allows you to use an antimatter containment core to construct an antimatter drive for a ship.</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ShipBasics</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef ParentName="ShipResearchProjectBase">
+		<defName>ShipComputerCore</defName>
+		<label>ship computer core</label>
+		<description>Allows coercing an existing AI persona into a usable AI computer core for ship guidance.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>ShipBasics</li>
+		</prerequisites>
+	</ResearchProjectDef>
 
 
 
 
-	<!--=== Crafting ===-->
+
+
+
+
+
+
+
+
+
+
+	<!-- Crafting -->
 	<ResearchProjectDef>
-		<defName>Smithing</defName>
+		<defName>CraftingI</defName>
 		<label>Crafting I</label>
 		<description>"Building this wall out of round stone chunks didn't work. We have to cut them into some kind of block shape." \n"We also need to find a way to get the metal out of these rocks. Maybe if we smelt the ore in some kind of furnace?" \n"A wall? Who needs a wall when I could make a beautiful sculpture with these blocks!"</description>
 		<baseCost>400</baseCost>
@@ -485,45 +547,45 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>Devilstrand</defName>
+		<defName>TextileI</defName>
 		<label>textile I</label>
 		<description>"Our clothes won't last forever. It's time to think about growing some cotton so we can weave cloth and start tailoring." \n"We have all these clothes the tribals came in that nobody wants to wear. We could use the materials from them to make some neat clothing for us!" \n"I just want a Baseball Cap!"</description>
 		<baseCost>800</baseCost>
 		<prerequisites>
-			<li>Smithing</li>
+			<li>CraftingI</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>CarpetMaking</defName>
+		<defName>TextileII</defName>
 		<label>textile II</label>
 		<description>"Hyperweave: High-tech nano-fibers woven into sheets. It is somewhat heavy, but is incredibly difficult to break. Devilstrand: Fabric spun from microfibers extracted from silk-producing Devilstrand mushrooms. Very tough, but insulates no better than cloth." \n"Ok Sherlock, everybody knows that... \nWhy Don't we just make some nice carpets first? My feet are getting cold."</description>
 		<baseCost>1700</baseCost>
 		<prerequisites>
-			<li>Devilstrand</li>
+			<li>TextileI</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>PoweredArmor</defName>
+		<defName>TextileIII</defName>
 		<label>textile III</label>
 		<description>"The last raiders came with some pretty good weapons. Our armor vests didn't do very well against these." \n"Alright, I can try making better armor for us. But I will need a lot of stuff and time to make those." \n"What are you waiting for then? Get to work!"</description>
 		<baseCost>2000</baseCost>
 		<prerequisites>
-			<li>CarpetMaking</li>
+			<li>TextileII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>ElectricSmelting</defName>
+		<defName>CraftingII</defName>
 		<label>Crafting II</label>
 		<description>"It's taking forever to cut all the chunks by hand! We need better equipment!" \n"Powered crafting tables would be a good idea. The better tools would even allow us to make armor vests to protect ourselves."</description>
 		<baseCost>1200</baseCost>
 		<prerequisites>
-			<li>Smithing</li>
+			<li>CraftingI</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -534,41 +596,29 @@
 		<description>"This machine can make food for all of us. And we don't have to cook anymore." \n"But it tastes horrible!"</description>
 		<baseCost>1000</baseCost>
 		<prerequisites>
-			<li>ElectricSmelting</li>
+			<li>CraftingII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
-	<!-- gone in a13
-		<ResearchProjectDef>
-			<defName>NutrientResynthesis</defName>
-			<label>nutrient resynthesis</label>
-			<description>"I found a way to improve the Nutrient Paste Dispenser! It now needs 10% less food per meal produced." \n"Great, even more of this stuff... Don't you get it? It tastes h-o-r-r-i-b-l-e..."</description>
-			<baseCost>800</baseCost>	
-			<prerequisites>
-				<li>FoodSynthesizer</li>
-			</prerequisites>
-		</ResearchProjectDef> 
-		-->
-
 	<ResearchProjectDef>
-		<defName>Machining</defName>
+		<defName>CraftingIII</defName>
 		<label>Crafting III</label>
 		<description>"Electronic Chips, Integrated Circuitboards. It's gonna be great!" \n"That is pretty advanced. Are you sure this will work?" \n*bzzzt*</description>
 		<baseCost>1500</baseCost>
 		<prerequisites>
-			<li>ElectricSmelting</li>
+			<li>CraftingII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>ComponentAssembly</defName>
+		<defName>CraftingIV</defName>
 		<label>Crafting IV</label>
 		<description>"This plant is magical! With the right tools, we can replicate any stone chunks we want from it." \n"Better plant some of them fast. The mountain I was digging in is about to collapse I think..."</description>
 		<baseCost>2500</baseCost>
 		<prerequisites>
-			<li>Machining</li>
+			<li>CraftingIII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -579,7 +629,7 @@
 
 
 
-	<!--=== Power ===-->
+	<!-- Power -->
 	<ResearchProjectDef>
 		<defName>PowerI</defName>
 		<label>Power I</label>
@@ -626,6 +676,7 @@
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
+	<!--  
 	<ResearchProjectDef>
 		<defName>ResearchAutoPowerSwitch</defName>
 		<label>Automatic Power Switch</label>
@@ -661,9 +712,10 @@
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
+	-->
 
 	<ResearchProjectDef>
-		<defName>GeothermalPower</defName>
+		<defName>PowerIII</defName>
 		<label>Power III</label>
 		<description>"Did you see this hole in the ground over there?" \n"It looks like there is steam coming out of it." \n"I wonder if we could make use of that somehow..." \nUnlocks: Battery efficiency +15%</description>
 		<researchMods>
@@ -684,7 +736,7 @@
 		<description>"Why are there cables lying everywhere? Ever heard about a wireless power grid? \n"Ok, I get on it boss. Jeez..."</description>
 		<baseCost>1250</baseCost>
 		<prerequisites>
-			<li>GeothermalPower</li>
+			<li>PowerIII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -695,7 +747,7 @@
 		<description>"It's plasma, who doesn't like plasma?" \n"This thing gets pretty hot and it needs to be charged before it produces power. I don't know about that."</description>
 		<baseCost>1500</baseCost>
 		<prerequisites>
-			<li>GeothermalPower</li>
+			<li>PowerIII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -706,7 +758,7 @@
 		<description>"I saw you brought back some kind of green stone last time you went out for mining steel ore." \n"Ah, yes it's Uranium. I'll build a nuclear reactor with it. It's totally save." \n"Ok sure, why not. I'm sure nothing terrible happens."</description>
 		<baseCost>1500</baseCost>
 		<prerequisites>
-			<li>GeothermalPower</li>
+			<li>PowerIII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -717,7 +769,7 @@
 		<description>"Now that we got the basics down with wind and solar energy, why not upgrade the turbines and panels we have?" \n"Nah, I'm not in the mood for working today - I'll just play some horseshoes."</description>
 		<baseCost>1500</baseCost>
 		<prerequisites>
-			<li>GeothermalPower</li>
+			<li>PowerIII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -733,7 +785,7 @@
 		</researchMods>
 		<baseCost>2500</baseCost>
 		<prerequisites>
-			<li>GeothermalPower</li>
+			<li>PowerIII</li>
 			<li>PlasmaPower</li>
 			<li>NuclearPower</li>
 			<li>NaturalPower</li>
@@ -746,9 +798,9 @@
 
 
 
-	<!--=== Security ===-->
+	<!-- Security -->
 	<ResearchProjectDef>
-		<defName>Firefoam</defName>
+		<defName>SecurityI</defName>
 		<label>Security I</label>
 		<description>"I would give you this bow so you can help defending the colony. But not before you get some practice at the shooting range first." \n"Really? Just because I shot myself in the foot last time the tribals came?"</description>
 		<baseCost>400</baseCost>
@@ -761,7 +813,7 @@
 		<description>"These Pilas are pretty good but I feel we need some real weapons rather sooner than later." \n"Ok, I make the weapon parts, you assemble them. Quick! Before the tribals come!"</description>
 		<baseCost>900</baseCost>
 		<prerequisites>
-			<li>Firefoam</li>
+			<li>SecurityI</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -789,7 +841,7 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>ChargedShot</defName>
+		<defName>WeaponCraftingII</defName>
 		<label>Weapon Crafting II</label>
 		<description>"After making all these basic pistols, I came up with some better gun designs." \n"Great! We need to defend the colony!"</description>
 		<baseCost>1500</baseCost>
@@ -805,7 +857,7 @@
 		<description>Rocket Launchers.</description>
 		<baseCost>800</baseCost>
 		<prerequisites>
-			<li>ChargedShot</li>
+			<li>WeaponCraftingII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -816,7 +868,7 @@
 		<description>Assault Rifles with improved accuracy.</description>
 		<baseCost>1200</baseCost>
 		<prerequisites>
-			<li>ChargedShot</li>
+			<li>WeaponCraftingII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -827,7 +879,7 @@
 		<description>Rifles and Sniper Rifles with improved accuracy.</description>
 		<baseCost>1200</baseCost>
 		<prerequisites>
-			<li>ChargedShot</li>
+			<li>WeaponCraftingII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -838,7 +890,7 @@
 		<description>"This thing fires so many bullets, I can't even count them..."</description>
 		<baseCost>1900</baseCost>
 		<prerequisites>
-			<li>ChargedShot</li>
+			<li>WeaponCraftingII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -849,18 +901,18 @@
 		<description>"Where do they come from? From the east you say? Ok I carry the turrets over there." \n"Wait! I can make a Cannon Turret. It has a much better range, but I need you to make me some cannon shells for it."</description>
 		<baseCost>1500</baseCost>
 		<prerequisites>
-			<li>ChargedShot</li>
+			<li>WeaponCraftingII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>MultibarrelWeapons</defName>
+		<defName>WeaponCraftingIII</defName>
 		<label>Weapon Crafting III</label>
 		<description>"Have you made the electronic chips yet? I bet I could make some really nice guns with these."</description>
 		<baseCost>2000</baseCost>
 		<prerequisites>
-			<li>ChargedShot</li>
+			<li>WeaponCraftingII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -871,18 +923,18 @@
 		<description>"Lasers!" \n"Lasers are pretty neat indeed. But against mechs an anti-materiel turret would be better maybe."</description>
 		<baseCost>2000</baseCost>
 		<prerequisites>
-			<li>MultibarrelWeapons</li>
+			<li>WeaponCraftingIII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
-		<defName>Mortars</defName>
+		<defName>SecurityII</defName>
 		<label>Security II</label>
 		<description>"What are these raiders doing? They just stay over there and don't attack the colony." \n"Oh no, looks like they are building a mortar to attack us from far away!" \n"Quick! Build one for ourselves so we can fire back!"</description>
 		<baseCost>1000</baseCost>
 		<prerequisites>
-			<li>Firefoam</li>
+			<li>SecurityI</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -893,7 +945,7 @@
 		<description>"Hehe - They will never see this artillery shell I burried over there. Once they get close and step on it - boom!" \n"That's so unfair! I like it!"</description>
 		<baseCost>500</baseCost>
 		<prerequisites>
-			<li>Mortars</li>
+			<li>SecurityII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
@@ -915,11 +967,11 @@
 		<description>"We already have fence over there, don't we?" \n"But it's not made out of laser. So it doesn't count." \n"Have you been drinking too much Spectago Tea again? We need Embrasures, not fences made out of laser!"</description>
 		<baseCost>2000</baseCost>
 		<prerequisites>
-			<li>Mortars</li>
+			<li>SecurityII</li>
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
-
+	<!--  
 	<ResearchProjectDef>
 		<defName>Building_ShieldStandard_research</defName>
 		<label>Standard Shield Generator</label>
@@ -967,5 +1019,6 @@
 		</prerequisites>
 		<techLevel>Neolithic</techLevel>
 	</ResearchProjectDef>
+	-->
 	
 </ResearchProjectDefs>
