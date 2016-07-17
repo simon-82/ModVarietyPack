@@ -3,21 +3,21 @@
 	<!-- item bases -->
 	<!-- ressource -->
 	<ThingDef Name="ResourceBase" Abstract="True">
-    <thingClass>ThingWithComps</thingClass>
-    <label>unspecified resource</label>
-    <category>Item</category>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <useHitPoints>true</useHitPoints>
-    <selectable>true</selectable>
-    <altitudeLayer>Item</altitudeLayer>
-    <stackLimit>75</stackLimit>
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>
-    </comps>
-    <alwaysHaulable>true</alwaysHaulable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <rotatable>false</rotatable>
-    <pathCost>15</pathCost>
+	<thingClass>ThingWithComps</thingClass>
+	<label>unspecified resource</label>
+	<category>Item</category>
+	<resourceReadoutPriority>Middle</resourceReadoutPriority>
+	<useHitPoints>true</useHitPoints>
+	<selectable>true</selectable>
+	<altitudeLayer>Item</altitudeLayer>
+	<stackLimit>75</stackLimit>
+	<comps>
+	  <li Class="CompProperties_Forbiddable"/>
+	</comps>
+	<alwaysHaulable>true</alwaysHaulable>
+	<drawGUIOverlay>true</drawGUIOverlay>
+	<rotatable>false</rotatable>
+	<pathCost>15</pathCost>
   </ThingDef>
 
 	<ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
@@ -35,8 +35,8 @@
 
 	<ThingDef Abstract="True" Name="PlantFoodRawBase" ParentName="OrganicProductBase">
 		<ingestible>
-			<preferability>Raw</preferability>
-			<!-- MVP modded to scale with plants
+			<!--<preferability>Raw</preferability>
+			 MVP modded to scale with plants
 			was <nutrition>0.05</nutrition> -->
 			<eatEffect>EatVegetarian</eatEffect>
 			<soundEat>RawVegetable_Eat</soundEat>
@@ -44,11 +44,15 @@
 		<thingCategories>
 			<li>PlantFoodRaw</li>
 		</thingCategories>
+		<comps>
+			<li Class="CompProperties_FoodPoisoningChance" />
+		</comps>
 	</ThingDef>
 
 	<ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase" >
 		<ingestible>
-			<preferability>Awful</preferability>
+			<preferability>RawTasty</preferability>
+			<tastesRaw>false</tastesRaw>
 			<!-- MVP modded to scale with plants
 			was <nutrition>0.05</nutrition> -->
 			<eatEffect>EatVegetarian</eatEffect>

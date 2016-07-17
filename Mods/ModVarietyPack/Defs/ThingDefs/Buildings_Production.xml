@@ -18,7 +18,7 @@
 			<li>Woody</li>
 			<li>Stony</li>
 		</stuffCategories>
-		<AltitudeLayer>Waist</AltitudeLayer>
+		<AltitudeLayer>Building</AltitudeLayer>
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
@@ -63,7 +63,7 @@
 			<li>Woody</li>
 			<li>Stony</li>
 		</stuffCategories>
-		<AltitudeLayer>Waist</AltitudeLayer>
+		<AltitudeLayer>Building</AltitudeLayer>
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
@@ -113,7 +113,7 @@
 			<AIPersonaCore>1</AIPersonaCore>
 			<IntegratedCircuitsBoard>25</IntegratedCircuitsBoard>
 		</costList>
-		<AltitudeLayer>Waist</AltitudeLayer>
+		<AltitudeLayer>Building</AltitudeLayer>
 		<fillPercent>1</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
