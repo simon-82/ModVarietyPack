@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Buildings>
+	<ThingDef ParentName="BuildingBase">
+		<defName>SunLamp</defName>
+		<label>sun lamp</label>
+		<thingClass>Building_SunLamp</thingClass>
+		<category>Building</category>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<graphicData>
+			<texPath>Buildings/Lights/LampSun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.2, 0.4, 0.2)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<altitudeLayer>Building</altitudeLayer>
+		<blockWind>true</blockWind>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.15</fillPercent>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToMake>330</WorkToMake>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<selectable>true</selectable>
+		<description>Lights an area brightly enough to grow crops.</description>
+		<costList>
+			<SteelBar>20</SteelBar>
+			<Glass>10</Glass>
+		</costList>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<overlightRadius>7.0</overlightRadius>
+				<glowRadius>14</glowRadius>
+				<glowColor>(370,370,370,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>true</startElectricalFires>
+				<basePowerConsumption>1600</basePowerConsumption>
+			</li>
+			<li Class="CompProperties_Flickable" />
+		</comps>
+		<specialDisplayRadius>5.8</specialDisplayRadius>
+		<designationCategory>Misc</designationCategory>
+		<rotatable>false</rotatable>
+		<designationHotKey>Misc1</designationHotKey>
+	</ThingDef>
+
+	<!-- vanilla lamps -->
+	<ThingDef Abstract="True" Name="StandingLampBase" ParentName="BuildingBase">
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<altitudeLayer>Waist</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<selectable>true</selectable>
+		<fillPercent>0.20</fillPercent>
+		<costList>
+			<SteelBar>5</SteelBar>
+			<Glass>10</Glass>
+		</costList>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<designationCategory>Lighting</designationCategory>
+		<rotatable>false</rotatable>
+		<graphicData>
+			<!-- <texPath>Things/Building/Furniture/LampStanding</texPath> -->
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+			<damageData>
+				<rect>(0.2,0.2,0.6,0.6)</rect>
+			</damageData>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>150</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+		</comps>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<WorkToMake>170</WorkToMake>
+			<Flammability>1.0</Flammability>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StandingLampBase">
+		<defName>StandingLamp</defName>
+		<label>standing lamp</label>
+		<description>Standing lamp that lights an area.</description>
+		<designationHotKey>L</designationHotKey>
+		<graphicData>
+			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>12</glowRadius>
+				<glowColor>(217,217,217,0)</glowColor>
+			</li>
+			<li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
+				<compClass>CommunityCoreLibrary.CompColoredLight</compClass>
+				<requiredResearch>ColoredLights</requiredResearch>
+				<Default>0</Default>
+				<useColorPicker>true</useColorPicker>
+				<hideGizmos>false</hideGizmos>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- vanilla colored lights diabled with CommunityCoreLibraryResearchLocker -->
+	<ThingDef ParentName="StandingLampBase">
+		<defName>StandingLamp_Red</defName>
+		<label>standing lamp (red)</label>
+		<designationHotKey>O</designationHotKey>
+		<graphicData>
+			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
+		</graphicData>
+		<description>Standing lamp that lights an area in red.</description>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>12</glowRadius>
+				<glowColor>(255,82,52,1)</glowColor>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>CommunityCoreLibraryResearchLocker</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="StandingLampBase">
+		<defName>StandingLamp_Green</defName>
+		<label>standing lamp (green)</label>
+		<description>Standing lamp that lights an area in green.</description>
+		<designationHotKey>K</designationHotKey>
+		<graphicData>
+			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>12</glowRadius>
+				<glowColor>(180,255,0,1)</glowColor>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>CommunityCoreLibraryResearchLocker</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="StandingLampBase">
+		<defName>StandingLamp_Blue</defName>
+		<label>standing lamp (blue)</label>
+		<description>Standing lamp that lights an area in blue.</description>
+		<designationHotKey>M</designationHotKey>
+		<graphicData>
+			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
+		</graphicData>
+		<comps>
+			<li Class="CompProperties_Glower">
+				<glowRadius>12</glowRadius>
+				<glowColor>(52,210,255,0)</glowColor>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>CommunityCoreLibraryResearchLocker</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+
+
+
+	<!-- new lights -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>CeilingLamp</defName>
+		<label>ceiling lamp</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Buildings/Lights/CeilingLamp</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.6, 0.3)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+		</graphicData>
+		<minifiedDef>MinifiedFurniture</minifiedDef>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<passability>Standable</passability>
+		<tradeTags>
+			<li>Furniture</li>
+		</tradeTags>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToMake>150</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>5</Beauty>
+			<SellPriceFactor>0.25</SellPriceFactor>
+		</statBases>
+		<building>
+			<isInert>false</isInert>
+			<isEdifice>false</isEdifice>
+		</building>
+		<selectable>true</selectable>
+		<description>A ceiling mounted light that lights an area.</description>
+		<size>(1,1)</size>
+		<costList>
+			<SteelBar>15</SteelBar>
+			<Glass>5</Glass>
+		</costList>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>150</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>12</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+			<li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
+				<compClass>CommunityCoreLibrary.CompColoredLight</compClass>
+				<requiredResearch>ColoredLights</requiredResearch>
+				<Default>0</Default>
+				<useColorPicker>true</useColorPicker>
+				<hideGizmos>false</hideGizmos>
+			</li>
+		</comps>
+		<designationCategory>Lighting</designationCategory>
+		<rotatable>false</rotatable>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>Lighting_WallLight</defName>
+		<label>Wall light</label>
+		<description>Wall light that lights an area. Must be placed on a wall.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<graphicData>
+			<texPath>Buildings/Lights/WallLight</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawsize>1.4,1.4</drawsize>
+		</graphicData>
+		<uiIconPath>Buildings/Lights/WallLightUI</uiIconPath>
+		<altitudeLayer>PawnUnused</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<selectable>true</selectable>
+		<rotatable>true</rotatable>
+		<size>(1,1)</size>
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<WorkToMake>150</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>5</Beauty>
+		</statBases>
+		<building>
+			<isEdifice>false</isEdifice>
+		</building>
+		<costList>
+			<SteelBar>10</SteelBar>
+			<Glass>3</Glass>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>100</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>8</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+			<li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
+				<compClass>CommunityCoreLibrary.CompColoredLight</compClass>
+				<requiredResearch>ColoredLights</requiredResearch>
+				<Default>0</Default>
+				<useColorPicker>true</useColorPicker>
+				<hideGizmos>false</hideGizmos>
+			</li>
+		</comps>
+		<placeWorkers>
+			<li>CommunityCoreLibrary.PlaceWorker_WallAttachment</li>
+		</placeWorkers>
+		<tickerType>Rare</tickerType>
+		<designationCategory>Lighting</designationCategory>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!--Floor Lights -->
+	<!-- SQUARE -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>FloorLightSquare</defName>
+		<label>floor light (square)</label>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<description>Square floor light integraded into the ground. Waterproof and quite pretty.</description>
+		<graphicData>
+			<texPath>Buildings/Lights/FloorLightSquare</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.3, 0.1)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+		</graphicData>
+		<altitudeLayer>Floor</altitudeLayer>
+		<passability>Standable</passability>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToMake>120</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>2</Beauty>
+		</statBases>
+		<selectable>true</selectable>
+		<rotatable>false</rotatable>
+		<size>(1,1)</size>
+		<costList>
+			<SteelBar>10</SteelBar>
+			<Glass>10</Glass>
+		</costList>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<designationCategory>Lighting</designationCategory>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>100</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>10</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+			<li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
+				<compClass>CommunityCoreLibrary.CompColoredLight</compClass>
+				<requiredResearch>ColoredLights</requiredResearch>
+				<Default>0</Default>
+				<useColorPicker>true</useColorPicker>
+				<hideGizmos>false</hideGizmos>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- STRIPE -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>FloorLightStripe</defName>
+		<label>floor light (stripe)</label>
+		<graphicData>
+			<texPath>Buildings/Lights/FloorLightStripe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.3, 0.1)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+		</graphicData>
+		<description>Stripe floor light integraded into the ground. Waterproof and quite pretty.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<altitudeLayer>Floor</altitudeLayer>
+		<passability>Standable</passability>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToMake>60</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>1</Beauty>
+		</statBases>
+		<selectable>true</selectable>
+		<size>(1,1)</size>
+		<costList>
+			<SteelBar>5</SteelBar>
+			<Glass>8</Glass>
+		</costList>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<designationCategory>Lighting</designationCategory>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>60</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>6</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+			<li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
+				<compClass>CommunityCoreLibrary.CompColoredLight</compClass>
+				<requiredResearch>ColoredLights</requiredResearch>
+				<Default>0</Default>
+				<useColorPicker>true</useColorPicker>
+				<hideGizmos>false</hideGizmos>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+	<!-- SMALL STRIPE -->
+	<ThingDef ParentName="BuildingBase">
+		<defName>FloorLightSmallStripe</defName>
+		<label>floor light (small stripe)</label>
+		<graphicData>
+			<texPath>Buildings/Lights/FloorLightSmallStripe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shadowData>
+				<volume>(0.3, 0.3, 0.1)</volume>
+				<offset>(0,0,-0.1)</offset>
+			</shadowData>
+		</graphicData>
+		<description>Small stripe floor light integraded into the ground. Waterproof and quite pretty.</description>
+		<thingClass>Building</thingClass>
+		<category>Building</category>
+		<altitudeLayer>Floor</altitudeLayer>
+		<passability>Standable</passability>
+		<statBases>
+			<MaxHitPoints>75</MaxHitPoints>
+			<WorkToMake>60</WorkToMake>
+			<Flammability>1.0</Flammability>
+			<Beauty>1</Beauty>
+		</statBases>
+		<selectable>true</selectable>
+		<size>(1,1)</size>
+		<costList>
+			<SteelBar>5</SteelBar>
+			<Glass>8</Glass>
+		</costList>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+		<designationCategory>Lighting</designationCategory>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>40</basePowerConsumption>
+				<shortCircuitInRain>false</shortCircuitInRain>
+			</li>
+			<li Class="CompProperties_Flickable" />
+			<li>
+				<compClass>CompQuality</compClass>
+			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>3</glowRadius>
+				<glowColor>(217,217,208,0)</glowColor>
+			</li>
+			<li Class="CommunityCoreLibrary.CompProperties_ColoredLight">
+				<compClass>CommunityCoreLibrary.CompColoredLight</compClass>
+				<requiredResearch>ColoredLights</requiredResearch>
+				<Default>0</Default>
+				<useColorPicker>true</useColorPicker>
+				<hideGizmos>false</hideGizmos>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>PowerI</li>
+		</researchPrerequisites>
+	</ThingDef>
+</Buildings>

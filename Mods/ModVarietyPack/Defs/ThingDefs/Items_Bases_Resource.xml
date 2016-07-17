@@ -3,22 +3,22 @@
 	<!-- item bases -->
 	<!-- ressource -->
 	<ThingDef Name="ResourceBase" Abstract="True">
-    <thingClass>ThingWithComps</thingClass>
-    <label>unspecified resource</label>
-    <category>Item</category>
-    <resourceReadoutPriority>Middle</resourceReadoutPriority>
-    <useHitPoints>true</useHitPoints>
-    <selectable>true</selectable>
-    <altitudeLayer>Item</altitudeLayer>
-    <stackLimit>75</stackLimit>
-    <comps>
-      <li Class="CompProperties_Forbiddable"/>
-    </comps>
-    <alwaysHaulable>true</alwaysHaulable>
-    <drawGUIOverlay>true</drawGUIOverlay>
-    <rotatable>false</rotatable>
-    <pathCost>15</pathCost>
-  </ThingDef>
+		<thingClass>ThingWithComps</thingClass>
+		<label>unspecified resource</label>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>75</stackLimit>
+		<comps>
+			<li Class="CompProperties_Forbiddable" />
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
 
 	<ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
 		<graphicData>
@@ -46,7 +46,7 @@
 		</thingCategories>
 	</ThingDef>
 
-	<ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase" >
+	<ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase">
 		<ingestible>
 			<preferability>Awful</preferability>
 			<!-- MVP modded to scale with plants
@@ -58,8 +58,6 @@
 			<li>FruitFoodRaw</li>
 		</thingCategories>
 	</ThingDef>
-
-
 
 
 
@@ -146,7 +144,7 @@
 			<smeltable>true</smeltable>
 		</stuffProps>
 	</ThingDef>
-	
+
 	<!-- add Bauxite -->
 	<ThingDef ParentName="ResourceBase">
 		<defName>Bauxite</defName>
@@ -273,7 +271,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>PlasteelBar</defName>
 		<label>plasteel bar</label>
-		<description>Plasteel bars crafted from ore.  Useful for building structures, weapons, and even some prosthetics.</description>
+		<description>Plasteel bars crafted from ore. Useful for building structures, weapons, and even some prosthetics.</description>
 		<graphicData>
 			<texPath>Items/PlasteelBar</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -365,9 +363,6 @@
 			</li>
 		</verbs>
 	</ThingDef>
-
-
-
 
 
 
@@ -491,22 +486,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 	<!-- Misc -->
 	<ThingDef ParentName="ResourceBase">
 		<defName>EthanolFuel</defName>
 		<label>ethanol fuel</label>
-		<description>A can of ethanol fuel.  It can be used to fuel the steam generator, or sold to a trader.</description>
+		<description>A can of ethanol fuel. It can be used to fuel the steam generator, or sold to a trader.</description>
 		<graphicData>
 			<texPath>Items/EthanolFuel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -525,7 +509,7 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
-	
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>Mulch</defName>
 		<label>mulch</label>
@@ -603,7 +587,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>Electronics</defName>
 		<label>electronic chips</label>
-		<description>Electronic chips made from silicon and aluminum bars.  Used in the construction of advanced structures</description>
+		<description>Electronic chips made from silicon and aluminum bars. Used in the construction of advanced structures</description>
 		<graphicData>
 			<texPath>Items/Electronics</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -766,8 +750,6 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
-
-
 
 
 

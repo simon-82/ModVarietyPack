@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<defs>
-    <!-- Manager Tables-->
-    <ThingDef ParentName="BenchBase">
+<ThingDefs>
+	<!-- Manager Tables-->
+	<ThingDef ParentName="BenchBase">
 		<DefName>FM_BasicManagerStation</DefName>
 		<label>basic manager desk</label>
 		<ThingClass>FluffyManager.Building_ManagerStation</ThingClass>
@@ -139,13 +139,13 @@
 				<speed>250</speed>
 			</li>
 			<li Class="CompProperties_Glower">
-		        <compClass>CompGlower</compClass>
-		        <glowRadius>3</glowRadius>
-		        <glowColor>(255,0,0,0)</glowColor>
+				<compClass>CompGlower</compClass>
+				<glowRadius>3</glowRadius>
+				<glowColor>(255,0,0,0)</glowColor>
 			</li>
 		</comps>
 		<researchPrerequisites>
 			<li>AdvancedManagingSoftware</li>
 		</researchPrerequisites>
 	</ThingDef>
-</defs>
+</ThingDefs>
