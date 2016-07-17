@@ -12,32 +12,6 @@
 		<repairEffect>Repair</repairEffect>
 		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
 		<filthLeaving>BuildingRubble</filthLeaving>
-		<damageMultipliers>
-			<li>
-				<damageDef>Bomb</damageDef>
-				<multiplier>2.5</multiplier>
-			</li>
-			<li>
-				<damageDef>Thermobaric</damageDef>
-				<multiplier>2.5</multiplier>
-			</li>
-			<li>
-				<damageDef>Bullet</damageDef>
-				<multiplier>0.2</multiplier>
-			</li>
-			<li>
-				<damageDef>Fragment</damageDef>
-				<multiplier>0.1</multiplier>
-			</li>
-			<li>
-				<damageDef>Arrow</damageDef>
-				<multiplier>0.05</multiplier>
-			</li>
-			<li>
-				<damageDef>Electrical</damageDef>
-				<multiplier>0.2</multiplier>
-			</li>
-		</damageMultipliers>
 	</ThingDef>
 
 	<!-- ========================= Work tables ==========================-->
@@ -45,6 +19,7 @@
 	<ThingDef Name="BenchBase" ParentName="BuildingBase" Abstract="True">
 		<castEdgeShadows>true</castEdgeShadows>
 		<staticSunShadowHeight>0.20</staticSunShadowHeight>
+		<AltitudeLayer>Building</AltitudeLayer>
 	</ThingDef>
 
 
@@ -65,7 +40,6 @@
 			<li>Woody</li>
 			<li>Stony</li>
 		</stuffCategories>
-		<AltitudeLayer>Waist</AltitudeLayer>
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
@@ -74,7 +48,7 @@
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<Size>(3,1)</Size>
-		<DesignationCategory>Misc</DesignationCategory>
+		<DesignationCategory>Production</DesignationCategory>
 		<Passability>PassThroughOnly</Passability>
 		<pathCost>60</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -102,15 +76,14 @@
 		</graphicData>
 		<costStuffCount>100</costStuffCount>
 		<costList>
-			<SteelBar>50</SteelBar>
-			<Electronics>25</Electronics>
+			<Steel>50</Steel>
+			<Silver>1</Silver>
 		</costList>
 		<stuffCategories>
 			<li>Metallic</li>
 			<li>Woody</li>
 			<li>Stony</li>
 		</stuffCategories>
-		<AltitudeLayer>Waist</AltitudeLayer>
 		<fillPercent>0.5</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
@@ -119,7 +92,7 @@
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<Size>(3,1)</Size>
-		<DesignationCategory>Misc</DesignationCategory>
+		<DesignationCategory>Production</DesignationCategory>
 		<Passability>PassThroughOnly</Passability>
 		<pathCost>60</pathCost>
 		<hasInteractionCell>True</hasInteractionCell>
@@ -156,11 +129,10 @@
 			<drawSize>(2.5,2.5)</drawSize>
 		</graphicData>
 		<costList>
-			<PlasteelBar>75</PlasteelBar>
+			<Plasteel>75</Plasteel>
+			<Silver>5</Silver>
 			<AIPersonaCore>1</AIPersonaCore>
-			<IntegratedCircuitsBoard>25</IntegratedCircuitsBoard>
 		</costList>
-		<AltitudeLayer>Waist</AltitudeLayer>
 		<fillPercent>1</fillPercent>
 		<useHitPoints>True</useHitPoints>
 		<statBases>
@@ -169,7 +141,7 @@
 			<Flammability>0.5</Flammability>
 		</statBases>
 		<Size>(2,2)</Size>
-		<DesignationCategory>Misc</DesignationCategory>
+		<DesignationCategory>Production</DesignationCategory>
 		<Passability>PassThroughOnly</Passability>
 		<pathCost>100</pathCost>
 		<tickerType>Normal</tickerType>

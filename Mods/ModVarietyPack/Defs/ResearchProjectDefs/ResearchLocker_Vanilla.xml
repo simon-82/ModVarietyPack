@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResearchProjectDefs>
+	<!-- locks out every vanilla research def
+		exceptions: colored lights, IED traps
+	 -->
+	
+  <ResearchProjectDef>
+	<defName>Pemmican</defName>
+	<label>pemmican</label>
+	<description>Make pemmican, a preserved mixture of meat and plant matter that doesn't go bad for a long time. Great for traveling.</description>
+	<baseCost>500</baseCost>
+	<techLevel>Neolithic</techLevel>
+	<tags>
+	  <li>TribalStart</li>
+	</tags>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+	
+  <ResearchProjectDef>
+	<defName>Devilstrand</defName>
+	<label>devilstrand</label>
+	<description>Allows colonists to plant devilstrand, a slow-growing mushroom that yields a valuable plant fiber.</description>
+	<baseCost>500</baseCost>
+	<techLevel>Neolithic</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+	<defName>Brewing</defName>
+	<label>brewing</label>
+	<description>Allows you to build a brewery to transform hops into tasty, tasty beer.</description>
+	<baseCost>700</baseCost>
+	<techLevel>Neolithic</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>Stonecutting</defName>
+	<label>stonecutting</label>
+	<description>Build stonecutting tables, which allow you to refine rock chunks into stone blocks that can be used for construction.</description>
+	<baseCost>300</baseCost>
+	<techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+	<defName>CarpetMaking</defName>
+	<label>carpet making</label>
+	<description>Allows colonists to build carpets to increase the quality of their environments.</description>
+	<baseCost>1200</baseCost>
+	<techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>Smithing</defName>
+	<label>smithing</label>
+	<description>Build smithies for crafting metal weapons and tools.</description>
+	<baseCost>700</baseCost>
+	<techLevel>Medieval</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>ComplexClothing</defName>
+	<label>complex clothing</label>
+	<description>Sew complicated garments like pants, dusters, and cowboy hats.</description>
+	<baseCost>500</baseCost>
+	<techLevel>Medieval</techLevel>
+	<tags>
+	  <li>ClassicStart</li>
+	</tags>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+	<defName>Electricity</defName>
+	<label>electricity</label>
+	<description>Generate and use electricity for cooking and other simple tasks.</description>
+	<baseCost>1200</baseCost>
+	<techLevel>Industrial</techLevel>
+	<tags>
+	  <li>ClassicStart</li>
+	</tags>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  
+
+  <ResearchProjectDef>
+	<defName>Batteries</defName>
+	<label>batteries</label>
+	<description>Build batteries for storing electricity.</description>
+	<baseCost>400</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<tags>
+	  <li>ClassicStart</li>
+	</tags>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>NutrientPaste</defName>
+	<label>nutrient paste</label>
+	<description>Build nutrient paste dispensers which efficiently produce edible meals from raw nutritive feedstocks.</description>
+	<baseCost>600</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<tags>
+	  <li>ClassicStart</li>
+	</tags>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>SolarPanels</defName>
+	<label>solar panels</label>
+	<description>Build solar panels for electrical generation.</description>
+	<baseCost>600</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<tags>
+	  <li>ClassicStart</li>
+	</tags>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>AirConditioning</defName>
+	<label>air conditioning</label>
+	<description>Build air conditions to cool rooms in the heat, or to keep freezers.</description>
+	<baseCost>600</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<tags>
+	  <li>ClassicStart</li>
+	</tags>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>Autodoors</defName>
+	<label>autodoors</label>
+	<description>Build autodoors which open to permit movement without slowing anyone down.</description>
+	<baseCost>400</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>Hydroponics</defName>
+	<label>hydroponics</label>
+	<description>Allows you to build hydroponics tables to rapidly grow crops indoors regardless of the terrain or weather outside.</description>
+	<baseCost>700</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>ElectricSmelting</defName>
+	<label>electric smelting</label>
+	<description>Build electic smithy and smelters.\n\nThe electric smithy allows smithing items without fuel. The electric smelters uses heat and strong electromagnets to extract useful metal from slag chunks and other items.</description>
+	<baseCost>1700</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>ElectricCremation</defName>
+	<label>electric cremation</label>
+	<description>Build crematoriums which can vaporize unwanted corpses.</description>
+	<baseCost>500</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+	
+  <!--  
+  <ResearchProjectDef>
+	<defName>ColoredLights</defName>
+	<label>colored lights</label>
+	<description>Allows colonists to construct colored lights for decorative purposes.</description>
+	<baseCost>500</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+  -->
+
+  <ResearchProjectDef>
+	<defName>Machining</defName>
+	<label>machining</label>
+	<description>Build machining tables to craft guns and machinery or disassemble dead mechanoids.</description>
+	<baseCost>1500</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>Mortars</defName>
+	<label>mortars</label>
+	<description>Learn to build mortars which can lob shells long distances over walls.</description>
+	<baseCost>2000</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <!--  
+  <ResearchProjectDef>
+	<defName>IEDBomb</defName>
+	<label>Explosive IEDs</label>
+	<description>Allows colonists to build improvised explosive device-based traps from artillery shells.</description>
+	<baseCost>1600</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>IEDIncendiary</defName>
+	<label>Incendiary IEDs</label>
+	<description>Allows colonists to build incendiary explosive traps from artillery shells.</description>
+	<baseCost>1600</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+  -->
+
+  <ResearchProjectDef>
+	<defName>MicroelectronicsBasics</defName>
+	<label>microelectronics basics</label>
+	<description>The basics of working with delicate, complex electronics. This unlocks the high-tech research bench, comms console, and other research projects like tube televisions, and cryptosleep caskets.</description>
+	<baseCost>700</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  
+
+  <ResearchProjectDef>
+	<defName>TubeTelevision</defName>
+	<label>tube television</label>
+	<description>Allows the production of tube televisions.</description>
+	<baseCost>800</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>GunTurrets</defName>
+	<label>gun turrets</label>
+	<description>Allows the production of automated gun turrets.</description>
+	<baseCost>800</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+
+  
+
+  <ResearchProjectDef>
+	<defName>Firefoam</defName>
+	<label>firefoam</label>
+	<description>Allows the construction of firefoam poppers; fire-safety buildings which spread fire-retardant foam in response to encroaching flames.</description>
+	<baseCost>800</baseCost>
+	<techLevel>Industrial</techLevel>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>MoisturePump</defName>
+	<label>moisture pump</label>
+	<description>Allows the construction of moisture pumps, which turn wet ground dry.</description>
+	<baseCost>1200</baseCost>
+	<techLevel>Industrial</techLevel>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>GeothermalPower</defName>
+	<label>geothermal power</label>
+	<description>Allows you to build geothermal power plants on top of steam geysers, for uninterrupted power.</description>
+	<baseCost>1800</baseCost>
+	<techLevel>Industrial</techLevel>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>HospitalBed</defName>
+	<label>hospital bed</label>
+	<description>Allows colonists to construct hospital beds which increase chance of successful medical work.</description>
+	<baseCost>2000</baseCost>
+	<techLevel>Industrial</techLevel>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>MultiAnalyzer</defName>
+	<label>multi-analyzer</label>
+	<description>Allows colonists to build multi-analyzers which increase research speed, and allow higher-level research projects, if placed near a research bench.</description>
+	<baseCost>800</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef>
+
+  
+
+  <ResearchProjectDef>
+	<defName>VitalsMonitor</defName>
+	<label>vitals monitor</label>
+	<description>Allows colonists to build vitals monitors which increase patients treatment quality if placed next to medical beds.</description>
+	<baseCost>1600</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+	  <li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>ComponentAssembly</defName>
+	<label>component assembly</label>
+	<description>Allows you to build the Component Assembly Bench, where colonists can make components from simple materials.</description>
+	<baseCost>3000</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+	  <li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>MultibarrelWeapons</defName>
+	<label>multibarrel weapons</label>
+	<description>Allows you to build miniguns.</description>
+	<baseCost>3000</baseCost>
+	<techLevel>Industrial</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+	  <li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>Cryptosleep</defName>
+	<label>cryptosleep casket</label>
+	<description>Allows colonists to construct cryptosleep caskets, which can put living beings in a state of suspended animation.</description>
+	<baseCost>1000</baseCost>
+	<techLevel>Spacer</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+	  <li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>PoweredArmor</defName>
+	<label>powered armor</label>
+	<description>Neuro-memetic robotics and advanced plasteel weaving technologies allow you to build the power armor and power armor helmets.</description>
+	<baseCost>1500</baseCost>
+	<techLevel>Spacer</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+	  <li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+	<defName>ChargedShot</defName>
+	<label>charged shot</label>
+	<description>Understand the secrets of pulse-charged energy/projectile munitions. Allows you to build the charge rifle.</description>
+	<baseCost>1500</baseCost>
+	<techLevel>Spacer</techLevel>
+	<prerequisites>
+	  <li>CommunityCoreLibraryResearchLocker</li>
+	</prerequisites>
+	<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	<requiredResearchFacilities>
+	  <li>MultiAnalyzer</li>
+	</requiredResearchFacilities>
+  </ResearchProjectDef>
+
+    
+
+</ResearchProjectDefs>

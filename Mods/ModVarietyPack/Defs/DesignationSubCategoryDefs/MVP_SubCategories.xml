@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Furniture -->
+    <ArchitectSense.DesignationSubCategoryDef>
+    	<defName>SubCategory_Chairs</defName>
+    	<label>seats</label>
+    	<description>Chairs, stools sofas and benches</description>
+    	<!-- graphicData is optional, if not set the icon for the first def listed below will be borrowed. -->
+    	<!-- <graphicData></graphicData> -->
+    	<defNames>
+            <li>Stool</li>
+            <li>DiningChair</li>
+            <li>Armchair</li>
+    	</defNames>
+    	<designationCategory>Furniture</designationCategory>
+    	<!-- Debug flag prints some extra information after map is loaded (while subcategories are being created) 
+    	<debug>true</debug> -->
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+    	<defName>SubCategory_Beds</defName>
+    	<label>beds</label>
+    	<description>Assorted beds!</description>
+    	<defNames>
+    		<li>SleepingSpot</li>
+            <li>Bed</li>
+            <li>DoubleBed</li>
+            <li>RoyalBed</li>
+            <li>HospitalBed</li>
+    	</defNames>
+    	<designationCategory>Furniture</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_AnimalFurniture</defName>
+        <label>animal</label>
+        <description>Beds and sleeping places for animals.</description>
+        <defNames>
+            <li>AnimalBed</li>
+            <li>AnimalSleepingSpot</li>
+            <li>AnimalSleepingBox</li>
+        </defNames>
+        <designationCategory>Furniture</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Tables</defName>
+        <label>tables</label>
+        <description>Dining tables, side tables and coffee tables.</description>
+        <defNames>
+            <li>TableShort</li>
+            <li>TableLong</li>
+        </defNames>
+        <designationCategory>Furniture</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Beauty</defName>
+        <label>decoration</label>
+        <description>Decorative bits and pieces.</description>
+        <defNames>
+            <li>PlantPot</li>
+        </defNames>
+        <designationCategory>Furniture</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Lights</defName>
+        <label>Lighting</label>
+        <description>Lamps and Lighting.</description>
+        <defNames>
+            <li>TorchLamp</li>
+            <li>StandingLamp</li>
+        </defNames>
+        <designationCategory>Furniture</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Storage</defName>
+        <label>Storage</label>
+        <description>Store your stuff.</description>
+        <defNames>
+            <li>EquipmentRack</li>
+        </defNames>
+        <designationCategory>Furniture</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+
+
+    <!-- Floors -->
+    <!--  <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_VanillaFloorTest</defName>
+        <label>StoneFloors</label>
+        <description>Store your stuff.</description>
+        <defNames>
+            <li>TileSandstone</li>
+            <li>TileGranite</li>
+            <li>TileLimestone</li>
+            <li>TileSlate</li>
+            <li>TileMarble</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Soil</defName>
+        <label>Growing</label>
+        <description>Soil to grow plants.</description>
+        <defNames>
+            <li>SoilCultivated</li>
+            <li>SoilFertilized</li>
+            <li>SoilWatered</li>
+            <li>SoilEnriched</li>
+            <li>Soilcoverup</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+    -->
+
+
+    <!-- Power -->
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_PowerNatural</defName>
+        <label>StoneFloors</label>
+        <description>Store your stuff.</description>
+        <defNames>
+            <li>WindTurbine</li>
+            <li>SolarGenerator</li>
+            <li>GeothermalGenerator</li>
+        </defNames>
+        <designationCategory>Power</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+
+    
+
+
+</Defs>

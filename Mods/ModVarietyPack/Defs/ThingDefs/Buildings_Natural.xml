@@ -1,34 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ThingDefs>
-	<!-- CR bases + Bauxite -->
+	<!-- Vanilla bases + Bauxite -->
 
-	<ThingDef Name="BuildingNaturalBase" Abstract="True">
+  <ThingDef Name="BuildingNaturalBase" Abstract="True">
     <category>Building</category>
     <selectable>true</selectable>
     <drawerType>MapMeshOnly</drawerType>
     <filthLeaving>RockRubble</filthLeaving>
-    <damageMultipliers>
-      <li>
-        <damageDef>Bomb</damageDef>
-        <multiplier>2.5</multiplier>
-      </li>
-      <li>
-        <damageDef>Thermobaric</damageDef>
-        <multiplier>2.5</multiplier>
-      </li>
-      <li>
-        <damageDef>Bullet</damageDef>
-        <multiplier>0.05</multiplier>
-      </li>
-      <li>
-        <damageDef>Fragment</damageDef>
-        <multiplier>0.05</multiplier>
-      </li>
-      <li>
-        <damageDef>Electrical</damageDef>
-        <multiplier>0.0</multiplier>
-      </li>
-    </damageMultipliers>
   </ThingDef>
 
 
@@ -43,8 +21,9 @@
         <li>MapEdge</li>
       </linkFlags>
     </graphicData>
-    <altitudeLayer>BuildingTall</altitudeLayer>
+    <altitudeLayer>Building</altitudeLayer>
     <passability>Impassable</passability>
+    <blockWind>true</blockWind>
     <castEdgeShadows>true</castEdgeShadows>
     <fillPercent>1</fillPercent>
     <coversFloor>true</coversFloor>
@@ -61,21 +40,20 @@
     <building>
       <isInert>true</isInert>
       <isNaturalRock>true</isNaturalRock>
-      <soundMined>CollapseRock</soundMined>
       <canBuildNonEdificesUnder>false</canBuildNonEdificesUnder>
       <deconstructible>false</deconstructible>
     </building>
-  </ThingDef>  
+  </ThingDef>	
 
 	<!-- 
 	MVP Bauxite 
 	slightly less common than steel:
 	<mineableYield>35</mineableYield>
 			<mineableScatterCommonality>1</mineableScatterCommonality>
-			<mineableScatterBlotchSizeRange>
+			<mineableScatterLumpSizeRange>
 				<min>20</min>
 				<max>40</max>
-			</mineableScatterBlotchSizeRange>
+			</mineableScatterLumpSizeRange>
 	-->
 
 	<ThingDef ParentName="RockBase">
@@ -97,10 +75,10 @@
 			<mineableThing>Bauxite</mineableThing>
 			<mineableYield>50</mineableYield>
 			<mineableScatterCommonality>0.8</mineableScatterCommonality>
-			<mineableScatterBlotchSizeRange>
+			<mineableScatterLumpSizeRange>
 				<min>10</min>
 				<max>50</max>
-			</mineableScatterBlotchSizeRange>
+			</mineableScatterLumpSizeRange>
 		</building>
 	</ThingDef>
 

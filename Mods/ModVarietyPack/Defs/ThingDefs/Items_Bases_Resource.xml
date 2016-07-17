@@ -3,22 +3,22 @@
 	<!-- item bases -->
 	<!-- ressource -->
 	<ThingDef Name="ResourceBase" Abstract="True">
-		<thingClass>ThingWithComps</thingClass>
-		<label>unspecified resource</label>
-		<category>Item</category>
-		<resourceReadoutPriority>Middle</resourceReadoutPriority>
-		<useHitPoints>true</useHitPoints>
-		<selectable>true</selectable>
-		<altitudeLayer>Item</altitudeLayer>
-		<stackLimit>75</stackLimit>
-		<comps>
-			<li Class="CompProperties_Forbiddable" />
-		</comps>
-		<alwaysHaulable>true</alwaysHaulable>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<rotatable>false</rotatable>
-		<pathCost>15</pathCost>
-	</ThingDef>
+	<thingClass>ThingWithComps</thingClass>
+	<label>unspecified resource</label>
+	<category>Item</category>
+	<resourceReadoutPriority>Middle</resourceReadoutPriority>
+	<useHitPoints>true</useHitPoints>
+	<selectable>true</selectable>
+	<altitudeLayer>Item</altitudeLayer>
+	<stackLimit>75</stackLimit>
+	<comps>
+	  <li Class="CompProperties_Forbiddable"/>
+	</comps>
+	<alwaysHaulable>true</alwaysHaulable>
+	<drawGUIOverlay>true</drawGUIOverlay>
+	<rotatable>false</rotatable>
+	<pathCost>15</pathCost>
+  </ThingDef>
 
 	<ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
 		<graphicData>
@@ -35,8 +35,8 @@
 
 	<ThingDef Abstract="True" Name="PlantFoodRawBase" ParentName="OrganicProductBase">
 		<ingestible>
-			<preferability>Raw</preferability>
-			<!-- MVP modded to scale with plants
+			<!--<preferability>Raw</preferability>
+			 MVP modded to scale with plants
 			was <nutrition>0.05</nutrition> -->
 			<eatEffect>EatVegetarian</eatEffect>
 			<soundEat>RawVegetable_Eat</soundEat>
@@ -44,10 +44,15 @@
 		<thingCategories>
 			<li>PlantFoodRaw</li>
 		</thingCategories>
+		<comps>
+			<li Class="CompProperties_FoodPoisoningChance" />
+		</comps>
 	</ThingDef>
-	<ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase">
+
+	<ThingDef Abstract="True" Name="FruitFoodRawBase" ParentName="OrganicProductBase" >
 		<ingestible>
-			<preferability>Awful</preferability>
+			<preferability>RawTasty</preferability>
+			<tastesRaw>false</tastesRaw>
 			<!-- MVP modded to scale with plants
 			was <nutrition>0.05</nutrition> -->
 			<eatEffect>EatVegetarian</eatEffect>
@@ -58,184 +63,8 @@
 		</thingCategories>
 	</ThingDef>
 
-	<!-- raw fish base -->
-	<ThingDef Name="FishBase" Abstract="True" ParentName="OrganicProductBase">
-		<label>Base fish properties</label>
-		<soundInteract>Food_Drop</soundInteract>
-		<soundDrop>Food_Drop</soundDrop>
-		<tickerType>Rare</tickerType>
-		<statBases>
-			<Flammability>1.0</Flammability>
-			<DeteriorationRate>10</DeteriorationRate>
-			<Beauty>-10</Beauty>
-		</statBases>
-		<comps>
-			<li Class="CompProperties_Rottable">
-				<daysToRotStart>2</daysToRotStart>
-			</li>
-		</comps>
-		<thingCategories>
-			<li>CorpsesFish</li>
-		</thingCategories>
-	</ThingDef>
-
-	<!-- butchered fish base -->
-	<ThingDef Name="SeaProductBase" Abstract="True" ParentName="OrganicProductBase">
-		<soundInteract>Food_Drop</soundInteract>
-		<soundDrop>Food_Drop</soundDrop>
-		<socialPropernessMatters>true</socialPropernessMatters>
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-			<DeteriorationRate>10</DeteriorationRate>
-			<Beauty>-20</Beauty>
-		</statBases>
-		<tickerType>Rare</tickerType>
-	</ThingDef>
-
-	<ThingDef Name="RawSeaFoodBase" Abstract="True" ParentName="SeaProductBase">
-		<label>Base sea food properties</label>
-		<comps>
-			<li Class="CompProperties_Rottable">
-				<daysToRotStart>4</daysToRotStart>
-				<rotDestroys>True</rotDestroys>
-			</li>
-		</comps>
-		<ingestible>
-			<foodType>Meat</foodType>
-			<preferability>Raw</preferability>
-			<nutrition>0.05</nutrition>
-			<eatEffect>EatMeat</eatEffect>
-			<soundEat>RawMeat_Eat</soundEat>
-		</ingestible>
-		<thingCategories>
-			<li>FoodFreshFish</li>
-		</thingCategories>
-	</ThingDef>
 
 
-	<!-- meal -->
-	<ThingDef Name="MealBase" Abstract="True">
-		<label>meal</label>
-		<thingClass>Meal</thingClass>
-		<category>Item</category>
-		<useHitPoints>true</useHitPoints>
-		<selectable>true</selectable>
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-		</statBases>
-		<altitudeLayer>Item</altitudeLayer>
-		<stackLimit>10</stackLimit>
-		<tickerType>Rare</tickerType>
-		<description>"Meal lacks desc."</description>
-		<socialPropernessMatters>true</socialPropernessMatters>
-		<thingCategories>
-			<li>FoodMeals</li>
-		</thingCategories>
-		<alwaysHaulable>true</alwaysHaulable>
-		<comps>
-			<li Class="CompProperties_Forbiddable" />
-		</comps>
-		<pathCost>15</pathCost>
-		<resourceReadoutPriority>Last</resourceReadoutPriority>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<ingestible>
-			<foodType>Meal, Processed</foodType>
-			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-		</ingestible>
-	</ThingDef>
-
-	<ThingDef ParentName="MealBase" Name="MealRottable" Abstract="True">
-		<comps>
-			<li Class="CompProperties_Rottable">
-				<daysToRotStart>4</daysToRotStart>
-				<rotDestroys>true</rotDestroys>
-			</li>
-		</comps>
-	</ThingDef>
-
-
-	<!-- body part -->
-	<ThingDef Name="BodyPartBase" Abstract="True">
-		<label>body part</label>
-		<thingClass>ThingWithComps</thingClass>
-		<category>Item</category>
-		<useHitPoints>true</useHitPoints>
-		<selectable>true</selectable>
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-		</statBases>
-		<altitudeLayer>Item</altitudeLayer>
-		<tickerType>Never</tickerType>
-		<alwaysHaulable>true</alwaysHaulable>
-		<isBodyPartOrImplant>true</isBodyPartOrImplant>
-		<comps>
-			<li Class="CompProperties_Forbiddable" />
-		</comps>
-		<pathCost>10</pathCost>
-	</ThingDef>
-
-	<ThingDef ParentName="BodyPartBase" Name="OrganicBodyPartBase" Abstract="True">
-		<tickerType>Rare</tickerType>
-		<comps>
-			<li Class="CompProperties_Rottable">
-				<daysToRotStart>1</daysToRotStart>
-				<rotDestroys>true</rotDestroys>
-			</li>
-		</comps>
-	</ThingDef>
-
-
-	<!-- unfinished bases -->
-	<ThingDef Name="UnfinishedBase" Abstract="True">
-		<thingClass>UnfinishedThing</thingClass>
-		<category>Item</category>
-		<label>Unfinished thing</label>
-		<graphicData>
-			<texPath>Things/Item/Unfinished/UnfinishedSculpture</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<altitudeLayer>Item</altitudeLayer>
-		<useHitPoints>true</useHitPoints>
-		<isUnfinishedThing>true</isUnfinishedThing>
-		<selectable>true</selectable>
-		<tradeability>Never</tradeability>
-		<drawerType>RealtimeOnly</drawerType>
-		<!-- For CompForbiddable -->
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-		</statBases>
-		<comps>
-			<li Class="CompProperties_Forbiddable" />
-		</comps>
-		<alwaysHaulable>true</alwaysHaulable>
-		<rotatable>false</rotatable>
-		<pathCost>15</pathCost>
-		<thingCategories>
-			<li>Unfinished</li>
-		</thingCategories>
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
-		</stuffCategories>
-	</ThingDef>
-
-	<ThingDef ParentName="UnfinishedBase">
-		<defName>UnfinishedProsthesis</defName>
-		<label>Unfinished prosthesis</label>
-		<graphicData>
-			<texPath>Items/MedProsthesis_unfinished</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<stuffCategories>
-			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
-		</stuffCategories>
-	</ThingDef>
 
 
 
@@ -282,6 +111,7 @@
 			<smeltable>true</smeltable>
 		</stuffProps>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>Plasteel</defName>
 		<label>plasteel ore</label>
@@ -320,7 +150,7 @@
 			<smeltable>true</smeltable>
 		</stuffProps>
 	</ThingDef>
-
+	
 	<!-- add Bauxite -->
 	<ThingDef ParentName="ResourceBase">
 		<defName>Bauxite</defName>
@@ -402,6 +232,7 @@
 			</statFactors>
 		</stuffProps>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>SteelBar</defName>
 		<label>steel bar</label>
@@ -442,10 +273,11 @@
 			</statFactors>
 		</stuffProps>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>PlasteelBar</defName>
 		<label>plasteel bar</label>
-		<description>Plasteel bars crafted from ore. Useful for building structures, weapons, and even some prosthetics.</description>
+		<description>Plasteel bars crafted from ore.  Useful for building structures, weapons, and even some prosthetics.</description>
 		<graphicData>
 			<texPath>Items/PlasteelBar</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -479,6 +311,7 @@
 			</statFactors>
 		</stuffProps>
 	</ThingDef>
+
 
 
 
@@ -536,6 +369,10 @@
 			</li>
 		</verbs>
 	</ThingDef>
+
+
+
+
 
 
 
@@ -604,7 +441,7 @@
 		<label>safety glass</label>
 		<description>Stronger than normal glass but harder to work with.</description>
 		<graphicData>
-			<texPath>Items/SafetyGlass</texPath>
+			<texPath>Items/GlassSafety</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Metal_Drop</soundInteract>
@@ -657,11 +494,23 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- Misc -->
 	<ThingDef ParentName="ResourceBase">
 		<defName>EthanolFuel</defName>
 		<label>ethanol fuel</label>
-		<description>A can of ethanol fuel. It can be used to fuel the steam generator, or sold to a trader.</description>
+		<description>A can of ethanol fuel.  It can be used to fuel the steam generator, or sold to a trader.</description>
 		<graphicData>
 			<texPath>Items/EthanolFuel</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -680,6 +529,7 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
+	
 	<ThingDef ParentName="ResourceBase">
 		<defName>Mulch</defName>
 		<label>mulch</label>
@@ -702,6 +552,7 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>BucketWater</defName>
 		<label>bucket of water</label>
@@ -725,6 +576,7 @@
 		</stuffProps>
 		<stackLimit>20</stackLimit>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>EnergyPack</defName>
 		<label>Energy pack</label>
@@ -751,10 +603,11 @@
 		</stuffProps>
 		<stackLimit>5</stackLimit>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>Electronics</defName>
 		<label>electronic chips</label>
-		<description>Electronic chips made from silicon and aluminum bars. Used in the construction of advanced structures</description>
+		<description>Electronic chips made from silicon and aluminum bars.  Used in the construction of advanced structures</description>
 		<graphicData>
 			<texPath>Items/Electronics</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -773,6 +626,7 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>IntegratedCircuitsBoard</defName>
 		<label>Integrated circuits board</label>
@@ -799,6 +653,7 @@
 		</stuffProps>
 		<stackLimit>50</stackLimit>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>Biomatter</defName>
 		<label>biomatter</label>
@@ -807,8 +662,9 @@
 			<texPath>Items/Biomatter</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
+		<!--   food_drop is gone in a14
 		<soundInteract>Food_Drop</soundInteract>
-		<soundDrop>Food_Drop</soundDrop>
+		<soundDrop>Food_Drop</soundDrop> -->
 		<statBases>
 			<MarketValue>20</MarketValue>
 			<MaxHitPoints>100</MaxHitPoints>
@@ -836,6 +692,7 @@
 		</comps>
 		<rotatable>true</rotatable>
 	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>WeaponParts</defName>
 		<label>weapon parts</label>
@@ -859,40 +716,7 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
-	<ThingDef ParentName="ResourceBase">
-		<defName>CannonShell</defName>
-		<label>cannon shell</label>
-		<description>Fired from cannon turret.</description>
-		<graphicData>
-			<texPath>Items/CannonShell</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Standard_Drop</soundDrop>
-		<tickerType>Normal</tickerType>
-		<stackLimit>50</stackLimit>
-		<statBases>
-			<MarketValue>14</MarketValue>
-			<MaxHitPoints>70</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-			<DeteriorationRate>1</DeteriorationRate>
-		</statBases>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<comps>
-			<li Class="CompProperties_Explosive">
-				<explosiveRadius>2.9</explosiveRadius>
-				<explosiveDamageType>Bomb</explosiveDamageType>
-				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
-				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
-				<wickTicks>
-					<min>10</min>
-					<max>30</max>
-				</wickTicks>
-			</li>
-		</comps>
-	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>MineralSonarModule</defName>
 		<label>Mineral sonar module</label>
@@ -914,32 +738,7 @@
 		</thingCategories>
 		<stackLimit>4</stackLimit>
 	</ThingDef>
-	<ThingDef ParentName="ResourceBase">
-		<defName>PileOfBooks</defName>
-		<label>pile of books</label>
-		<description>A random assortment of books. Most are old and discarded classics, but occasionally a good quality book can be found.</description>
-		<graphicData>
-			<texPath>Items/PileOfBooks</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<resourceReadoutPriority>First</resourceReadoutPriority>
-		<soundInteract>Wood_Drop</soundInteract>
-		<soundDrop>Wood_Drop</soundDrop>
-		<useHitPoints>false</useHitPoints>
-		<statBases>
-			<MarketValue>35</MarketValue>
-		</statBases>
-		<stackLimit>10</stackLimit>
-		<thingCategories>
-			<li>Manufactured</li>
-		</thingCategories>
-		<tradeTags>
-			<li>Exotic</li>
-			<li>JoyItem</li>
-		</tradeTags>
-		<techLevel>Spacer</techLevel>
-		<canBeSpawningInventory>true</canBeSpawningInventory>
-	</ThingDef>
+
 	<ThingDef ParentName="ResourceBase">
 		<defName>PaintingSupplies</defName>
 		<label>painting supplies</label>
@@ -971,6 +770,9 @@
 			</categories>
 		</stuffProps>
 	</ThingDef>
+
+
+
 
 
 
