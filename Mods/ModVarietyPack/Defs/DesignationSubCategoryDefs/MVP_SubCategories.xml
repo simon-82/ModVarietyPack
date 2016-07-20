@@ -71,6 +71,11 @@
         <defNames>
             <li>TorchLamp</li>
             <li>StandingLamp</li>
+            <li>CeilingLamp</li>
+            <li>Lighting_WallLight</li>
+            <li>FloorLightSquare</li>
+            <li>FloorLightStripe</li>
+            <li>FloorLightSmallStripe</li>
         </defNames>
         <designationCategory>Furniture</designationCategory>
     </ArchitectSense.DesignationSubCategoryDef>

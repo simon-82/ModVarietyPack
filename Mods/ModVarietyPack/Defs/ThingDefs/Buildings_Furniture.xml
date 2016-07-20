@@ -54,56 +54,11 @@
 	</ThingDef>
 
 	<!-- vanilla lamps -->
-	<ThingDef Abstract="True" Name="StandingLampBase" ParentName="BuildingBase">
-		<thingClass>Building</thingClass>
-		<category>Building</category>
-		<minifiedDef>MinifiedFurniture</minifiedDef>
-		<altitudeLayer>Waist</altitudeLayer>
-		<passability>PassThroughOnly</passability>
-		<selectable>true</selectable>
-		<fillPercent>0.20</fillPercent>
-		<costList>
-			<SteelBar>5</SteelBar>
-			<Glass>10</Glass>
-		</costList>
-		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-		<designationCategory>Lighting</designationCategory>
-		<rotatable>false</rotatable>
-		<graphicData>
-			<!-- <texPath>Things/Building/Furniture/LampStanding</texPath> -->
-			<graphicClass>Graphic_Single</graphicClass>
-			<shadowData>
-				<volume>(0.3, 0.6, 0.3)</volume>
-				<offset>(0,0,-0.1)</offset>
-			</shadowData>
-			<damageData>
-				<rect>(0.2,0.2,0.6,0.6)</rect>
-			</damageData>
-		</graphicData>
-		<comps>
-			<li Class="CompProperties_Power">
-				<compClass>CompPowerTrader</compClass>
-				<basePowerConsumption>150</basePowerConsumption>
-				<shortCircuitInRain>false</shortCircuitInRain>
-			</li>
-			<li Class="CompProperties_Flickable" />
-			<li>
-				<compClass>CompQuality</compClass>
-			</li>
-		</comps>
-		<statBases>
-			<MaxHitPoints>50</MaxHitPoints>
-			<WorkToMake>170</WorkToMake>
-			<Flammability>1.0</Flammability>
-		</statBases>
-	</ThingDef>
-
 	<ThingDef ParentName="StandingLampBase">
 		<defName>StandingLamp</defName>
 		<label>standing lamp</label>
 		<description>Standing lamp that lights an area.</description>
-		<designationHotKey>L</designationHotKey>
+		<designationHotKey>Misc11</designationHotKey>
 		<graphicData>
 			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
 		</graphicData>
@@ -129,7 +84,6 @@
 	<ThingDef ParentName="StandingLampBase">
 		<defName>StandingLamp_Red</defName>
 		<label>standing lamp (red)</label>
-		<designationHotKey>O</designationHotKey>
 		<graphicData>
 			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
 		</graphicData>
@@ -149,7 +103,6 @@
 		<defName>StandingLamp_Green</defName>
 		<label>standing lamp (green)</label>
 		<description>Standing lamp that lights an area in green.</description>
-		<designationHotKey>K</designationHotKey>
 		<graphicData>
 			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
 		</graphicData>
@@ -168,7 +121,6 @@
 		<defName>StandingLamp_Blue</defName>
 		<label>standing lamp (blue)</label>
 		<description>Standing lamp that lights an area in blue.</description>
-		<designationHotKey>M</designationHotKey>
 		<graphicData>
 			<texPath>Buildings/Lights/Lamps_Yellow</texPath>
 		</graphicData>
@@ -248,7 +200,7 @@
 				<hideGizmos>false</hideGizmos>
 			</li>
 		</comps>
-		<designationCategory>Lighting</designationCategory>
+		<designationCategory>Furniture</designationCategory>
 		<rotatable>false</rotatable>
 		<researchPrerequisites>
 			<li>PowerI</li>
@@ -313,7 +265,7 @@
 			<li>CommunityCoreLibrary.PlaceWorker_WallAttachment</li>
 		</placeWorkers>
 		<tickerType>Rare</tickerType>
-		<designationCategory>Lighting</designationCategory>
+		<designationCategory>Furniture</designationCategory>
 		<researchPrerequisites>
 			<li>PowerI</li>
 		</researchPrerequisites>
@@ -352,7 +304,7 @@
 		</costList>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-		<designationCategory>Lighting</designationCategory>
+		<designationCategory>Furniture</designationCategory>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -411,7 +363,7 @@
 		</costList>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-		<designationCategory>Lighting</designationCategory>
+		<designationCategory>Furniture</designationCategory>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -470,7 +422,7 @@
 		</costList>
 		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-		<designationCategory>Lighting</designationCategory>
+		<designationCategory>Furniture</designationCategory>
 		<comps>
 			<li Class="CompProperties_Power">
 				<compClass>CompPowerTrader</compClass>
@@ -497,4 +449,9 @@
 			<li>PowerI</li>
 		</researchPrerequisites>
 	</ThingDef>
+
+
+
+
+	
 </Buildings>
