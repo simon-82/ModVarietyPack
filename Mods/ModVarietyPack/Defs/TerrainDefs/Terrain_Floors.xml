@@ -1,586 +1,557 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TerrainDefs>
-  <!-- TODO CLEANUP -->
-  <TerrainDef Name="FloorBase" Abstract="True">
-    <layerable>true</layerable>
-    <affordances>
-      <li>Light</li>
-      <li>Heavy</li>
-      <li>SmoothHard</li>
-    </affordances>
-    <statBases>
-      <WorkToMake>135</WorkToMake>
-    </statBases>
-    <designationCategory>Floors</designationCategory>
-    <Fertility>0</Fertility>
-    <constructEffect>ConstructDirt</constructEffect>
-    <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-  </TerrainDef>
-
-
-<!-- === VanillaStart === -->
-
-
-  <TerrainDef Abstract="True" ParentName="FloorBase" Name="TileStoneBase">
-    <!--<RenderPrecedence>220</RenderPrecedence> MUST BE <400 -->
-    <RenderPrecedence>100</RenderPrecedence>
-    <Description>Solid stone tiles for a castle feeling. Pretty to look at, but they take a long time to lay.</Description>
-    <texturePath>Terrain/Surfaces/TileStone</texturePath>
-    <statBases>
-      <WorkToMake>700</WorkToMake>
-      <Beauty>2</Beauty>
-    </statBases>
-  </TerrainDef>
-  
-  
-  <TerrainDef ParentName="TileStoneBase">
-    <DefName>TileSandstone</DefName>
-    <label>sandstone tile</label>
-    <color>(126,104,94)</color>
-    <CostList>
-      <BlocksSandstone>4</BlocksSandstone>
-    </CostList>
-  </TerrainDef>
-
-
-  <TerrainDef ParentName="TileStoneBase">
-    <DefName>TileGranite</DefName>
-    <label>granite tile</label>
-    <color>(105,95,97)</color>
-    <CostList>
-      <BlocksGranite>4</BlocksGranite>
-    </CostList>
-  </TerrainDef>
-
-  <TerrainDef ParentName="TileStoneBase">
-    <DefName>TileLimestone</DefName>
-    <label>limestone tile</label>
-    <color>(158,153,135)</color>
-    <CostList>
-      <BlocksLimestone>4</BlocksLimestone>
-    </CostList>
-  </TerrainDef>
-
-  <TerrainDef ParentName="TileStoneBase">
-    <DefName>TileSlate</DefName>
-    <label>slate tile</label>
-    <color>(70,70,70)</color>
-    <CostList>
-      <BlocksSlate>4</BlocksSlate>
-  </CostList>
-  </TerrainDef>
-
-  <TerrainDef ParentName="TileStoneBase">
-    <DefName>TileMarble</DefName>
-    <label>marble tile</label>
-    <color>(132,135,132)</color>
-    <CostList>
-      <BlocksMarble>4</BlocksMarble>
-    </CostList>
-  </TerrainDef>
-
-
-
-
-
-  
-
-  <TerrainDef Name="MoreFloorsBase" Abstract="True">
-    <layerable>true</layerable>
-    <affordances>
-      <li>Light</li>
-      <li>Heavy</li>
-      <li>SmoothHard</li>
-    </affordances>
-    <statBases>
-      <WorkToMake>135</WorkToMake>
-    </statBases>
-    <designationCategory>Floors</designationCategory>
-    <Fertility>0</Fertility>
-    <constructEffect>ConstructDirt</constructEffect>
-    <AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-  </TerrainDef>
-
- 
-
-<!--<RenderPrecedence>220</RenderPrecedence> MUST BE <400 -->
-<!-- === Wood === -->
-<!-- === Vanilla === -->
-  <TerrainDef  ParentName="MoreFloorsBase">
-    <DefName>WoodPlankFloor</DefName>
-    <label>wood floor</label>
-    <RenderPrecedence>100</RenderPrecedence>
-    <Description>Wood plank flooring. For that warm, homey feeling.</Description>
-    <texturePath>Terrain/Surfaces/WoodFloor</texturePath>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>85</WorkToMake>
-    </statBases>
-    <CostList>
-      <WoodPlank>3</WoodPlank>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-  </TerrainDef>
-
-<!-- === Mod === -->
-  <TerrainDef  ParentName="MoreFloorsBase">
-    <DefName>WoodPlankFloor1</DefName>
-    <label>wood floor</label>
-    <RenderPrecedence>101</RenderPrecedence>
-    <Description>Wood plank flooring. For that warm, homey feeling.</Description>
-    <texturePath>Floors/WoodFloor1</texturePath>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>85</WorkToMake>
-    </statBases>
-    <CostList>
-      <WoodPlank>3</WoodPlank>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-    <ResearchPrerequisites><li>Stonecutting</li></ResearchPrerequisites>
-  </TerrainDef>
-
-<TerrainDef  ParentName="MoreFloorsBase">
-    <DefName>WoodPlankFloor2</DefName>
-    <label>wood floor</label>
-    <RenderPrecedence>102</RenderPrecedence>
-    <Description>Wood plank flooring. For that warm, homey feeling.</Description>
-    <texturePath>Floors/WoodFloor2</texturePath>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>85</WorkToMake>
-    </statBases>
-    <CostList>
-      <WoodPlank>3</WoodPlank>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-    <ResearchPrerequisites><li>Stonecutting</li></ResearchPrerequisites>
-  </TerrainDef>
-
-  <TerrainDef  ParentName="MoreFloorsBase">
-    <DefName>WoodPlankFloor3</DefName>
-    <label>wood floor</label>
-    <RenderPrecedence>103</RenderPrecedence>
-    <Description>Wood plank flooring. For that warm, homey feeling.</Description>
-    <texturePath>Floors/WoodFloor3</texturePath>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>85</WorkToMake>
-    </statBases>
-    <CostList>
-      <WoodPlank>3</WoodPlank>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-    <ResearchPrerequisites><li>Stonecutting</li></ResearchPrerequisites>
-  </TerrainDef>
-
-  <TerrainDef  ParentName="MoreFloorsBase">
-    <DefName>WoodPlankFloor4</DefName>
-    <label>wood floor</label>
-    <RenderPrecedence>104</RenderPrecedence>
-    <Description>Wood plank flooring. For that warm, homey feeling.</Description>
-    <texturePath>Floors/WoodFloor4</texturePath>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>85</WorkToMake>
-    </statBases>
-    <CostList>
-      <WoodPlank>3</WoodPlank>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-    <ResearchPrerequisites><li>Stonecutting</li></ResearchPrerequisites>
-  </TerrainDef>
-
-  <TerrainDef  ParentName="MoreFloorsBase">
-    <DefName>WoodPlankFloor5</DefName>
-    <label>wood floor</label>
-    <RenderPrecedence>105</RenderPrecedence>
-    <Description>Wood plank flooring. For that warm, homey feeling.</Description>
-    <texturePath>Floors/WoodFloor5</texturePath>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>85</WorkToMake>
-    </statBases>
-    <CostList>
-      <WoodPlank>3</WoodPlank>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-    <ResearchPrerequisites><li>Stonecutting</li></ResearchPrerequisites>
-  </TerrainDef>
-
-  <TerrainDef  ParentName="MoreFloorsBase">
-    <DefName>WoodPlankFloor6</DefName>
-    <label>bamboo floor</label>
-    <RenderPrecedence>106</RenderPrecedence>
-    <Description>Bamboo flooring. For that warm, homey feeling.</Description>
-    <texturePath>Floors/BambooFloor</texturePath>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>85</WorkToMake>
-    </statBases>
-    <CostList>
-      <Bamboo>3</Bamboo>
-    </CostList>
-    <constructEffect>ConstructWood</constructEffect>
-    <ResearchPrerequisites><li>Stonecutting</li></ResearchPrerequisites>
-  </TerrainDef>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- === Metal === -->
-<!-- === Vanilla === -->
-<TerrainDef ParentName="MoreFloorsBase">
-    <DefName>MetalTile</DefName>
-    <label>metal tile</label>
-    <RenderPrecedence>110</RenderPrecedence>
-    <Description>Metal tiles, for that spaceship look. Pretty, but labor and material-intensive.</Description>
-    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
-    <color>(0.369, 0.369, 0.369)</color>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>500</WorkToMake>
-    </statBases>
-    <CostList>
-      <SteelBar>3</SteelBar>
-    </CostList>
-    <constructEffect>ConstructMetal</constructEffect>
-  </TerrainDef>
-
-<!-- === Mod === -->
-<TerrainDef ParentName="MoreFloorsBase">
-    <DefName>MetalTile1</DefName>
-    <label>metal tile</label>
-    <RenderPrecedence>111</RenderPrecedence>
-    <Description>Metal tiles, for that spaceship look. Pretty, but labor and material-intensive.</Description>
-    <texturePath>Floors/MetalTile1</texturePath>
-    <color>(0.369, 0.369, 0.369)</color>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>500</WorkToMake>
-    </statBases>
-    <CostList>
-      <SteelBar>3</SteelBar>
-    </CostList>
-    <ResearchPrerequisites><li>ConstructionII</li></ResearchPrerequisites>
-    <constructEffect>ConstructMetal</constructEffect>
-  </TerrainDef>
-  
-  <TerrainDef ParentName="MoreFloorsBase">
-    <DefName>MetalTile2</DefName>
-    <label>metal tile</label>
-    <RenderPrecedence>112</RenderPrecedence>
-    <Description>Metal tiles, for that spaceship look. Pretty, but labor and material-intensive.</Description>
-    <texturePath>Floors/MetalTile2</texturePath>
-    <color>(0.369, 0.369, 0.369)</color>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>500</WorkToMake>
-    </statBases>
-    <CostList>
-      <SteelBar>3</SteelBar>
-    </CostList>
-    <ResearchPrerequisites><li>ConstructionII</li></ResearchPrerequisites>
-    <constructEffect>ConstructMetal</constructEffect>
-  </TerrainDef>
-
-  <TerrainDef ParentName="MoreFloorsBase">
-    <DefName>MetalTile3</DefName>
-    <label>metal tile</label>
-    <RenderPrecedence>113</RenderPrecedence>
-    <Description>Metal tiles, for that spaceship look. Pretty, but labor and material-intensive.</Description>
-    <texturePath>Floors/MetalTile3</texturePath>
-    <color>(0.369, 0.369, 0.369)</color>
-    <statBases>
-      <Beauty>2</Beauty>
-      <WorkToMake>500</WorkToMake>
-    </statBases>
-    <CostList>
-      <SteelBar>3</SteelBar>
-    </CostList>
-    <ResearchPrerequisites><li>ConstructionII</li></ResearchPrerequisites>
-    <constructEffect>ConstructMetal</constructEffect>
-  </TerrainDef>  
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- === Concrete === -->
-  <!-- === Vanilla === -->
-  <TerrainDef ParentName="MoreFloorsBase">
-    <DefName>PavedTile</DefName>
-    <label>paved tile</label>
-    <RenderPrecedence>120</RenderPrecedence>
-    <Description>Utilitarian concrete tiles. Cheap and quick to move around on, but neutral in terms of looks and slow to build.</Description>
-    <texturePath>Terrain/Surfaces/PavedTile</texturePath>
-    <statBases>
-      <WorkToMake>400</WorkToMake>
-    </statBases>
-    <CostList>
-      <SteelBar>2</SteelBar>
-    </CostList>
-    <ResearchPrerequisites><li>ConstructionII</li></ResearchPrerequisites>
-  </TerrainDef>
-
-  <TerrainDef ParentName="MoreFloorsBase">
-    <defName>Concrete</defName>
-    <label>concrete</label>
-    <Description>Quick-poured concrete. Fast to walk on, cheap, and very quick to pour, but quite ugly.</Description>
-    <texturePath>Terrain/Surfaces/Concrete</texturePath>
-    <EdgeType>Hard</EdgeType>
-    <RenderPrecedence>121</RenderPrecedence>
-    <statBases>
-      <WorkToMake>70</WorkToMake>
-      <Beauty>-1</Beauty>
-    </statBases>
-    <CostList>
-      <SteelBar>1</SteelBar>
-    </CostList>
-    <ResearchPrerequisites><li>ConstructionII</li></ResearchPrerequisites>
-  </TerrainDef>
-
-
-  <!-- === Mod === -->
-  <TerrainDef ParentName="MoreFloorsBase">
-    <defName>Concrete1</defName>
-    <label>concrete tiles</label>
-    <Description>Concrete Tiles. Not so ugly.</Description>
-    <texturePath>Floors/Concrete1</texturePath>
-    <EdgeType>Hard</EdgeType>
-    <RenderPrecedence>123</RenderPrecedence>
-    <statBases>
-      <WorkToMake>70</WorkToMake>
-    </statBases>
-    <CostList>
-      <SteelBar>1</SteelBar>
-    </CostList>
-    <ResearchPrerequisites><li>ConstructionII</li></ResearchPrerequisites>
-  </TerrainDef>
-
-
-
-
-
-
-
-
-
-
-  <!-- === Carpets === -->
-  <!-- === Vanilla === -->
-
-  <TerrainDef Name="CarpetBase" ParentName="MoreFloorsBase" Abstract="True">
-    <texturePath>Terrain/Surfaces/Carpet</texturePath>
-    <ResearchPrerequisites><li>CarpetMaking</li></ResearchPrerequisites>
-    <CostList>
-      <Cloth>7</Cloth>
-    </CostList>
-    <statBases>
-      <Beauty>2</Beauty>
-    </statBases>
-  </TerrainDef>
-  
-  <TerrainDef ParentName="CarpetBase">
-    <DefName>CarpetRed</DefName>
-    <label>red carpet</label>
-    <RenderPrecedence>130</RenderPrecedence>
-    <Description>Plush carpet in a lovely rose hue.</Description>
-    <color>(118,49,57)</color>
-  </TerrainDef>
-
-  <TerrainDef ParentName="CarpetBase">
-    <DefName>CarpetGreen</DefName>
-    <label>green carpet</label>
-    <RenderPrecedence>131</RenderPrecedence>
-    <Description>Naturalistic-feeling green carpet.</Description>
-    <color>(89,105,62)</color>
-  </TerrainDef>
-
-  <TerrainDef ParentName="CarpetBase">
-    <DefName>CarpetBlue</DefName>
-    <label>blue carpet</label>
-    <RenderPrecedence>132</RenderPrecedence>
-    <Description>Toe-hugging plush carpet in a cool blue color.</Description>
-    <color>(24,65,121)</color>
-  </TerrainDef>
-
-  <TerrainDef ParentName="CarpetBase">
-    <DefName>CarpetCream</DefName>
-    <label>cream carpet</label>
-    <RenderPrecedence>133</RenderPrecedence>
-    <Description>Inviting cream-colored carpet.</Description>
-    <color>(195,192,176)</color>
-  </TerrainDef>
-
-  <TerrainDef ParentName="CarpetBase">
-    <DefName>CarpetDark</DefName>
-    <label>dark carpet</label>
-    <RenderPrecedence>134</RenderPrecedence>
-    <Description>Professional-looking dark gray carpet.</Description>
-    <color>(81,81,81)</color>
-  </TerrainDef>
-
-
-  <!-- === Mod === -->
-  <TerrainDef Name="CheckCarpetBase" ParentName="MoreFloorsBase" Abstract="True">
-    <texturePath>Floors/Carpet1</texturePath>
-    <ResearchPrerequisites><li>CarpetMaking</li></ResearchPrerequisites>
-    <CostList>
-      <Cloth>7</Cloth>
-    </CostList>
-    <statBases>
-      <Beauty>2</Beauty>
-    </statBases>
-  </TerrainDef>
-
-  <TerrainDef ParentName="CheckCarpetBase">
-    <DefName>CheckCarpetRed</DefName>
-    <label>red carpet</label>
-    <RenderPrecedence>135</RenderPrecedence>
-    <Description>Plush carpet in a lovely rose hue.</Description>
-    <color>(118,49,57)</color>
-  </TerrainDef>
-
-  <TerrainDef ParentName="CheckCarpetBase">
-    <DefName>CheckCarpetGreen</DefName>
-    <label>green carpet</label>
-    <RenderPrecedence>136</RenderPrecedence>
-    <Description>Naturalistic-feeling green carpet.</Description>
-    <color>(89,105,62)</color>
-  </TerrainDef>
-
-  <TerrainDef ParentName="CheckCarpetBase">
-    <DefName>CheckCarpetBlue</DefName>
-    <label>blue carpet</label>
-    <RenderPrecedence>137</RenderPrecedence>
-    <Description>Toe-hugging plush carpet in a cool blue color.</Description>
-    <color>(24,65,121)</color>
-  </TerrainDef>
-
-  <TerrainDef ParentName="CheckCarpetBase">
-    <DefName>CheckCarpetCream</DefName>
-    <label>cream carpet</label>
-    <RenderPrecedence>138</RenderPrecedence>
-    <Description>Inviting cream-colored carpet.</Description>
-    <color>(195,192,176)</color>
-  </TerrainDef>
-
-  <TerrainDef ParentName="CheckCarpetBase">
-    <DefName>CheckCarpetDark</DefName>
-    <label>dark carpet</label>
-    <RenderPrecedence>139</RenderPrecedence>
-    <Description>Professional-looking dark gray carpet.</Description>
-    <color>(81,81,81)</color>
-  </TerrainDef>
-
-
-
-
-
-
-
-
-
-
-
-  <!-- === Special === -->
-  <!-- === Vanilla === -->
-  <TerrainDef ParentName="MoreFloorsBase">
-    <DefName>SilverTile</DefName>
-    <label>silver tile</label>
-    <RenderPrecedence>200</RenderPrecedence>
-    <Description>Expensive and slow to build, but very pretty. Fits perfectly into all kinds of luxurious rooms.</Description>
-    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
-    <color>(0.45, 0.45, 0.45)</color>
-    <statBases>
-      <Beauty>3</Beauty>
-      <WorkToMake>1200</WorkToMake>
-    </statBases>
-    <CostList>
-      <Silver>85</Silver>
-    </CostList>
-    <ResearchPrerequisites><li>ConstructionII</li></ResearchPrerequisites>
-    <constructEffect>ConstructMetal</constructEffect>
-  </TerrainDef>
-  
-  <TerrainDef ParentName="MoreFloorsBase">
-    <DefName>GoldTile</DefName>
-    <label>gold tile</label>
-    <RenderPrecedence>201</RenderPrecedence>
-    <Description>The most beautiful and impressive kind of floor. Very expensive and requires a lot of work to build.</Description>
-    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
-    <color>(0.65, 0.65, 0.35)</color>
-    <statBases>
-      <Beauty>4</Beauty>
-      <WorkToMake>1800</WorkToMake>
-    </statBases>
-    <CostList>
-      <Gold>85</Gold>
-    </CostList>
-    <ResearchPrerequisites><li>ConstructionII</li></ResearchPrerequisites>
-    <constructEffect>ConstructMetal</constructEffect>
-  </TerrainDef>
-  
-  <TerrainDef ParentName="MoreFloorsBase">
-    <DefName>SterileTile</DefName>
-    <label>sterile tile</label>
-    <RenderPrecedence>202</RenderPrecedence>
-    <Description>Sterile tiles help keep the room clean. Very useful in hospitals to prevent patients from getting various infections. Neutral in terms of looks and very slow to build.</Description>
-    <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
-    <color>(0.71, 0.71, 0.71)</color>
-    <statBases>
-      <Cleanliness>0.6</Cleanliness>
-      <WorkToMake>1650</WorkToMake>
-    </statBases>
-    <CostList>
-      <SteelBar>3</SteelBar>
-      <Silver>15</Silver>
-    </CostList>
-    <ResearchPrerequisites><li>ConstructionII</li></ResearchPrerequisites>
-    <constructEffect>ConstructMetal</constructEffect>
-  </TerrainDef>
-
-  <TerrainDef ParentName="MoreFloorsBase">
-    <DefName>CeramicTile</DefName>
-    <label>ceramic tile</label>
-    <RenderPrecedence>203</RenderPrecedence>
-    <Description>Ceramic tiles help keep the room clean. Very useful in hospitals to prevent patients from getting various infections. Neutral in terms of looks and very slow to build.</Description>
-    <texturePath>Floors/Ceramic</texturePath>
-    <color>(0.71, 0.71, 0.71)</color>
-    <statBases>
-      <Cleanliness>0.6</Cleanliness>
-      <WorkToMake>1650</WorkToMake>
-    </statBases>
-    <CostList>
-      <SteelBar>3</SteelBar>
-      <Silver>15</Silver>
-    </CostList>
-    <ResearchPrerequisites><li>ConstructionII</li></ResearchPrerequisites>
-    <constructEffect>ConstructMetal</constructEffect>
-  </TerrainDef>
- 
-
-
-
-
+	<!-- TODO CLEANUP -->
+	<TerrainDef Name="FloorBase" Abstract="True">
+		<layerable>true</layerable>
+		<affordances>
+			<li>Light</li>
+			<li>Heavy</li>
+			<li>SmoothHard</li>
+		</affordances>
+		<statBases>
+			<WorkToMake>135</WorkToMake>
+		</statBases>
+		<designationCategory>Floors</designationCategory>
+		<Fertility>0</Fertility>
+		<constructEffect>ConstructDirt</constructEffect>
+		<AcceptTerrainSourceFilth>True</AcceptTerrainSourceFilth>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	</TerrainDef>
+
+	<!-- stone vanilla -->
+	<TerrainDef Abstract="True" ParentName="FloorBase" Name="TileStoneBase">
+		<!--<RenderPrecedence>220</RenderPrecedence> MUST BE <400 -->
+		<RenderPrecedence>100</RenderPrecedence>
+		<Description>Solid stone tiles for a castle feeling. Pretty to look at, but they take a long time to lay.</Description>
+		<texturePath>Terrain/Surfaces/TileStone</texturePath>
+		<statBases>
+			<WorkToMake>700</WorkToMake>
+			<Beauty>2</Beauty>
+		</statBases>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TileStoneBase">
+		<DefName>TileSandstone</DefName>
+		<label>sandstone tile</label>
+		<color>(126,104,94)</color>
+		<CostList>
+			<BlocksSandstone>4</BlocksSandstone>
+		</CostList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TileStoneBase">
+		<DefName>TileGranite</DefName>
+		<label>granite tile</label>
+		<color>(105,95,97)</color>
+		<CostList>
+			<BlocksGranite>4</BlocksGranite>
+		</CostList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TileStoneBase">
+		<DefName>TileLimestone</DefName>
+		<label>limestone tile</label>
+		<color>(158,153,135)</color>
+		<CostList>
+			<BlocksLimestone>4</BlocksLimestone>
+		</CostList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TileStoneBase">
+		<DefName>TileSlate</DefName>
+		<label>slate tile</label>
+		<color>(70,70,70)</color>
+		<CostList>
+			<BlocksSlate>4</BlocksSlate>
+		</CostList>
+	</TerrainDef>
+
+	<TerrainDef ParentName="TileStoneBase">
+		<DefName>TileMarble</DefName>
+		<label>marble tile</label>
+		<color>(132,135,132)</color>
+		<CostList>
+			<BlocksMarble>4</BlocksMarble>
+		</CostList>
+	</TerrainDef>
+
+
+
+	<!-- wood vanilla === -->
+	<TerrainDef ParentName="FloorBase">
+		<DefName>WoodPlankFloor</DefName>
+		<label>wood floor</label>
+		<RenderPrecedence>100</RenderPrecedence>
+		<Description>Wood plank flooring. For that warm, homey feeling.</Description>
+		<texturePath>Terrain/Surfaces/WoodFloor</texturePath>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>85</WorkToMake>
+		</statBases>
+		<CostList>
+			<WoodPlank>3</WoodPlank>
+		</CostList>
+		<constructEffect>ConstructWood</constructEffect>
+	</TerrainDef>
+
+	<!-- wood new -->
+	<TerrainDef ParentName="FloorBase">
+		<DefName>WoodPlankFloorI</DefName>
+		<label>wood floor</label>
+		<RenderPrecedence>101</RenderPrecedence>
+		<Description>Wood plank flooring. For that warm, homey feeling.</Description>
+		<texturePath>Floors/WoodFloor1</texturePath>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>85</WorkToMake>
+		</statBases>
+		<CostList>
+			<WoodPlank>3</WoodPlank>
+		</CostList>
+		<constructEffect>ConstructWood</constructEffect>
+		<ResearchPrerequisites>
+			<li>ConstructionI</li>
+		</ResearchPrerequisites>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<DefName>WoodPlankFloorII</DefName>
+		<label>wood floor</label>
+		<RenderPrecedence>102</RenderPrecedence>
+		<Description>Wood plank flooring. For that warm, homey feeling.</Description>
+		<texturePath>Floors/WoodFloor2</texturePath>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>85</WorkToMake>
+		</statBases>
+		<CostList>
+			<WoodPlank>3</WoodPlank>
+		</CostList>
+		<constructEffect>ConstructWood</constructEffect>
+		<ResearchPrerequisites>
+			<li>ConstructionI</li>
+		</ResearchPrerequisites>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<DefName>WoodPlankFloorIII</DefName>
+		<label>wood floor</label>
+		<RenderPrecedence>103</RenderPrecedence>
+		<Description>Wood plank flooring. For that warm, homey feeling.</Description>
+		<texturePath>Floors/WoodFloor3</texturePath>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>85</WorkToMake>
+		</statBases>
+		<CostList>
+			<WoodPlank>3</WoodPlank>
+		</CostList>
+		<constructEffect>ConstructWood</constructEffect>
+		<ResearchPrerequisites>
+			<li>ConstructionI</li>
+		</ResearchPrerequisites>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<DefName>WoodPlankFloorIV</DefName>
+		<label>wood floor</label>
+		<RenderPrecedence>104</RenderPrecedence>
+		<Description>Wood plank flooring. For that warm, homey feeling.</Description>
+		<texturePath>Floors/WoodFloor4</texturePath>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>85</WorkToMake>
+		</statBases>
+		<CostList>
+			<WoodPlank>3</WoodPlank>
+		</CostList>
+		<constructEffect>ConstructWood</constructEffect>
+		<ResearchPrerequisites>
+			<li>ConstructionI</li>
+		</ResearchPrerequisites>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<DefName>WoodPlankFloorV</DefName>
+		<label>wood floor</label>
+		<RenderPrecedence>105</RenderPrecedence>
+		<Description>Wood plank flooring. For that warm, homey feeling.</Description>
+		<texturePath>Floors/WoodFloor5</texturePath>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>85</WorkToMake>
+		</statBases>
+		<CostList>
+			<WoodPlank>3</WoodPlank>
+		</CostList>
+		<constructEffect>ConstructWood</constructEffect>
+		<ResearchPrerequisites>
+			<li>ConstructionI</li>
+		</ResearchPrerequisites>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<DefName>WoodPlankFloorVI</DefName>
+		<label>bamboo floor</label>
+		<RenderPrecedence>106</RenderPrecedence>
+		<Description>Bamboo flooring. For that warm, homey feeling.</Description>
+		<texturePath>Floors/BambooFloor</texturePath>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>85</WorkToMake>
+		</statBases>
+		<CostList>
+			<Bamboo>3</Bamboo>
+		</CostList>
+		<constructEffect>ConstructWood</constructEffect>
+		<ResearchPrerequisites>
+			<li>ConstructionI</li>
+		</ResearchPrerequisites>
+	</TerrainDef>
+
+
+
+
+
+
+	<!-- metal vanilla -->
+	<TerrainDef ParentName="FloorBase">
+		<DefName>MetalTile</DefName>
+		<label>metal tile</label>
+		<RenderPrecedence>110</RenderPrecedence>
+		<Description>Metal tiles, for that spaceship look. Pretty, but labor and material-intensive.</Description>
+		<texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>500</WorkToMake>
+		</statBases>
+		<CostList>
+			<SteelBar>3</SteelBar>
+		</CostList>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+
+	<!-- metal added -->
+	<TerrainDef ParentName="FloorBase">
+		<DefName>MetalTileI</DefName>
+		<label>metal tile</label>
+		<RenderPrecedence>111</RenderPrecedence>
+		<Description>Metal tiles, for that spaceship look. Pretty, but labor and material-intensive.</Description>
+		<texturePath>Floors/MetalTile1</texturePath>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>500</WorkToMake>
+		</statBases>
+		<CostList>
+			<SteelBar>3</SteelBar>
+		</CostList>
+		<ResearchPrerequisites>
+			<li>ConstructionII</li>
+		</ResearchPrerequisites>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<DefName>MetalTileII</DefName>
+		<label>metal tile</label>
+		<RenderPrecedence>112</RenderPrecedence>
+		<Description>Metal tiles, for that spaceship look. Pretty, but labor and material-intensive.</Description>
+		<texturePath>Floors/MetalTile2</texturePath>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>500</WorkToMake>
+		</statBases>
+		<CostList>
+			<SteelBar>3</SteelBar>
+		</CostList>
+		<ResearchPrerequisites>
+			<li>ConstructionII</li>
+		</ResearchPrerequisites>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<DefName>MetalTileIII</DefName>
+		<label>metal tile</label>
+		<RenderPrecedence>113</RenderPrecedence>
+		<Description>Metal tiles, for that spaceship look. Pretty, but labor and material-intensive.</Description>
+		<texturePath>Floors/MetalTile3</texturePath>
+		<color>(0.369, 0.369, 0.369)</color>
+		<statBases>
+			<Beauty>2</Beauty>
+			<WorkToMake>500</WorkToMake>
+		</statBases>
+		<CostList>
+			<SteelBar>3</SteelBar>
+		</CostList>
+		<ResearchPrerequisites>
+			<li>ConstructionII</li>
+		</ResearchPrerequisites>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+
+
+
+
+
+
+	<!-- concrete vanilla -->	
+	<TerrainDef ParentName="FloorBase">
+		<DefName>PavedTile</DefName>
+		<label>paved tile</label>
+		<RenderPrecedence>120</RenderPrecedence>
+		<Description>Utilitarian concrete tiles. Cheap and quick to move around on, but neutral in terms of looks and slow to build.</Description>
+		<texturePath>Terrain/Surfaces/PavedTile</texturePath>
+		<statBases>
+			<WorkToMake>400</WorkToMake>
+		</statBases>
+		<CostList>
+			<SteelBar>2</SteelBar>
+		</CostList>
+		<ResearchPrerequisites>
+			<li>ConstructionII</li>
+		</ResearchPrerequisites>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<defName>Concrete</defName>
+		<label>concrete</label>
+		<Description>Quick-poured concrete. Fast to walk on, cheap, and very quick to pour, but quite ugly.</Description>
+		<texturePath>Terrain/Surfaces/Concrete</texturePath>
+		<EdgeType>Hard</EdgeType>
+		<RenderPrecedence>121</RenderPrecedence>
+		<statBases>
+			<WorkToMake>70</WorkToMake>
+			<Beauty>-1</Beauty>
+		</statBases>
+		<CostList>
+			<SteelBar>1</SteelBar>
+		</CostList>
+		<ResearchPrerequisites>
+			<li>ConstructionII</li>
+		</ResearchPrerequisites>
+	</TerrainDef>
+
+	<!-- concrete added -->
+	<TerrainDef ParentName="FloorBase">
+		<defName>ConcreteI</defName>
+		<label>concrete tiles</label>
+		<Description>Concrete Tiles. Not so ugly.</Description>
+		<texturePath>Floors/Concrete1</texturePath>
+		<EdgeType>Hard</EdgeType>
+		<RenderPrecedence>123</RenderPrecedence>
+		<statBases>
+			<WorkToMake>70</WorkToMake>
+		</statBases>
+		<CostList>
+			<SteelBar>1</SteelBar>
+		</CostList>
+		<ResearchPrerequisites>
+			<li>ConstructionII</li>
+		</ResearchPrerequisites>
+	</TerrainDef>
+
+
+
+
+
+
+	<!-- carpets vanilla -->
+	<TerrainDef Name="CarpetBase" ParentName="FloorBase" Abstract="True">
+		<texturePath>Terrain/Surfaces/Carpet</texturePath>
+		<ResearchPrerequisites>
+			<li>TextileII</li>
+		</ResearchPrerequisites>
+		<CostList>
+			<Cloth>7</Cloth>
+		</CostList>
+		<statBases>
+			<Beauty>2</Beauty>
+		</statBases>
+	</TerrainDef>
+
+	<TerrainDef ParentName="CarpetBase">
+		<DefName>CarpetRed</DefName>
+		<label>red carpet</label>
+		<RenderPrecedence>130</RenderPrecedence>
+		<Description>Plush carpet in a lovely rose hue.</Description>
+		<color>(118,49,57)</color>
+	</TerrainDef>
+
+	<TerrainDef ParentName="CarpetBase">
+		<DefName>CarpetGreen</DefName>
+		<label>green carpet</label>
+		<RenderPrecedence>131</RenderPrecedence>
+		<Description>Naturalistic-feeling green carpet.</Description>
+		<color>(89,105,62)</color>
+	</TerrainDef>
+
+	<TerrainDef ParentName="CarpetBase">
+		<DefName>CarpetBlue</DefName>
+		<label>blue carpet</label>
+		<RenderPrecedence>132</RenderPrecedence>
+		<Description>Toe-hugging plush carpet in a cool blue color.</Description>
+		<color>(24,65,121)</color>
+	</TerrainDef>
+
+	<TerrainDef ParentName="CarpetBase">
+		<DefName>CarpetCream</DefName>
+		<label>cream carpet</label>
+		<RenderPrecedence>133</RenderPrecedence>
+		<Description>Inviting cream-colored carpet.</Description>
+		<color>(195,192,176)</color>
+	</TerrainDef>
+
+	<TerrainDef ParentName="CarpetBase">
+		<DefName>CarpetDark</DefName>
+		<label>dark carpet</label>
+		<RenderPrecedence>134</RenderPrecedence>
+		<Description>Professional-looking dark gray carpet.</Description>
+		<color>(81,81,81)</color>
+	</TerrainDef>
+
+	<!-- carpets added -->
+	<TerrainDef Name="CheckCarpetBase" ParentName="FloorBase" Abstract="True">
+		<texturePath>Floors/Carpet1</texturePath>
+		<ResearchPrerequisites>
+			<li>TextileII</li>
+		</ResearchPrerequisites>
+		<CostList>
+			<Cloth>7</Cloth>
+		</CostList>
+		<statBases>
+			<Beauty>2</Beauty>
+		</statBases>
+	</TerrainDef>
+
+	<TerrainDef ParentName="CheckCarpetBase">
+		<DefName>CheckCarpetRed</DefName>
+		<label>red carpet</label>
+		<RenderPrecedence>135</RenderPrecedence>
+		<Description>Plush carpet in a lovely rose hue.</Description>
+		<color>(118,49,57)</color>
+	</TerrainDef>
+
+	<TerrainDef ParentName="CheckCarpetBase">
+		<DefName>CheckCarpetGreen</DefName>
+		<label>green carpet</label>
+		<RenderPrecedence>136</RenderPrecedence>
+		<Description>Naturalistic-feeling green carpet.</Description>
+		<color>(89,105,62)</color>
+	</TerrainDef>
+
+	<TerrainDef ParentName="CheckCarpetBase">
+		<DefName>CheckCarpetBlue</DefName>
+		<label>blue carpet</label>
+		<RenderPrecedence>137</RenderPrecedence>
+		<Description>Toe-hugging plush carpet in a cool blue color.</Description>
+		<color>(24,65,121)</color>
+	</TerrainDef>
+
+	<TerrainDef ParentName="CheckCarpetBase">
+		<DefName>CheckCarpetCream</DefName>
+		<label>cream carpet</label>
+		<RenderPrecedence>138</RenderPrecedence>
+		<Description>Inviting cream-colored carpet.</Description>
+		<color>(195,192,176)</color>
+	</TerrainDef>
+
+	<TerrainDef ParentName="CheckCarpetBase">
+		<DefName>CheckCarpetDark</DefName>
+		<label>dark carpet</label>
+		<RenderPrecedence>139</RenderPrecedence>
+		<Description>Professional-looking dark gray carpet.</Description>
+		<color>(81,81,81)</color>
+	</TerrainDef>
+
+
+
+
+
+
+	<!-- special vanilla -->
+	<TerrainDef ParentName="FloorBase">
+		<DefName>SilverTile</DefName>
+		<label>silver tile</label>
+		<RenderPrecedence>200</RenderPrecedence>
+		<Description>Expensive and slow to build, but very pretty. Fits perfectly into all kinds of luxurious rooms.</Description>
+		<texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+		<color>(0.45, 0.45, 0.45)</color>
+		<statBases>
+			<Beauty>3</Beauty>
+			<WorkToMake>1200</WorkToMake>
+		</statBases>
+		<CostList>
+			<Silver>85</Silver>
+		</CostList>
+		<ResearchPrerequisites>
+			<li>ConstructionII</li>
+		</ResearchPrerequisites>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<DefName>GoldTile</DefName>
+		<label>gold tile</label>
+		<RenderPrecedence>201</RenderPrecedence>
+		<Description>The most beautiful and impressive kind of floor. Very expensive and requires a lot of work to build.</Description>
+		<texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+		<color>(0.65, 0.65, 0.35)</color>
+		<statBases>
+			<Beauty>4</Beauty>
+			<WorkToMake>1800</WorkToMake>
+		</statBases>
+		<CostList>
+			<Gold>85</Gold>
+		</CostList>
+		<ResearchPrerequisites>
+			<li>ConstructionII</li>
+		</ResearchPrerequisites>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+
+	<TerrainDef ParentName="FloorBase">
+		<DefName>SterileTile</DefName>
+		<label>sterile tile</label>
+		<RenderPrecedence>202</RenderPrecedence>
+		<Description>Sterile tiles help keep the room clean. Very useful in hospitals to prevent patients from getting various infections. Neutral in terms of looks and very slow to build.</Description>
+		<texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+		<color>(0.71, 0.71, 0.71)</color>
+		<statBases>
+			<Cleanliness>0.6</Cleanliness>
+			<WorkToMake>1650</WorkToMake>
+		</statBases>
+		<CostList>
+			<SteelBar>3</SteelBar>
+			<Silver>15</Silver>
+		</CostList>
+		<ResearchPrerequisites>
+			<li>ConstructionII</li>
+		</ResearchPrerequisites>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
+	
+	<TerrainDef ParentName="FloorBase">
+		<DefName>CeramicTile</DefName>
+		<label>ceramic tile</label>
+		<RenderPrecedence>203</RenderPrecedence>
+		<Description>Ceramic tiles help keep the room clean. Very useful in hospitals to prevent patients from getting various infections. Neutral in terms of looks and very slow to build.</Description>
+		<texturePath>Floors/Ceramic</texturePath>
+		<color>(0.71, 0.71, 0.71)</color>
+		<statBases>
+			<Cleanliness>0.6</Cleanliness>
+			<WorkToMake>1650</WorkToMake>
+		</statBases>
+		<CostList>
+			<SteelBar>3</SteelBar>
+			<Silver>15</Silver>
+		</CostList>
+		<ResearchPrerequisites>
+			<li>ConstructionII</li>
+		</ResearchPrerequisites>
+		<constructEffect>ConstructMetal</constructEffect>
+	</TerrainDef>
 </TerrainDefs>

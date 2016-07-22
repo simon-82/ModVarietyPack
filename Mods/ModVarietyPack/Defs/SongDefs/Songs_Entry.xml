@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SongDefs>
+  <SongDef>
+    <defName>EntrySong</defName>
+    <playOnMap>false</playOnMap>
+    <clipPath>astral</clipPath>
+    <volume>1.0</volume>
+  </SongDef>
+</SongDefs>

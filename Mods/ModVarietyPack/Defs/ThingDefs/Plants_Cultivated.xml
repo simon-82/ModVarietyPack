@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Plants>
+	<!-- added research unlocks -->
 	<ThingDef Name="PlantBase" Abstract="True">
 		<category>Plant</category>
 		<thingClass>Plant</thingClass>
@@ -21,7 +22,7 @@
 			<soundHarvestFinish>Harvest_Standard_Finish</soundHarvestFinish>
 			<sowWork>150</sowWork>
 			<!-- <fertilityMin>0.5</fertilityMin>
-			     <fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate> -->
+				 <fertilityFactorGrowthRate>1.0</fertilityFactorGrowthRate> -->
 			<topWindExposure>0.1</topWindExposure>
 			<visualSizeRange>
 				<min>0.3</min>
@@ -112,8 +113,8 @@
 			<growDays>5</growDays>
 			<topWindExposure>0.4</topWindExposure>
 			<!-- <seedEmitMTBDays>7</seedEmitMTBDays>
-			     <fertilityFactorGrowthRate>0.90</fertilityFactorGrowthRate>
-			     <fertilityFactorPlantChance>0.90</fertilityFactorPlantChance> -->
+				 <fertilityFactorGrowthRate>0.90</fertilityFactorGrowthRate>
+				 <fertilityFactorPlantChance>0.90</fertilityFactorPlantChance> -->
 			<seedEmitMTBDays>4</seedEmitMTBDays>
 			<fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
 			<fertilityFactorPlantChance>0.1</fertilityFactorPlantChance>
@@ -152,8 +153,8 @@
 			<growDays>6</growDays>
 			<topWindExposure>0.4</topWindExposure>
 			<!-- <seedEmitMTBDays>7</seedEmitMTBDays>
-			     <fertilityFactorGrowthRate>0.90</fertilityFactorGrowthRate>
-			     <fertilityFactorPlantChance>0.90</fertilityFactorPlantChance> -->
+				 <fertilityFactorGrowthRate>0.90</fertilityFactorGrowthRate>
+				 <fertilityFactorPlantChance>0.90</fertilityFactorPlantChance> -->
 			<seedEmitMTBDays>5</seedEmitMTBDays>
 			<fertilityFactorGrowthRate>0.01</fertilityFactorGrowthRate>
 			<fertilityFactorPlantChance>0.1</fertilityFactorPlantChance>
@@ -204,8 +205,12 @@
 				<min>1</min>
 				<max>1.5</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>FruitTrees</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantbamboo</defName>
 		<label>bamboo</label>
@@ -244,8 +249,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="TreeBase">
 		<defName>PlantBananaTree</defName>
 		<label>banana tree</label>
@@ -272,8 +281,12 @@
 				<min>1</min>
 				<max>1.5</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>FruitTrees</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantbean</defName>
 		<label>beans</label>
@@ -312,8 +325,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureIII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantblueberry</defName>
 		<label>blueberry bush</label>
@@ -350,8 +367,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantCarrot</defName>
 		<label>carrots</label>
@@ -390,8 +411,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureIV</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantcloudberry</defName>
 		<label>cloudberry bush</label>
@@ -429,8 +454,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureIII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantcocoa</defName>
 		<label>cocoa plant</label>
@@ -469,8 +498,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>CookingII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantCoffee</defName>
 		<label>coffee plant</label>
@@ -509,6 +542,9 @@
 				<min>0.3</min>
 				<max>1.05</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>CookingII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
 	<ThingDef ParentName="PlantBase">
@@ -549,8 +585,12 @@
 				<min>0.3</min>
 				<max>1.4</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureI</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantCotton</defName>
 		<label>cotton bush</label>
@@ -589,8 +629,12 @@
 				<min>0.3</min>
 				<max>1.05</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>TextileI</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="TreeBase">
 		<defName>DateTree</defName>
 		<label>date palm tree</label>
@@ -618,8 +662,12 @@
 				<min>1</min>
 				<max>1.5</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>FruitTrees</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantDevilstrand</defName>
 		<label>devilstrand mushroom</label>
@@ -658,8 +706,12 @@
 				<min>0.3</min>
 				<max>1.0</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>TextileII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Planteggplant</defName>
 		<label>eggplant</label>
@@ -698,6 +750,9 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
 	<ThingDef ParentName="TreeBase">
@@ -726,8 +781,12 @@
 				<min>1</min>
 				<max>1.5</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>FruitTrees</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantgooseberry</defName>
 		<label>gooseberry bush</label>
@@ -765,8 +824,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureIV</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantgrape</defName>
 		<label>grape vine</label>
@@ -817,6 +880,9 @@
 				<max>30</max>
 			</wildClusterSizeRange>
 			<wildClusterRadius>8</wildClusterRadius>
+			<sowResearchPrerequisites>
+				<li>CookingI</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
 	<ThingDef ParentName="PlantBase">
@@ -860,6 +926,7 @@
 			</visualSizeRange>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantHops</defName>
 		<label>hops</label>
@@ -898,8 +965,12 @@
 				<min>0.3</min>
 				<max>1.05</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>CookingI</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantLettuce</defName>
 		<label>lettuce</label>
@@ -938,8 +1009,12 @@
 				<min>0.3</min>
 				<max>1.05</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureIV</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantmushroom</defName>
 		<label>mushrooms</label>
@@ -978,8 +1053,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureIII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantoats</defName>
 		<label>oats</label>
@@ -1018,8 +1097,12 @@
 				<min>0.3</min>
 				<max>1</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>CookingI</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantOmniGel</defName>
 		<label>OmniGel Plant</label>
@@ -1058,8 +1141,12 @@
 				<min>0.3</min>
 				<max>1.05</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>CraftingIV</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantonion</defName>
 		<label>onions</label>
@@ -1098,6 +1185,9 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureIII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
 	<ThingDef ParentName="TreeBase">
@@ -1149,8 +1239,12 @@
 				<max>30</max>
 			</wildClusterSizeRange>
 			<wildClusterRadius>8</wildClusterRadius>
+			<sowResearchPrerequisites>
+				<li>FruitTrees</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="TreeBase">
 		<defName>PlantPeachTree</defName>
 		<label>peach tree</label>
@@ -1200,8 +1294,12 @@
 				<max>30</max>
 			</wildClusterSizeRange>
 			<wildClusterRadius>8</wildClusterRadius>
+			<sowResearchPrerequisites>
+				<li>FruitTrees</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantpineapple</defName>
 		<label>pineapple plant</label>
@@ -1255,8 +1353,12 @@
 				<max>30</max>
 			</wildClusterSizeRange>
 			<wildClusterRadius>8</wildClusterRadius>
+			<sowResearchPrerequisites>
+				<li>AgricultureIII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantPotato</defName>
 		<label>potato plant</label>
@@ -1297,6 +1399,7 @@
 			</visualSizeRange>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantpumpkin</defName>
 		<label>pumpkins</label>
@@ -1335,8 +1438,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantRice</defName>
 		<label>rice</label>
@@ -1376,8 +1483,12 @@
 				<min>0.3</min>
 				<max>0.8</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureI</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantSpectago</defName>
 		<label>spectago flowers</label>
@@ -1422,8 +1533,12 @@
 				<min>0.3</min>
 				<max>1.05</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>CookingII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantsquash</defName>
 		<label>squash</label>
@@ -1462,8 +1577,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantStrawberry</defName>
 		<label>strawberries</label>
@@ -1502,8 +1621,12 @@
 				<min>0.3</min>
 				<max>1.05</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureI</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantsugarcane</defName>
 		<label>sugarcane</label>
@@ -1542,8 +1665,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>CookingI</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantTea</defName>
 		<label>tea plant</label>
@@ -1582,8 +1709,12 @@
 				<min>0.3</min>
 				<max>1.05</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>CookingII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantTobacco</defName>
 		<label>tobacco</label>
@@ -1622,8 +1753,12 @@
 				<min>0.3</min>
 				<max>1.05</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>CookingII</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantTomato</defName>
 		<label>tomato vine</label>
@@ -1662,8 +1797,12 @@
 				<min>0.3</min>
 				<max>1.05</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureIV</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantwatermelon</defName>
 		<label>watermelons</label>
@@ -1702,8 +1841,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureIV</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>Plantwheat</defName>
 		<label>wheat</label>
@@ -1742,8 +1885,12 @@
 				<min>0.25</min>
 				<max>1.00</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>CookingI</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
+
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantHealroot</defName>
 		<label>healroot</label>
@@ -1782,6 +1929,9 @@
 				<min>0.3</min>
 				<max>1.0</max>
 			</visualSizeRange>
+			<sowResearchPrerequisites>
+				<li>AgricultureI</li>
+			</sowResearchPrerequisites>
 		</plant>
 	</ThingDef>
 </Plants>

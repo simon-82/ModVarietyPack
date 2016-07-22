@@ -93,22 +93,6 @@
 
 
     <!-- Floors -->
-    <!--  <ArchitectSense.DesignationSubCategoryDef>
-        <defName>SubCategory_VanillaFloorTest</defName>
-        <label>StoneFloors</label>
-        <description>Store your stuff.</description>
-        <defNames>
-            <li>TileSandstone</li>
-            <li>TileGranite</li>
-            <li>TileLimestone</li>
-            <li>TileSlate</li>
-            <li>TileMarble</li>
-        </defNames>
-        <designationCategory>Floors</designationCategory>
-    </ArchitectSense.DesignationSubCategoryDef>
-
-
-
     <ArchitectSense.DesignationSubCategoryDef>
         <defName>SubCategory_Soil</defName>
         <label>Growing</label>
@@ -122,7 +106,98 @@
         </defNames>
         <designationCategory>Floors</designationCategory>
     </ArchitectSense.DesignationSubCategoryDef>
-    -->
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Stonefloors</defName>
+        <label>Stone Floors</label>
+        <description>Stone Floors</description>
+        <defNames>
+            <li>TileSandstone</li>
+            <li>TileGranite</li>
+            <li>TileLimestone</li>
+            <li>TileSlate</li>
+            <li>TileMarble</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Woodenfloors</defName>
+        <label>Wooden Floors</label>
+        <description>Wooden Floors</description>
+        <defNames>
+            <li>WoodPlankFloor</li>
+            <li>WoodPlankFloorI</li>
+            <li>WoodPlankFloorII</li>
+            <li>WoodPlankFloorIII</li>
+            <li>WoodPlankFloorIV</li>
+            <li>WoodPlankFloorV</li>
+            <li>WoodPlankFloorVI</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Metalfloors</defName>
+        <label>Metal Floors</label>
+        <description>Metal Floors</description>
+        <defNames>
+            <li>MetalTile</li>
+            <li>MetalTileI</li>
+            <li>MetalTileII</li>
+            <li>MetalTileIII</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Concretefloors</defName>
+        <label>Concrete Floors</label>
+        <description>Concrete Floors</description>
+        <defNames>
+            <li>PavedTile</li>
+            <li>Concrete</li>
+            <li>ConcreteI</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Carpet</defName>
+        <label>Carpets</label>
+        <description>Carpets</description>
+        <defNames>
+            <li>CarpetRed</li>
+            <li>CheckCarpetRed</li>
+            <li>CarpetGreen</li>
+            <li>CheckCarpetGreen</li>
+            <li>CarpetBlue</li>
+            <li>CheckCarpetBlue</li>
+            <li>CarpetCream</li>
+            <li>CheckCarpetCream</li>
+            <li>CarpetDark</li>
+            <li>CheckCarpetDark</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Special</defName>
+        <label>Special Floors</label>
+        <description>Special Floors</description>
+        <defNames>
+            <li>SilverTile</li>
+            <li>GoldTile</li>
+            <li>SterileTile</li>
+            <li>CeramicTile</li>
+        </defNames>
+        <designationCategory>Floors</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+
+
+    
+    
 
 
     <!-- Power -->
