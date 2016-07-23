@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Items_Meals -->
+	<!-- MVP changed vanilla -->
+	<JoyGiverDef>
+		<defName>DrinkAlcohol</defName>
+		<giverClass>JoyGiver_DrinkAlcohol</giverClass>
+		<baseChance>3</baseChance>
+		<!-- down from 4 -->
+		<thingDefs>
+			<li>Beer</li>
+		</thingDefs>
+		<joyKind>Chemical</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+	<JoyGiverDef>
+		<defName>EatChocolate</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>2.5</baseChance>
+		<thingDefs>
+			<li>Chocolate</li>
+			<li>Caramel</li>
+			<li>Hardcandy</li>
+			<li>Taffy</li>
+		</thingDefs>
+		<joyKind>Gluttonous</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+	<!-- new -->
+	<JoyGiverDef>
+		<defName>EatSweets</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>3</baseChance>
+		<thingDefs>
+			<li>cookie</li>
+			<li>PieBlueberry</li>
+			<li>PiePumpkin</li>
+			<li>SweetBun</li>
+			<li>Chocomilk</li>
+		</thingDefs>
+		<joyKind>Gluttonous</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+	<JoyGiverDef>
+		<defName>DrinkBetterAlcohol</defName>
+		<giverClass>JoyGiver_DrinkAlcohol</giverClass>
+		<baseChance>3.5</baseChance>
+		<thingDefs>
+			<li>Rum</li>
+			<li>Wine</li>
+			<li>Applecider</li>
+			<li>Sake</li>
+			<li>Strawberrywine</li>
+			<li>Tequila</li>
+			<li>Vodka</li>
+			<li>Whiskey</li>
+		</thingDefs>
+		<joyKind>Chemical</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+	<JoyGiverDef>
+		<defName>DrinkBeverage</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>3</baseChance>
+		<thingDefs>
+			<li>CupTea</li>
+			<li>CupCoffee</li>
+			<li>CupEspresso</li>
+			<li>FruitDrink</li>
+			<li>MedicalDrink</li>
+	</thingDefs>
+		<joyKind>Social</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+	<JoyGiverDef>
+		<defName>DrinkSpectago</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>3</baseChance>
+		<thingDefs>
+			<li>CupSpectagoTea</li>
+		</thingDefs>
+		<joyKind>Meditative</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+	<JoyGiverDef>
+		<defName>SmokeTobacco</defName>
+		<giverClass>JoyGiver_Ingest</giverClass>
+		<baseChance>3</baseChance>
+		<thingDefs>
+			<li>Cigarillos</li>
+			<li>Cigars</li>
+		</thingDefs>
+		<joyKind>Meditative</joyKind>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</JoyGiverDef>
+
+
+
+</Defs>

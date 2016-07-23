@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Buildings>
+	<!-- Lighting -->
 	<ThingDef ParentName="BuildingBase">
 		<defName>SunLamp</defName>
 		<label>sun lamp</label>
@@ -448,6 +449,598 @@
 		<researchPrerequisites>
 			<li>PowerI</li>
 		</researchPrerequisites>
+	</ThingDef>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Rugs -->
+	<ThingDef ParentName="RugBase">
+		<defName>MuffaloRug</defName>
+		<Label>Muffalo Rug</Label>
+		<Description>A lovely rug made from Muffalo fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/MuffaloRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>45</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(3,3)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>BoomratRug</defName>
+		<Label>Boomrat Rug</Label>
+		<Description>A lovely rug made from Boomrat fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/BoomratRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>25</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,1)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>SquirrelRug</defName>
+		<Label>Squirrel Rug</Label>
+		<Description>A lovely rug made from Squirrel fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/SquirrelRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>30</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,2)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>HumanRug</defName>
+		<Label>Human Rug</Label>
+		<Description>Holy crap, that's a human!</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/HumanRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>-25</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(2,2)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>DeerRug</defName>
+		<Label>Deer Rug</Label>
+		<Description>A lovely rug made from Deer fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/DeerRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>35</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(2,2)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>IguanaRug</defName>
+		<Label>Iguana Rug</Label>
+		<Description>A lovely rug made from Iguana skin.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/IguanaRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>30</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,2)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>MegascarabRug</defName>
+		<Label>Megascarab Rug</Label>
+		<Description>A lovely rug made from a Megascarab shell.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/MegascarabRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>25</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,1)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>RhinocerosRug</defName>
+		<Label>Rhinoceros Rug</Label>
+		<Description>A lovely rug made from Rhinoceros skin.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/RhinocerosRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>45</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(3,3)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>DromedaryRug</defName>
+		<Label>Dromedary Rug</Label>
+		<Description>A lovely rug made from Dromedary fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/DromedaryRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(3,3)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>45</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(3,3)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>TortoiseRug</defName>
+		<Label>Tortoise Rug</Label>
+		<Description>A lovely rug made from Tortoise shell.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/TortoiseRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>25</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,1)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>CobraRug</defName>
+		<Label>Cobra Rug</Label>
+		<Description>A lovely rug made from Cobra skin.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/CobraRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,2)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>30</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,2)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>MonkeyRug</defName>
+		<Label>Monkey Rug</Label>
+		<Description>A lovely rug made from Monkey fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/MonkeyRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>25</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,1)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>WildBoarRug</defName>
+		<Label>Boar Rug</Label>
+		<Description>A lovely rug made from Boar fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/WildBoarRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>25</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,1)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>AlphaBeaverRug</defName>
+		<Label>Beaver Rug</Label>
+		<Description>A lovely rug made from Beaver fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/AlphaBeaverRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>25</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,1)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>ElkRug</defName>
+		<Label>Elk Rug</Label>
+		<Description>A lovely rug made from Elk fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/ElkRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>25</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(2,2)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>HareRug</defName>
+		<Label>Hare Rug</Label>
+		<Description>A lovely rug made from Hare fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/HareRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>15</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,1)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+	<ThingDef ParentName="RugBase">
+		<defName>WargRug</defName>
+		<Label>Warg Rug</Label>
+		<Description>A lovely rug made from Hare fur.</Description>
+		<ThingClass>Building</ThingClass>
+		<graphicData>
+			<texPath>Buildings/Rugs/WargRug</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(1,1)</drawSize>
+		</graphicData>
+		<AltitudeLayer>FloorEmplacement</AltitudeLayer>
+		<statBases>
+			<WorkToMake>50</WorkToMake>
+			<Beauty>15</Beauty>
+		</statBases>
+		<useHitPoints>False</useHitPoints>
+		<Size>(1,1)</Size>
+		<Passability>Standable</Passability>
+	</ThingDef>
+
+
+
+
+
+	<!-- Stuffed Animals -->
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedMuffalo</defName>
+		<label>stuffed Muffalo</label>
+		<description>A stuffed Muffalo.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Muffalo</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+		<size>(2,2)</size>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedBeaver</defName>
+		<label>stuffed Beaver</label>
+		<description>A stuffed Beaver.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Beaver</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedBoomrat</defName>
+		<label>stuffed Boomrat</label>
+		<description>A stuffed Boomrat.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Boomrat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedCobra</defName>
+		<label>stuffed Cobra</label>
+		<description>A stuffed Cobra.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Cobra</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedDeer</defName>
+		<label>stuffed Deer</label>
+		<description>A stuffed Deer.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Deer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedDromedary</defName>
+		<label>stuffed Dromedary</label>
+		<description>A stuffed Dromedary.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Dromedary</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+		<size>(2,2)</size>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedElk</defName>
+		<label>stuffed Elk</label>
+		<description>A stuffed Elk.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Elk</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedHare</defName>
+		<label>stuffed Hare</label>
+		<description>A stuffed Hare.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Hare</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedIguana</defName>
+		<label>stuffed Iguana</label>
+		<description>A stuffed Iguana.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Iguana</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedMegascarab</defName>
+		<label>stuffed Megascarab</label>
+		<description>A stuffed Megascarab.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Megascarab</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedMonkey</defName>
+		<label>stuffed Monkey</label>
+		<description>A stuffed Monkey.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Monkey</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedRhino</defName>
+		<label>stuffed Rhino</label>
+		<description>A stuffed Rhino.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Rhino</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+		<size>(2,2)</size>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedSquirrel</defName>
+		<label>stuffed Squirrel</label>
+		<description>A stuffed Squirrel.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Squirrel</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedTortoise</defName>
+		<label>stuffed Tortoise</label>
+		<description>A stuffed Tortoise.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Tortoise</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedWildBoar</defName>
+		<label>stuffed Boar</label>
+		<description>A stuffed Boar.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/WildBoar</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
+	</ThingDef>
+
+	<ThingDef ParentName="StuffedAnimalBase">
+		<defName>StuffedWarg</defName>
+		<label>stuffed Warg</label>
+		<description>A stuffed Warg.</description>
+		<graphicData>
+			<texPath>Buildings/StuffedAnimals/Warg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<minifiedDef>MinifiedSculpture</minifiedDef>
+		<statBases>
+			<Beauty>100</Beauty>
+		</statBases>
 	</ThingDef>
 
 

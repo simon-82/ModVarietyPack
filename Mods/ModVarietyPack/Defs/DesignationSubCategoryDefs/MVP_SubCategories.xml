@@ -1,5 +1,100 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!-- Production -->
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Resources</defName>
+        <label>Resources</label>
+        <description>Production of resources</description>
+        <defNames>
+            <li>TableSawmillHand</li>
+            <li>CraftingSpot</li>
+            <li>TableLoom</li>
+            <li>TableMachining</li>
+            <li>TableStonecutter</li>
+            <li>ElectricSmelter</li>
+            <li>TableFurnace</li>
+            <li>TableGlassworks</li>
+            <li>TableGlassworksSafety</li>
+            <li>ElectronicWorkbench</li>
+            <li>TableMK1Replicator</li>
+            <li>TableComposter</li>
+            <li>Well</li>
+        </defNames>
+        <designationCategory>Production</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Food</defName>
+        <label>Food</label>
+        <description>Production of food</description>
+        <defNames>
+            <li>TableGrill</li>
+            <li>NutrientPasteDispenser</li>
+            <li>Hopper</li>
+            <li>TableButcher</li>
+            <li>ElectricStove</li>
+            <li>FueledStove</li>
+            <li>TableOven</li>
+            <li>Brewery</li>
+            <li>TableFoodPress</li>
+            <li>TableCoffee</li>
+            <li>CookingTools</li>
+            <li>HydroponicsBasin</li>
+            <li>Hydroponics2x1Basin</li>
+            <li>Hydroponics3x1Basin</li>
+            <li>Hydroponics2x2Basin</li>
+        </defNames>
+        <designationCategory>Production</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Goods</defName>
+        <label>Goods</label>
+        <description>Production of goods</description>
+        <defNames>
+            <li>ElectricTailoringBench</li>
+            <li>TableHats</li>
+            <li>TableTaxidermy</li>
+            <li>TableSculpting</li>
+            <li>TableTobacco</li>
+        </defNames>
+        <designationCategory>Production</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Med</defName>
+        <label>Medical</label>
+        <description>Production of medical goods</description>
+        <defNames>
+            <li>TableChemlab</li>
+            <li>TableProsthetics</li>
+            <li>TableBionics</li>
+            <li>TableOrganVat</li>
+            <li>VitalsMonitor</li>
+        </defNames>
+        <designationCategory>Production</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_WeaponsArmor</defName>
+        <label>Weapons Armor</label>
+        <description>Production of weapons and armor</description>
+        <defNames>
+            <li>ElectricSmithy</li>
+            <li>TableWeapon</li>
+            <li>TableWeaponCrafting</li>
+            <li>TableWeaponFuturistic</li>
+        </defNames>
+        <designationCategory>Production</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+
+
+
+
+
+
+
     <!-- Furniture -->
     <ArchitectSense.DesignationSubCategoryDef>
     	<defName>SubCategory_Chairs</defName>
@@ -27,6 +122,7 @@
             <li>DoubleBed</li>
             <li>RoyalBed</li>
             <li>HospitalBed</li>
+            <li>CryptosleepCasket</li>
     	</defNames>
     	<designationCategory>Furniture</designationCategory>
     </ArchitectSense.DesignationSubCategoryDef>
@@ -203,14 +299,33 @@
     <!-- Power -->
     <ArchitectSense.DesignationSubCategoryDef>
         <defName>SubCategory_PowerNatural</defName>
-        <label>StoneFloors</label>
-        <description>Store your stuff.</description>
+        <label>Natural Power</label>
+        <description>Natural Power.</description>
         <defNames>
             <li>WindTurbine</li>
             <li>SolarGenerator</li>
             <li>GeothermalGenerator</li>
         </defNames>
         <designationCategory>Power</designationCategory>
+    </ArchitectSense.DesignationSubCategoryDef>
+
+
+
+
+
+
+
+
+
+    <!-- Misc -->
+    <ArchitectSense.DesignationSubCategoryDef>
+        <defName>SubCategory_Training</defName>
+        <label>Training</label>
+        <description>Training.</description>
+        <defNames>
+            <li>AutopsyTable</li>
+        </defNames>
+        <designationCategory>Misc</designationCategory>
     </ArchitectSense.DesignationSubCategoryDef>
 
 

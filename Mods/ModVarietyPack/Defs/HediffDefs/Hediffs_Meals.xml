@@ -1,0 +1,732 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Beverages -->
+	<HediffDef>
+		<defName>MidAlcohol</defName>
+		<hediffClass>Hediff_Alcohol</hediffClass>
+		<label>alcohol</label>
+		<initialSeverity>0.2</initialSeverity>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<comps>
+			<li>
+				<compClass>HediffComp_Effecter</compClass>
+				<stateEffecter>Drunk</stateEffecter>
+				<severityIndices>
+					<min>3</min>
+					<max>5</max>
+				</severityIndices>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>buzzed-hidden</label>
+				<everVisible>false</everVisible>
+			</li>
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>warm</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.02</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>tipsy</label>
+				<painFactor>0.8</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<label>drunk</label>
+				<painFactor>0.5</painFactor>
+				<vomitMtbDays>0.035</vomitMtbDays>
+				<tale>Drunk</tale>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.35</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<label>hammered</label>
+				<painFactor>0.3</painFactor>
+				<vomitMtbDays>0.1</vomitMtbDays>
+				<painOffset>0.05</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.60</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.9</minSeverity>
+				<label>blackout</label>
+				<painFactor>0.1</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>StrongAlcohol</defName>
+		<hediffClass>Hediff_Alcohol</hediffClass>
+		<label>alcohol</label>
+		<initialSeverity>0.3</initialSeverity>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<stages>
+			<li>
+				<label>buzzed-hidden</label>
+				<everVisible>false</everVisible>
+			</li>
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>warm</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.02</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>tipsy</label>
+				<painFactor>0.8</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<label>drunk</label>
+				<painFactor>0.5</painFactor>
+				<vomitMtbDays>0.035</vomitMtbDays>
+				<tale>Drunk</tale>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.35</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<label>hammered</label>
+				<painFactor>0.3</painFactor>
+				<vomitMtbDays>0.1</vomitMtbDays>
+				<painOffset>0.05</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.60</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.9</minSeverity>
+				<label>blackout</label>
+				<painFactor>0.1</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>SpectagoTea</defName>
+		<hediffClass>Hediff_Alcohol</hediffClass>
+		<label>spectago tea</label>
+		<defaultLabelColor>(0,0.5,0.3)</defaultLabelColor>
+		<initialSeverity>0.15</initialSeverity>
+		<comps>
+			<li>
+				<compClass>HediffComp_Effecter</compClass>
+				<stateEffecter>Drunk</stateEffecter>
+				<severityIndices>
+					<min>3</min>
+					<max>5</max>
+				</severityIndices>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>initial-hidden</label>
+				<everVisible>false</everVisible>
+			</li>
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>warm</label>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.02</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>relaxed</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.05</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>Caffeine</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<label>caffeine</label>
+		<initialSeverity>2</initialSeverity>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>wired</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.5</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>jacked up</label>
+				<painFactor>0.8</painFactor>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+
+
+	<!-- medical -->
+	<HediffDef>
+		<defName>MedicalDrink</defName>
+		<label>antibiotics</label>
+		<defaultLabelColor>(255,102,102)</defaultLabelColor>
+		<initialSeverity>2</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>buzzed-hidden</label>
+				<everVisible>false</everVisible>
+			</li>
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<label>feeling better</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.20</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.25</minSeverity>
+				<label>boosted immunedefency</label>
+				<painFactor>0.8</painFactor>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<label>hammered</label>
+				<painFactor>0.5</painFactor>
+				<capMods>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>0.30</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<label>overdose</label>
+				<painFactor>0.3</painFactor>
+				<vomitMtbDays>0.1</vomitMtbDays>
+				<painOffset>0.05</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.60</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.9</minSeverity>
+				<label>serious overdose</label>
+				<painFactor>0.3</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+
+
+	<!-- Tobacco -->
+	<HediffDef>
+		<defName>Tobacco</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<label>tobacco</label>
+		<initialSeverity>2</initialSeverity>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>comfortably numb</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>comfortably buzzed</label>
+				<painFactor>0.8</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>StrongTobacco</defName>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<label>tobacco</label>
+		<initialSeverity>2</initialSeverity>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>comfortably numb</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<label>comfortably buzzed</label>
+				<painFactor>0.8</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.15</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+
+
+
+
+	<!-- Meals -->
+	<HediffDef>
+		<defName>AteSalad</defName>
+		<label>Ate Salad</label>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>Light Meal: Salad</label>
+				<!--  <painFactor>0.9</painFactor> -->
+				<capMods>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AteDriedFruit</defName>
+		<label>Ate Dried Fruit</label>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>Light Meal: Dried Fruit</label>
+				<!--  <painFactor>0.9</painFactor> -->
+				<capMods>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AteFruitYogurt</defName>
+		<label>Ate Fruit Yogurt</label>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>Light Meal: Fruit Yogurt</label>
+				<!--  <painFactor>0.9</painFactor> -->
+				<capMods>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AteBread</defName>
+		<label>Ate Bread</label>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>Well Fed: Bread</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AteBurger</defName>
+		<label>Ate Burger</label>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>Well Fed: Burger</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.15</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.3</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AteCheeseBurger</defName>
+		<label>Ate Cheese Burger</label>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>Well Fed: Cheese Burger</label>
+				<painFactor>0.85</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.2</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AteDeluxeBurger</defName>
+		<label>Ate Deluxe Burger</label>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>Well Fed: Deluxe Burger</label>
+				<painFactor>0.8</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AteGrilledCheese</defName>
+		<label>Ate Grilled Cheese</label>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>Well Fed: Grilled Cheese</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.2</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<HediffDef>
+		<defName>AtePizza</defName>
+		<label>Ate Pizza</label>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<comps>
+			<li>
+				<compClass>HediffComp_Immunizable</compClass>
+				<severityPerDayNotImmune>-1</severityPerDayNotImmune>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<minSeverity>0</minSeverity>
+				<label>Well Fed: Pizza</label>
+				<painFactor>0.9</painFactor>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>0.35</offset>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+
+
+
+
+
+
+</Defs>
