@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModsConfigData>
-  <buildNumber>1238</buildNumber>
+  <buildNumber>1241</buildNumber>
   <activeMods>
     <li>Core</li>
     <li>Community Core Library</li>
     <li>RW_Manager</li>
     <li>ModVarietyPack_CoreTextures</li>
     <li>ModVarietyPack</li>
+    <li>ModVarietyPack_Robots</li>
   </activeMods>
 </ModsConfigData>

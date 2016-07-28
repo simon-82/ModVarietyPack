@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!--================================ Abstract bases ======================================-->
+	<ThingDef Class="AIRobot.ThingDef_AIRobot_Building_RechargeStation" Name="BuildingRobotBase" Abstract="True">
+		<category>Building</category>
+		<soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+		<selectable>true</selectable>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+		<repairEffect>Repair</repairEffect>
+		<leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+		<filthLeaving>BuildingRubble</filthLeaving>
+	</ThingDef>
+
+	<ThingDef Class="AIRobot.ThingDef_AIRobot_Building_RechargeStation" ParentName="BuildingRobotBase" Name="AIRobotRechargeStationBase" Abstract="True">
+		<ThingClass>AIRobot.Building_AIRobotRechargeStation</ThingClass>
+		<AltitudeLayer>Building</AltitudeLayer>
+		<passability>Standable</passability>
+		<PathCost>70</PathCost>
+		<CastEdgeShadows>True</CastEdgeShadows>
+		<useHitPoints>True</useHitPoints>
+		<Size>(1,1)</Size>
+		<statBases>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<tickerType>Normal</tickerType>
+		<tradeTags>
+			<li>Robots</li>
+			<li>Exotic</li>
+		</tradeTags>
+		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>100</basePowerConsumption>
+				<transmitsPower>false</transmitsPower>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+
+
+	<!--=== Hauler ===-->
+	<ThingDef Class="AIRobot.ThingDef_AIRobot_Building_RechargeStation" ParentName="AIRobotRechargeStationBase">
+		<defName>AIRobot_RechargeStation_Hauler</defName>
+		<label>Hauler Base Station</label>
+		<description>This station comes equipped with a specialized robot.</description>
+		<graphicData>
+			<texPath>Things/Building/StationHaulBot</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(0.9,0.9)</drawSize>
+		</graphicData>
+		<minifiedDef>AIRobot_MinifiedRechargeStation</minifiedDef>
+		<fillPercent>0.25</fillPercent>
+		<size>(1,1)</size>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Beauty>0</Beauty>
+			<WorkToMake>3000</WorkToMake>
+			<MarketValue>750</MarketValue>
+		</statBases>
+		<costList>
+			<Steel>50</Steel>
+		</costList>
+		<secondaryGraphicPath>Things/Building/StationCleanBotEmpty</secondaryGraphicPath>
+		<spawnThingDef>AIRobot_Hauler</spawnThingDef>
+		<rechargeEfficiency>1.0</rechargeEfficiency>
+	</ThingDef>
+
+	<!--=== Cleaner ===-->
+  <ThingDef Class="AIRobot.ThingDef_AIRobot_Building_RechargeStation" ParentName="AIRobotRechargeStationBase">
+    <defName>AIRobot_RechargeStation_Cleaner</defName>
+    <label>Cleaner Base Station</label>
+    <description>This station comes equipped with a specialized robot.</description>
+    <graphicData>
+		<texPath>Things/Building/StationCleanBot</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+		<shaderType>CutoutComplex</shaderType>
+		<drawSize>(0.9,0.9)</drawSize>
+	</graphicData>
+    <minifiedDef>AIRobot_MinifiedRechargeStation</minifiedDef>
+    <fillPercent>0.25</fillPercent>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Beauty>0</Beauty>
+      <WorkToMake>3000</WorkToMake>
+	  <MarketValue>500</MarketValue>
+    </statBases>
+	<costList>
+		<Steel>50</Steel>
+	</costList>	
+	<secondaryGraphicPath>Things/Building/StationCleanBotEmpty</secondaryGraphicPath>
+	<spawnThingDef>AIRobot_Cleaner</spawnThingDef>
+	<rechargeEfficiency>1.0</rechargeEfficiency>
+  </ThingDef>
+
+
+  <!--=== Cook ===-->
+  <ThingDef Class="AIRobot.ThingDef_AIRobot_Building_RechargeStation" ParentName="AIRobotRechargeStationBase">
+    <defName>AIRobot_RechargeStation_Cook</defName>
+    <label>CookBot Base Station</label>
+    <description>This station comes equipped with a specialized robot.</description>
+    <graphicData>
+    <texPath>Things/Building/StationCookBot</texPath>
+    <graphicClass>Graphic_Multi</graphicClass>
+    <shaderType>CutoutComplex</shaderType>
+    <drawSize>(1.5,1.5)</drawSize>
+  </graphicData>
+    <minifiedDef>AIRobot_MinifiedRechargeStation</minifiedDef>
+    <fillPercent>0.25</fillPercent>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Beauty>0</Beauty>
+      <WorkToMake>3000</WorkToMake>
+    <MarketValue>1500</MarketValue>
+    </statBases>
+  <costList>
+    <Steel>50</Steel>
+  </costList> 
+  <secondaryGraphicPath>Things/Building/StationCookBotEmpty</secondaryGraphicPath>
+  <spawnThingDef>AIRobot_Cook</spawnThingDef>
+  <rechargeEfficiency>1.0</rechargeEfficiency>
+  </ThingDef>
+
+
+
+
+  <!--=== Miner ===-->
+  <ThingDef Class="AIRobot.ThingDef_AIRobot_Building_RechargeStation" ParentName="AIRobotRechargeStationBase">
+    <defName>AIRobot_RechargeStation_Miner</defName>
+    <label>MinerBot Base Station</label>
+    <description>This station comes equipped with a specialized robot.</description>
+    <graphicData>
+    <texPath>Things/Building/StationMineBot</texPath>
+    <graphicClass>Graphic_Multi</graphicClass>
+    <shaderType>CutoutComplex</shaderType>
+    <drawSize>(1.5,1.5)</drawSize>
+  </graphicData>
+    <minifiedDef>AIRobot_MinifiedRechargeStation</minifiedDef>
+    <fillPercent>0.25</fillPercent>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Beauty>0</Beauty>
+      <WorkToMake>3000</WorkToMake>
+    <MarketValue>1500</MarketValue>
+    </statBases>
+  <costList>
+    <Steel>50</Steel>
+  </costList> 
+  <secondaryGraphicPath>Things/Building/StationCookBotEmpty</secondaryGraphicPath>
+  <spawnThingDef>AIRobot_Miner</spawnThingDef>
+  <rechargeEfficiency>1.0</rechargeEfficiency>
+  </ThingDef>
+
+
+
+  <!--=== Grower ===-->
+  <ThingDef Class="AIRobot.ThingDef_AIRobot_Building_RechargeStation" ParentName="AIRobotRechargeStationBase">
+    <defName>AIRobot_RechargeStation_Farmer</defName>
+    <label>FarmBot Base Station</label>
+    <description>This station comes equipped with a specialized robot.</description>
+    <graphicData>
+    <texPath>Things/Building/StationGrowBot</texPath>
+    <graphicClass>Graphic_Multi</graphicClass>
+    <shaderType>CutoutComplex</shaderType>
+    <drawSize>(1.5,1.5)</drawSize>
+  </graphicData>
+    <minifiedDef>AIRobot_MinifiedRechargeStation</minifiedDef>
+    <fillPercent>0.25</fillPercent>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Beauty>0</Beauty>
+      <WorkToMake>3000</WorkToMake>
+    <MarketValue>1500</MarketValue>
+    </statBases>
+  <costList>
+    <Steel>50</Steel>
+  </costList> 
+  <secondaryGraphicPath>Things/Building/StationCookBotEmpty</secondaryGraphicPath>
+  <spawnThingDef>AIRobot_Farmer</spawnThingDef>
+  <rechargeEfficiency>1.0</rechargeEfficiency>
+  </ThingDef>
+
+
+
+  <!--=== Crafter ===-->
+  <ThingDef Class="AIRobot.ThingDef_AIRobot_Building_RechargeStation" ParentName="AIRobotRechargeStationBase">
+    <defName>AIRobot_RechargeStation_Crafter</defName>
+    <label>CraftBot Base Station</label>
+    <description>This station comes equipped with a specialized robot.</description>
+    <graphicData>
+    <texPath>Things/Building/StationCraftBot</texPath>
+    <graphicClass>Graphic_Multi</graphicClass>
+    <shaderType>CutoutComplex</shaderType>
+    <drawSize>(1.5,1.5)</drawSize>
+  </graphicData>
+    <minifiedDef>AIRobot_MinifiedRechargeStation</minifiedDef>
+    <fillPercent>0.25</fillPercent>
+    <size>(1,1)</size>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Beauty>0</Beauty>
+      <WorkToMake>3000</WorkToMake>
+    <MarketValue>1500</MarketValue>
+    </statBases>
+  <costList>
+    <Steel>50</Steel>
+  </costList> 
+  <secondaryGraphicPath>Things/Building/StationCookBotEmpty</secondaryGraphicPath>
+  <spawnThingDef>AIRobot_Crafter</spawnThingDef>
+  <rechargeEfficiency>1.0</rechargeEfficiency>
+  </ThingDef>
+
+
+</Defs>

@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorkGivers>
+  <!-- MVP changed vanilla -->
+  <WorkGiverDef>
+    <defName>DoBillsButcherFlesh</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>90</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableButcher</li>
+    </fixedBillGiverDefs>
+    <verb>work</verb>
+    <gerund>working at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+
+
+
+
+  <!-- === new crafting === -->
+  <WorkGiverDef>
+    <defName>DoBillsSmeltMetal_Hand</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>89</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableFurnace</li>
+    </fixedBillGiverDefs>
+    <verb>smelt metal</verb>
+    <gerund>smelting metal</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsElectronicWorkbench</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>88</priorityInType>
+    <fixedBillGiverDefs>
+      <li>ElectronicWorkbench</li>
+    </fixedBillGiverDefs>
+    <verb>make an electronic device</verb>
+    <gerund>making an electronic device</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsMakeGlass</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>87</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableGlassworks</li>
+    </fixedBillGiverDefs>
+    <verb>produce glass from</verb>
+    <gerund>producing glass at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsMakeSafetyGlass</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>86</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableGlassworksSafety</li>
+    </fixedBillGiverDefs>
+    <verb>produce safety glass</verb>
+    <gerund>producing safety glass</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsMakeWoodPlanks_Hand</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>79</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableSawmillHand</li>
+    </fixedBillGiverDefs>
+    <verb>saw logs</verb>
+    <gerund>sawing logs</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTobacco</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>78</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableTobacco</li>
+    </fixedBillGiverDefs>
+    <verb>prepare</verb>
+    <gerund>preparing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTableComposter</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>70</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableComposter</li>
+    </fixedBillGiverDefs>
+    <verb>make mulch</verb>
+    <gerund>making mulch</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTableChemlab</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>99</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableChemlab</li>
+    </fixedBillGiverDefs>
+    <verb>craft</verb>
+    <gerund>crafting</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTableProsthetics</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>98</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableProsthetics</li>
+    </fixedBillGiverDefs>
+    <verb>create</verb>
+    <gerund>creating</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTableBionics</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>97</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableBionics</li>
+    </fixedBillGiverDefs>
+    <verb>assemble</verb>
+    <gerund>assembling</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTableLoom</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>111</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableLoom</li>
+    </fixedBillGiverDefs>
+    <verb>make textile</verb>
+    <gerund>making textile at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsMK1</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>101</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableMK1Replicator</li>
+    </fixedBillGiverDefs>
+    <verb>replicate</verb>
+    <gerund>replicating</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsWell</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Well</li>
+    </fixedBillGiverDefs>
+    <verb>get water</verb>
+    <gerund>getting water</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTaxidermy</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Art</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableTaxidermy</li>
+    </fixedBillGiverDefs>
+    <verb>stuff</verb>
+    <gerund>stuffing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsMakeHats</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Tailoring</workType>
+    <priorityInType>110</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableHats</li>
+    </fixedBillGiverDefs>
+    <verb>tailor</verb>
+    <gerund>tailoring at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+
+
+
+
+
+  <!-- === new cooking === -->
+  <WorkGiverDef>
+    <defName>DoBillsTableGrill</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>85</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableGrill</li>
+    </fixedBillGiverDefs>
+    <verb>cook</verb>
+    <gerund>cooking</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsCoffee</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>63</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableCoffee</li>
+    </fixedBillGiverDefs>
+    <verb>prepare</verb>
+    <gerund>preparing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTableFoodPress</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>85</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableFoodPress</li>
+    </fixedBillGiverDefs>
+    <verb>work</verb>
+    <gerund>working</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTableOven</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Cooking</workType>
+    <priorityInType>80</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableOven</li>
+    </fixedBillGiverDefs>
+    <verb>cook</verb>
+    <gerund>cooking</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+
+
+
+
+
+  <!-- === new smithing === -->
+  <WorkGiverDef>
+    <defName>DoBillsTableWeapon</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>110</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableWeapon</li>
+    </fixedBillGiverDefs>
+    <verb>smith</verb>
+    <gerund>smithing at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTableWeaponCrafting</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>109</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableWeaponCrafting</li>
+    </fixedBillGiverDefs>
+    <verb>smith</verb>
+    <gerund>smithing at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>DoBillsTableWeaponFuturistic</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>108</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableWeaponFuturistic</li>
+    </fixedBillGiverDefs>
+    <verb>smith</verb>
+    <gerund>smithing at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+
+
+
+
+
+
+  <!-- === doctor === -->
+  <WorkGiverDef>
+    <defName>DoBillsTableOrganVat</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Doctor</workType>
+    <priorityInType>4</priorityInType>
+    <fixedBillGiverDefs>
+      <li>TableOrganVat</li>
+    </fixedBillGiverDefs>
+    <verb>work</verb>
+    <gerund>workking</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+
+
+
+
+
+  <!-- === art === 
+  <WorkGiverDef>
+    <defName>DoBillsMakePainting</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Art</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Easel</li>
+    </fixedBillGiverDefs>
+    <verb>paint</verb>
+    <gerund>painting at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+-->
+
+
+
+
+  <!-- === laser fence === 
+  <WorkGiverDef>
+    <defName>WorkGiverDef_SwitchLaserFence</defName>
+    <giverClass>LaserFence.WorkGiver_LaserFencePylon</giverClass>
+    <workType>Flicker</workType>
+    <priorityInType>450</priorityInType>
+    <verb>switch</verb>
+    <gerund>switching</gerund>
+  </WorkGiverDef>
+
+  -->
+
+  <!-- === training === 
+  <WorkGiverDef>
+    <defName>TrainingMedicine</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Doctor</workType>
+    <priorityInType>4</priorityInType>
+    <verb>train</verb>
+    <gerund>training</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <singleBillGiverDef>AutopsyTable</singleBillGiverDef>
+  </WorkGiverDef>
+
+  -->
+
+  <!-- === fishing === 
+  <WorkGiverDef>
+    <defName>WorkGiver_HarvestAquacultureBasinProduction</defName>
+    <giverClass>FishIndustry.WorkGiver_AquacultureBasin</giverClass>
+    <workType>Fishing</workType>
+    <priorityInType>92</priorityInType>
+    <singleBillGiverDef>AquacultureBasin</singleBillGiverDef>
+    <verb>harvest</verb>
+    <gerund>harvesting</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+ 
+
+  <WorkGiverDef>
+    <defName>WorkGiver_DoBillsAtAquacultureBasin</defName>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Fishing</workType>
+    <priorityInType>91</priorityInType>
+    <singleBillGiverDef>AquacultureBasin</singleBillGiverDef>
+    <verb>supply</verb>
+    <gerund>supplying</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>FillAquacultureHopper</defName>
+    <giverClass>FishIndustry.WorkGiver_FillAquacultureHopper</giverClass>
+    <workType>Fishing</workType>
+    <priorityInType>90</priorityInType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+  <WorkGiverDef>
+    <defName>WorkGiver_FishAtFishingPier</defName>
+    <giverClass>FishIndustry.WorkGiver_FishingPier</giverClass>
+    <workType>Fishing</workType>
+    <priorityInType>80</priorityInType>
+    <singleBillGiverDef>FishingPier</singleBillGiverDef>
+    <verb>fish</verb>
+    <gerund>fishing</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+
+   -->
+
+</WorkGivers>

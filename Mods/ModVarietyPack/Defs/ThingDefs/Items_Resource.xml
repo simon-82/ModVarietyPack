@@ -560,7 +560,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>IntegratedCircuitsBoard</defName>
 		<label>Integrated circuits board</label>
-		<description>A home-made integrated circuits board used by the mineral sonar console. Even if you pay the greatest attention making it, it is still fragile and unreliable. Don't let it rust under the rain as it will deteriorate really fast!</description>
+		<description>A home-made integrated circuits board. Even if you pay the greatest attention making it, it is still fragile and unreliable. Don't let it rust under the rain as it will deteriorate really fast!</description>
 		<graphicData>
 			<texPath>Items/IntegratedCircuitsBoard</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -667,6 +667,17 @@
 			<li>Electronics</li>
 		</thingCategories>
 		<stackLimit>4</stackLimit>
+		<!--  
+		<recipeMaker>
+			<workSpeedStat>SmithingSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<effectWorking>ButcherMechanoid</effectWorking>
+			<soundWorking>Recipe_ButcherCorpseMechanoid</soundWorking>
+			<recipeUsers>
+				<li>ElectronicWorkbench</li>
+			</recipeUsers>
+			<researchPrerequisite>MobileMineralSonar</researchPrerequisite>
+		</recipeMaker> -->
 	</ThingDef>
 
 	<ThingDef ParentName="ResourceBase">

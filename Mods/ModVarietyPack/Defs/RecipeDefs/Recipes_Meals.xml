@@ -688,6 +688,10 @@
 			<Tofu>1</Tofu>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>AgricultureIII</researchPrerequisite>
+	    <recipeUsers>
+			<li>TableFoodPress</li>
+		</recipeUsers>
 	</RecipeDef>
 	
 	<RecipeDef>
@@ -728,6 +732,10 @@
 			<Tofu>5</Tofu>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>AgricultureIII</researchPrerequisite>
+	    <recipeUsers>
+			<li>TableFoodPress</li>
+		</recipeUsers>
 	</RecipeDef>
 	
 	<RecipeDef>
@@ -788,6 +796,10 @@
 			<Burger>1</Burger>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>TableGrill</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -858,6 +870,10 @@
 			<CheeseBurger>1</CheeseBurger>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>TableGrill</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -948,6 +964,10 @@
 			<DeluxeBurger>1</DeluxeBurger>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>TableGrill</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -987,6 +1007,10 @@
 			<GrilledCheese>1</GrilledCheese>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>TableGrill</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -1035,6 +1059,10 @@
 			<Pizza>1</Pizza>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>TableOven</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -1079,6 +1107,11 @@
 			<FruitYogurt>1</FruitYogurt>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>ElectricStove</li>
+      		<li>FueledStove</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -1120,6 +1153,11 @@
 			<Chocomilk>1</Chocomilk>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>ElectricStove</li>
+      		<li>FueledStove</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 
@@ -1322,6 +1360,10 @@
 			<Applecider>5</Applecider>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>FruitTrees</researchPrerequisite>
+	    <recipeUsers>
+			<li>Brewery</li>
+		</recipeUsers>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -1608,6 +1650,11 @@
 			<CupTea>4</CupTea>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>ElectricStove</li>
+      		<li>FueledStove</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -1663,6 +1710,11 @@
 			</li>
 		</skillRequirements>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>ElectricStove</li>
+      		<li>FueledStove</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -1988,6 +2040,11 @@
 			<Chocolate>5</Chocolate>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>ElectricStove</li>
+      		<li>FueledStove</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 	<RecipeDef>
@@ -2185,6 +2242,10 @@
 			<SweetBun>5</SweetBun>
 		</products>
 		<workSkill>Cooking</workSkill>
+		<researchPrerequisite>CookingII</researchPrerequisite>
+      	<recipeUsers>
+      		<li>TableOven</li>
+    	</recipeUsers>
 	</RecipeDef>
 
 

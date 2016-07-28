@@ -1207,6 +1207,10 @@
         <minLevel>5</minLevel>
       </li>
     </skillRequirements>
+    <researchPrerequisite>MedicineII</researchPrerequisite>
+        <recipeUsers>
+          <li>TableProsthetics</li>
+      </recipeUsers>
   </RecipeDef>
 
 
@@ -1462,6 +1466,10 @@
         <li>GlassEye</li>
       </thingDefs>
     </fixedIngredientFilter>
+    <researchPrerequisite>MedicineII</researchPrerequisite>
+        <recipeUsers>
+          <li>TableProsthetics</li>
+      </recipeUsers>
   </RecipeDef>
 
   <RecipeDef ParentName="RecipeSimpleProsthesis">
@@ -3095,6 +3103,10 @@
         <minLevel>10</minLevel>
       </li>
     </skillRequirements>
+    <researchPrerequisite>MedicineV</researchPrerequisite>
+        <recipeUsers>
+          <li>TableBionics</li>
+      </recipeUsers>
   </RecipeDef>
 
   <RecipeDef ParentName="RecipeAdvancedProsthesis">

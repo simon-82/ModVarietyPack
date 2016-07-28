@@ -926,6 +926,10 @@
       <DevilstrandCloth>10</DevilstrandCloth>
     </products>
     <workSkill>Crafting</workSkill>
+    <researchPrerequisite>TextileII</researchPrerequisite>
+    <recipeUsers>
+      <li>TableLoom</li>
+    </recipeUsers>
   </RecipeDef>
 
   <RecipeDef>
@@ -965,6 +969,10 @@
       <Synthread>10</Synthread>
     </products>
     <workSkill>Crafting</workSkill>
+    <researchPrerequisite>TextileII</researchPrerequisite>
+    <recipeUsers>
+      <li>TableLoom</li>
+    </recipeUsers>
   </RecipeDef>
 
   <RecipeDef>
@@ -1004,6 +1012,10 @@
       <Hyperweave>10</Hyperweave>
     </products>
     <workSkill>Crafting</workSkill>
+    <researchPrerequisite>TextileII</researchPrerequisite>
+    <recipeUsers>
+      <li>TableLoom</li>
+    </recipeUsers>
   </RecipeDef>
 
 
@@ -1203,6 +1215,10 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
        <Sugar>3</Sugar>
     </products>
     <workSkill>Cooking</workSkill>
+    <researchPrerequisite>CookingI</researchPrerequisite>
+    <recipeUsers>
+      <li>TableButcher</li>
+    </recipeUsers>
    </RecipeDef>
 
   <RecipeDef>
@@ -1243,6 +1259,10 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
       <Flour>8</Flour>
     </products>
     <workSkill>Cooking</workSkill>
+    <researchPrerequisite>CookingI</researchPrerequisite>
+    <recipeUsers>
+      <li>TableButcher</li>
+    </recipeUsers>
   </RecipeDef>
 
   <RecipeDef>
@@ -1277,6 +1297,10 @@ Even if you pay the greatest attention making it, it is still fragile and unreli
       <SoyMilk>4</SoyMilk>
     </products>
     <workSkill>Cooking</workSkill>
+    <researchPrerequisite>AgricultureIII</researchPrerequisite>
+    <recipeUsers>
+      <li>TableFoodPress</li>
+    </recipeUsers>
   </RecipeDef>
 
   <RecipeDef>

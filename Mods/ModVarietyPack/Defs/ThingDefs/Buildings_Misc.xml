@@ -985,7 +985,6 @@
 
 
 	<!-- MMS Module + EnergyPack Spawner Building -->
-	<!--  
 	<ThingDef ParentName="BuildingBase">
 		<defName>MobileMineralSonar</defName>
 		<Label>mobile mineral sonar</Label>

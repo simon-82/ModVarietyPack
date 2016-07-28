@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- TODO MOVE TO RECIPES WITH
+    <researchPrerequisite>MedicineV</researchPrerequisite>
+        <recipeUsers>
+          <li>TableBionics</li>
+      </recipeUsers>
+
+     -->
+
+    <!-- Construction -->
+     <AdvancedResearchDef>         
+        <defName>FurnitureII</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>MultiAnalyzer</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakePaintingSupplies</li>
+            <li>MakePaintingSuppliesTempera</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>ElectricStove</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Crafting -->
+
+    <!-- switch to vanilla unlock Textile III in thingdef 
+    <AdvancedResearchDef>         
+        <defName>TextileIIIArmor</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>TextileIII</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeApparello_HA</li>
+            <li>MakeApparello_Hivehat</li>
+            <li>MakeApparello_Steamhull</li>
+            <li>MakeApparello_Hivehell</li>
+            <li>MakeApparello_PowerPants</li>
+            <li>MakeApparello_PowerTop</li>
+            <li>MakeApparello_LPow</li>
+            <li>MakeApparello_LPowII</li>
+            <li>MakeApparello_Scy</li>
+            <li>MakeApparello_Syndicate</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableSmithing</li>
+        </thingDefs>        
+    </AdvancedResearchDef> -->
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+    <!-- Security -->
+    <!-- vanilla unlock of building recipe now 
+    <AdvancedResearchDef>         
+        <defName>SecurityITurret</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Firefoam</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeImprovisedTurret</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>TableWeapon</li>
+        </thingDefs>        
+    </AdvancedResearchDef> 
+    -->
+    <!-- temp deleted turrets + all gun unlocks  -->
+    
+
+    <AdvancedResearchDef>         
+        <defName>SecurityIIShells</defName>
+        <Priority>0</Priority>        
+        <researchDefs>
+            <li>Mortars</li>
+        </researchDefs>        
+        <recipeDefs>
+            <li>MakeArtilleryShell</li>
+        </recipeDefs>        
+        <thingDefs>
+            <li>ElectricSmithy</li>
+        </thingDefs>        
+    </AdvancedResearchDef>
+
+
+
+
+</Defs>
